@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+
+{% block title %}{{ worksheet.title }} - UNIYO{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/student_worksheet.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<script>
+(function() {
+    const savedDarkMode = localStorage.getItem('uniyo_dark_mode');
+    if (savedDarkMode === 'false') {
+        document.body.classList.add('light-mode');
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelectorAll('.question-card, .worksheet-header, .vip-question-card, .vip-progress-section').forEach(el => {
+                    el.style.backgroundColor = '#FFFFFF';
+                    el.style.color = '#334155';
+                });
+                document.querySelectorAll('.question-text, .vip-question-text').forEach(el => {
+                    el.style.color = '#334155';
+                });
+                document.querySelectorAll('.option-btn, .vip-option-btn').forEach(el => {
+                    el.style.backgroundColor = '#F8FAFC';
+                    el.style.color = '#0B0F19';
+                });
+                console.log('Light mode applied');
+            }, 500);
+        });
+    }
+})();
+</script>
+
+
+<script>
+(function() {
+    const savedDarkMode = localStorage.getItem('uniyo_dark_mode');
+    if (savedDarkMode === 'false') {
+        document.body.classList.add('light-mode');
+    }
+})();
+</script>
+
+<div class="worksheet-container">
+    
+    <header class="worksheet-header">
+        <a href="{{ url_for('student.home') }}" class="back-btn">← Back to Dashboard</a>
+        <h1>{{ worksheet.title }}</h1>
+        <div class="worksheet-meta">
+            <span>📚 {{ worksheet.course_code }}</span>
+            <span>📖 Chapter {{ worksheet.chapter_number }}</span>
+            <span>❓ {{ questions|length }} Questions</span>
+        </div>
+        <div class="practice-badge">📝 PRACTICE MODE - Self-Test with Explanations</div>
+    </header>
+    
+    <div class="worksheet-questions">
+        {% for question in questions %}
+        <div class="question-card" data-question-id="{{ question.id }}">
+            <div class="question-header">
+                <span class="question-number">Question {{ loop.index }} / {{ questions|length }}</span>
+                {% if question.difficulty %}
+                <span class="difficulty-badge difficulty-{{ question.difficulty }}">{{ question.difficulty|upper }}</span>
+                {% endif %}
+            </div>
+            
+            <div class="question-text">{{ question.text|safe }}</div>
+            
+            {% if question.diagram %}
+            <div class="question-diagram">{{ question.diagram|safe }}</div>
+            {% endif %}
+            
+            <div class="question-options">
+                {% for option in question.options %}
+                <button class="option-btn" 
+                        data-question-id="{{ question.id }}"
+                        data-option="{{ option }}"
+                        data-correct="{{ question.correct_answer }}"
+                        onclick="checkPracticeAnswer(this, {{ question.id }})">
+                    {{ option }}
+                </button>
+                {% endfor %}
+            </div>
+            
+            <div class="explanation-box hidden" id="explanation-{{ question.id }}">
+                <div class="explanation-result" id="result-{{ question.id }}"></div>
+                <div class="explanation-content">
+                    <strong>💡 Detailed Explanation:</strong>
+                    <p>{{ question.explanation }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <!-- Progress Summary -->
+    <div class="practice-summary">
+        <div class="progress-info">
+            <span>Answered: <span id="answeredCount">0</span>/{{ questions|length }}</span>
+            <span>Correct: <span id="correctCount">0</span></span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="practiceProgress" style="width: 0%"></div>
+        </div>
+        <p class="text-muted">This is practice mode. Answers are NOT submitted. Learn at your own pace!</p>
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    let practiceAnswers = {};
+    let correctCount = 0;
+    
+    function checkPracticeAnswer(button, questionId) {
+        const questionCard = document.querySelector(`[data-question-id="${questionId}"]`);
+        const options = questionCard.querySelectorAll('.option-btn');
+        const selectedOption = button.dataset.option;
+        const correctAnswer = button.dataset.correct;
+        
+        // Disable all options for this question
+        options.forEach(opt => {
+            opt.disabled = true;
+            if (opt.dataset.option === correctAnswer) {
+                opt.classList.add('correct');
+            }
+            if (opt.dataset.option === selectedOption && selectedOption !== correctAnswer) {
+                opt.classList.add('wrong');
+            }
+            if (opt.dataset.option === selectedOption && selectedOption === correctAnswer) {
+                opt.classList.add('correct');
+            }
+        });
+        
+        // Save answer
+        practiceAnswers[questionId] = selectedOption;
+        
+        // Track correct
+        if (selectedOption === correctAnswer) {
+            correctCount++;
+            document.getElementById('correctCount').textContent = correctCount;
+            document.getElementById('result-' + questionId).textContent = '✅ Correct!';
+            document.getElementById('result-' + questionId).className = 'explanation-result correct';
+        } else {
+            document.getElementById('result-' + questionId).textContent = '❌ Incorrect. The correct answer is: ' + correctAnswer;
+            document.getElementById('result-' + questionId).className = 'explanation-result wrong';
+        }
+        
+        // Show explanation
+        document.getElementById('explanation-' + questionId).classList.remove('hidden');
+        
+        // Update progress
+        updateProgress();
+    }
+    
+    function updateProgress() {
+        const total = {{ questions|length }};
+        const answered = Object.keys(practiceAnswers).length;
+        document.getElementById('answeredCount').textContent = answered;
+        
+        const percent = Math.round((answered / total) * 100);
+        document.getElementById('practiceProgress').style.width = percent + '%';
+    }
+</script>
+{% endblock %}

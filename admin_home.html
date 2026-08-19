@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard - UNIYO
+
+
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin_home.css') }}">
+
+
+
+{% endblock %}
+
+{% block content %}
+<div class="admin-container">
+    
+    <header class="admin-header">
+        <div>
+            <h1>Admin Dashboard</h1>
+            <p>Welcome, {{ admin.full_name }} ({{ admin_roles[admin.role].label }})</p>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center;">
+            <button onclick="toggleAdminTheme()" class="btn btn-outline" id="adminThemeBtn" title="Toggle Theme">
+                🌙 Dark
+            </button>
+            <a href="{{ url_for('admin.logout') }}" class="btn btn-outline">Logout</a>
+        </div>
+    </header>
+    
+    <div class="stats-grid">
+        <div class="stat-card">
+            <span class="stat-label">Total Students</span>
+            <span class="stat-value">{{ stats.total_students }}</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Premium Students</span>
+            <span class="stat-value">{{ stats.premium_students }}</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Pending Payments</span>
+            <span class="stat-value">{{ stats.pending_payments }}</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Total Revenue</span>
+            <span class="stat-value">{{ stats.total_revenue }} ETB</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Lessons</span>
+            <span class="stat-value">{{ stats.total_lessons }}</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Worksheets</span>
+            <span class="stat-value">{{ stats.total_worksheets }}</span>
+        </div>
+    </div>
+    
+    <div class="admin-tabs">
+        <a href="{{ url_for('admin.content_management') }}" class="tab-btn">📝 Content</a>
+        <a href="{{ url_for('admin.payments') }}" class="tab-btn">💳 Payments</a>
+        <a href="{{ url_for('admin.students') }}" class="tab-btn">👨‍🎓 Students</a>
+        <a href="{{ url_for('admin.certificates') }}" class="tab-btn">🏆 Certificates</a>
+        <a href="{{ url_for('admin.announcements') }}" class="tab-btn">📢 News</a>
+    </div>
+    
+</div>
+
+
+
+{% endblock %}
