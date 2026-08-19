@@ -1,0 +1,136 @@
+<div class="lesson-section">
+    <h2>Chapter 2: Data Science</h2>
+    <h3>Part 4: Basic Concepts of Big Data</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In this part, we explore the fundamental concepts of <strong>Big Data</strong>. Big data is a blanket term for the non-traditional strategies and technologies needed to gather, organize, process, and gather insights from large datasets. While the problem of working with data that exceeds the computing power or storage of a single computer is not new, the <strong>pervasiveness, scale, and value</strong> of this type of computing have greatly expanded in recent years.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Define Big Data and explain what constitutes a "large dataset."</li>
+            <li>List and describe the 4 Vs of Big Data: Volume, Velocity, Variety, and Veracity.</li>
+            <li>Understand why traditional tools are inadequate for Big Data processing.</li>
+            <li>Explain how the scale of big data varies across different organizations.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>2.5. Basic concepts of big data</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 2.6 (From Module):</strong>
+        <ul>
+            <li><em>List and discuss the characteristics of big data.</em></li>
+            <li><em>Describe the big data life cycle. Which step you think most useful and why?</em></li>
+            <li><em>List and describe each technology or tool used in the big data life cycle.</em></li>
+            <li><em>Discuss the three methods of computing over a large dataset.</em></li>
+        </ul>
+    </div>
+
+    <p><strong>What is Big Data?</strong></p>
+    <p><strong>Big data</strong> is a blanket term for the <strong>non-traditional strategies and technologies</strong> needed to gather, organize, process, and gather insights from <strong>large datasets</strong>. While the problem of working with data that exceeds the computing power or storage of a single computer is not new, the <strong>pervasiveness, scale, and value</strong> of this type of computing have <strong>greatly expanded in recent years</strong>.</p>
+    
+    <p>In this section, we will talk about big data on a <strong>fundamental level</strong> and define common concepts you might come across. We will also take a high-level look at some of the processes and technologies currently being used in this space.</p>
+
+    <hr>
+
+    <h4>2.5.1. What Is Big Data?</h4>
+    
+    <p><strong>Definition:</strong> Big data is the term for a <strong>collection of data sets so large and complex</strong> that it becomes difficult to process using <strong>on-hand database management tools</strong> or <strong>traditional data processing applications</strong>.</p>
+    
+    <p><strong>Understanding "Large Dataset":</strong> In this context, a "large dataset" means a dataset <strong>too large to reasonably process or store with traditional tooling or on a single computer</strong>. This means that the common scale of big datasets is <strong>constantly shifting</strong> and may vary significantly from organization to organization.</p>
+    
+    <div class="example-box">
+        <h4>💡 Real World Example (Ethiopia - Shifting Scales):</h4>
+        <ul>
+            <li><strong>For a small retail shop in Addis Ababa:</strong> A dataset of 10,000 sales transactions might be considered "large" and difficult to analyze in Excel.</li>
+            <li><strong>For Ethio Telecom:</strong> A "large dataset" means <strong>billions of call detail records (CDRs)</strong> generated every day by millions of subscribers across Ethiopia.</li>
+            <li><strong>For a global tech company like Google:</strong> A "large dataset" means <strong>petabytes (1,000,000 GB)</strong> of search queries and user behavior data.</li>
+        </ul>
+        <p>This illustrates that the definition of "big data" is <strong>relative and context-dependent</strong>.</p>
+    </div>
+
+    <p><strong>The 4 Vs of Big Data:</strong></p>
+    <p>Big data is characterized by <strong>3V and more</strong>. The module explicitly lists the following 4 Vs:</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>V</th><th>Characteristic</th><th>Description</th><th>Example</th></tr>
+            <tr>
+                <td><strong>Volume</strong></td>
+                <td>Large amounts of data</td>
+                <td>Data is generated at an unprecedented scale. We are talking about <strong>Zeta bytes</strong> (10²¹ bytes) or <strong>Massive datasets</strong>. Traditional storage cannot handle this alone.</td>
+                <td>Ethio Telecom generates <strong>terabytes of data daily</strong> from calls, SMS, and mobile internet usage.</td>
+            </tr>
+            <tr>
+                <td><strong>Velocity</strong></td>
+                <td>Data is live streaming or in motion</td>
+                <td>Data is being generated and updated in <strong>real-time</strong>. It is not static; it is constantly flowing like a river. Systems must process this data in milliseconds.</td>
+                <td>TeleBirr processes <strong>thousands of transactions per second</strong> in real-time across Ethiopia.</td>
+            </tr>
+            <tr>
+                <td><strong>Variety</strong></td>
+                <td>Data comes in many different forms from diverse sources</td>
+                <td>Data is not just tables. It includes <strong>structured</strong> (SQL), <strong>unstructured</strong> (text, video, audio), and <strong>semi-structured</strong> (JSON, XML) data from diverse sources.</td>
+                <td>An Ethiopian agricultural dataset includes structured crop yields, unstructured drone videos, and semi-structured weather JSON files.</td>
+            </tr>
+            <tr>
+                <td><strong>Veracity</strong></td>
+                <td>Can we trust the data? How accurate is it?</td>
+                <td>Data comes with <strong>uncertainty</strong> due to data inconsistency, incompleteness, latency, deception, model approximations, or errors. Veracity is about the quality and trustworthiness of data.</td>
+                <td>A farmer reports a crop yield of "50 quintals" on a mobile app, but the actual yield is 48. The data has <strong>veracity issues</strong> (it is slightly inaccurate).</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="250" viewBox="0 0 400 250">
+            <rect width="400" height="250" fill="#111827" rx="8"/>
+            <text x="200" y="30" fill="#f8fafc" font-size="14" text-anchor="middle" font-weight="bold">The 4 Vs of Big Data</text>
+            
+            <rect x="20" y="60" width="80" height="50" fill="#14b8a6" rx="8"/>
+            <text x="60" y="82" fill="#111827" font-size="12" text-anchor="middle" font-weight="bold">Volume</text>
+            <text x="60" y="98" fill="#111827" font-size="9" text-anchor="middle">Zeta bytes</text>
+
+            <rect x="120" y="60" width="80" height="50" fill="#facc15" rx="8"/>
+            <text x="160" y="82" fill="#111827" font-size="12" text-anchor="middle" font-weight="bold">Velocity</text>
+            <text x="160" y="98" fill="#111827" font-size="9" text-anchor="middle">Streaming / Real-time</text>
+
+            <rect x="220" y="60" width="80" height="50" fill="#f43f5e" rx="8"/>
+            <text x="260" y="82" fill="#111827" font-size="12" text-anchor="middle" font-weight="bold">Variety</text>
+            <text x="260" y="98" fill="#111827" font-size="9" text-anchor="middle">Structured &amp; Unstructured</text>
+
+            <rect x="320" y="60" width="60" height="50" fill="#f59e0b" rx="8"/>
+            <text x="350" y="82" fill="#111827" font-size="12" text-anchor="middle" font-weight="bold">Veracity</text>
+            <text x="350" y="98" fill="#111827" font-size="9" text-anchor="middle">Trust / Accuracy</text>
+
+            <text x="200" y="150" fill="#94a3b8" font-size="10" text-anchor="middle">📊 These 4 Vs define the complexity of Big Data.</text>
+            
+            <rect x="80" y="170" width="240" height="40" fill="#38bdf8" rx="8"/>
+            <text x="200" y="194" fill="#111827" font-size="11" text-anchor="middle" font-weight="bold">Big Data = Volume + Velocity + Variety + Veracity</text>
+        </svg>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #f43f5e;">
+        <strong>📌 Why Traditional Tools Fail:</strong>
+        <p>Traditional tools like Excel, standard SQL databases (RDBMS), and single-server setups cannot handle the 4 Vs effectively. They crash under Volume, lag behind Velocity, reject Variety, and cannot verify Veracity at scale. This is why <strong>Clustered Computing and the Hadoop Ecosystem</strong> (which we will cover in Part 5) are essential for Big Data processing.</p>
+    </div>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 4)</h4>
+        <ul>
+            <li><strong>Big Data Definition:</strong> Datasets so large and complex that traditional tools cannot process them.</li>
+            <li><strong>"Large Dataset" is Relative:</strong> What is "big" varies by organization (e.g., local shop vs. Ethio Telecom vs. Google).</li>
+            <li><strong>The 4 Vs:</strong>
+                <ul>
+                    <li><strong>Volume:</strong> Massive scale (Zeta bytes).</li>
+                    <li><strong>Velocity:</strong> Real-time streaming data.</li>
+                    <li><strong>Variety:</strong> Diverse formats (structured, unstructured, semi-structured).</li>
+                    <li><strong>Veracity:</strong> Trustworthiness and accuracy of data.</li>
+                </ul>
+            </li>
+            <li><strong>Traditional Tools Fail:</strong> Single computers and RDBMS cannot handle the 4 Vs at scale.</li>
+        </ul>
+    </div>
+</div>

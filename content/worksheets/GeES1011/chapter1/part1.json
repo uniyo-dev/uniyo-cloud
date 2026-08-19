@@ -1,0 +1,147 @@
+{
+    "course_code": "GeES1011",
+    "chapter": 1,
+    "title": "Part 1 Practice: Introduction to Geography",
+    "questions": [
+        {
+            "id": 1,
+            "text": "The word 'Geography' comes from Greek words 'Geo' and 'Graphia'. What does 'Geo' mean?",
+            "diagram": null,
+            "options": [
+                "A) Map",
+                "B) Earth",
+                "C) Description",
+                "D) Study"
+            ],
+            "correct_answer": "B) Earth",
+            "explanation": "'Geo' means EARTH and 'Graphia' means DESCRIPTION. Together, Geography means 'Earth Description.' This reflects geography's focus on describing and understanding the Earth's surface and everything on it. Geo + Graphia በአንድ ላይ ሲሆን <strong>መሬትን መግለፅ<strong/> (description of the Earth) የሚል ይሆናል",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Geography is BEST described as:",
+            "diagram": null,
+            "options": [
+                "A) Only the study of maps and map-making",
+                "B) A bridge connecting natural and social sciences",
+                "C) Only the study of climate and weather",
+                "D) The study of rocks and minerals"
+            ],
+            "correct_answer": "B) A bridge connecting natural and social sciences",
+            "explanation": "Geography is a BRIDGE discipline connecting Physical Geography (natural sciences: climate, landforms) and Human Geography (social sciences: population, culture). It's NOT just about maps (A), just climate (C), or just rocks (D) — it encompasses ALL aspects of the Earth's surface and human interaction.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "Examine the diagram. What does the CENTRAL box represent?",
+            "diagram": "<svg width='350' height='180' viewBox='0 0 350 180'><rect width='350' height='180' fill='#111827' rx='8'/><rect x='30' y='60' width='100' height='60' rx='8' fill='#1a2332' stroke='#14b8a6' stroke-width='2'/><text x='80' y='85' text-anchor='middle' fill='#14b8a6' font-size='10' font-weight='bold'>Natural</text><text x='80' y='100' text-anchor='middle' fill='#94a3b8' font-size='8'>Physical Science</text><rect x='220' y='60' width='100' height='60' rx='8' fill='#1a2332' stroke='#f43f5e' stroke-width='2'/><text x='270' y='85' text-anchor='middle' fill='#f43f5e' font-size='10' font-weight='bold'>Social</text><text x='270' y='100' text-anchor='middle' fill='#94a3b8' font-size='8'>Human Science</text><rect x='130' y='100' width='90' height='50' rx='8' fill='#1a2332' stroke='#facc15' stroke-width='3'/><text x='175' y='125' text-anchor='middle' fill='#facc15' font-size='10' font-weight='bold'>???</text></svg>",
+            "options": [
+                "A) Geology",
+                "B) Geography",
+                "C) Biology",
+                "D) Sociology"
+            ],
+            "correct_answer": "B) Geography",
+            "explanation": "The central box connecting Natural (Physical) and Social (Human) sciences represents GEOGRAPHY. Geography bridges these two branches — it studies both physical features (climate, landforms) and human activities (population, culture). This is what makes geography unique among sciences.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "Which of the following is a THEME of Geography?",
+            "diagram": null,
+            "options": [
+                "A) Algebra",
+                "B) Location",
+                "C) Photosynthesis",
+                "D) Gravity"
+            ],
+            "correct_answer": "B) Location",
+            "explanation": "LOCATION is one of the FIVE themes of Geography. The five themes are: Location, Place, Human-Environment Interaction, Movement, and Region. Algebra, Photosynthesis, and Gravity belong to Mathematics, Biology, and Physics respectively — NOT Geography.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 5,
+            "text": "The theme 'HUMAN-ENVIRONMENT INTERACTION' asks which key question?",
+            "diagram": null,
+            "options": [
+                "A) Where is it?",
+                "B) What is it like?",
+                "C) How do people relate to their environment?",
+                "D) How are areas similar?"
+            ],
+            "correct_answer": "C) How do people relate to their environment?",
+            "explanation": "HUMAN-ENVIRONMENT INTERACTION explores how humans ADAPT to, MODIFY, and DEPEND on their environment. 'Where is it?' is LOCATION. 'What is it like?' is PLACE. 'How are areas similar?' is REGION.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Ethiopia is located between which latitudes?",
+            "diagram": null,
+            "options": [
+                "A) 3°N and 15°N",
+                "B) 3°S and 15°S",
+                "C) 33°N and 48°N",
+                "D) 0° and 10°S"
+            ],
+            "correct_answer": "A) 3°N and 15°N",
+            "explanation": "Ethiopia lies between 3°N and 15°N LATITUDE. Option C (33°E-48°E) refers to LONGITUDE, not latitude. Ethiopia is entirely in the NORTHERN hemisphere (above the equator) and in the EASTERN hemisphere.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "Examine the map. What region is highlighted?",
+            "diagram": "<svg width='350' height='180' viewBox='0 0 350 180'><rect width='350' height='180' fill='#111827' rx='8'/><text x='175' y='20' text-anchor='middle' fill='#f59e0b' font-size='12' font-weight='bold'>African Continent (Simplified)</text><path d='M 50 40 Q 100 20 180 30 Q 250 20 300 50 Q 320 100 280 140 Q 220 160 180 140 Q 120 150 80 120 Q 50 80 50 40' fill='#1a2332' stroke='#14b8a6' stroke-width='2'/><path d='M 270 50 Q 290 60 300 70 Q 310 80 300 90 Q 290 100 280 95 Q 270 80 270 50' fill='#f59e0b' stroke='#facc15' stroke-width='2'/><text x='290' y='70' text-anchor='middle' fill='#0B0F19' font-size='8' font-weight='bold'>HORN</text></svg>",
+            "options": [
+                "A) North Africa",
+                "B) West Africa",
+                "C) The Horn of Africa",
+                "D) Southern Africa"
+            ],
+            "correct_answer": "C) The Horn of Africa",
+            "explanation": "The highlighted yellow area on the EASTERN projection of Africa is the HORN OF AFRICA. Ethiopia is located in this region. The Horn is the easternmost part of the African continent, shaped like a rhino's horn.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Ethiopia's approximate total area is:",
+            "diagram": null,
+            "options": [
+                "A) 500,000 km²",
+                "B) 1,100,000 km²",
+                "C) 2,500,000 km²",
+                "D) 5,000,000 km²"
+            ],
+            "correct_answer": "B) 1,100,000 km²",
+            "explanation": "Ethiopia covers approximately 1,100,000 km² (1.1 million square kilometers). This makes it the 10th largest country in Africa. It's roughly twice the size of France or about the size of Bolivia.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "Ethiopia's location gives it which CLIMATE characteristic?",
+            "diagram": null,
+            "options": [
+                "A) Arctic cold temperatures year-round",
+                "B) Tropical location with warm temperatures and seasonal rainfall",
+                "C) Desert climate with no rainfall",
+                "D) Polar climate with ice caps"
+            ],
+            "correct_answer": "B) Tropical location with warm temperatures and seasonal rainfall",
+            "explanation": "Ethiopia's TROPICAL location (between 3°N-15°N) means it receives direct sunlight year-round, giving WARM temperatures. It also experiences SEASONAL rainfall (wet and dry seasons). This is NOT arctic (A), not completely desert (C), and not polar (D) — the highlands moderate temperatures.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "The theme 'MOVEMENT' in Geography refers to:",
+            "diagram": null,
+            "options": [
+                "A) Tectonic plate movement only",
+                "B) How people, goods, and ideas move between places",
+                "C) The rotation of the Earth",
+                "D) Ocean currents only"
+            ],
+            "correct_answer": "B) How people, goods, and ideas move between places",
+            "explanation": "MOVEMENT as a geographic theme studies how PEOPLE (migration), GOODS (trade), and IDEAS (cultural diffusion) move between places. It's about CONNECTIONS between locations. Tectonic plates, Earth's rotation, and ocean currents are PHYSICAL processes, not the geographic theme of Movement.",
+            "difficulty": "hard"
+        }
+    ]
+}

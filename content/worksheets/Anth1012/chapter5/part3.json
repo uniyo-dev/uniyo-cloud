@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 5,
+    "title": "Part 3 Practice: Conceptualizing Ethnicity",
+    "questions": [
+        {
+            "id": 1,
+            "text": "According to Max Weber, what is the foundation of an ethnic group?",
+            "options": [
+                "A) Biological similarities.",
+                "B) Belief in common descent shared by its members, extending beyond kinship.",
+                "C) A shared political ideology.",
+                "D) A common economic system."
+            ],
+            "correct_answer": "B) Belief in common descent shared by its members, extending beyond kinship.",
+            "explanation": "The module states: 'According to Weber, an \"ethnic group\" is based on the belief in a common descent shared by its members, extending beyond kinship, and political solidarity in relation to other groups, and has common customs, language, religion, values, morality, and etiquette.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What did Max Weber argue is the primary role of ethnic membership?",
+            "options": [
+                "A) It always forms a distinct group.",
+                "B) It facilitates group formation, particularly in the political sphere, but does not constitute a group in itself.",
+                "C) It is purely biological.",
+                "D) It has no political relevance."
+            ],
+            "correct_answer": "B) It facilitates group formation, particularly in the political sphere, but does not constitute a group in itself.",
+            "explanation": "The module states: 'Perhaps the most significant part of Weber's argument is that: \"ethnic membership does not constitute a group; it only facilitates group formation of any kind, particularly in the political sphere.\"'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What was Fredrik Barth's major contribution to the study of ethnicity?",
+            "options": [
+                "A) He focused on the cultural content of ethnic groups.",
+                "B) He shifted the focus from the \"cultural stuff\" inside a group to the social boundaries and relationships between groups.",
+                "C) He argued that ethnicity is purely biological.",
+                "D) He ignored the role of social interaction."
+            ],
+            "correct_answer": "B) He shifted the focus from the \"cultural stuff\" inside a group to the social boundaries and relationships between groups.",
+            "explanation": "The module states: 'Barth focused not upon the cultural characteristics of ethnic groups but upon relationships of cultural differentiation, and specifically upon contact between collectivities which thus differentiated, 'us' and 'them'.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "According to Barth, what is the critical focus of investigating ethnicity?",
+            "options": [
+                "A) The language and customs of the group.",
+                "B) The ethnic boundary that defines the group, not the cultural stuff that it encloses.",
+                "C) The physical appearance of group members.",
+                "D) The economic activities of the group."
+            ],
+            "correct_answer": "B) The ethnic boundary that defines the group, not the cultural stuff that it encloses.",
+            "explanation": "The module states: 'In Barth's own words: \"the critical focus of investigation from this point of view becomes the ethnic boundary that defines the group, not the cultural stuff that it encloses.\"'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What are the two orders of ethnic dichotomies according to Barth?",
+            "options": [
+                "A) Biological and cultural.",
+                "B) Overt signals or signs (e.g., dress, language) and basic value orientations (standards of morality and excellence).",
+                "C) Political and economic.",
+                "D) Religious and linguistic."
+            ],
+            "correct_answer": "B) Overt signals or signs (e.g., dress, language) and basic value orientations (standards of morality and excellence).",
+            "explanation": "The module states: 'The cultural contents of ethnic dichotomies would seem analytically to be of two orders: (i) overt signals or signs - visible features... and (ii) basic value orientations: the standards of morality and excellence by which performance is judged.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "According to Barth, what creates ethnic collectivities?",
+            "options": [
+                "A) Cultural difference alone.",
+                "B) Social contact and interaction with other groups, leading to the definition of 'us' and 'them'.",
+                "C) Geographic isolation.",
+                "D) Biological inheritance."
+            ],
+            "correct_answer": "B) Social contact and interaction with other groups, leading to the definition of 'us' and 'them'.",
+            "explanation": "The module states: 'Cultural difference per se does not create ethnic collectivities. It is the social contact with others that leads to definition and categorization of an 'us' and a 'them'.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "How does Barth view ethnicity?",
+            "options": [
+                "A) As a fixed property of a group.",
+                "B) As an aspect of a relationship, not a property of a group.",
+                "C) As a purely biological trait.",
+                "D) As a legal status."
+            ],
+            "correct_answer": "B) As an aspect of a relationship, not a property of a group.",
+            "explanation": "The module states: 'Ethnicity is essentially an aspect of a relationship, not a property of a group.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "According to the module, how is the identity of the Oromo in Ethiopia created?",
+            "options": [
+                "A) In isolation from other groups.",
+                "B) Through interaction with other groups such as Amhara, Gurage, and Somali.",
+                "C) Through government decree.",
+                "D) Through biological inheritance."
+            ],
+            "correct_answer": "B) Through interaction with other groups such as Amhara, Gurage, and Somali.",
+            "explanation": "The module states: 'The Oromoness is created and becomes culturally and politically meaningful only through the encounter with Amharaness, Gurageness, Somaliness, etc.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "According to the module, what conditions are necessary for ethnicity to come about?",
+            "options": [
+                "A) Total isolation of groups.",
+                "B) A minimum of contact between groups, and the idea that each other is culturally different.",
+                "C) A single shared language.",
+                "D) A common economic system."
+            ],
+            "correct_answer": "B) A minimum of contact between groups, and the idea that each other is culturally different.",
+            "explanation": "The module states: 'For ethnicity to come about, the groups must have a minimum of contact between them, and they must have the ideas of each other as being culturally different from themselves. If these conditions are not fulfilled, there is no ethnicity.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "How did Clifford Geertz define ethnicity?",
+            "options": [
+                "A) As a biological category.",
+                "B) As the 'world of personal identity collectively ratified and publicly expressed' and 'socially ratified personal identity'.",
+                "C) As a purely political concept.",
+                "D) As an economic class."
+            ],
+            "correct_answer": "B) As the 'world of personal identity collectively ratified and publicly expressed' and 'socially ratified personal identity'.",
+            "explanation": "The module states: 'Other than Barth, Clifford Geertz has elegantly defined ethnicity as the 'world of personal identity collectively ratified and publicly expressed' and 'socially ratified personal identity'.'",
+            "difficulty": "hard"
+        }
+    ]
+}

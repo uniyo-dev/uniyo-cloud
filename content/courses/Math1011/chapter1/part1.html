@@ -1,0 +1,269 @@
+<div class="lesson-section">
+    <h2>Chapter 1: Propositional Logic and Set Theory</h2>
+    <h3>Part 1: Propositions and Logical Connectives</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>Mathematical or symbolic logic is an analytical theory of the art of reasoning whose goal is to systematize and codify principles of valid reasoning. In this chapter, we study the basic concepts of propositional logic and set theory. In this first part, we deal with propositional logic, logical connectives, and the construction of complex statements.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Identify the difference between a proposition and a non-proposition.</li>
+            <li>Describe the five logical connectives.</li>
+            <li>Construct truth tables for basic logical operations.</li>
+            <li>Determine the truth values of propositions using logical rules.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>1.1. Propositional Logic</h4>
+    
+    <p>Mathematical or symbolic logic is an analytical theory of the art of reasoning whose goal is to systematize and codify principles of valid reasoning. It has emerged from a study of the use of language in argument and persuasion and is based on the identification and examination of those parts of language which are essential for these purposes. It is <strong>formal</strong> in the sense that it lacks reference to meaning. Thereby it achieves versatility: it may be used to judge the correctness of a chain of reasoning (in particular, a <em>mathematical proof</em>) solely on the basis of the <strong>form</strong> (and not the content) of the sequence of statements which make up the chain. There is a variety of symbolic logics. We shall be concerned only with that one which encompasses most of the deductions of the sort encountered in mathematics. Within the context of logic itself, this is <em>classical</em> symbolic logic.</p>
+
+    <hr>
+
+    <h4>1.1.1. Definition and Examples of Propositions</h4>
+
+    <p>Consider the following sentences:</p>
+    <ul>
+        <li><strong>a.</strong> 2 is an even number.</li>
+        <li><strong>b.</strong> A triangle has four sides.</li>
+        <li><strong>c.</strong> Emperor Menelik ate chicken soup the night after the battle of Adwa.</li>
+        <li><strong>d.</strong> May God bless you!</li>
+        <li><strong>e.</strong> Give me that book.</li>
+        <li><strong>f.</strong> What is your name?</li>
+    </ul>
+
+    <p>The first three sentences are <strong>declarative sentences</strong>. The first one is <em>true</em> and the second one is <em>false</em>. The truth value of the third sentence cannot be ascertained because of a lack of historical records, but it is, by its very form, either true or false but not both. On the other hand, the last three sentences have <strong>no truth value</strong>. So they are not declaratives.</p>
+
+    <p>Now we begin by examining the <strong>proposition</strong>, the building block of every argument. A proposition is a sentence that may be asserted or denied. Propositions in this way are different from questions, commands, and exclamations. Neither questions, which can be asked, nor exclamations, which can be uttered, can possibly be asserted or denied. Only propositions assert that something is (or is not) the case, and therefore only they can be <strong>true or false</strong>.</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 1.1:</strong>
+        <p>A <strong>proposition</strong> (or statement) is a sentence which has a <strong>truth value</strong> (either True or False, but <em>not</em> both).</p>
+    </div>
+
+    <div class="example-box">
+        <h4>💡 Important Note:</h4>
+        <p>The definition does not mean that we must always know what the truth value is. For example, the sentence <em>"The 1000th digit in the decimal expansion of \(\pi\) is 7"</em> is a proposition, but we may need to compute it to determine its truth value. Indeed, for a sentence to be a proposition, it is not a requirement that we be able to determine its truth value.</p>
+    </div>
+
+    <p><strong>Remark:</strong> Every proposition has a truth value, namely true (denoted by \(T\)) or false (denoted by \(F\)).</p>
+
+    <hr>
+
+    <h4>1.1.2. Logical Connectives</h4>
+
+    <p>In mathematical discourse and elsewhere, one constantly encounters declarative sentences which have been formed by modifying a sentence with the word <strong>"not"</strong> or by connecting sentences with the words <strong>"and"</strong>, <strong>"or"</strong>, <strong>"if . . . then"</strong>, and <strong>"if and only if"</strong>. These five words or combinations of words are called <strong>propositional connectives</strong>.</p>
+    
+    <p>Letters such as \(p, q, r, s\), etc., are usually used to denote actual propositions.</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Connective</th><th>Symbol</th><th>Name</th><th>Truth Condition</th></tr>
+            <tr>
+                <td><strong>and</strong></td>
+                <td>\(\wedge\)</td>
+                <td>Conjunction</td>
+                <td>True if and only if both \(p\) and \(q\) are true.</td>
+            </tr>
+            <tr>
+                <td><strong>or</strong></td>
+                <td>\(\vee\)</td>
+                <td>Disjunction</td>
+                <td>False if and only if both \(p\) and \(q\) are false.</td>
+            </tr>
+            <tr>
+                <td><strong>implies</strong></td>
+                <td>\(\Rightarrow\)</td>
+                <td>Implication (Conditional)</td>
+                <td>False if and only if \(p\) is true and \(q\) is false.</td>
+            </tr>
+            <tr>
+                <td><strong>if and only if</strong></td>
+                <td>\(\Leftrightarrow\)</td>
+                <td>Bi-implication (Biconditional)</td>
+                <td>False if and only if \(p\) and \(q\) have different truth values.</td>
+            </tr>
+            <tr>
+                <td><strong>not</strong></td>
+                <td>\(\neg\)</td>
+                <td>Negation</td>
+                <td>True if \(p\) is false; False if \(p\) is true.</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Truth Tables for Logical Connectives</text>
+            
+            <text x="100" y="55" fill="#14b8a6" font-size="10" text-anchor="middle">p</text>
+            <text x="160" y="55" fill="#14b8a6" font-size="10" text-anchor="middle">q</text>
+            <text x="220" y="55" fill="#facc15" font-size="10" text-anchor="middle">p ∧ q</text>
+            <text x="280" y="55" fill="#f43f5e" font-size="10" text-anchor="middle">p ∨ q</text>
+            <text x="340" y="55" fill="#f59e0b" font-size="10" text-anchor="middle">p ⇒ q</text>
+
+            <text x="60" y="80" fill="#94a3b8" font-size="9" text-anchor="middle">T</text>
+            <text x="120" y="80" fill="#94a3b8" font-size="9" text-anchor="middle">T</text>
+            <text x="180" y="80" fill="#94a3b8" font-size="9" text-anchor="middle">T</text>
+            <text x="240" y="80" fill="#94a3b8" font-size="9" text-anchor="middle">T</text>
+            <text x="300" y="80" fill="#94a3b8" font-size="9" text-anchor="middle">T</text>
+
+            <text x="60" y="100" fill="#94a3b8" font-size="9" text-anchor="middle">T</text>
+            <text x="120" y="100" fill="#94a3b8" font-size="9" text-anchor="middle">F</text>
+            <text x="180" y="100" fill="#94a3b8" font-size="9" text-anchor="middle">F</text>
+            <text x="240" y="100" fill="#94a3b8" font-size="9" text-anchor="middle">T</text>
+            <text x="300" y="100" fill="#94a3b8" font-size="9" text-anchor="middle">F</text>
+
+            <text x="60" y="120" fill="#94a3b8" font-size="9" text-anchor="middle">F</text>
+            <text x="120" y="120" fill="#94a3b8" font-size="9" text-anchor="middle">T</text>
+            <text x="180" y="120" fill="#94a3b8" font-size="9" text-anchor="middle">F</text>
+            <text x="240" y="120" fill="#94a3b8" font-size="9" text-anchor="middle">T</text>
+            <text x="300" y="120" fill="#94a3b8" font-size="9" text-anchor="middle">T</text>
+
+            <text x="60" y="140" fill="#94a3b8" font-size="9" text-anchor="middle">F</text>
+            <text x="120" y="140" fill="#94a3b8" font-size="9" text-anchor="middle">F</text>
+            <text x="180" y="140" fill="#94a3b8" font-size="9" text-anchor="middle">F</text>
+            <text x="240" y="140" fill="#94a3b8" font-size="9" text-anchor="middle">F</text>
+            <text x="300" y="140" fill="#94a3b8" font-size="9" text-anchor="middle">T</text>
+
+            <text x="200" y="180" fill="#f8fafc" font-size="10" text-anchor="middle">📖 The truth table shows all possible truth values.</text>
+        </svg>
+    </div>
+
+    <h4>1. Conjunction (\(p \wedge q\))</h4>
+    <p>When two propositions are joined with the connective <strong>"and"</strong>, the proposition formed is a logical <strong>conjunction</strong>. "and" is denoted by "\(\wedge\)". So, the logical conjunction of two propositions, \(p\) and \(q\), is written as \(p \wedge q\), read as <em>"p and q"</em>. \(p\) and \(q\) are called the <strong>components</strong> of the conjunction.</p>
+    <p><strong>Truth Condition:</strong> \(p \wedge q\) is true if and only if \(p\) is true <em>and</em> \(q\) is true.</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>\(p\)</th><th>\(q\)</th><th>\(p \wedge q\)</th></tr>
+            <tr><td>T</td><td>T</td><td>T</td></tr>
+            <tr><td>T</td><td>F</td><td>F</td></tr>
+            <tr><td>F</td><td>T</td><td>F</td></tr>
+            <tr><td>F</td><td>F</td><td>F</td></tr>
+        </table>
+    </div>
+
+    <p><strong>Example 1.1:</strong> Consider the following propositions:</p>
+    <ul>
+        <li>\(p\): 3 is an odd number. (True)</li>
+        <li>\(q\): 27 is a prime number. (False)</li>
+        <li>\(r\): Addis Ababa is the capital city of Ethiopia. (True)</li>
+    </ul>
+    <p>a. \(p \wedge q\): 3 is an odd number <em>and</em> 27 is a prime number. (False, because \(q\) is false).</p>
+    <p>b. \(p \wedge r\): 3 is an odd number <em>and</em> Addis Ababa is the capital city of Ethiopia. (True).</p>
+
+    <hr>
+
+    <h4>2. Disjunction (\(p \vee q\))</h4>
+    <p>When two propositions are joined with the connective <strong>"or"</strong>, the proposition formed is called a logical <strong>disjunction</strong>. "or" is denoted by "\(\vee\)".</p>
+    <p><strong>Truth Condition:</strong> \(p \vee q\) is <em>false</em> if and only if <em>both</em> \(p\) and \(q\) are false.</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>\(p\)</th><th>\(q\)</th><th>\(p \vee q\)</th></tr>
+            <tr><td>T</td><td>T</td><td>T</td></tr>
+            <tr><td>T</td><td>F</td><td>T</td></tr>
+            <tr><td>F</td><td>T</td><td>T</td></tr>
+            <tr><td>F</td><td>F</td><td>F</td></tr>
+        </table>
+    </div>
+
+    <div class="example-box">
+        <h4>⚠️ Important Note on "Or":</h4>
+        <p>The use of "or" in propositional logic is rather different from its normal use in the English language. For example, if Solomon says, <em>"I will go to the football match in the afternoon or I will go to the cinema in the afternoon,"</em> he means he will do one thing or the other, but not both. Here "or" is used in the <strong>exclusive sense</strong>. But in propositional logic, "or" is used in the <strong>inclusive sense</strong>; that is, we allow Solomon the possibility of doing both things without him being inconsistent.</p>
+    </div>
+
+    <hr>
+
+    <h4>3. Implication (\(p \Rightarrow q\))</h4>
+    <p>When two propositions are joined with the connective <strong>"implies"</strong>, the proposition formed is called a logical <strong>implication</strong>. "implies" is denoted by "\(\Rightarrow\)". So, the logical implication of two propositions, \(p\) and \(q\), is written as \(p \Rightarrow q\), read as <em>"p implies q"</em>. The function of the connective "implies" between two propositions is the same as the use of <em>"If . . . then . . ."</em> Thus \(p \Rightarrow q\) can be read as <em>"if \(p\), then \(q\)"</em>.</p>
+    <p><strong>Truth Condition:</strong> \(p \Rightarrow q\) is false if and only if \(p\) is true and \(q\) is false.</p>
+    <p>This form of a proposition is common in mathematics. The proposition \(p\) is called the <strong>hypothesis</strong> or the <strong>antecedent</strong> of the conditional proposition \(p \Rightarrow q\), while \(q\) is called its <strong>conclusion</strong> or the <strong>consequent</strong>.</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>\(p\)</th><th>\(q\)</th><th>\(p \Rightarrow q\)</th></tr>
+            <tr><td>T</td><td>T</td><td>T</td></tr>
+            <tr><td>T</td><td>F</td><td>F</td></tr>
+            <tr><td>F</td><td>T</td><td>T</td></tr>
+            <tr><td>F</td><td>F</td><td>T</td></tr>
+        </table>
+    </div>
+
+    <div class="example-box">
+        <h4>💡 Note:</h4>
+        <p>The implication \(p \Rightarrow q\) can be expressed in various ways:</p>
+        <ul>
+            <li>If \(p\), then \(q\).</li>
+            <li>\(q\) if \(p\).</li>
+            <li>\(p\) implies \(q\).</li>
+            <li>\(p\) only if \(q\).</li>
+            <li>\(p\) is sufficient for \(q\).</li>
+            <li>\(q\) is necessary for \(p\).</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>4. Bi-implication (\(p \Leftrightarrow q\))</h4>
+    <p>When two propositions are joined with the connective <strong>"bi-implication"</strong>, the proposition formed is called a logical <strong>bi-implication</strong> or a logical <strong>equivalence</strong>. A bi-implication is denoted by "\(\Leftrightarrow\)".</p>
+    <p><strong>Truth Condition:</strong> \(p \Leftrightarrow q\) is false if and only if \(p\) and \(q\) have <em>different</em> truth values.</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>\(p\)</th><th>\(q\)</th><th>\(p \Leftrightarrow q\)</th></tr>
+            <tr><td>T</td><td>T</td><td>T</td></tr>
+            <tr><td>T</td><td>F</td><td>F</td></tr>
+            <tr><td>F</td><td>T</td><td>F</td></tr>
+            <tr><td>F</td><td>F</td><td>T</td></tr>
+        </table>
+    </div>
+
+    <div class="example-box">
+        <h4>💡 Note:</h4>
+        <p>The bi-implication \(p \Leftrightarrow q\) can be expressed in various ways:</p>
+        <ul>
+            <li>\(p\) if and only if \(q\) (also written as \(p\) iff \(q\)).</li>
+            <li>\(p\) implies \(q\) and \(q\) implies \(p\).</li>
+            <li>\(p\) is necessary and sufficient for \(q\).</li>
+            <li>\(q\) is necessary and sufficient for \(p\).</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>5. Negation (\(\neg p\))</h4>
+    <p>Given any proposition \(p\), we can form the proposition \(\neg p\), called the <strong>negation</strong> of \(p\).</p>
+    <p><strong>Truth Condition:</strong> The truth value of \(\neg p\) is \(F\) if \(p\) is \(T\), and \(T\) if \(p\) is \(F\).</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>\(p\)</th><th>\(\neg p\)</th></tr>
+            <tr><td>T</td><td>F</td></tr>
+            <tr><td>F</td><td>T</td></tr>
+        </table>
+    </div>
+
+    <p><strong>Example 1.5:</strong> Let \(p\): Addis Ababa is the capital city of Ethiopia. (True) \(\neg p\): Addis Ababa is not the capital city of Ethiopia. (False)</p>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 1)</h4>
+        <ul>
+            <li><strong>Proposition:</strong> A sentence that is either <em>true</em> or <em>false</em> (but not both).</li>
+            <li><strong>5 Logical Connectives:</strong>
+                <ul>
+                    <li>Conjunction (\(\wedge\)): <em>and</em> (True only when both are true).</li>
+                    <li>Disjunction (\(\vee\)): <em>or</em> (False only when both are false).</li>
+                    <li>Implication (\(\Rightarrow\)): <em>implies</em> (False only when \(p\) is true and \(q\) is false).</li>
+                    <li>Bi-implication (\(\Leftrightarrow\)): <em>if and only if</em> (False only when truth values differ).</li>
+                    <li>Negation (\(\neg\)): <em>not</em> (Reverses the truth value).</li>
+                </ul>
+            </li>
+            <li><strong>Truth Tables:</strong> Essential tools for determining the truth value of compound propositions.</li>
+        </ul>
+    </div>
+</div>

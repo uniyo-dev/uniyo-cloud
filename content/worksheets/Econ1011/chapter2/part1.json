@@ -1,0 +1,147 @@
+{
+    "course_code": "Econ1011",
+    "chapter": 2,
+    "title": "Part 1 Practice: Theory of Demand",
+    "questions": [
+        {
+            "id": 1,
+            "text": "The <strong>Law of Demand</strong> states that, holding other factors constant:",
+            "diagram": null,
+            "options": [
+                "A) As price increases, quantity demanded increases",
+                "B) As price increases, quantity demanded decreases",
+                "C) Price and quantity demanded have no relationship",
+                "D) Demand always increases over time"
+            ],
+            "correct_answer": "B) As price increases, quantity demanded decreases",
+            "explanation": "The Law of Demand states there is an INVERSE (negative) relationship between price and quantity demanded. When price goes UP, consumers buy LESS. When price goes DOWN, consumers buy MORE. This is why the demand curve slopes downward. Think about it: if coffee prices doubled tomorrow, would you buy more or less coffee? You'd buy LESS!",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Examine the demand schedule below for Coffee. What quantity is demanded at a price of 30 Birr?",
+            "diagram": "<svg width='320' height='200' viewBox='0 0 320 200'><rect width='320' height='200' fill='#111827' rx='8'/><text x='160' y='20' text-anchor='middle' fill='#f59e0b' font-size='12' font-weight='bold'>Demand Schedule for Coffee</text><rect x='60' y='35' width='200' height='140' fill='#1a2332' rx='4'/><text x='80' y='55' fill='#94a3b8' font-size='10'>Price (Birr/kg)</text><text x='180' y='55' fill='#94a3b8' font-size='10'>Qty Demanded (kg)</text><line x1='60' y1='65' x2='260' y2='65' stroke='#334155' stroke-width='1'/><text x='80' y='85' fill='#f8fafc' font-size='11'>10</text><text x='180' y='85' fill='#f43f5e' font-size='11' font-weight='bold'>100</text><text x='80' y='110' fill='#f8fafc' font-size='11'>20</text><text x='180' y='110' fill='#f43f5e' font-size='11' font-weight='bold'>80</text><text x='80' y='135' fill='#f8fafc' font-size='11'>30</text><text x='180' y='135' fill='#f43f5e' font-size='11' font-weight='bold'>60</text><text x='80' y='160' fill='#f8fafc' font-size='11'>40</text><text x='180' y='160' fill='#f43f5e' font-size='11' font-weight='bold'>40</text></svg>",
+            "options": [
+                "A) 100 kg",
+                "B) 80 kg",
+                "C) 60 kg",
+                "D) 40 kg"
+            ],
+            "correct_answer": "C) 60 kg",
+            "explanation": "Looking at the demand schedule, when the price is 30 Birr per kg, consumers are willing to buy 60 kg of coffee per week. Notice the pattern: as price increases (10 → 20 → 30 → 40), quantity demanded decreases (100 → 80 → 60 → 40). This perfectly illustrates the Law of Demand — higher price means less quantity demanded.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 3,
+            "text": "If the demand function is Q<sub>d</sub> = 100 − 2P, what is the quantity demanded when P = 25?",
+            "diagram": null,
+            "options": [
+                "A) 25 units",
+                "B) 50 units",
+                "C) 75 units",
+                "D) 100 units"
+            ],
+            "correct_answer": "B) 50 units",
+            "explanation": "Substitute P = 25 into the demand function: Qd = 100 − 2(25) = 100 − 50 = 50 units. The demand function shows the mathematical relationship between price and quantity demanded. The coefficient '2' means that for every 1 Birr increase in price, quantity demanded decreases by 2 units.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "Which of the following would cause the demand curve to <strong>SHIFT TO THE RIGHT</strong>?",
+            "diagram": null,
+            "options": [
+                "A) A decrease in consumer income",
+                "B) An increase in consumer income (for normal goods)",
+                "C) A decrease in population",
+                "D) An increase in the price of the good"
+            ],
+            "correct_answer": "B) An increase in consumer income (for normal goods)",
+            "explanation": "A RIGHTWARD shift means demand INCREASES at every price level. For NORMAL goods (like meat, new clothes, electronics), an increase in income means consumers can afford to buy MORE at every price, shifting the demand curve right. Note: A change in the price of the good itself does NOT shift the curve — it causes MOVEMENT ALONG the curve.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "Coffee and tea are <strong>substitutes</strong>. If the price of tea INCREASES significantly, what happens to the demand for coffee?",
+            "diagram": "<svg width='320' height='200' viewBox='0 0 320 200'><rect width='320' height='200' fill='#111827' rx='8'/><line x1='50' y1='20' x2='50' y2='170' stroke='#38bdf8' stroke-width='2'/><line x1='50' y1='170' x2='290' y2='170' stroke='#38bdf8' stroke-width='2'/><line x1='70' y1='60' x2='250' y2='150' stroke='#f43f5e' stroke-width='3'/><line x1='100' y1='30' x2='280' y2='120' stroke='#14b8a6' stroke-width='3'/><text x='180' y='105' fill='#f43f5e' font-size='11' font-weight='bold'>D1 (Before)</text><text x='210' y='75' fill='#14b8a6' font-size='11' font-weight='bold'>D2 (After)</text><text x='140' y='22' fill='#f59e0b' font-size='11' font-weight='bold'>Shift RIGHT →</text><text x='280' y='185' fill='#38bdf8' font-size='12' font-weight='bold'>Quantity</text><text x='10' y='25' fill='#38bdf8' font-size='12' font-weight='bold'>Price</text></svg>",
+            "options": [
+                "A) Demand for coffee decreases (shifts left)",
+                "B) Demand for coffee increases (shifts right)",
+                "C) Demand for coffee remains unchanged",
+                "D) Demand for coffee becomes zero"
+            ],
+            "correct_answer": "B) Demand for coffee increases (shifts right)",
+            "explanation": "Coffee and tea are SUBSTITUTES — consumers can use one in place of the other. When tea becomes more expensive, consumers switch to the relatively cheaper alternative (coffee). This means at EVERY price level, more coffee is demanded, shifting the coffee demand curve to the RIGHT. The diagram shows D1 shifting to D2 (rightward shift = increase in demand).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "Sugar is a <strong>complement</strong> to coffee. If the price of sugar INCREASES, what happens to the demand for coffee?",
+            "diagram": null,
+            "options": [
+                "A) Demand for coffee increases",
+                "B) Demand for coffee decreases",
+                "C) Demand for coffee stays the same",
+                "D) Demand for coffee becomes elastic"
+            ],
+            "correct_answer": "B) Demand for coffee decreases",
+            "explanation": "Complements are goods used TOGETHER (like coffee and sugar, or cars and fuel). If sugar becomes more expensive, the total cost of drinking sweetened coffee increases, so consumers buy LESS coffee. This shifts the coffee demand curve to the LEFT. Remember: Substitutes → price of one UP = demand for other UP. Complements → price of one UP = demand for other DOWN.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "If the price of a good increases by 10% and the quantity demanded decreases by 20%, the price elasticity of demand is:",
+            "diagram": null,
+            "options": [
+                "A) 0.5 (Inelastic)",
+                "B) 1.0 (Unit Elastic)",
+                "C) 2.0 (Elastic)",
+                "D) 20 (Perfectly Elastic)"
+            ],
+            "correct_answer": "C) 2.0 (Elastic)",
+            "explanation": "PED = |% Change in Quantity Demanded / % Change in Price| = |-20% / +10%| = 2.0. Since PED > 1, demand is ELASTIC. This means consumers are VERY responsive to price changes — a 10% price increase causes a LARGER (20%) decrease in quantity demanded. Elastic goods are typically luxuries or goods with many substitutes.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Which of the following goods would likely have <strong>INELASTIC</strong> demand (PED < 1)?",
+            "diagram": null,
+            "options": [
+                "A) Luxury smartphones",
+                "B) Life-saving medicine (insulin)",
+                "C) Designer clothing",
+                "D) Restaurant meals"
+            ],
+            "correct_answer": "B) Life-saving medicine (insulin)",
+            "explanation": "INELASTIC demand means quantity demanded changes LITTLE when price changes (PED < 1). Life-saving medicines like insulin are NECESSITIES with NO close substitutes. Even if the price doubles, diabetics MUST still buy insulin. Luxury goods (smartphones, designer clothes, restaurant meals) have ELASTIC demand because they have many substitutes and are not essential.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "The demand curve slopes <strong>downward</strong> because of:",
+            "diagram": null,
+            "options": [
+                "A) Income effect and substitution effect",
+                "B) Supply effect and demand effect",
+                "C) Price effect and quantity effect",
+                "D) Market effect and government effect"
+            ],
+            "correct_answer": "A) Income effect and substitution effect",
+            "explanation": "The demand curve slopes downward due to TWO effects: (1) INCOME EFFECT — when price falls, consumers' purchasing power increases (they feel richer), so they buy more. (2) SUBSTITUTION EFFECT — when price falls, the good becomes relatively cheaper compared to alternatives, so consumers switch from substitutes to this good. Both effects work together to make consumers buy more at lower prices.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "A movement ALONG the demand curve (from Point A to Point B) is caused by:",
+            "diagram": "<svg width='320' height='200' viewBox='0 0 320 200'><rect width='320' height='200' fill='#111827' rx='8'/><line x1='50' y1='20' x2='50' y2='170' stroke='#38bdf8' stroke-width='2'/><line x1='50' y1='170' x2='290' y2='170' stroke='#38bdf8' stroke-width='2'/><line x1='70' y1='50' x2='270' y2='160' stroke='#f43f5e' stroke-width='3'/><circle cx='130' cy='70' r='7' fill='#f59e0b'/><text x='140' y='75' fill='#f59e0b' font-size='13' font-weight='bold'>A</text><circle cx='220' cy='120' r='7' fill='#14b8a6'/><text x='230' y='125' fill='#14b8a6' font-size='13' font-weight='bold'>B</text><text x='100' y='40' fill='#f43f5e' font-size='12' font-weight='bold'>Demand Curve</text><text x='280' y='185' fill='#38bdf8' font-size='12' font-weight='bold'>Quantity</text><text x='10' y='25' fill='#38bdf8' font-size='12' font-weight='bold'>Price</text></svg>",
+            "options": [
+                "A) A change in consumer income",
+                "B) A change in the price of the good itself",
+                "C) A change in population",
+                "D) A change in tastes and preferences"
+            ],
+            "correct_answer": "B) A change in the price of the good itself",
+            "explanation": "MOVEMENT ALONG the demand curve is caused ONLY by a change in the PRICE of the good itself. Moving from Point A to Point B shows: at a higher price (Point A), quantity demanded is lower; at a lower price (Point B), quantity demanded is higher. Changes in income, population, or tastes cause the ENTIRE CURVE TO SHIFT (not movement along it).",
+            "difficulty": "hard"
+        }
+    ]
+}

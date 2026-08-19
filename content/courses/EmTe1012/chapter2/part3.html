@@ -1,0 +1,218 @@
+<div class="lesson-section">
+    <h2>Chapter 2: Data Science</h2>
+    <h3>Part 3: The Data Value Chain</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In this part, we explore the <strong>Data Value Chain</strong>—a series of steps needed to generate value and useful insights from data. The Data Value Chain identifies the key high-level activities that transform raw data into actionable intelligence for businesses, governments, and organizations.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Describe the Data Value Chain and its five key high-level activities.</li>
+            <li>Explain the process of Data Acquisition, including the challenges of infrastructure and transaction volumes.</li>
+            <li>Understand Data Analysis and its role in extracting useful hidden information.</li>
+            <li>Define Data Curation and the role of data curators.</li>
+            <li>Compare Data Storage solutions (RDBMS vs. NoSQL) and their suitability for big data.</li>
+            <li>Explain Data Usage and how it enhances business competitiveness.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>2.4. Data Value Chain</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 2.5 (From Module):</strong>
+        <ul>
+            <li><em>Which information flow step in the data value chain you think is labor-intensive? Why?</em></li>
+            <li><em>What are the different data types and their value chain?</em></li>
+        </ul>
+    </div>
+
+    <p>The <strong>Data Value Chain</strong> is introduced to describe the information flow within a big data system as a <strong>series of steps needed to generate value and useful insights from data</strong>. The Big Data Value Chain identifies the following key high-level activities:</p>
+
+    <div class="diagram-container">
+        <svg width="400" height="180" viewBox="0 0 400 180">
+            <rect width="400" height="180" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="14" text-anchor="middle" font-weight="bold">The 5 Stages of the Data Value Chain</text>
+            
+            <rect x="10" y="50" width="60" height="40" fill="#14b8a6" rx="6"/>
+            <text x="40" y="74" fill="#111827" font-size="9" text-anchor="middle" font-weight="bold">Acquisition</text>
+            
+            <rect x="85" y="50" width="60" height="40" fill="#facc15" rx="6"/>
+            <text x="115" y="74" fill="#111827" font-size="9" text-anchor="middle" font-weight="bold">Analysis</text>
+
+            <rect x="160" y="50" width="60" height="40" fill="#f43f5e" rx="6"/>
+            <text x="190" y="74" fill="#111827" font-size="9" text-anchor="middle" font-weight="bold">Curation</text>
+
+            <rect x="235" y="50" width="60" height="40" fill="#f59e0b" rx="6"/>
+            <text x="265" y="74" fill="#111827" font-size="9" text-anchor="middle" font-weight="bold">Storage</text>
+
+            <rect x="310" y="50" width="80" height="40" fill="#38bdf8" rx="6"/>
+            <text x="350" y="74" fill="#111827" font-size="9" text-anchor="middle" font-weight="bold">Usage</text>
+
+            <path d="M 70 70 L 85 70" stroke="#94a3b8" stroke-width="2"/>
+            <path d="M 145 70 L 160 70" stroke="#94a3b8" stroke-width="2"/>
+            <path d="M 220 70 L 235 70" stroke="#94a3b8" stroke-width="2"/>
+            <path d="M 295 70 L 310 70" stroke="#94a3b8" stroke-width="2"/>
+
+            <text x="200" y="130" fill="#94a3b8" font-size="10" text-anchor="middle">📊 Each stage adds value to the raw data.</text>
+            <text x="200" y="150" fill="#94a3b8" font-size="9" text-anchor="middle">Data flows from left to right, becoming more useful at each step.</text>
+        </svg>
+    </div>
+
+    <hr>
+
+    <h4>2.4.1. Data Acquisition</h4>
+    
+    <p><strong>Data Acquisition</strong> is the process of <strong>gathering, filtering, and cleaning data</strong> before it is put in a data warehouse or any other storage solution on which data analysis can be carried out. This is the very first step in the chain—without good data acquisition, the rest of the chain is built on a shaky foundation.</p>
+    
+    <p><strong>Challenges in Data Acquisition:</strong></p>
+    <ul>
+        <li><strong>Infrastructure Requirements:</strong> The infrastructure required to support the acquisition of big data must deliver <strong>low, predictable latency</strong> in both capturing data and in executing queries. This means the system must be extremely fast and reliable.</li>
+        <li><strong>High Transaction Volumes:</strong> The system must be able to handle very high transaction volumes, often in a <strong>distributed environment</strong> (where data is spread across many servers).</li>
+        <li><strong>Flexibility:</strong> It must support flexible and dynamic data structures, as data comes in many forms (structured, semi-structured, and unstructured).</li>
+    </ul>
+
+    <div class="example-box">
+        <h4>💡 Real World Example (Ethiopia - TeleBirr Transactions):</h4>
+        <p>Every day, millions of <strong>TeleBirr</strong> transactions occur across Ethiopia. The <strong>Data Acquisition</strong> phase involves:</p>
+        <ul>
+            <li><strong>Gathering:</strong> Capturing every transaction (sender, recipient, amount, time, location) from thousands of agents and mobile users.</li>
+            <li><strong>Filtering:</strong> Removing duplicate or incomplete records (e.g., transactions that timed out).</li>
+            <li><strong>Cleaning:</strong> Correcting any errors, such as invalid phone numbers or mismatched currencies.</li>
+            <li><strong>Infrastructure:</strong> The system must handle <strong>millions of transactions per day</strong> with almost zero downtime.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>2.4.2. Data Analysis</h4>
+    
+    <p><strong>Data Analysis</strong> is concerned with making the raw data acquired amenable to use in <strong>decision-making</strong> as well as <strong>domain-specific usage</strong>. Data analysis involves:</p>
+    <ul>
+        <li><strong>Exploring:</strong> Getting to know the data, its patterns, and its quirks.</li>
+        <li><strong>Transforming:</strong> Changing the data into a format that is easier to analyze (e.g., normalizing values).</li>
+        <li><strong>Modeling:</strong> Applying mathematical and statistical models to the data.</li>
+    </ul>
+    
+    <p><strong>The Goal of Data Analysis:</strong> The ultimate goal is <strong>highlighting relevant data, synthesizing, and extracting useful hidden information</strong> with high potential from a business point of view.</p>
+    
+    <p><strong>Related Areas:</strong> Data analysis is the foundation for:</p>
+    <ul>
+        <li><strong>Data Mining:</strong> Discovering patterns in large datasets.</li>
+        <li><strong>Business Intelligence:</strong> Using data to make strategic business decisions.</li>
+        <li><strong>Machine Learning:</strong> Building algorithms that learn from data to make predictions.</li>
+    </ul>
+
+    <div class="example-box">
+        <h4>💡 Real World Example (Ethiopia - Agricultural Data Analysis):</h4>
+        <p>Ethiopia's Ministry of Agriculture collects data from weather stations and farmers. In the <strong>Analysis</strong> phase:</p>
+        <ul>
+            <li><strong>Exploring:</strong> Analysts look at historical rainfall data and crop yield data to find patterns.</li>
+            <li><strong>Transforming:</strong> They convert raw temperature readings into "growing degree days" (a metric used to predict crop growth).</li>
+            <li><strong>Modeling:</strong> They build a statistical model to predict the likelihood of drought in the upcoming season.</li>
+            <li><strong>Result:</strong> The hidden information extracted is a <strong>drought warning</strong> that can help farmers plant drought-resistant crops or prepare irrigation.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>2.4.3. Data Curation</h4>
+    
+    <p><strong>Data Curation</strong> is the <strong>active management of data over its life cycle</strong> to ensure it meets the necessary data quality requirements for its effective usage. Data curation processes can be categorized into different activities such as:</p>
+    <ul>
+        <li><strong>Content creation:</strong> Generating new data or annotations.</li>
+        <li><strong>Selection:</strong> Choosing which data is valuable and should be kept.</li>
+        <li><strong>Classification:</strong> Organizing data into categories.</li>
+        <li><strong>Transformation:</strong> Changing data formats to make them more useful.</li>
+        <li><strong>Validation:</strong> Checking data for accuracy and completeness.</li>
+        <li><strong>Preservation:</strong> Ensuring data is stored safely for the long term.</li>
+    </ul>
+    
+    <p><strong>The Role of Data Curators:</strong> Data curation is performed by <strong>expert curators</strong> who are responsible for improving the accessibility and quality of data. Data curators (also known as scientific curators or data annotators) hold the responsibility of ensuring that data are:</p>
+    <ul>
+        <li><strong>Trustworthy</strong></li>
+        <li><strong>Discoverable</strong> (easy to find)</li>
+        <li><strong>Accessible</strong> (easy to access)</li>
+        <li><strong>Reusable</strong></li>
+        <li><strong>Fit their purpose</strong></li>
+    </ul>
+    
+    <p><strong>Key Trend:</strong> A key trend for the duration of big data utilizes <strong>community and crowdsourcing approaches</strong>—where the public or a community of experts helps to curate and validate data.</p>
+
+    <div class="example-box">
+        <h4>💡 Real World Example (Ethiopia - Community Data Curation):</h4>
+        <p>In Ethiopia, a project mapping water sources in rural areas may use <strong>community crowdsourcing</strong>. Local citizens use a mobile app to report the location and status of wells. <strong>Data curators</strong> then:</p>
+        <ul>
+            <li><strong>Validate</strong> the entries by cross-referencing with satellite imagery.</li>
+            <li><strong>Classify</strong> each water source as "active", "dry", or "contaminated".</li>
+            <li><strong>Preserve</strong> this data so that NGOs and the government can use it for years to plan water infrastructure.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>2.4.4. Data Storage</h4>
+    
+    <p><strong>Data Storage</strong> is the <strong>persistence and management of data in a scalable way</strong> that satisfies the needs of applications that require fast access to the data.</p>
+    
+    <p><strong>Traditional vs. Big Data Storage:</strong></p>
+    <ul>
+        <li><strong>RDBMS (Relational Database Management Systems):</strong> For nearly 40 years, these have been the main and almost unique solution to the storage paradigm. They use the <strong>ACID</strong> properties (Atomicity, Consistency, Isolation, Durability) to guarantee database transactions.</li>
+        <li><strong>The Problem with RDBMS:</strong> ACID properties guarantee transactions, but they <strong>lack flexibility</strong> with regard to schema changes. The <strong>performance and fault tolerance</strong> of RDBMS suffer when data volumes and complexity grow, making them <strong>unsuitable for big data scenarios</strong>.</li>
+        <li><strong>NoSQL Technologies:</strong> NoSQL technologies have been <strong>designed with the scalability goal in mind</strong> and present a wide range of solutions based on alternative data models. NoSQL databases can handle massive volumes of unstructured and semi-structured data with ease.</li>
+    </ul>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Feature</th><th>RDBMS (SQL)</th><th>NoSQL (Big Data)</th></tr>
+            <tr><td><strong>Data Model</strong></td><td>Rigid, tabular (rows and columns)</td><td>Flexible (key-value, document, graph, column)</td></tr>
+            <tr><td><strong>Schema</strong></td><td>Fixed schema required</td><td>Schema-less or dynamic</td></tr>
+            <tr><td><strong>Scalability</strong></td><td>Vertical (scale up - expensive)</td><td>Horizontal (scale out - distributed)</td></tr>
+            <tr><td><strong>ACID Compliance</strong></td><td>Yes (Atomicity, Consistency, Isolation, Durability)</td><td>No (prioritizes speed and availability over strict consistency)</td></tr>
+            <tr><td><strong>Best For</strong></td><td>Complex queries, structured data</td><td>Big data, real-time applications, unstructured data</td></tr>
+        </table>
+    </div>
+
+    <div class="example-box">
+        <h4>💡 Real World Example (Ethiopia - Big Data Storage):</h4>
+        <p><strong>Commercial Bank of Ethiopia</strong> uses traditional RDBMS to store customer account details (structured, highly secure, ACID compliant). However, to analyze customer spending patterns from millions of ATM and POS transactions, they may use a <strong>NoSQL database</strong> (like HBase or MongoDB) to store the massive transaction logs, allowing for fast, scalable analysis without the overhead of rigid schemas.</p>
+    </div>
+
+    <hr>
+
+    <h4>2.4.5. Data Usage</h4>
+    
+    <p><strong>Data Usage</strong> covers the <strong>data-driven business activities</strong> that need access to data, its analysis, and the tools needed to integrate the data analysis within the business activity.</p>
+    
+    <p><strong>Business Impact:</strong> Data usage in business decision-making can enhance competitiveness through:</p>
+    <ul>
+        <li><strong>Reduction of costs:</strong> Identifying inefficiencies and waste.</li>
+        <li><strong>Increased added value:</strong> Creating new products, services, or features based on data insights.</li>
+        <li><strong>Improved performance metrics:</strong> Any other parameter that can be measured against existing performance criteria.</li>
+    </ul>
+
+    <div class="example-box">
+        <h4>💡 Real World Example (Ethiopia - Retail Data Usage):</h4>
+        <p>A large supermarket chain in Addis Ababa uses the <strong>Data Value Chain</strong> to improve its business:</p>
+        <ul>
+            <li><strong>Acquisition:</strong> They collect point-of-sale (POS) data every time a customer buys an item.</li>
+            <li><strong>Analysis:</strong> They analyze this data to find the most popular products and the busiest shopping times.</li>
+            <li><strong>Curation:</strong> They clean the data to remove returns and errors.</li>
+            <li><strong>Storage:</strong> They store it in a data warehouse.</li>
+            <li><strong>Usage:</strong> The store manager uses the analyzed data to <strong>reduce costs</strong> (by ordering only the most popular items and reducing waste), <strong>increase added value</strong> (by offering personalized discounts to frequent shoppers), and <strong>improve performance</strong> (by scheduling more cashiers during peak hours).</li>
+        </ul>
+    </div>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 3)</h4>
+        <ul>
+            <li><strong>Data Value Chain (5 Stages):</strong> Acquisition → Analysis → Curation → Storage → Usage.</li>
+            <li><strong>Data Acquisition:</strong> Gathering, filtering, and cleaning data. Requires low latency and high transaction volume capacity.</li>
+            <li><strong>Data Analysis:</strong> Exploring, transforming, and modeling data to extract hidden insights for decision-making.</li>
+            <li><strong>Data Curation:</strong> Active management to ensure data is trustworthy, discoverable, accessible, and reusable.</li>
+            <li><strong>Data Storage:</strong> RDBMS (ACID, rigid) vs. NoSQL (scalable, flexible) – NoSQL is better for big data.</li>
+            <li><strong>Data Usage:</strong> Using data-driven insights to reduce costs, increase value, and improve business performance.</li>
+        </ul>
+    </div>
+</div>

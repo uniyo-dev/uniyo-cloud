@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 1,
+    "title": "Part 1 Practice: Evolution of Technologies",
+    "questions": [
+        {
+            "id": 1,
+            "text": "According to the module, what is the primary definition of 'emerging technology'?",
+            "options": [
+                "A) A technology that is obsolete and no longer used in modern society.",
+                "B) A new technology or the continuing development of existing technology that is expected to create significant social or economic effects.",
+                "C) A type of agricultural tool used exclusively in the 1800s.",
+                "D) Any technology that requires electricity to function."
+            ],
+            "correct_answer": "B) A new technology or the continuing development of existing technology that is expected to create significant social or economic effects.",
+            "explanation": "The module defines emerging technology as a new technology or the continuing development of existing technology that is expected to create significant social or economic effects. Option A is wrong because emerging implies development, not obsolescence. Option C is wrong as it is not specific to agriculture. Option D is wrong as not all emerging tech involves electricity (e.g., blockchain).",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the etymological root of the word 'Technology' as per the module?",
+            "options": [
+                "A) Latin 'volvere' meaning to roll.",
+                "B) Greek 'tekhnologia' meaning systematic treatment of an art or craft.",
+                "C) French 'technique' meaning skill.",
+                "D) English 'technic' meaning machinery."
+            ],
+            "correct_answer": "B) Greek 'tekhnologia' meaning systematic treatment of an art or craft.",
+            "explanation": "The module explicitly states: 'Technology: 1610s, “discourse or treatise on an art or the arts,” from Greek tekhnologia.' Option A is the root of 'evolution', not technology. Options C and D are incorrect per the provided text.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "In which country did the Industrial Revolution first begin?",
+            "options": [
+                "A) United States of America",
+                "B) France",
+                "C) Germany",
+                "D) Great Britain (England)"
+            ],
+            "correct_answer": "D) Great Britain (England)",
+            "explanation": "The module clearly states: 'The Industrial Revolution began in Great Britain in the late 1770s before spreading to the rest of Europe.' Options A, B, and C were industrialized later, after the revolution spread from Britain.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "Which of the following is NOT listed as an invention of the Industrial Revolution in the module?",
+            "options": [
+                "A) The Steam Engine",
+                "B) The Telegraph",
+                "C) The Cotton Gin",
+                "D) The Smartphone"
+            ],
+            "correct_answer": "D) The Smartphone",
+            "explanation": "The module lists the Steam Engine, Telegraph, and Cotton Gin as key inventions of the Industrial Revolution. The Smartphone is a modern invention (IR 3.0/4.0), not from the Industrial Revolution era.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What was the core technological factor that defined the Third Industrial Revolution (IR 3.0)?",
+            "options": [
+                "A) The invention of the steam engine and mechanization.",
+                "B) Mass production and the widespread use of digital logic circuits.",
+                "C) The introduction of cyber-physical systems and AI.",
+                "D) The invention of the railroad and the telegraph."
+            ],
+            "correct_answer": "B) Mass production and the widespread use of digital logic circuits.",
+            "explanation": "IR 3.0 was the 'Digital Revolution'. The module states: 'The core factor of this revolution is the mass production and widespread use of digital logic circuits.' Option A is IR 1.0. Option C is IR 4.0. Option D is IR 1.0/2.0.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "According to the module, what was the final historical cause of the Industrial Revolution?",
+            "options": [
+                "A) The Digital Revolution",
+                "B) The Agricultural Revolution (increase in food production)",
+                "C) The French Revolution",
+                "D) The American Revolution"
+            ],
+            "correct_answer": "B) The Agricultural Revolution (increase in food production)",
+            "explanation": "The module explains: 'The final cause of the Industrial Revolution was the effects created by the Agricultural Revolution... due in part to an increase in food production, which was the key outcome of the Agricultural Revolution.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "Which type of industry involves research and development, such as Information Technology (IT)?",
+            "options": [
+                "A) Primary Industry",
+                "B) Secondary Industry",
+                "C) Tertiary Industry",
+                "D) Quaternary Industry"
+            ],
+            "correct_answer": "D) Quaternary Industry",
+            "explanation": "The module lists: 'Quaternary industry involves research and development industries e.g. IT.' Primary is raw materials, Secondary is manufacturing, Tertiary is services.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "The American Industrial Revolution is historically referred to as the:",
+            "options": [
+                "A) First Industrial Revolution",
+                "B) Second Industrial Revolution",
+                "C) Third Industrial Revolution",
+                "D) Digital Revolution"
+            ],
+            "correct_answer": "B) Second Industrial Revolution",
+            "explanation": "The module states: 'The American Industrial Revolution commonly referred to as the Second Industrial Revolution, started sometime between 1820 and 1870.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "What was the primary relationship between the Agricultural Revolution and the Industrial Revolution in Britain?",
+            "options": [
+                "A) The Agricultural Revolution caused a severe decrease in food production.",
+                "B) The Agricultural Revolution increased food production, which freed up labor and helped fuel the Industrial Revolution.",
+                "C) The Agricultural Revolution started in America and spread to Britain.",
+                "D) There is no historical connection between the two revolutions."
+            ],
+            "correct_answer": "B) The Agricultural Revolution increased food production, which freed up labor and helped fuel the Industrial Revolution.",
+            "explanation": "The module states that the Industrial Revolution began in the 18th century due in part to an increase in food production, which was the key outcome of the Agricultural Revolution. This increased food supply allowed a larger population and freed up workers to move to industrial cities.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Which of the following industry types is NOT listed in the module's classification of industries?",
+            "options": [
+                "A) Primary Industry",
+                "B) Secondary Industry",
+                "C) Tertiary Industry",
+                "D) Quinary Industry"
+            ],
+            "correct_answer": "D) Quinary Industry",
+            "explanation": "The module explicitly lists Primary, Secondary, Tertiary, and Quaternary industries. 'Quinary' (which refers to high-level decision-making in large organizations) is not mentioned in the provided module text.",
+            "difficulty": "hard"
+        }
+    ]
+}

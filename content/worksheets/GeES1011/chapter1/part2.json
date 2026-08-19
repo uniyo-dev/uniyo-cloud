@@ -1,0 +1,147 @@
+{
+    "course_code": "GeES1011",
+    "chapter": 1,
+    "title": "Part 2 Practice: Shape of Ethiopia & Map Reading",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Ethiopia has which type of country shape?",
+            "diagram": null,
+            "options": [
+                "A) Fragmented",
+                "B) Elongated",
+                "C) Compact",
+                "D) Perforated"
+            ],
+            "correct_answer": "C) Compact",
+            "explanation": "Ethiopia has a COMPACT shape — roughly circular with a small extension. This makes defense, communication, and administration easier. Fragmented = many islands (like Philippines), Elongated = long and narrow (like Chile), Perforated = surrounds another country (like South Africa).",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Examine the shape diagrams. Which represents Ethiopia's shape?",
+            "diagram": "<svg width='350' height='150' viewBox='0 0 350 150'><rect width='350' height='150' fill='#111827' rx='8'/><circle cx='70' cy='75' r='35' fill='#14b8a6'/><text x='70' y='125' text-anchor='middle' fill='#f8fafc' font-size='9'>A</text><ellipse cx='160' cy='75' rx='15' ry='35' fill='#f43f5e'/><text x='160' y='125' text-anchor='middle' fill='#f8fafc' font-size='9'>B</text><ellipse cx='250' cy='75' rx='12' ry='30' fill='#facc15'/><ellipse cx='270' cy='65' rx='10' ry='20' fill='#facc15'/><ellipse cx='290' cy='80' rx='8' ry='18' fill='#facc15'/><text x='250' y='125' text-anchor='middle' fill='#f8fafc' font-size='9'>C</text><circle cx='330' cy='75' r='25' fill='#38bdf8'/><circle cx='330' cy='75' r='8' fill='#0B0F19'/><text x='330' y='125' text-anchor='middle' fill='#f8fafc' font-size='9'>D</text></svg>",
+            "options": [
+                "A) A (circle)",
+                "B) B (vertical oval)",
+                "C) C (multiple ellipses)",
+                "D) D (circle with hole)"
+            ],
+            "correct_answer": "A) A (circle)",
+            "explanation": "Diagram A (circle) best represents Ethiopia's COMPACT shape. B is elongated, C is fragmented, D is perforated. Compact shapes are roughly circular or square-like.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 3,
+            "text": "Which of the following is an ADVANTAGE of Ethiopia's compact shape?",
+            "diagram": null,
+            "options": [
+                "A) Harder to defend borders",
+                "B) Easier internal communication and transportation",
+                "C) More cultural isolation",
+                "D) Longer distance from center to borders"
+            ],
+            "correct_answer": "B) Easier internal communication and transportation",
+            "explanation": "Compact shape means SHORTER distances from center to borders — making communication and transportation EASIER. Options A and D are DISADVANTAGES. Option C is not related to shape.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "The Philippines, with its many islands, has which shape?",
+            "diagram": null,
+            "options": [
+                "A) Compact",
+                "B) Fragmented",
+                "C) Elongated",
+                "D) Protruded"
+            ],
+            "correct_answer": "B) Fragmented",
+            "explanation": "FRAGMENTED countries consist of many separate islands or pieces. The Philippines has over 7,000 islands! This makes communication and defense MORE difficult but gives access to more maritime resources.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 5,
+            "text": "Chile's long, narrow shape (4,300 km long, only 350 km wide) is:",
+            "diagram": null,
+            "options": [
+                "A) Compact",
+                "B) Fragmented",
+                "C) Elongated",
+                "D) Perforated"
+            ],
+            "correct_answer": "C) Elongated",
+            "explanation": "ELONGATED countries are LONG and NARROW. Chile stretches 4,300 km north-south but averages only 350 km east-west. This creates transportation challenges (long distances between north and south).",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "South Africa completely surrounds Lesotho. South Africa's shape is:",
+            "diagram": null,
+            "options": [
+                "A) Compact",
+                "B) Fragmented",
+                "C) Elongated",
+                "D) Perforated"
+            ],
+            "correct_answer": "D) Perforated",
+            "explanation": "PERFORATED countries completely SURROUND another country. South Africa surrounds Lesotho (creating a 'hole' in South Africa). This creates unique political and economic relationships between the two countries.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "Thailand's shape, with a large extension (peninsula) from the main body, is:",
+            "diagram": null,
+            "options": [
+                "A) Compact",
+                "B) Fragmented",
+                "C) Protruded",
+                "D) Perforated"
+            ],
+            "correct_answer": "C) Protruded",
+            "explanation": "PROTRUDED countries have a large EXTENSION projecting from the main territory. Thailand has a peninsula extending southward. This can create challenges in governing distant protruding regions.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "The measure of compactness is calculated as:",
+            "diagram": null,
+            "options": [
+                "A) Boundary length / Area",
+                "B) Area / Boundary length",
+                "C) Area × Boundary length",
+                "D) Area + Boundary length"
+            ],
+            "correct_answer": "B) Area / Boundary length",
+            "explanation": "Compactness = Area / Boundary length. A HIGHER ratio means MORE compact (more area per boundary). Ethiopia's ratio is approximately 206.5 km² per km of boundary, indicating high compactness.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Examine the map elements. What does the RED box represent?",
+            "diagram": "<svg width='350' height='180' viewBox='0 0 350 180'><rect width='350' height='180' fill='#111827' rx='8'/><rect x='30' y='30' width='290' height='120' rx='4' fill='#1a2332' stroke='#38bdf8' stroke-width='2'/><text x='175' y='90' text-anchor='middle' fill='#94a3b8' font-size='11'>MAP BODY</text><rect x='35' y='35' width='60' height='18' rx='3' fill='#6d28d9'/><text x='65' y='49' text-anchor='middle' fill='#f8fafc' font-size='7'>TITLE</text><rect x='290' y='140' width='70' height='18' rx='3' fill='#f43f5e'/><text x='325' y='154' text-anchor='middle' fill='#f8fafc' font-size='7'>???</text><text x='175' y='170' text-anchor='middle' fill='#94a3b8' font-size='9'>What is the RED box called?</text></svg>",
+            "options": [
+                "A) Title",
+                "B) Scale",
+                "C) Legend/Key",
+                "D) North Arrow"
+            ],
+            "correct_answer": "C) Legend/Key",
+            "explanation": "The RED box (bottom right) represents the LEGEND/KEY — it explains what symbols and colors on the map mean. Title is top left (purple). Scale and North Arrow are also marginal information elements.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 10,
+            "text": "A TOPOGRAPHICAL map shows:",
+            "diagram": null,
+            "options": [
+                "A) Population statistics",
+                "B) Physical features (mountains, rivers, elevation)",
+                "C) Political boundaries only",
+                "D) Economic data"
+            ],
+            "correct_answer": "B) Physical features (mountains, rivers, elevation)",
+            "explanation": "TOPOGRAPHICAL maps show PHYSICAL features — elevation (via contour lines), rivers, mountains, valleys. Population statistics are STATISTICAL maps. Political boundaries are political maps. Economic data is thematic/statistical.",
+            "difficulty": "medium"
+        }
+    ]
+}

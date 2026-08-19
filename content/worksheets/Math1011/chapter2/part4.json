@@ -1,0 +1,134 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the sum of the functions $f(x) = 3x^2 + 2$ and $g(x) = 5x - 4$?",
+            "options": [
+                "A) $3x^2 + 5x + 6$",
+                "B) $3x^2 + 5x - 2$",
+                "C) $3x^2 - 5x + 6$",
+                "D) $15x^3 - 12x^2 + 10x - 8$"
+            ],
+            "correct_answer": "B) $3x^2 + 5x - 2$",
+            "explanation": "The module states: '$(f + g)(x) = f(x) + g(x) = (3x^2 + 2) + (5x - 4) = 3x^2 + 5x - 2$.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the domain of the quotient $(f/g)(x)$ for $f(x) = 3x^2 + 2$ and $g(x) = 5x - 4$?",
+            "options": [
+                "A) All real numbers",
+                "B) All real numbers except $4/5$",
+                "C) All real numbers except $5/4$",
+                "D) All real numbers except $0$"
+            ],
+            "correct_answer": "C) All real numbers except $5/4$",
+            "explanation": "The module states: '$Dom(f/g) = [Dom(f) \\cap Dom(g)] \\\\ \\{x : g(x) = 0\\} = \\mathbb{R} \\\\ \\{5/4\\}$.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the composition $(f \\circ g)(-2)$ for $f(x) = 5x^2 - 3x + 2$ and $g(x) = 4x + 3$?",
+            "options": [
+                "A) $142$",
+                "B) $67$",
+                "C) $38$",
+                "D) $80$"
+            ],
+            "correct_answer": "A) $142$",
+            "explanation": "The module states: '$(f \\circ g)(-2) = f(g(-2)) = f(-5) = 5(-5)^2 - 3(-5) + 2 = 142$.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "What is the composition $(g \\circ f)(2)$ for $f(x) = 5x^2 - 3x + 2$ and $g(x) = 4x + 3$?",
+            "options": [
+                "A) $142$",
+                "B) $67$",
+                "C) $38$",
+                "D) $80$"
+            ],
+            "correct_answer": "B) $67$",
+            "explanation": "The module states: '$(g \\circ f)(2) = g(f(2)) = g(16) = 4(16) + 3 = 67$.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the formula for $(f \\circ g)(x)$ for $f(x) = 5x^2 - 3x + 2$ and $g(x) = 4x + 3$?",
+            "options": [
+                "A) $80x^2 + 108x + 38$",
+                "B) $20x^2 - 12x + 11$",
+                "C) $80x^2 + 120x + 45$",
+                "D) $20x^2 + 12x + 11$"
+            ],
+            "correct_answer": "A) $80x^2 + 108x + 38$",
+            "explanation": "The module states: '$(f \\circ g)(x) = f(g(x)) = f(4x + 3) = 5(4x + 3)^2 - 3(4x + 3) + 2 = 80x^2 + 108x + 38$.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the domain of $(f \\circ g)(x)$ for $f(x) = \\frac{x}{x+1}$ and $g(x) = \\frac{2}{x-1}$?",
+            "options": [
+                "A) All real numbers",
+                "B) All real numbers except $1$",
+                "C) All real numbers except $\\pm 1$",
+                "D) All real numbers except $-1$"
+            ],
+            "correct_answer": "C) All real numbers except $\\pm 1$",
+            "explanation": "The module states: '$Dom(f \\circ g) = \\{x : x \\neq \\pm 1\\}$.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "What is the composition $(g \\circ f)(x)$ for $f(x) = \\frac{x}{x+1}$ and $g(x) = \\frac{2}{x-1}$?",
+            "options": [
+                "A) $\\frac{2}{x+1}$",
+                "B) $-2x - 2$",
+                "C) $2x + 2$",
+                "D) $\\frac{x}{x-1}$"
+            ],
+            "correct_answer": "B) $-2x - 2$",
+            "explanation": "The module states: '$(g \\circ f)(x) = g(f(x)) = \\frac{2}{\\frac{x}{x+1} - 1} = -2x - 2$.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "When are two functions $f$ and $g$ considered equal?",
+            "options": [
+                "A) When they have the same range.",
+                "B) When they have the same domain and $f(x) = g(x)$ for all $x$ in the domain.",
+                "C) When they have the same codomain.",
+                "D) When they have the same number of elements."
+            ],
+            "correct_answer": "B) When they have the same domain and $f(x) = g(x)$ for all $x$ in the domain.",
+            "explanation": "The module states: 'Two functions are said to be equal if and only if: i) The functions have the same domain; ii) Their functional values are equal at each element of the domain.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Are $f(x) = \\frac{x^2 - 25}{x - 5}$ and $g(x) = x + 5$ equal functions?",
+            "options": [
+                "A) Yes, because they simplify to the same expression.",
+                "B) No, because their domains are different.",
+                "C) Yes, because they have the same range.",
+                "D) No, because they have different codomains."
+            ],
+            "correct_answer": "B) No, because their domains are different.",
+            "explanation": "The module states: 'The function f and g are not equal because Dom(f) ≠ Dom(g).' f is undefined at $x = 5$, while g is defined for all reals.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is $(f \\circ g)(12)$ for $f(x) = \\frac{6x}{x^2 - 9}$ and $g(x) = \\sqrt{3x}$?",
+            "options": [
+                "A) $\\frac{4}{3}$",
+                "B) $\\frac{3}{4}$",
+                "C) $2$",
+                "D) $1$"
+            ],
+            "correct_answer": "A) $\\frac{4}{3}$",
+            "explanation": "The module states: '$(f \\circ g)(12) = f(g(12)) = f(\\sqrt{36}) = f(6) = \\frac{36}{27} = \\frac{4}{3}$.'",
+            "difficulty": "hard"
+        }
+    ]
+}

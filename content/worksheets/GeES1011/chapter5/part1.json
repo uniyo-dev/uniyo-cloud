@@ -1,0 +1,147 @@
+{
+    "course_code": "GeES1011",
+    "chapter": 5,
+    "title": "Part 1 Practice: Elements and Controls of Climate",
+    "questions": [
+        {
+            "id": 1,
+            "text": "The MAIN difference between weather and climate is:",
+            "diagram": null,
+            "options": [
+                "A) Weather is short-term, climate is long-term average",
+                "B) Weather is long-term, climate is short-term",
+                "C) They are the same thing",
+                "D) Weather only includes rainfall"
+            ],
+            "correct_answer": "A) Weather is short-term, climate is long-term average",
+            "explanation": "WEATHER is the SHORT-TERM atmospheric condition (hourly, daily changes). CLIMATE is the LONG-TERM average of weather over 30+ years. Weather can change in minutes; climate changes over decades.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Ethiopia lies between which latitudes?",
+            "diagram": null,
+            "options": [
+                "A) 3°S and 15°S",
+                "B) 3°N and 15°N",
+                "C) 33°E and 48°E",
+                "D) 0° and 30°N"
+            ],
+            "correct_answer": "B) 3°N and 15°N",
+            "explanation": "Ethiopia lies between 3°N and 15°N LATITUDE — a TROPICAL location. This means Ethiopia receives DIRECT sunlight year-round, giving warm temperatures. Option C (33°E-48°E) is LONGITUDE.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "The Earth's axis is tilted at approximately:",
+            "diagram": null,
+            "options": [
+                "A) 10°",
+                "B) 23.5°",
+                "C) 45°",
+                "D) 90°"
+            ],
+            "correct_answer": "B) 23.5°",
+            "explanation": "The Earth's axis is tilted at 23.5° from the vertical. This TILT causes the SEASONS as different parts of the Earth receive varying amounts of sunlight throughout the year.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "During an EQUINOX, what happens?",
+            "diagram": null,
+            "options": [
+                "A) Longest day of the year",
+                "B) Equal day and night worldwide",
+                "C) Shortest day of the year",
+                "D) No sunlight at all"
+            ],
+            "correct_answer": "B) Equal day and night worldwide",
+            "explanation": "During an EQUINOX (March 21 and September 23), day and night are EQUAL (12 hours each) everywhere on Earth. The sun is directly OVERHEAD at the equator.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Examine the diagram. What does the SUN's position at TROPIC OF CANCER indicate?",
+            "diagram": "<svg width='350' height='150' viewBox='0 0 350 150'><rect width='350' height='150' fill='#111827' rx='8'/><circle cx='175' cy='50' r='20' fill='#facc15'/><text x='175' y='55' text-anchor='middle' fill='#0B0F19' font-size='7' font-weight='bold'>SUN</text><line x1='175' y1='70' x2='175' y2='130' stroke='#facc15' stroke-width='2' stroke-dasharray='4,3'/><text x='185' y='100' text-anchor='middle' fill='#f59e0b' font-size='9' font-weight='bold'>Tropic of Cancer</text><text x='185' y='120' text-anchor='middle' fill='#94a3b8' font-size='8'>23.5°N</text><text x='175' y='145' text-anchor='middle' fill='#f8fafc' font-size='9'>This occurs on June 21</text></svg>",
+            "options": [
+                "A) Winter Solstice",
+                "B) Summer Solstice (June 21)",
+                "C) Vernal Equinox",
+                "D) Autumn Equinox"
+            ],
+            "correct_answer": "B) Summer Solstice (June 21)",
+            "explanation": "When the sun is directly overhead at the TROPIC OF CANCER (23.5°N) on JUNE 21, it's the SUMMER SOLSTICE — the longest day in the Northern Hemisphere (including Ethiopia).",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Ethiopia's temperature DECREASES with altitude at approximately:",
+            "diagram": null,
+            "options": [
+                "A) 3°C per 1,000m",
+                "B) 6.5°C per 1,000m",
+                "C) 10°C per 1,000m",
+                "D) 15°C per 1,000m"
+            ],
+            "correct_answer": "B) 6.5°C per 1,000m",
+            "explanation": "The ENVIRONMENTAL (normal) lapse rate is about 6.5°C per 1,000 meters of altitude gain. This is why Ethiopia's HIGHLANDS are cooler than its LOWLANDS despite being near the equator.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "The DRY ADIABATIC lapse rate is:",
+            "diagram": null,
+            "options": [
+                "A) 5°C per 1,000m",
+                "B) 6.5°C per 1,000m",
+                "C) 10°C per 1,000m",
+                "D) 15°C per 1,000m"
+            ],
+            "correct_answer": "C) 10°C per 1,000m",
+            "explanation": "The DRY ADIABATIC lapse rate is 10°C per 1,000m — the rate at which RISING DRY air cools. It's FASTER than the wet adiabatic rate (5°C/km) because dry air doesn't release latent heat.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Why is the WET ADIABATIC lapse rate SLOWER than the dry rate?",
+            "diagram": null,
+            "options": [
+                "A) Wet air is heavier",
+                "B) Condensation releases LATENT HEAT",
+                "C) Wet air doesn't rise",
+                "D) Water is colder than air"
+            ],
+            "correct_answer": "B) Condensation releases LATENT HEAT",
+            "explanation": "When SATURATED (wet) air rises, condensation occurs, releasing LATENT HEAT. This heat partially COUNTERACTS the cooling, making the wet adiabatic rate (5°C/km) slower than the dry rate (10°C/km).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Examine the lapse rate diagram. Which line is STEEPEST?",
+            "diagram": "<svg width='350' height='150' viewBox='0 0 350 150'><rect width='350' height='150' fill='#111827' rx='8'/><line x1='30' y1='130' x2='330' y2='130' stroke='#38bdf8' stroke-width='2'/><line x1='30' y1='10' x2='30' y2='130' stroke='#38bdf8' stroke-width='2'/><line x1='30' y1='20' x2='330' y2='120' stroke='#14b8a6' stroke-width='3'/><text x='200' y='80' fill='#14b8a6' font-size='8' font-weight='bold'>A</text><line x1='30' y1='10' x2='330' y2='130' stroke='#f43f5e' stroke-width='2' stroke-dasharray='5,3'/><text x='250' y='110' fill='#f43f5e' font-size='8' font-weight='bold'>B</text></svg>",
+            "options": [
+                "A) Line A (green)",
+                "B) Line B (red dashed)",
+                "C) Both equal",
+                "D) Cannot tell"
+            ],
+            "correct_answer": "B) Line B (red dashed)",
+            "explanation": "Line B (red dashed) is STEEPEST — it has the FASTEST temperature decrease with altitude (10°C/km = DRY ADIABATIC). Line A (green) is gentler (6.5°C/km = ENVIRONMENTAL). Steeper = faster cooling.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Why does Addis Ababa (2,400m) have moderate climate DESPITE being tropical?",
+            "diagram": null,
+            "options": [
+                "A) It's far from the equator",
+                "B) High ALTITUDE cools the temperature",
+                "C) It receives no sunlight",
+                "D) Ocean currents cool it"
+            ],
+            "correct_answer": "B) High ALTITUDE cools the temperature",
+            "explanation": "Addis Ababa's HIGH ALTITUDE (2,400m) COOLS its temperature despite its tropical location. At 2,400m, temperature is about 15.6°C cooler than sea level (6.5°C/km × 2.4km). This is why Ethiopian highlands have pleasant climate.",
+            "difficulty": "medium"
+        }
+    ]
+}

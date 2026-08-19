@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 4,
+    "title": "Part 2 Practice: Marginalized Occupational Groups & Age-Based Vulnerability",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Which occupational groups are mentioned as the most marginalized in Ethiopia?",
+            "options": [
+                "A) Teachers and doctors.",
+                "B) Tanners, potters, weavers, and ironsmiths.",
+                "C) Farmers and fishermen.",
+                "D) Soldiers and police."
+            ],
+            "correct_answer": "B) Tanners, potters, weavers, and ironsmiths.",
+            "explanation": "The module states: 'The most marginalized occupational groups are tanners, potters, weavers, and ironsmiths.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Why are craft-workers marginalized despite their contributions?",
+            "options": [
+                "A) Because they are considered impure and inferior.",
+                "B) Because they do not work hard.",
+                "C) Because they are too wealthy.",
+                "D) Because they are outsiders."
+            ],
+            "correct_answer": "A) Because they are considered impure and inferior.",
+            "explanation": "The module states: 'Craft-workers such as potters and tanners are considered as impure... Despite their contributions, these craft-workers are considered inferior and marginalized from wide areas of social interactions and economic activities.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is spatial marginalization of craft-workers?",
+            "options": [
+                "A) They live in the city center.",
+                "B) They are forced to live on the outskirts of villages, on poor land, and are segregated at market places.",
+                "C) They own all the land.",
+                "D) They live in luxury homes."
+            ],
+            "correct_answer": "B) They are forced to live on the outskirts of villages, on poor land, and are segregated at market places.",
+            "explanation": "The module states: 'Craft-workers settle/live on the outskirts of villages, near to forests, on poor land, around steep slopes. They are segregated at market places (they sell their goods at the outskirts of markets).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "What is the rule of marriage for marginalized occupational groups?",
+            "options": [
+                "A) They practice exogamy (marrying outside the group).",
+                "B) They practice endogamous marriage (marrying within their own group) because they are excluded from intermarriage.",
+                "C) They do not marry at all.",
+                "D) They only marry dominant group members."
+            ],
+            "correct_answer": "B) They practice endogamous marriage (marrying within their own group) because they are excluded from intermarriage.",
+            "explanation": "The module states: 'Craft-workers are excluded from intermarriage (i.e., marriage with members of the dominant group). As a result, they exercise endogamous marriage.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the definition of child marriage according to the module?",
+            "options": [
+                "A) Marriage involving girls below the age of 18.",
+                "B) Marriage involving boys below the age of 18.",
+                "C) Marriage between two people over 18.",
+                "D) Marriage involving people over 60."
+            ],
+            "correct_answer": "A) Marriage involving girls below the age of 18.",
+            "explanation": "The module states: 'Child marriage refers to marriage which involves girls below the age of 18.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What are the major factors that encourage child marriage in Ethiopia?",
+            "options": [
+                "A) Only economic factors.",
+                "B) Social norms (virginity, reputation) and economic factors (security, access to land).",
+                "C) Only cultural festivals.",
+                "D) Only government policies."
+            ],
+            "correct_answer": "B) Social norms (virginity, reputation) and economic factors (security, access to land).",
+            "explanation": "The module states: 'Social norms and economic factors are the two major factors that support the continuation of the practice. Social norms: Sexual purity of girls... Economic issues are among the major factors that support the continuation of child marriage... economic benefits such as access to land and other resources.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is a major health consequence of child marriage mentioned in the module?",
+            "options": [
+                "A) Improved health.",
+                "B) Fistula (a severe reproductive health problem) and death of the mother or child.",
+                "C) Increased life expectancy.",
+                "D) Better education."
+            ],
+            "correct_answer": "B) Fistula (a severe reproductive health problem) and death of the mother or child.",
+            "explanation": "The module states: 'Child marriage leads to early pregnancies, which increase risks of diseases and complications during child delivery, fistula (a severe reproductive health problem affecting thousands of women in Ethiopia), and death of the mother or child.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "What does the term 'older persons' refer to in the module?",
+            "options": [
+                "A) Adults with the age of 60 and above.",
+                "B) Children under 18.",
+                "C) People between 18 and 30.",
+                "D) People between 30 and 50."
+            ],
+            "correct_answer": "A) Adults with the age of 60 and above.",
+            "explanation": "The module states: 'The phrase 'older persons' refers to adults with the age of 60 and above.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What is ageism?",
+            "options": [
+                "A) Respect for older people.",
+                "B) Stereotyping, prejudice, and discrimination against people based on their age.",
+                "C) The celebration of youth.",
+                "D) The study of aging."
+            ],
+            "correct_answer": "B) Stereotyping, prejudice, and discrimination against people based on their age.",
+            "explanation": "The module states: 'Ageism is a widely observed social problem in the world. Ageism refer to stereotyping, prejudice, and discrimination against people based on their age.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Why are older persons increasingly marginalized in modern times?",
+            "options": [
+                "A) Because they are too wealthy.",
+                "B) Because of modernization, globalization, and urbanization, they are considered a social burden rather than social assets.",
+                "C) Because they are too strong.",
+                "D) Because they are moving to cities."
+            ],
+            "correct_answer": "B) Because of modernization, globalization, and urbanization, they are considered a social burden rather than social assets.",
+            "explanation": "The module states: 'Older people are facing various problems as a result of modernization, globalization, and urbanization... Older persons are marginalized because they are considered as social burden rather than social assets.'",
+            "difficulty": "hard"
+        }
+    ]
+}

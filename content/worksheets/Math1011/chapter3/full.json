@@ -1,0 +1,918 @@
+{
+    "course_code": "Math1011",
+    "chapter": 3,
+    "title": "Chapter 3 Full Practice: Matrices, Determinant and Systems of Linear Equations",
+    "total_questions": 70,
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the size of the matrix A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\end{bmatrix}?",
+            "options": [
+                "A) 3 × 2",
+                "B) 2 × 3",
+                "C) 2 × 2",
+                "D) 3 × 3"
+            ],
+            "correct_answer": "B) 2 × 3",
+            "explanation": "The module states: 'Matrix A of size m × n has m rows and n columns.' The given matrix has 2 rows and 3 columns, so its size is 2 × 3.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the entry a₂₃ of the matrix A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\end{bmatrix}?",
+            "options": [
+                "A) 2",
+                "B) 5",
+                "C) 6",
+                "D) 8"
+            ],
+            "correct_answer": "C) 6",
+            "explanation": "The module states: 'a_{ij} appears at the intersection of the i-th row and the j-th column.' a₂₃ is the entry in the 2nd row and 3rd column, which is 6.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "When are two matrices A and B considered equal?",
+            "options": [
+                "A) When they have the same number of rows.",
+                "B) When they have the same number of columns.",
+                "C) When they have the same size and a_{ij} = b_{ij} for all i and j.",
+                "D) When they have the same determinant."
+            ],
+            "correct_answer": "C) When they have the same size and a_{ij} = b_{ij} for all i and j.",
+            "explanation": "The module states: 'Two matrices of the same size, A = [a_{ij}] and B = [b_{ij}], are said to be equal if and only if a_{ij} = b_{ij}, for all i, j.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the sum of A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \\end{bmatrix} and B = \begin{bmatrix} 5 & 6 \\ 7 & 8 \\end{bmatrix}?",
+            "options": [
+                "A) \begin{bmatrix} 6 & 8 \\ 10 & 12 \\end{bmatrix}",
+                "B) \begin{bmatrix} 1 & 2 \\ 3 & 4 \\end{bmatrix}",
+                "C) \begin{bmatrix} 5 & 6 \\ 7 & 8 \\end{bmatrix}",
+                "D) \begin{bmatrix} 4 & 4 \\ 4 & 4 \\end{bmatrix}"
+            ],
+            "correct_answer": "A) \begin{bmatrix} 6 & 8 \\ 10 & 12 \\end{bmatrix}",
+            "explanation": "The module states: 'A + B = [a_{ij} + b_{ij}].' Adding corresponding entries: 1+5=6, 2+6=8, 3+7=10, 4+8=12.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 5,
+            "text": "What is the result of scalar multiplication 3A for A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \\end{bmatrix}?",
+            "options": [
+                "A) \begin{bmatrix} 3 & 6 \\ 9 & 12 \\end{bmatrix}",
+                "B) \begin{bmatrix} 1 & 2 \\ 3 & 4 \\end{bmatrix}",
+                "C) \begin{bmatrix} 3 & 2 \\ 3 & 4 \\end{bmatrix}",
+                "D) \begin{bmatrix} 1 & 6 \\ 3 & 12 \\end{bmatrix}"
+            ],
+            "correct_answer": "A) \begin{bmatrix} 3 & 6 \\ 9 & 12 \\end{bmatrix}",
+            "explanation": "The module states: 'Scalar multiplication: αA = [α a_{ij}].' Multiplying every entry of A by 3 gives [[3, 6], [9, 12]].",
+            "difficulty": "easy"
+        },
+        {
+            "id": 6,
+            "text": "If A and B are matrices of the same size, which of the following is true?",
+            "options": [
+                "A) A + B = B + A",
+                "B) A - B = B - A",
+                "C) A × B = B × A",
+                "D) A + B is undefined"
+            ],
+            "correct_answer": "A) A + B = B + A",
+            "explanation": "The module states: 'Commutative Law: A + B = B + A.' Matrix addition is commutative.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the additive identity matrix for a 2 × 2 matrix?",
+            "options": [
+                "A) \begin{bmatrix} 1 & 0 \\ 0 & 1 \\end{bmatrix}",
+                "B) \begin{bmatrix} 0 & 0 \\ 0 & 0 \\end{bmatrix}",
+                "C) \begin{bmatrix} 1 & 1 \\ 1 & 1 \\end{bmatrix}",
+                "D) \begin{bmatrix} 2 & 2 \\ 2 & 2 \\end{bmatrix}"
+            ],
+            "correct_answer": "B) \begin{bmatrix} 0 & 0 \\ 0 & 0 \\end{bmatrix}",
+            "explanation": "The module states: 'Identity Law: A + 0 = A.' The zero matrix is the additive identity.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Solve for X in the matrix equation 2X + A = B, where A = \begin{bmatrix} 4 & 0 \\ -2 & 2 \\end{bmatrix} and B = \begin{bmatrix} 6 & -4 \\ 8 & 0 \\end{bmatrix}.",
+            "options": [
+                "A) \begin{bmatrix} 1 & -2 \\ 5 & -1 \\end{bmatrix}",
+                "B) \begin{bmatrix} 2 & -4 \\ 10 & -2 \\end{bmatrix}",
+                "C) \begin{bmatrix} 1 & 2 \\ 5 & 1 \\end{bmatrix}",
+                "D) \begin{bmatrix} -1 & 2 \\ -5 & 1 \\end{bmatrix}"
+            ],
+            "correct_answer": "A) \begin{bmatrix} 1 & -2 \\ 5 & -1 \\end{bmatrix}",
+            "explanation": "The module states: '2X = B - A implies X = (1/2)(B - A).' B - A = [[2, -4], [10, -2]]. Multiplying by 1/2 gives X = [[1, -2], [5, -1]].",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "Which of the following is NOT a law of matrix addition?",
+            "options": [
+                "A) A + B = B + A",
+                "B) (A + B) + C = A + (B + C)",
+                "C) A + 0 = A",
+                "D) A × B = B × A"
+            ],
+            "correct_answer": "D) A × B = B × A",
+            "explanation": "The module states the laws of matrix addition: Commutative, Associative, Identity, and Inverse. Matrix multiplication is NOT commutative, which is discussed later.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "If matrix A is multiplied by a scalar α, what is the size of the resulting matrix?",
+            "options": [
+                "A) It becomes a 1 × n matrix.",
+                "B) It becomes an m × 1 matrix.",
+                "C) It remains the same size m × n.",
+                "D) It becomes an n × m matrix."
+            ],
+            "correct_answer": "C) It remains the same size m × n.",
+            "explanation": "The module states: 'Closure Law of Scalar Multiplication: αA is an m × n matrix.' Scalar multiplication does not change the size of the matrix.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "What is the condition for the product AB of two matrices A and B to be defined?",
+            "options": [
+                "A) The number of rows in A must equal the number of columns in B.",
+                "B) The number of columns in A must equal the number of rows in B.",
+                "C) A and B must have the same size.",
+                "D) A and B must be square matrices."
+            ],
+            "correct_answer": "B) The number of columns in A must equal the number of rows in B.",
+            "explanation": "The module states: 'The product AB of two matrices A and B is defined only if the number of columns in A and the number of rows in B are equal.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 12,
+            "text": "If A is a 2 × 3 matrix and B is a 3 × 4 matrix, what is the size of the product AB?",
+            "options": [
+                "A) 2 × 3",
+                "B) 3 × 4",
+                "C) 2 × 4",
+                "D) 3 × 3"
+            ],
+            "correct_answer": "C) 2 × 4",
+            "explanation": "The module states: 'If A = [a_{ij}]_{m × n} and B = [b_{ij}]_{n × p}, then AB is an m × p matrix.' For A (2×3) and B (3×4), AB is 2 × 4.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 13,
+            "text": "Compute the product AB for A = [[1, 2], [3, 4]] and B = [[5, 6], [7, 8]].",
+            "options": [
+                "A) [[19, 22], [43, 50]]",
+                "B) [[23, 34], [31, 46]]",
+                "C) [[5, 12], [21, 32]]",
+                "D) [[1, 2], [3, 4]]"
+            ],
+            "correct_answer": "A) [[19, 22], [43, 50]]",
+            "explanation": "The module states: 'AB = [[(1)(5)+(2)(7), (1)(6)+(2)(8)], [(3)(5)+(4)(7), (3)(6)+(4)(8)]] = [[19, 22], [43, 50]].'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 14,
+            "text": "What is the product BA for A = [[0, 1], [0, 0]] and B = [[1, 0], [0, 0]]?",
+            "options": [
+                "A) [[0, 0], [0, 0]]",
+                "B) [[0, 1], [0, 0]]",
+                "C) [[0, 0], [0, 1]]",
+                "D) [[1, 0], [0, 1]]"
+            ],
+            "correct_answer": "B) [[0, 1], [0, 0]]",
+            "explanation": "The module states: 'BA = [[0, 1], [0, 0]].' This example shows that matrix multiplication is not commutative.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 15,
+            "text": "Which of the following is true about matrix multiplication in general?",
+            "options": [
+                "A) AB = BA for all matrices A and B.",
+                "B) AB ≠ BA in general.",
+                "C) AB is always a scalar.",
+                "D) AB is always a zero matrix."
+            ],
+            "correct_answer": "B) AB ≠ BA in general.",
+            "explanation": "The module states: 'Matrix multiplication is not commutative. For matrices A and B given above, we have AB ≠ BA.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 16,
+            "text": "For which type of matrices is it always true that AB = BA?",
+            "options": [
+                "A) Zero matrices",
+                "B) Diagonal matrices of the same size",
+                "C) Square matrices",
+                "D) Identity matrices only"
+            ],
+            "correct_answer": "B) Diagonal matrices of the same size",
+            "explanation": "The module states: 'More generally, if A and B are any two diagonal matrices of the same size, then AB = BA.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 17,
+            "text": "What is the product of the diagonal matrices A = [[2, 0], [0, 3]] and B = [[4, 0], [0, 5]]?",
+            "options": [
+                "A) [[6, 0], [0, 8]]",
+                "B) [[8, 0], [0, 15]]",
+                "C) [[2, 0], [0, 5]]",
+                "D) [[4, 0], [0, 3]]"
+            ],
+            "correct_answer": "B) [[8, 0], [0, 15]]",
+            "explanation": "The module states: 'AB = [[8, 0], [0, 15]].' Diagonal matrices multiply by multiplying the corresponding diagonal entries.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "What is the associative property of matrix multiplication?",
+            "options": [
+                "A) AB = BA",
+                "B) A(BC) = (AB)C",
+                "C) A(B + C) = AB + AC",
+                "D) (A + B)C = AC + BC"
+            ],
+            "correct_answer": "B) A(BC) = (AB)C",
+            "explanation": "The module states: 'Matrix multiplication is associative, i.e., whenever the products are defined, we have A(BC) = (AB)C.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "If A = [[1, 3], [2, 4]], B = [[-1, 2], [0, 1]], and C = [[2, 1], [4, 0]], what is the product A(BC)?",
+            "options": [
+                "A) [[-1, 16], [2, 24]]",
+                "B) [[-1, 16], [2, 24]]",
+                "C) [[1, 0], [0, 1]]",
+                "D) [[0, 0], [0, 0]]"
+            ],
+            "correct_answer": "A) [[-1, 16], [2, 24]]",
+            "explanation": "The module verifies that A(BC) = (AB)C. BC = [[2, 1], [4, 0]], A(BC) = [[-1, 16], [2, 24]].",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "If A is a 3×3 matrix, what is the size of A²?",
+            "options": [
+                "A) 3 × 1",
+                "B) 1 × 3",
+                "C) 3 × 3",
+                "D) 9 × 9"
+            ],
+            "correct_answer": "C) 3 × 3",
+            "explanation": "The module states: 'We shall write Aⁿ for the product AAA...A (n terms).' A² = A × A, which is 3×3 × 3×3 = 3×3.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 21,
+            "text": "What is a square matrix?",
+            "options": [
+                "A) A matrix with more rows than columns.",
+                "B) A matrix with the same number of rows and columns.",
+                "C) A matrix with more columns than rows.",
+                "D) A matrix with all entries equal to zero."
+            ],
+            "correct_answer": "B) A matrix with the same number of rows and columns.",
+            "explanation": "The module states: 'A matrix A is said to be square if it has the same number of rows and columns.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 22,
+            "text": "What is an identity matrix?",
+            "options": [
+                "A) A matrix with all entries equal to 1.",
+                "B) A square matrix with 1s on the main diagonal and 0s elsewhere.",
+                "C) A matrix with all entries equal to 0.",
+                "D) A matrix with 1s in the first row and 0s elsewhere."
+            ],
+            "correct_answer": "B) A square matrix with 1s on the main diagonal and 0s elsewhere.",
+            "explanation": "The module states: 'A square matrix A is called an identity matrix if a_{ij} = 1 when i = j, and a_{ij} = 0 when i ≠ j.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 23,
+            "text": "What is a diagonal matrix?",
+            "options": [
+                "A) A matrix where all entries are 1.",
+                "B) A matrix where all entries off the main diagonal are 0.",
+                "C) A matrix with all entries equal to 0.",
+                "D) A matrix with 1s in the first column."
+            ],
+            "correct_answer": "B) A matrix where all entries off the main diagonal are 0.",
+            "explanation": "The module states: 'A square matrix D is said to be diagonal if d_{ij} = 0 whenever i ≠ j.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 24,
+            "text": "What is the transpose of matrix A = [[1, 2, 3], [4, 5, 6]]?",
+            "options": [
+                "A) [[1, 4], [2, 5], [3, 6]]",
+                "B) [[1, 2, 3], [4, 5, 6]]",
+                "C) [[1, 2], [3, 4], [5, 6]]",
+                "D) [[1, 3, 5], [2, 4, 6]]"
+            ],
+            "correct_answer": "A) [[1, 4], [2, 5], [3, 6]]",
+            "explanation": "The module states: 'Row 1 of matrix A becomes column 1 of Aᵗ, and row 2 of A becomes column 2 of Aᵗ.' Thus, Aᵗ = [[1, 4], [2, 5], [3, 6]].",
+            "difficulty": "easy"
+        },
+        {
+            "id": 25,
+            "text": "When is a square matrix A called symmetric?",
+            "options": [
+                "A) When A is diagonal.",
+                "B) When A = Aᵗ.",
+                "C) When A is upper triangular.",
+                "D) When A is lower triangular."
+            ],
+            "correct_answer": "B) When A = Aᵗ.",
+            "explanation": "The module states: 'A square matrix A is said to be Symmetric if A = Aᵗ.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 26,
+            "text": "Which of the following is a symmetric matrix?",
+            "options": [
+                "A) [[0, 1, 3], [-1, 0, 2], [-3, -2, 0]]",
+                "B) [[1, 1, 3], [1, 2, 2], [3, 2, 3]]",
+                "C) [[1, 0, 0], [0, 2, 0], [0, 0, 3]]",
+                "D) Both B and C"
+            ],
+            "correct_answer": "D) Both B and C",
+            "explanation": "Matrix B is symmetric because Bᵗ = B. Matrix C is a diagonal matrix, which is always symmetric because Cᵗ = C. Matrix A is not symmetric because Aᵗ ≠ A.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 27,
+            "text": "What is (Aᵗ)ᵗ equal to?",
+            "options": [
+                "A) A²",
+                "B) A",
+                "C) I",
+                "D) 0"
+            ],
+            "correct_answer": "B) A",
+            "explanation": "The module states: '(Aᵗ)ᵗ = A.' The transpose of the transpose returns the original matrix.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 28,
+            "text": "What is the transpose of the product (AB)ᵗ?",
+            "options": [
+                "A) AᵗBᵗ",
+                "B) BᵗAᵗ",
+                "C) AB",
+                "D) BA"
+            ],
+            "correct_answer": "B) BᵗAᵗ",
+            "explanation": "The module states: '(AB)ᵗ = BᵗAᵗ.' The order of multiplication is reversed when taking the transpose of a product.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 29,
+            "text": "What is a scalar matrix?",
+            "options": [
+                "A) A diagonal matrix with all diagonal entries equal to 1.",
+                "B) A diagonal matrix in which all diagonal entries are equal.",
+                "C) Any matrix with all entries equal.",
+                "D) A 1 × 1 matrix."
+            ],
+            "correct_answer": "B) A diagonal matrix in which all diagonal entries are equal.",
+            "explanation": "The module states: 'A diagonal matrix in which all diagonal entries are equal is called a scalar matrix.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 30,
+            "text": "Which of the following is a scalar matrix?",
+            "options": [
+                "A) [[1, 0], [0, 1]]",
+                "B) [[2, 0], [0, 2]]",
+                "C) [[2, 0], [0, 3]]",
+                "D) Both A and B"
+            ],
+            "correct_answer": "D) Both A and B",
+            "explanation": "A scalar matrix is a diagonal matrix where all diagonal entries are equal. A is the identity matrix (scalar with 1s). B is a scalar matrix with 2s. C is a diagonal matrix but not scalar because 2 ≠ 3.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 31,
+            "text": "Which of the following is NOT an elementary row operation?",
+            "options": [
+                "A) Interchanging two rows: R_i ↔ R_j",
+                "B) Multiplying a row by a nonzero scalar: R_i → αR_i",
+                "C) Adding a multiple of one row to another: R_i → R_i + αR_j",
+                "D) Adding a column to another column"
+            ],
+            "correct_answer": "D) Adding a column to another column",
+            "explanation": "The module states: 'The following are known as elementary row operations: 1. Interchanging two rows; 2. Multiplying a row by a nonzero scalar; 3. Adding a multiple of one row to another.' Column operations are not elementary row operations.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 32,
+            "text": "In the row echelon form of a matrix, which of the following is NOT a required condition?",
+            "options": [
+                "A) All nonzero rows are above any rows of all zeros.",
+                "B) Each leading entry of a row is in a column to the right of the leading entry of the row above it.",
+                "C) All entries in a column below a leading entry are zeros.",
+                "D) Each leading entry is 1."
+            ],
+            "correct_answer": "D) Each leading entry is 1.",
+            "explanation": "The module states the conditions for row echelon form. Condition 4 (leading entry is 1) is only required for reduced row echelon form, not for row echelon form.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 33,
+            "text": "What additional conditions must a matrix in row echelon form satisfy to be in reduced row echelon form?",
+            "options": [
+                "A) All nonzero rows are above zero rows.",
+                "B) The leading entry in each nonzero row is 1, and each leading 1 is the only nonzero entry in its column.",
+                "C) All entries in a column below a leading entry are zeros.",
+                "D) The leading entries step to the right."
+            ],
+            "correct_answer": "B) The leading entry in each nonzero row is 1, and each leading 1 is the only nonzero entry in its column.",
+            "explanation": "The module states: 'If a matrix in row echelon form satisfies: 4. The leading entry in each nonzero row is 1. 5. Each leading 1 is the only nonzero entry in its column, then it is in reduced row echelon form.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 34,
+            "text": "What is the rank of a matrix A?",
+            "options": [
+                "A) The number of rows in A.",
+                "B) The number of columns in A.",
+                "C) The number of nonzero rows in the reduced row echelon form of A.",
+                "D) The number of zero rows in the row echelon form of A."
+            ],
+            "correct_answer": "C) The number of nonzero rows in the reduced row echelon form of A.",
+            "explanation": "The module states: 'Rank of an m × n matrix A, denoted by rank(A), is the number of nonzero rows of the reduced row echelon form of A.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 35,
+            "text": "What is the rank of matrix A = [[1, 1, 2], [2, 2, 5], [3, 3, 2]]?",
+            "options": [
+                "A) 1",
+                "B) 2",
+                "C) 3",
+                "D) 0"
+            ],
+            "correct_answer": "B) 2",
+            "explanation": "The module states: 'After a sequence of elementary row operations, we obtain the reduced echelon form of A, which has two nonzero rows. Thus, rank(A) = 2.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 36,
+            "text": "What is the relationship between the rank of a matrix A and the rank of its transpose Aᵗ?",
+            "options": [
+                "A) rank(A) = 2 × rank(Aᵗ)",
+                "B) rank(A) = rank(Aᵗ)",
+                "C) rank(A) > rank(Aᵗ)",
+                "D) rank(A) < rank(Aᵗ)"
+            ],
+            "correct_answer": "B) rank(A) = rank(Aᵗ)",
+            "explanation": "The module states: 'The matrix A and its transpose Aᵗ have the same rank. That is, rank(A) = rank(Aᵗ).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 37,
+            "text": "Given the matrix A = [[4, 3], [2, 1]], which elementary row operation will produce the lower triangular matrix?",
+            "options": [
+                "A) R₂ → R₂ - (1/2)R₁",
+                "B) R₂ → R₂ - 2R₁",
+                "C) R₁ → R₁ - 2R₂",
+                "D) R₁ ↔ R₂"
+            ],
+            "correct_answer": "B) R₂ → R₂ - 2R₁",
+            "explanation": "The module asks: 'Use elementary row operations to find the lower triangular matrix which is row equivalent to A.' For A = [[4, 3], [2, 1]], R₂ → R₂ - (1/2)R₁ gives a zero below the diagonal.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 38,
+            "text": "How many pivot positions does the matrix A = [[1, 1, 2], [2, 2, 5], [3, 3, 2]] have?",
+            "options": [
+                "A) 1",
+                "B) 2",
+                "C) 3",
+                "D) 0"
+            ],
+            "correct_answer": "B) 2",
+            "explanation": "The module states: 'A pivot position in a matrix A is a location in A that corresponds to a leading 1 in the reduced row echelon form of A.' Since rank(A) = 2, there are 2 pivot positions.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 39,
+            "text": "Which of the following matrices is in reduced row echelon form?",
+            "options": [
+                "A) [[1, 2, 0], [0, 1, 3], [0, 0, 1]]",
+                "B) [[1, 0, 0], [0, 1, 0], [0, 0, 1]]",
+                "C) [[1, 2, 3], [0, 4, 5], [0, 0, 6]]",
+                "D) [[1, 0, 0], [0, 2, 0], [0, 0, 3]]"
+            ],
+            "correct_answer": "B) [[1, 0, 0], [0, 1, 0], [0, 0, 1]]",
+            "explanation": "The module states: 'Reduced row echelon form requires the leading entry in each nonzero row is 1, and each leading 1 is the only nonzero entry in its column.' The identity matrix satisfies this.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 40,
+            "text": "When using the algorithm to find the reduced row echelon form, what is the first step?",
+            "options": [
+                "A) Begin with the leftmost nonzero column. This is a pivot column.",
+                "B) Create zeros above each pivot.",
+                "C) Scale the pivot to 1.",
+                "D) Replace rows to create zeros below the pivot."
+            ],
+            "correct_answer": "A) Begin with the leftmost nonzero column. This is a pivot column.",
+            "explanation": "The module states: 'Step 1: Begin with the leftmost nonzero column. This is a pivot column. The pivot position is at the top.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 41,
+            "text": "What is the determinant of the matrix A = [[5, 2], [3, 4]]?",
+            "options": [
+                "A) 14",
+                "B) 26",
+                "C) 7",
+                "D) 20"
+            ],
+            "correct_answer": "A) 14",
+            "explanation": "The module states: 'det(A) = |[5, 2], [3, 4]| = (5)(4) - (3)(2) = 14.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 42,
+            "text": "What is the minor M₁₂(A) for the matrix A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]?",
+            "options": [
+                "A) |[4, 6], [7, 9]|",
+                "B) |[4, 5], [7, 8]|",
+                "C) |[2, 3], [5, 6]|",
+                "D) |[1, 3], [7, 9]|"
+            ],
+            "correct_answer": "A) |[4, 6], [7, 9]|",
+            "explanation": "The module states: 'M₁₂(A) is the determinant of the submatrix obtained by deleting the 1st row and 2nd column.' Deleting row 1 and column 2 leaves [[4, 6], [7, 9]].",
+            "difficulty": "easy"
+        },
+        {
+            "id": 43,
+            "text": "What is the cofactor C₁₂(A) for the matrix A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]?",
+            "options": [
+                "A) M₁₂(A)",
+                "B) -M₁₂(A)",
+                "C) M₂₁(A)",
+                "D) -M₂₁(A)"
+            ],
+            "correct_answer": "B) -M₁₂(A)",
+            "explanation": "The module states: 'C₁₂(A) = (-1)^(1+2) M₁₂(A) = -M₁₂(A).' The sign for position (1,2) is negative.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 44,
+            "text": "Compute the determinant of A = [[2, 4, 0], [3, -1, 2], [2, 1, 1]].",
+            "options": [
+                "A) 2",
+                "B) -2",
+                "C) 10",
+                "D) 0"
+            ],
+            "correct_answer": "B) -2",
+            "explanation": "The module states: 'det(A) = 2(-1 - 2) - 4(3 - 4) + 0 = -6 + 4 = -2.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 45,
+            "text": "Which of the following is a property of determinants?",
+            "options": [
+                "A) det(A) = det(Aᵗ)",
+                "B) det(AB) = det(A)det(B)",
+                "C) If two rows are equal, det(A) = 0.",
+                "D) All of the above"
+            ],
+            "correct_answer": "D) All of the above",
+            "explanation": "The module states: 'det(A) = det(Aᵗ)' (Theorem 3.8), 'det(AB) = det(A)det(B)' (Theorem 3.10), and 'If two rows (or columns) are equal, then det(A) = 0.' All are correct.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 46,
+            "text": "If B is obtained from A by interchanging two rows, what is the relationship between det(B) and det(A)?",
+            "options": [
+                "A) det(B) = det(A)",
+                "B) det(B) = -det(A)",
+                "C) det(B) = 2det(A)",
+                "D) det(B) = 0"
+            ],
+            "correct_answer": "B) det(B) = -det(A)",
+            "explanation": "The module states: 'If matrix B is obtained from matrix A by interchanging any two rows (R_i ↔ R_j), then det(B) = -det(A).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 47,
+            "text": "If B is obtained from A by multiplying a row by a nonzero scalar α, what is the relationship between det(B) and det(A)?",
+            "options": [
+                "A) det(B) = det(A)",
+                "B) det(B) = -det(A)",
+                "C) det(B) = α det(A)",
+                "D) det(B) = 0"
+            ],
+            "correct_answer": "C) det(B) = α det(A)",
+            "explanation": "The module states: 'If matrix B is obtained from matrix A by multiplying the i-th row by a nonzero scalar α, then det(B) = α det(A).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 48,
+            "text": "What happens to the determinant when you add a multiple of one row to another row?",
+            "options": [
+                "A) The determinant is multiplied by the scalar.",
+                "B) The determinant is negated.",
+                "C) The determinant is unchanged.",
+                "D) The determinant becomes zero."
+            ],
+            "correct_answer": "C) The determinant is unchanged.",
+            "explanation": "The module states: 'If matrix B is obtained from matrix A by adding a scalar multiple of one row to the other (R_i → R_i + α R_j), then det(B) = det(A).'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 49,
+            "text": "What is the determinant of a diagonal matrix with diagonal entries 2, 3, and 5?",
+            "options": [
+                "A) 10",
+                "B) 30",
+                "C) 15",
+                "D) 6"
+            ],
+            "correct_answer": "B) 30",
+            "explanation": "The module states: 'The determinant of a diagonal matrix is the product of the entries in the main diagonal.' 2 × 3 × 5 = 30.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 50,
+            "text": "If det(A) = 2 and det(B) = 3, what is det(AB)?",
+            "options": [
+                "A) 6",
+                "B) 5",
+                "C) 1",
+                "D) 9"
+            ],
+            "correct_answer": "A) 6",
+            "explanation": "The module states: 'det(AB) = det(A)det(B).' 2 × 3 = 6.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 51,
+            "text": "What is the adjoint of a matrix A?",
+            "options": [
+                "A) The matrix of cofactors of A.",
+                "B) The transpose of the matrix of cofactors of A.",
+                "C) The inverse of A.",
+                "D) The determinant of A."
+            ],
+            "correct_answer": "B) The transpose of the matrix of cofactors of A.",
+            "explanation": "The module states: 'Adj(A) = [C_{ij}(A)]^t. That is, adjoint of matrix A is the transpose of the matrix of cofactors for A.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 52,
+            "text": "What is the inverse of A = [[1, 2], [3, 4]] using the adjoint formula?",
+            "options": [
+                "A) [[-2, 1], [3/2, -1/2]]",
+                "B) [[4, -2], [-3, 1]]",
+                "C) [[-2, -1], [-3/2, -1/2]]",
+                "D) [[4, 2], [3, 1]]"
+            ],
+            "correct_answer": "A) [[-2, 1], [3/2, -1/2]]",
+            "explanation": "det(A) = (1)(4) - (3)(2) = -2. Adj(A) = [[4, -2], [-3, 1]]. A⁻¹ = (1/-2) [[4, -2], [-3, 1]] = [[-2, 1], [3/2, -1/2]].",
+            "difficulty": "easy"
+        },
+        {
+            "id": 53,
+            "text": "What is the condition for a matrix A to be invertible?",
+            "options": [
+                "A) det(A) = 0",
+                "B) det(A) ≠ 0",
+                "C) A is a square matrix.",
+                "D) A is a diagonal matrix."
+            ],
+            "correct_answer": "B) det(A) ≠ 0",
+            "explanation": "The module states: 'If A is invertible (nonsingular) then det(A) ≠ 0.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 54,
+            "text": "In Gauss-Jordan elimination, what is the initial augmented matrix used to find A⁻¹?",
+            "options": [
+                "A) [A | A]",
+                "B) [A | I]",
+                "C) [I | A]",
+                "D) [A | 0]"
+            ],
+            "correct_answer": "B) [A | I]",
+            "explanation": "The module states: 'Write the n × 2n matrix that consists of A on the left and the n × n identity matrix I_n on the right to obtain [A | I_n].'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 55,
+            "text": "What is the inverse of the diagonal matrix A = [[1, 0, 0], [0, 2, 0], [0, 0, 3]]?",
+            "options": [
+                "A) [[1, 0, 0], [0, 1/2, 0], [0, 0, 1/3]]",
+                "B) [[1, 0, 0], [0, 2, 0], [0, 0, 3]]",
+                "C) [[-1, 0, 0], [0, -2, 0], [0, 0, -3]]",
+                "D) [[1/3, 0, 0], [0, 1/2, 0], [0, 0, 1]]"
+            ],
+            "correct_answer": "A) [[1, 0, 0], [0, 1/2, 0], [0, 0, 1/3]]",
+            "explanation": "The module shows the Gauss-Jordan elimination for this matrix and concludes: 'A⁻¹ = [[1, 0, 0], [0, 1/2, 0], [0, 0, 1/3]].'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 56,
+            "text": "What is (AB)⁻¹ equal to?",
+            "options": [
+                "A) A⁻¹B⁻¹",
+                "B) B⁻¹A⁻¹",
+                "C) AB",
+                "D) BA"
+            ],
+            "correct_answer": "B) B⁻¹A⁻¹",
+            "explanation": "The module states: '(AB)⁻¹ = B⁻¹A⁻¹.' The order of multiplication is reversed for the inverse of a product.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 57,
+            "text": "What is (Aᵗ)⁻¹ equal to?",
+            "options": [
+                "A) (A⁻¹)ᵗ",
+                "B) A⁻¹",
+                "C) Aᵗ",
+                "D) A"
+            ],
+            "correct_answer": "A) (A⁻¹)ᵗ",
+            "explanation": "The module states: '(Aᵗ)⁻¹ = (A⁻¹)ᵗ.' The inverse of the transpose is the transpose of the inverse.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 58,
+            "text": "What is (αA)⁻¹ equal to?",
+            "options": [
+                "A) αA⁻¹",
+                "B) (1/α)A⁻¹",
+                "C) A⁻¹/α",
+                "D) α⁻¹A"
+            ],
+            "correct_answer": "B) (1/α)A⁻¹",
+            "explanation": "The module states: '(αA)⁻¹ = (1/α)A⁻¹.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 59,
+            "text": "If A is a 2×2 matrix with det(A) = 4, what is det(A⁻¹)?",
+            "options": [
+                "A) 4",
+                "B) 1/4",
+                "C) -4",
+                "D) 0"
+            ],
+            "correct_answer": "B) 1/4",
+            "explanation": "Since A⁻¹ = (1/det(A))Adj(A) and det(Adj(A)) = det(A)^(n-1), det(A⁻¹) = 1/det(A) = 1/4 for a 2×2 matrix.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 60,
+            "text": "If A is invertible and AB = AC, what can be concluded?",
+            "options": [
+                "A) B = C",
+                "B) B ≠ C",
+                "C) A = 0",
+                "D) A = I"
+            ],
+            "correct_answer": "A) B = C",
+            "explanation": "The module states: 'Suppose A is invertible. If AB = AC or BA = CA, then B = C.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 61,
+            "text": "What is the augmented matrix for the system 0.3l + 0.2h = 550, 0.2l + 0.4h = 500, 0.4l + 0.3h = 750?",
+            "options": [
+                "A) [[0.3, 0.2], [0.2, 0.4], [0.4, 0.3]]",
+                "B) [[0.3, 0.2 | 550], [0.2, 0.4 | 500], [0.4, 0.3 | 750]]",
+                "C) [[0.3, 0.2, 550], [0.2, 0.4, 500], [0.4, 0.3, 750]]",
+                "D) [[550, 500, 750], [0.3, 0.2, 0.4]]"
+            ],
+            "correct_answer": "B) [[0.3, 0.2 | 550], [0.2, 0.4 | 500], [0.4, 0.3 | 750]]",
+            "explanation": "The augmented matrix is formed by appending the column vector b to the coefficient matrix A. For this system, [A|b] = [[0.3, 0.2 | 550], [0.2, 0.4 | 500], [0.4, 0.3 | 750]].",
+            "difficulty": "easy"
+        },
+        {
+            "id": 62,
+            "text": "What are the three possible outcomes for a system of linear equations?",
+            "options": [
+                "A) One solution, two solutions, or three solutions.",
+                "B) Unique solution, infinitely many solutions, or no solution.",
+                "C) Only one solution or no solution.",
+                "D) Only infinitely many solutions or no solution."
+            ],
+            "correct_answer": "B) Unique solution, infinitely many solutions, or no solution.",
+            "explanation": "The module states: 'For a system of linear equations, precisely one of the following is true: 1. It admits a unique solution; 2. It has infinitely many solutions; 3. It has no solution.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 63,
+            "text": "What is the first step in Gaussian elimination?",
+            "options": [
+                "A) Find the inverse of the coefficient matrix.",
+                "B) Write the augmented matrix for the linear system.",
+                "C) Use Cramer's rule.",
+                "D) Compute the determinant of the coefficient matrix."
+            ],
+            "correct_answer": "B) Write the augmented matrix for the linear system.",
+            "explanation": "The module states: 'Gaussian Elimination: (a) Write the augmented matrix for the linear system.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 64,
+            "text": "What is the rank condition for a system to have a unique solution?",
+            "options": [
+                "A) rank(A) = rank([A|b]) < number of unknowns.",
+                "B) rank(A) = rank([A|b]) = number of unknowns.",
+                "C) rank(A) < rank([A|b]).",
+                "D) rank(A) > rank([A|b])."
+            ],
+            "correct_answer": "B) rank(A) = rank([A|b]) = number of unknowns.",
+            "explanation": "The module states: 'If rank(A) = rank([A|b]) = number of unknowns, then the linear system has only one solution.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 65,
+            "text": "Using Cramer's rule, what is x₁ for the system x₁ + x₂ = 1, x₁ - x₂ = 3?",
+            "options": [
+                "A) -1",
+                "B) 1",
+                "C) 2",
+                "D) -2"
+            ],
+            "correct_answer": "C) 2",
+            "explanation": "The module states: 'x₁ = D₁/D.' D = |[1, 1], [1, -1]| = -2. D₁ = |[1, 1], [3, -1]| = -4. x₁ = -4 / -2 = 2.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 66,
+            "text": "What is the solution to the system x₁ + x₂ = 1, x₁ - x₂ = 3 using the inverse method?",
+            "options": [
+                "A) (2, -1)",
+                "B) (1, 0)",
+                "C) (3, -2)",
+                "D) (0, 1)"
+            ],
+            "correct_answer": "A) (2, -1)",
+            "explanation": "The module states: 'x = A⁻¹b.' A = [[1, 1], [1, -1]], A⁻¹ = [[1/2, 1/2], [1/2, -1/2]]. x = A⁻¹ [[1], [3]] = [[2], [-1]].",
+            "difficulty": "medium"
+        },
+        {
+            "id": 67,
+            "text": "When does Cramer's rule fail to solve a linear system?",
+            "options": [
+                "A) When the system has infinitely many solutions.",
+                "B) When the determinant of the coefficient matrix is zero.",
+                "C) When the system is inconsistent.",
+                "D) All of the above."
+            ],
+            "correct_answer": "D) All of the above.",
+            "explanation": "The module states: 'Cramer's rule doesn't work if the determinant of the coefficient matrix is zero or the coefficient matrix is not square.' If det(A) = 0, the system may have no solution or infinitely many solutions.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 68,
+            "text": "What is the solution set for the system x₁ + 2x₂ + x₃ = 2, x₁ - x₂ - 2x₃ = -1?",
+            "options": [
+                "A) {(1 - α, α, 1 - α) : α ∈ ℝ}",
+                "B) {(1, 2, -1)}",
+                "C) {(2, -1, 1)}",
+                "D) No solution"
+            ],
+            "correct_answer": "A) {(1 - α, α, 1 - α) : α ∈ ℝ}",
+            "explanation": "The module states: 'The system has infinitely many solutions, and the set of solutions is given by {(1 - α, α, 1 - α) : α ∈ ℝ}.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 69,
+            "text": "What is the rank condition for a system to have infinitely many solutions?",
+            "options": [
+                "A) rank(A) = rank([A|b]) = number of unknowns.",
+                "B) rank(A) = rank([A|b]) < number of unknowns.",
+                "C) rank(A) < rank([A|b]).",
+                "D) rank(A) > rank([A|b])."
+            ],
+            "correct_answer": "B) rank(A) = rank([A|b]) < number of unknowns.",
+            "explanation": "The module states: 'If rank(A) = rank([A|b]) < number of unknowns, then the linear system has infinitely many solutions.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 70,
+            "text": "Using the inverse method, what is the solution to 4x₁ - 2x₂ + 3x₃ = 0, 2x₁ + 2x₂ + 5x₃ = 0, 8x₁ - 5x₂ - 2x₃ = 0?",
+            "options": [
+                "A) (0, 0, 0)",
+                "B) (1, 0, 0)",
+                "C) (0, 1, 0)",
+                "D) (0, 0, 1)"
+            ],
+            "correct_answer": "A) (0, 0, 0)",
+            "explanation": "This is a homogeneous system (b = 0). Since the coefficient matrix is invertible (det ≠ 0), the only solution is the trivial solution x = (0, 0, 0).",
+            "difficulty": "hard"
+        }
+    ]
+}

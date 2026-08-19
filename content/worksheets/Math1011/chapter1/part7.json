@@ -1,0 +1,134 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the union of $A = \\{1, 2, 3\\}$ and $B = \\{3, 4, 5\\}$?",
+            "options": [
+                "A) $\\{3\\}$",
+                "B) $\\{1, 2, 3, 3, 4, 5\\}$",
+                "C) $\\{1, 2, 3, 4, 5\\}$",
+                "D) $\\{1, 2, 4, 5\\}$"
+            ],
+            "correct_answer": "C) $\\{1, 2, 3, 4, 5\\}$",
+            "explanation": "The union of two sets A and B is the set of all elements that are in A or in B (or in both). A ∪ B = {1, 2, 3, 4, 5}. Option A is the intersection (common elements). Option B repeats 3. Option D incorrectly omits 3.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the intersection of $A = \\{1, 2, 3\\}$ and $B = \\{3, 4, 5\\}$?",
+            "options": [
+                "A) $\\{3\\}$",
+                "B) $\\{1, 2, 3, 4, 5\\}$",
+                "C) $\\{1, 2\\}$",
+                "D) $\\{4, 5\\}$"
+            ],
+            "correct_answer": "A) $\\{3\\}$",
+            "explanation": "The intersection of two sets A and B is the set of all elements that are in both A and B. A ∩ B = {3}. Option B is the union. Option C and D are incorrect because those elements are not in both sets.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the complement of $A = \\{2, 4, 6\\}$ given the universal set $U = \\{1, 2, 3, 4, 5, 6, 7\\}$?",
+            "options": [
+                "A) $\\{2, 4, 6\\}$",
+                "B) $\\{1, 3, 5, 7\\}$",
+                "C) $\\{1, 2, 3, 4, 5, 6, 7\\}$",
+                "D) $\\emptyset$"
+            ],
+            "correct_answer": "B) $\\{1, 3, 5, 7\\}$",
+            "explanation": "The complement of A, denoted A', is the set of all elements of U that are not in A. Thus, A' = {1, 3, 5, 7}. Option A is A itself. Option C is U. Option D is the empty set.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "What is the difference $A - B$ if $A = \\{1, 3, 5\\}$ and $B = \\{1, 2\\}$?",
+            "options": [
+                "A) $\\{1\\}$",
+                "B) $\\{2\\}$",
+                "C) $\\{3, 5\\}$",
+                "D) $\\{1, 2, 3, 5\\}$"
+            ],
+            "correct_answer": "C) $\\{3, 5\\}$",
+            "explanation": "The difference between two sets A and B, denoted by A - B, is the set of all elements in A and not in B. Thus, A - B = {3, 5}. Option A is the intersection. Option B is B - A. Option D incorrectly includes 1 and 2.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the symmetric difference $A \\Delta B$ if $A = \\{1, 2, 3\\}$ and $B = \\{3, 4, 5\\}$?",
+            "options": [
+                "A) $\\{3\\}$",
+                "B) $\\{1, 2, 4, 5\\}$",
+                "C) $\\{1, 2, 3, 4, 5\\}$",
+                "D) $\\{1, 2, 4, 5, 3\\}$"
+            ],
+            "correct_answer": "B) $\\{1, 2, 4, 5\\}$",
+            "explanation": "The symmetric difference A Δ B = (A - B) ∪ (B - A). A - B = {1, 2}, B - A = {4, 5}. So A Δ B = {1, 2, 4, 5}. Option A is the intersection. Option C is the union. Option D is incorrect ordering.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Which of the following is De Morgan's Law for sets?",
+            "options": [
+                "A) $(A \\cup B)' = A' \\cap B'$",
+                "B) $(A \\cap B)' = A' \\cup B'$",
+                "C) Both A and B are correct.",
+                "D) Neither A nor B is correct."
+            ],
+            "correct_answer": "C) Both A and B are correct.",
+            "explanation": "De Morgan's Laws state: (A ∪ B)' = A' ∩ B' and (A ∩ B)' = A' ∪ B'. Both are correct. Option A is the complement of a union. Option B is the complement of an intersection.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "If $A \\cup B = \\{a, b, c, d, e, x, y, z\\}$ and $A \\cap B = \\{b, e, y\\}$, and $B - A = \\{x, z\\}$, then what is $A$?",
+            "options": [
+                "A) $\\{a, b, c, d, e, y\\}$",
+                "B) $\\{b, e, y, x, z\\}$",
+                "C) $\\{a, b, c, d, e, x, y, z\\}$",
+                "D) $\\{x, z\\}$"
+            ],
+            "correct_answer": "A) $\\{a, b, c, d, e, y\\}$",
+            "explanation": "Since B - A = {x, z}, those elements are in B but not in A. A ∩ B = {b, e, y} means these are in both. The elements unique to A are (A ∪ B) - B = {a, c, d, e, b, y}. So A = {a, b, c, d, e, y}.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Let $U = \\{1, 2, \\ldots, 10\\}$, $A = \\{3, 5, 6, 8, 10\\}$, $B = \\{1, 2, 4, 5, 8, 9\\}$, and $C = \\{1, 2, 3, 4, 5, 6, 8\\}$. What is $(A \\cup B) \\cup C$?",
+            "options": [
+                "A) $\\{3, 5, 6, 8, 10\\}$",
+                "B) $\\{1, 2, 4, 5, 8, 9\\}$",
+                "C) $\\{1, 2, 3, 4, 5, 6, 8, 9, 10\\}$",
+                "D) $\\{1, 2, 3, 4, 5, 6, 8\\}$"
+            ],
+            "correct_answer": "C) $\\{1, 2, 3, 4, 5, 6, 8, 9, 10\\}$",
+            "explanation": "A ∪ B = {1, 2, 3, 4, 5, 6, 8, 9, 10}. Then (A ∪ B) ∪ C = {1, 2, 3, 4, 5, 6, 8, 9, 10}. Option A is just A. Option B is just B. Option D is just C.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "If a set $A$ has 4 elements, how many elements does $A \\Delta \\emptyset$ have?",
+            "options": [
+                "A) 0",
+                "B) 4",
+                "C) 8",
+                "D) 16"
+            ],
+            "correct_answer": "B) 4",
+            "explanation": "A Δ ∅ = (A - ∅) ∪ (∅ - A) = A ∪ ∅ = A. Therefore, the symmetric difference with the empty set is the set itself. Thus, it has 4 elements. Option A is the number of elements in ∅. Option C is 2^3. Option D is 2^4.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Let $U = \\{1, 2, \\ldots, 10\\}$, $A = \\{3, 5, 6, 8, 10\\}$, $B = \\{1, 2, 4, 5, 8, 9\\}$, and $C = \\{1, 2, 3, 4, 5, 6, 8\\}$. Verify which of the following is true:",
+            "options": [
+                "A) $A \\cap (B \\cup C) = (A \\cap B) \\cup (A \\cap C)$",
+                "B) $C - D = C \\cap D'$",
+                "C) Both A and B are true.",
+                "D) Neither A nor B is true."
+            ],
+            "correct_answer": "C) Both A and B are true.",
+            "explanation": "Option A is the distributive law: A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C). Option B is the difference law: C - D = C ∩ D'. Both are fundamental identities in set theory and are true.",
+            "difficulty": "hard"
+        }
+    ]
+}

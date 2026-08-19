@@ -1,0 +1,158 @@
+<div class="lesson-section">
+    <h2>Chapter 5: Augmented Reality (AR)</h2>
+    <h3>Part 1: Overview of AR & The Reality-Virtuality Continuum (VR, AR, MR)</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In the previous chapter, you learned about the basics of the Internet of Things (IoT). In this chapter, we will take a closer look at <strong>Augmented Reality (AR)</strong>, the difference between virtual reality (VR), augmented reality (AR), and mixed reality (MR), the architecture of AR systems, and its application in education, medicine, and entertainment.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Explain augmented reality and its key features.</li>
+            <li>Explain the difference between AR, VR, and MR using Paul Milgram's Reality-Virtuality Continuum.</li>
+            <li>Describe Virtual Reality (VR) and its hardware requirements.</li>
+            <li>Describe Augmented Reality (AR) and how it overlays digital content.</li>
+            <li>Describe Mixed Reality (MR) and its unique real-time interaction.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>5.1. Overview of augmented reality</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 5.1 (From Module):</strong>
+        <ul>
+            <li><em>What do you think about augmented reality?</em></li>
+            <li><em>What are the common features of augmented reality?</em></li>
+        </ul>
+    </div>
+
+    <p><strong>The Fundamental Idea of AR:</strong></p>
+    <p>The fundamental idea of AR is to <strong>combine, or mix, the view of the real environment with additional, virtual content</strong> that is presented through computer graphics. Its convincing effect is achieved by ensuring that the virtual content is <strong>aligned and registered with the real objects</strong>. As a person moves in an environment and their perspective view of real objects changes, the virtual content should also be presented from the same perspective.</p>
+
+    <p><strong>Formal Definition of AR:</strong></p>
+    <p>Augmented reality (AR) is a form of emerging technology that allows users to <strong>overlay computer-generated content in the real world</strong>. AR refers to a live view of a physical real-world environment whose elements are merged with augmented computer-generated images, creating a <strong>mixed reality</strong>. The augmentation is typically done in <strong>real-time</strong> and in <strong>semantic context</strong> with environmental elements.</p>
+    
+    <p><strong>Key Features:</strong></p>
+    <ul>
+        <li><strong>Real-time Integration:</strong> AR integrates digital information with the user's environment in real-time.</li>
+        <li><strong>Enhancement, Not Replacement:</strong> Unlike virtual reality (which creates a totally artificial environment), AR uses the existing environment and overlays new information on top of it.</li>
+        <li><strong>Multisensory Input:</strong> A live direct or indirect view of a physical, real-world environment whose elements are augmented by computer-generated sensory input such as <strong>sound, video, graphics, or GPS data</strong>.</li>
+    </ul>
+
+    <div class="example-box">
+        <h4>💡 Real World Example (Ethiopia - AR for Tourism):</h4>
+        <p>Imagine a tourist visiting the <strong>Rock-Hewn Churches of Lalibela</strong>. They hold up their smartphone and point the camera at a church. An <strong>AR app</strong> overlays digital information onto the screen—showing a historical timeline of the church, highlighting architectural details, and displaying 3D reconstructions of how the church looked when it was first built. This enhances the real-world experience without replacing it.</p>
+    </div>
+
+    <hr>
+
+    <h4>5.2. Virtual reality (VR), Augmented Reality (AR) vs Mixed reality (MR)</h4>
+
+    <p>With constant development in computer vision and the exponential advancement of computer processing power, virtual reality (VR), augmented reality (AR), and mixed reality (MR) technology is becoming more and more prominent. With some overlap in the applications and functions of these emerging technologies, sometimes these terms get confused or are used incorrectly.</p>
+
+    <div class="diagram-container">
+        <svg width="400" height="200" viewBox="0 0 400 200">
+            <rect width="400" height="200" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Paul Milgram's Reality-Virtuality (RV) Continuum</text>
+            
+            <rect x="20" y="60" width="80" height="40" fill="#14b8a6" rx="6"/>
+            <text x="60" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Real</text>
+            <text x="60" y="96" fill="#111827" font-size="8" text-anchor="middle">Environment</text>
+
+            <rect x="120" y="60" width="80" height="40" fill="#facc15" rx="6"/>
+            <text x="160" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">AR</text>
+            <text x="160" y="96" fill="#111827" font-size="8" text-anchor="middle">(Augmented Reality)</text>
+
+            <rect x="220" y="60" width="80" height="40" fill="#f43f5e" rx="6"/>
+            <text x="260" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">AV</text>
+            <text x="260" y="96" fill="#111827" font-size="8" text-anchor="middle">(Augmented Virtuality)</text>
+
+            <rect x="320" y="60" width="60" height="40" fill="#f59e0b" rx="6"/>
+            <text x="350" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">VR</text>
+            <text x="350" y="96" fill="#111827" font-size="8" text-anchor="middle">(Virtual Env.)</text>
+
+            <line x1="20" y1="85" x2="380" y2="85" stroke="#38bdf8" stroke-width="2"/>
+            <text x="200" y="130" fill="#f8fafc" font-size="10" text-anchor="middle">⬅️ Mixed Reality (MR) ➡️</text>
+
+            <rect x="80" y="145" width="240" height="30" fill="#1e293b" stroke="#facc15" stroke-width="1.5"/>
+            <text x="200" y="164" fill="#facc15" font-size="10" text-anchor="middle">AR + AV = MR (Mixed Reality)</text>
+        </svg>
+    </div>
+
+    <hr>
+
+    <h4>5.2.1. Virtual Reality (VR)</h4>
+    
+    <p><strong>What is VR?</strong></p>
+    <p>VR is <strong>fully immersive</strong>, which tricks your senses into thinking you're in a different environment or world apart from the real world. Using a <strong>head-mounted display (HMD)</strong> or headset, you'll experience a computer-generated world of imagery and sounds in which you can manipulate objects and move around using <strong>haptic controllers</strong> while tethered to a console or PC. It is also called a <strong>computer-simulated reality</strong>. It refers to computer technologies using reality headsets to generate realistic sounds, images, and other sensations that replicate a real environment or create an imaginary world.</p>
+
+    <p><strong>Advanced VR Experiences:</strong> Advanced VR environments will engage <strong>all five senses</strong> (taste, sight, smell, touch, sound), but it is important to say that this is not always possible. Using VR devices such as <strong>HTC Vive, Oculus Rift, or Google Cardboard</strong>, users can be transported into a number of real-world and imagined environments. The most advanced VR experiences even provide <strong>freedom of movement</strong>—users can move in a digital environment and hear sounds. Moreover, special hand controllers can be used to enhance VR experiences.</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>VR Headset Type</th><th>Description</th><th>Examples</th></tr>
+            <tr>
+                <td><strong>Connected (Tethered)</strong></td>
+                <td>Connected to a computer (Oculus Rift) or a gaming console (PlayStation VR).</td>
+                <td>Oculus Rift, PlayStation VR, HTC Vive</td>
+            </tr>
+            <tr>
+                <td><strong>Standalone</strong></td>
+                <td>Work in combination with smartphones. You insert a smartphone, wear a headset, and immerse in the virtual reality.</td>
+                <td>Google Cardboard, Samsung Gear VR</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <h4>5.2.2. Augmented Reality (AR)</h4>
+    
+    <p><strong>How AR Works:</strong></p>
+    <p>In augmented reality, users <strong>see and interact with the real world</strong> while digital content is added to it. If you own a modern smartphone, you can easily download an AR app and try this technology.</p>
+
+    <p><strong>Two Ways to Experience AR:</strong></p>
+    <ol>
+        <li><strong>Smartphone-based:</strong> AR adds digital elements to a live view often by using the camera on a smartphone. Examples include <strong>Snapchat lenses</strong> and the game <strong>Pokemon Go</strong>.</li>
+        <li><strong>AR Headsets:</strong> Special AR headsets, such as <strong>Google Glass</strong>, where digital content is displayed on a tiny screen in front of a user's eye.</li>
+    </ol>
+
+    <p><strong>Formal AR Definition:</strong> Augmented Reality (AR) is a live, direct, or indirect view of a physical, real-world environment whose elements are augmented (or supplemented) by computer-generated sensory input such as <strong>sound, video, graphics, or GPS data</strong>.</p>
+
+    <hr>
+
+    <h4>5.2.3. Mixed Reality (MR)</h4>
+    
+    <p><strong>What is MR?</strong></p>
+    <p>Mixed Reality (MR), sometimes referred to as <strong>hybrid reality</strong>, is the <strong>merging of real and virtual worlds</strong> to produce new environments and visualizations where <strong>physical and digital objects co-exist and interact in real-time</strong>. It means placing new imagery within a real space in such a way that the new imagery is able to interact, to an extent, with what is real in the physical world.</p>
+
+    <p><strong>Key Characteristic:</strong> The key characteristic of MR is that the <strong>synthetic content and the real-world content are able to react to each other in real-time</strong>.</p>
+
+    <div class="example-box">
+        <h4>💡 Real World Example (MR):</h4>
+        <p>With MR, you can play a virtual video game, grab your real-world water bottle, and smack an imaginary character from the game with the bottle. <strong>Imagination and reality have never been so intermingled.</strong></p>
+        <p>MR provides the ability to have one foot (or hand) in the real world, and the other in an imaginary place, breaking down basic concepts between real and imaginary, offering an experience that can change the way you game and work today.</p>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #f43f5e;">
+        <strong>📌 Hardware Differences (VR vs. AR vs. MR):</strong>
+        <ul>
+            <li><strong>VR:</strong> Requires specialized VR headsets (Oculus Rift, HTC Vive, PSVR), noise-canceling headphones, cameras to track space, and motion capture technology. It is 100% digital and fully immersive.</li>
+            <li><strong>AR:</strong> Numerous AR apps and games can run on almost any smartphone on the market.</li>
+            <li><strong>MR:</strong> Hardware is still emerging and expensive. Examples include Microsoft HoloLens and Magic Leap (over $2000 USD). MR requires exponentially more processing power.</li>
+        </ul>
+        <p><strong>Example (Microsoft HoloLens):</strong> It includes a built-in microphone array, binaural sound capabilities, a built-in camera, a depth sensor, head-tracking cameras, and an inertial measurement unit to track head movement. It also includes a <strong>Holographic Processing Unit</strong> to track where the user is looking and understand command gestures.</p>
+    </div>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 1)</h4>
+        <ul>
+            <li><strong>AR Definition:</strong> Overlays digital content onto the real world in real-time.</li>
+            <li><strong>RV Continuum:</strong> Real Environment → AR → AV → Virtual Environment. AR + AV = MR.</li>
+            <li><strong>VR:</strong> Fully immersive, 100% digital. Uses HMDs (Oculus, HTC Vive, Google Cardboard).</li>
+            <li><strong>AR:</strong> Enhances real world with digital overlays. Works on smartphones (Snapchat, Pokemon Go).</li>
+            <li><strong>MR:</strong> Real and virtual objects co-exist and interact in real-time (HoloLens, Magic Leap).</li>
+        </ul>
+    </div>
+</div>

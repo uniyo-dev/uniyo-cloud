@@ -1,0 +1,287 @@
+{
+    "course_code": "Econ1011",
+    "week_number": 6,
+    "title": "VIP Week 6: Fundamental Concepts of Macroeconomics",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Examine the GDP vs GNP diagram below. An Ethiopian citizen working in Dubai falls in which area?",
+            "diagram": "<svg width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='#111827' rx='8'/><text x='200' y='20' text-anchor='middle' fill='#f59e0b' font-size='13' font-weight='bold'>GDP vs GNP Relationship</text><circle cx='140' cy='110' r='60' fill='#1a2332' stroke='#14b8a6' stroke-width='2'/><text x='140' y='100' text-anchor='middle' fill='#14b8a6' font-size='13' font-weight='bold'>GDP</text><text x='140' y='120' text-anchor='middle' fill='#94a3b8' font-size='9'>Within borders</text><circle cx='260' cy='110' r='60' fill='#1a2332' stroke='#f43f5e' stroke-width='2'/><text x='260' y='100' text-anchor='middle' fill='#f43f5e' font-size='13' font-weight='bold'>GNP</text><text x='260' y='120' text-anchor='middle' fill='#94a3b8' font-size='9'>Citizens anywhere</text><text x='200' y='180' text-anchor='middle' fill='#94a3b8' font-size='10'>Overlap = Citizens working domestically</text></svg>",
+            "options": [
+                "A) Green circle (GDP) only",
+                "B) Red circle (GNP) only",
+                "C) Overlap area (both)",
+                "D) Outside both circles"
+            ],
+            "correct_answer": "B) Red circle (GNP) only",
+            "explanation": "An Ethiopian in Dubai is outside Ethiopia's borders (NOT in GDP) but IS an Ethiopian citizen (IN GNP). The GNP circle includes citizens working ANYWHERE. GDP only covers production WITHIN borders.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "Examine the business cycle diagram. At which point is unemployment at its HIGHEST?",
+            "diagram": "<svg width='400' height='220' viewBox='0 0 400 220'><rect width='400' height='220' fill='#111827' rx='8'/><text x='200' y='20' text-anchor='middle' fill='#f59e0b' font-size='13' font-weight='bold'>The Business Cycle</text><line x1='30' y1='190' x2='370' y2='190' stroke='#38bdf8' stroke-width='2'/><line x1='30' y1='20' x2='30' y2='190' stroke='#38bdf8' stroke-width='2'/><path d='M 30 160 Q 80 40 140 60 Q 200 80 220 40 Q 260 20 300 60 Q 340 100 360 50' stroke='#facc15' stroke-width='3' fill='none'/><circle cx='80' cy='40' r='6' fill='#f59e0b'/><text x='90' y='35' fill='#f59e0b' font-size='11' font-weight='bold'>Peak</text><circle cx='140' cy='60' r='6' fill='#f43f5e'/><text x='120' y='75' fill='#f43f5e' font-size='11' font-weight='bold'>Trough</text><circle cx='260' cy='20' r='6' fill='#f59e0b'/><text x='270' y='25' fill='#f59e0b' font-size='11' font-weight='bold'>Peak</text><text x='360' y='205' fill='#38bdf8' font-size='12' font-weight='bold'>Time</text><text x='12' y='25' fill='#38bdf8' font-size='12' font-weight='bold'>GDP</text></svg>",
+            "options": [
+                "A) At the Peak",
+                "B) At the Trough",
+                "C) During mid-expansion",
+                "D) At the beginning of recovery"
+            ],
+            "correct_answer": "B) At the Trough",
+            "explanation": "Unemployment is HIGHEST at the TROUGH (lowest point of the cycle). At the trough, economic activity is at minimum, firms have laid off workers, and output is lowest. At the PEAK, unemployment is LOWEST because the economy is at full capacity.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "Examine the circular flow of expenditure. What does the PURPLE box represent?",
+            "diagram": "<svg width='400' height='180' viewBox='0 0 400 180'><rect width='400' height='180' fill='#111827' rx='8'/><text x='200' y='20' text-anchor='middle' fill='#f59e0b' font-size='13' font-weight='bold'>GDP = C + I + G + (X-M)</text><rect x='20' y='50' width='80' height='50' rx='6' fill='#1a2332' stroke='#14b8a6' stroke-width='2'/><text x='60' y='70' text-anchor='middle' fill='#14b8a6' font-size='11' font-weight='bold'>C</text><text x='60' y='88' text-anchor='middle' fill='#94a3b8' font-size='9'>Consumption</text><rect x='115' y='50' width='80' height='50' rx='6' fill='#1a2332' stroke='#f43f5e' stroke-width='2'/><text x='155' y='70' text-anchor='middle' fill='#f43f5e' font-size='11' font-weight='bold'>I</text><text x='155' y='88' text-anchor='middle' fill='#94a3b8' font-size='9'>Investment</text><rect x='210' y='50' width='80' height='50' rx='6' fill='#1a2332' stroke='#facc15' stroke-width='2'/><text x='250' y='70' text-anchor='middle' fill='#facc15' font-size='11' font-weight='bold'>G</text><text x='250' y='88' text-anchor='middle' fill='#94a3b8' font-size='9'>Govt Spending</text><rect x='305' y='50' width='80' height='50' rx='6' fill='#1a2332' stroke='#6d28d9' stroke-width='2'/><text x='345' y='70' text-anchor='middle' fill='#6d28d9' font-size='11' font-weight='bold'>X-M</text><text x='345' y='88' text-anchor='middle' fill='#94a3b8' font-size='9'>Net Exports</text><text x='200' y='140' text-anchor='middle' fill='#f8fafc' font-size='11'>Four components of Expenditure Approach</text></svg>",
+            "options": [
+                "A) Consumption",
+                "B) Investment",
+                "C) Government Spending",
+                "D) Net Exports (X - M)"
+            ],
+            "correct_answer": "D) Net Exports (X - M)",
+            "explanation": "The PURPLE box (far right) represents NET EXPORTS = Exports - Imports. If X > M, it's positive (trade surplus). If X < M, it's negative (trade deficit). The other components: Green=C, Red=I, Yellow=G.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "Examine the value-added chain. What is the TOTAL contribution to GDP?",
+            "diagram": "<svg width='400' height='150' viewBox='0 0 400 150'><rect width='400' height='150' fill='#111827' rx='8'/><text x='200' y='20' text-anchor='middle' fill='#f59e0b' font-size='12' font-weight='bold'>Value Added Chain</text><rect x='20' y='40' width='110' height='60' rx='6' fill='#1a2332' stroke='#14b8a6' stroke-width='2'/><text x='75' y='60' text-anchor='middle' fill='#f8fafc' font-size='10'>Farmer</text><text x='75' y='75' text-anchor='middle' fill='#14b8a6' font-size='9'>Wheat: 50</text><text x='75' y='90' text-anchor='middle' fill='#94a3b8' font-size='9'>VA = 50</text><rect x='145' y='40' width='110' height='60' rx='6' fill='#1a2332' stroke='#f59e0b' stroke-width='2'/><text x='200' y='60' text-anchor='middle' fill='#f8fafc' font-size='10'>Miller</text><text x='200' y='75' text-anchor='middle' fill='#f59e0b' font-size='9'>Flour: 80</text><text x='200' y='90' text-anchor='middle' fill='#94a3b8' font-size='9'>VA = 30</text><rect x='270' y='40' width='110' height='60' rx='6' fill='#1a2332' stroke='#f43f5e' stroke-width='2'/><text x='325' y='60' text-anchor='middle' fill='#f8fafc' font-size='10'>Baker</text><text x='325' y='75' text-anchor='middle' fill='#f43f5e' font-size='9'>Bread: 120</text><text x='325' y='90' text-anchor='middle' fill='#94a3b8' font-size='9'>VA = 40</text><text x='200' y='130' text-anchor='middle' fill='#f59e0b' font-size='11' font-weight='bold'>Total GDP = Final Value = 120</text></svg>",
+            "options": [
+                "A) 50 + 80 + 120 = 250 (sum of outputs)",
+                "B) 50 + 30 + 40 = 120 (sum of value added)",
+                "C) Only 120 (final good only)",
+                "D) 80 + 120 = 200"
+            ],
+            "correct_answer": "B) 50 + 30 + 40 = 120 (sum of value added)",
+            "explanation": "GDP by production approach = SUM OF VALUE ADDED at each stage = 50 (farmer) + 30 (miller) + 40 (baker) = 120. This equals the FINAL good value (bread = 120). We do NOT sum total outputs (250) to avoid double counting.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Examine the inflation diagram. What type of inflation is shown when AD shifts right?",
+            "diagram": "<svg width='350' height='200' viewBox='0 0 350 200'><rect width='350' height='200' fill='#111827' rx='8'/><text x='175' y='20' text-anchor='middle' fill='#f59e0b' font-size='13' font-weight='bold'>Demand-Pull Inflation</text><line x1='40' y1='170' x2='330' y2='170' stroke='#38bdf8' stroke-width='2'/><line x1='40' y1='20' x2='40' y2='170' stroke='#38bdf8' stroke-width='2'/><line x1='60' y1='140' x2='300' y2='40' stroke='#14b8a6' stroke-width='3'/><text x='260' y='45' fill='#14b8a6' font-size='10' font-weight='bold'>AS</text><line x1='80' y1='130' x2='280' y2='60' stroke='#f43f5e' stroke-width='3'/><text x='200' y='130' fill='#f43f5e' font-size='10' font-weight='bold'>AD1</text><line x1='120' y1='110' x2='310' y2='40' stroke='#f59e0b' stroke-width='3' stroke-dasharray='6,4'/><text x='230' y='85' fill='#f59e0b' font-size='10' font-weight='bold'>AD2</text><text x='140' y='25' fill='#f59e0b' font-size='11' font-weight='bold'>AD shifts RIGHT →</text><text x='320' y='185' fill='#38bdf8' font-size='12' font-weight='bold'>Q</text><text x='10' y='25' fill='#38bdf8' font-size='12' font-weight='bold'>P</text></svg>",
+            "options": [
+                "A) Cost-push inflation",
+                "B) Demand-pull inflation",
+                "C) Deflation",
+                "D) Stagflation"
+            ],
+            "correct_answer": "B) Demand-pull inflation",
+            "explanation": "When AD shifts RIGHT (from AD1 to AD2), it creates DEMAND-PULL inflation. Aggregate demand exceeds supply at the old price, pulling prices UP. The diagram shows AD shifting right while AS stays fixed, causing price level to rise.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "If Nominal GDP grows 12% and Real GDP grows 7%, what is the inflation rate?",
+            "diagram": null,
+            "options": [
+                "A) 19%",
+                "B) 12%",
+                "C) 7%",
+                "D) 5%"
+            ],
+            "correct_answer": "D) 5%",
+            "explanation": "Approximate inflation = Nominal growth - Real growth = 12% - 7% = 5%.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "If GDP Deflator = 120 and CPI = 130, which is TRUE?",
+            "diagram": null,
+            "options": [
+                "A) Imported goods prices rose more than domestic goods",
+                "B) Domestic goods prices rose more than imported goods",
+                "C) Both rose by the same amount",
+                "D) Cannot be compared"
+            ],
+            "correct_answer": "A) Imported goods prices rose more than domestic goods",
+            "explanation": "CPI > GDP Deflator means CONSUMER prices (including imports) rose MORE than DOMESTIC production prices. This suggests imported consumer goods became relatively more expensive.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "If Labor Force = 80M, Employed = 72M, Discouraged Workers = 3M, what is the unemployment rate?",
+            "diagram": null,
+            "options": [
+                "A) 5%",
+                "B) 8%",
+                "C) 10%",
+                "D) 15%"
+            ],
+            "correct_answer": "C) 10%",
+            "explanation": "Unemployed = 80M - 72M = 8M. Unemployment rate = (8/80) × 100 = 10%. Discouraged workers (3M) are NOT in labor force — they've stopped looking, so they're EXCLUDED.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Examine the policy diagram. Which quadrant represents EXPANSIONARY monetary + fiscal policy?",
+            "diagram": "<svg width='350' height='200' viewBox='0 0 350 200'><rect width='350' height='200' fill='#111827' rx='8'/><text x='175' y='20' text-anchor='middle' fill='#f59e0b' font-size='13' font-weight='bold'>Policy Combinations</text><line x1='175' y1='50' x2='175' y2='180' stroke='#38bdf8' stroke-width='2'/><line x1='30' y1='115' x2='320' y2='115' stroke='#38bdf8' stroke-width='2'/><text x='175' y='195' text-anchor='middle' fill='#94a3b8' font-size='9'>Monetary Policy → (right = expansionary)</text><text x='12' y='60' fill='#94a3b8' font-size='9' transform='rotate(-90,12,60)'>Fiscal Policy</text><rect x='30' y='50' width='140' height='60' rx='6' fill='#1a2332' stroke='#14b8a6' stroke-width='2'/><text x='100' y='75' text-anchor='middle' fill='#14b8a6' font-size='10' font-weight='bold'>Expansionary Both</text><text x='100' y='95' text-anchor='middle' fill='#94a3b8' font-size='8'>Recession fighter</text><rect x='180' y='50' width='140' height='60' rx='6' fill='#1a2332' stroke='#f43f5e' stroke-width='2'/><text x='250' y='75' text-anchor='middle' fill='#f43f5e' font-size='10' font-weight='bold'>Contractionary Both</text><text x='250' y='95' text-anchor='middle' fill='#94a3b8' font-size='8'>Inflation fighter</text></svg>",
+            "options": [
+                "A) Top LEFT (green box)",
+                "B) Top RIGHT (red box)",
+                "C) Bottom LEFT",
+                "D) Bottom RIGHT"
+            ],
+            "correct_answer": "A) Top LEFT (green box)",
+            "explanation": "The TOP LEFT quadrant (green box) represents EXPANSIONARY fiscal policy (more spending, less taxes) + EXPANSIONARY monetary policy (lower rates). This combination is used to fight RECESSION. Top RIGHT (red) is contractionary both (fights inflation).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "If GDP = 500, Depreciation = 50, what is NDP?",
+            "diagram": null,
+            "options": [
+                "A) 450",
+                "B) 500",
+                "C) 550",
+                "D) 600"
+            ],
+            "correct_answer": "A) 450",
+            "explanation": "NDP = GDP - Depreciation = 500 - 50 = 450.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "If a country's inflation rate is 3% and its nominal interest rate is 8%, what is the REAL interest rate?",
+            "diagram": null,
+            "options": [
+                "A) 3%",
+                "B) 5%",
+                "C) 8%",
+                "D) 11%"
+            ],
+            "correct_answer": "B) 5%",
+            "explanation": "Real interest rate = Nominal rate - Inflation = 8% - 3% = 5% (Fisher equation).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "Which is a LEAKAGE from the circular flow?",
+            "diagram": null,
+            "options": [
+                "A) Investment",
+                "B) Government spending",
+                "C) Savings",
+                "D) Exports"
+            ],
+            "correct_answer": "C) Savings",
+            "explanation": "Leakages: Savings, Taxes, Imports. Injections: Investment, Government Spending, Exports.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "If CPI was 110 last year and 121 this year, inflation is:",
+            "diagram": null,
+            "options": [
+                "A) 10%",
+                "B) 11%",
+                "C) 21%",
+                "D) 5%"
+            ],
+            "correct_answer": "A) 10%",
+            "explanation": "Inflation = (121-110)/110 × 100 = 11/110 × 100 = 10%.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "A country has GNP = 800, Depreciation = 100. What is NNP?",
+            "diagram": null,
+            "options": [
+                "A) 700",
+                "B) 800",
+                "C) 900",
+                "D) 1000"
+            ],
+            "correct_answer": "A) 700",
+            "explanation": "NNP = GNP - Depreciation = 800 - 100 = 700.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "Which unemployment type requires retraining as solution?",
+            "diagram": null,
+            "options": [
+                "A) Frictional",
+                "B) Structural",
+                "C) Cyclical",
+                "D) Seasonal"
+            ],
+            "correct_answer": "B) Structural",
+            "explanation": "Structural unemployment needs retraining to match new job skills.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 16,
+            "text": "The Philips Curve shows the trade-off between:",
+            "diagram": null,
+            "options": [
+                "A) GDP and GNP",
+                "B) Inflation and Unemployment",
+                "C) Imports and Exports",
+                "D) Taxes and Spending"
+            ],
+            "correct_answer": "B) Inflation and Unemployment",
+            "explanation": "Phillips Curve: inverse relationship between inflation and unemployment.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "If GNP < GDP, this means:",
+            "diagram": null,
+            "options": [
+                "A) More citizens working abroad than foreigners domestically",
+                "B) More foreigners working domestically than citizens abroad",
+                "C) Equal citizens and foreigners",
+                "D) Impossible situation"
+            ],
+            "correct_answer": "B) More foreigners working domestically than citizens abroad",
+            "explanation": "GNP < GDP means Net Factor Income is NEGATIVE — foreigners in the country earn more than citizens abroad.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "Which policy has the LONGEST implementation lag?",
+            "diagram": null,
+            "options": [
+                "A) Monetary policy",
+                "B) Fiscal policy",
+                "C) Both same",
+                "D) Neither"
+            ],
+            "correct_answer": "B) Fiscal policy",
+            "explanation": "Fiscal policy requires parliamentary approval — slower. Monetary policy is faster (central bank).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "If Disposable Income = 1000 and Consumption = 800, what is Savings?",
+            "diagram": null,
+            "options": [
+                "A) 100",
+                "B) 200",
+                "C) 800",
+                "D) 1000"
+            ],
+            "correct_answer": "B) 200",
+            "explanation": "Savings = DI - C = 1000 - 800 = 200.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "What does the GDP Deflator of 100 indicate?",
+            "diagram": null,
+            "options": [
+                "A) Prices are 100% above base year",
+                "B) Prices equal the base year",
+                "C) Inflation is 100%",
+                "D) Deflation has occurred"
+            ],
+            "correct_answer": "B) Prices equal the base year",
+            "explanation": "GDP Deflator = 100 means Nominal GDP = Real GDP — prices are SAME as base year.",
+            "difficulty": "hard"
+        }
+    ]
+}

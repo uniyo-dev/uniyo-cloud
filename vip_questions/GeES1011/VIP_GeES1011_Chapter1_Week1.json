@@ -1,0 +1,288 @@
+{
+    "course_code": "GeES1011",
+    "chapter_number": 1,
+    "week_number": 1,
+    "title": "VIP Chapter 1 Week 1: Introduction to Geography",
+    "questions": [
+        {
+            "id": 1,
+            "text": "If Ethiopia is at 8°N and 38°E, what does 38°E represent?",
+            "diagram": null,
+            "options": [
+                "A) Latitude",
+                "B) Longitude",
+                "C) Altitude",
+                "D) Depth"
+            ],
+            "correct_answer": "B) Longitude",
+            "explanation": "38°E is LONGITUDE (east-west position). Latitude is north-south (8°N). Altitude is height above sea level. Depth is below surface.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "Ethiopia's tropical location means it receives:",
+            "diagram": null,
+            "options": [
+                "A) Very little sunlight",
+                "B) Direct sunlight year-round",
+                "C) Only winter sunlight",
+                "D) No sunlight"
+            ],
+            "correct_answer": "B) Direct sunlight year-round",
+            "explanation": "Tropical location (near equator) means the sun is overhead most of the year, giving warm temperatures.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "Which theme of Geography studies how people ADAPT to their environment?",
+            "diagram": null,
+            "options": [
+                "A) Location",
+                "B) Place",
+                "C) Human-Environment Interaction",
+                "D) Region"
+            ],
+            "correct_answer": "C) Human-Environment Interaction",
+            "explanation": "Human-Environment Interaction covers how humans adapt, modify, and depend on environment.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "Ethiopia is the ______ largest country in Africa.",
+            "diagram": null,
+            "options": [
+                "A) 5th",
+                "B) 8th",
+                "C) 10th",
+                "D) 15th"
+            ],
+            "correct_answer": "C) 10th",
+            "explanation": "Ethiopia is the 10th largest African country by area (~1.1 million km²).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "The Horn of Africa is located in which part of Africa?",
+            "diagram": null,
+            "options": [
+                "A) Northern",
+                "B) Easternmost",
+                "C) Western",
+                "D) Southern"
+            ],
+            "correct_answer": "B) Easternmost",
+            "explanation": "The Horn is the EASTERNMOST projection of the African continent.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "Which TWO Greek words form 'Geography'?",
+            "diagram": null,
+            "options": [
+                "A) Geo + Graphia",
+                "B) Geo + Logos",
+                "C) Earth + Study",
+                "D) Map + Science"
+            ],
+            "correct_answer": "A) Geo + Graphia",
+            "explanation": "Geography = Geo (Earth) + Graphia (Description).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "Ethiopia's longitude range is:",
+            "diagram": null,
+            "options": [
+                "A) 3°E - 15°E",
+                "B) 33°E - 48°E",
+                "C) 3°N - 15°N",
+                "D) 0° - 20°E"
+            ],
+            "correct_answer": "B) 33°E - 48°E",
+            "explanation": "Ethiopia spans 33°E to 48°E LONGITUDE (east-west). 3°N-15°N is LATITUDE.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "The theme 'PLACE' describes:",
+            "diagram": null,
+            "options": [
+                "A) Where something is located",
+                "B) What makes a location unique (physical + human characteristics)",
+                "C) How people move",
+                "D) How regions form"
+            ],
+            "correct_answer": "B) What makes a location unique (physical + human characteristics)",
+            "explanation": "PLACE describes the unique characteristics (physical and human) that make a location distinctive.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Ethiopia's socio-cultural diversity is partly due to its:",
+            "diagram": null,
+            "options": [
+                "A) Distance from Africa",
+                "B) Location as crossroads of Africa and Middle East",
+                "C) Small size",
+                "D) Cold climate"
+            ],
+            "correct_answer": "B) Location as crossroads of Africa and Middle East",
+            "explanation": "Ethiopia's strategic location between Africa and Middle East brought diverse peoples, religions, and cultures.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Physical Geography studies:",
+            "diagram": null,
+            "options": [
+                "A) Population and culture",
+                "B) Climate, landforms, and natural features",
+                "C) Economic systems",
+                "D) Political boundaries"
+            ],
+            "correct_answer": "B) Climate, landforms, and natural features",
+            "explanation": "Physical Geography focuses on NATURAL features (climate, landforms, soils, vegetation).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "Human Geography studies:",
+            "diagram": null,
+            "options": [
+                "A) Rocks and minerals",
+                "B) Population, culture, and human activities",
+                "C) Ocean currents",
+                "D) Weather patterns"
+            ],
+            "correct_answer": "B) Population, culture, and human activities",
+            "explanation": "Human Geography focuses on HUMAN aspects: population, culture, economy, settlements.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "The 'REGION' theme groups areas based on:",
+            "diagram": null,
+            "options": [
+                "A) Random assignment",
+                "B) Shared characteristics (physical or human)",
+                "C) Political boundaries only",
+                "D) Distance from capital"
+            ],
+            "correct_answer": "B) Shared characteristics (physical or human)",
+            "explanation": "Regions group areas with common traits (e.g., highlands, agricultural areas, cultural regions).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "Ethiopia's location near the Red Sea gives it:",
+            "diagram": null,
+            "options": [
+                "A) Arctic access",
+                "B) Strategic political importance",
+                "C) Oceanic isolation",
+                "D) Cold climate"
+            ],
+            "correct_answer": "B) Strategic political importance",
+            "explanation": "Proximity to Red Sea trade routes gives Ethiopia geopolitical significance.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "1,100,000 km² is approximately:",
+            "diagram": null,
+            "options": [
+                "A) 500,000 km²",
+                "B) 1.1 million km²",
+                "C) 2 million km²",
+                "D) 100,000 km²"
+            ],
+            "correct_answer": "B) 1.1 million km²",
+            "explanation": "1,100,000 km² = 1.1 million square kilometers.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "The five themes of Geography were developed to help:",
+            "diagram": null,
+            "options": [
+                "A) Create maps",
+                "B) Organize geographic study",
+                "C) Measure distance",
+                "D) Predict weather"
+            ],
+            "correct_answer": "B) Organize geographic study",
+            "explanation": "The five themes organize how geographers study the world.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 16,
+            "text": "Absolute location uses:",
+            "diagram": null,
+            "options": [
+                "A) Relative descriptions",
+                "B) Latitude and longitude coordinates",
+                "C) Compass directions only",
+                "D) Distance from landmarks"
+            ],
+            "correct_answer": "B) Latitude and longitude coordinates",
+            "explanation": "Absolute location gives EXACT coordinates (latitude + longitude).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "Relative location describes:",
+            "diagram": null,
+            "options": [
+                "A) Exact coordinates",
+                "B) Position in relation to other places",
+                "C) Elevation above sea level",
+                "D) Distance from equator"
+            ],
+            "correct_answer": "B) Position in relation to other places",
+            "explanation": "Relative location describes where a place is compared to others (e.g., Ethiopia is north of Kenya).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "Ethiopia's seasons are influenced by:",
+            "diagram": null,
+            "options": [
+                "A) Distance from the sun",
+                "B) Tropical location and seasonal rainfall patterns",
+                "C) Polar ice caps",
+                "D) Ocean tides"
+            ],
+            "correct_answer": "B) Tropical location and seasonal rainfall patterns",
+            "explanation": "Tropical location gives warm temperatures; seasonal rainfall creates wet/dry seasons.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "The theme 'Location' answers:",
+            "diagram": null,
+            "options": [
+                "A) What is it like?",
+                "B) Where is it?",
+                "C) How did it form?",
+                "D) Why does it matter?"
+            ],
+            "correct_answer": "B) Where is it?",
+            "explanation": "Location answers 'Where?' — both absolute (coordinates) and relative (in relation to others).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "Which countries border Ethiopia?",
+            "diagram": null,
+            "options": [
+                "A) Kenya, Sudan, Somalia, Djibouti, Eritrea, South Sudan",
+                "B) Egypt, Libya, Chad",
+                "C) Nigeria, Ghana, Togo",
+                "D) South Africa, Namibia"
+            ],
+            "correct_answer": "A) Kenya, Sudan, Somalia, Djibouti, Eritrea, South Sudan",
+            "explanation": "Ethiopia borders 6 countries: Eritrea (north), Djibouti and Somalia (east), Kenya (south), Sudan and South Sudan (west).",
+            "difficulty": "hard"
+        }
+    ]
+}

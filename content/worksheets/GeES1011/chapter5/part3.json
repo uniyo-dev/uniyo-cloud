@@ -1,0 +1,147 @@
+{
+    "course_code": "GeES1011",
+    "chapter": 5,
+    "title": "Part 3 Practice: Rainfall Regions and Agro-ecological Zones",
+    "questions": [
+        {
+            "id": 1,
+            "text": "The LARGEST rainfall region in Ethiopia is:",
+            "diagram": null,
+            "options": [
+                "A) Winter rainfall",
+                "B) All year rainfall",
+                "C) Summer rainfall",
+                "D) Autumn/Spring rainfall"
+            ],
+            "correct_answer": "C) Summer rainfall",
+            "explanation": "The SUMMER rainfall region (Kiremt-dominant) is the LARGEST, covering central, western, and northern highlands. It receives rain from June-August via the southwest monsoon.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "The ALL YEAR-ROUND rainfall region is located in:",
+            "diagram": null,
+            "options": [
+                "A) Afar lowlands",
+                "B) Southwestern Highlands (Jimma, Illubabor)",
+                "C) Somali region",
+                "D) Northern Tigray"
+            ],
+            "correct_answer": "B) Southwestern Highlands (Jimma, Illubabor)",
+            "explanation": "The ALL YEAR-ROUND rainfall region is in the SOUTHWESTERN HIGHLANDS (Jimma, Illubabor, Bench Maji). It receives rain throughout the year with no distinct dry season — perfect for coffee and dense forests.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 3,
+            "text": "The WINTER rainfall region is found in:",
+            "diagram": null,
+            "options": [
+                "A) Central highlands",
+                "B) Northern Afar (near Red Sea)",
+                "C) Southwestern Ethiopia",
+                "D) Lake Tana area"
+            ],
+            "correct_answer": "B) Northern Afar (near Red Sea)",
+            "explanation": "The WINTER rainfall region is the SMALLEST, found in NORTHERN AFAR near the Red Sea. It receives limited rain (<500mm) during December-February due to Red Sea influence.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "The AUTUMN and SPRING rainfall region is important for:",
+            "diagram": null,
+            "options": [
+                "A) Coffee production",
+                "B) Pastoralists (grass regrowth)",
+                "C) Wheat farming",
+                "D) Industrial crops"
+            ],
+            "correct_answer": "B) Pastoralists (grass regrowth)",
+            "explanation": "The AUTUMN/SPRING rainfall region (southern/southeastern Ethiopia) is important for PASTORALISTS — the rains support grass regrowth for livestock. This region includes Borena and Somali areas.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Which agro-ecological zone is BEST for coffee production?",
+            "diagram": null,
+            "options": [
+                "A) Wurch",
+                "B) Dega",
+                "C) Weyna Dega",
+                "D) Berha"
+            ],
+            "correct_answer": "C) Weyna Dega",
+            "explanation": "WEYNA DEGA (1,500-2,300m, 15-20°C) is IDEAL for coffee production. This zone has moderate temperatures, adequate rainfall, and fertile soils. Sidama and Jimma coffee regions are in this zone.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "The BERHA zone is characterized by:",
+            "diagram": null,
+            "options": [
+                "A) Cold temperatures",
+                "B) Very hot, dry conditions (above 30°C)",
+                "C) Moderate climate",
+                "D) Heavy rainfall"
+            ],
+            "correct_answer": "B) Very hot, dry conditions (above 30°C)",
+            "explanation": "BERHA (below 500m) is the HOTTEST and DRIEST zone with temperatures above 30°C and rainfall below 500mm. Found in Afar and Somali lowlands. Used primarily for pastoralism.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 7,
+            "text": "The WURCH zone is found at:",
+            "diagram": null,
+            "options": [
+                "A) Below 500m",
+                "B) 1,500-2,300m",
+                "C) Above 3,200m",
+                "D) 500-1,500m"
+            ],
+            "correct_answer": "C) Above 3,200m",
+            "explanation": "WURCH (alpine zone) is found above 3,200m — in Simien and Bale Mountains. Temperatures below 10°C, frost possible, limited crops (barley only), mainly used for pasture.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Examine the zones diagram. Which is the KOLLA zone?",
+            "diagram": "<svg width='350' height='200' viewBox='0 0 350 200'><rect width='350' height='200' fill='#111827' rx='8'/><rect x='40' y='15' width='270' height='30' fill='#f43f5e'/><text x='175' y='35' text-anchor='middle' fill='#f8fafc' font-size='9'>Zone 1: Above 3200m</text><rect x='40' y='50' width='270' height='30' fill='#facc15'/><text x='175' y='70' text-anchor='middle' fill='#0B0F19' font-size='9'>Zone 2: 2300-3200m</text><rect x='40' y='85' width='270' height='30' fill='#14b8a6'/><text x='175' y='105' text-anchor='middle' fill='#f8fafc' font-size='9'>Zone 3: 1500-2300m</text><rect x='40' y='120' width='270' height='30' fill='#38bdf8'/><text x='175' y='140' text-anchor='middle' fill='#f8fafc' font-size='9'>Zone 4: 500-1500m</text><rect x='40' y='155' width='270' height='30' fill='#f59e0b'/><text x='175' y='175' text-anchor='middle' fill='#0B0F19' font-size='9'>Zone 5: Below 500m</text></svg>",
+            "options": [
+                "A) Zone 1 (red)",
+                "B) Zone 3 (green)",
+                "C) Zone 4 (blue)",
+                "D) Zone 5 (yellow)"
+            ],
+            "correct_answer": "C) Zone 4 (blue)",
+            "explanation": "Zone 4 (blue, 500-1,500m) is KOLLA — warm lowland zone. Zone 1 = Wurch, Zone 2 = Dega, Zone 3 = Weyna Dega, Zone 5 = Berha.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Which crops grow BEST in the KOLLA zone?",
+            "diagram": null,
+            "options": [
+                "A) Barley and wheat",
+                "B) Sorghum and cotton",
+                "C) Coffee and teff",
+                "D) Alpine plants"
+            ],
+            "correct_answer": "B) Sorghum and cotton",
+            "explanation": "KOLLA (500-1,500m, 20-30°C) is suited for SORGHUM and COTTON — crops that tolerate warm temperatures. Barley/wheat are DEGA crops. Coffee/teff are WEYNA DEGA crops.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "The DENSE forests of southwestern Ethiopia are supported by:",
+            "diagram": null,
+            "options": [
+                "A) Winter rainfall only",
+                "B) All year-round rainfall",
+                "C) No rainfall",
+                "D) Sprinkler irrigation"
+            ],
+            "correct_answer": "B) All year-round rainfall",
+            "explanation": "The DENSE forests of southwestern Ethiopia (Jimma, Illubabor) are supported by ALL YEAR-ROUND rainfall (above 2,000mm). This constant moisture supports coffee forests, bamboo, and rich biodiversity.",
+            "difficulty": "hard"
+        }
+    ]
+}

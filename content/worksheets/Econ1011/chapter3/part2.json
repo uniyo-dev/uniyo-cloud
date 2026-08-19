@@ -1,0 +1,147 @@
+{
+    "course_code": "Econ1011",
+    "chapter": 3,
+    "title": "Part 2 Practice: Cardinal & Ordinal Utility",
+    "questions": [
+        {
+            "id": 1,
+            "text": "The CARDINAL utility theory assumes that utility:",
+            "diagram": null,
+            "options": [
+                "A) Cannot be measured at all",
+                "B) Can be measured in numerical units (utils)",
+                "C) Can only be ranked (1st, 2nd, 3rd)",
+                "D) Is the same for all consumers"
+            ],
+            "correct_answer": "B) Can be measured in numerical units (utils)",
+            "explanation": "CARDINAL utility (Alfred Marshall) assumes utility is QUANTIFIABLE — can be measured in units called 'utils.' Like measuring weight in kilograms or temperature in degrees. For example: 1 coffee = 20 utils, 1 bread = 10 utils. ORDINAL utility (Option C) says utility can ONLY be ranked, not measured.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "The ORDINAL utility theory was developed by:",
+            "diagram": null,
+            "options": [
+                "A) Alfred Marshall",
+                "B) Adam Smith",
+                "C) Hicks and Allen",
+                "D) Karl Marx"
+            ],
+            "correct_answer": "C) Hicks and Allen",
+            "explanation": "HICKS and ALLEN developed the ORDINAL utility theory as an improvement over Marshall's cardinal approach. They argued utility CANNOT be measured in numbers — consumers can only RANK preferences. Alfred Marshall (A) developed CARDINAL utility. Adam Smith (B) is the father of economics. Karl Marx (D) developed socialism.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 3,
+            "text": "In cardinal utility, consumer equilibrium occurs when:",
+            "diagram": null,
+            "options": [
+                "A) MU = 0",
+                "B) MU = Price",
+                "C) TU = Price",
+                "D) TU is maximum"
+            ],
+            "correct_answer": "B) MU = Price",
+            "explanation": "Consumer equilibrium in cardinal utility occurs when MU = Price. The consumer should buy until the LAST unit's satisfaction (MU) equals its cost (Price). If MU > Price, buy MORE (getting more satisfaction than cost). If MU < Price, buy LESS. Equilibrium is where MU = Price.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "The Law of Equi-Marginal Utility states that a consumer maximizes satisfaction when:",
+            "diagram": null,
+            "options": [
+                "A) All money is spent on one good",
+                "B) MU<sub>x</sub>/P<sub>x</sub> = MU<sub>y</sub>/P<sub>y</sub>",
+                "C) MU is equal for all goods",
+                "D) Total spending is minimized"
+            ],
+            "correct_answer": "B) MU<sub>x</sub>/P<sub>x</sub> = MU<sub>y</sub>/P<sub>y</sub>",
+            "explanation": "The LAW OF EQUI-MARGINAL UTILITY states that the consumer maximizes satisfaction when the LAST Birr spent on EACH good gives the SAME marginal utility per Birr. If coffee gives 6 utils/Birr and bread gives 4 utils/Birr, buy MORE coffee (higher return per Birr). Continue until both are equal.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Examine the indifference curves. Which IC represents the HIGHEST satisfaction?",
+            "diagram": "<svg width='350' height='200' viewBox='0 0 350 200'><rect width='350' height='200' fill='#111827' rx='8'/><line x1='40' y1='170' x2='330' y2='170' stroke='#38bdf8' stroke-width='2'/><line x1='40' y1='20' x2='40' y2='170' stroke='#38bdf8' stroke-width='2'/><path d='M 50 40 Q 130 35 160 50 Q 200 70 240 40' stroke='#f43f5e' stroke-width='2' fill='none'/><text x='235' y='45' fill='#f43f5e' font-size='10' font-weight='bold'>IC1</text><path d='M 60 60 Q 140 55 180 70 Q 220 90 260 60' stroke='#14b8a6' stroke-width='2' fill='none'/><text x='255' y='65' fill='#14b8a6' font-size='10' font-weight='bold'>IC2</text><path d='M 70 80 Q 150 75 200 90 Q 240 110 280 80' stroke='#facc15' stroke-width='2' fill='none'/><text x='275' y='85' fill='#facc15' font-size='10' font-weight='bold'>IC3</text><text x='320' y='185' fill='#38bdf8' font-size='12' font-weight='bold'>X</text></svg>",
+            "options": [
+                "A) IC1 (red)",
+                "B) IC2 (green)",
+                "C) IC3 (yellow)",
+                "D) All are equal"
+            ],
+            "correct_answer": "C) IC3 (yellow)",
+            "explanation": "IC3 (yellow) is FARTHEST from the origin, meaning it has MORE of BOTH goods. Higher ICs = Higher satisfaction. IC3 > IC2 > IC1. This is one of the key properties of indifference curves — curves farther from the origin represent higher utility levels.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Indifference curves NEVER intersect because this would violate:",
+            "diagram": null,
+            "options": [
+                "A) The Law of Demand",
+                "B) The assumption of TRANSITIVITY",
+                "C) The Law of Supply",
+                "D) The budget constraint"
+            ],
+            "correct_answer": "B) The assumption of TRANSITIVITY",
+            "explanation": "If two indifference curves INTERSECTED, it would mean the SAME bundle gives TWO different levels of satisfaction — a contradiction. This would violate TRANSITIVITY (consistent preferences). ICs must be PARALLEL (never crossing) to maintain logical consistency in consumer preferences.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "A consumer has Income = 100 Birr, P<sub>coffee</sub> = 20, P<sub>bread</sub> = 10. What is the MAXIMUM bread they can buy?",
+            "diagram": null,
+            "options": [
+                "A) 5 loaves",
+                "B) 10 loaves",
+                "C) 20 loaves",
+                "D) 100 loaves"
+            ],
+            "correct_answer": "B) 10 loaves",
+            "explanation": "If the consumer spends ALL income on bread: 100 / 10 = 10 loaves. This is the Y-axis intercept of the budget line. Maximum coffee = 100/20 = 5 cups (X-axis intercept). The budget line connects (5, 0) and (0, 10).",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "The Marginal Rate of Substitution (MRS) measures:",
+            "diagram": null,
+            "options": [
+                "A) The rate at which consumer substitutes one good for another while keeping same satisfaction",
+                "B) The rate at which prices change",
+                "C) The consumer's income level",
+                "D) The total utility received"
+            ],
+            "correct_answer": "A) The rate at which consumer substitutes one good for another while keeping same satisfaction",
+            "explanation": "MRS measures how much of Good Y the consumer is willing to GIVE UP to get ONE more unit of Good X while maintaining the SAME satisfaction level. It's the SLOPE of the indifference curve. MRS decreases as you move down the IC (diminishing MRS) — you're willing to give up less and less of Y for each additional X.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "The consumer's OPTIMAL choice occurs where:",
+            "diagram": null,
+            "options": [
+                "A) The budget line crosses the origin",
+                "B) The indifference curve is TANGENT to the budget line",
+                "C) The indifference curve intersects the budget line twice",
+                "D) The consumer spends all money on one good"
+            ],
+            "correct_answer": "B) The indifference curve is TANGENT to the budget line",
+            "explanation": "The OPTIMAL choice is where the highest possible indifference curve just TOUCHES (is tangent to) the budget line. At this point: MRS = Price ratio. The consumer reaches the HIGHEST satisfaction possible within their budget. This is the point of consumer equilibrium.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Which is a CRITICISM of the cardinal utility theory?",
+            "diagram": null,
+            "options": [
+                "A) Utility cannot be measured in exact numbers",
+                "B) Consumers are always rational",
+                "C) Indifference curves never intersect",
+                "D) Budget lines are always straight"
+            ],
+            "correct_answer": "A) Utility cannot be measured in exact numbers",
+            "explanation": "The MAIN criticism of cardinal utility is that UTILITY CANNOT BE MEASURED in exact numbers (utils). How do you measure '20 utils' of happiness? Satisfaction is SUBJECTIVE and varies between people. This led to the ORDINAL utility theory which only requires ranking, not measurement.",
+            "difficulty": "hard"
+        }
+    ]
+}

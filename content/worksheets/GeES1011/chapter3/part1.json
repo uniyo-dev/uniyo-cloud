@@ -1,0 +1,147 @@
+{
+    "course_code": "GeES1011",
+    "chapter": 3,
+    "title": "Part 1 Practice: Topography of Ethiopia",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Ethiopia's HIGHEST point is:",
+            "diagram": null,
+            "options": [
+                "A) Mount Entoto",
+                "B) Ras Dashen (4,550m)",
+                "C) Mount Zuqualla",
+                "D) Mount Batu"
+            ],
+            "correct_answer": "B) Ras Dashen (4,550m)",
+            "explanation": "RAS DASHEN in the Simien Mountains is Ethiopia's highest peak at 4,550 meters. It's located in the North Central Massifs (Amhara region). Mount Entoto is near Addis Ababa but lower. Mount Batu is in Bale (eastern highlands).",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Ethiopia's LOWEST point is:",
+            "diagram": null,
+            "options": [
+                "A) Lake Tana",
+                "B) Blue Nile Gorge",
+                "C) Dallol Depression (-125m)",
+                "D) Afar Triangle"
+            ],
+            "correct_answer": "C) Dallol Depression (-125m)",
+            "explanation": "The DALLLOL DEPRESSION in the Afar region is Ethiopia's lowest point at approximately 125 meters BELOW sea level. It's also one of the hottest places on Earth. Lake Tana is at ~1,800m elevation.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "How many MAJOR physiographic divisions does Ethiopia have?",
+            "diagram": null,
+            "options": [
+                "A) Two",
+                "B) Three",
+                "C) Four",
+                "D) Five"
+            ],
+            "correct_answer": "C) Four",
+            "explanation": "Ethiopia has FOUR major physiographic divisions: (1) Western Highlands, (2) Western Lowlands, (3) Eastern Highlands, (4) Eastern Lowlands. Each has distinct elevation and features.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "The LARGEST physiographic region in Ethiopia is:",
+            "diagram": null,
+            "options": [
+                "A) Eastern Lowlands",
+                "B) Western Highlands",
+                "C) Western Lowlands",
+                "D) Eastern Highlands"
+            ],
+            "correct_answer": "B) Western Highlands",
+            "explanation": "The WESTERN HIGHLANDS are Ethiopia's LARGEST and most important physiographic region. They include the Tigray Plateau, North Central Massifs, Shewa Plateau, and South Western Highlands. This region contains most of Ethiopia's population and agricultural land.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "Examine the profile. Which section represents the RIFT VALLEY?",
+            "diagram": "<svg width='350' height='180' viewBox='0 0 350 180'><rect width='350' height='180' fill='#111827' rx='8'/><line x1='20' y1='150' x2='330' y2='150' stroke='#38bdf8' stroke-width='2'/><rect x='40' y='50' width='60' height='100' fill='#14b8a6'/><text x='70' y='45' text-anchor='middle' fill='#14b8a6' font-size='8' font-weight='bold'>A</text><path d='M 100 150 L 130 70 L 160 150 Z' fill='#facc15'/><text x='130' y='120' text-anchor='middle' fill='#facc15' font-size='8' font-weight='bold'>B</text><rect x='170' y='60' width='60' height='90' fill='#f43f5e'/><text x='200' y='55' text-anchor='middle' fill='#f43f5e' font-size='8' font-weight='bold'>C</text><rect x='250' y='120' width='60' height='30' fill='#38bdf8'/><text x='280' y='115' text-anchor='middle' fill='#38bdf8' font-size='8' font-weight='bold'>D</text><text x='175' y='175' text-anchor='middle' fill='#94a3b8' font-size='9'>Which is the Rift Valley?</text></svg>",
+            "options": [
+                "A) A (green block)",
+                "B) B (yellow depression)",
+                "C) C (red block)",
+                "D) D (blue low block)"
+            ],
+            "correct_answer": "B) B (yellow depression)",
+            "explanation": "The YELLOW depression (B) between the two plateaus represents the RIFT VALLEY. A (green) is Western Plateau, C (red) is Eastern Plateau, D (blue) is Lowlands. The Rift Valley is a tectonic depression between the two plateaus.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "The TIGRAY PLATEAU is composed primarily of:",
+            "diagram": null,
+            "options": [
+                "A) Volcanic basalt",
+                "B) Sandstone and limestone (sedimentary rocks)",
+                "C) Granite only",
+                "D) Loose sand"
+            ],
+            "correct_answer": "B) Sandstone and limestone (sedimentary rocks)",
+            "explanation": "The TIGRAY PLATEAU is composed of SANDSTONE and LIMESTONE — sedimentary rocks from the Mesozoic era. These rocks form distinctive stepped landscapes and contain historic sites like Aksum's obelisks. Volcanic basalt dominates the North Central Massifs.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "Ras Dashen is located in which sub-region?",
+            "diagram": null,
+            "options": [
+                "A) Tigray Plateau",
+                "B) North Central Massifs",
+                "C) Shewa Plateau",
+                "D) South Western Highlands"
+            ],
+            "correct_answer": "B) North Central Massifs",
+            "explanation": "RAS DASHEN (Ethiopia's highest peak at 4,550m) is in the NORTH CENTRAL MASSIFS in the Simien Mountains. This sub-region has the HIGHEST elevations in Ethiopia and is composed of volcanic basalt.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Addis Ababa is located in which sub-region?",
+            "diagram": null,
+            "options": [
+                "A) Tigray Plateau",
+                "B) North Central Massifs",
+                "C) Shewa Plateau",
+                "D) South Western Highlands"
+            ],
+            "correct_answer": "C) Shewa Plateau",
+            "explanation": "ADDIS ABABA (Ethiopia's capital) is located on the SHEWA PLATEAU (Central Highland) at an elevation of about 2,400 meters. The Shewa Plateau is drained by the Awash River and contains volcanic features like Mount Zuqualla.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "The SOUTH WESTERN HIGHLANDS are known for:",
+            "diagram": null,
+            "options": [
+                "A) Being the driest region",
+                "B) Having the HIGHEST rainfall and coffee production",
+                "C) Being the lowest elevation",
+                "D) Having no vegetation"
+            ],
+            "correct_answer": "B) Having the HIGHEST rainfall and coffee production",
+            "explanation": "The SOUTH WESTERN HIGHLANDS (Jimma, Illubabor) receive the HIGHEST rainfall in Ethiopia and are the main COFFEE growing regions. They are covered in dense forests and drained by the Omo and Ghibe rivers.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "The AB AY-DINDER LOWLAND is drained by which river?",
+            "diagram": null,
+            "options": [
+                "A) Tekeze River",
+                "B) Abay (Blue Nile) River",
+                "C) Baro River",
+                "D) Ghibe River"
+            ],
+            "correct_answer": "B) Abay (Blue Nile) River",
+            "explanation": "The ABAY-DINDER LOWLAND is drained by the ABAY (BLUE NILE) RIVER along Ethiopia's western border. The Tekeze Lowland is drained by Tekeze River, Baro Lowland by Baro River, and Ghibe Lowland by Ghibe/Omo River.",
+            "difficulty": "hard"
+        }
+    ]
+}

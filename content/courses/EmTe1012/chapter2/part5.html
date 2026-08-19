@@ -1,0 +1,160 @@
+<div class="lesson-section">
+    <h2>Chapter 2: Data Science</h2>
+    <h3>Part 5: Clustered Computing and Hadoop Ecosystem</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In this final part of Chapter 2, we explore how the world handles Big Data. Because individual computers are inadequate for handling huge datasets, we turn to <strong>Clustered Computing</strong>—combining the power of many smaller machines. We then dive into <strong>Hadoop</strong>, the most popular open-source framework for Big Data processing, and its extensive <strong>Ecosystem</strong>.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Explain the concept of Clustered Computing and its benefits (Resource Pooling, High Availability).</li>
+            <li>Understand the role of YARN in managing cluster resources.</li>
+            <li>Define Hadoop and list its four key characteristics (Economical, Reliable, Scalable, Flexible).</li>
+            <li>Identify and describe the core components of the Hadoop Ecosystem.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>2.5.2. Clustered Computing and Hadoop Ecosystem</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 2.6 (Continued from Module):</strong>
+        <ul>
+            <li><em>List and discuss the characteristics of big data.</em></li>
+            <li><em>Describe the big data life cycle. Which step you think most useful and why?</em></li>
+            <li><em>List and describe each technology or tool used in the big data life cycle.</em></li>
+            <li><em>Discuss the three methods of computing over a large dataset.</em></li>
+        </ul>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 2.7 (From Module):</strong>
+        <ul>
+            <li><em>Students in a group shall discuss the purpose of each Hadoop Ecosystem components?</em></li>
+        </ul>
+    </div>
+
+    <p><strong>The Problem:</strong> Because of the qualities of big data (Volume, Velocity, Variety, Veracity), <strong>individual computers are often inadequate</strong> for handling the data at most stages. To better address the high storage and computational needs of big data, <strong>computer clusters are a better fit</strong>.</p>
+
+    <hr>
+
+    <h4>2.5.2.1. Clustered Computing</h4>
+    
+    <p><strong>What is a Cluster?</strong> Big data clustering software combines the resources of <strong>many smaller machines</strong>, seeking to provide a number of benefits.</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Benefit</th><th>Description</th><th>Ethiopian Example</th></tr>
+            <tr>
+                <td><strong>Resource Pooling</strong></td>
+                <td>Combining the available storage space to hold data is a clear benefit, but <strong>CPU and memory pooling</strong> are also extremely important. Processing large datasets requires large amounts of all three of these resources.</td>
+                <td>Ethio Telecom uses a cluster of hundreds of servers to pool storage and processing power, allowing them to handle billions of call records without crashing.</td>
+            </tr>
+            <tr>
+                <td><strong>High Availability</strong></td>
+                <td>Clusters can provide varying levels of <strong>fault tolerance</strong> and availability guarantees to prevent hardware or software failures from affecting access to data and processing. This becomes increasingly important as we continue to emphasize the importance of <strong>real-time analytics</strong>.</td>
+                <td>If one server in Ethio Telecom's cluster fails, the other servers automatically take over the workload without any interruption to customers. This is High Availability in action.</td>
+            </tr>
+        </table>
+    </div>
+
+    <p><strong>Easy Scalability:</strong> Clusters make it easy to scale <strong>horizontally</strong> by adding additional machines to the group. This means the system can react to changes in resource requirements without expanding the physical resources on a single machine (which is expensive and limited).</p>
+
+    <p><strong>Managing Clusters with YARN:</strong> Using clusters requires a solution for managing cluster membership, coordinating resource sharing, and scheduling actual work on individual nodes. Cluster membership and resource allocation can be handled by software like <strong>Hadoop's YARN</strong> (which stands for <strong>Yet Another Resource Negotiator</strong>).</p>
+
+    <p>The assembled computing cluster often acts as a <strong>foundation</strong> that other software interfaces with to process the data. The machines involved in the computing cluster are also typically involved with the <strong>management of a distributed storage system</strong>, which we will talk about when we discuss data persistence.</p>
+
+    <hr>
+
+    <h4>2.5.2.2. Hadoop and its Ecosystem</h4>
+    
+    <p><strong>What is Hadoop?</strong> Hadoop is an <strong>open-source framework</strong> intended to make interaction with big data easier. It is a framework that allows for the <strong>distributed processing of large datasets across clusters of computers</strong> using simple programming models. It is inspired by a technical document published by <strong>Google</strong>.</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #f43f5e;">
+        <strong>📌 The Four Key Characteristics of Hadoop:</strong>
+        <ul>
+            <li><strong>Economical:</strong> Its systems are highly economical as <strong>ordinary computers</strong> can be used for data processing. You don't need expensive, specialized supercomputers.</li>
+            <li><strong>Reliable:</strong> It is reliable as it stores copies of the data on different machines and is <strong>resistant to hardware failure</strong>. If one machine breaks, the data is safe on another.</li>
+            <li><strong>Scalable:</strong> It is easily scalable both <strong>horizontally</strong> (adding more machines) and <strong>vertically</strong> (adding more power to existing machines). A few extra nodes help in scaling up the framework.</li>
+            <li><strong>Flexible:</strong> It is flexible and you can store as much <strong>structured and unstructured data</strong> as you need to and decide to use them later.</li>
+        </ul>
+    </div>
+
+    <p><strong>The Hadoop Ecosystem:</strong> Hadoop has an ecosystem that has evolved from its four core components: <strong>data management, access, processing, and storage</strong>. It is continuously growing to meet the needs of Big Data. It comprises the following components and many others:</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Layer</th><th>Component</th><th>Full Name / Purpose</th></tr>
+            <tr>
+                <td rowspan="4" style="background:#1e293b; color:#facc15; font-weight:bold;">Data Management</td>
+                <td><strong>Oozie</strong></td>
+                <td>Workflow monitoring and job scheduling.</td>
+            </tr>
+            <tr><td><strong>Chukwa</strong></td><td>Monitoring system for large distributed systems.</td></tr>
+            <tr><td><strong>Flume</strong></td><td>Monitoring and data ingestion (collecting log data).</td></tr>
+            <tr><td><strong>ZooKeeper</strong></td><td>Managing cluster coordination and synchronization.</td></tr>
+            
+            <tr>
+                <td rowspan="5" style="background:#1e293b; color:#14b8a6; font-weight:bold;">Data Access</td>
+                <td><strong>Hive</strong></td>
+                <td>SQL-like querying for structured data.</td>
+            </tr>
+            <tr><td><strong>Pig</strong></td><td>Dataflow language for processing (MapReduce programming).</td></tr>
+            <tr><td><strong>Mahout</strong></td><td>Machine Learning algorithm libraries.</td></tr>
+            <tr><td><strong>Avro</strong></td><td>RPC (Remote Procedure Call) and data serialization.</td></tr>
+            <tr><td><strong>Sqoop</strong></td><td>RDBMS connector for transferring data between SQL and Hadoop.</td></tr>
+
+            <tr>
+                <td rowspan="2" style="background:#1e293b; color:#f43f5e; font-weight:bold;">Data Processing</td>
+                <td><strong>Map Reduce</strong></td>
+                <td>Programming-based Data Processing (Cluster Management).</td>
+            </tr>
+            <tr><td><strong>YARN</strong></td><td>Yet Another Resource Negotiator (Cluster and Resource Management).</td></tr>
+
+            <tr>
+                <td rowspan="2" style="background:#1e293b; color:#f59e0b; font-weight:bold;">Data Storage</td>
+                <td><strong>HDFS</strong></td>
+                <td>Hadoop Distributed File System (File System).</td>
+            </tr>
+            <tr><td><strong>HBase</strong></td><td>NoSQL Database (Column DB storage).</td></tr>
+        </table>
+    </div>
+
+    <p><strong>Additional Components:</strong> The module also lists:</p>
+    <ul>
+        <li><strong>Spark:</strong> In-Memory data processing (faster than MapReduce).</li>
+        <li><strong>Spark MLLib:</strong> Machine Learning algorithm libraries.</li>
+        <li><strong>Solar, Lucene:</strong> Searching and Indexing.</li>
+    </ul>
+
+    <div class="example-box">
+        <h4>💡 Real World Example (Ethiopia - Big Data at Ethio Telecom):</h4>
+        <p>Ethio Telecom generates massive amounts of data daily from millions of subscribers. To handle this, they use a <strong>Hadoop Cluster</strong>:</p>
+        <ul>
+            <li><strong>HDFS (Storage):</strong> Stores all call detail records (CDRs) across hundreds of servers.</li>
+            <li><strong>MapReduce / Spark (Processing):</strong> Processes the data to find patterns (e.g., peak call times, most popular data plans).</li>
+            <li><strong>Hive (Access):</strong> Analysts use SQL-like queries to generate reports for management.</li>
+            <li><strong>Oozie (Management):</strong> Schedules these processing jobs to run automatically every night.</li>
+        </ul>
+        <p>Without Hadoop, this level of data processing would be impossible on a single server.</p>
+    </div>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 5)</h4>
+        <ul>
+            <li><strong>Clustered Computing:</strong> Combines many smaller machines to handle Big Data. Benefits: <strong>Resource Pooling</strong> and <strong>High Availability</strong>.</li>
+            <li><strong>YARN:</strong> Yet Another Resource Negotiator. Manages cluster resources and schedules jobs.</li>
+            <li><strong>Hadoop:</strong> An open-source framework for distributed processing. Key traits: <strong>Economical, Reliable, Scalable, Flexible</strong>.</li>
+            <li><strong>Hadoop Ecosystem (4 Layers):</strong>
+                <ul>
+                    <li><strong>Management:</strong> Oozie, Chukwa, Flume, ZooKeeper.</li>
+                    <li><strong>Access:</strong> Hive, Pig, Mahout, Avro, Sqoop.</li>
+                    <li><strong>Processing:</strong> MapReduce, YARN.</li>
+                    <li><strong>Storage:</strong> HDFS, HBase.</li>
+                </ul>
+            </li>
+            <li><strong>Spark:</strong> In-memory processing, faster than MapReduce.</li>
+        </ul>
+    </div>
+</div>

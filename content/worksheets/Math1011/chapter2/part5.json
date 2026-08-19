@@ -1,0 +1,134 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "text": "What does it mean for a function $f: A \\to B$ to be one-to-one (1-1)?",
+            "options": [
+                "A) Every element of B is the image of some element of A.",
+                "B) If $f(x_1) = f(x_2)$, then $x_1 = x_2$.",
+                "C) The domain of f is A.",
+                "D) The range of f is B."
+            ],
+            "correct_answer": "B) If $f(x_1) = f(x_2)$, then $x_1 = x_2$.",
+            "explanation": "The module states: 'A function f: A → B is called one to one, often written 1 - 1, if and only if for all x₁, x₂ ∈ A, f(x₁) = f(x₂) implies x₁ = x₂.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What does it mean for a function $f: A \\to B$ to be onto?",
+            "options": [
+                "A) If $f(x_1) = f(x_2)$, then $x_1 = x_2$.",
+                "B) Every element of B is the image of some element in A (Range(f) = B).",
+                "C) The domain of f is A.",
+                "D) The range of f is a subset of B."
+            ],
+            "correct_answer": "B) Every element of B is the image of some element in A (Range(f) = B).",
+            "explanation": "The module states: 'Let f be a function from a set A into a set B. Then f is called an onto function (or f maps onto B) if every element of B is image of some element in A, i.e, Range(f) = B.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is a one-to-one correspondence?",
+            "options": [
+                "A) A function that is one-to-one but not onto.",
+                "B) A function that is onto but not one-to-one.",
+                "C) A function that is both one-to-one and onto.",
+                "D) A function that is neither one-to-one nor onto."
+            ],
+            "correct_answer": "C) A function that is both one-to-one and onto.",
+            "explanation": "The module states: 'A function f: A → B is said to be a 1 - 1 correspondence if f is both 1 - 1 and onto.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "When does a function have an inverse?",
+            "options": [
+                "A) Only when it is onto.",
+                "B) Only when it is one-to-one.",
+                "C) Only when it is both one-to-one and onto.",
+                "D) Every function has an inverse."
+            ],
+            "correct_answer": "B) Only when it is one-to-one.",
+            "explanation": "The module states: 'A one to one function is special because only one to one functions have inverse.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the inverse of $f(x) = x^3$?",
+            "options": [
+                "A) $f^{-1}(x) = 1/x^3$",
+                "B) $f^{-1}(x) = \\sqrt[3]{x}$",
+                "C) $f^{-1}(x) = x^3$",
+                "D) $f^{-1}(x) = 3x$"
+            ],
+            "correct_answer": "B) $f^{-1}(x) = \\sqrt[3]{x}$",
+            "explanation": "The module states: '$y = x^3 \\to x = y^3 \\to y = \\sqrt[3]{x}$. Thus, $f^{-1}(x) = \\sqrt[3]{x}$.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the inverse of $f(x) = \\frac{2x - 9}{4}$?",
+            "options": [
+                "A) $f^{-1}(x) = \\frac{4x + 9}{2}$",
+                "B) $f^{-1}(x) = \\frac{4x - 9}{2}$",
+                "C) $f^{-1}(x) = \\frac{2x + 9}{4}$",
+                "D) $f^{-1}(x) = \\frac{2x - 9}{4}$"
+            ],
+            "correct_answer": "A) $f^{-1}(x) = \\frac{4x + 9}{2}$",
+            "explanation": "Interchange x and y: $x = \\frac{2y - 9}{4}$. Solve for y: $4x = 2y - 9 \\to 2y = 4x + 9 \\to y = \\frac{4x + 9}{2}$.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "Is the function $f: \\mathbb{R} \\to \\mathbb{R}$ defined by $f(x) = x^2 + 7$ one-to-one?",
+            "options": [
+                "A) Yes, because it is a quadratic function.",
+                "B) No, because $f(1) = f(-1) = 8$.",
+                "C) Yes, because every input has a unique output.",
+                "D) No, because it is not onto."
+            ],
+            "correct_answer": "B) No, because $f(1) = f(-1) = 8$.",
+            "explanation": "The module asks: 'Which of the following functions are one to one? f: ℝ → ℝ defined by f(x) = x² + 7.' Since $f(1) = 8$ and $f(-1) = 8$, but $1 \\neq -1$, it is not one-to-one.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "What is the domain of the inverse function $f^{-1}$ for $f(x) = 7x - 6$?",
+            "options": [
+                "A) All real numbers",
+                "B) All real numbers except $6/7$",
+                "C) All real numbers except $0$",
+                "D) All real numbers except $7$"
+            ],
+            "correct_answer": "A) All real numbers",
+            "explanation": "First, find the inverse: $y = 7x - 6 \\to x = 7y - 6 \\to 7y = x + 6 \\to y = \\frac{x + 6}{7}$. Since the domain of the inverse is the range of the original function (which is all real numbers), the domain of $f^{-1}$ is $\\mathbb{R}$.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "If $f$ is a one-to-one function from $A$ onto $B$, what is the relationship between $f$ and $f^{-1}$?",
+            "options": [
+                "A) $f(f^{-1}(x)) = x$ and $f^{-1}(f(x)) = x$ for all $x$ in the domains.",
+                "B) $f^{-1}(x) = 1/f(x)$.",
+                "C) $f(f^{-1}(x)) = f(x)$.",
+                "D) $f^{-1}(f(x)) = f(x)$."
+            ],
+            "correct_answer": "A) $f(f^{-1}(x)) = x$ and $f^{-1}(f(x)) = x$ for all $x$ in the domains.",
+            "explanation": "The module notes that the inverse function undoes the original function. For a one-to-one function $f$, $f(f^{-1}(x)) = x$ and $f^{-1}(f(x)) = x$.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is the inverse of $f(x) = -(x + 2)^2 - 1$?",
+            "options": [
+                "A) $f^{-1}(x) = -\\sqrt{-x - 1} - 2$",
+                "B) $f^{-1}(x) = \\sqrt{-x - 1} - 2$",
+                "C) $f^{-1}(x) = -\\sqrt{x + 1} - 2$",
+                "D) $f^{-1}(x)$ does not exist because $f$ is not one-to-one."
+            ],
+            "correct_answer": "D) $f^{-1}(x)$ does not exist because $f$ is not one-to-one.",
+            "explanation": "The module lists $f(x) = -(x + 2)^2 - 1$ in the exercises for finding inverses. However, because it is a quadratic function (parabola), it is not one-to-one over $\\mathbb{R}$. For example, $f(-1) = f(-3) = -2$. Therefore, it does not have an inverse.",
+            "difficulty": "hard"
+        }
+    ]
+}

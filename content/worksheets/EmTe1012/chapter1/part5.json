@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 1,
+    "title": "Part 5 Practice: Future Trends in Emerging Technologies",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Which of the following is listed as an emerging technology trend in 2019 according to the module?",
+            "options": [
+                "A) Steam Engine",
+                "B) 5G Networks",
+                "C) Telegraph",
+                "D) Spinning Jenny"
+            ],
+            "correct_answer": "B) 5G Networks",
+            "explanation": "Section 1.5.1 explicitly lists '5G Networks' as an emerging technology trend in 2019. The others are historical inventions from the Industrial Revolution.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What does the module say about who emerging technologies affect?",
+            "options": [
+                "A) They only affect the top 1% of tech geniuses at companies like Google.",
+                "B) They are already shaping your life whether you like it or not.",
+                "C) They will not affect society for another 50 years.",
+                "D) They are only relevant to businesses in the United States."
+            ],
+            "correct_answer": "B) They are already shaping your life whether you like it or not.",
+            "explanation": "The module debunks the myth: 'This is totally wrong. Chatbots, virtual/augmented reality, blockchain, Ephemeral Apps and Artificial Intelligence are already shaping your life whether you like it or not.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the final, powerful message of the module regarding technological change?",
+            "options": [
+                "A) Avoid technology at all costs.",
+                "B) Adapt or die.",
+                "C) Wait for technology to mature before using it.",
+                "D) Technology is a passing fad."
+            ],
+            "correct_answer": "B) Adapt or die.",
+            "explanation": "The module concludes with: 'At the end of the day, you can either adapt or die.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "Which of the following is NOT listed as a future-shaping technology in section 1.5.2?",
+            "options": [
+                "A) Chatbots",
+                "B) Virtual Reality (VR)",
+                "C) Blockchain",
+                "D) The Steam Engine"
+            ],
+            "correct_answer": "D) The Steam Engine",
+            "explanation": "Section 1.5.2 lists Chatbots, VR, Blockchain, Ephemeral Apps, and AI as technologies shaping the future. The Steam Engine is a historical invention (IR 1.0).",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is an 'Ephemeral App' as described in the module?",
+            "options": [
+                "A) An app that is permanently installed on your phone.",
+                "B) An app designed for temporary or short-term use, often disappearing after a specific task.",
+                "C) An app that requires no internet connection.",
+                "D) An app that is only used by large corporations."
+            ],
+            "correct_answer": "B) An app designed for temporary or short-term use, often disappearing after a specific task.",
+            "explanation": "Ephemeral Apps are listed in section 1.5.2 as a technology shaping the future. 'Ephemeral' implies temporary or short-lived, referring to apps used for a specific immediate purpose (like a festival event app).",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "How is Blockchain being used in Ethiopia's coffee industry according to the lesson?",
+            "options": [
+                "A) To mine cryptocurrency.",
+                "B) To track coffee supply chains, ensuring fair payments and authenticating Ethiopian coffee to global buyers.",
+                "C) To replace coffee farming with digital farming.",
+                "D) To create a new cryptocurrency called 'EthioCoin'."
+            ],
+            "correct_answer": "B) To track coffee supply chains, ensuring fair payments and authenticating Ethiopian coffee to global buyers.",
+            "explanation": "The lesson provides an Ethiopian example: 'Ethiopia's Ministry of Agriculture is piloting blockchain to track coffee supply chains, ensuring fair payments to farmers and proving the authenticity of Ethiopian coffee to global buyers.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "Which technology is described as a 'decentralized, distributed ledger technology'?",
+            "options": [
+                "A) Artificial Intelligence (AI)",
+                "B) Blockchain",
+                "C) 5G Networks",
+                "D) Digital Twins"
+            ],
+            "correct_answer": "B) Blockchain",
+            "explanation": "The table in section 1.5.1 describes Blockchain as 'A decentralized, distributed ledger technology that records transactions across multiple computers securely and transparently.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What is the purpose of 'Immersive Experiences in Smart Spaces'?",
+            "options": [
+                "A) To replace all physical classrooms.",
+                "B) To combine AR, VR, and smart sensors to create interactive, immersive environments for retail, education, and entertainment.",
+                "C) To create 5G networks.",
+                "D) To build autonomous vehicles."
+            ],
+            "correct_answer": "B) To combine AR, VR, and smart sensors to create interactive, immersive environments for retail, education, and entertainment.",
+            "explanation": "The module describes 'Immersive Experiences in Smart Spaces' as combining AR, VR, and smart sensors to create interactive environments, used in smart retail, virtual classrooms, and entertainment.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "Which Ethiopian institution is mentioned as beginning to use VR for medical training?",
+            "options": [
+                "A) Ethiopian Airlines",
+                "B) Addis Ababa University",
+                "C) Commercial Bank of Ethiopia",
+                "D) Ethio Telecom"
+            ],
+            "correct_answer": "B) Addis Ababa University",
+            "explanation": "The lesson provides an example: 'Ethiopian universities like Addis Ababa University are beginning to use VR for medical training, allowing students to practice surgeries in a virtual environment before touching a real patient.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is the core problem with the belief that emerging technologies only affect 'top tier' tech companies?",
+            "options": [
+                "A) It is true; only big companies benefit.",
+                "B) It is wrong because these technologies are already shaping everyday lives, including chatbots, AI, and VR.",
+                "C) It is correct because only geniuses can use them.",
+                "D) It is a myth because emerging technologies only affect the government."
+            ],
+            "correct_answer": "B) It is wrong because these technologies are already shaping everyday lives, including chatbots, AI, and VR.",
+            "explanation": "The module explicitly states: 'This is totally wrong. Chatbots, virtual/augmented reality, blockchain, Ephemeral Apps and Artificial Intelligence are already shaping your life whether you like it or not.'",
+            "difficulty": "hard"
+        }
+    ]
+}

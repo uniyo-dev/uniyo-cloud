@@ -1,0 +1,177 @@
+{
+  "course_code": "GeES1011",
+  "chapter": 7,
+  "title": "Part 3 Practice: Migration, Age/Sex Structure, and Population Distribution",
+  "questions": [
+    {
+      "id": 1,
+      "text": "Study the diagram below showing migration types in Ethiopia. Which type is represented by the arrow from rural to urban areas?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <rect x=\"20\" y=\"30\" width=\"80\" height=\"50\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"35\" y=\"55\" fill=\"#14b8a6\" font-size=\"8\">Rural</text>\n                    <text x=\"35\" y=\"68\" fill=\"#f8fafc\" font-size=\"7\">Areas</text>\n                    <rect x=\"200\" y=\"30\" width=\"80\" height=\"50\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f43f5e\" stroke-width=\"1.5\"/>\n                    <text x=\"215\" y=\"55\" fill=\"#f43f5e\" font-size=\"8\">Urban</text>\n                    <text x=\"215\" y=\"68\" fill=\"#f8fafc\" font-size=\"7\">Areas</text>\n                    <line x1=\"100\" y1=\"55\" x2=\"195\" y2=\"55\" stroke=\"#facc15\" stroke-width=\"2\" stroke-dasharray=\"4\"/>\n                    <polygon points=\"195,50 210,55 195,60\" fill=\"#facc15\"/>\n                    <text x=\"130\" y=\"45\" fill=\"#facc15\" font-size=\"7\">Migration</text>\n                    <text x=\"30\" y=\"120\" fill=\"#94a3b8\" font-size=\"7\">Rural-Urban Migration</text>\n                    <text x=\"30\" y=\"135\" fill=\"#94a3b8\" font-size=\"7\">Most common type in Ethiopia</text>\n                </svg>"
+      },
+      "options": [
+        "A) Urban-Urban migration",
+        "B) Rural-Urban migration",
+        "C) Rural-Rural migration",
+        "D) Seasonal migration"
+      ],
+      "correct_answer": "B) Rural-Urban migration",
+      "explanation": "Correct: The diagram shows movement from rural to urban areas, which is rural-urban migration. A is wrong\u2014the arrow shows rural to urban, not urban to urban. C is wrong\u2014the arrow shows rural to urban, not rural to rural. D is wrong\u2014seasonal migration is temporary, not permanent.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "text": "Based on the population pyramid diagram below, approximately what percentage of Ethiopia's population is under 15 years old?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"100\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Ethiopia's Population Pyramid</text>\n                    <!-- Male side (left) -->\n                    <rect x=\"80\" y=\"30\" width=\"40\" height=\"10\" fill=\"#38bdf8\"/>\n                    <rect x=\"80\" y=\"45\" width=\"35\" height=\"10\" fill=\"#38bdf8\"/>\n                    <rect x=\"80\" y=\"60\" width=\"25\" height=\"10\" fill=\"#38bdf8\"/>\n                    <rect x=\"80\" y=\"75\" width=\"15\" height=\"10\" fill=\"#38bdf8\"/>\n                    <rect x=\"80\" y=\"90\" width=\"8\" height=\"10\" fill=\"#38bdf8\"/>\n                    <!-- Female side (right) -->\n                    <rect x=\"180\" y=\"30\" width=\"40\" height=\"10\" fill=\"#f43f5e\"/>\n                    <rect x=\"185\" y=\"45\" width=\"35\" height=\"10\" fill=\"#f43f5e\"/>\n                    <rect x=\"190\" y=\"60\" width=\"25\" height=\"10\" fill=\"#f43f5e\"/>\n                    <rect x=\"195\" y=\"75\" width=\"15\" height=\"10\" fill=\"#f43f5e\"/>\n                    <rect x=\"197\" y=\"90\" width=\"8\" height=\"10\" fill=\"#f43f5e\"/>\n                    <text x=\"55\" y=\"38\" fill=\"#38bdf8\" font-size=\"6\">Male</text>\n                    <text x=\"210\" y=\"38\" fill=\"#f43f5e\" font-size=\"6\">Female</text>\n                    <text x=\"45\" y=\"115\" fill=\"#94a3b8\" font-size=\"6\">0-14 yrs: 40%</text>\n                    <text x=\"45\" y=\"130\" fill=\"#94a3b8\" font-size=\"6\">15-64 yrs: 55%</text>\n                    <text x=\"45\" y=\"145\" fill=\"#94a3b8\" font-size=\"6\">65+ yrs: 5%</text>\n                    <text x=\"190\" y=\"115\" fill=\"#facc15\" font-size=\"6\">Young Population</text>\n                    <text x=\"190\" y=\"130\" fill=\"#94a3b8\" font-size=\"6\">Broad base</text>\n                </svg>"
+      },
+      "options": [
+        "A) 25%",
+        "B) 40%",
+        "C) 55%",
+        "D) 65%"
+      ],
+      "correct_answer": "B) 40%",
+      "explanation": "Correct: The pyramid shows 40% under 15 years (broad base). A is wrong\u2014the diagram shows 40%, not 25%. C is wrong\u201455% is working age. D is wrong\u201465% is too high.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "text": "Which measure of population distribution is shown in the calculation below? Population Density = Total Population / Total Land Area",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <rect x=\"20\" y=\"20\" width=\"260\" height=\"110\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1\"/>\n                    <text x=\"80\" y=\"40\" fill=\"#facc15\" font-size=\"9\">Population Density Calculation</text>\n                    <text x=\"40\" y=\"60\" fill=\"#f8fafc\" font-size=\"8\">Population Density = Total Population \u00f7 Total Land Area</text>\n                    <text x=\"40\" y=\"80\" fill=\"#f8fafc\" font-size=\"8\">Example: Ethiopia</text>\n                    <text x=\"40\" y=\"95\" fill=\"#f8fafc\" font-size=\"7\">Population: 120,000,000</text>\n                    <text x=\"40\" y=\"110\" fill=\"#f8fafc\" font-size=\"7\">Land Area: 1,104,300 km\u00b2</text>\n                    <text x=\"40\" y=\"125\" fill=\"#f59e0b\" font-size=\"7\">= ~110 people/km\u00b2</text>\n                </svg>"
+      },
+      "options": [
+        "A) Physiographical density",
+        "B) Agricultural density",
+        "C) Crude density",
+        "D) Economic density"
+      ],
+      "correct_answer": "C) Crude density",
+      "explanation": "Correct: Crude density uses total population divided by total land area. A is wrong\u2014physiographical density uses arable land. B is wrong\u2014agricultural density uses agricultural population. D is wrong\u2014economic density is not a standard measure.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 4,
+      "text": "The diagram below shows push and pull factors. Which of the following is a PUSH factor shown in the diagram?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"100\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Migration Factors</text>\n                    <!-- Push Factors -->\n                    <rect x=\"20\" y=\"30\" width=\"120\" height=\"100\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f43f5e\" stroke-width=\"1.5\"/>\n                    <text x=\"40\" y=\"48\" fill=\"#f43f5e\" font-size=\"8\" font-weight=\"bold\">PUSH Factors</text>\n                    <text x=\"30\" y=\"63\" fill=\"#f8fafc\" font-size=\"7\">\u2022 Poverty</text>\n                    <text x=\"30\" y=\"78\" fill=\"#f8fafc\" font-size=\"7\">\u2022 Land scarcity</text>\n                    <text x=\"30\" y=\"93\" fill=\"#f8fafc\" font-size=\"7\">\u2022 Conflict</text>\n                    <text x=\"30\" y=\"108\" fill=\"#f8fafc\" font-size=\"7\">\u2022 Drought</text>\n                    <text x=\"30\" y=\"123\" fill=\"#f8fafc\" font-size=\"7\">\u2022 Limited services</text>\n                    <!-- Pull Factors -->\n                    <rect x=\"160\" y=\"30\" width=\"120\" height=\"100\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"180\" y=\"48\" fill=\"#14b8a6\" font-size=\"8\" font-weight=\"bold\">PULL Factors</text>\n                    <text x=\"170\" y=\"63\" fill=\"#f8fafc\" font-size=\"7\">\u2022 Employment</text>\n                    <text x=\"170\" y=\"78\" fill=\"#f8fafc\" font-size=\"7\">\u2022 Education</text>\n                    <text x=\"170\" y=\"93\" fill=\"#f8fafc\" font-size=\"7\">\u2022 Health services</text>\n                    <text x=\"170\" y=\"108\" fill=\"#f8fafc\" font-size=\"7\">\u2022 Family reunion</text>\n                    <text x=\"170\" y=\"123\" fill=\"#f8fafc\" font-size=\"7\">\u2022 Better infrastructure</text>\n                </svg>"
+      },
+      "options": [
+        "A) Better employment opportunities",
+        "B) Educational opportunities",
+        "C) Land scarcity and environmental degradation",
+        "D) Better health services"
+      ],
+      "correct_answer": "C) Land scarcity and environmental degradation",
+      "explanation": "Correct: Land scarcity is a push factor shown in the diagram. A is wrong\u2014this is a pull factor. B is wrong\u2014this is a pull factor. D is wrong\u2014this is a pull factor.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 5,
+      "text": "Based on the dependency ratio diagram below, Ethiopia's total dependency ratio is approximately:",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"90\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Dependency Ratio in Ethiopia</text>\n                    <rect x=\"20\" y=\"30\" width=\"80\" height=\"80\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f43f5e\" stroke-width=\"1.5\"/>\n                    <text x=\"35\" y=\"48\" fill=\"#f43f5e\" font-size=\"7\" font-weight=\"bold\">Youth</text>\n                    <text x=\"35\" y=\"63\" fill=\"#f8fafc\" font-size=\"7\">0-14 yrs</text>\n                    <text x=\"35\" y=\"78\" fill=\"#f8fafc\" font-size=\"7\">40%</text>\n                    <text x=\"35\" y=\"95\" fill=\"#94a3b8\" font-size=\"6\">Dependency</text>\n                    <text x=\"35\" y=\"108\" fill=\"#94a3b8\" font-size=\"6\">~80-85/100</text>\n                    \n                    <rect x=\"110\" y=\"30\" width=\"80\" height=\"80\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"125\" y=\"48\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Working</text>\n                    <text x=\"125\" y=\"63\" fill=\"#f8fafc\" font-size=\"7\">15-64 yrs</text>\n                    <text x=\"125\" y=\"78\" fill=\"#f8fafc\" font-size=\"7\">55%</text>\n                    <text x=\"125\" y=\"95\" fill=\"#94a3b8\" font-size=\"6\">Dependents</text>\n                    <text x=\"125\" y=\"108\" fill=\"#94a3b8\" font-size=\"6\">per 100</text>\n                    \n                    <rect x=\"200\" y=\"30\" width=\"80\" height=\"80\" rx=\"4\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"1.5\"/>\n                    <text x=\"215\" y=\"48\" fill=\"#38bdf8\" font-size=\"7\" font-weight=\"bold\">Elderly</text>\n                    <text x=\"215\" y=\"63\" fill=\"#f8fafc\" font-size=\"7\">65+ yrs</text>\n                    <text x=\"215\" y=\"78\" fill=\"#f8fafc\" font-size=\"7\">5%</text>\n                    <text x=\"215\" y=\"95\" fill=\"#94a3b8\" font-size=\"6\">Dependency</text>\n                    <text x=\"215\" y=\"108\" fill=\"#94a3b8\" font-size=\"6\">~5-6/100</text>\n                </svg>"
+      },
+      "options": [
+        "A) 50-60 per 100 working-age adults",
+        "B) 70-80 per 100 working-age adults",
+        "C) 85-90 per 100 working-age adults",
+        "D) 100-110 per 100 working-age adults"
+      ],
+      "correct_answer": "C) 85-90 per 100 working-age adults",
+      "explanation": "Correct: Total dependency ratio is ~85-90. A is wrong\u2014too low. B is wrong\u2014slightly low. D is wrong\u2014too high.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 6,
+      "text": "The diagram below shows different density measures. Which measure specifically uses arable land in its calculation?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Population Density Measures</text>\n                    \n                    <rect x=\"15\" y=\"30\" width=\"85\" height=\"45\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f43f5e\" stroke-width=\"1\"/>\n                    <text x=\"25\" y=\"45\" fill=\"#f43f5e\" font-size=\"7\" font-weight=\"bold\">Crude Density</text>\n                    <text x=\"20\" y=\"58\" fill=\"#f8fafc\" font-size=\"6\">Total Pop. / Total Area</text>\n                    <text x=\"20\" y=\"68\" fill=\"#94a3b8\" font-size=\"6\">~110/km\u00b2</text>\n                    \n                    <rect x=\"110\" y=\"30\" width=\"85\" height=\"45\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1\"/>\n                    <text x=\"120\" y=\"45\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">Physiographical</text>\n                    <text x=\"115\" y=\"58\" fill=\"#f8fafc\" font-size=\"6\">Total Pop. / Arable Land</text>\n                    <text x=\"115\" y=\"68\" fill=\"#94a3b8\" font-size=\"6\">Higher than crude</text>\n                    \n                    <rect x=\"205\" y=\"30\" width=\"85\" height=\"45\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1\"/>\n                    <text x=\"215\" y=\"45\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Agricultural</text>\n                    <text x=\"210\" y=\"58\" fill=\"#f8fafc\" font-size=\"6\">Farmers / Arable Land</text>\n                    <text x=\"210\" y=\"68\" fill=\"#94a3b8\" font-size=\"6\">Varies by region</text>\n                    \n                    <text x=\"30\" y=\"120\" fill=\"#94a3b8\" font-size=\"7\">Physiographical density measures pressure on agricultural land</text>\n                    <text x=\"30\" y=\"135\" fill=\"#94a3b8\" font-size=\"7\">Important for food security planning</text>\n                </svg>"
+      },
+      "options": [
+        "A) Crude density",
+        "B) Physiographical density",
+        "C) Urban density",
+        "D) Population density"
+      ],
+      "correct_answer": "B) Physiographical density",
+      "explanation": "Correct: Physiographical density uses arable land. A is wrong\u2014crude density uses total land. C is wrong\u2014urban density is for cities. D is wrong\u2014population density is general.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 7,
+      "text": "Based on the population distribution map diagram, approximately what percentage of Ethiopia's population lives in the highlands?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"100\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Population Distribution in Ethiopia</text>\n                    \n                    <!-- Highland area -->\n                    <rect x=\"20\" y=\"30\" width=\"150\" height=\"80\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"2\"/>\n                    <text x=\"50\" y=\"50\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Highlands</text>\n                    <text x=\"35\" y=\"65\" fill=\"#f8fafc\" font-size=\"7\">\u2022 40% of land area</text>\n                    <text x=\"35\" y=\"80\" fill=\"#f8fafc\" font-size=\"7\">\u2022 80-85% of population</text>\n                    <text x=\"35\" y=\"95\" fill=\"#94a3b8\" font-size=\"7\">\u2022 High density</text>\n                    \n                    <!-- Lowland area -->\n                    <rect x=\"180\" y=\"30\" width=\"100\" height=\"80\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f43f5e\" stroke-width=\"2\"/>\n                    <text x=\"195\" y=\"50\" fill=\"#f43f5e\" font-size=\"7\" font-weight=\"bold\">Lowlands</text>\n                    <text x=\"190\" y=\"65\" fill=\"#f8fafc\" font-size=\"7\">\u2022 60% of land area</text>\n                    <text x=\"190\" y=\"80\" fill=\"#f8fafc\" font-size=\"7\">\u2022 15-20% of pop.</text>\n                    <text x=\"190\" y=\"95\" fill=\"#94a3b8\" font-size=\"7\">\u2022 Low density</text>\n                    \n                    <text x=\"30\" y=\"135\" fill=\"#94a3b8\" font-size=\"7\">Highland areas: Favorable climate, fertile soils, better infrastructure</text>\n                </svg>"
+      },
+      "options": [
+        "A) 50-60%",
+        "B) 60-70%",
+        "C) 80-85%",
+        "D) 90-95%"
+      ],
+      "correct_answer": "C) 80-85%",
+      "explanation": "Correct: About 80-85% of the population lives in the highlands. A is wrong\u2014too low. B is wrong\u2014too low. D is wrong\u2014too high.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "text": "The refugee flow diagram shows Ethiopia's role as a host country. Approximately how many refugees does Ethiopia host?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Refugee Flows in the Horn</text>\n                    \n                    <!-- Ethiopia -->\n                    <rect x=\"80\" y=\"50\" width=\"100\" height=\"40\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"2\"/>\n                    <text x=\"105\" y=\"65\" fill=\"#f59e0b\" font-size=\"8\" font-weight=\"bold\">Ethiopia</text>\n                    <text x=\"95\" y=\"80\" fill=\"#f8fafc\" font-size=\"7\">800,000+ Refugees</text>\n                    \n                    <!-- Arrow from Sudan -->\n                    <line x1=\"20\" y1=\"50\" x2=\"75\" y2=\"65\" stroke=\"#f43f5e\" stroke-width=\"1.5\"/>\n                    <text x=\"25\" y=\"45\" fill=\"#f43f5e\" font-size=\"6\">Sudan</text>\n                    \n                    <!-- Arrow from South Sudan -->\n                    <line x1=\"200\" y1=\"30\" x2=\"185\" y2=\"55\" stroke=\"#f43f5e\" stroke-width=\"1.5\"/>\n                    <text x=\"190\" y=\"25\" fill=\"#f43f5e\" font-size=\"6\">S. Sudan</text>\n                    \n                    <!-- Arrow from Eritrea -->\n                    <line x1=\"200\" y1=\"90\" x2=\"185\" y2=\"80\" stroke=\"#f43f5e\" stroke-width=\"1.5\"/>\n                    <text x=\"195\" y=\"100\" fill=\"#f43f5e\" font-size=\"6\">Eritrea</text>\n                    \n                    <!-- Arrow from Somalia -->\n                    <line x1=\"20\" y1=\"110\" x2=\"75\" y2=\"85\" stroke=\"#f43f5e\" stroke-width=\"1.5\"/>\n                    <text x=\"25\" y=\"120\" fill=\"#f43f5e\" font-size=\"6\">Somalia</text>\n                </svg>"
+      },
+      "options": [
+        "A) Less than 100,000",
+        "B) About 500,000",
+        "C) Over 800,000",
+        "D) Over 2 million"
+      ],
+      "correct_answer": "C) Over 800,000",
+      "explanation": "Correct: Ethiopia hosts over 800,000 refugees. A is wrong\u2014too low. B is wrong\u2014too low. D is wrong\u2014too high.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 9,
+      "text": "Why is Ethiopia's physiographical density higher than its crude density?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"70\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Density Comparison</text>\n                    \n                    <rect x=\"20\" y=\"30\" width=\"120\" height=\"45\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"35\" y=\"45\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Crude Density</text>\n                    <text x=\"30\" y=\"58\" fill=\"#f8fafc\" font-size=\"7\">Total Pop. / Total Land</text>\n                    <text x=\"30\" y=\"70\" fill=\"#f8fafc\" font-size=\"7\">= ~110 people/km\u00b2</text>\n                    \n                    <rect x=\"20\" y=\"85\" width=\"120\" height=\"45\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n                    <text x=\"35\" y=\"100\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">Physiographical Density</text>\n                    <text x=\"30\" y=\"113\" fill=\"#f8fafc\" font-size=\"7\">Total Pop. / Arable Land</text>\n                    <text x=\"30\" y=\"125\" fill=\"#f8fafc\" font-size=\"7\">= ~200+ people/km\u00b2</text>\n                    \n                    <text x=\"160\" y=\"45\" fill=\"#94a3b8\" font-size=\"7\">Why higher?</text>\n                    <text x=\"160\" y=\"60\" fill=\"#f8fafc\" font-size=\"7\">\u2022 Much land is not arable</text>\n                    <text x=\"160\" y=\"75\" fill=\"#f8fafc\" font-size=\"7\">\u2022 Deserts, mountains</text>\n                    <text x=\"160\" y=\"90\" fill=\"#f8fafc\" font-size=\"7\">\u2022 Only 20-25% is arable</text>\n                    <text x=\"160\" y=\"105\" fill=\"#94a3b8\" font-size=\"7\">Population concentrated</text>\n                    <text x=\"160\" y=\"118\" fill=\"#94a3b8\" font-size=\"7\">on productive land</text>\n                </svg>"
+      },
+      "options": [
+        "A) There is more land than people",
+        "B) Much of the land is not arable (desert, mountains, etc.)",
+        "C) The population is decreasing",
+        "D) Urban areas are growing"
+      ],
+      "correct_answer": "B) Much of the land is not arable (desert, mountains, etc.)",
+      "explanation": "Correct: Physiographical density uses only arable land, which is less than total land. A is wrong\u2014there is still land pressure. C is wrong\u2014population is growing. D is wrong\u2014urban growth doesn't explain this.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 10,
+      "text": "The diagram below illustrates the demographic dividend. What does it represent for Ethiopia?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Demographic Dividend</text>\n                    \n                    <rect x=\"20\" y=\"30\" width=\"260\" height=\"50\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n                    <text x=\"40\" y=\"45\" fill=\"#f59e0b\" font-size=\"8\" font-weight=\"bold\">Large Working-Age Population</text>\n                    <text x=\"40\" y=\"58\" fill=\"#f8fafc\" font-size=\"7\">\u2022 55-56% of population is 15-64 years</text>\n                    <text x=\"40\" y=\"70\" fill=\"#f8fafc\" font-size=\"7\">\u2022 Potential for economic growth</text>\n                    \n                    <rect x=\"20\" y=\"90\" width=\"260\" height=\"40\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"40\" y=\"105\" fill=\"#14b8a6\" font-size=\"8\" font-weight=\"bold\">Requirements for Dividend</text>\n                    <text x=\"40\" y=\"118\" fill=\"#f8fafc\" font-size=\"7\">Education \u2022 Employment \u2022 Investment \u2022 Good Governance</text>\n                    \n                    <text x=\"30\" y=\"145\" fill=\"#94a3b8\" font-size=\"7\">If properly managed, the youth population can drive development</text>\n                </svg>"
+      },
+      "options": [
+        "A) The aging of the population",
+        "B) The potential economic benefit from having a large working-age population",
+        "C) The decline in fertility rates",
+        "D) The increase in migration"
+      ],
+      "correct_answer": "B) The potential economic benefit from having a large working-age population",
+      "explanation": "Correct: The demographic dividend is economic growth potential from a large working-age population. A is wrong\u2014Ethiopia has a young population. C is wrong\u2014fertility decline is a cause, not the dividend itself. D is wrong\u2014migration is not the dividend.",
+      "difficulty": "hard"
+    }
+  ]
+}

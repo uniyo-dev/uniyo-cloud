@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 4,
+    "title": "Part 3 Practice: Religious/Ethnic Minorities, Human Rights, Inclusiveness & Summary",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Which historical event is mentioned as an example of persecution against religious and ethnic minorities?",
+            "options": [
+                "A) The French Revolution.",
+                "B) The Holocaust (the extermination of 6 million Jewish people in Nazi Germany).",
+                "C) The American Civil War.",
+                "D) The Industrial Revolution."
+            ],
+            "correct_answer": "B) The Holocaust (the extermination of 6 million Jewish people in Nazi Germany).",
+            "explanation": "The module states: 'More than 6 million Jewish people were killed during the period of Adolf Hitler, the leader of the Nazi Party in Germany. This large scale extermination of the Jewish people is called the Holocaust.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Which group is described as 'one of the most ill-treated and persecuted refugee groups in the world'?",
+            "options": [
+                "A) The Jewish people.",
+                "B) The Muslim Rohingyas.",
+                "C) The Tanners in Ethiopia.",
+                "D) The Potters in Ethiopia."
+            ],
+            "correct_answer": "B) The Muslim Rohingyas.",
+            "explanation": "The module states: 'According to Abdu Hasnat Milton et al (2017), the Rohingya are \"one of the most ill-treated and persecuted refugee groups in the world\".'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the human rights approach to people with disabilities?",
+            "options": [
+                "A) They do not have any rights.",
+                "B) They have the right to inclusive services and equal opportunities, and buildings must be accessible to them.",
+                "C) They should be isolated from society.",
+                "D) They are not entitled to education."
+            ],
+            "correct_answer": "B) They have the right to inclusive services and equal opportunities, and buildings must be accessible to them.",
+            "explanation": "The module states: 'People with disabilities have the right to inclusive services and equal opportunities. Hence, buildings and compounds of service giving institutions (e.g., schools and hospitals) must be accessible to people with disabilities.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "According to the module, what is the key limitation of cultural relativism?",
+            "options": [
+                "A) Cultural relativism means we must accept all practices, even harmful ones.",
+                "B) Anthropologists do not support harmful customary practices like FGM/C and child marriage, even in the name of cultural relativism.",
+                "C) Cultural relativism is always wrong.",
+                "D) Cultural relativism has no limitations."
+            ],
+            "correct_answer": "B) Anthropologists do not support harmful customary practices like FGM/C and child marriage, even in the name of cultural relativism.",
+            "explanation": "The module states: 'This does not mean that we need to appreciate every custom and practice. Anthropologists do not support/appreciate customary practices that violate the rights and well-being of individuals and groups.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "Why do anthropologists not support Female Genital Mutilation/Cutting (FGM/C)?",
+            "options": [
+                "A) Because it is a modern practice.",
+                "B) Because it violates the rights of girls to physical integrity and has severe health consequences.",
+                "C) Because it is a Western practice.",
+                "D) Because it is not practiced in Ethiopia."
+            ],
+            "correct_answer": "B) Because it violates the rights of girls to physical integrity and has severe health consequences.",
+            "explanation": "The module states: 'Anthropologists do not support FGM/C for practical reasons: FGM/C violates the rights of girls to physical integrity. Moreover, it has short and long term consequences for the health of girls and women.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Why do anthropologists not support child marriage?",
+            "options": [
+                "A) Because it is illegal only in Ethiopia.",
+                "B) Because it violates the rights of young girls to make decisions about their future, destroys their chance to education, and harms their physical and psychological well-being.",
+                "C) Because it is only practiced in rural areas.",
+                "D) Because it is a modern practice."
+            ],
+            "correct_answer": "B) Because it violates the rights of young girls to make decisions about their future, destroys their chance to education, and harms their physical and psychological well-being.",
+            "explanation": "The module states: 'Anthropologists do not support child marriage for similar reasons: Child marriage violates the rights of young girls to make decision about their future. It destroys their chance to education and professional development. Child marriage negatively affects the physical and psychological wellbeing of young girls.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "What is the conclusion of the unit regarding culture?",
+            "options": [
+                "A) Culture is always harmful.",
+                "B) Culture embraces positive aspects essential for survival, but some cultural values and practices have negative implications for vulnerable groups.",
+                "C) Culture should be completely abandoned.",
+                "D) Culture has no impact on society."
+            ],
+            "correct_answer": "B) Culture embraces positive aspects essential for survival, but some cultural values and practices have negative implications for vulnerable groups.",
+            "explanation": "The module states: 'Culture embraces positive aspects (e.g., values, norms, knowledge, wisdom, and practices) that are essential for the survival of human societies. However, certain cultural values, beliefs, and practices have negative implications for the rights and wellbeing of social groups.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "What is the key solution proposed in the unit to address harmful cultural practices?",
+            "options": [
+                "A) Ignoring the practices.",
+                "B) The human rights approach and inclusive approaches to protect the rights of marginalized and vulnerable groups.",
+                "C) Eliminating all cultural practices.",
+                "D) Forcing everyone to adopt one culture."
+            ],
+            "correct_answer": "B) The human rights approach and inclusive approaches to protect the rights of marginalized and vulnerable groups.",
+            "explanation": "The module states: 'As a remedy of this limitation of culture, we have also dealt with the human rights approach and the importance of inclusive approaches to protect the rights of marginalized, vulnerable, and minority groups.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What rights are mentioned as part of the human rights of women and girls?",
+            "options": [
+                "A) Only the right to work.",
+                "B) The right to be free from harmful practices such as forced marriage, child marriage, and FGM/C.",
+                "C) The right to own property only.",
+                "D) The right to vote only."
+            ],
+            "correct_answer": "B) The right to be free from harmful practices such as forced marriage, child marriage, and FGM/C.",
+            "explanation": "The module states: 'The human rights of women and girls include right to be free from harmful practices such as forced marriage, child marriage, and female genital mutilation/cutting.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "According to the module, how should we view cultural relativism?",
+            "options": [
+                "A) We must accept every cultural practice without question.",
+                "B) We must understand cultures in their own context, but we do not have to appreciate practices that violate human rights and well-being.",
+                "C) Cultural relativism is always wrong.",
+                "D) Cultural relativism only applies to Western cultures."
+            ],
+            "correct_answer": "B) We must understand cultures in their own context, but we do not have to appreciate practices that violate human rights and well-being.",
+            "explanation": "The module states: 'Cultural relativism... is about the importance of understanding the values, norms, customs, and practices of a particular culture in its own context... This does not mean that we need to appreciate every custom and practice. Anthropologists do not support/appreciate customary practices that violate the rights and well-being of individuals and groups.'",
+            "difficulty": "hard"
+        }
+    ]
+}

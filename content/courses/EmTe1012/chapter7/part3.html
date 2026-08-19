@@ -1,0 +1,262 @@
+<div class="lesson-section">
+    <h2>Chapter 7: Other Emerging Technologies</h2>
+    <h3>Part 3: Cloud, Quantum, Autonomic Computing & Computer Vision</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In this part, we explore four powerful computing technologies: <strong>Cloud Computing</strong> (on-demand resources), <strong>Quantum Computing</strong> (using qubits and superposition), <strong>Autonomic Computing</strong> (self-managing systems inspired by the nervous system), and <strong>Computer Vision</strong> (machines that can see and interpret the world).</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Explain cloud computing and its advantages.</li>
+            <li>Understand the concept of quantum computing and qubits.</li>
+            <li>Describe autonomic computing and its 8 self-* characteristics.</li>
+            <li>Explain how computer vision works and its applications.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>7.4. Cloud and quantum computing</h4>
+
+    <h4>7.4.1. Cloud computing</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 7.15 (From Module):</strong>
+        <ul>
+            <li><em>What do you think cloud computing is? Is it related to the term cloud?</em></li>
+        </ul>
+    </div>
+
+    <p><strong>What is Cloud Computing?</strong></p>
+    <p>Cloud computing is a means of <strong>networking remote servers</strong> that are hosted on the Internet. Rather than storing and processing data on a local server, or a PC's hard drive, one of the following three types of cloud infrastructure is used:</p>
+    <ul>
+        <li><strong>Public Cloud:</strong> A third-party provider manages the servers, applications, and storage much like a public utility. Anyone can subscribe to the provider's cloud service, which is usually operated through their own data center.</li>
+        <li><strong>Private Cloud:</strong> A business or organization would typically use a private cloud. This might be hosted on their on-site data center, although some companies host through a third-party provider instead. Either way, the computing infrastructure exists as a <strong>private network accessible over the Internet</strong>.</li>
+        <li><strong>Hybrid Cloud:</strong> Here, private clouds are connected to public clouds, allowing data and applications to be shared between them. Private clouds existing alone can be very limiting, and a hybrid offers a business more flexibility. Often a hybrid cloud includes multiple service providers. Hybrids can offer more computing capacity for a business application when the need for it spikes. This sudden expansion into the public cloud is known as <strong>cloud bursting</strong>. Hybrids also enable applications to keep sensitive client data in a private cloud but connect to end-user software in a public cloud.</li>
+    </ul>
+
+    <p><strong>Service Models (IaaS, PaaS, SaaS):</strong></p>
+    <p>Cloud computing services can focus on infrastructure, web development, or a cloud-based app. These are often regarded as a <strong>stack</strong>; all are on-demand, pay-as-you-go.</p>
+    <ul>
+        <li><strong>Infrastructure as a Service (IaaS):</strong> Gives you management of the whole deal: servers, web development tools, applications.</li>
+        <li><strong>Platform as a Service (PaaS):</strong> Offers a complete web development environment, without the worry of the hardware that runs it.</li>
+        <li><strong>Software as a Service (SaaS):</strong> Allows access to cloud-based apps, usually through a web browser interface. SaaS is the top of the stack.</li>
+    </ul>
+    <p>Cloud computing has been around since <strong>2000</strong>. Yet it's only in the last 10 years that major players like <strong>IBM, Amazon, and Google</strong> have offered commercially viable, high-capacity networks.</p>
+
+    <hr>
+
+    <h4>7.4.2. Advantages of cloud computing</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 7.16 (From Module):</strong>
+        <ul>
+            <li><em>List some applications of cloud computing in business, file storage?</em></li>
+        </ul>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Advantage</th><th>Description</th></tr>
+            <tr>
+                <td><strong>Economy of Scale</strong></td>
+                <td>Much like with any utility, a business benefits from the economy of scale, which means <strong>cheap computing power</strong>. Because a cloud provider's hardware and software are shared, there's no need for the initial costly capital investment.</td>
+            </tr>
+            <tr>
+                <td><strong>Energy Savings</strong></td>
+                <td>Businesses save on the electricity required 24/7 to power and cool that computing infrastructure. In effect, energy costs are shared.</td>
+            </tr>
+            <tr>
+                <td><strong>Vast Resources</strong></td>
+                <td>Cloud providers have vast resources of computing power at their fingertips. They can allocate these whenever required with just a few mouse clicks. Cloud providers source on a <strong>global scale</strong>, so they can deliver the precise bandwidth, storage, and power business needs when it needs it.</td>
+            </tr>
+            <tr>
+                <td><strong>Anywhere Access</strong></td>
+                <td>The cloud allows you and multiple users to access your data from any location. Smartphone, laptop, desktop, wherever you are, you can access the data you need at any time.</td>
+            </tr>
+            <tr>
+                <td><strong>Efficiency & Reliability</strong></td>
+                <td>With cloud computing, a business processes its data more efficiently, increasing productivity. Maintenance is much cheaper, often free, so reliability is rarely a worry. Cloud computing allows CEOs to focus on running their business.</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <h4>7.4.3. Quantum computing</h4>
+
+    <p><strong>What is Quantum Computing?</strong></p>
+    <p>Quantum computers truly do represent the <strong>next generation of computing</strong>. Unlike classic computers, they derive their computing power by harnessing the power of <strong>quantum physics</strong>. Because of the rather nebulous science behind it, a practical, working quantum computer still remains a <strong>flight of fancy</strong>.</p>
+
+    <p>However, give clients access to a quantum computer over the internet, and you have <strong>quantum cloud computing</strong>. Currently, the only organization which provides a quantum computer in the cloud is <strong>IBM</strong>. They allow free access to anyone who wishes to use their <strong>5-qubit machine</strong>. Earlier this year they installed a <strong>17-qubit machine</strong>. So far, over <strong>40,000 users</strong> have taken advantage of their online service to run experiments.</p>
+
+    <p>Not to be outdone, <strong>Google</strong> provided the fastest quantum computer with <strong>53 qubits</strong> and speed of <strong>200 seconds computation</strong> while the supercomputer took <strong>10000 years</strong>.</p>
+
+    <p><strong>What is a Qubit?</strong></p>
+    <p>Qubit is short for a <strong>sequence of quantum bits</strong>. With a classic computer, data is stored in tiny transistors that hold a single bit of information, either the binary value of <strong>1 or 0</strong>. With a quantum computer, the data is stored in <strong>qubits</strong>. Thanks to the mechanics of quantum physics, where subatomic particles obey their own laws, a qubit can exist in <strong>two states at the same time</strong>. This phenomenon is called <strong>superposition</strong>.</p>
+
+    <p>So, a qubit can have a value of <strong>1, 0, or some value between</strong>. Two qubits can hold even more values. Before long, you are building yourself an <strong>exponentially more powerful computer</strong> the more qubits you add.</p>
+
+    <p>Quantum computer theory was first rooted in the <strong>1980s</strong> and only now are the first rudimentary machines being constructed. Quantum computers are <strong>big machines</strong>, reminiscent of the old mainframe computers of the 1960s. One serious logistical problem is the <strong>need for deep-freezing of the superconducting circuits</strong>. Only at <strong>sub-zero temperatures</strong> can the qubits maintain a constant, predictable superposition. Heating up qubits can result in <strong>calculation errors</strong>.</p>
+
+    <hr>
+
+    <h4>7.4.4. Advantages of quantum computing</h4>
+
+    <p>Getting a quantum computer to function usefully is an exciting prospect for scientists. Their <strong>gargantuan computing power</strong> would allow them to crunch very long numbers. They would be able to make <strong>complex calculations that would only overwhelm classic computers</strong>.</p>
+
+    <p>Accessing a cloud-based quantum computer combines the benefits of both technologies exponentially. Quantum computing could help in the <strong>discovery of new drugs</strong>, by unlocking the complex structure of chemical molecules. Other uses include <strong>financial trading, risk management, and supply chain optimization</strong>. With its ability to handle more complex numbers, data could be transferred over the internet with <strong>much safer encryption</strong>.</p>
+
+    <hr>
+
+    <h4>7.5. Autonomic computing (AC)</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 7.17 (From Module):</strong>
+        <ul>
+            <li><em>What is autonomous? What is computing? What do you think about autonomous computing?</em></li>
+        </ul>
+    </div>
+
+    <p><strong>What is Autonomic Computing?</strong></p>
+    <p><strong>Autonomic computing (AC)</strong> is an approach to address the complexity and evolution problems in software systems. It is a <strong>self-managing computing model</strong> named after, and patterned on, the <strong>human body's autonomic nervous system</strong>. An autonomic computing system would control the functioning of computer applications and systems <strong>without input from the user</strong>, in the same way, that the autonomic nervous system regulates body systems without conscious input from the individual.</p>
+
+    <p>The goal of autonomic computing is to create <strong>systems that run themselves</strong>, capable of high-level functioning while keeping the system's <strong>complexity invisible to the user</strong>.</p>
+
+    <p>It refers to the <strong>self-managing characteristics</strong> of distributed resources, adapting to unpredictable changes while hiding intrinsic complexity to operators and users. Initiated by <strong>IBM in 2001</strong>, this initiative ultimately aimed to develop computer systems capable of self-management, to overcome the rapidly growing complexity of computing system management, and to reduce the barrier that complexity poses to further growth.</p>
+
+    <hr>
+
+    <h4>7.5.1. Characteristics of Autonomic Systems</h4>
+
+    <p>Autonomic systems/applications exhibit <strong>eight defining characteristics</strong> (often called the 8 self-* properties):</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Characteristic</th><th>Description</th></tr>
+            <tr>
+                <td><strong>Self-Awareness</strong></td>
+                <td>An autonomic application/system <em>"knows itself"</em> and is aware of its state and its behaviors.</td>
+            </tr>
+            <tr>
+                <td><strong>Self-Configuring</strong></td>
+                <td>An autonomic application/system should be able to configure and reconfigure itself under varying and unpredictable conditions.</td>
+            </tr>
+            <tr>
+                <td><strong>Self-Optimizing</strong></td>
+                <td>An autonomic application/system should be able to detect suboptimal behaviors and optimize itself to improve its execution.</td>
+            </tr>
+            <tr>
+                <td><strong>Self-Healing</strong></td>
+                <td>An autonomic application/system should be able to detect and recover from potential problems and continue to function smoothly.</td>
+            </tr>
+            <tr>
+                <td><strong>Self-Protecting</strong></td>
+                <td>An autonomic application/system should be capable of detecting and protecting its resources from both internal and external attacks and maintaining overall system security and integrity.</td>
+            </tr>
+            <tr>
+                <td><strong>Context-Aware</strong></td>
+                <td>An autonomic application/system should be aware of its execution environment and be able to react to changes in the environment.</td>
+            </tr>
+            <tr>
+                <td><strong>Open</strong></td>
+                <td>An autonomic application/system must function in a heterogeneous world and should be portable across multiple hardware and software architectures. Consequently, it must be built on standard and open protocols and interfaces.</td>
+            </tr>
+            <tr>
+                <td><strong>Anticipatory</strong></td>
+                <td>An autonomic application/system should be able to anticipate to the extent possible, its needs and behaviors and those of its context, and be able to manage itself proactively.</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <h4>7.6. Computer vision</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 7.18 (From Module):</strong>
+        <ul>
+            <li><em>What do you think about computer vision? Does it mean computers can see and interpret as humans do? If your answer is yes, how can computers see?</em></li>
+        </ul>
+    </div>
+
+    <p><strong>What is Computer Vision?</strong></p>
+    <p>It is an <strong>interdisciplinary scientific field</strong> that deals with how computers can be made to gain a <strong>high-level understanding of digital images or videos</strong>. From the perspective of engineering, it seeks to <strong>automate tasks that the human visual system can do</strong>.</p>
+
+    <p>Computer vision tasks include methods for <strong>acquiring, processing, analyzing, and understanding digital images</strong>, and extraction of high-dimensional data from the real world in order to produce numerical or symbolic information, e.g., in the forms of decisions. Understanding in this context means the <strong>transformation of visual images (the input of the retina) into descriptions of the world</strong> that can interface with other thought processes and elicit appropriate action.</p>
+
+    <p>Another way to define computer vision is through its applications. Computer vision is <strong>building algorithms that can understand the content of images</strong> and use it for other applications.</p>
+
+    <hr>
+
+    <h4>7.6.1. History</h4>
+
+    <p>The origins of computer vision go back to an <strong>MIT undergraduate summer project in 1966</strong>. It was believed at the time that computer vision could be <strong>solved in one summer</strong>, but we now have a <strong>50-year-old scientific field that is still far from being solved</strong>.</p>
+
+    <p>Early experiments in computer vision took place in the <strong>1950s</strong>, using some of the first neural networks to detect the edges of an object and to sort simple objects into categories like circles and squares. In the <strong>1970s</strong>, the first commercial use of computer vision interpreted typed or handwritten text using <strong>optical character recognition</strong>. This advancement was used to interpret written text for the blind.</p>
+
+    <p>As the internet matured in the <strong>1990s</strong>, making large sets of images available online for analysis, <strong>facial recognition programs flourished</strong>. These growing data sets helped make it possible for machines to identify specific people in photos and videos.</p>
+
+    <hr>
+
+    <h4>7.6.2. Definition</h4>
+
+    <p>Computer vision is an interdisciplinary scientific field that deals with how computers can be made to gain a high-level understanding of digital images or videos. It seeks to automate tasks that the human visual system can do.</p>
+
+    <hr>
+
+    <h4>7.6.3. How computer vision works</h4>
+
+    <p>Computer vision works in <strong>three main steps</strong>:</p>
+    <ol>
+        <li><strong>Acquiring an image:</strong> Images, even large sets, can be acquired in real-time through video, photos, or 3D technology for analysis.</li>
+        <li><strong>Processing the image:</strong> Deep learning models automate much of this process, but the models are often trained by first being fed <strong>thousands of labeled or pre-identified images</strong>.</li>
+        <li><strong>Understanding the image:</strong> The final step is the interpretative step, where an object is identified or classified.</li>
+    </ol>
+
+    <p><strong>Types of Computer Vision Techniques:</strong></p>
+    <ul>
+        <li><strong>Image segmentation:</strong> Partitions an image into multiple regions or pieces to be examined separately.</li>
+        <li><strong>Object detection:</strong> Identifies a specific object in an image. Advanced object detection recognizes many objects in a single image: a football field, an offensive player, a defensive player, a ball, and so on. These models use an <strong>X, Y coordinate</strong> to create a bounding box and identify everything inside the box.</li>
+        <li><strong>Facial recognition:</strong> An advanced type of object detection that not only recognizes a human face in an image but identifies a specific individual.</li>
+        <li><strong>Edge detection:</strong> A technique used to identify the outside edge of an object or landscape to better identify what is in the image.</li>
+        <li><strong>Pattern detection:</strong> A process of recognizing repeated shapes, colors, and other visual indicators in images.</li>
+        <li><strong>Image classification:</strong> Groups images into different categories.</li>
+        <li><strong>Feature matching:</strong> A type of pattern detection that matches similarities in images to help classify them.</li>
+    </ul>
+
+    <p>Simple applications of computer vision may only use one of these techniques, but more advanced users, like computer vision for <strong>self-driving cars</strong>, rely on multiple techniques to accomplish their goal.</p>
+
+    <hr>
+
+    <h4>7.6.4. Applications of computer vision</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 7.19 (From Module):</strong>
+        <ul>
+            <li><em>Do you think that the way computer vision works is similar to humans' vision?</em></li>
+            <li><em>Write down some specific applications of computer vision.</em></li>
+        </ul>
+    </div>
+
+    <p>Computer vision is being used today in a wide variety of real-world applications, which include:</p>
+    <ul>
+        <li><strong>Optical character recognition (OCR):</strong> Reading handwritten postal codes on letters and automatic number plate recognition (ANPR).</li>
+        <li><strong>Machine inspection:</strong> Rapid parts inspection for quality assurance using stereo vision with specialized illumination to measure tolerances on aircraft wings or auto body parts, or looking for defects in steel castings using X-ray vision.</li>
+        <li><strong>Retail:</strong> Object recognition for automated checkout lanes.</li>
+        <li><strong>Medical imaging:</strong> Registering pre-operative and intra-operative imagery or performing long-term studies of people's brain morphology as they age.</li>
+        <li><strong>Automotive safety:</strong> Detecting unexpected obstacles such as pedestrians on the street, under conditions where active vision techniques such as radar or lidar do not work well.</li>
+        <li><strong>Surveillance:</strong> Monitoring for intruders, analyzing highway traffic, and monitoring pools for drowning victims.</li>
+        <li><strong>Fingerprint recognition and biometrics:</strong> For automatic access authentication as well as forensic applications.</li>
+    </ul>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 3)</h4>
+        <ul>
+            <li><strong>Cloud Computing:</strong> Public, Private, Hybrid clouds. IaaS, PaaS, SaaS models. Advantages: economy of scale, energy savings, anywhere access.</li>
+            <li><strong>Quantum Computing:</strong> Uses qubits (1, 0, or both via superposition). IBM (5-qubit), Google (53-qubit). Requires deep-freezing. Advantages: drug discovery, financial trading, safer encryption.</li>
+            <li><strong>Autonomic Computing:</strong> Inspired by the human nervous system. 8 self-* properties: Self-Awareness, Self-Configuring, Self-Optimizing, Self-Healing, Self-Protecting, Context-Aware, Open, Anticipatory.</li>
+            <li><strong>Computer Vision:</strong> 3 steps: Acquire → Process → Understand. Techniques: Segmentation, Object detection, Facial recognition, Edge detection, Pattern detection, Classification, Feature matching. Applications: OCR, Machine inspection, Retail, Medical imaging, Automotive safety, Surveillance, Biometrics.</li>
+        </ul>
+    </div>
+</div>

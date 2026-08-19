@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 3,
+    "title": "Part 3 Practice: Levels of AI",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the most common use of AI today, according to the module?",
+            "options": [
+                "A) Artificial General Intelligence (AGI).",
+                "B) Rule-Based Systems (used in RPA and domestic appliances).",
+                "C) Reasoning Machines.",
+                "D) Singularity."
+            ],
+            "correct_answer": "B) Rule-Based Systems (used in RPA and domestic appliances).",
+            "explanation": "The module states: 'The most common uses of AI today fit in this bracket, covering everything from business software (Robotic Process Automation) and domestic appliances to aircraft autopilots.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Which level of AI maturity is characterized by the question: 'What's happening now?'",
+            "options": [
+                "A) Notification",
+                "B) Suggestion",
+                "C) Perception",
+                "D) Automation"
+            ],
+            "correct_answer": "C) Perception",
+            "explanation": "The module's Figure 3.4 maps Level 1 to Perception, which asks 'What's happening now?' and perceives the environment through sensors.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "Which stage of AI development involves algorithms that develop information about a specific domain and can be updated as new situations arise?",
+            "options": [
+                "A) Rule-Based Systems",
+                "B) Context Awareness and Retention",
+                "C) Domain-Specific Expertise",
+                "D) Reasoning Machines"
+            ],
+            "correct_answer": "B) Context Awareness and Retention",
+            "explanation": "The module describes Stage 2 as: 'Algorithms that develop information about the specific domain they are being applied in... their knowledge base can be updated as new situations and queries arise.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is a key limitation of Domain-Specific Expertise (Stage 3) AI systems?",
+            "options": [
+                "A) They cannot process any data.",
+                "B) They are limited to one domain only; if you teach them something else, they forget their original domain.",
+                "C) They are too slow to make decisions.",
+                "D) They require too much electricity."
+            ],
+            "correct_answer": "B) They are limited to one domain only; if you teach them something else, they forget their original domain.",
+            "explanation": "The module states: 'Currently, this type is limited to one domain only would forget all it knows about that domain if you started to teach it something else.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the core characteristic of Reasoning Machines (Stage 4)?",
+            "options": [
+                "A) They can only follow pre-programmed rules.",
+                "B) They have some ability to attribute mental states to themselves and others, understanding beliefs and intentions.",
+                "C) They cannot process natural language.",
+                "D) They are only used in video games."
+            ],
+            "correct_answer": "B) They have some ability to attribute mental states to themselves and others, understanding beliefs and intentions.",
+            "explanation": "The module states: 'These algorithms have some ability to attribute mental states to themselves and others – they have a sense of beliefs, intentions, knowledge, and how their own logic works.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the goal of Artificial General Intelligence (AGI) (Stage 5)?",
+            "options": [
+                "A) To beat humans at chess.",
+                "B) To perform any intellectual task with efficiency like a human.",
+                "C) To only automate business processes.",
+                "D) To replace all human emotions."
+            ],
+            "correct_answer": "B) To perform any intellectual task with efficiency like a human.",
+            "explanation": "The module states: 'General AI is a type of intelligence that could perform any intellectual task with efficiency like a human.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What does the term 'Singularity' refer to in the context of AI?",
+            "options": [
+                "A) A single AI processor.",
+                "B) The point where AI surpasses human intelligence and leads to a massive expansion in human capability.",
+                "C) A type of computer language.",
+                "D) A specific AI chip."
+            ],
+            "correct_answer": "B) The point where AI surpasses human intelligence and leads to a massive expansion in human capability.",
+            "explanation": "The module describes Singularity (Stage 7) as: 'development provided by ASI leads to a massive expansion in human capability. Human augmentation could connect our brains to each other and to a future successor of the current internet.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "At which level of AI maturity does the system take proactive measures to prevent negative outcomes?",
+            "options": [
+                "A) Prediction",
+                "B) Prevention",
+                "C) Automation",
+                "D) Situational Awareness"
+            ],
+            "correct_answer": "B) Prevention",
+            "explanation": "The module's maturity model lists Level 6 as Prevention, which asks 'What can I avoid?' and takes proactive measures to prevent negative outcomes.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "Which Google engineer is mentioned in the module as a proponent of Singularity?",
+            "options": [
+                "A) Alan Turing",
+                "B) John McCarthy",
+                "C) Ray Kurzweil",
+                "D) Donald Hebb"
+            ],
+            "correct_answer": "C) Ray Kurzweil",
+            "explanation": "The module states: 'Some proponents of singularity such as Ray Kurzweil, Google's Director of Engineering, suggest we could see it in a range of science and technology disciplines.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is the highest level of AI maturity, where the AI fully understands context, predicts future states, and takes autonomous action in real-time?",
+            "options": [
+                "A) Automation",
+                "B) Prediction",
+                "C) Situational Awareness",
+                "D) Suggestion"
+            ],
+            "correct_answer": "C) Situational Awareness",
+            "explanation": "The module's maturity model lists Level 7 as Situational Awareness, which asks 'What do I need to do right now?' and involves full understanding of context and real-time autonomous action.",
+            "difficulty": "hard"
+        }
+    ]
+}

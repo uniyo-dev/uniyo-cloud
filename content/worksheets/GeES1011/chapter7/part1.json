@@ -1,0 +1,147 @@
+{
+  "course_code": "GeES1011",
+  "chapter": 7,
+  "title": "Part 1 Practice: Population of Ethiopia and The Horn",
+  "questions": [
+    {
+      "id": 1,
+      "text": "What is the study of human populations called?",
+      "diagram": null,
+      "options": [
+        "A) Sociology",
+        "B) Demography",
+        "C) Anthropology",
+        "D) Geography"
+      ],
+      "correct_answer": "B) Demography",
+      "explanation": "Correct: Demography is the scientific study of human populations. A is wrong\u2014sociology studies society. C is wrong\u2014anthropology studies human cultures. D is wrong\u2014geography studies the Earth's surface.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "text": "Ethiopia is the second most populous country in Africa. Which country is the most populous?",
+      "diagram": null,
+      "options": [
+        "A) Egypt",
+        "B) South Africa",
+        "C) Nigeria",
+        "D) Kenya"
+      ],
+      "correct_answer": "C) Nigeria",
+      "explanation": "Correct: Nigeria is the most populous country in Africa. A is wrong\u2014Egypt has fewer people. B is wrong\u2014South Africa has fewer people. D is wrong\u2014Kenya has fewer people.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "text": "Which of the following is a characteristic of a census?",
+      "diagram": null,
+      "options": [
+        "A) Only covers urban areas",
+        "B) Conducted every 20 years",
+        "C) Universality - covers every person",
+        "D) Conducted by private organizations"
+      ],
+      "correct_answer": "C) Universality - covers every person",
+      "explanation": "Correct: Universality means the census covers everyone. A is wrong\u2014census covers all areas. B is wrong\u2014census is typically every 10 years. D is wrong\u2014census is government sponsored.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 4,
+      "text": "The De Jure approach to census counts people based on:",
+      "diagram": null,
+      "options": [
+        "A) Where they are physically present on census night",
+        "B) Their usual place of residence",
+        "C) Their place of birth",
+        "D) Their nationality"
+      ],
+      "correct_answer": "B) Their usual place of residence",
+      "explanation": "Correct: De Jure counts people at their usual residence. A is wrong\u2014that's De Facto. C is wrong\u2014place of birth is different. D is wrong\u2014nationality is not the focus.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 5,
+      "text": "Which source of population data involves complete enumeration of all people in a country?",
+      "diagram": null,
+      "options": [
+        "A) Sample survey",
+        "B) Vital registration",
+        "C) Census",
+        "D) Estimates"
+      ],
+      "correct_answer": "C) Census",
+      "explanation": "Correct: Census is complete enumeration. A is wrong\u2014sample survey covers a sample. B is wrong\u2014vital registration records events. D is wrong\u2014estimates are projections.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 6,
+      "text": "What is Ethiopia's approximate Total Fertility Rate (TFR) in 2023?",
+      "diagram": null,
+      "options": [
+        "A) 7.1 children per woman",
+        "B) 5.5 children per woman",
+        "C) 4.1 children per woman",
+        "D) 2.5 children per woman"
+      ],
+      "correct_answer": "C) 4.1 children per woman",
+      "explanation": "Correct: Ethiopia's TFR is ~4.1. A is wrong\u2014that was the rate in 1990. B is wrong\u2014too high for current rate. D is wrong\u2014too low; that's more like urban rates.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 7,
+      "text": "Which of the following is a push factor for migration from rural to urban areas in Ethiopia?",
+      "diagram": null,
+      "options": [
+        "A) Better education opportunities",
+        "B) Better health services",
+        "C) Poverty and lack of economic opportunities",
+        "D) Higher wages in cities"
+      ],
+      "correct_answer": "C) Poverty and lack of economic opportunities",
+      "explanation": "Correct: Poverty is a push factor (reasons to leave). A is wrong\u2014this is a pull factor. B is wrong\u2014this is a pull factor. D is wrong\u2014this is a pull factor.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "text": "What is Ethiopia's approximate life expectancy in 2023?",
+      "diagram": null,
+      "options": [
+        "A) 45-50 years",
+        "B) 55-60 years",
+        "C) 65-68 years",
+        "D) 75-80 years"
+      ],
+      "correct_answer": "C) 65-68 years",
+      "explanation": "Correct: Life expectancy is ~65-68 years. A is wrong\u2014that was the rate in 1990. B is wrong\u2014too low for current rate. D is wrong\u2014too high for Ethiopia.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 9,
+      "text": "Which Ethiopian institution is responsible for conducting the national census?",
+      "diagram": null,
+      "options": [
+        "A) Ministry of Health",
+        "B) Central Statistical Agency (CSA)",
+        "C) Ministry of Education",
+        "D) Ethiopian Broadcasting Corporation"
+      ],
+      "correct_answer": "B) Central Statistical Agency (CSA)",
+      "explanation": "Correct: CSA conducts the census. A is wrong\u2014Health Ministry deals with health data. C is wrong\u2014Education Ministry deals with education. D is wrong\u2014EBC is a media outlet.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 10,
+      "text": "The demographic dividend refers to:",
+      "diagram": null,
+      "options": [
+        "A) The total population of a country",
+        "B) The potential economic growth from having a large young working-age population",
+        "C) The decline in population growth",
+        "D) The aging of the population"
+      ],
+      "correct_answer": "B) The potential economic growth from having a large young working-age population",
+      "explanation": "Correct: Demographic dividend is economic growth potential from youth bulge. A is wrong\u2014it's not just population size. C is wrong\u2014it's about growth potential. D is wrong\u2014it's about youth, not aging.",
+      "difficulty": "hard"
+    }
+  ]
+}

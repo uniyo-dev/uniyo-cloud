@@ -1,0 +1,159 @@
+<div class="lesson-section">
+    <h2>Chapter 3: Matrices, Determinant and Systems of Linear Equations</h2>
+    <h3>Part 1: Definition of Matrix, Addition, and Scalar Multiplication</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>Matrices, which are also known as rectangular arrays of numbers or functions, are the main tools of linear algebra. Matrices are very important to express large amounts of data in an organized and concise form. Furthermore, since matrices are single objects, we denote them by single letters and calculate with them directly. All these features have made matrices very popular for expressing scientific and mathematical ideas.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Understand the notion of matrices.</li>
+            <li>Define the size and entries of a matrix.</li>
+            <li>Perform matrix addition and scalar multiplication.</li>
+            <li>Apply the laws of matrix addition and scalar multiplication.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>3.1 Definition of Matrix</h4>
+
+    <p>Consider an automobile company that manufactures two types of vehicles, Trucks and Passenger cars, in two different colors, red and blue. The company's sales for the month of January are 15 Trucks and 20 Passenger cars in red color, and 10 Trucks and 16 Passenger cars in blue color. This data is presented in Table 1.</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th></th><th>Trucks</th><th>Passenger Cars</th></tr>
+            <tr><td><strong>Red</strong></td><td>15</td><td>20</td></tr>
+            <tr><td><strong>Blue</strong></td><td>10</td><td>16</td></tr>
+        </table>
+    </div>
+
+    <p>The information in the table can be given in the form of a rectangular array of numbers as:</p>
+    <p>\[
+    \begin{bmatrix} 15 & 20 \\ 10 & 16 \end{bmatrix}
+    \]</p>
+
+    <p>In this arrangement, the horizontal and vertical lines of numbers are called <strong>rows</strong> (\(R_1, R_2\)) and <strong>columns</strong> (\(C_1, C_2\)), respectively. The columns \(C_1\) and \(C_2\) represent the Trucks and Passenger cars, respectively, which are sold in January. And the rows \(R_1\) and \(R_2\) represent the red and blue colored vehicles, respectively. An arrangement of this type is called a <strong>matrix</strong>. Note that the above matrix has two rows and two columns.</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 3.1:</strong>
+        <p>If \(m\) and \(n\) are positive integers, then by a <strong>matrix</strong> of size \(m\) by \(n\), or an \(m \times n\) matrix, we shall mean a rectangular array consisting of \(mn\) numbers, or symbols, or expressions in a boxed display consisting of \(m\) rows and \(n\) columns.</p>
+        <p>\[
+        A = \begin{bmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n} \\
+        a_{21} & a_{22} & \cdots & a_{2n} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        a_{m1} & a_{m2} & \cdots & a_{mn}
+        \end{bmatrix}
+        \]</p>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="200" viewBox="0 0 400 200">
+            <rect width="400" height="200" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Introduction to Matrices</text>
+            
+            <rect x="20" y="60" width="160" height="40" fill="#14b8a6" rx="8"/>
+            <text x="100" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">📊 Automobile Sales Data</text>
+
+            <rect x="220" y="60" width="160" height="40" fill="#f43f5e" rx="8"/>
+            <text x="300" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">📦 Rectangular Array</text>
+
+            <text x="200" y="140" fill="#f8fafc" font-size="10" text-anchor="middle">📖 Matrices organize data in rows and columns.</text>
+        </svg>
+    </div>
+
+    <p><strong>Definition 3.3 (Submatrix):</strong> Let \(A\) be an \(m \times n\) matrix. A submatrix of matrix \(A\) is any matrix of size \(r \times s\) with \(r \leq m\) and \(s \leq n\), which is obtained by deleting any collection of rows and/or columns of matrix \(A\).</p>
+
+    <p><strong>Definition 3.4 (Equality of Matrices):</strong> Two matrices of the same size, \(A = [a_{ij}]_{m \times n}\) and \(B = [b_{ij}]_{m \times n}\), are said to be equal (and we write \(A = B\)) if and only if \(a_{ij} = b_{ij}\), for all \(i, j\).</p>
+
+    <p><strong>Definition 3.5 (Zero Matrix):</strong> An \(m \times n\) matrix \(A = [a_{ij}]\) is said to be the <strong>zero matrix</strong> if \(a_{ij} = 0\) for all \(i, j\).</p>
+
+    <hr>
+
+    <h4>3.2 Matrix Algebra</h4>
+
+    <p>In this section, we discuss addition of matrices, scalar multiplication, and matrix multiplication.</p>
+
+    <h4>3.2.1 Addition and Scalar Multiplication</h4>
+
+    <p>Addition and scalar multiplication are the basic matrix operations. To see the usefulness of these operations, let us observe the following simple application.</p>
+
+    <p>Consider again an automobile company that manufactures two types of vehicles, Trucks and Passenger cars, in two different colors, red and blue. If the sales for the months of January and February, respectively, are given by:</p>
+    <p>\[
+    \text{January} = \begin{bmatrix} 15 & 20 \\ 10 & 16 \end{bmatrix}, \quad \text{February} = \begin{bmatrix} 12 & 28 \\ 20 & 14 \end{bmatrix}
+    \]</p>
+
+    <p>Then the total sales for two months can be given as follows. The total number of red Trucks sold in two months is \(15 + 12 = 27\). Similarly, the total number of blue Trucks, red Passenger cars, and blue Passenger cars sold in the two months are given by \(10 + 20 = 30\), \(20 + 28 = 48\), and \(16 + 14 = 30\), respectively.</p>
+
+    <div class="diagram-container">
+        <svg width="400" height="200" viewBox="0 0 400 200">
+            <rect width="400" height="200" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Matrix Addition &amp; Scalar Multiplication</text>
+            
+            <rect x="20" y="60" width="160" height="40" fill="#14b8a6" rx="8"/>
+            <text x="100" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">➕ \(A + B = [a_{ij} + b_{ij}]\)</text>
+
+            <rect x="220" y="60" width="160" height="40" fill="#f43f5e" rx="8"/>
+            <text x="300" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">✖ \(\alpha A = [\alpha a_{ij}]\)</text>
+
+            <text x="200" y="140" fill="#f8fafc" font-size="10" text-anchor="middle">📖 Matrices must have the same size for addition.</text>
+        </svg>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 3.6:</strong>
+        <p>Let \(A = [a_{ij}]_{m \times n}\) and \(B = [b_{ij}]_{m \times n}\) be two matrices of the same size. Then the <strong>sum</strong> of \(A\) and \(B\), denoted by \(A + B\), is the \(m \times n\) matrix defined by the formula \(A + B = [a_{ij} + b_{ij}]\).</p>
+        <p>The sum of two matrices of different sizes is <strong>undefined</strong>.</p>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 3.7:</strong>
+        <p>Let \(A = [a_{ij}]\) be an \(m \times n\) matrix, and \(\alpha\) a scalar. Then the product of the scalar \(\alpha\) with matrix \(A\), denoted by \(\alpha A\), is defined by \(\alpha A = [\alpha a_{ij}]_{m \times n}\).</p>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Laws of Matrix Addition (Theorem 3.1)</th><th>Laws of Scalar Multiplication (Theorem 3.2)</th></tr>
+            <tr>
+                <td>
+                    <ol>
+                        <li>Closure: \(A + B\) is an \(m \times n\) matrix.</li>
+                        <li>Associative: \((A + B) + C = A + (B + C)\).</li>
+                        <li>Commutative: \(A + B = B + A\).</li>
+                        <li>Identity: \(A + 0 = A\).</li>
+                        <li>Inverse: \(A + (-A) = 0\).</li>
+                    </ol>
+                </td>
+                <td>
+                    <ol>
+                        <li>Closure: \(\alpha A\) is an \(m \times n\) matrix.</li>
+                        <li>Associative: \(\alpha(\beta A) = (\alpha\beta)A\).</li>
+                        <li>Distributive: \(\alpha(A + B) = \alpha A + \alpha B\).</li>
+                        <li>Distributive: \((\alpha + \beta)A = \alpha A + \beta A\).</li>
+                        <li>Monoidal: \(1A = A\).</li>
+                    </ol>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p><strong>Example 3.9:</strong> Solve for \(X\) in the matrix equation \(2X + A = B\), where \(A = \begin{bmatrix} 4 & 0 \\ -2 & 2 \end{bmatrix}\) and \(B = \begin{bmatrix} 6 & -4 \\ 8 & 0 \end{bmatrix}\).</p>
+
+    <p><strong>Solution:</strong> We begin by solving the equation for \(X\) to obtain \(2X = B - A\), which implies \(X = \frac{1}{2}(B - A)\). Thus, we have the solution:</p>
+    <p>\[
+    X = \frac{1}{2}\left( \begin{bmatrix} 6 & -4 \\ 8 & 0 \end{bmatrix} - \begin{bmatrix} 4 & 0 \\ -2 & 2 \end{bmatrix} \right) = \frac{1}{2}\begin{bmatrix} 2 & -4 \\ 10 & -2 \end{bmatrix} = \begin{bmatrix} 1 & -2 \\ 5 & -1 \end{bmatrix}.
+    \]</p>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 1)</h4>
+        <ul>
+            <li><strong>Matrix:</strong> A rectangular array of numbers or symbols with \(m\) rows and \(n\) columns.</li>
+            <li><strong>Size:</strong> \(m \times n\) (rows \(\times\) columns).</li>
+            <li><strong>Equality:</strong> Same size and equal corresponding entries.</li>
+            <li><strong>Matrix Addition:</strong> Add corresponding entries. Only for matrices of the same size.</li>
+            <li><strong>Scalar Multiplication:</strong> Multiply every entry by the scalar.</li>
+            <li><strong>Laws:</strong> Addition is commutative and associative. Scalar multiplication is distributive over addition.</li>
+        </ul>
+    </div>
+</div>

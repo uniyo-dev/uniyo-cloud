@@ -1,0 +1,192 @@
+<div class="lesson-section">
+    <h2>Chapter 2: Functions</h2>
+    <h3>Part 2: Linear and Quadratic Equations & Inequalities</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>An equation is a symbolic statement of equality. In this part, we learn to solve <strong>Linear</strong> and <strong>Quadratic</strong> equations and inequalities—the foundational tools for analyzing relationships between variables. Mastering these techniques is essential for solving real-world problems in business, economics, and the sciences.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Solve linear equations and inequalities using addition and multiplication properties.</li>
+            <li>Identify special cases (identity vs. contradiction) in linear equations.</li>
+            <li>Solve quadratic equations using factoring, the square root theorem, completing the square, and the quadratic formula.</li>
+            <li>Solve quadratic inequalities using algebraic sign analysis.</li>
+            <li>Translate real-world word problems into mathematical models and solve them.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>2.2 Equations and Inequalities: Linear and Quadratic</h4>
+
+    <p>An <strong>equation</strong> is a symbolic statement of equality. For example, rather than writing <em>"twice a number is four less than the number,"</em> we write \(2x = x - 4\). Our goal is to find the <strong>solution</strong> to a given equation—the value or values of the variable that make the algebraic statement true.</p>
+
+    <hr>
+
+    <h4>Linear Equations</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 2.1:</strong>
+        <p>A <strong>linear equation</strong> in one variable is an equation that can be put in the form \(ax + b = 0\), where \(a\) and \(b\) are constants, and \(a \neq 0\).</p>
+    </div>
+
+    <p><strong>Equivalent Equations:</strong> Equations that have the same solutions are called <strong>equivalent equations</strong>. For example, \(3x - 1 = 5\) and \(3x = 6\) are equivalent because the solution set of both is \(\{2\}\).</p>
+
+    <p><strong>Properties for Solving Equations:</strong></p>
+    <ul>
+        <li><strong>Addition Property:</strong> If \(a = b\), then \(a + c = b + c\).</li>
+        <li><strong>Multiplication Property:</strong> If \(a = b\), then \(ac = bc\) (for \(c \neq 0\)).</li>
+    </ul>
+
+    <div class="example-box">
+        <h4>📐 Worked Example 2.2:</h4>
+        <p><strong>Solve for \(x\):</strong> \(820x = 10x + 30(50 - x)\)</p>
+        <p><strong>Step 1:</strong> Simplify the right-hand side by distributing and combining like terms.</p>
+        <p>\[820x = 10x + 1500 - 30x\]</p>
+        <p>\[820x = 1500 - 20x\]</p>
+        <p><strong>Step 2:</strong> Apply the addition property. Add \(20x\) to both sides to gather variable terms.</p>
+        <p>\[840x = 1500\]</p>
+        <p><strong>Step 3:</strong> Apply the multiplication property. Divide both sides by 840.</p>
+        <p>\[x = \frac{1500}{840} = \frac{25}{14}\]</p>
+        <p><strong>Step 4:</strong> Always check your work by substituting \(x = \frac{25}{14}\) back into the original equation.</p>
+    </div>
+
+    <div class="example-box">
+        <h4>💼 Real-World Example 2.5 (Ethiopian Business Context):</h4>
+        <p><strong>Problem:</strong> A man has a daughter and a son. The man is five times older than his daughter. Moreover, his age is twice the sum of the ages of his daughter and son. His daughter is 3 years younger than his son. How old is the man and his children?</p>
+        <p><strong>Step 1: Define variables.</strong></p>
+        <ul>
+            <li>Let \(m\) = age of the man.</li>
+            <li>Let \(d\) = age of the daughter.</li>
+            <li>Let \(s\) = age of the son.</li>
+        </ul>
+        <p><strong>Step 2: Translate the word problem into equations.</strong></p>
+        <ul>
+            <li>"The man is five times older than his daughter" \(\rightarrow m = 5d\)</li>
+            <li>"His age is twice the sum of the ages of his daughter and son" \(\rightarrow m = 2(d + s)\)</li>
+            <li>"His daughter is 3 years younger than his son" \(\rightarrow d = s - 3 \implies s = d + 3\)</li>
+        </ul>
+        <p><strong>Step 3: Solve the system.</strong></p>
+        <p>Substitute \(s = d + 3\) into the second equation: \(m = 2(d + d + 3) \implies m = 4d + 6\).</p>
+        <p>Equate the two expressions for \(m\): \(5d = 4d + 6 \implies d = 6\).</p>
+        <p>Then \(s = d + 3 = 9\), and \(m = 5d = 30\).</p>
+        <p><strong>Answer:</strong> The man is 30, his daughter is 6, and his son is 9.</p>
+    </div>
+
+    <hr>
+
+    <h4>Special Cases: Identities and Contradictions</h4>
+    <ul>
+        <li><strong>Identity:</strong> An equation that is true for <em>all</em> real numbers. Example: \(5x - 2(x - 1) + 4 = 3(x + 2)\). Simplifying gives \(6 = 6\), so the solution set is \(\mathbb{R}\) (all real numbers).</li>
+        <li><strong>Contradiction:</strong> An equation that is true for <em>no</em> real numbers. Example: \(x + 10 = x\). Simplifying gives \(10 = 0\), which is false. The solution set is \(\emptyset\) (the empty set).</li>
+    </ul>
+
+    <hr>
+
+    <h4>Linear Inequalities</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 2.2:</strong>
+        <p>A <strong>linear inequality</strong> is an inequality that can be put in the form \(ax + b < 0\), where \(a\) and \(b\) are constants with \(a \neq 0\). (The \(<\) symbol can be replaced with \(>\), \(\leq\), or \(\geq\).)</p>
+    </div>
+
+    <p><strong>Properties for Solving Inequalities:</strong></p>
+    <ul>
+        <li>\(a < b \implies a + c < b + c\)</li>
+        <li>If \(c > 0\), \(a < b \implies ac < bc\)</li>
+        <li><strong>🔴 CRITICAL RULE:</strong> If \(c < 0\), \(a < b \implies ac > bc\) (reverse the inequality symbol!)</li>
+    </ul>
+
+    <div class="example-box">
+        <h4>📐 Worked Example 2.6:</h4>
+        <p><strong>Solve:</strong> \(5x + 8(20 - x) \geq 2(x - 5)\).</p>
+        <p>\(5x + 160 - 8x \geq 2x - 10\)</p>
+        <p>\(160 - 3x \geq 2x - 10\)</p>
+        <p>\(-5x \geq -170\)</p>
+        <p><strong>Divide by \(-5\) (REVERSE THE INEQUALITY):</strong></p>
+        <p>\(x \leq 34\).</p>
+        <p><strong>Solution Set:</strong> \(\{x \in \mathbb{R} \mid x \leq 34\} = (-\infty, 34]\).</p>
+    </div>
+
+    <p><strong>Domain Restrictions:</strong> Sometimes a solution must belong to a specified domain. For example, solving \(x - 4(x + 1) \geq -13 - (x - 2)\) in the set of natural numbers (\(\mathbb{N}\)) gives \(x \leq 3.5\), so the solution set in \(\mathbb{N}\) is \(\{1, 2, 3\}\). If no solution exists in the specified domain, the solution set is \(\emptyset\).</p>
+
+    <hr>
+
+    <h4>Quadratic Equations</h4>
+
+    <p>A <strong>quadratic equation</strong> is a polynomial equation in which the highest degree of the variable is 2. The <strong>standard form</strong> is \(Ax^2 + Bx + C = 0\), where \(A \neq 0\). The solutions are also called the <strong>roots</strong> of the equation.</p>
+
+    <p><strong>Methods for Solving Quadratic Equations:</strong></p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Method</th><th>When to Use</th><th>Example</th></tr>
+            <tr>
+                <td><strong>Factoring</strong></td>
+                <td>When the polynomial is easily factorable.</td>
+                <td>\(x^2 + x - 6 = 0 \implies (x-2)(x+3)=0 \implies x=2, -3\)</td>
+            </tr>
+            <tr>
+                <td><strong>Square Root Theorem</strong></td>
+                <td>When the equation is in the form \(x^2 = d\).</td>
+                <td>\(5x^2 = 14 \implies x = \pm\sqrt{\frac{14}{5}}\)</td>
+            </tr>
+            <tr>
+                <td><strong>Completing the Square</strong></td>
+                <td>Always works, but is algebraically intensive. Best for deriving the quadratic formula.</td>
+                <td>\(x^2 - 4x = 1 \implies (x-2)^2 = 5 \implies x = 2 \pm \sqrt{5}\)</td>
+            </tr>
+            <tr>
+                <td><strong>Quadratic Formula</strong></td>
+                <td><strong>ALWAYS works.</strong> The universal method.</td>
+                <td>\(x = \frac{-B \pm \sqrt{B^2 - 4AC}}{2A}\)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="example-box">
+        <h4>📐 Quadratic Formula Worked Example:</h4>
+        <p><strong>Solve:</strong> \(x^2 - 8 = -6x\).</p>
+        <p><strong>Step 1:</strong> Rewrite in standard form: \(x^2 + 6x - 8 = 0\).</p>
+        <p><strong>Step 2:</strong> Identify \(A=1, B=6, C=-8\).</p>
+        <p><strong>Step 3:</strong> Apply the Quadratic Formula.</p>
+        <p>\[x = \frac{-6 \pm \sqrt{6^2 - 4(1)(-8)}}{2(1)} = \frac{-6 \pm \sqrt{68}}{2} = -3 \pm \sqrt{17}\]</p>
+        <p><strong>Solution Set:</strong> \(\left\{-3 - \sqrt{17}, -3 + \sqrt{17}\right\}\).</p>
+    </div>
+
+    <hr>
+
+    <h4>Quadratic Inequalities</h4>
+
+    <p>A <strong>quadratic inequality</strong> is in standard form if it is written as \(Ax^2 + Bx + C < 0\) (replace \(<\) with \(>\), \(\leq\), or \(\geq\)).</p>
+
+    <p><strong>The Sign Analysis Method:</strong></p>
+    <ol>
+        <li>Write the inequality in standard form.</li>
+        <li>Find the <strong>cut points</strong> (the roots of the corresponding quadratic equation). These split the number line into intervals.</li>
+        <li>Test the sign of the expression in each interval.</li>
+        <li>Determine the solution set based on where the sign satisfies the inequality.</li>
+    </ol>
+
+    <div class="example-box">
+        <h4>📐 Worked Example 2.14 (Sign Analysis):</h4>
+        <p><strong>Solve:</strong> \(x^2 - 2x - 2 < 0\).</p>
+        <p><strong>Step 1:</strong> Find the cut points using the Quadratic Formula.</p>
+        <p>\[x = \frac{2 \pm \sqrt{4 - 4(1)(-2)}}{2} = \frac{2 \pm \sqrt{12}}{2} = 1 \pm \sqrt{3}.\]</p>
+        <p>The cut points are \(1 - \sqrt{3} \approx -0.7\) and \(1 + \sqrt{3} \approx 2.7\).</p>
+        <p><strong>Step 2:</strong> Test points in the intervals \((-\infty, 1-\sqrt{3})\), \((1-\sqrt{3}, 1+\sqrt{3})\), and \((1+\sqrt{3}, \infty)\).</p>
+        <p><strong>Step 3:</strong> The expression is negative only in the middle interval.</p>
+        <p><strong>Solution Set:</strong> \((1 - \sqrt{3}, 1 + \sqrt{3})\).</p>
+    </div>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember</h4>
+        <ul>
+            <li><strong>Linear Equations:</strong> Isolate the variable using addition/multiplication properties.</li>
+            <li><strong>Linear Inequalities:</strong> Reverse the inequality symbol when multiplying or dividing by a <em>negative</em> number.</li>
+            <li><strong>Quadratic Formula:</strong> \(x = \frac{-B \pm \sqrt{B^2 - 4AC}}{2A}\). Memorize it. It <em>always</em> works.</li>
+            <li><strong>Cut Points:</strong> The roots of the quadratic equation. They split the number line for sign analysis.</li>
+            <li><strong>Domain Restrictions:</strong> Always check if the solution belongs to the specified domain (e.g., \(\mathbb{N}\), \(\mathbb{W}\), \(\mathbb{Q}\)). If not, the solution set is \(\emptyset\).</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,147 @@
+{
+    "course_code": "Econ1011",
+    "chapter": 2,
+    "title": "Part 3 Practice: Market Equilibrium",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Market equilibrium occurs when:",
+            "diagram": null,
+            "options": [
+                "A) Price is at its highest level",
+                "B) Quantity demanded equals quantity supplied",
+                "C) Government sets the price",
+                "D) Supply exceeds demand"
+            ],
+            "correct_answer": "B) Quantity demanded equals quantity supplied",
+            "explanation": "Market equilibrium is the point where Qd = Qs. At this price, there is no shortage and no surplus.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Given Qd = 100 − 2P and Qs = 20 + 2P, what is the equilibrium price?",
+            "diagram": null,
+            "options": [
+                "A) 10 Birr",
+                "B) 20 Birr",
+                "C) 30 Birr",
+                "D) 40 Birr"
+            ],
+            "correct_answer": "B) 20 Birr",
+            "explanation": "At equilibrium: 100 − 2P = 20 + 2P → 80 = 4P → P* = 20",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "Using the same equations, what is the equilibrium quantity?",
+            "diagram": null,
+            "options": [
+                "A) 40 units",
+                "B) 50 units",
+                "C) 60 units",
+                "D) 80 units"
+            ],
+            "correct_answer": "C) 60 units",
+            "explanation": "Q* = 100 − 2(20) = 60 units. Both equations give the same answer.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "If price is ABOVE equilibrium, the result is:",
+            "diagram": null,
+            "options": [
+                "A) Shortage (excess demand)",
+                "B) Surplus (excess supply)",
+                "C) Perfect balance",
+                "D) Market failure"
+            ],
+            "correct_answer": "B) Surplus (excess supply)",
+            "explanation": "Above equilibrium: Qs > Qd → Surplus. Producers reduce prices to clear surplus.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "If price is BELOW equilibrium, the result is:",
+            "diagram": null,
+            "options": [
+                "A) Shortage (excess demand)",
+                "B) Surplus (excess supply)",
+                "C) Perfect balance",
+                "D) Market failure"
+            ],
+            "correct_answer": "A) Shortage (excess demand)",
+            "explanation": "Below equilibrium: Qd > Qs → Shortage. Consumers bid prices up.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "If DEMAND increases while supply stays the same, equilibrium price will:",
+            "diagram": null,
+            "options": [
+                "A) Increase",
+                "B) Decrease",
+                "C) Stay the same",
+                "D) Become zero"
+            ],
+            "correct_answer": "A) Increase",
+            "explanation": "Demand shifts right → consumers want more at every price → prices bid up → equilibrium price increases.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "If SUPPLY increases while demand stays the same, equilibrium price will:",
+            "diagram": null,
+            "options": [
+                "A) Increase",
+                "B) Decrease",
+                "C) Stay the same",
+                "D) Become infinite"
+            ],
+            "correct_answer": "B) Decrease",
+            "explanation": "Supply shifts right → more goods available → prices fall → equilibrium price decreases.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "A price ceiling set BELOW equilibrium will cause:",
+            "diagram": null,
+            "options": [
+                "A) Surplus",
+                "B) Shortage",
+                "C) Equilibrium",
+                "D) No effect"
+            ],
+            "correct_answer": "B) Shortage",
+            "explanation": "Price ceiling below equilibrium → Qd > Qs → shortage, long queues, black markets.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "The 'invisible hand' that restores equilibrium refers to:",
+            "diagram": null,
+            "options": [
+                "A) Government intervention",
+                "B) Automatic price adjustments",
+                "C) Central planning",
+                "D) International trade"
+            ],
+            "correct_answer": "B) Automatic price adjustments",
+            "explanation": "Adam Smith's 'invisible hand' = market self-corrects through price changes without government.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 10,
+            "text": "If BOTH demand and supply increase, the definite effect is:",
+            "diagram": null,
+            "options": [
+                "A) Price increases",
+                "B) Quantity increases",
+                "C) Price decreases",
+                "D) Quantity decreases"
+            ],
+            "correct_answer": "B) Quantity increases",
+            "explanation": "Both shift right → quantity definitely increases. Price effect is indeterminate.",
+            "difficulty": "hard"
+        }
+    ]
+}

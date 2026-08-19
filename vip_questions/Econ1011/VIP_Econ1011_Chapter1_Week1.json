@@ -1,0 +1,287 @@
+{
+    "course_code": "Econ1011",
+    "week_number": 1,
+    "title": "VIP Week 1: Basics of Economics",
+    "questions": [
+        {
+            "id": 1,
+            "text": "If the opportunity cost of producing 1 unit of Good X is 3 units of Good Y, what is the opportunity cost of producing 1 unit of Good Y?",
+            "diagram": null,
+            "options": [
+                "A) 3 units of Good X",
+                "B) 1/3 units of Good X",
+                "C) 1 unit of Good X",
+                "D) Cannot be determined"
+            ],
+            "correct_answer": "B) 1/3 units of Good X",
+            "explanation": "Opportunity cost is RECIPROCAL. If 1 X = 3 Y, then 1 Y = 1/3 X. This is because the trade-off is symmetric: producing more of one good requires giving up the other. Always calculate: Opportunity cost of Good A = (Units of Good B given up) / (Units of Good A produced).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "A PPF shifts outward UNEQUALLY — more toward Good X than Good Y. This indicates:",
+            "diagram": null,
+            "options": [
+                "A) Technological advancement in Good X production only",
+                "B) General economic growth in both sectors",
+                "C) Decrease in Good Y production capacity",
+                "D) Inefficient resource allocation"
+            ],
+            "correct_answer": "A) Technological advancement in Good X production only",
+            "explanation": "When the PPF shifts UNEQUALLY (more toward one good), it means there was a technological improvement or resource increase SPECIFIC to that good's production. If both goods improved equally, the PPF would shift OUTWARD PARALLEL. Unequal shift = specialized improvement.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "A country can produce either 200 tons of coffee OR 100 tons of tea. What is the opportunity cost of producing 1 ton of coffee?",
+            "diagram": null,
+            "options": [
+                "A) 2 tons of tea",
+                "B) 0.5 tons of tea",
+                "C) 1 ton of tea",
+                "D) 100 tons of tea"
+            ],
+            "correct_answer": "B) 0.5 tons of tea",
+            "explanation": "Opportunity cost of 1 coffee = 100 tea / 200 coffee = 0.5 tea. For every 1 ton of coffee, the country gives up 0.5 tons of tea. This is the trade-off ratio. The country has COMPARATIVE ADVANTAGE in coffee if its opportunity cost is lower than other countries.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "Which statement BEST describes the relationship between scarcity and choice?",
+            "diagram": null,
+            "options": [
+                "A) Scarcity eliminates the need for choice",
+                "B) Scarcity FORCES choice because not all wants can be satisfied",
+                "C) Choice creates scarcity",
+                "D) They are unrelated"
+            ],
+            "correct_answer": "B) Scarcity FORCES choice because not all wants can be satisfied",
+            "explanation": "Scarcity means resources are limited. Because not ALL wants can be satisfied, individuals and societies MUST choose which wants to satisfy. Choice is the RESULT of scarcity. If resources were unlimited (no scarcity), there would be no need for choice — everyone could have everything.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "If a point is ON the PPF curve, what can we say about the economy?",
+            "diagram": null,
+            "options": [
+                "A) There is unemployment",
+                "B) Production is impossible",
+                "C) Resources are fully and efficiently employed",
+                "D) Economic growth is occurring"
+            ],
+            "correct_answer": "C) Resources are fully and efficiently employed",
+            "explanation": "A point ON the PPF means the economy is operating at MAXIMUM capacity — all resources (labor, capital, land) are fully employed and used efficiently. There is NO unemployment or idle capacity. The economy cannot produce more of one good without giving up some of the other.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "In a mixed economy, the government typically provides which of the following?",
+            "diagram": null,
+            "options": [
+                "A) All consumer goods",
+                "B) Public goods and services (defense, roads, education)",
+                "C) Only luxury goods",
+                "D) Nothing at all"
+            ],
+            "correct_answer": "B) Public goods and services (defense, roads, education)",
+            "explanation": "In a MIXED economy, the government provides PUBLIC GOODS and services that the market might underprovide: national defense, roads, public education, healthcare, and infrastructure. The private sector handles most consumer goods. This is why mixed economies combine market efficiency with government provision of essential services.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "The concept of 'ceteris paribus' is used in economics to:",
+            "diagram": null,
+            "options": [
+                "A) Make unrealistic assumptions",
+                "B) Isolate the effect of one variable while holding others constant",
+                "C) Complicate economic analysis",
+                "D) Eliminate the need for mathematics"
+            ],
+            "correct_answer": "B) Isolate the effect of one variable while holding others constant",
+            "explanation": "'Ceteris paribus' (all else equal) allows economists to study cause-and-effect relationships by holding other variables constant. Example: To study how price affects demand, we assume income, tastes, and prices of substitutes DON'T change. This simplifies analysis and reveals the true relationship between variables.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Which of the following represents a LEAKAGE from the circular flow of income?",
+            "diagram": null,
+            "options": [
+                "A) Government spending",
+                "B) Investment by firms",
+                "C) Savings by households",
+                "D) Exports"
+            ],
+            "correct_answer": "C) Savings by households",
+            "explanation": "LEAKAGES are withdrawals of money from the circular flow: SAVINGS (households save instead of spend), TAXES (government takes money), and IMPORTS (money goes abroad). INJECTIONS add money back: INVESTMENT, GOVERNMENT SPENDING, and EXPORTS. Economic equilibrium requires Leakages = Injections.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "If the circular flow model is in equilibrium, what must be true?",
+            "diagram": null,
+            "options": [
+                "A) Savings + Taxes + Imports = Investment + Government Spending + Exports",
+                "B) Household spending equals firm profits only",
+                "C) Government has no role",
+                "D) Imports always exceed exports"
+            ],
+            "correct_answer": "A) Savings + Taxes + Imports = Investment + Government Spending + Exports",
+            "explanation": "In a circular flow equilibrium, LEAKAGES must equal INJECTIONS: (Savings + Taxes + Imports) = (Investment + Government Spending + Exports). If leakages exceed injections, the economy contracts. If injections exceed leakages, the economy expands. This is the macroeconomic equilibrium condition.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "A country's PPF shows it can produce 100 food or 80 clothing. What is the opportunity cost of increasing clothing production from 40 to 50 units?",
+            "diagram": null,
+            "options": [
+                "A) 10 units of food",
+                "B) 12.5 units of food",
+                "C) 20 units of food",
+                "D) Cannot be calculated"
+            ],
+            "correct_answer": "B) 12.5 units of food",
+            "explanation": "The trade-off ratio is 100 food : 80 clothing = 1.25 food per 1 clothing. Increasing clothing by 10 units (from 40 to 50) requires giving up 10 × 1.25 = 12.5 units of food. Due to INCREASING opportunity costs (bowed-out PPF), the actual sacrifice may be more than this simple calculation suggests.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "Adam Smith's 'invisible hand' suggests that:",
+            "diagram": null,
+            "options": [
+                "A) Government intervention is always necessary",
+                "B) Individual self-interest in free markets leads to social benefit",
+                "C) Only visible trade is important",
+                "D) Markets always fail without regulation"
+            ],
+            "correct_answer": "B) Individual self-interest in free markets leads to social benefit",
+            "explanation": "Adam Smith argued that when individuals pursue their OWN self-interest (profit, better jobs), they unintentionally benefit society. A baker makes bread for profit, but society benefits from having bread available. The 'invisible hand' of the market coordinates millions of individual decisions without central planning.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "Which economic system would have the SHORTEST response time to a sudden food shortage?",
+            "diagram": null,
+            "options": [
+                "A) Command economy (government can quickly redirect resources)",
+                "B) Market economy (slow price adjustments)",
+                "C) Traditional economy (slow to change)",
+                "D) All systems respond at the same speed"
+            ],
+            "correct_answer": "A) Command economy (government can quickly redirect resources)",
+            "explanation": "A COMMAND economy can respond QUICKLY to emergencies because the government can ORDER resources to be redirected immediately. In a MARKET economy, response depends on price signals which take time. However, command economies may misallocate resources due to lack of local knowledge.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "The term 'laissez-faire' means:",
+            "diagram": null,
+            "options": [
+                "A) Government should control everything",
+                "B) Government should NOT interfere in the economy",
+                "C) Government should own all businesses",
+                "D) International trade should be restricted"
+            ],
+            "correct_answer": "B) Government should NOT interfere in the economy",
+            "explanation": "'Laissez-faire' is French for 'let do' or 'leave alone.' It means the government should MINIMIZE intervention in the economy — no price controls, minimal taxes, minimal regulation. Adam Smith advocated this approach, believing free markets self-regulate through supply and demand.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "If a household provides entrepreneurship to a firm, what payment does it receive?",
+            "diagram": null,
+            "options": [
+                "A) Wages",
+                "B) Rent",
+                "C) Interest",
+                "D) Profit"
+            ],
+            "correct_answer": "D) Profit",
+            "explanation": "The FOUR factors of production and their payments: LABOR → WAGES, LAND → RENT, CAPITAL → INTEREST, ENTREPRENEURSHIP → PROFIT. Entrepreneurs take risks (starting businesses, innovating) and are rewarded with PROFIT if successful — or losses if not.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "Positive economics is 'positive' because it:",
+            "diagram": null,
+            "options": [
+                "A) Always gives good news",
+                "B) Deals with facts that can be tested",
+                "C) Only describes what should happen",
+                "D) Ignores real-world data"
+            ],
+            "correct_answer": "B) Deals with facts that can be tested",
+            "explanation": "POSITIVE economics deals with OBJECTIVE, TESTABLE statements about what IS. 'The unemployment rate is 8%' can be verified with data. It's called 'positive' not because it's good news, but because it describes what POSITIVELY (actually) exists. NORMATIVE economics deals with what SHOULD be.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 16,
+            "text": "If a country's PPF is a straight line (not bowed), what does this indicate?",
+            "diagram": null,
+            "options": [
+                "A) Increasing opportunity costs",
+                "B) Constant opportunity costs (resources equally suited to all uses)",
+                "C) Decreasing opportunity costs",
+                "D) The economy is inefficient"
+            ],
+            "correct_answer": "B) Constant opportunity costs (resources equally suited to all uses)",
+            "explanation": "A STRAIGHT-LINE PPF indicates CONSTANT opportunity costs — resources are EQUALLY suited to producing both goods. Each additional unit of Good X costs the SAME amount of Good Y. This is rare in reality. A BOWED-OUT PPF indicates increasing opportunity costs because resources are specialized.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "In the circular flow, which of the following is an INJECTION?",
+            "diagram": null,
+            "options": [
+                "A) Savings",
+                "B) Taxes",
+                "C) Government spending",
+                "D) Imports"
+            ],
+            "correct_answer": "C) Government spending",
+            "explanation": "INJECTIONS add money INTO the circular flow: GOVERNMENT SPENDING (building roads, paying salaries), INVESTMENT (firms buying equipment), and EXPORTS (foreigners buying our goods). LEAKAGES remove money: SAVINGS, TAXES, and IMPORTS. Economic growth requires injections > leakages.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "The basic economic problem exists because:",
+            "diagram": null,
+            "options": [
+                "A) Governments make bad decisions",
+                "B) Human wants are unlimited but resources are limited",
+                "C) Technology is underdeveloped",
+                "D) There is too much money in circulation"
+            ],
+            "correct_answer": "B) Human wants are unlimited but resources are limited",
+            "explanation": "The FUNDAMENTAL economic problem is SCARCITY: human wants are INFINITE (we always want more/better) but resources (land, labor, capital, time) are FINITE. This gap forces all societies to make choices. Even with perfect technology, scarcity would exist because time itself is limited.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "A household decides to save 20% of its income instead of spending it. In the circular flow, this saving is:",
+            "diagram": null,
+            "options": [
+                "A) An injection",
+                "B) A leakage",
+                "C) Both an injection and leakage",
+                "D) Neither"
+            ],
+            "correct_answer": "B) A leakage",
+            "explanation": "SAVING is a LEAKAGE because money is WITHDRAWN from the circular flow. When households save, they don't spend, so firms receive less revenue. However, if banks lend these savings to firms for INVESTMENT, the money re-enters the flow as an injection. This is why financial institutions are crucial.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "Which of the following correctly describes the relationship between real flow and money flow?",
+            "diagram": null,
+            "options": [
+                "A) They move in the SAME direction",
+                "B) They move in OPPOSITE directions",
+                "C) They are unrelated",
+                "D) Only money flow exists"
+            ],
+            "correct_answer": "B) They move in OPPOSITE directions",
+            "explanation": "REAL flow (physical goods, services, resources) and MONEY flow (payments) move in OPPOSITE directions simultaneously. When households provide LABOR (real flow) to firms, firms pay WAGES (money flow) back. When firms provide GOODS (real flow) to households, households PAY (money flow) firms. They are two sides of every transaction.",
+            "difficulty": "hard"
+        }
+    ]
+}

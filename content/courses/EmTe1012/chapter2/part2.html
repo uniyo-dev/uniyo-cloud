@@ -1,0 +1,185 @@
+<div class="lesson-section">
+    <h2>Chapter 2: Data Science</h2>
+    <h3>Part 2: Data Types and their Representation</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In this part, we explore the fundamental building blocks of data: <strong>Data Types</strong>. Data can be described from diverse perspectives. In computer science and computer programming, a data type is simply an attribute of data that tells the compiler or interpreter how the programmer intends to use the data. From a data analytics perspective, understanding data types is crucial for choosing the right tools and methods for analysis.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Identify common data types from a computer programming perspective (Int, Bool, Char, Float, String).</li>
+            <li>Identify common data types from a data analytics perspective (Structured, Semi-structured, Unstructured).</li>
+            <li>Understand what Metadata is and why it is important for Big Data.</li>
+            <li>Compare and contrast structured, unstructured, and semi-structured data with real-world examples.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>2.3 Data types and their representation</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 2.3 (From Module):</strong>
+        <ul>
+            <li><em>Discuss the main differences between data and information with examples.</em></li>
+            <li><em>Can we process data manually using a pencil and paper? Discuss the differences with data processing using the computer.</em></li>
+        </ul>
+    </div>
+
+    <p><strong>Why Data Types Matter:</strong></p>
+    <p>Data types can be described from diverse perspectives. In <strong>computer science and computer programming</strong>, for instance, a data type is simply an <strong>attribute of data</strong> that tells the compiler or interpreter how the programmer intends to use the data. This defines what operations can be performed on the data, the meaning of the data, and the way values of that type can be stored.</p>
+
+    <hr>
+
+    <h4>2.3.1. Data types from Computer programming perspective</h4>
+    
+    <p>Almost all programming languages explicitly include the notion of data type, though different languages may use different terminology. The module lists the following common data types:</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Data Type</th><th>Abbreviation</th><th>Description</th><th>Example</th></tr>
+            <tr>
+                <td><strong>Integer</strong></td>
+                <td>int</td>
+                <td>Used to store whole numbers, mathematically known as integers. They do not have decimal points.</td>
+                <td>5, 100, -25, 0</td>
+            </tr>
+            <tr>
+                <td><strong>Boolean</strong></td>
+                <td>bool</td>
+                <td>Used to represent restricted to one of two values: <strong>true or false</strong>. This is the basis of all logical operations.</td>
+                <td>True, False</td>
+            </tr>
+            <tr>
+                <td><strong>Character</strong></td>
+                <td>char</td>
+                <td>Used to store a <strong>single character</strong> from the alphabet, a digit, or a special symbol.</td>
+                <td>'A', 'b', '7', '$'</td>
+            </tr>
+            <tr>
+                <td><strong>Floating-point number</strong></td>
+                <td>float</td>
+                <td>Used to store <strong>real numbers</strong>—numbers that have decimal points. These are essential for scientific and financial calculations.</td>
+                <td>3.14, 0.005, 1250.75</td>
+            </tr>
+            <tr>
+                <td><strong>Alphanumeric string</strong></td>
+                <td>string</td>
+                <td>Used to store a <strong>combination of characters and numbers</strong>. This is used for text, names, addresses, and sentences.</td>
+                <td>"Hello World", "TeleBirr", "Ethiopia"</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="example-box">
+        <h4>💡 Real World Example (Ethiopia - TeleBirr App Code):</h4>
+        <p>When a developer at TeleBirr writes code to handle a money transfer:</p>
+        <ul>
+            <li><strong>int:</strong> The user ID (e.g., 251912345678) is stored as an integer.</li>
+            <li><strong>float:</strong> The amount of money to send (e.g., 150.50 Birr) is stored as a float.</li>
+            <li><strong>string:</strong> The recipient's name (e.g., "Almaz Worku") is stored as a string.</li>
+            <li><strong>bool:</strong> A variable like `isTransactionSuccessful` is set to `True` if the transfer goes through, or `False` if it fails.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>2.3.2. Data types from Data Analytics perspective</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 2.4 (From Module):</strong>
+        <ul>
+            <li><em>Discuss data types from programming and analytics perspectives.</em></li>
+            <li><em>Compare metadata with structured, unstructured and semi-structured data.</em></li>
+            <li><em>Given at least one example of structured, unstructured and semi-structured data types.</em></li>
+        </ul>
+    </div>
+
+    <p>From a data analytics point of view, it is important to understand that there are <strong>three common types of data types</strong>: <strong>Structured, Semi-structured, and Unstructured</strong> data types. The diagram below (Figure 2.2 in the module) describes these three types and metadata.</p>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="30" fill="#f8fafc" font-size="14" text-anchor="middle" font-weight="bold">Data Types from Analytics Perspective</text>
+            
+            <rect x="20" y="60" width="80" height="40" fill="#14b8a6" rx="6"/>
+            <text x="60" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Structured</text>
+            
+            <rect x="120" y="60" width="80" height="40" fill="#facc15" rx="6"/>
+            <text x="160" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Semi-structured</text>
+
+            <rect x="220" y="60" width="80" height="40" fill="#f43f5e" rx="6"/>
+            <text x="260" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Unstructured</text>
+
+            <rect x="320" y="60" width="60" height="40" fill="#f59e0b" rx="6"/>
+            <text x="350" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Metadata</text>
+
+            <text x="60" y="135" fill="#94a3b8" font-size="9" text-anchor="middle">Excel, SQL</text>
+            <text x="160" y="135" fill="#94a3b8" font-size="9" text-anchor="middle">JSON, XML</text>
+            <text x="260" y="135" fill="#94a3b8" font-size="9" text-anchor="middle">Text, Image, Video</text>
+            <text x="350" y="135" fill="#94a3b8" font-size="9" text-anchor="middle">"Data about data"</text>
+
+            <text x="200" y="190" fill="#f8fafc" font-size="12" text-anchor="middle">📊 Big Data analytics requires handling all 4 types.</text>
+        </svg>
+    </div>
+
+    <p><strong>Structured Data</strong></p>
+    <p>Structured data is data that adheres to a <strong>pre-defined data model</strong> and is therefore straightforward to analyze. Structured data conforms to a <strong>tabular format</strong> with a relationship between the different rows and columns. This means the data is highly organized and predictable.</p>
+    <ul>
+        <li><strong>Common examples:</strong> Excel files, SQL databases, CSV files. Each of these has structured rows and columns that can be sorted and queried.</li>
+        <li><strong>Used by:</strong> Traditional relational databases (RDBMS) like MySQL, Oracle, PostgreSQL.</li>
+    </ul>
+
+    <p><strong>Semi-structured Data</strong></p>
+    <p>Semi-structured data is a form of structured data that does not conform to the formal structure of data models associated with relational databases or other forms of data tables, but nonetheless, contains <strong>tags or other markers</strong> to separate semantic elements and enforce hierarchies of records and fields within the data. Therefore, it is also known as a <strong>self-describing structure</strong>.</p>
+    <ul>
+        <li><strong>Common examples:</strong> JSON (JavaScript Object Notation), XML (eXtensible Markup Language), HTML, email headers.</li>
+        <li><strong>Used by:</strong> NoSQL databases, web APIs, data interchange between systems.</li>
+    </ul>
+
+    <p><strong>Unstructured Data</strong></p>
+    <p>Unstructured data is information that either does not have a <strong>pre-defined data model</strong> or is not organized in a pre-defined manner. Unstructured information is typically <strong>text-heavy</strong> but may contain data such as dates, numbers, and facts as well. This results in irregularities and ambiguities that make it difficult to understand using traditional programs as compared to data stored in structured databases.</p>
+    <ul>
+        <li><strong>Common examples:</strong> Audio files, video files, images, No-SQL databases, PDFs, Word documents, emails, social media posts.</li>
+        <li><strong>Used by:</strong> Big Data platforms (like Hadoop), data lakes, AI and Machine Learning models.</li>
+    </ul>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Feature</th><th>Structured</th><th>Semi-structured</th><th>Unstructured</th></tr>
+            <tr><td><strong>Data Model</strong></td><td>Pre-defined (tabular)</td><td>Self-describing (tags/keys)</td><td>No pre-defined model</td></tr>
+            <tr><td><strong>Flexibility</strong></td><td>Rigid</td><td>Moderate</td><td>Very flexible</td></tr>
+            <tr><td><strong>Ease of Analysis</strong></td><td>Easy</td><td>Moderate</td><td>Hard (requires NLP, image processing)</td></tr>
+            <tr><td><strong>Storage</strong></td><td>Relational DBs (SQL)</td><td>NoSQL, JSON, XML</td><td>Data lakes, HDFS</td></tr>
+            <tr><td><strong>Examples</strong></td><td>Excel, SQL Tables</td><td>JSON, XML, HTML</td><td>Audio, Video, Images, Text files</td></tr>
+        </table>
+    </div>
+
+    <p><strong>Metadata – Data about Data</strong></p>
+    <p>The last category of data type is <strong>metadata</strong>. From a technical point of view, this is not a separate data structure, but it is <strong>one of the most important elements for Big Data analysis and big data solutions</strong>. Metadata is <strong>data about data</strong>.</p>
+    <ul>
+        <li><strong>Why is it important?</strong> It provides additional information about a specific set of data. For example, in a set of photographs, metadata could describe <strong>where and when the photos were taken</strong>.</li>
+        <li><strong>Metadata as Structured Data:</strong> The metadata then provides fields for dates and locations which, by themselves, can be considered <strong>structured data</strong>.</li>
+        <li><strong>Usage in Big Data:</strong> Because of this reason, metadata is frequently used by Big Data solutions for <strong>initial analysis</strong>—to quickly understand what data is available before diving into deep processing.</li>
+    </ul>
+
+    <div class="example-box">
+        <h4>💡 Real World Example (Ethiopia - Agricultural Data):</h4>
+        <ul>
+            <li><strong>Structured Data:</strong> An Excel spreadsheet containing the names of farmers, their plot sizes in hectares, and the crop yields in quintals. This data is ready for analysis.</li>
+            <li><strong>Semi-structured Data:</strong> A JSON file sent from a weather station in Oromia containing temperature, humidity, and rainfall data. It has tags (e.g., {"temp": 25, "humidity": 60}) but is not in a table.</li>
+            <li><strong>Unstructured Data:</strong> A video recording from a drone flying over a farm in Amhara to inspect crop health. This video cannot be easily searched or analyzed without specialized computer vision algorithms.</li>
+            <li><strong>Metadata:</strong> The filename of the drone video ("Amhara_Farm_Drone_2026-08-18.mp4") contains the date and location. This metadata allows the data scientist to quickly find all videos from Amhara without watching them all.</li>
+        </ul>
+    </div>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 2)</h4>
+        <ul>
+            <li><strong>Programming Data Types:</strong> int, bool, char, float, string. These define how the computer stores and processes data.</li>
+            <li><strong>Analytics Data Types:</strong> Structured (tables), Semi-structured (tags), Unstructured (text/video/audio).</li>
+            <li><strong>Metadata:</strong> "Data about data" – provides context (e.g., date, location, author).</li>
+            <li><strong>Big Data Reality:</strong> Most real-world data is unstructured (80%+) – which is why Big Data tools (like Hadoop) are essential.</li>
+        </ul>
+    </div>
+</div>

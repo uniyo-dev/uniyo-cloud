@@ -1,0 +1,288 @@
+{
+  "course_code": "Geog1011",
+  "chapter_number": 6,
+  "week_number": 6,
+  "title": "VIP Chapter 6 Week 6: Soils, Natural Vegetation and Wildlife Resources of Ethiopia and The Horn",
+  "questions": [
+    {
+      "id": 1,
+      "text": "Which of the following is NOT a factor influencing the rate of chemical weathering in Ethiopia?",
+      "diagram": null,
+      "options": [
+        "A) Temperature",
+        "B) Parent material composition",
+        "C) Wind speed",
+        "D) Rainfall amount"
+      ],
+      "correct_answer": "C) Wind speed",
+      "explanation": "Correct: Wind speed primarily affects mechanical (physical) weathering, not chemical. A, B, and D are wrong\u2014they all directly influence chemical weathering rates. Temperature speeds reactions, parent material determines susceptibility, and rainfall provides water for reactions.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 2,
+      "text": "Ethiopian highland soils typically have higher organic matter content than lowland soils. This is primarily because:",
+      "diagram": null,
+      "options": [
+        "A) There is more livestock in the lowlands",
+        "B) Lower temperatures slow organic matter decomposition in highlands",
+        "C) Lowland soils are more fertile",
+        "D) Highland soils receive less rainfall"
+      ],
+      "correct_answer": "B) Lower temperatures slow organic matter decomposition in highlands",
+      "explanation": "Correct: Cooler highland temperatures slow decomposition, preserving organic matter. A is wrong\u2014livestock can reduce organic matter. C is wrong\u2014lowland soils are generally less fertile. D is wrong\u2014highlands receive more rainfall, not less.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 3,
+      "text": "What is the relationship between Ethiopia's soil policies and food security?",
+      "diagram": null,
+      "options": [
+        "A) There is no relationship",
+        "B) Soil policies directly determine agricultural productivity and food availability",
+        "C) Only irrigation policies matter",
+        "D) Policies have minimal impact on food security"
+      ],
+      "correct_answer": "B) Soil policies directly determine agricultural productivity and food availability",
+      "explanation": "Correct: Soil management is fundamental to agricultural output. A is wrong\u2014there is a direct relationship. C is wrong\u2014irrigation is only one aspect. D is wrong\u2014policies significantly impact food security.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 4,
+      "text": "In which Ethiopian region would you most likely find Solonchaks (saline soils)?",
+      "diagram": null,
+      "options": [
+        "A) Bale Mountains",
+        "B) Afar Depression",
+        "C) Simien Mountains",
+        "D) Kaffa Region"
+      ],
+      "correct_answer": "B) Afar Depression",
+      "explanation": "Correct: Afar has arid conditions with salt accumulation. A is wrong\u2014Bale has high rainfall. C is wrong\u2014Simien is cold and wet. D is wrong\u2014Kaffa has humid conditions with deep red soils.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 5,
+      "text": "The primary reason for Ethiopia's high soil erosion rate is:",
+      "diagram": null,
+      "options": [
+        "A) Natural topography only",
+        "B) Climate change",
+        "C) Combination of deforestation, overgrazing, and steep terrain",
+        "D) Urbanization"
+      ],
+      "correct_answer": "C) Combination of deforestation, overgrazing, and steep terrain",
+      "explanation": "Correct: Multiple factors interact to cause high erosion. A is wrong\u2014topography alone is not the cause. B is wrong\u2014climate change exacerbates but isn't the primary cause. D is wrong\u2014urbanization is not the main factor.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 6,
+      "text": "Which Ethiopian soil type is characterized by high shrink-swell capacity and self-cracking when dry?",
+      "diagram": null,
+      "options": [
+        "A) Nitisols",
+        "B) Vertisols",
+        "C) Fluvisols",
+        "D) Cambisols"
+      ],
+      "correct_answer": "B) Vertisols",
+      "explanation": "Correct: Vertisols have >50% clay causing shrink-swell. A is wrong\u2014Nitisols are stable. C is wrong\u2014Fluvisols don't crack. D is wrong\u2014Cambisols have moderate clay.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 7,
+      "text": "The economic implication of soil degradation in Ethiopia is mainly:",
+      "diagram": null,
+      "options": [
+        "A) Reduced agricultural productivity and food insecurity",
+        "B) Increased tourism",
+        "C) Higher oil prices",
+        "D) Improved industrial output"
+      ],
+      "correct_answer": "A) Reduced agricultural productivity and food insecurity",
+      "explanation": "Correct: Degradation reduces yields and threatens food security. B is wrong\u2014degradation doesn't increase tourism. C is wrong\u2014oil prices are unrelated. D is wrong\u2014degradation doesn't improve industry.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 8,
+      "text": "Which conservation practice is most effective for steep slopes in Ethiopia?",
+      "diagram": null,
+      "options": [
+        "A) Contour plowing",
+        "B) Terracing",
+        "C) Strip cropping",
+        "D) Mulching"
+      ],
+      "correct_answer": "B) Terracing",
+      "explanation": "Correct: Terracing effectively controls erosion on steep slopes. A is wrong\u2014contour plowing helps on moderate slopes. C is wrong\u2014strip cropping works on gentle slopes. D is wrong\u2014mulching is for moisture conservation.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 9,
+      "text": "What is the impact of deforestation on Ethiopian soils?",
+      "diagram": null,
+      "options": [
+        "A) Increases soil fertility",
+        "B) Accelerates erosion and reduces organic matter",
+        "C) Has no impact",
+        "D) Increases soil water retention"
+      ],
+      "correct_answer": "B) Accelerates erosion and reduces organic matter",
+      "explanation": "Correct: Deforestation exposes soil to erosion and removes organic inputs. A is wrong\u2014deforestation reduces fertility. C is wrong\u2014there is significant impact. D is wrong\u2014deforestation reduces water retention.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 10,
+      "text": "Which measure addresses both soil conservation and livelihood improvement in Ethiopia?",
+      "diagram": null,
+      "options": [
+        "A) Importing more food",
+        "B) Community-based watershed management with livelihood support",
+        "C) Building more cities",
+        "D) Expanding roads"
+      ],
+      "correct_answer": "B) Community-based watershed management with livelihood support",
+      "explanation": "Correct: This approach combines conservation with economic benefits. A is wrong\u2014importing food doesn't address soil. C is wrong\u2014urbanization often degrades soils. D is wrong\u2014roads don't conserve soil.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 11,
+      "text": "The characteristic dark color of Ethiopian Vertisols is primarily due to:",
+      "diagram": null,
+      "options": [
+        "A) Iron oxides",
+        "B) High organic matter and clay content",
+        "C) Calcium carbonate",
+        "D) Silica deposits"
+      ],
+      "correct_answer": "B) High organic matter and clay content",
+      "explanation": "Correct: Organic matter and clay give dark color. A is wrong\u2014iron oxides give red color (Nitisols). C is wrong\u2014calcium carbonate gives white. D is wrong\u2014silica gives light colors.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 12,
+      "text": "What is the main difference between Nitisols and Cambisols in terms of agricultural potential?",
+      "diagram": null,
+      "options": [
+        "A) Both have the same potential",
+        "B) Nitisols are better for coffee while Cambisols are more general purpose",
+        "C) Cambisols are better for irrigation",
+        "D) Nitisols are saline"
+      ],
+      "correct_answer": "B) Nitisols are better for coffee while Cambisols are more general purpose",
+      "explanation": "Correct: Nitisols specialize in coffee/tea, Cambisols are general cereals. A is wrong\u2014they differ. C is wrong\u2014Fluvisols are better for irrigation. D is wrong\u2014Nitisols are not saline.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 13,
+      "text": "Which Ethiopian soil degradation problem is most severe in the Rift Valley?",
+      "diagram": null,
+      "options": [
+        "A) Acidification",
+        "B) Salinization",
+        "C) Compaction",
+        "D) Waterlogging"
+      ],
+      "correct_answer": "B) Salinization",
+      "explanation": "Correct: Rift Valley has irrigation-induced salinity. A is wrong\u2014acidification is in western highlands. C is wrong\u2014compaction is common in Vertisols. D is wrong\u2014waterlogging occurs in some irrigated areas but salinization is more widespread.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 14,
+      "text": "The broad-bed and furrow (BBF) technique is specifically designed for:",
+      "diagram": null,
+      "options": [
+        "A) Nitisols management",
+        "B) Vertisols management",
+        "C) Sandy soil management",
+        "D) Saline soil reclamation"
+      ],
+      "correct_answer": "B) Vertisols management",
+      "explanation": "Correct: BBF improves drainage in high-clay Vertisols. A is wrong\u2014Nitisols are well-drained. C is wrong\u2014sandy soils need different management. D is wrong\u2014saline reclamation uses leaching.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 15,
+      "text": "What is the MOST significant long-term impact of nutrient depletion in Ethiopian soils?",
+      "diagram": null,
+      "options": [
+        "A) Reduced agricultural yields and food insecurity",
+        "B) Increased desertification",
+        "C) Higher fertilizer imports",
+        "D) Loss of biodiversity"
+      ],
+      "correct_answer": "A) Reduced agricultural yields and food insecurity",
+      "explanation": "Correct: Nutrient depletion directly reduces yields. B is wrong\u2014this is a more extreme outcome. C is wrong\u2014this is a symptom, not the impact. D is wrong\u2014biodiversity loss is important but not the most significant impact.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 16,
+      "text": "Which of the following is an example of a biological soil conservation measure in Ethiopia?",
+      "diagram": null,
+      "options": [
+        "A) Building check dams",
+        "B) Planting cover crops",
+        "C) Terracing",
+        "D) Stone bund construction"
+      ],
+      "correct_answer": "B) Planting cover crops",
+      "explanation": "Correct: Cover crops are biological measures. A, C, and D are wrong\u2014they are mechanical/physical measures. Biological measures involve living organisms.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 17,
+      "text": "Ethiopia's Green Legacy Initiative's contribution to soil conservation is primarily through:",
+      "diagram": null,
+      "options": [
+        "A) Reducing erosion and increasing organic matter",
+        "B) Exporting timber",
+        "C) Urban development",
+        "D) Industrial expansion"
+      ],
+      "correct_answer": "A) Reducing erosion and increasing organic matter",
+      "explanation": "Correct: Trees reduce erosion and add organic matter. B is wrong\u2014exporting timber is not the main purpose. C is wrong\u2014urban development is not tree planting. D is wrong\u2014industry is not the focus.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 18,
+      "text": "The relationship between Ethiopia's highland soils and the Nile River system is:",
+      "diagram": null,
+      "options": [
+        "A) Soil erosion in highlands contributes to siltation of the Blue Nile",
+        "B) There is no connection",
+        "C) The Nile improves Ethiopian soils",
+        "D) Soils don't affect the Nile"
+      ],
+      "correct_answer": "A) Soil erosion in highlands contributes to siltation of the Blue Nile",
+      "explanation": "Correct: Highland erosion affects downstream sedimentation. B is wrong\u2014there is a direct connection. C is wrong\u2014the Nile doesn't improve soils. D is wrong\u2014soils directly affect the Nile.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 19,
+      "text": "Which agronomic practice helps maintain soil fertility in Ethiopian highlands?",
+      "diagram": null,
+      "options": [
+        "A) Continuous monoculture",
+        "B) Crop rotation including legumes",
+        "C) Burning crop residues",
+        "D) Overgrazing"
+      ],
+      "correct_answer": "B) Crop rotation including legumes",
+      "explanation": "Correct: Legumes fix nitrogen, maintaining fertility. A is wrong\u2014monoculture depletes nutrients. C is wrong\u2014burning loses organic matter. D is wrong\u2014overgrazing degrades soil.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 20,
+      "text": "The success of soil conservation in Tigray demonstrates that:",
+      "diagram": null,
+      "options": [
+        "A) Conservation is impossible in Ethiopia",
+        "B) Community participation and integrated approaches can reverse degradation",
+        "C) Only modern machinery can save soils",
+        "D) Conservation is not economically viable"
+      ],
+      "correct_answer": "B) Community participation and integrated approaches can reverse degradation",
+      "explanation": "Correct: Tigray's success proves community action works. A is wrong\u2014Tigray shows it's possible. C is wrong\u2014traditional methods proved effective. D is wrong\u2014conservation is economically beneficial.",
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "course_code": "GeES1011",
+  "chapter": 7,
+  "title": "Part 2 Practice: Demographic Measurements and Trends in Ethiopia",
+  "questions": [
+    {
+      "id": 1,
+      "text": "What does Crude Birth Rate (CBR) measure?",
+      "diagram": null,
+      "options": [
+        "A) Number of births per 1,000 women aged 15-49",
+        "B) Number of births per 1,000 population",
+        "C) Average children per woman",
+        "D) Number of deaths per 1,000 population"
+      ],
+      "correct_answer": "B) Number of births per 1,000 population",
+      "explanation": "Correct: CBR measures births per 1,000 total population. A is wrong\u2014that's GFR. C is wrong\u2014that's TFR. D is wrong\u2014that's CDR.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "text": "Ethiopia's Total Fertility Rate (TFR) in 2023 is approximately:",
+      "diagram": null,
+      "options": [
+        "A) 7.1 children per woman",
+        "B) 5.4 children per woman",
+        "C) 4.1 children per woman",
+        "D) 2.5 children per woman"
+      ],
+      "correct_answer": "C) 4.1 children per woman",
+      "explanation": "Correct: Ethiopia's TFR is ~4.1 in 2023. A is wrong\u2014that was 1990. B is wrong\u2014that was 2005. D is wrong\u2014that's too low for Ethiopia.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "text": "Which mortality measure specifically focuses on deaths of infants under one year of age?",
+      "diagram": null,
+      "options": [
+        "A) Crude Death Rate (CDR)",
+        "B) Infant Mortality Rate (IMR)",
+        "C) Maternal Mortality Rate (MMR)",
+        "D) Life Expectancy"
+      ],
+      "correct_answer": "B) Infant Mortality Rate (IMR)",
+      "explanation": "Correct: IMR measures deaths of infants under 1 year. A is wrong\u2014CDR measures all deaths. C is wrong\u2014MMR measures maternal deaths. D is wrong\u2014life expectancy measures years of life.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 4,
+      "text": "What is the formula for the Natural Rate of Increase?",
+      "diagram": null,
+      "options": [
+        "A) CBR + CDR",
+        "B) CBR - CDR",
+        "C) CBR \u00d7 CDR",
+        "D) TFR - IMR"
+      ],
+      "correct_answer": "B) CBR - CDR",
+      "explanation": "Correct: Natural Rate of Increase = CBR - CDR. A is wrong\u2014that would be addition. C is wrong\u2014multiplication is not correct. D is wrong\u2014TFR and IMR are different measures.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 5,
+      "text": "Ethiopia's Infant Mortality Rate (IMR) has declined from approximately 115 per 1,000 in 1990 to what in 2023?",
+      "diagram": null,
+      "options": [
+        "A) 77 per 1,000",
+        "B) 48 per 1,000",
+        "C) 43 per 1,000",
+        "D) 25 per 1,000"
+      ],
+      "correct_answer": "C) 43 per 1,000",
+      "explanation": "Correct: IMR is ~43 per 1,000 in 2023. A is wrong\u2014that was 2005. B is wrong\u2014that was 2016. D is wrong\u2014too low for current rate.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 6,
+      "text": "What does the Total Fertility Rate (TFR) measure?",
+      "diagram": null,
+      "options": [
+        "A) Births per 1,000 population",
+        "B) Average number of children a woman would have during her reproductive years",
+        "C) Deaths per 1,000 population",
+        "D) Maternal deaths per 100,000 births"
+      ],
+      "correct_answer": "B) Average number of children a woman would have during her reproductive years",
+      "explanation": "Correct: TFR measures average children per woman. A is wrong\u2014that's CBR. C is wrong\u2014that's CDR. D is wrong\u2014that's MMR.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 7,
+      "text": "Ethiopia's Maternal Mortality Rate (MMR) in 2023 is approximately:",
+      "diagram": null,
+      "options": [
+        "A) 1,050 per 100,000",
+        "B) 673 per 100,000",
+        "C) 412 per 100,000",
+        "D) 267 per 100,000"
+      ],
+      "correct_answer": "D) 267 per 100,000",
+      "explanation": "Correct: MMR is ~267 per 100,000 in 2023. A is wrong\u2014that was 1990. B is wrong\u2014that was 2005. C is wrong\u2014that was 2016.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "text": "Ethiopia's life expectancy at birth has increased from approximately 45 years in 1990 to what in 2023?",
+      "diagram": null,
+      "options": [
+        "A) 52-55 years",
+        "B) 58-60 years",
+        "C) 62-63 years",
+        "D) 65-68 years"
+      ],
+      "correct_answer": "D) 65-68 years",
+      "explanation": "Correct: Life expectancy is ~65-68 years in 2023. A is wrong\u2014that was 2005. B is wrong\u2014too low. C is wrong\u2014too low.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 9,
+      "text": "Ethiopia's population doubling time at the current growth rate of 2.5% is approximately:",
+      "diagram": null,
+      "options": [
+        "A) 15 years",
+        "B) 28 years",
+        "C) 35 years",
+        "D) 50 years"
+      ],
+      "correct_answer": "B) 28 years",
+      "explanation": "Correct: Doubling time = 70/2.5 = 28 years. A is wrong\u2014too short. C is wrong\u2014too long. D is wrong\u2014too long.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 10,
+      "text": "Which factor has contributed most to the decline in fertility rates in Ethiopia?",
+      "diagram": null,
+      "options": [
+        "A) Increased urbanization only",
+        "B) Improved female education and increased contraceptive use",
+        "C) Decreased marriage age",
+        "D) Increased immigration"
+      ],
+      "correct_answer": "B) Improved female education and increased contraceptive use",
+      "explanation": "Correct: Education and contraception are key factors. A is wrong\u2014urbanization is one factor but not the only one. C is wrong\u2014earlier marriage would increase fertility. D is wrong\u2014immigration doesn't directly affect fertility.",
+      "difficulty": "hard"
+    }
+  ]
+}

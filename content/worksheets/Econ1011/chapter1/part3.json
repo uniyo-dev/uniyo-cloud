@@ -1,0 +1,147 @@
+{
+    "course_code": "Econ1011",
+    "chapter": 1,
+    "title": "Part 3 Practice: Economic Systems",
+    "questions": [
+        {
+            "id": 1,
+            "text": "In a CAPITALIST (market) economy, basic economic questions are answered primarily by:",
+            "diagram": null,
+            "options": [
+                "A) Central government planning",
+                "B) Market forces of supply and demand",
+                "C) Traditional customs and beliefs",
+                "D) International organizations"
+            ],
+            "correct_answer": "B) Market forces of supply and demand",
+            "explanation": "In CAPITALISM, the market decides: WHAT to produce (based on consumer demand), HOW to produce (based on profit maximization), FOR WHOM (based on ability to pay). The 'invisible hand' of the market coordinates economic activity without central planning.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 2,
+            "text": "In a COMMAND economy, economic decisions are made by:",
+            "diagram": null,
+            "options": [
+                "A) Individual consumers",
+                "B) Private businesses",
+                "C) The central government",
+                "D) Market forces"
+            ],
+            "correct_answer": "C) The central government",
+            "explanation": "In a COMMAND (planned) economy, the GOVERNMENT owns resources and makes ALL economic decisions. Central planners decide what to produce, how to produce, and for whom. Examples: North Korea, Cuba, former Soviet Union. There is minimal private ownership and no consumer sovereignty.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "Ethiopia's economy is BEST described as:",
+            "diagram": null,
+            "options": [
+                "A) Pure capitalist economy",
+                "B) Pure command economy",
+                "C) Mixed economy (both market and government)",
+                "D) Traditional economy"
+            ],
+            "correct_answer": "C) Mixed economy (both market and government)",
+            "explanation": "Ethiopia has a MIXED economy where BOTH the private sector and government play important roles. The government owns key industries (Ethiopian Airlines, Ethio Telecom) while private businesses operate in many sectors. Most modern economies are MIXED — combining market efficiency with government regulation.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "Which of the following is a key feature of a CAPITALIST economy?",
+            "diagram": null,
+            "options": [
+                "A) Government ownership of all resources",
+                "B) Private property rights",
+                "C) Central planning",
+                "D) No competition"
+            ],
+            "correct_answer": "B) Private property rights",
+            "explanation": "PRIVATE PROPERTY RIGHTS are fundamental to capitalism — individuals and businesses can OWN resources, property, and businesses. Other key features include: profit motive, competition, consumer sovereignty, and minimal government intervention. Government ownership and central planning are features of COMMAND economies.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 5,
+            "text": "Examine the spectrum below. Which country would be at the FAR LEFT?",
+            "diagram": "<svg width='320' height='120' viewBox='0 0 320 120'><rect width='320' height='120' fill='#111827' rx='8'/><line x1='30' y1='60' x2='290' y2='60' stroke='#38bdf8' stroke-width='3'/><rect x='20' y='35' width='60' height='25' rx='4' fill='#f43f5e'/><text x='50' y='52' text-anchor='middle' fill='#f8fafc' font-size='10' font-weight='bold'>COMMAND</text><rect x='130' y='35' width='60' height='25' rx='4' fill='#f59e0b'/><text x='160' y='52' text-anchor='middle' fill='#0B0F19' font-size='10' font-weight='bold'>MIXED</text><rect x='240' y='35' width='60' height='25' rx='4' fill='#14b8a6'/><text x='270' y='52' text-anchor='middle' fill='#f8fafc' font-size='10' font-weight='bold'>MARKET</text><text x='160' y='100' text-anchor='middle' fill='#94a3b8' font-size='11'>North Korea → Ethiopia → USA</text></svg>",
+            "options": [
+                "A) USA",
+                "B) Ethiopia",
+                "C) North Korea",
+                "D) United Kingdom"
+            ],
+            "correct_answer": "C) North Korea",
+            "explanation": "The FAR LEFT represents COMMAND economies. North Korea has the most centralized, government-controlled economy in the world — the state owns all resources and makes all economic decisions. The spectrum goes: Command (left) → Mixed (middle) → Market (right). USA is far right, Ethiopia is in the middle.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "Consumer sovereignty means:",
+            "diagram": null,
+            "options": [
+                "A) The government controls what consumers buy",
+                "B) Consumers' preferences determine what is produced",
+                "C) Producers dictate consumer choices",
+                "D) Only wealthy consumers matter"
+            ],
+            "correct_answer": "B) Consumers' preferences determine what is produced",
+            "explanation": "CONSUMER SOVEREIGNTY is a key feature of market economies. Consumers 'vote' with their money — if they buy more of a product, producers make more of it. If they stop buying, producers stop making it. This is how the market answers 'WHAT to produce' — based on consumer demand.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "Which economic system provides the MOST government social safety nets?",
+            "diagram": null,
+            "options": [
+                "A) Pure capitalism",
+                "B) Command economy",
+                "C) Mixed economy with strong welfare state",
+                "D) Traditional economy"
+            ],
+            "correct_answer": "C) Mixed economy with strong welfare state",
+            "explanation": "MIXED economies with strong welfare states (like Scandinavian countries) provide extensive social safety nets: free healthcare, free education, unemployment benefits, and pensions. Pure capitalism has minimal safety nets, while command economies provide basic services but lack economic efficiency.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "The 'invisible hand' concept was introduced by:",
+            "diagram": null,
+            "options": [
+                "A) Karl Marx",
+                "B) Adam Smith",
+                "C) John Maynard Keynes",
+                "D) Milton Friedman"
+            ],
+            "correct_answer": "B) Adam Smith",
+            "explanation": "Adam Smith introduced the 'INVISIBLE HAND' in 'The Wealth of Nations' (1776). He argued that when individuals pursue their own self-interest in free markets, they unintentionally promote the good of society as a whole. The market self-regulates through supply and demand without government intervention.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "A major DISADVANTAGE of a command economy is:",
+            "diagram": null,
+            "options": [
+                "A) Too much competition",
+                "B) Lack of efficiency and innovation",
+                "C) Excessive consumer choice",
+                "D) Unstable prices"
+            ],
+            "correct_answer": "B) Lack of efficiency and innovation",
+            "explanation": "Command economies suffer from INEFFICIENCY because: (1) No profit motive means no incentive to cut costs, (2) No competition means no pressure to innovate, (3) Central planners can't know all consumer preferences, (4) Bureaucracy slows decisions. This is why command economies historically lag in innovation and productivity.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What distinguishes a MIXED economy from pure capitalism or pure command?",
+            "diagram": null,
+            "options": [
+                "A) Only government owns resources",
+                "B) Both private sector AND government play roles",
+                "C) Only private individuals own resources",
+                "D) No government intervention at all"
+            ],
+            "correct_answer": "B) Both private sector AND government play roles",
+            "explanation": "A MIXED economy combines BOTH: private sector operates businesses AND government regulates, taxes, provides public goods, and may own key industries. Most countries (Ethiopia, USA, UK, Germany) are mixed — they have market economies with varying degrees of government involvement.",
+            "difficulty": "medium"
+        }
+    ]
+}

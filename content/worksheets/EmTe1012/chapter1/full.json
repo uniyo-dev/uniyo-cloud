@@ -1,0 +1,658 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 1,
+    "title": "Chapter 1 Full Practice: Introduction to Emerging Technologies",
+    "total_questions": 50,
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the general meaning of 'emerging technology'?",
+            "options": [
+                "A) A technology that is obsolete.",
+                "B) A new technology or continuing development with significant social/economic effects.",
+                "C) An agricultural tool.",
+                "D) Any tech using electricity."
+            ],
+            "correct_answer": "B",
+            "explanation": "Emerging tech is new or developing with significant impact.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the etymology of 'Technology'?",
+            "options": [
+                "A) Latin 'volvere'",
+                "B) Greek 'tekhnologia'",
+                "C) French 'technique'",
+                "D) English 'technic'"
+            ],
+            "correct_answer": "B",
+            "explanation": "From Greek tekhnologia.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "Where did the Industrial Revolution begin?",
+            "options": [
+                "A) USA",
+                "B) France",
+                "C) Germany",
+                "D) Great Britain"
+            ],
+            "correct_answer": "D",
+            "explanation": "It started in Great Britain in the late 1770s.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "Which is NOT an Industrial Revolution invention?",
+            "options": [
+                "A) Steam Engine",
+                "B) Telegraph",
+                "C) Cotton Gin",
+                "D) Smartphone"
+            ],
+            "correct_answer": "D",
+            "explanation": "Smartphones are modern.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What was the core of IR 3.0?",
+            "options": [
+                "A) Steam power",
+                "B) Digital logic circuits",
+                "C) Cyber-physical systems",
+                "D) Railroads"
+            ],
+            "correct_answer": "B",
+            "explanation": "IR 3.0 was the Digital Revolution.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "The final cause of the Industrial Revolution was the...",
+            "options": [
+                "A) Digital Revolution",
+                "B) Agricultural Revolution",
+                "C) French Revolution",
+                "D) American Revolution"
+            ],
+            "correct_answer": "B",
+            "explanation": "The Agricultural Revolution increased food production.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "Which industry involves R&D like IT?",
+            "options": [
+                "A) Primary",
+                "B) Secondary",
+                "C) Tertiary",
+                "D) Quaternary"
+            ],
+            "correct_answer": "D",
+            "explanation": "Quaternary is R&D.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "The American Industrial Revolution is known as the...",
+            "options": [
+                "A) First IR",
+                "B) Second IR",
+                "C) Third IR",
+                "D) Digital Rev"
+            ],
+            "correct_answer": "B",
+            "explanation": "It is the Second Industrial Revolution.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "How did the Agricultural Revolution fuel the IR?",
+            "options": [
+                "A) Decreased food",
+                "B) Increased food, freeing labor",
+                "C) Started in America",
+                "D) No connection"
+            ],
+            "correct_answer": "B",
+            "explanation": "More food freed workers for factories.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Which industry type is NOT listed?",
+            "options": [
+                "A) Primary",
+                "B) Secondary",
+                "C) Tertiary",
+                "D) Quinary"
+            ],
+            "correct_answer": "D",
+            "explanation": "Quinary is not in the module.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "Why is data called the 'new oil'?",
+            "options": [
+                "A) Physical liquid",
+                "B) Strategic asset driving economy",
+                "C) Cheap and unlimited",
+                "D) Only for oil companies"
+            ],
+            "correct_answer": "B",
+            "explanation": "Data drives science, tech, and economy.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 12,
+            "text": "What is the relationship between data and IR 4.0?",
+            "options": [
+                "A) Irrelevant",
+                "B) Data-intensive discovery is core",
+                "C) Only steam power",
+                "D) Only agriculture"
+            ],
+            "correct_answer": "B",
+            "explanation": "IR 4.0 is data-driven.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 13,
+            "text": "Which fields recognize data science potential?",
+            "options": [
+                "A) Only CS",
+                "B) Only Social Sciences",
+                "C) Only Health",
+                "D) Core & broad-based fields"
+            ],
+            "correct_answer": "D",
+            "explanation": "Computing, stats, business, social, health.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 14,
+            "text": "What is the first step in the data value chain?",
+            "options": [
+                "A) Analysis",
+                "B) Action",
+                "C) Collection",
+                "D) Deletion"
+            ],
+            "correct_answer": "C",
+            "explanation": "It starts with data collection.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 15,
+            "text": "What does 'paradigm-shifting' refer to?",
+            "options": [
+                "A) Ignoring data",
+                "B) Reshaping industries via data",
+                "C) Digital to analog",
+                "D) Government change"
+            ],
+            "correct_answer": "B",
+            "explanation": "Understanding/utilizing data reshapes industries.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 16,
+            "text": "Data brings not only hype but also...",
+            "options": [
+                "A) Economic decline",
+                "B) Challenges that bring innovation",
+                "C) Political instability",
+                "D) Tech reduction"
+            ],
+            "correct_answer": "B",
+            "explanation": "Challenges drive innovation and opportunity.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 17,
+            "text": "Which sectors benefit from data?",
+            "options": [
+                "A) Only tech",
+                "B) Only finance",
+                "C) Healthcare, transport, education, agriculture",
+                "D) Only government"
+            ],
+            "correct_answer": "C",
+            "explanation": "Data benefits all listed sectors.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 18,
+            "text": "How does Ethiopia use data in agriculture?",
+            "options": [
+                "A) Ignoring data",
+                "B) Satellite/soil data for crop yields",
+                "C) Only traditional methods",
+                "D) Exporting data"
+            ],
+            "correct_answer": "B",
+            "explanation": "Satellite and soil data predict yields.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 19,
+            "text": "What is the ultimate purpose of data analysis?",
+            "options": [
+                "A) Store indefinitely",
+                "B) Actionable insights for growth",
+                "C) Sell to others",
+                "D) Delete after days"
+            ],
+            "correct_answer": "B",
+            "explanation": "Data turns into insights for innovation.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "How does data science impact professional development?",
+            "options": [
+                "A) No impact",
+                "B) Enables data-driven development across fields",
+                "C) Only benefits CS",
+                "D) Reduces skills"
+            ],
+            "correct_answer": "B",
+            "explanation": "Data science is multidisciplinary and career-driving.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 21,
+            "text": "What are the 4 basic kinds of devices?",
+            "options": [
+                "A) Input, Output, Storage, Processors",
+                "B) Memory, Microprocessors, Logic, Networks",
+                "C) Hardware, Software, Firmware, Malware",
+                "D) Sensors, Actuators, Controllers"
+            ],
+            "correct_answer": "B",
+            "explanation": "Memory, microprocessors, logic, and networks.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 22,
+            "text": "What do memory devices do?",
+            "options": [
+                "A) Execute instructions",
+                "B) Store information",
+                "C) Interface devices",
+                "D) Connect to internet"
+            ],
+            "correct_answer": "B",
+            "explanation": "Memory stores data like spreadsheets/databases.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 23,
+            "text": "Why is a computer programmable?",
+            "options": [
+                "A) On/off switch",
+                "B) Follows instructions",
+                "C) Has screen",
+                "D) Uses electricity"
+            ],
+            "correct_answer": "B",
+            "explanation": "It follows a set of instructions.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 24,
+            "text": "Which is a listed programmable device?",
+            "options": [
+                "A) Intel Core i9",
+                "B) Atmel's AT91CAP7L",
+                "C) AMD Ryzen",
+                "D) Nvidia RTX"
+            ],
+            "correct_answer": "B",
+            "explanation": "Atmel's AT91CAP7L is listed in the module.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 25,
+            "text": "What does SED stand for?",
+            "options": [
+                "A) Service Enabling Devices",
+                "B) System Execution Drivers",
+                "C) Software Engineering Design",
+                "D) Security Encryption Devices"
+            ],
+            "correct_answer": "A",
+            "explanation": "SED = Service Enabling Devices.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 26,
+            "text": "Which is NOT an SED?",
+            "options": [
+                "A) Modems",
+                "B) Routers",
+                "C) Switches",
+                "D) Microprocessors"
+            ],
+            "correct_answer": "D",
+            "explanation": "Microprocessors are basic devices, not SEDs.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 27,
+            "text": "What are FPGAs, CPLDs, and PLDs?",
+            "options": [
+                "A) Memory types",
+                "B) Programmable devices",
+                "C) Network appliances",
+                "D) Microprocessors"
+            ],
+            "correct_answer": "B",
+            "explanation": "They are types of programmable devices.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 28,
+            "text": "What do logic devices provide?",
+            "options": [
+                "A) Storage",
+                "B) Video games",
+                "C) Data communication and signal processing",
+                "D) Internet connection"
+            ],
+            "correct_answer": "C",
+            "explanation": "Logic devices handle interfacing, comms, and control.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 29,
+            "text": "What is an example of a network?",
+            "options": [
+                "A) Standalone PC",
+                "B) Microprocessor",
+                "C) Internet",
+                "D) Logic gate"
+            ],
+            "correct_answer": "C",
+            "explanation": "The Internet is a prime network example.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 30,
+            "text": "What is the analog equivalent of PLDs?",
+            "options": [
+                "A) DSPs",
+                "B) FPAAs",
+                "C) MCUs",
+                "D) Switches"
+            ],
+            "correct_answer": "B",
+            "explanation": "Field-programmable analog arrays (FPAAs).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 31,
+            "text": "What does HMI stand for?",
+            "options": [
+                "A) Human-Machine Integration",
+                "B) Human-Machine Interaction",
+                "C) High-Memory Interface",
+                "D) Hardware-Management Interface"
+            ],
+            "correct_answer": "B",
+            "explanation": "HMI is Human-Machine Interaction.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 32,
+            "text": "What are the three parts of HCI?",
+            "options": [
+                "A) Hardware, Software, Firmware",
+                "B) User, Computer, Interaction",
+                "C) Input, Output, Processing",
+                "D) Data, Info, Knowledge"
+            ],
+            "correct_answer": "B",
+            "explanation": "User, computer, and how they work together.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 33,
+            "text": "How do users interact with computers?",
+            "options": [
+                "A) Telepathy",
+                "B) Hardware (I/O) and GUI",
+                "C) Touching motherboard",
+                "D) Manual wiring"
+            ],
+            "correct_answer": "B",
+            "explanation": "Via I/O hardware and software interface (GUI).",
+            "difficulty": "easy"
+        },
+        {
+            "id": 34,
+            "text": "What is the goal of HCI?",
+            "options": [
+                "A) Eliminate computers",
+                "B) Make computers user-friendly",
+                "C) Increase complexity",
+                "D) Reduce speed"
+            ],
+            "correct_answer": "B",
+            "explanation": "HCI aims to make computers user-friendly.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 35,
+            "text": "Which is NOT a discipline contributing to HCI?",
+            "options": [
+                "A) Cognitive Psychology",
+                "B) Computer Science",
+                "C) Linguistics",
+                "D) Geology"
+            ],
+            "correct_answer": "D",
+            "explanation": "Geology is not listed.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 36,
+            "text": "What is a main advantage of HCI?",
+            "options": [
+                "A) Increased cost",
+                "B) Reduced design time and complexity",
+                "C) Harder to use",
+                "D) More training"
+            ],
+            "correct_answer": "B",
+            "explanation": "HCI reduces design time and integration complexity.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 37,
+            "text": "How does Cognitive Psychology contribute to HCI?",
+            "options": [
+                "A) Building code",
+                "B) Studying human limitations and learning",
+                "C) Designing hardware",
+                "D) Network analysis"
+            ],
+            "correct_answer": "B",
+            "explanation": "It studies human information processing.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 38,
+            "text": "Which discipline helps with voice user interfaces?",
+            "options": [
+                "A) CS",
+                "B) Linguistics",
+                "C) Human Factors",
+                "D) AI"
+            ],
+            "correct_answer": "B",
+            "explanation": "Linguistics handles natural language processing.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 39,
+            "text": "What is true about natural user interfaces?",
+            "options": [
+                "A) Outdated",
+                "B) Gaining attention for intuitive control",
+                "C) Only for games",
+                "D) Require coding knowledge"
+            ],
+            "correct_answer": "B",
+            "explanation": "Gestures and voice are intuitive and gaining attention.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 40,
+            "text": "Which is NOT an advantage of HCI?",
+            "options": [
+                "A) Simplicity",
+                "B) Ease of deployment",
+                "C) Cost savings",
+                "D) Increased complexity"
+            ],
+            "correct_answer": "D",
+            "explanation": "HCI reduces complexity.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 41,
+            "text": "Which is a 2019 emerging tech trend?",
+            "options": [
+                "A) Steam Engine",
+                "B) 5G Networks",
+                "C) Telegraph",
+                "D) Spinning Jenny"
+            ],
+            "correct_answer": "B",
+            "explanation": "5G is listed as a 2019 trend.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 42,
+            "text": "Who do emerging technologies affect?",
+            "options": [
+                "A) Only top 1% geniuses",
+                "B) Already shaping your life",
+                "C) No effect for 50 years",
+                "D) Only US businesses"
+            ],
+            "correct_answer": "B",
+            "explanation": "They are already shaping everyone's life.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 43,
+            "text": "What is the module's final message?",
+            "options": [
+                "A) Avoid technology",
+                "B) Adapt or die",
+                "C) Wait to mature",
+                "D) Fad"
+            ],
+            "correct_answer": "B",
+            "explanation": "The message is 'Adapt or die.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 44,
+            "text": "Which is NOT a future-shaping tech?",
+            "options": [
+                "A) Chatbots",
+                "B) VR",
+                "C) Blockchain",
+                "D) Steam Engine"
+            ],
+            "correct_answer": "D",
+            "explanation": "Steam Engine is historical.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 45,
+            "text": "What is an Ephemeral App?",
+            "options": [
+                "A) Permanent install",
+                "B) Temporary/short-term use app",
+                "C) No internet app",
+                "D) Only corporate app"
+            ],
+            "correct_answer": "B",
+            "explanation": "Ephemeral apps are short-term/temporary.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 46,
+            "text": "How is blockchain used in Ethiopian coffee?",
+            "options": [
+                "A) Mining crypto",
+                "B) Tracking supply chains for fair payments",
+                "C) Replacing coffee farming",
+                "D) Creating EthioCoin"
+            ],
+            "correct_answer": "B",
+            "explanation": "It tracks supply chains for authenticity and fairness.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 47,
+            "text": "What is blockchain described as?",
+            "options": [
+                "A) AI",
+                "B) Decentralized ledger",
+                "C) 5G",
+                "D) Digital Twin"
+            ],
+            "correct_answer": "B",
+            "explanation": "Blockchain is a decentralized ledger.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 48,
+            "text": "What is the purpose of Immersive Experiences?",
+            "options": [
+                "A) Replace classrooms",
+                "B) AR/VR in retail/education/entertainment",
+                "C) Create 5G",
+                "D) Build vehicles"
+            ],
+            "correct_answer": "B",
+            "explanation": "AR/VR combine for immersive environments.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 49,
+            "text": "Which Ethiopian institution uses VR for medical training?",
+            "options": [
+                "A) Ethiopian Airlines",
+                "B) Addis Ababa University",
+                "C) Commercial Bank",
+                "D) Ethio Telecom"
+            ],
+            "correct_answer": "B",
+            "explanation": "AAU uses VR for medical training.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 50,
+            "text": "Why is the 'top tier' myth wrong?",
+            "options": [
+                "A) True",
+                "B) Wrong because they shape everyday lives",
+                "C) Only geniuses use them",
+                "D) Only government uses them"
+            ],
+            "correct_answer": "B",
+            "explanation": "These techs shape everyday lives for everyone.",
+            "difficulty": "hard"
+        }
+    ]
+}

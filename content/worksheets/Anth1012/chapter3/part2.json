@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 3,
+    "title": "Part 2 Practice: Aspects of Culture & Cultural Unity/Variations",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What are the two most important aspects of culture according to the module?",
+            "options": [
+                "A) Religious and political.",
+                "B) Material and non-material culture.",
+                "C) Economic and social.",
+                "D) Historical and futuristic."
+            ],
+            "correct_answer": "B) Material and non-material culture.",
+            "explanation": "The module states: 'Two of the most important aspects of culture are material and nonmaterial culture.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Which of the following is an example of material culture?",
+            "options": [
+                "A) Language.",
+                "B) Beliefs and values.",
+                "C) Tools, buildings, roads, and automobiles.",
+                "D) Norms."
+            ],
+            "correct_answer": "C) Tools, buildings, roads, and automobiles.",
+            "explanation": "The module states: 'Material culture consists of human-made objects such as tools, implements, furniture, automobiles, buildings, dams, roads, bridges...'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What are the four common non-material cultural components found in all cultures?",
+            "options": [
+                "A) Tools, buildings, roads, and bridges.",
+                "B) Symbols, language, values, and norms.",
+                "C) Money, resources, power, and status.",
+                "D) Food, clothing, shelter, and transportation."
+            ],
+            "correct_answer": "B) Symbols, language, values, and norms.",
+            "explanation": "The module states: 'Even though the specifics of individual culture vary widely, all cultures have four common nonmaterial cultural components: symbols, language, value, and norms.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is a symbol in the context of culture?",
+            "options": [
+                "A) A physical object only.",
+                "B) Anything verbal or nonverbal that meaningfully represents something else for communication.",
+                "C) A type of language.",
+                "D) A form of government."
+            ],
+            "correct_answer": "B) Anything verbal or nonverbal that meaningfully represents something else for communication.",
+            "explanation": "The module states: 'A symbol is anything that meaningfully represents something else which people use to communicate with others. It is something verbal or nonverbal...'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the relationship between values and norms?",
+            "options": [
+                "A) Values are derived from norms.",
+                "B) Norms are derived from values; values provide ideals, while norms are specific behavioral rules.",
+                "C) They are the same thing.",
+                "D) Norms have no connection to values."
+            ],
+            "correct_answer": "B) Norms are derived from values; values provide ideals, while norms are specific behavioral rules.",
+            "explanation": "The module states: 'They are derived from value. Values provide ideals or beliefs about behavior but do not state explicitly how we should behave. Norms on the other hand, do have specific behavioral expectations.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the difference between folkways and mores?",
+            "options": [
+                "A) Folkways are stricter than mores.",
+                "B) Mores are much stronger norms essential to core values; folkways are ordinary norms not strictly enforced.",
+                "C) There is no difference.",
+                "D) Folkways are always enforced by law."
+            ],
+            "correct_answer": "B) Mores are much stronger norms essential to core values; folkways are ordinary norms not strictly enforced.",
+            "explanation": "The module states: 'Mores (pronounced MORE-rays) are much stronger norms than are folkways. Mores are norms that are believed to be essential to core values and we insist on conformity... Folkways: Norms guiding ordinary usages and conventions of everyday life. Folkways are norms that are not strictly enforced.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What are cultural universals according to George Murdock?",
+            "options": [
+                "A) Traits unique to one culture.",
+                "B) Customs and practices that occur across all societies, such as family, law, and religion.",
+                "C) Traits found only in Western cultures.",
+                "D) Traits that change every year."
+            ],
+            "correct_answer": "B) Customs and practices that occur across all societies, such as family, law, and religion.",
+            "explanation": "The module states: 'Anthropologist George Murdock (1945) compiled a list of over seventy cultural universals--customs and practices that occur across all societies. His categories included... social institutions (such as family, law, and religion).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What is a cultural particularity?",
+            "options": [
+                "A) A trait found in all cultures.",
+                "B) A unique cultural trait that is not widespread, specific to a few societies.",
+                "C) A trait found in many cultures.",
+                "D) A biological universal."
+            ],
+            "correct_answer": "B) A unique cultural trait that is not widespread, specific to a few societies.",
+            "explanation": "The module states: 'Particularities are unique to certain cultural tradition. It is a culture trait not widespread. Cultural particulars include the specific practices that distinguish cultures form one another... They occur rarely.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What are cultural generalities?",
+            "options": [
+                "A) Traits found in all cultures.",
+                "B) Cultural traits that occur in many societies but not in all societies.",
+                "C) Traits found in only one culture.",
+                "D) Biological traits."
+            ],
+            "correct_answer": "B) Cultural traits that occur in many societies but not in all societies.",
+            "explanation": "The module states: 'Generalities are cultural traits that occur in many societies but not in all societies.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is the role of sanctions in enforcing norms?",
+            "options": [
+                "A) Sanctions are only positive.",
+                "B) Sanctions are positive or negative reactions (approval or disapproval) to the ways people follow or break norms.",
+                "C) Sanctions are only monetary fines.",
+                "D) Sanctions are only physical punishment."
+            ],
+            "correct_answer": "B) Sanctions are positive or negative reactions (approval or disapproval) to the ways people follow or break norms.",
+            "explanation": "The module states: 'Norms are enforced by sanctions. Sociologists and anthropologists use the term sanctions to refer to positive or negative reactions to the ways in which people follow norms. The term positive sanction refers to an expression of approval given for following a norm, while a negative sanction is disapproval for breaking it.'",
+            "difficulty": "hard"
+        }
+    ]
+}

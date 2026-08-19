@@ -1,0 +1,147 @@
+{
+    "course_code": "GeES1011",
+    "chapter": 3,
+    "title": "Part 2 Practice: Southeastern Highlands and Lowlands",
+    "questions": [
+        {
+            "id": 1,
+            "text": "The SOUTHEASTERN HIGHLANDS are located:",
+            "diagram": null,
+            "options": [
+                "A) West of the Rift Valley",
+                "B) East of the Rift Valley",
+                "C) North of Lake Tana",
+                "D) South of Lake Turkana"
+            ],
+            "correct_answer": "B) East of the Rift Valley",
+            "explanation": "The SOUTHEASTERN HIGHLANDS (Arsi, Bale, Sidama, Hararge) are located EAST of the Rift Valley. The WESTERN HIGHLANDS (Tigray, North Central Massifs, Shewa, SW Highlands) are WEST of the Rift Valley. The Rift Valley separates the two.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "The SECOND HIGHEST mountain in Ethiopia is:",
+            "diagram": null,
+            "options": [
+                "A) Mount Chilalo",
+                "B) Mount Batu (4,307m)",
+                "C) Mount Zuqualla",
+                "D) Mount Entoto"
+            ],
+            "correct_answer": "B) Mount Batu (4,307m)",
+            "explanation": "MOUNT BATU in the Bale Massifs is Ethiopia's second highest peak at 4,307 meters (after Ras Dashen at 4,550m). Mount Chilalo is in Arsi, Zuqualla is in Shewa, and Entoto is near Addis Ababa — all lower than Batu.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 3,
+            "text": "Which highland is known for WHEAT and BARLEY production?",
+            "diagram": null,
+            "options": [
+                "A) Bale Highlands",
+                "B) Sidama Highlands",
+                "C) Arsi Highlands",
+                "D) Hararge Plateau"
+            ],
+            "correct_answer": "C) Arsi Highlands",
+            "explanation": "ARSI HIGHLANDS are known for WHEAT and BARLEY production due to their high elevation (2000-4000m) and fertile volcanic soils. They also contain Mount Chilalo. Bale is known for forests, Sidama for coffee, Hararge for chat.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "The BALE MOUNTAINS NATIONAL PARK is home to which endangered species?",
+            "diagram": null,
+            "options": [
+                "A) African elephant",
+                "B) Ethiopian wolf (rare endemic species)",
+                "C) Mountain gorilla",
+                "D) Bengal tiger"
+            ],
+            "correct_answer": "B) Ethiopian wolf (rare endemic species)",
+            "explanation": "BALE MOUNTAINS NATIONAL PARK is home to the ETHIOPIAN WOLF — one of the RAREST canines in the world and ENDEMIC to Ethiopia. The park also protects the Bale Massifs ecosystem. Mountain gorillas are in Central Africa, tigers in Asia.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "SIDAMA HIGHLANDS are famous for:",
+            "diagram": null,
+            "options": [
+                "A) Chat production",
+                "B) COFFEE production (arabica)",
+                "C) Wheat farming",
+                "D) Gold mining"
+            ],
+            "correct_answer": "B) COFFEE production (arabica)",
+            "explanation": "SIDAMA HIGHLANDS are one of Ethiopia's most important COFFEE producing regions, famous for ARABICA coffee grown in fertile volcanic soils. Chat is associated with Hararge, wheat with Arsi, and gold mining with western regions.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "The historic city of HARAR is located on which plateau?",
+            "diagram": null,
+            "options": [
+                "A) Arsi Highlands",
+                "B) Bale Highlands",
+                "C) Sidama Highlands",
+                "D) Hararge Plateau"
+            ],
+            "correct_answer": "D) Hararge Plateau",
+            "explanation": "HARAR (a UNESCO World Heritage city) is located on the HARARGE PLATEAU in eastern Ethiopia. The Hararge Plateau is composed of sandstone and limestone, and is known for CHAT (khat) production.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 7,
+            "text": "The GENALLE PLAIN is drained by which river?",
+            "diagram": null,
+            "options": [
+                "A) Wabishebelle River",
+                "B) Ghenalle River",
+                "C) Awash River",
+                "D) Omo River"
+            ],
+            "correct_answer": "B) Ghenalle River",
+            "explanation": "The GHENALLE PLAIN is drained by the GHENALLE RIVER in southeastern Ethiopia (Somali region). The Wabishebelle Plain is drained by the Wabishebelle River. Awash and Omo drain other regions.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "The WABISHEBELLE RIVER is significant because it is:",
+            "diagram": null,
+            "options": [
+                "A) The shortest river in Ethiopia",
+                "B) The longest river entirely within Ethiopia",
+                "C) A tributary of the Nile",
+                "D) The only navigable river"
+            ],
+            "correct_answer": "B) The longest river entirely within Ethiopia",
+            "explanation": "The WABISHEBELLE RIVER is the LONGEST river flowing ENTIRELY WITHIN Ethiopia's borders (about 1,200 km). The Abay (Blue Nile) is longer but flows into Sudan. Wabishebelle is vital for irrigation in the Somali region.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Examine the highlands map. Which area represents BALE?",
+            "diagram": "<svg width='350' height='180' viewBox='0 0 350 180'><rect width='350' height='180' fill='#111827' rx='8'/><rect x='50' y='40' width='60' height='40' rx='6' fill='#1a2332' stroke='#14b8a6' stroke-width='2'/><text x='80' y='65' text-anchor='middle' fill='#14b8a6' font-size='8' font-weight='bold'>A</text><rect x='120' y='60' width='60' height='40' rx='6' fill='#1a2332' stroke='#f43f5e' stroke-width='2'/><text x='150' y='85' text-anchor='middle' fill='#f43f5e' font-size='8' font-weight='bold'>B</text><rect x='190' y='50' width='60' height='40' rx='6' fill='#1a2332' stroke='#facc15' stroke-width='2'/><text x='220' y='75' text-anchor='middle' fill='#facc15' font-size='8' font-weight='bold'>C</text><rect x='260' y='40' width='60' height='40' rx='6' fill='#1a2332' stroke='#38bdf8' stroke-width='2'/><text x='290' y='65' text-anchor='middle' fill='#38bdf8' font-size='8' font-weight='bold'>D</text><text x='175' y='140' text-anchor='middle' fill='#94a3b8' font-size='9'>Which is Bale Highlands?</text></svg>",
+            "options": [
+                "A) A (green)",
+                "B) B (red)",
+                "C) C (yellow)",
+                "D) D (blue)"
+            ],
+            "correct_answer": "B) B (red)",
+            "explanation": "BALE HIGHLANDS are located SOUTH of Arsi and WEST of Hararge, represented by the RED block (B). The arrangement from north to south: Arsi (A) → Bale (B), with Sidama (C) and Hararge (D) in different positions.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "The Southeastern Lowlands are primarily used for:",
+            "diagram": null,
+            "options": [
+                "A) Dense forest logging",
+                "B) Pastoralism (livestock herding) and irrigation",
+                "C) Rice paddies",
+                "D) Industrial manufacturing"
+            ],
+            "correct_answer": "B) Pastoralism (livestock herding) and irrigation",
+            "explanation": "The SEMI-ARID Southeastern Lowlands are primarily used for PASTORALISM (livestock herding — camels, cattle, goats) and IRRIGATION agriculture along river valleys (Ghenalle and Wabishebelle). Dense forests are in SW Highlands, rice paddies are rare, and industrial manufacturing is minimal.",
+            "difficulty": "hard"
+        }
+    ]
+}

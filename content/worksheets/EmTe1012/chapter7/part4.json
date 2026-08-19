@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 7,
+    "title": "Part 4 Practice: Embedded Systems, Cybersecurity & Additive Manufacturing",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is an embedded system?",
+            "options": [
+                "A) A controller with a dedicated function within a larger mechanical or electrical system.",
+                "B) A general-purpose computer like a laptop.",
+                "C) A type of cloud storage.",
+                "D) A standalone gaming console."
+            ],
+            "correct_answer": "A) A controller with a dedicated function within a larger mechanical or electrical system.",
+            "explanation": "The module states: 'It is a controller with a dedicated function within a larger mechanical or electrical system, often with real-time computing constraints. It is embedded as part of a complete device.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What percentage of all microprocessors manufactured are used in embedded systems?",
+            "options": [
+                "A) 50%",
+                "B) 75%",
+                "C) 90%",
+                "D) 98%"
+            ],
+            "correct_answer": "D) 98%",
+            "explanation": "The module states: 'Ninety-eight percent of all microprocessors manufactured are used in embedded systems.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What are the advantages of embedded systems?",
+            "options": [
+                "A) High development effort and larger time to market.",
+                "B) Easily customizable, low power consumption, low cost, and enhanced performance.",
+                "C) High cost and high power consumption.",
+                "D) Slow performance and difficult to customize."
+            ],
+            "correct_answer": "B) Easily customizable, low power consumption, low cost, and enhanced performance.",
+            "explanation": "The module lists as advantages: 'Easily Customizable, Low power consumption, Low cost, Enhanced performance.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the correct order of components in the basic structure of an embedded system?",
+            "options": [
+                "A) Sensor → D-A Converter → Processor → A-D Converter → Actuator.",
+                "B) Sensor → A-D Converter → Processor → D-A Converter → Actuator.",
+                "C) Actuator → Processor → Sensor → Converter.",
+                "D) Processor → Sensor → Actuator → Converter."
+            ],
+            "correct_answer": "B) Sensor → A-D Converter → Processor → D-A Converter → Actuator.",
+            "explanation": "The module's Figure 7.6 shows the flow: 'Sensor → A-D Converter → Processor & ASICs → D-A Converter → Actuator.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the definition of cybersecurity according to the module?",
+            "options": [
+                "A) The protection of computer systems from theft, damage, and disruption of services.",
+                "B) The design of video games.",
+                "C) The creation of new hardware.",
+                "D) The removal of all computer systems."
+            ],
+            "correct_answer": "A) The protection of computer systems from theft, damage, and disruption of services.",
+            "explanation": "The module states: 'It is the protection of computer systems from the theft of or damage to their hardware, software, or electronic data, as well as from the disruption or misdirection of the services they provide.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Which cybersecurity threat is designed to extort money by blocking access to files until a ransom is paid?",
+            "options": [
+                "A) Malware",
+                "B) Phishing",
+                "C) Ransomware",
+                "D) Social engineering"
+            ],
+            "correct_answer": "C) Ransomware",
+            "explanation": "The module states: 'Ransomware: It is a type of malicious software. It is designed to extort money by blocking access to files or the computer system until the ransom is paid.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the most common type of cyber-attack mentioned in the module?",
+            "options": [
+                "A) Ransomware",
+                "B) Malware",
+                "C) Phishing",
+                "D) Social engineering"
+            ],
+            "correct_answer": "C) Phishing",
+            "explanation": "The module states: 'Phishing: It is the practice of sending fraudulent emails that resemble emails from reputable sources... It's the most common type of cyber-attack.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Which cybersecurity vendor is mentioned in the module?",
+            "options": [
+                "A) Google",
+                "B) Cisco, McAfee, and Trend Micro",
+                "C) Microsoft",
+                "D) Amazon"
+            ],
+            "correct_answer": "B) Cisco, McAfee, and Trend Micro",
+            "explanation": "The module states: 'Three commonly known cybersecurity vendors include Cisco, McAfee, and Trend Micro.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What is the definition of additive manufacturing according to ASTM?",
+            "options": [
+                "A) The process of cutting material away to create an object.",
+                "B) The process of using computer-aided design to build objects layer by layer.",
+                "C) The process of molding plastic in a factory.",
+                "D) The process of 3D scanning."
+            ],
+            "correct_answer": "B) The process of using computer-aided design to build objects layer by layer.",
+            "explanation": "The module states: 'The American Society for Testing and Materials (ASTM) equates the two terms in their definition: \"Additive manufacturing, also known as 3D printing, uses computer-aided design to build objects layer by layer.\"'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "How does Additive Manufacturing (AM) change the supply chain?",
+            "options": [
+                "A) It makes supply chains slower.",
+                "B) It transforms manufacturing by taking parts from the point of manufacture to the point of use, enabling customized parts on demand.",
+                "C) It eliminates all customization.",
+                "D) It only works for metal objects."
+            ],
+            "correct_answer": "B) It transforms manufacturing by taking parts from the point of manufacture to the point of use, enabling customized parts on demand.",
+            "explanation": "The module states: 'AM changes the way we think about inventory and supply chain, taking parts from the point of manufacture to the point of use... It enables customized parts, in volume, and involves stocking raw materials like filament and printing spare parts on demand.'",
+            "difficulty": "hard"
+        }
+    ]
+}

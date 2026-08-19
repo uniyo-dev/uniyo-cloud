@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 3,
+    "title": "Part 4 Practice: Ties That Connect: Marriage",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Why is it difficult to have a single universally applicable definition of marriage?",
+            "options": [
+                "A) Because marriage is the same in all cultures.",
+                "B) Because of cross-cultural variability and the existence of rare forms of marriage (e.g., Nuer woman marriage, fraternal polyandry).",
+                "C) Because marriage is only defined by law.",
+                "D) Because marriage does not exist in some cultures."
+            ],
+            "correct_answer": "B) Because of cross-cultural variability and the existence of rare forms of marriage (e.g., Nuer woman marriage, fraternal polyandry).",
+            "explanation": "The module states: 'There is no one universally applicable definition of marriage, because of the Cross-Cultural Variability in the existence of rare forms of marriage in specific societies.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the rule of exogamy?",
+            "options": [
+                "A) A rule requiring individuals to marry within their own group.",
+                "B) A rule prohibiting marriage with someone from one's own social group, often considered incest.",
+                "C) A rule allowing marriage with any relative.",
+                "D) A rule requiring marriage with a specific cousin."
+            ],
+            "correct_answer": "B) A rule prohibiting marriage with someone from one's own social group, often considered incest.",
+            "explanation": "The module states: 'Exogamy: This is the rule by which a man is not allowed to marry someone from his own social group. Such a prohibited union is designated as incest.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the primary adaptive value of exogamy according to Kottak?",
+            "options": [
+                "A) It keeps wealth within the family.",
+                "B) It links people into a wider social network, establishing alliances and providing protection.",
+                "C) It prevents all marriage.",
+                "D) It ensures everyone marries a relative."
+            ],
+            "correct_answer": "B) It links people into a wider social network, establishing alliances and providing protection.",
+            "explanation": "The module states: 'Kottak claimed also that exogamy has adaptive value, because it links people into a wider social network that nurtures, helps, and protects them in times of need pushing social organization outward, establishing and preserving alliances among groups.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "What is the rule of endogamy?",
+            "options": [
+                "A) A rule requiring individuals to marry within their own group.",
+                "B) A rule requiring marriage outside the group.",
+                "C) A rule allowing marriage with any relative.",
+                "D) A rule against marriage."
+            ],
+            "correct_answer": "A) A rule requiring individuals to marry within their own group.",
+            "explanation": "The module states: 'A rule of endogamy requires individuals to marry within their own group and forbids them to marry outside it.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 5,
+            "text": "What is the difference between cross cousins and parallel cousins?",
+            "options": [
+                "A) Cross cousins are children of siblings of the opposite sex; parallel cousins are children of siblings of the same sex.",
+                "B) They are the same.",
+                "C) Cross cousins are the same as parallel cousins.",
+                "D) Cross cousins are siblings of the same sex; parallel cousins are siblings of the opposite sex."
+            ],
+            "correct_answer": "A) Cross cousins are children of siblings of the opposite sex; parallel cousins are children of siblings of the same sex.",
+            "explanation": "The module states: 'Cross Cousins: are children of siblings of the opposite sex... Parallel Cousins: When marriage takes place between the children of the siblings of the same sex, it is called parallel cousin marriage.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the Levirate custom?",
+            "options": [
+                "A) A widower marries the sister of his deceased wife.",
+                "B) A widow is expected to marry the brother of her dead husband.",
+                "C) A woman marries multiple men.",
+                "D) A man marries multiple women."
+            ],
+            "correct_answer": "B) A widow is expected to marry the brother of her dead husband.",
+            "explanation": "The module states: 'The levirate- is the custom whereby a widow is expected to marry the brother (or some close male relative) of her dead husband.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the Sororate custom?",
+            "options": [
+                "A) A widower marries the sister of his deceased wife.",
+                "B) A widow marries the brother of her dead husband.",
+                "C) A man marries multiple women.",
+                "D) A woman marries multiple men."
+            ],
+            "correct_answer": "A) A widower marries the sister of his deceased wife.",
+            "explanation": "The module states: 'The sororate, which comes into play when a wife dies, is the practice of a widower's marrying the sister (or some close female relative) of his deceased wife.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What is the most common form of polygamy?",
+            "options": [
+                "A) Polyandry.",
+                "B) Polygyny.",
+                "C) Monogamy.",
+                "D) Serial monogamy."
+            ],
+            "correct_answer": "B) Polygyny.",
+            "explanation": "The module states: 'Polygyny is much more common.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What is bride wealth?",
+            "options": [
+                "A) Payment from the bride's family to the groom's family.",
+                "B) Compensation given by the family of the groom to the family of the bride upon marriage.",
+                "C) A gift exchanged equally between families.",
+                "D) The labor a groom provides to the bride's family."
+            ],
+            "correct_answer": "B) Compensation given by the family of the groom to the family of the bride upon marriage.",
+            "explanation": "The module states: 'Bride wealth: It is the compensation given upon marriage by the family of the groom to the family of the bride.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What does dowry correlate with according to the module?",
+            "options": [
+                "A) Higher female status.",
+                "B) Lower female status, as women are perceived as burdens.",
+                "C) Equal status.",
+                "D) No correlation."
+            ],
+            "correct_answer": "B) Lower female status, as women are perceived as burdens.",
+            "explanation": "The module states: 'Dowry, best known in India but also practiced in Europe, correlates with lower female status. Women are perceived as burdens.'",
+            "difficulty": "hard"
+        }
+    ]
+}

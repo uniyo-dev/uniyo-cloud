@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 1,
+    "title": "Part 2 Practice: Unique Features of Anthropology & Misconceptions",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the most distinguishing characteristic of anthropology regarding its scope?",
+            "options": [
+                "A) It only studies ancient civilizations.",
+                "B) It has a broad scope, interested in all human beings, everywhere, and throughout time.",
+                "C) It only studies Western societies.",
+                "D) It only focuses on biological aspects."
+            ],
+            "correct_answer": "B) It has a broad scope, interested in all human beings, everywhere, and throughout time.",
+            "explanation": "The module states: 'Perhaps the most distinguishing characteristic of anthropology... is its broad scope. It is interested in all human beings, whether contemporary or past; wherever they may be found.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What are the three unique approaches that anthropology follows as a guiding principle?",
+            "options": [
+                "A) Historical, Political, and Economic.",
+                "B) Holistic, Relativistic, and Comparative.",
+                "C) Biological, Cultural, and Social.",
+                "D) Scientific, Philosophical, and Artistic."
+            ],
+            "correct_answer": "B) Holistic, Relativistic, and Comparative.",
+            "explanation": "The module states: 'In its approach, anthropology is holistic, relativistic, and comparative, and it follows these unique approaches and perspectives as a guiding principle in studying human life.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "How does the holistic approach study a culture or society?",
+            "options": [
+                "A) By isolating one aspect and ignoring the rest.",
+                "B) By looking at all parts of the system and how those parts are interrelated.",
+                "C) By only studying economic systems.",
+                "D) By only studying biological traits."
+            ],
+            "correct_answer": "B) By looking at all parts of the system and how those parts are interrelated.",
+            "explanation": "The module states: 'Anthropology attempts to study a culture or society by looking at all parts of the system and how those parts are interrelated. The approach assumes that no single aspect of a culture or society can be understood unless its relationships to other aspects of the system are explored.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What does the relativistic approach emphasize in anthropological studies?",
+            "options": [
+                "A) That one culture is superior to another.",
+                "B) That any part of a culture must be viewed in its proper cultural context rather than from the viewpoint of other cultures.",
+                "C) That there is only one correct way to live.",
+                "D) That moral judgments are always absolute."
+            ],
+            "correct_answer": "B) That any part of a culture must be viewed in its proper cultural context rather than from the viewpoint of other cultures.",
+            "explanation": "The module states: 'This approach... inculcates the notion that any part of a culture such as an idea, a thing, or a behavior pattern must be viewed in its proper cultural context rather than from the viewpoint of other cultures.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the difference between the emic and etic perspectives?",
+            "options": [
+                "A) Emic is an outsider view; Etic is an insider view.",
+                "B) Emic is an insider view (categories of the people studied); Etic is an outsider view (anthropologist's categories).",
+                "C) Emic is biological; Etic is cultural.",
+                "D) Emic is historical; Etic is contemporary."
+            ],
+            "correct_answer": "B) Emic is an insider view (categories of the people studied); Etic is an outsider view (anthropologist's categories).",
+            "explanation": "The module states: 'The former (emic) refers to an insider view, which seeks to describe culture or social behavior in terms of the categories, concepts, and perceptions of the people being studied. By contrast, the latter (etic) refers to an outsider view, in which anthropologists use their own categories and concepts to describe the culture under analysis.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the hallmark of anthropological research?",
+            "options": [
+                "A) Laboratory experiments.",
+                "B) Ethnographic fieldwork.",
+                "C) Statistical surveys.",
+                "D) Computer simulations."
+            ],
+            "correct_answer": "B) Ethnographic fieldwork.",
+            "explanation": "The module states: 'Ethnographic fieldwork is the hallmark of anthropology and it is a way of seeing under the surface of a given social and cultural world.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is a common misconception about anthropology's area of study?",
+            "options": [
+                "A) That it studies all human societies.",
+                "B) That it is limited to the study of 'primitive' societies or rural areas.",
+                "C) That it studies urban areas.",
+                "D) That it includes all aspects of human life."
+            ],
+            "correct_answer": "B) That it is limited to the study of 'primitive' societies or rural areas.",
+            "explanation": "The module states: 'People usually misconceived anthropology either as the study of \"primitive\" societies or limited to the study of rural areas and rural people.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "How does anthropology view its role in development?",
+            "options": [
+                "A) Anthropologists preserve communities in museums.",
+                "B) Anthropologists support communities' capacity to empower themselves in development processes and assist their initiatives.",
+                "C) Anthropologists impose external policies on communities.",
+                "D) Anthropologists have no role in development."
+            ],
+            "correct_answer": "B) Anthropologists support communities' capacity to empower themselves in development processes and assist their initiatives.",
+            "explanation": "The module states: 'Anthropologists' duties are to support those communities' capacity to empower themselves in development processes. They assist peoples' initiatives instead of imposed policies and ideas coming from outside.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What does the comparative approach in anthropology involve?",
+            "options": [
+                "A) Comparing a culture only to itself.",
+                "B) Constantly comparing the customs of one society with those of others to understand differences and similarities.",
+                "C) Ignoring other cultures entirely.",
+                "D) Assuming all cultures are the same."
+            ],
+            "correct_answer": "B) Constantly comparing the customs of one society with those of others to understand differences and similarities.",
+            "explanation": "The module states: 'Anthropology is a comparative science that offers a unique, cross-cultural perspective; constantly comparing the customs of one society with those of others. It helps to understand differences and similarities among human beings across time and place.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Which of the following is NOT a misconception about anthropology?",
+            "options": [
+                "A) Anthropology is the study of 'Lucy/Dinkinesh' (fossil remains).",
+                "B) Anthropology is a complex, wide-ranging field that studies all human beings and groups.",
+                "C) Anthropology is limited to the study of 'primitive' societies.",
+                "D) Anthropology aims to preserve communities in museums."
+            ],
+            "correct_answer": "B) Anthropology is a complex, wide-ranging field that studies all human beings and groups.",
+            "explanation": "Option B is the correct understanding of anthropology, not a misconception. The module explicitly states: 'Anthropology is a complex, wide-ranging, and ever-changing field. It studies not only rural areas and rural people, but urban areas and urban life.'",
+            "difficulty": "hard"
+        }
+    ]
+}

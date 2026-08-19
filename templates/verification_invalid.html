@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Certificate Not Found - UNIYO{% endblock %}
+
+{% block content %}
+<div style="text-align:center; padding:60px 20px; max-width:500px; margin:0 auto;">
+    <div style="font-size:64px;">❌</div>
+    <h1 style="color:#EC4899;">Certificate Not Found</h1>
+    <p style="color:#94A3B8;">This certificate could not be verified. It may be invalid or has been revoked.</p>
+    <a href="{{ url_for('student.index') }}" class="btn btn-primary">Go Home</a>
+</div>
+{% endblock %}

@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 6,
+    "title": "Part 2 Practice: Digital Privacy & Accountability",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the definition of Digital Privacy according to the module?",
+            "options": [
+                "A) The protection of all public information.",
+                "B) The protection of personally identifiable information or business identifiable information collected from respondents.",
+                "C) The complete removal of all data from the internet.",
+                "D) The sharing of all personal data with companies."
+            ],
+            "correct_answer": "B) The protection of personally identifiable information or business identifiable information collected from respondents.",
+            "explanation": "The module states: 'Digital Privacy is the protection of personally identifiable information or business identifiable information that is collected from respondents through information collection activities or from other sources.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What are the three sub-related categories encompassed by Digital Privacy?",
+            "options": [
+                "A) Data Privacy, Network Privacy, and Device Privacy.",
+                "B) Information Privacy, Communication Privacy, and Individual Privacy.",
+                "C) Password Privacy, Email Privacy, and Location Privacy.",
+                "D) Public Privacy, Private Privacy, and Corporate Privacy."
+            ],
+            "correct_answer": "B) Information Privacy, Communication Privacy, and Individual Privacy.",
+            "explanation": "The module states: 'It is a collective definition that encompasses three sub-related categories; information privacy, communication privacy, and individual privacy.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the core concept of Information Privacy?",
+            "options": [
+                "A) That all information should be public.",
+                "B) That individuals should have the right to determine how their personally identifiable information is collected and used.",
+                "C) That companies can use any data without permission.",
+                "D) That passwords are not important."
+            ],
+            "correct_answer": "B) That individuals should have the right to determine how their personally identifiable information is collected and used.",
+            "explanation": "The module states: 'Information privacy is the notion that individuals should have the freedom, or right, to determine how their digital information, mainly that pertaining to personally identifiable information, is collected and used.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is a risk to Communication Privacy mentioned in the module?",
+            "options": [
+                "A) Hackers cannot intercept messages.",
+                "B) Communications can be intercepted via hacking methods, and false assumptions about privacy policies can lead to a lack of transparency.",
+                "C) Communication privacy is always 100% guaranteed.",
+                "D) Companies always disclose how they use communication data."
+            ],
+            "correct_answer": "B) Communications can be intercepted via hacking methods, and false assumptions about privacy policies can lead to a lack of transparency.",
+            "explanation": "The module states: 'Communications can be intercepted directly through various hacking methods... An example of this is a failure to read a company's privacy policy regarding communications on their platform could lead one to assume their communication is protected when it is in fact not.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is an example of a violation of Individual Privacy?",
+            "options": [
+                "A) Receiving a welcome email from a service you signed up for.",
+                "B) Receiving unwanted ads, spam, or a computer virus that forces you to take unwanted actions.",
+                "C) Receiving a phone call from a friend.",
+                "D) Viewing a public website."
+            ],
+            "correct_answer": "B) Receiving unwanted ads, spam, or a computer virus that forces you to take unwanted actions.",
+            "explanation": "The module states: 'An example of a digital breach of individual privacy would be an internet user receiving unwanted ads and emails/spam, or a computer virus that forces the user to take actions they otherwise wouldn't.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Which digital privacy principle states that only the minimal amount of necessary information should be collected?",
+            "options": [
+                "A) Transparency",
+                "B) Accuracy",
+                "C) Data Minimization",
+                "D) Security"
+            ],
+            "correct_answer": "C) Data Minimization",
+            "explanation": "The module states: 'Data Minimization: collect the minimal amount of information necessary from individuals and businesses consistent with the Department's mission and legal requirements.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the definition of Accountability according to the module?",
+            "options": [
+                "A) The ability to avoid responsibility.",
+                "B) The obligation of an individual or organization to account for its activities, accept responsibility, and disclose results in a transparent manner.",
+                "C) The right to hide all actions from the public.",
+                "D) The process of deleting all data."
+            ],
+            "correct_answer": "B) The obligation of an individual or organization to account for its activities, accept responsibility, and disclose results in a transparent manner.",
+            "explanation": "The module states: 'The obligation of an individual or organization to account for its activities, accept responsibility for them, and to disclose the results in a transparent manner.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What is the 'paradox of technology' mentioned in the module?",
+            "options": [
+                "A) That technology has no downsides.",
+                "B) That the very solutions used to manage risk, increase transparency, and build confidence are often themselves the source of new risks.",
+                "C) That technology is always perfect.",
+                "D) That technology does not require trust."
+            ],
+            "correct_answer": "B) That the very solutions used to manage risk, increase transparency, and build confidence are often themselves the source of new risks.",
+            "explanation": "The module states: 'But this can produce a paradox: the very solutions that can be used to better manage risk, increase transparency, and build confidence are often themselves the source of new risks, which may go unnoticed.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What danger does the module identify regarding human judgment and technology?",
+            "options": [
+                "A) Technology makes humans more connected.",
+                "B) Technology degrades people's willingness to judge and intervene because they feel less personally connected to consumer outcomes.",
+                "C) Technology always improves human judgment.",
+                "D) Technology has no effect on human judgment."
+            ],
+            "correct_answer": "B) Technology degrades people's willingness to judge and intervene because they feel less personally connected to consumer outcomes.",
+            "explanation": "The module states: 'There's a danger that the use of technology will degrade people's willingness to judge and intervene because they feel that they are less personally connected to consumers and consumer outcomes – the logic of the machine has taken over from individual responsibility.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Why is the 'Transparency' privacy principle important?",
+            "options": [
+                "A) To hide the purpose of data collection.",
+                "B) To provide clear notice about the purpose of collection and use, ensuring data is not used for other purposes unless authorized by law.",
+                "C) To collect all possible data without notice.",
+                "D) To ignore legal requirements."
+            ],
+            "correct_answer": "B) To provide clear notice about the purpose of collection and use, ensuring data is not used for other purposes unless authorized by law.",
+            "explanation": "The module states: 'Transparency: Notice covering the purpose of the collection and use of identifiable information will be provided in a clear manner. Information collected will not be used for any other purpose unless authorized or mandated by law.'",
+            "difficulty": "hard"
+        }
+    ]
+}

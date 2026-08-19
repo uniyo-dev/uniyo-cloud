@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 2,
+    "title": "Part 3 Practice: Race, Human Diversity, and Unit Summary",
+    "questions": [
+        {
+            "id": 1,
+            "text": "During the 16th century Age of Discovery, what did Europeans primarily base their racial classifications on?",
+            "options": [
+                "A) Language and religion.",
+                "B) Skin color and the lack of Christian/European culture.",
+                "C) Head shape and size.",
+                "D) Economic status."
+            ],
+            "correct_answer": "B) Skin color and the lack of Christian/European culture.",
+            "explanation": "The module states: 'Because skin color was so noticeable, many racial classifications were based only on that factor. Additionally, these unknown people weren't Christian and didn't share European culture and values, so the Europeans labeled them Savages.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What was the 'cephalic index' used for in the mid-1800s?",
+            "options": [
+                "A) To measure intelligence.",
+                "B) To describe the shape of the head (length vs. width) as a method of racial classification.",
+                "C) To measure height.",
+                "D) To determine skin color."
+            ],
+            "correct_answer": "B) To describe the shape of the head (length vs. width) as a method of racial classification.",
+            "explanation": "The module states: 'By the mid-1800s, naturalists began using a method of describing the shape of the head called the cephalic index, a ratio measurement of the length and width of the head.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the root problem of historical racial classification according to the module?",
+            "options": [
+                "A) It was based on accurate science.",
+                "B) Biological determinism—the false idea that physical traits are linked to behavior, intellect, and morals.",
+                "C) It was too complex.",
+                "D) It ignored language."
+            ],
+            "correct_answer": "B) Biological determinism—the false idea that physical traits are linked to behavior, intellect, and morals.",
+            "explanation": "The module states: 'The root problem of all this flailing around at the identification of human types was biological determinism, the idea that physical traits were somehow linked to behavior. Many thought traits like intellect, values, and morals were all products of one's race.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "Why is the concept of a 'master race' considered biologically suicidal?",
+            "options": [
+                "A) Because it is too expensive.",
+                "B) Because it leads to a genetically uniform and vulnerable population with no buffer against catastrophic diseases.",
+                "C) Because it creates too many people.",
+                "D) Because it is politically incorrect."
+            ],
+            "correct_answer": "B) Because it leads to a genetically uniform and vulnerable population with no buffer against catastrophic diseases.",
+            "explanation": "The module states: 'If all members of a population are the same, the population has no buffer against a particularly lethal or catastrophic disease... The idea of a master race is therefore suicidal.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What did Harvard anthropologist R.C. Lewontin conclude in his 1972 study on human racial classification?",
+            "options": [
+                "A) Race is biologically and genetically meaningful.",
+                "B) Human racial classification is of no social value, is destructive to human relations, and has virtually no genetic or taxonomic significance.",
+                "C) Race should be used to determine intelligence.",
+                "D) There are distinct biological races."
+            ],
+            "correct_answer": "B) Human racial classification is of no social value, is destructive to human relations, and has virtually no genetic or taxonomic significance.",
+            "explanation": "The module states: 'One thorough 1972 study by Harvard anthropologist R.C. Lewontin concluded that \"Human racial classification is of no social value and is positively destructive of social and human relations. Since such racial classification is now seen to be of virtually no genetic or taxonomic significance, either, no justification can be offered for its continuance.\"'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the anthropological consensus on human behavior and race?",
+            "options": [
+                "A) Behavior is genetically determined by race.",
+                "B) Most human behavior is culturally learned, not biologically determined. Genes are 99.9% identical across all humans.",
+                "C) Race determines intelligence.",
+                "D) There are significant species-level genetic differences between races."
+            ],
+            "correct_answer": "B) Most human behavior is culturally learned, not biologically determined. Genes are 99.9% identical across all humans.",
+            "explanation": "The module states: 'A look at the genes shows no significant species-level differences... Most of human behavior isn't biologically determined... most of it is culturally learned.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "What does Kluckhohn mean by saying 'Anthropology holds up a great mirror to man'?",
+            "options": [
+                "A) Anthropology only studies physical appearance.",
+                "B) Anthropology helps human beings look into themselves and understand their own infinite variety.",
+                "C) Anthropology is only about the past.",
+                "D) Anthropology is not useful."
+            ],
+            "correct_answer": "B) Anthropology helps human beings look into themselves and understand their own infinite variety.",
+            "explanation": "The module states: 'As Kluckhohn correctly pointed out, \"Anthropology holds up a great mirror to man and lets him look at himself in his infinite variety.\"'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "What does it mean for humans to be a 'bio-cultural animal'?",
+            "options": [
+                "A) Humans evolve only through biological factors.",
+                "B) Human biology and culture have evolved together over millions of years, affecting each other.",
+                "C) Humans are only cultural animals.",
+                "D) Humans do not evolve."
+            ],
+            "correct_answer": "B) Human biology and culture have evolved together over millions of years, affecting each other.",
+            "explanation": "The module states: 'Human biology and culture have evolved over millions of years and they will continue to evolve together. Human biology affects human culture; and similarly, human culture affects human biology.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Which of the following is NOT a characteristic of humanity listed in the module?",
+            "options": [
+                "A) Bipedalism (walking on two legs).",
+                "B) Relatively large brains for primates of our size.",
+                "C) Using modern language to communicate ideas.",
+                "D) Having a tail."
+            ],
+            "correct_answer": "D) Having a tail.",
+            "explanation": "The module lists the characteristics of humanity as: 'Bipedalism (walking on two legs); Relatively small teeth for primates of our size; Relatively large brains for primates of our size; Using modern language to communicate ideas; and Using complex sets of ideas called culture to survive.' Having a tail is not a human characteristic.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is the difference between anatomical modernity and behavioral modernity?",
+            "options": [
+                "A) They are the same thing.",
+                "B) Anatomical modernity refers to physical traits (bipedalism, brain size); behavioral modernity refers to the use of language and complex culture.",
+                "C) Anatomical modernity is cultural; behavioral modernity is biological.",
+                "D) There is no difference."
+            ],
+            "correct_answer": "B) Anatomical modernity refers to physical traits (bipedalism, brain size); behavioral modernity refers to the use of language and complex culture.",
+            "explanation": "The module states: 'Exactly when Homo sapiens evolved into Homo sapiens sapiens is a complex question based on when humans became anatomically modern and when they became behaviorally modern.' This refers to physical traits vs. cultural/behavioral traits.",
+            "difficulty": "hard"
+        }
+    ]
+}

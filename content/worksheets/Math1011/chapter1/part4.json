@@ -1,0 +1,134 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is an open proposition (or predicate)?",
+            "options": [
+                "A) A sentence that is always true.",
+                "B) A sentence that contains one or more variables and whose truth value depends on the values assigned to the variables.",
+                "C) A sentence that is always false.",
+                "D) A proposition without any variables."
+            ],
+            "correct_answer": "B) A sentence that contains one or more variables and whose truth value depends on the values assigned to the variables.",
+            "explanation": "The module states: 'An open statement (also called a predicate) is a sentence that contains one or more variables and whose truth value depends on the values assigned for the variables.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the universal set (universe of discourse)?",
+            "options": [
+                "A) The set of all true propositions.",
+                "B) The collection of all allowable values for the variable in an open sentence.",
+                "C) The set of all false propositions.",
+                "D) The set of all quantifiers."
+            ],
+            "correct_answer": "B) The collection of all allowable values for the variable in an open sentence.",
+            "explanation": "The module states: 'The collection of all allowable values for the variable in an open sentence is called the universal set (the universe of discourse) and denoted by U.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the symbol for the universal quantifier?",
+            "options": [
+                "A) $\\exists$",
+                "B) $\\forall$",
+                "C) $\\Rightarrow$",
+                "D) $\\Leftrightarrow$"
+            ],
+            "correct_answer": "B) $\\forall$",
+            "explanation": "The module states: 'The phrase \"for every x\" is called a universal quantifier... symbolize each by (∀x). Think of the symbol ∀ as an inverted A (representing all).'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the symbol for the existential quantifier?",
+            "options": [
+                "A) $\\forall$",
+                "B) $\\exists$",
+                "C) $\\Rightarrow$",
+                "D) $\\wedge$"
+            ],
+            "correct_answer": "B) $\\exists$",
+            "explanation": "The module states: 'The phrase \"there exists an x\" is called an existential quantifier... symbolize each by (∃x). Think of the symbol ∃ as the backwards capital E (representing exists).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "How do you show that a universal statement $(\\forall x)P(x)$ is false?",
+            "options": [
+                "A) By proving it is true for all $x$.",
+                "B) By finding at least one counterexample $a \\in U$ such that $P(a)$ is false.",
+                "C) By finding one example where $P(a)$ is true.",
+                "D) By using the existential quantifier."
+            ],
+            "correct_answer": "B) By finding at least one counterexample $a \\in U$ such that $P(a)$ is false.",
+            "explanation": "The module states: 'To show that (∀x)P(x) is F, it is sufficient to find at least one a ∈ U such that P(a) is F. Such an element a ∈ U is called a counter example.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the negation of $(\\forall x)P(x)$?",
+            "options": [
+                "A) $(\\forall x)\\neg P(x)$",
+                "B) $(\\exists x)\\neg P(x)$",
+                "C) $(\\exists x)P(x)$",
+                "D) $(\\forall x)P(x)$"
+            ],
+            "correct_answer": "B) $(\\exists x)\\neg P(x)$",
+            "explanation": "The module states: 'The negation of (∀x)P(x) is (∃x)¬P(x). Similarly, we can easily verify that the negation of (∃x)P(x) is (∀x)¬P(x).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the negation of $(\\exists x)P(x)$?",
+            "options": [
+                "A) $(\\forall x)\\neg P(x)$",
+                "B) $(\\exists x)\\neg P(x)$",
+                "C) $(\\forall x)P(x)$",
+                "D) $(\\exists x)P(x)$"
+            ],
+            "correct_answer": "A) $(\\forall x)\\neg P(x)$",
+            "explanation": "The module states: 'The negation of (∃x)P(x) is (∀x)¬P(x).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What does the quantified statement $(\\forall x)(\\exists y)P(x,y)$ mean?",
+            "options": [
+                "A) For every $y$, there exists an $x$ such that $P(x,y)$ holds.",
+                "B) For every $x$, there exists a $y$ such that $P(x,y)$ holds.",
+                "C) There exists an $x$ such that for all $y$, $P(x,y)$ holds.",
+                "D) For all $x$ and for all $y$, $P(x,y)$ holds."
+            ],
+            "correct_answer": "B) For every $x$, there exists a $y$ such that $P(x,y)$ holds.",
+            "explanation": "The module states: '(∀x)(∃y)P(x,y) means \"For every x there is a y such that P(x,y) holds.\"'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "In the statement $(\\forall x)(\\exists y)P(x,y)$, how does $y$ relate to $x$?",
+            "options": [
+                "A) $y$ is independent of $x$ and must work for all $x$.",
+                "B) The choice of $y$ is allowed to depend on $x$; the $y$ that works for one $x$ need not work for another.",
+                "C) $y$ is always equal to $x$.",
+                "D) $y$ is always greater than $x$."
+            ],
+            "correct_answer": "B) The choice of $y$ is allowed to depend on $x$; the $y$ that works for one $x$ need not work for another.",
+            "explanation": "The module states: 'In the statement (∀x)(∃y)P(x,y), the choice of y is allowed to depend on x—the y that works for one x need not work for another x.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is the correct negation of the statement: 'For every rational number $r$, the number $1/r$ is rational'?",
+            "options": [
+                "A) For every rational number $r$, the number $1/r$ is not rational.",
+                "B) There exists a rational number $r$ such that $1/r$ is not rational.",
+                "C) There exists a rational number $r$ such that $1/r$ is rational.",
+                "D) For every rational number $r$, $1/r$ is irrational."
+            ],
+            "correct_answer": "B) There exists a rational number $r$ such that $1/r$ is not rational.",
+            "explanation": "The module states: 'The negation of (∀x)P(x) is (∃x)¬P(x).' For the statement 'For every rational number r, 1/r is rational,' the negation is 'There exists a rational number r such that 1/r is not rational.'",
+            "difficulty": "hard"
+        }
+    ]
+}

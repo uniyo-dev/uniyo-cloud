@@ -1,0 +1,147 @@
+{
+    "course_code": "Econ1011",
+    "chapter": 2,
+    "title": "Part 2 Practice: Theory of Supply",
+    "questions": [
+        {
+            "id": 1,
+            "text": "The <strong>Law of Supply</strong> states that, holding other factors constant:",
+            "diagram": null,
+            "options": [
+                "A) As price increases, quantity supplied decreases",
+                "B) As price increases, quantity supplied increases",
+                "C) Price and quantity supplied have no relationship",
+                "D) Supply always decreases over time"
+            ],
+            "correct_answer": "B) As price increases, quantity supplied increases",
+            "explanation": "The Law of Supply states there is a DIRECT (positive) relationship between price and quantity supplied. When price goes UP, producers are willing to supply MORE because they can earn higher profits. This is why the supply curve slopes UPWARD. Think: if you're a coffee farmer and prices double, you'd want to sell more coffee!",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Examine the supply schedule below. What quantity is supplied at a price of 40 Birr?",
+            "diagram": "<svg width='320' height='200' viewBox='0 0 320 200'><rect width='320' height='200' fill='#111827' rx='8'/><text x='160' y='20' text-anchor='middle' fill='#f59e0b' font-size='12' font-weight='bold'>Supply Schedule for Coffee</text><rect x='60' y='35' width='200' height='140' fill='#1a2332' rx='4'/><text x='80' y='55' fill='#94a3b8' font-size='10'>Price (Birr/kg)</text><text x='180' y='55' fill='#94a3b8' font-size='10'>Qty Supplied (kg)</text><line x1='60' y1='65' x2='260' y2='65' stroke='#334155' stroke-width='1'/><text x='80' y='85' fill='#f8fafc' font-size='11'>10</text><text x='180' y='85' fill='#14b8a6' font-size='11' font-weight='bold'>20</text><text x='80' y='110' fill='#f8fafc' font-size='11'>20</text><text x='180' y='110' fill='#14b8a6' font-size='11' font-weight='bold'>40</text><text x='80' y='135' fill='#f8fafc' font-size='11'>30</text><text x='180' y='135' fill='#14b8a6' font-size='11' font-weight='bold'>60</text><text x='80' y='160' fill='#f8fafc' font-size='11'>40</text><text x='180' y='160' fill='#14b8a6' font-size='11' font-weight='bold'>80</text></svg>",
+            "options": [
+                "A) 20 kg",
+                "B) 40 kg",
+                "C) 60 kg",
+                "D) 80 kg"
+            ],
+            "correct_answer": "D) 80 kg",
+            "explanation": "Looking at the supply schedule, at a price of 40 Birr per kg, producers are willing to supply 80 kg of coffee. Notice the DIRECT relationship: as price increases (10 → 20 → 30 → 40), quantity supplied also increases (20 → 40 → 60 → 80). This illustrates the Law of Supply — higher prices incentivize producers to supply more.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 3,
+            "text": "If the supply function is Q<sub>s</sub> = 20 + 2P, what is the quantity supplied when P = 30?",
+            "diagram": null,
+            "options": [
+                "A) 20 units",
+                "B) 50 units",
+                "C) 80 units",
+                "D) 100 units"
+            ],
+            "correct_answer": "C) 80 units",
+            "explanation": "Substitute P = 30 into the supply function: Qs = 20 + 2(30) = 20 + 60 = 80 units. The supply function shows the mathematical relationship between price and quantity supplied. The coefficient '2' means that for every 1 Birr increase in price, quantity supplied increases by 2 units.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "Which of the following would cause the supply curve to <strong>SHIFT TO THE LEFT</strong>?",
+            "diagram": null,
+            "options": [
+                "A) Improvement in technology",
+                "B) Decrease in production costs",
+                "C) Increase in government taxes",
+                "D) Increase in the number of sellers"
+            ],
+            "correct_answer": "C) Increase in government taxes",
+            "explanation": "A LEFTWARD shift means supply DECREASES at every price level. Higher taxes increase production costs, making it less profitable for producers to supply at every price. This shifts the supply curve LEFT. Conversely, better technology, lower costs, and more sellers shift supply RIGHT (increase in supply).",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "If good weather conditions result in a bumper harvest of coffee, what happens to the supply curve for coffee?",
+            "diagram": "<svg width='320' height='200' viewBox='0 0 320 200'><rect width='320' height='200' fill='#111827' rx='8'/><line x1='50' y1='20' x2='50' y2='170' stroke='#38bdf8' stroke-width='2'/><line x1='50' y1='170' x2='290' y2='170' stroke='#38bdf8' stroke-width='2'/><line x1='80' y1='150' x2='250' y2='60' stroke='#14b8a6' stroke-width='3'/><line x1='120' y1='120' x2='290' y2='30' stroke='#f43f5e' stroke-width='3' stroke-dasharray='6,4'/><text x='180' y='130' fill='#14b8a6' font-size='11' font-weight='bold'>S1 (Before)</text><text x='220' y='65' fill='#f43f5e' font-size='11' font-weight='bold'>S2 (After)</text><text x='140' y='22' fill='#f59e0b' font-size='11' font-weight='bold'>Shift RIGHT →</text><text x='280' y='185' fill='#38bdf8' font-size='12' font-weight='bold'>Quantity</text><text x='10' y='25' fill='#38bdf8' font-size='12' font-weight='bold'>Price</text></svg>",
+            "options": [
+                "A) Supply shifts LEFT (decreases)",
+                "B) Supply shifts RIGHT (increases)",
+                "C) Supply remains unchanged",
+                "D) Supply becomes perfectly elastic"
+            ],
+            "correct_answer": "B) Supply shifts RIGHT (increases)",
+            "explanation": "Good weather conditions lead to a bumper harvest, meaning MORE coffee can be produced at every price level. This shifts the supply curve to the RIGHT. The diagram shows S1 shifting to S2 (rightward shift = increase in supply). Agricultural products are highly dependent on weather conditions.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "The government imposes a new TAX on cigarette producers. What happens to the supply of cigarettes?",
+            "diagram": null,
+            "options": [
+                "A) Supply increases (shifts right)",
+                "B) Supply decreases (shifts left)",
+                "C) Supply remains unchanged",
+                "D) Supply becomes perfectly elastic"
+            ],
+            "correct_answer": "B) Supply decreases (shifts left)",
+            "explanation": "A tax on producers increases their COSTS of production. With higher costs, producers are willing to supply LESS at every price level, shifting the supply curve LEFT. Taxes and subsidies are government policies that directly affect supply. Remember: TAX = supply decreases (left), SUBSIDY = supply increases (right).",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "If the price of a good increases by 20% and the quantity supplied increases by 10%, the price elasticity of supply is:",
+            "diagram": null,
+            "options": [
+                "A) 0.5 (Inelastic)",
+                "B) 1.0 (Unit Elastic)",
+                "C) 2.0 (Elastic)",
+                "D) 20 (Perfectly Elastic)"
+            ],
+            "correct_answer": "A) 0.5 (Inelastic)",
+            "explanation": "PES = % Change in Quantity Supplied / % Change in Price = +10% / +20% = 0.5. Since PES < 1, supply is INELASTIC. This means producers are NOT very responsive to price changes — a 20% price increase only causes a 10% increase in quantity supplied. This is common in agriculture where production takes time to adjust.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Which factor would make supply MORE elastic (more responsive to price changes)?",
+            "diagram": null,
+            "options": [
+                "A) Long time period for production adjustment",
+                "B) Difficulty in storing the product",
+                "C) Limited availability of raw materials",
+                "D) High barriers to entry"
+            ],
+            "correct_answer": "A) Long time period for production adjustment",
+            "explanation": "Supply is MORE elastic when producers have TIME to adjust their production. In the LONG RUN, producers can build new factories, hire more workers, or switch production — making them more responsive to price changes. In the SHORT RUN, supply is INELASTIC because it's hard to change production quickly.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "A movement ALONG the supply curve is caused by:",
+            "diagram": null,
+            "options": [
+                "A) A change in technology",
+                "B) A change in the price of the good itself",
+                "C) A change in production costs",
+                "D) A change in the number of sellers"
+            ],
+            "correct_answer": "B) A change in the price of the good itself",
+            "explanation": "MOVEMENT ALONG the supply curve is caused ONLY by a change in the PRICE of the good. When price rises, we move UP along the curve (higher quantity supplied). When price falls, we move DOWN along the curve (lower quantity supplied). Changes in technology, costs, or number of sellers cause the ENTIRE CURVE TO SHIFT.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "If the government provides a <strong>SUBSIDY</strong> to farmers, what happens to the supply of agricultural products?",
+            "diagram": null,
+            "options": [
+                "A) Supply decreases (shifts left)",
+                "B) Supply increases (shifts right)",
+                "C) Supply becomes perfectly inelastic",
+                "D) No change in supply"
+            ],
+            "correct_answer": "B) Supply increases (shifts right)",
+            "explanation": "A subsidy is a government payment to producers that REDUCES their production costs. With lower costs, producers can afford to supply MORE at every price level, shifting supply RIGHT. Subsidies are used to encourage production of essential goods. Example: Ethiopia subsidizes fertilizer for farmers to increase agricultural output.",
+            "difficulty": "medium"
+        }
+    ]
+}

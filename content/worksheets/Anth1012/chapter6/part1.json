@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 6,
+    "title": "Part 1 Practice: Indigenous Governance & Conflict Resolution Institutions",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the Oromo Gadaa system?",
+            "options": [
+                "A) A centralized political system with a king.",
+                "B) An age-grading institution with a complex system of administration, law-making, and dispute settlement, with power transferred every 8 years.",
+                "C) A religious institution.",
+                "D) A modern state court system."
+            ],
+            "correct_answer": "B) An age-grading institution with a complex system of administration, law-making, and dispute settlement, with power transferred every 8 years.",
+            "explanation": "The module states: 'The Gadaa system is 'an age grading institution of the Oromo that has a complex system of administration, law making and dispute settlement'... political power is transferred from one generation set (Luuba) to another every eight years.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the name of the law-making assembly of the Borana Oromo that is held every eight years?",
+            "options": [
+                "A) Ya'a.",
+                "B) Gumi Gaayo.",
+                "C) Dere Dubusha.",
+                "D) Abba Gada."
+            ],
+            "correct_answer": "B) Gumi Gaayo.",
+            "explanation": "The module states: 'Gumi gaayo, a law making assembly of the Borana Oromo, is a good example. Gumi gaayo is held every eight years to revising, adapting, making and publicizing the customary law (seera) and custom (aadaa) of the Oromo.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What are the three major components of customary justice systems in Ethiopia?",
+            "options": [
+                "A) State law, police, and courts.",
+                "B) Customary laws, council of elders, and customary courts.",
+                "C) Religious courts, state courts, and federal courts.",
+                "D) Parliament, executive, and judiciary."
+            ],
+            "correct_answer": "B) Customary laws, council of elders, and customary courts.",
+            "explanation": "The module states: 'With some exceptions, customary justice institutions include three major components. The three components are 1) customary laws, 2) council of elders, and 3) customary courts or assemblies.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "What is the 'dere woga' of the Gamo people?",
+            "options": [
+                "A) The council of elders.",
+                "B) The customary law of the land, a comprehensive body of rules governing inheritance, property, marriage, and conflict resolution.",
+                "C) The general assembly.",
+                "D) The king."
+            ],
+            "correct_answer": "B) The customary law of the land, a comprehensive body of rules governing inheritance, property, marriage, and conflict resolution.",
+            "explanation": "The module states: 'The literal meaning of Dere Woga is the law of the land. Dere Woga is a comprehensive body of rules and procedures that govern a wide range of issues including inheritance, property ownership, marriage and divorce, conflict resolution and gender division of labor.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is a key strength of customary justice institutions?",
+            "options": [
+                "A) They are very expensive.",
+                "B) They incur limited cost, are held in public spaces, focus on restoring community cohesion, and rely on respect for elders.",
+                "C) They exclude community participation.",
+                "D) They are only for wealthy individuals."
+            ],
+            "correct_answer": "B) They incur limited cost, are held in public spaces, focus on restoring community cohesion, and rely on respect for elders.",
+            "explanation": "The module states: 'Strengths of customary justice institutions: Incur limited cost in terms of time and resources/money;... Conflict resolution process are held in public spaces... Customary systems aimed at restoring community cohesion, social relations, collective spirit and social solidarity. Rely on respect for elders.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is a major limitation of customary justice institutions?",
+            "options": [
+                "A) They are too fast.",
+                "B) They are dominated by men and exclude women, and they are limited in resolving inter-ethnic conflicts.",
+                "C) They are too expensive.",
+                "D) They involve too many people."
+            ],
+            "correct_answer": "B) They are dominated by men and exclude women, and they are limited in resolving inter-ethnic conflicts.",
+            "explanation": "The module states: 'Limitations related to protecting and safeguarding women's rights. Indigenous justice institutions are dominated by men... Women are excluded from participation at customary courts and assemblies... Their potential in resolving inter-ethnic conflicts and restoring long-lasting peace is very limited.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "What is the Abbo Gereb institution?",
+            "options": [
+                "A) A customary court for the Gamo people.",
+                "B) An inter-ethnic conflict resolution institution in Rayya and Wajirat district, Southern Tigray, that settles disputes between Tigrayans and Afar.",
+                "C) A women's peacemaking institution.",
+                "D) A religious court."
+            ],
+            "correct_answer": "B) An inter-ethnic conflict resolution institution in Rayya and Wajirat district, Southern Tigray, that settles disputes between Tigrayans and Afar.",
+            "explanation": "The module states: 'Abbo Gereb is one of the indigenous institutions that address inter-ethnic conflicts. It is a dispute resolution institution in Rayya and Wajirat district, Southern Tigray... It serves to settle disputes between individuals or groups from highland areas of Tigray and lowland areas of Afar.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "What is the name of the inter-ethnic conflict resolution mechanism among the Afar?",
+            "options": [
+                "A) Gereb.",
+                "B) Edible.",
+                "C) Xinto.",
+                "D) Aboroge."
+            ],
+            "correct_answer": "C) Xinto.",
+            "explanation": "The module states: 'The mechanisms of inter-ethnic disputes have different names. It is called Xinto among the Afar, Edible among the Issa, Gereb among the Tigrayans, and Aboroge among the Amhara.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What is the highest body of the Gamo indigenous governance system?",
+            "options": [
+                "A) The dere cima.",
+                "B) The dere dubusha (general assembly of local people).",
+                "C) The ka'o (king).",
+                "D) The halaqa (elected leader)."
+            ],
+            "correct_answer": "B) The dere dubusha (general assembly of local people).",
+            "explanation": "The module states: 'The highest body of the indigenous governance is the dere dubusha, a general assembly of local people. The dere dubusha is responsible to make and revise customary laws, resolve major disputes that cannot be solved at the lower levels.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "How are customary laws typically transmitted in Ethiopian communities?",
+            "options": [
+                "A) Only through written documents.",
+                "B) Orally, though some have been published in recent years (e.g., the Sebat Bet Gurage Kitcha).",
+                "C) Only through the internet.",
+                "D) Through state legislation."
+            ],
+            "correct_answer": "B) Orally, though some have been published in recent years (e.g., the Sebat Bet Gurage Kitcha).",
+            "explanation": "The module states: 'In most cases, customary laws are available orally. Some customary laws are published in recent years. For example, the Sebat Bet Gurage published their customary law named Kitcha: The Gurage Customary Law in 1998.'",
+            "difficulty": "hard"
+        }
+    ]
+}

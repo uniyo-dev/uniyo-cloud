@@ -1,0 +1,158 @@
+<div class="lesson-section">
+    <h2>Chapter 4: Internet of Things (IoT)</h2>
+    <h3>Part 2: How IoT Works, Architecture, and Devices & Networks</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In this part, we dive into the technical side of IoT. We explore <strong>how IoT works</strong>, the <strong>4-layer architecture</strong> that defines its structure, and the <strong>devices and networks</strong> that make it all possible. Understanding these layers is essential to grasping how data flows from a sensor in the real world to a cloud platform for analysis.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Explain the general functioning of an IoT ecosystem.</li>
+            <li>Describe the 4-layer architecture of IoT (Sensing, Network, Data Processing, Application).</li>
+            <li>Classify sensors into Motion, Environmental, and Position sensors.</li>
+            <li>Identify the three main groups of IoT devices (Consumer, Enterprise, Industrial).</li>
+            <li>Understand the M4DN.IoT platform for device and network management.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>4.2. How does it work?</h4>
+
+    <p>An <strong>IoT ecosystem</strong> consists of <strong>web-enabled smart devices</strong> that use embedded processors, sensors, and communication hardware to <strong>collect, send, and act on data</strong> they acquire from their environments.</p>
+    
+    <p>IoT devices share the sensor data they collect by connecting to an <strong>IoT gateway</strong> or another edge device where data is either <strong>sent to the cloud to be analyzed</strong> or analyzed <strong>locally</strong>. Sometimes, these devices communicate with other related devices and act on the information they get from one another.</p>
+    
+    <p><strong>Autonomy:</strong> The devices do most of the work <strong>without human intervention</strong>, although people can interact with the devices. For instance, to set them up, give them instructions, or access the data.</p>
+
+    <div class="example-box">
+        <h4>💡 Real World Example (Ethiopia - Smart Water Management):</h4>
+        <p>In Addis Ababa, an IoT ecosystem for water management works as follows:</p>
+        <ul>
+            <li><strong>Smart Devices:</strong> Water flow sensors are installed in the city's main water pipes.</li>
+            <li><strong>Data Collection:</strong> These sensors measure water pressure and flow rate every second.</li>
+            <li><strong>IoT Gateway:</strong> The sensors send the data to a local gateway, which transmits it to the cloud.</li>
+            <li><strong>Data Processing:</strong> The cloud analyzes the data to detect leaks or predict pipe bursts.</li>
+            <li><strong>Action:</strong> If a leak is detected, the system automatically sends an alert to the maintenance crew, and in some cases, automatically closes a valve to prevent water loss.</li>
+        </ul>
+        <p>This entire process happens <strong>without human intervention</strong>, although engineers can monitor the system via a dashboard.</p>
+    </div>
+
+    <hr>
+
+    <h4>4.2.1. Architecture of IoT</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 4.6 (From Module):</strong>
+        <ul>
+            <li><em>There are four components in the IoT architecture. What are they?</em></li>
+            <li><em>Explain the functions of each layer of IoT.</em></li>
+            <li><em>What is the difference between the sensors used in IoT devices?</em></li>
+        </ul>
+    </div>
+
+    <p>In general, an IoT device can be explained as a <strong>network of things</strong> that consists of <strong>hardware, software, network connectivity, and sensors</strong>. Hence, the architecture of IoT devices comprises <strong>four major components</strong>: <strong>sensing, network, data processing, and application layers</strong>.</p>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="14" text-anchor="middle" font-weight="bold">4-Layer IoT Architecture</text>
+            
+            <rect x="60" y="50" width="280" height="30" fill="#14b8a6" rx="6"/>
+            <text x="200" y="69" fill="#111827" font-size="12" text-anchor="middle" font-weight="bold">1. Sensing Layer</text>
+            <text x="200" y="85" fill="#94a3b8" font-size="9" text-anchor="middle">(Sensors, Actuators, Camera, GPS)</text>
+
+            <rect x="60" y="95" width="280" height="30" fill="#facc15" rx="6"/>
+            <text x="200" y="114" fill="#111827" font-size="12" text-anchor="middle" font-weight="bold">2. Network Layer</text>
+            <text x="200" y="130" fill="#94a3b8" font-size="9" text-anchor="middle">(Wi-Fi, Bluetooth, Zigbee, LoRa, Cellular)</text>
+
+            <rect x="60" y="140" width="280" height="30" fill="#f43f5e" rx="6"/>
+            <text x="200" y="159" fill="#111827" font-size="12" text-anchor="middle" font-weight="bold">3. Data Processing Layer</text>
+            <text x="200" y="175" fill="#94a3b8" font-size="9" text-anchor="middle">(Decision making, Analytics, Storage)</text>
+
+            <rect x="60" y="185" width="280" height="30" fill="#f59e0b" rx="6"/>
+            <text x="200" y="204" fill="#111827" font-size="12" text-anchor="middle" font-weight="bold">4. Application Layer</text>
+            <text x="200" y="220" fill="#94a3b8" font-size="9" text-anchor="middle">(Smart Home, Smart City, Healthcare, Transport)</text>
+        </svg>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Layer</th><th>Function</th><th>Key Components</th></tr>
+            <tr>
+                <td><strong>1. Sensing Layer</strong></td>
+                <td>The main purpose of the sensing layer is to <strong>identify any phenomena in the devices' peripheral</strong> and obtain data from the real world. This layer consists of several sensors. Using multiple sensors for applications is one of the primary features of IoT devices. Sensors in IoT devices are usually integrated through <strong>sensor hubs</strong>. A sensor hub is a common connection point for multiple sensors that accumulate and forward sensor data to the processing unit. <strong>Actuators</strong> can also intervene to change the physical conditions that generate the data. An actuator might, for example, shut off a power supply, adjust an airflow valve, or move a robotic gripper.</td>
+                <td>Sensors, Actuators, Sensor hubs</td>
+            </tr>
+            <tr>
+                <td><strong>2. Network Layer</strong></td>
+                <td>The network layer acts as a <strong>communication channel</strong> to transfer data, collected in the sensing layer, to other connected devices. In IoT devices, the network layer is implemented by using <strong>diverse communication technologies</strong> (e.g., Wi-Fi, Bluetooth, Zigbee, Z-Wave, LoRa, cellular network, etc.) to allow data flow between other devices within the same network.</td>
+                <td>Wi-Fi, Bluetooth, Zigbee, LoRa, 5G</td>
+            </tr>
+            <tr>
+                <td><strong>3. Data Processing Layer</strong></td>
+                <td>The data processing layer consists of the <strong>main data processing unit</strong> of IoT devices. The data processing layer <strong>takes data collected in the sensing layer and analyzes the data to make decisions</strong> based on the result. In some IoT devices (e.g., smartwatch, smart home hub, etc.), the data processing layer also saves the result of the previous analysis to improve the user experience. This layer may share the result of data processing with other connected devices via the network layer.</td>
+                <td>CPU, GPU, Microcontrollers, Cloud servers</td>
+            </tr>
+            <tr>
+                <td><strong>4. Application Layer</strong></td>
+                <td>The application layer <strong>implements and presents the results</strong> of the data processing layer to accomplish disparate applications of IoT devices. The application layer is a <strong>user-centric layer</strong> that executes various tasks for the users. There exist diverse IoT applications, which include smart transportation, smart home, personal care, healthcare, etc.</td>
+                <td>Smart home apps, Health monitoring apps, City management dashboards</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #38bdf8;">
+        <strong>📌 Sensor Classification:</strong>
+        <p>Sensors in IoT devices can be classified into <strong>three broad categories</strong>:</p>
+        <ul>
+            <li><strong>A. Motion Sensors:</strong> Measure the change in motion as well as the orientation of the devices. There are two types of motion: <strong>linear motion</strong> (displacement) and <strong>angular motion</strong> (rotational displacement).</li>
+            <li><strong>B. Environmental Sensors:</strong> Sense the change in environmental parameters. Examples: Light sensors, Pressure sensors. The primary purpose is to help devices take <strong>autonomous decisions</strong> based on environmental changes (e.g., home automation, smart locks, smart lights).</li>
+            <li><strong>C. Position Sensors:</strong> Deal with the physical position and location of the device. Examples: Magnetic sensors (used as digital compasses), GPS (used for navigation).</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>4.2.2. Devices and Networks</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 4.7 (From Module):</strong>
+        <ul>
+            <li><em>List and discussed at least three examples of IoT devices and their application?</em></li>
+            <li><em>Dear leaner please make a note about Management for Device and Network in the Internet of Things (M4DN.IoT) later discussed in the group?</em></li>
+        </ul>
+    </div>
+
+    <p><strong>Device Categories:</strong> Connected devices are part of a scenario in which every device talks to other related devices in an environment to automate home and industrial tasks, and to communicate usable sensor data to users, businesses, and other interested parties. IoT devices are meant to work in concert for people at home, in industry, or in the enterprise. As such, the devices can be categorized into <strong>three main groups</strong>:</p>
+    
+    <ul>
+        <li><strong>Consumer:</strong> Connected devices include smart TVs, smart speakers, toys, wearables, and smart appliances.</li>
+        <li><strong>Enterprise:</strong> Smart meters, commercial security systems, and smart city technologies such as those used to monitor traffic and weather conditions.</li>
+        <li><strong>Industrial:</strong> Technologies including smart air conditioning, smart thermostats, smart lighting, and smart security, spanning home, enterprise, and industrial uses.</li>
+    </ul>
+
+    <p><strong>Example of Enterprise IoT:</strong> In an enterprise, smart sensors located in a conference room can help an employee locate and schedule an available room for a meeting, ensuring the proper room type, size, and features are available. When meeting attendees enter the room, the temperature will adjust according to the occupancy, and the lights will dim as the appropriate PowerPoint loads on the screen.</p>
+
+    <p><strong>IoT Network Management (M4DN.IoT):</strong></p>
+    <p>IoT networks typically include a number of devices with constrained resources (power, processing, memory) deployed over large areas. The efficient management of IoT networks requires considering both the constraints of low power IoT devices and the deployment complexity of the underlying communication infrastructure.</p>
+    
+    <p><strong>M4DN.IoT (Management for Device and Network in the Internet of Things)</strong> is a platform proposed for IoT networks and devices management. It integrates and controls the individual functionalities of the devices in an IoT network as well as the status and characteristics of this network. M4DN.IoT defines a management structure in <strong>two scopes</strong>:</p>
+    <ul>
+        <li><strong>Local management:</strong> The platform runs in the same environment as the devices.</li>
+        <li><strong>Remote management:</strong> The platform controls the devices in different networks.</li>
+    </ul>
+
+    <p><strong>Platform Structure:</strong> The structure of the platform is expandable, allowing the addition of new types of network devices or applications. In addition, the platform provides standard web services, such as <strong>device discovery, data storage, and user authorities</strong>, which are basic requirements for creating IoT applications.</p>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 2)</h4>
+        <ul>
+            <li><strong>IoT Ecosystem:</strong> Smart devices collect data via sensors, send via gateways, process in the cloud, and act without human intervention.</li>
+            <li><strong>4 Layers:</strong> Sensing (collects data) → Network (transmits data) → Data Processing (analyzes data) → Application (presents results to users).</li>
+            <li><strong>3 Sensor Types:</strong> Motion (linear/angular), Environmental (light/pressure), Position (GPS/Magnetic).</li>
+            <li><strong>3 Device Groups:</strong> Consumer (TVs, speakers), Enterprise (smart meters, security), Industrial (smart AC, lighting).</li>
+            <li><strong>M4DN.IoT:</strong> A platform for managing devices and networks with Local and Remote management scopes.</li>
+        </ul>
+    </div>
+</div>

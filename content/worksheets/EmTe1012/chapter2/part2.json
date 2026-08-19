@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 2,
+    "title": "Part 2 Practice: Data Types and their Representation",
+    "questions": [
+        {
+            "id": 1,
+            "text": "From a computer programming perspective, what is a data type?",
+            "options": [
+                "A) A physical storage device like a hard disk.",
+                "B) An attribute of data that tells the compiler or interpreter how the programmer intends to use the data.",
+                "C) A type of computer hardware.",
+                "D) A type of printer used for output."
+            ],
+            "correct_answer": "B) An attribute of data that tells the compiler or interpreter how the programmer intends to use the data.",
+            "explanation": "The module states: 'In computer science and computer programming, for instance, a data type is simply an attribute of data that tells the compiler or interpreter how the programmer intends to use the data.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Which data type is used to store a single character like 'A' or '$'?",
+            "options": [
+                "A) Integer (int)",
+                "B) Boolean (bool)",
+                "C) Character (char)",
+                "D) Floating-point (float)"
+            ],
+            "correct_answer": "C) Character (char)",
+            "explanation": "The module defines: 'Characters(char)- is used to store a single character'. Examples include 'A', 'b', '7', '$'.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "Which data type is used to store real numbers with decimal points, such as 3.14 or 1250.75?",
+            "options": [
+                "A) Integer (int)",
+                "B) Boolean (bool)",
+                "C) Character (char)",
+                "D) Floating-point (float)"
+            ],
+            "correct_answer": "D) Floating-point (float)",
+            "explanation": "The module defines: 'Floating-point numbers(float)- is used to store real numbers'. Examples include 3.14, 0.005, 1250.75.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "Which data type is restricted to only two values: true or false?",
+            "options": [
+                "A) Integer (int)",
+                "B) Boolean (bool)",
+                "C) Character (char)",
+                "D) String (string)"
+            ],
+            "correct_answer": "B) Boolean (bool)",
+            "explanation": "The module defines: 'Booleans(bool)- is used to represent restricted to one of two values: true or false.' This is the basis of all logical operations.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the fundamental difference between data and information?",
+            "options": [
+                "A) Data is always digital; information is always analog.",
+                "B) Data is raw unprocessed facts; information is processed data that is meaningful for decision-making.",
+                "C) Data is only used in computers; information is only used by humans.",
+                "D) There is no difference; they are the same thing."
+            ],
+            "correct_answer": "B) Data is raw unprocessed facts; information is processed data that is meaningful for decision-making.",
+            "explanation": "Activity 2.3 asks students to 'Discuss the main differences between data and information.' As established in Part 1, data is raw facts, while information is processed data with meaning and value for decision-making.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "From a data analytics perspective, which of the following is an example of structured data?",
+            "options": [
+                "A) A video file of a drone flight.",
+                "B) An Excel spreadsheet with farmer names and crop yields.",
+                "C) A JSON file from a weather station.",
+                "D) An audio recording of a meeting."
+            ],
+            "correct_answer": "B) An Excel spreadsheet with farmer names and crop yields.",
+            "explanation": "The module states: 'Structured data conforms to a tabular format... Common examples of structured data are Excel files or SQL databases.' Option A and D are unstructured. Option C is semi-structured.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is semi-structured data characterized by?",
+            "options": [
+                "A) A rigid, pre-defined tabular format.",
+                "B) Tags or other markers to separate semantic elements, making it self-describing.",
+                "C) Having no structure at all, like video or audio.",
+                "D) Being stored only in relational databases."
+            ],
+            "correct_answer": "B) Tags or other markers to separate semantic elements, making it self-describing.",
+            "explanation": "The module defines semi-structured data: 'contains tags or other markers to separate semantic elements and enforce hierarchies of records and fields within the data. Therefore, it is also known as a self-describing structure.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Which of the following is an example of unstructured data?",
+            "options": [
+                "A) An SQL database table.",
+                "B) A JSON file.",
+                "C) A video recording of a farm inspection.",
+                "D) An XML file containing weather data."
+            ],
+            "correct_answer": "C) A video recording of a farm inspection.",
+            "explanation": "The module states: 'Common examples of unstructured data include audio, video files or No-SQL databases.' Option A is structured. Options B and D are semi-structured.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "What is Metadata?",
+            "options": [
+                "A) Data that is too large to store.",
+                "B) Data about data, which provides additional context like date, location, or author.",
+                "C) A type of unstructured data.",
+                "D) Data that is encrypted for security."
+            ],
+            "correct_answer": "B) Data about data, which provides additional context like date, location, or author.",
+            "explanation": "The module defines: 'Metadata is data about data. It provides additional information about a specific set of data. In a set of photographs, for example, metadata could describe where and when the photos were taken.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Why is metadata frequently used by Big Data solutions for initial analysis?",
+            "options": [
+                "A) Because it is the only type of data available.",
+                "B) Because it provides quick context and structure (like dates and locations) to understand what data is available before deep processing.",
+                "C) Because it is easier to delete than other data types.",
+                "D) Because it is always stored in SQL databases."
+            ],
+            "correct_answer": "B) Because it provides quick context and structure (like dates and locations) to understand what data is available before deep processing.",
+            "explanation": "The module explains: 'Metadata then provides fields for dates and locations which, by themselves, can be considered structured data. Because of this reason, metadata is frequently used by Big Data solutions for initial analysis.'",
+            "difficulty": "hard"
+        }
+    ]
+}

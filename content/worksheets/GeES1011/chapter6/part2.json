@@ -1,0 +1,147 @@
+{
+  "course_code": "Geog1011",
+  "chapter": 6,
+  "title": "Part 2 Practice: Major Soil Types in Ethiopia",
+  "questions": [
+    {
+      "id": 1,
+      "text": "Which soil type in Ethiopia is characterized by its deep red color and is ideal for coffee cultivation?",
+      "diagram": null,
+      "options": [
+        "A) Vertisols",
+        "B) Nitisols",
+        "C) Cambisols",
+        "D) Solonchaks"
+      ],
+      "correct_answer": "B) Nitisols",
+      "explanation": "Correct: Nitisols (red soils) in western/southwestern highlands support coffee cultivation. A is wrong\u2014Vertisols are black soils for teff. C is wrong\u2014Cambisols are brown soils. D is wrong\u2014Solonchaks are saline and infertile.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "text": "Vertisols are most suitable for growing which Ethiopian staple crop?",
+      "diagram": null,
+      "options": [
+        "A) Coffee",
+        "B) Teff",
+        "C) Sugarcane",
+        "D) Cotton"
+      ],
+      "correct_answer": "B) Teff",
+      "explanation": "Correct: Vertisols (black soils) in northwestern/central highlands are ideal for teff. A is wrong\u2014coffee grows in Nitisols. C is wrong\u2014sugarcane grows in Fluvisols. D is wrong\u2014cotton grows in Fluvisols with irrigation.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "text": "Which soil type is found in Ethiopia's river valleys and supports irrigation agriculture?",
+      "diagram": null,
+      "options": [
+        "A) Nitisols",
+        "B) Vertisols",
+        "C) Fluvisols",
+        "D) Cambisols"
+      ],
+      "correct_answer": "C) Fluvisols",
+      "explanation": "Correct: Fluvisols (alluvial soils) are found in river valleys like Awash, Omo, and Blue Nile. A is wrong\u2014Nitisols are in highlands. B is wrong\u2014Vertisols are in highland plains. D is wrong\u2014Cambisols are widely distributed but not specific to valleys.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 4,
+      "text": "Which Ethiopian soil type is characterized by high shrink-swell capacity and self-cracking when dry?",
+      "diagram": null,
+      "options": [
+        "A) Nitisols",
+        "B) Vertisols",
+        "C) Fluvisols",
+        "D) Luvisols"
+      ],
+      "correct_answer": "B) Vertisols",
+      "explanation": "Correct: Vertisols have >50% clay causing shrink-swell and cracking. A is wrong\u2014Nitisols are stable. C is wrong\u2014Fluvisols don't crack. D is wrong\u2014Luvisols have moderate clay content.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 5,
+      "text": "Where are Solonchaks (saline soils) most commonly found in Ethiopia?",
+      "diagram": null,
+      "options": [
+        "A) Bale Mountains",
+        "B) Afar Depression and Rift Valley edges",
+        "C) Simien Mountains",
+        "D) Kaffa Region"
+      ],
+      "correct_answer": "B) Afar Depression and Rift Valley edges",
+      "explanation": "Correct: Solonchaks are found in Afar and Rift Valley edges due to high evaporation and salinity. A is wrong\u2014Bale has high rainfall. C is wrong\u2014Simien is cold and wet. D is wrong\u2014Kaffa has humid conditions with Nitisols.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 6,
+      "text": "Which soil type has the highest cation exchange capacity (CEC) among Ethiopian soils?",
+      "diagram": null,
+      "options": [
+        "A) Nitisols",
+        "B) Vertisols",
+        "C) Cambisols",
+        "D) Luvisols"
+      ],
+      "correct_answer": "B) Vertisols",
+      "explanation": "Correct: Vertisols have high CEC (40-60 cmol/kg) due to high clay content. A is wrong\u2014Nitisols have 20-30 cmol/kg. C is wrong\u2014Cambisols have 15-25 cmol/kg. D is wrong\u2014Luvisols have 15-25 cmol/kg.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 7,
+      "text": "What is the main challenge in cultivating Vertisols in Ethiopia?",
+      "diagram": null,
+      "options": [
+        "A) Low fertility",
+        "B) High salinity",
+        "C) Difficulty in cultivation (sticky when wet, hard when dry)",
+        "D) High acidity"
+      ],
+      "correct_answer": "C) Difficulty in cultivation (sticky when wet, hard when dry)",
+      "explanation": "Correct: Vertisols are challenging due to high clay content. A is wrong\u2014Vertisols are fertile. B is wrong\u2014Vertisols have low salinity. D is wrong\u2014Vertisols are neutral to slightly alkaline.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "text": "Which soil type is found on steep slopes and mountainous areas with very limited agricultural potential?",
+      "diagram": null,
+      "options": [
+        "A) Lithosols",
+        "B) Nitisols",
+        "C) Vertisols",
+        "D) Fluvisols"
+      ],
+      "correct_answer": "A) Lithosols",
+      "explanation": "Correct: Lithosols are shallow, stony soils on steep slopes with limited agricultural potential. B is wrong\u2014Nitisols are deep fertile soils. C is wrong\u2014Vertisols are fertile highland soils. D is wrong\u2014Fluvisols are fertile valley soils.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 9,
+      "text": "The Awash River Valley's agricultural success is primarily due to which soil type?",
+      "diagram": null,
+      "options": [
+        "A) Vertisols",
+        "B) Fluvisols",
+        "C) Lithosols",
+        "D) Xerosols"
+      ],
+      "correct_answer": "B) Fluvisols",
+      "explanation": "Correct: Awash Valley has Fluvisols (alluvial soils) from river deposits. A is wrong\u2014Vertisols are in highlands. C is wrong\u2014Lithosols are on steep slopes. D is wrong\u2014Xerosols are arid soils.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 10,
+      "text": "Which Ethiopian soil type requires liming and fertilization to improve agricultural productivity?",
+      "diagram": null,
+      "options": [
+        "A) Vertisols",
+        "B) Acrisols",
+        "C) Fluvisols",
+        "D) Cambisols"
+      ],
+      "correct_answer": "B) Acrisols",
+      "explanation": "Correct: Acrisols are strongly weathered, acidic, and low in nutrients, requiring liming and fertilization. A is wrong\u2014Vertisols are fertile. C is wrong\u2014Fluvisols are fertile. D is wrong\u2014Cambisols have moderate fertility.",
+      "difficulty": "hard"
+    }
+  ]
+}

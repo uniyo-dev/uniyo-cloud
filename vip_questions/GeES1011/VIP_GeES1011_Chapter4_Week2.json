@@ -1,0 +1,288 @@
+{
+    "course_code": "GeES1011",
+    "chapter_number": 4,
+    "week_number": 2,
+    "title": "VIP Chapter 4 Week 2: Water Resources",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Ethiopia's hydropower potential ranks which in Africa?",
+            "diagram": null,
+            "options": [
+                "A) 1st",
+                "B) 2nd",
+                "C) 3rd",
+                "D) 5th"
+            ],
+            "correct_answer": "B) 2nd",
+            "explanation": "Ethiopia = 2nd highest hydropower potential in Africa (after DRC).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "The Abay River basin has annual runoff of:",
+            "diagram": null,
+            "options": [
+                "A) 10 BCM",
+                "B) 54.5 BCM",
+                "C) 100 BCM",
+                "D) 5 BCM"
+            ],
+            "correct_answer": "B) 54.5 BCM",
+            "explanation": "Abay basin = 54.5 billion cubic meters annual runoff.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "Lake Tana contains how many islands?",
+            "diagram": null,
+            "options": [
+                "A) 10",
+                "B) 25",
+                "C) 37",
+                "D) 50"
+            ],
+            "correct_answer": "C) 37",
+            "explanation": "Lake Tana has 37 islands with historic monasteries.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "Lake Shalla is known for being:",
+            "diagram": null,
+            "options": [
+                "A) Freshwater",
+                "B) A soda lake (high mineral content)",
+                "C) Safe for swimming",
+                "D) Man-made"
+            ],
+            "correct_answer": "B) A soda lake (high mineral content)",
+            "explanation": "Lake Shalla = soda lake with high mineral content.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Gilgel Gibe III dam capacity is:",
+            "diagram": null,
+            "options": [
+                "A) 300 MW",
+                "B) 1,870 MW",
+                "C) 6,450 MW",
+                "D) 10,000 MW"
+            ],
+            "correct_answer": "B) 1,870 MW",
+            "explanation": "Gilgel Gibe III = 1,870 MW (Omo River).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "Groundwater is accessed through:",
+            "diagram": null,
+            "options": [
+                "A) Rainwater harvesting only",
+                "B) Wells and springs",
+                "C) Desalination",
+                "D) Rivers only"
+            ],
+            "correct_answer": "B) Wells and springs",
+            "explanation": "Groundwater accessed via wells and springs.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "Lake Chamo is known for:",
+            "diagram": null,
+            "options": [
+                "A) Flamingos",
+                "B) Crocodiles and hippos",
+                "C) Ice skating",
+                "D) Coral reefs"
+            ],
+            "correct_answer": "B) Crocodiles and hippos",
+            "explanation": "Lake Chamo = crocodiles and hippos (southern Rift).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "The Awash Valley is important for:",
+            "diagram": null,
+            "options": [
+                "A) Gold mining",
+                "B) Sugarcane and cotton irrigation",
+                "C) Coffee growing",
+                "D) Salt mining"
+            ],
+            "correct_answer": "B) Sugarcane and cotton irrigation",
+            "explanation": "Awash Valley = irrigation for sugarcane and cotton.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Lake Abijatta is known for:",
+            "diagram": null,
+            "options": [
+                "A) Deep water",
+                "B) Flamingos and soda deposits",
+                "C) Bilharzia-free swimming",
+                "D) Hydroelectric dams"
+            ],
+            "correct_answer": "B) Flamingos and soda deposits",
+            "explanation": "Lake Abijatta = shallow soda lake with flamingos.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Ethiopia's irrigation potential is:",
+            "diagram": null,
+            "options": [
+                "A) 1 million ha",
+                "B) 3.7 million ha",
+                "C) 10 million ha",
+                "D) 500,000 ha"
+            ],
+            "correct_answer": "B) 3.7 million ha",
+            "explanation": "Irrigation potential = 3.7 million hectares.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "Tekeze Dam capacity is:",
+            "diagram": null,
+            "options": [
+                "A) 300 MW",
+                "B) 1,870 MW",
+                "C) 6,450 MW",
+                "D) 100 MW"
+            ],
+            "correct_answer": "A) 300 MW",
+            "explanation": "Tekeze Dam = 300 MW (Tekeze River).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "Crater lakes are formed by:",
+            "diagram": null,
+            "options": [
+                "A) River erosion",
+                "B) Volcanic activity",
+                "C) Glacial movement",
+                "D) Wind erosion"
+            ],
+            "correct_answer": "B) Volcanic activity",
+            "explanation": "Crater lakes = water in volcanic craters.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "Lake Wonchi is a:",
+            "diagram": null,
+            "options": [
+                "A) Rift Valley lake",
+                "B) Crater lake",
+                "C) Highland lake",
+                "D) Artificial lake"
+            ],
+            "correct_answer": "B) Crater lake",
+            "explanation": "Lake Wonchi = crater lake (Oromia).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "Wabishebelle River annual runoff is:",
+            "diagram": null,
+            "options": [
+                "A) 3.6 BCM",
+                "B) 54.5 BCM",
+                "C) 17.9 BCM",
+                "D) 23.6 BCM"
+            ],
+            "correct_answer": "A) 3.6 BCM",
+            "explanation": "Wabishebelle = 3.6 BCM (drier region).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "Omo-Ghibe annual runoff is:",
+            "diagram": null,
+            "options": [
+                "A) 3.6 BCM",
+                "B) 17.9 BCM",
+                "C) 54.5 BCM",
+                "D) 8.2 BCM"
+            ],
+            "correct_answer": "B) 17.9 BCM",
+            "explanation": "Omo-Ghibe = 17.9 BCM.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 16,
+            "text": "Ethiopia's groundwater is MOST important in:",
+            "diagram": null,
+            "options": [
+                "A) Highlands",
+                "B) Dry regions (Afar, Somali)",
+                "C) Forest areas",
+                "D) Lake areas"
+            ],
+            "correct_answer": "B) Dry regions (Afar, Somali)",
+            "explanation": "Groundwater crucial in arid regions.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "Lake Ziway is known for:",
+            "diagram": null,
+            "options": [
+                "A) Salt production",
+                "B) Fishing and irrigation",
+                "C) Gold mining",
+                "D) Hydroelectric dams"
+            ],
+            "correct_answer": "B) Fishing and irrigation",
+            "explanation": "Lake Ziway = freshwater, fishing, irrigation.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "The Baro-Akobo basin annual runoff is:",
+            "diagram": null,
+            "options": [
+                "A) 8.2 BCM",
+                "B) 23.6 BCM",
+                "C) 54.5 BCM",
+                "D) 5.9 BCM"
+            ],
+            "correct_answer": "B) 23.6 BCM",
+            "explanation": "Baro-Akobo = 23.6 BCM.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "Which lake is SAFE for swimming?",
+            "diagram": null,
+            "options": [
+                "A) Lake Abijatta",
+                "B) Lake Langano",
+                "C) Lake Shalla",
+                "D) Lake Chamo"
+            ],
+            "correct_answer": "B) Lake Langano",
+            "explanation": "Lake Langano = bilharzia-free, safe for swimming.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "Ethiopia's water development is currently at:",
+            "diagram": null,
+            "options": [
+                "A) More than 50%",
+                "B) Less than 10%",
+                "C) About 75%",
+                "D) 100%"
+            ],
+            "correct_answer": "B) Less than 10%",
+            "explanation": "Less than 10% of hydropower and irrigation developed.",
+            "difficulty": "hard"
+        }
+    ]
+}

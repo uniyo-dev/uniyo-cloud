@@ -1,0 +1,147 @@
+{
+    "course_code": "Econ1011",
+    "chapter": 4,
+    "title": "Part 2 Practice: Theory of Costs",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Which of the following is a FIXED COST in the short run?",
+            "diagram": null,
+            "options": [
+                "A) Raw materials",
+                "B) Factory rent",
+                "C) Hourly wages for workers",
+                "D) Electricity used in production"
+            ],
+            "correct_answer": "B) Factory rent",
+            "explanation": "FIXED COSTS do NOT change with the level of output. Factory RENT is the same whether you produce 10 units or 10,000 units. Raw materials, hourly wages, and electricity are VARIABLE COSTS because they increase as production increases.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Total Cost (TC) equals:",
+            "diagram": null,
+            "options": [
+                "A) TFC + TVC",
+                "B) TFC - TVC",
+                "C) TFC × TVC",
+                "D) TFC / TVC"
+            ],
+            "correct_answer": "A) TFC + TVC",
+            "explanation": "Total Cost = Total Fixed Cost + Total Variable Cost. This is the fundamental cost equation. TFC is constant regardless of output, while TVC increases with output. TC starts at TFC (when Q=0) and increases as production grows.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "Examine the cost table. What is the Marginal Cost of producing the 4th unit?",
+            "diagram": "<svg width='320' height='200' viewBox='0 0 320 200'><rect width='320' height='200' fill='#111827' rx='8'/><text x='160' y='25' text-anchor='middle' fill='#f59e0b' font-size='13' font-weight='bold'>Cost Schedule</text><rect x='30' y='40' width='260' height='130' fill='#1a2332' rx='4'/><text x='50' y='60' fill='#94a3b8' font-size='10'>Q</text><text x='100' y='60' fill='#94a3b8' font-size='10'>TC</text><text x='160' y='60' fill='#94a3b8' font-size='10'>MC</text><line x1='30' y1='70' x2='290' y2='70' stroke='#334155' stroke-width='1'/><text x='50' y='90' fill='#f8fafc' font-size='11'>1</text><text x='100' y='90' fill='#f8fafc' font-size='11'>150</text><text x='160' y='90' fill='#f8fafc' font-size='11'>50</text><text x='50' y='115' fill='#f8fafc' font-size='11'>2</text><text x='100' y='115' fill='#f8fafc' font-size='11'>190</text><text x='160' y='115' fill='#f8fafc' font-size='11'>40</text><text x='50' y='140' fill='#f8fafc' font-size='11'>3</text><text x='100' y='140' fill='#f8fafc' font-size='11'>220</text><text x='160' y='140' fill='#f8fafc' font-size='11'>30</text><text x='50' y='165' fill='#f8fafc' font-size='11'>4</text><text x='100' y='165' fill='#f8fafc' font-size='11'>260</text><text x='160' y='165' fill='#f8fafc' font-size='11'>?</text></svg>",
+            "options": [
+                "A) 30",
+                "B) 40",
+                "C) 50",
+                "D) 60"
+            ],
+            "correct_answer": "B) 40",
+            "explanation": "Marginal Cost = Change in TC / Change in Q = TC(4) - TC(3) = 260 - 220 = 40. The 4th unit costs an additional 40 Birr to produce. MC shows the EXTRA cost of producing ONE MORE unit.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "Average Fixed Cost (AFC) always DECREASES as output increases because:",
+            "diagram": null,
+            "options": [
+                "A) Fixed costs increase with output",
+                "B) The same fixed cost is spread over more units",
+                "C) Variable costs decrease",
+                "D) Total costs decrease"
+            ],
+            "correct_answer": "B) The same fixed cost is spread over more units",
+            "explanation": "AFC = TFC / Q. Since TFC is CONSTANT and Q is INCREASING, AFC always DECREASES. Example: If TFC = 100 Birr, at Q=1, AFC=100; at Q=10, AFC=10; at Q=100, AFC=1. This is called 'spreading overhead.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "Examine the cost curves. Where does MC intersect ATC?",
+            "diagram": "<svg width='350' height='200' viewBox='0 0 350 200'><rect width='350' height='200' fill='#111827' rx='8'/><line x1='50' y1='170' x2='330' y2='170' stroke='#38bdf8' stroke-width='2'/><line x1='50' y1='20' x2='50' y2='170' stroke='#38bdf8' stroke-width='2'/><path d='M 50 100 Q 130 130 200 60 Q 280 20 330 25' stroke='#facc15' stroke-width='3' fill='none'/><text x='280' y='30' fill='#facc15' font-size='11' font-weight='bold'>MC</text><path d='M 50 150 Q 170 100 330 50' stroke='#14b8a6' stroke-width='2' stroke-dasharray='6,4'/><text x='280' y='65' fill='#14b8a6' font-size='11' font-weight='bold'>ATC</text><circle cx='190' cy='80' r='5' fill='#f43f5e'/><text x='200' y='75' fill='#f43f5e' font-size='10'>Minimum ATC</text><text x='320' y='185' fill='#38bdf8' font-size='12' font-weight='bold'>Q</text></svg>",
+            "options": [
+                "A) At ATC's maximum point",
+                "B) At ATC's MINIMUM point",
+                "C) At Q = 0",
+                "D) MC never intersects ATC"
+            ],
+            "correct_answer": "B) At ATC's MINIMUM point",
+            "explanation": "Marginal Cost intersects ATC at ATC's MINIMUM point. This is a critical economic principle: when MC is BELOW ATC, ATC is falling; when MC is ABOVE ATC, ATC is rising. MC always crosses ATC at its lowest point.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "If TFC = 100 and TVC = 200 when Q = 10, what is ATC?",
+            "diagram": null,
+            "options": [
+                "A) 10",
+                "B) 20",
+                "C) 30",
+                "D) 300"
+            ],
+            "correct_answer": "C) 30",
+            "explanation": "ATC = TC / Q = (TFC + TVC) / Q = (100 + 200) / 10 = 300 / 10 = 30 Birr per unit. This means each unit costs 30 Birr on average to produce.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "When Marginal Product (MP) is RISING, Marginal Cost (MC) is:",
+            "diagram": null,
+            "options": [
+                "A) Rising",
+                "B) Falling",
+                "C) Constant",
+                "D) Zero"
+            ],
+            "correct_answer": "B) Falling",
+            "explanation": "MP and MC have an INVERSE relationship. When MP is RISING, workers are becoming MORE productive, so the cost per additional unit (MC) is FALLING. When MP is at MAXIMUM, MC is at MINIMUM. When MP FALLS, MC RISES.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "The MC curve is U-shaped because of:",
+            "diagram": null,
+            "options": [
+                "A) The Law of Diminishing Returns",
+                "B) Fixed costs",
+                "C) Government regulation",
+                "D) Market competition"
+            ],
+            "correct_answer": "A) The Law of Diminishing Returns",
+            "explanation": "MC is U-shaped due to the LAW OF DIMINISHING RETURNS. Initially, MC falls as workers become more productive (specialization). But beyond a point, adding more workers to fixed capital reduces productivity, so MC rises. The U-shape mirrors the inverse of the MP curve (which is inverted U).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Which cost curve is HORIZONTAL (doesn't change with output)?",
+            "diagram": null,
+            "options": [
+                "A) Total Variable Cost",
+                "B) Total Fixed Cost",
+                "C) Total Cost",
+                "D) Marginal Cost"
+            ],
+            "correct_answer": "B) Total Fixed Cost",
+            "explanation": "TFC is HORIZONTAL (constant) because fixed costs don't change with output. Even at Q=0, TFC exists (you still pay rent). On a graph, TFC is a horizontal straight line. TVC and TC slope upward as output increases.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 10,
+            "text": "If TVC = 0 when Q = 0, what does this imply?",
+            "diagram": null,
+            "options": [
+                "A) Variable costs exist even without production",
+                "B) No variable costs are incurred when nothing is produced",
+                "C) Fixed costs are zero",
+                "D) Total cost is zero"
+            ],
+            "correct_answer": "B) No variable costs are incurred when nothing is produced",
+            "explanation": "When Q = 0, TVC = 0 because variable costs (raw materials, labor) are only incurred when production actually happens. However, TFC still exists (rent, machinery payments). So TC = TFC + 0 = TFC at zero output.",
+            "difficulty": "medium"
+        }
+    ]
+}

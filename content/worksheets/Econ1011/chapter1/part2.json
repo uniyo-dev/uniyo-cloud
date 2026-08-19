@@ -1,0 +1,147 @@
+{
+    "course_code": "Econ1011",
+    "chapter": 1,
+    "title": "Part 2 Practice: Scarcity, Choice, Opportunity Cost & PPF",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Scarcity in economics means:",
+            "diagram": null,
+            "options": [
+                "A) Only poor countries face resource shortages",
+                "B) Resources are limited relative to unlimited human wants",
+                "C) There is no solution to economic problems",
+                "D) Technology can eliminate all shortages"
+            ],
+            "correct_answer": "B) Resources are limited relative to unlimited human wants",
+            "explanation": "Scarcity is UNIVERSAL — it affects ALL societies, rich AND poor. Even billionaires face scarcity (time is limited). Resources (land, labor, capital) are finite, but human wants are infinite. This gap between limited resources and unlimited wants is the FUNDAMENTAL economic problem.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "A student has 100 Birr and wants a textbook (100 Birr), a meal (100 Birr), and a notebook (50 Birr). If she buys the textbook, her opportunity cost is:",
+            "diagram": null,
+            "options": [
+                "A) 100 Birr",
+                "B) The meal (if that was her next best alternative)",
+                "C) Both the meal and the notebook",
+                "D) Nothing"
+            ],
+            "correct_answer": "B) The meal (if that was her next best alternative)",
+            "explanation": "Opportunity cost is the SINGLE NEXT BEST alternative forgone — NOT all alternatives. With 100 Birr, she can only buy ONE item. If she buys the textbook, she gives up either the meal OR the notebook — whichever she valued MORE. It's NOT both.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "Examine the PPF diagram below. What does Point A represent?",
+            "diagram": "<svg width='320' height='200' viewBox='0 0 320 200'><rect width='320' height='200' fill='#111827' rx='8'/><line x1='50' y1='20' x2='50' y2='170' stroke='#38bdf8' stroke-width='2'/><line x1='50' y1='170' x2='290' y2='170' stroke='#38bdf8' stroke-width='2'/><path d='M 50 40 Q 170 50 270 170' stroke='#facc15' stroke-width='3' fill='none'/><circle cx='160' cy='100' r='6' fill='#14b8a6'/><text x='172' y='95' fill='#14b8a6' font-size='13' font-weight='bold'>A</text><text x='285' y='185' fill='#38bdf8' font-size='12' font-weight='bold'>Good X</text><text x='12' y='25' fill='#38bdf8' font-size='12' font-weight='bold'>Y</text></svg>",
+            "options": [
+                "A) An efficient production level",
+                "B) An inefficient production level",
+                "C) An unattainable production level",
+                "D) A point of economic recession"
+            ],
+            "correct_answer": "A) An efficient production level",
+            "explanation": "Point A lies ON the PPF curve, meaning ALL resources are being used efficiently. The economy is producing the MAXIMUM possible output combination with current resources and technology. Full employment of resources exists.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "What does a point INSIDE the PPF curve indicate?",
+            "diagram": null,
+            "options": [
+                "A) Maximum efficiency",
+                "B) Underutilization of resources (inefficiency)",
+                "C) Unattainable production",
+                "D) Economic growth"
+            ],
+            "correct_answer": "B) Underutilization of resources (inefficiency)",
+            "explanation": "A point INSIDE the PPF means the economy is NOT using all resources. This could be due to UNEMPLOYMENT (workers without jobs), IDLE FACTORIES (machines not running), or INEFFICIENT METHODS (outdated technology). The economy COULD produce more without additional resources.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What causes the PPF to shift OUTWARD?",
+            "diagram": null,
+            "options": [
+                "A) Unemployment",
+                "B) Economic growth (more resources or better technology)",
+                "C) Inefficient resource use",
+                "D) Economic recession"
+            ],
+            "correct_answer": "B) Economic growth (more resources or better technology)",
+            "explanation": "The PPF shifts OUTWARD (to the right) when the economy's productive capacity increases. This happens through: (1) MORE resources (new mineral discoveries, population growth), (2) BETTER technology (improved farming, faster computers), (3) INCREASED capital (more factories), (4) BETTER education (skilled workforce).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "The three basic economic questions are:",
+            "diagram": null,
+            "options": [
+                "A) What to produce, How to produce, For whom to produce",
+                "B) When to produce, Where to produce, Why to produce",
+                "C) Who produces, Who consumes, Who saves",
+                "D) How much to tax, How much to spend, How much to borrow"
+            ],
+            "correct_answer": "A) What to produce, How to produce, For whom to produce",
+            "explanation": "Every society MUST answer THREE fundamental questions: (1) WHAT to produce — which goods and services, (2) HOW to produce — which methods/technology, (3) FOR WHOM to produce — who gets the output. The answers differ based on the economic system.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 7,
+            "text": "The PPF is concave (bowed outward) because of:",
+            "diagram": null,
+            "options": [
+                "A) Constant opportunity costs",
+                "B) Increasing opportunity costs (law of increasing costs)",
+                "C) Decreasing opportunity costs",
+                "D) Zero opportunity costs"
+            ],
+            "correct_answer": "B) Increasing opportunity costs (law of increasing costs)",
+            "explanation": "The PPF is bowed OUTWARD because of the LAW OF INCREASING OPPORTUNITY COSTS. As you produce more of one good, you must give up INCREASINGLY MORE of the other good. This happens because resources are NOT equally suited to all uses — some workers are better at making one good than another.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "A free good (like air) has zero opportunity cost because:",
+            "diagram": null,
+            "options": [
+                "A) It has no value to anyone",
+                "B) It is abundant and using it requires no sacrifice",
+                "C) The government provides it",
+                "D) It is always available everywhere"
+            ],
+            "correct_answer": "B) It is abundant and using it requires no sacrifice",
+            "explanation": "FREE GOODS are so abundant that using them doesn't require giving up anything. Breathing air has zero opportunity cost because you don't sacrifice anything else. ECONOMIC GOODS are scarce and have positive opportunity costs — you must give up something to get them.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "If a country can produce either 100 units of food OR 50 units of clothing with all resources, what is the opportunity cost of producing 1 unit of food?",
+            "diagram": null,
+            "options": [
+                "A) 2 units of clothing",
+                "B) 0.5 units of clothing",
+                "C) 1 unit of clothing",
+                "D) 50 units of clothing"
+            ],
+            "correct_answer": "B) 0.5 units of clothing",
+            "explanation": "Opportunity cost of 1 food = (50 clothing / 100 food) = 0.5 clothing. This means for every 1 unit of food produced, the country gives up 0.5 units of clothing. Conversely, the opportunity cost of 1 clothing = (100 food / 50 clothing) = 2 food.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "The question 'FOR WHOM to produce?' is primarily about:",
+            "diagram": null,
+            "options": [
+                "A) Choosing production technology",
+                "B) Distribution of goods among society members",
+                "C) Selecting which goods to make",
+                "D) Determining production costs"
+            ],
+            "correct_answer": "B) Distribution of goods among society members",
+            "explanation": "'FOR WHOM to produce?' addresses DISTRIBUTION — who GETS the goods and services produced. In market economies, it depends on INCOME (willingness and ability to pay). In command economies, the government decides. In mixed economies, both market forces and government redistribution play roles.",
+            "difficulty": "medium"
+        }
+    ]
+}

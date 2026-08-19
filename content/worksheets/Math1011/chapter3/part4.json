@@ -1,0 +1,137 @@
+{
+    "course_code": "Math1011",
+    "chapter": 3,
+    "title": "Part 4 Practice: Elementary Row Operations, Row Echelon Form, Reduced Row Echelon Form, & Rank",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Which of the following is NOT an elementary row operation?",
+            "options": [
+                "A) Interchanging two rows: R_i ↔ R_j",
+                "B) Multiplying a row by a nonzero scalar: R_i → αR_i",
+                "C) Adding a multiple of one row to another: R_i → R_i + αR_j",
+                "D) Adding a column to another column"
+            ],
+            "correct_answer": "D) Adding a column to another column",
+            "explanation": "The module states: 'The following are known as elementary row operations: 1. Interchanging two rows; 2. Multiplying a row by a nonzero scalar; 3. Adding a multiple of one row to another.' Column operations are not elementary row operations.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "In the row echelon form of a matrix, which of the following is NOT a required condition?",
+            "options": [
+                "A) All nonzero rows are above any rows of all zeros.",
+                "B) Each leading entry of a row is in a column to the right of the leading entry of the row above it.",
+                "C) All entries in a column below a leading entry are zeros.",
+                "D) Each leading entry is 1."
+            ],
+            "correct_answer": "D) Each leading entry is 1.",
+            "explanation": "The module states the conditions for row echelon form. Condition 4 (leading entry is 1) is only required for reduced row echelon form, not for row echelon form.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What additional conditions must a matrix in row echelon form satisfy to be in reduced row echelon form?",
+            "options": [
+                "A) All nonzero rows are above zero rows.",
+                "B) The leading entry in each nonzero row is 1, and each leading 1 is the only nonzero entry in its column.",
+                "C) All entries in a column below a leading entry are zeros.",
+                "D) The leading entries step to the right."
+            ],
+            "correct_answer": "B) The leading entry in each nonzero row is 1, and each leading 1 is the only nonzero entry in its column.",
+            "explanation": "The module states: 'If a matrix in row echelon form satisfies: 4. The leading entry in each nonzero row is 1. 5. Each leading 1 is the only nonzero entry in its column, then it is in reduced row echelon form.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the rank of a matrix A?",
+            "options": [
+                "A) The number of rows in A.",
+                "B) The number of columns in A.",
+                "C) The number of nonzero rows in the reduced row echelon form of A.",
+                "D) The number of zero rows in the row echelon form of A."
+            ],
+            "correct_answer": "C) The number of nonzero rows in the reduced row echelon form of A.",
+            "explanation": "The module states: 'Rank of an m × n matrix A, denoted by rank(A), is the number of nonzero rows of the reduced row echelon form of A.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the rank of matrix A = [[1, 1, 2], [2, 2, 5], [3, 3, 2]]?",
+            "options": [
+                "A) 1",
+                "B) 2",
+                "C) 3",
+                "D) 0"
+            ],
+            "correct_answer": "B) 2",
+            "explanation": "The module states: 'After a sequence of elementary row operations, we obtain the reduced echelon form of A, which has two nonzero rows. Thus, rank(A) = 2.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the relationship between the rank of a matrix A and the rank of its transpose Aᵗ?",
+            "options": [
+                "A) rank(A) = 2 × rank(Aᵗ)",
+                "B) rank(A) = rank(Aᵗ)",
+                "C) rank(A) > rank(Aᵗ)",
+                "D) rank(A) < rank(Aᵗ)"
+            ],
+            "correct_answer": "B) rank(A) = rank(Aᵗ)",
+            "explanation": "The module states: 'The matrix A and its transpose Aᵗ have the same rank. That is, rank(A) = rank(Aᵗ).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "Given the matrix A = [[4, 3], [2, 1]], which elementary row operation will produce the lower triangular matrix?",
+            "options": [
+                "A) R₂ → R₂ - (1/2)R₁",
+                "B) R₂ → R₂ - 2R₁",
+                "C) R₁ → R₁ - 2R₂",
+                "D) R₁ ↔ R₂"
+            ],
+            "correct_answer": "B) R₂ → R₂ - 2R₁",
+            "explanation": "The module asks: 'Use elementary row operations to find the lower triangular matrix which is row equivalent to A.' For A = [[4, 3], [2, 1]], R₂ → R₂ - (1/2)R₁ gives a zero below the diagonal.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "How many pivot positions does the matrix A = [[1, 1, 2], [2, 2, 5], [3, 3, 2]] have?",
+            "options": [
+                "A) 1",
+                "B) 2",
+                "C) 3",
+                "D) 0"
+            ],
+            "correct_answer": "B) 2",
+            "explanation": "The module states: 'A pivot position in a matrix A is a location in A that corresponds to a leading 1 in the reduced row echelon form of A.' Since rank(A) = 2, there are 2 pivot positions.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Which of the following matrices is in reduced row echelon form?",
+            "options": [
+                "A) [[1, 2, 0], [0, 1, 3], [0, 0, 1]]",
+                "B) [[1, 0, 0], [0, 1, 0], [0, 0, 1]]",
+                "C) [[1, 2, 3], [0, 4, 5], [0, 0, 6]]",
+                "D) [[1, 0, 0], [0, 2, 0], [0, 0, 3]]"
+            ],
+            "correct_answer": "B) [[1, 0, 0], [0, 1, 0], [0, 0, 1]]",
+            "explanation": "The module states: 'Reduced row echelon form requires the leading entry in each nonzero row is 1, and each leading 1 is the only nonzero entry in its column.' The identity matrix satisfies this.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "When using the algorithm to find the reduced row echelon form, what is the first step?",
+            "options": [
+                "A) Begin with the leftmost nonzero column. This is a pivot column.",
+                "B) Create zeros above each pivot.",
+                "C) Scale the pivot to 1.",
+                "D) Replace rows to create zeros below the pivot."
+            ],
+            "correct_answer": "A) Begin with the leftmost nonzero column. This is a pivot column.",
+            "explanation": "The module states: 'Step 1: Begin with the leftmost nonzero column. This is a pivot column. The pivot position is at the top.'",
+            "difficulty": "hard"
+        }
+    ]
+}

@@ -1,0 +1,147 @@
+{
+    "course_code": "GeES1011",
+    "chapter": 2,
+    "title": "Part 3 Practice: Rock and Mineral Resources",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Ethiopia's MOST IMPORTANT mineral resource is:",
+            "diagram": null,
+            "options": [
+                "A) Diamond",
+                "B) Gold",
+                "C) Uranium",
+                "D) Copper"
+            ],
+            "correct_answer": "B) Gold",
+            "explanation": "GOLD is Ethiopia's most important mineral. It's found in multiple locations (Wollega, Adola, Tigray) and the Lega Dembi mine is the largest gold producer. Gold generates the most revenue among Ethiopian minerals.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Platinum in Ethiopia is primarily found in:",
+            "diagram": null,
+            "options": [
+                "A) Southern Ethiopia (Adola)",
+                "B) Western Ethiopia (Yubdo, Wollega)",
+                "C) Eastern Ethiopia (Ogaden)",
+                "D) Northern Ethiopia (Tigray)"
+            ],
+            "correct_answer": "B) Western Ethiopia (Yubdo, Wollega)",
+            "explanation": "PLATINUM is found in WESTERN Ethiopia, particularly in the YUBDO area of Wollega. Ethiopia is one of the few countries in Africa with platinum deposits. Platinum is used in catalytic converters and jewelry.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 3,
+            "text": "Tantalum is used primarily in:",
+            "diagram": null,
+            "options": [
+                "A) Fertilizer production",
+                "B) Electronics (mobile phones, capacitors)",
+                "C) Jewelry",
+                "D) Construction materials"
+            ],
+            "correct_answer": "B) Electronics (mobile phones, capacitors)",
+            "explanation": "TANTALUM is a high-value mineral used in ELECTRONICS — mobile phones, capacitors, and medical equipment. It's found in Kenticha, Adola area. Fertilizer uses potash, jewelry uses gold/gemstones, construction uses marble/stone.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "Examine the mineral map. Which region is marked for PLATINUM?",
+            "diagram": "<svg width='350' height='180' viewBox='0 0 350 180'><rect width='350' height='180' fill='#111827' rx='8'/><circle cx='80' cy='90' r='40' fill='#1a2332' stroke='#facc15' stroke-width='2'/><text x='80' y='85' text-anchor='middle' fill='#facc15' font-size='9' font-weight='bold'>WEST</text><circle cx='180' cy='130' r='35' fill='#1a2332' stroke='#14b8a6' stroke-width='2'/><text x='180' y='125' text-anchor='middle' fill='#14b8a6' font-size='9' font-weight='bold'>SOUTH</text><circle cx='280' cy='80' r='35' fill='#1a2332' stroke='#f43f5e' stroke-width='2'/><text x='280' y='75' text-anchor='middle' fill='#f43f5e' font-size='9' font-weight='bold'>NORTH</text><text x='175' y='165' text-anchor='middle' fill='#94a3b8' font-size='9'>Platinum is in which region?</text></svg>",
+            "options": [
+                "A) WEST (yellow circle)",
+                "B) SOUTH (green circle)",
+                "C) NORTH (red circle)",
+                "D) Not shown"
+            ],
+            "correct_answer": "A) WEST (yellow circle)",
+            "explanation": "PLATINUM is found in WESTERN Ethiopia (Yubdo, Wollega) — the YELLOW circle. The Western region also contains GOLD. Southern region has gold and tantalum. Northern region has gold and gemstones.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "The Lega Dembi mine is Ethiopia's largest source of:",
+            "diagram": null,
+            "options": [
+                "A) Platinum",
+                "B) Gold",
+                "C) Tantalum",
+                "D) Marble"
+            ],
+            "correct_answer": "B) Gold",
+            "explanation": "LEGA DEMBI (in Oromia) is Ethiopia's LARGEST GOLD MINE. It has been the country's main gold producer for decades. Platinum is from Yubdo, tantalum from Kenticha, marble from various locations.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 6,
+            "text": "Potash in Ethiopia is found in which region?",
+            "diagram": null,
+            "options": [
+                "A) Western Plateau",
+                "B) Afar (Dallol)",
+                "C) Southern highlands",
+                "D) Blue Nile Gorge"
+            ],
+            "correct_answer": "B) Afar (Dallol)",
+            "explanation": "POTASH (used for fertilizer) is found in the AFAR region, particularly around DALLOL. The Dallol area is also known for being one of the hottest places on Earth. Potash is essential for agricultural fertilizer production.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "The MOST IMPORTANT greenstone belt in Ethiopia is:",
+            "diagram": null,
+            "options": [
+                "A) Northern (Tigray)",
+                "B) Southern",
+                "C) Western and South-Western",
+                "D) Eastern"
+            ],
+            "correct_answer": "C) Western and South-Western",
+            "explanation": "The WESTERN and SOUTH-WESTERN greenstone belt is the MOST IMPORTANT mineral zone in Ethiopia. It contains GOLD, PLATINUM, and base metals. Locations include Wollega, Benishangul-Gumuz, and Gambella.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Gemstones like OPAL in Ethiopia are found in:",
+            "diagram": null,
+            "options": [
+                "A) Western Ethiopia only",
+                "B) Oromia and Tigray regions",
+                "C) Afar region only",
+                "D) Somali region only"
+            ],
+            "correct_answer": "B) Oromia and Tigray regions",
+            "explanation": "ETHIOPIAN OPAL (a precious gemstone) is found in Oromia (Wollo) and Tigray regions. Ethiopian opals are internationally recognized for their quality and unique color play. Other gemstones include emerald and sapphire.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "MARBLE in Ethiopia is primarily used for:",
+            "diagram": null,
+            "options": [
+                "A) Electronics",
+                "B) Building stone and flooring",
+                "C) Fertilizer",
+                "D) Fuel"
+            ],
+            "correct_answer": "B) Building stone and flooring",
+            "explanation": "MARBLE is a METAMORPHIC rock used for BUILDING STONE, FLOORING, and decorative purposes. Ethiopia has marble deposits in Tigray and Oromia. It's a CONSTRUCTION material, not for electronics (tantalum), fertilizer (potash), or fuel (coal/oil).",
+            "difficulty": "medium"
+        },
+        {
+            "id": 10,
+            "text": "The Southern greenstone belt is known for:",
+            "diagram": null,
+            "options": [
+                "A) Platinum and potash",
+                "B) Gold and tantalum",
+                "C) Marble and clay",
+                "D) Oil and gas"
+            ],
+            "correct_answer": "B) Gold and tantalum",
+            "explanation": "The SOUTHERN greenstone belt (Adola, Kenticha) contains GOLD and TANTALUM. Kenticha is famous for tantalum deposits used in electronics. Platinum and potash are in Western and Afar regions respectively.",
+            "difficulty": "hard"
+        }
+    ]
+}

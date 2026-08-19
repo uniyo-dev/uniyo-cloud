@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 5,
+    "title": "Part 2 Practice: Ethnicity: Identification, Social Categorization, & History",
+    "questions": [
+        {
+            "id": 1,
+            "text": "According to Brubaker (2004), how should we understand identity?",
+            "options": [
+                "A) Identity is a 'thing' that people possess.",
+                "B) Identity is not a real 'thing' but a process of identification that people engage in.",
+                "C) Identity is purely biological.",
+                "D) Identity is a fixed status."
+            ],
+            "correct_answer": "B) Identity is not a real 'thing' but a process of identification that people engage in.",
+            "explanation": "The module states: 'According to Brubaker (2004), identity is not real, either, in the sense that it is not a 'thing' that people can be said to have or to be. Identity depends on processes of identification.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "When did the terms 'ethnicity' and 'ethnic groups' become common terms in the English language?",
+            "options": [
+                "A) During the Middle Ages.",
+                "B) After the end of the Second World War.",
+                "C) In ancient Greece.",
+                "D) In the 21st century."
+            ],
+            "correct_answer": "B) After the end of the Second World War.",
+            "explanation": "The module states: 'After the end of the second world war, words like \"ethnicity\", \"ethnic groups\", \"ethnic conflict\", and \"nationalism\" have become quite common terms in the English language.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What did social theorists in the early twentieth century predict about ethnicity and nationalism?",
+            "options": [
+                "A) They would grow in importance.",
+                "B) They would decrease in importance and vanish due to modernization, industrialization, and individualism.",
+                "C) They would remain unchanged.",
+                "D) They would become purely religious."
+            ],
+            "correct_answer": "B) They would decrease in importance and vanish due to modernization, industrialization, and individualism.",
+            "explanation": "The module states: 'In the early twentieth century, many social theorists held that ethnicity and nationalism would decrease in importance and eventually vanish as a result of modernization, industrialization, and individualism. This never came about.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "What event led to the term 'ethnicity' gradually replacing the term 'race'?",
+            "options": [
+                "A) The French Revolution.",
+                "B) The close link between the term 'race' and Nazi ideology after WWII.",
+                "C) The Industrial Revolution.",
+                "D) The discovery of America."
+            ],
+            "correct_answer": "B) The close link between the term 'race' and Nazi ideology after WWII.",
+            "explanation": "The module states: 'Due to the close link between the term \"race\" and Nazi ideology, after the end of II WW, the term \"ethnicity\" gradually replaced \"race\" both in North American and European traditions.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the original Greek root of the term 'ethnicity'?",
+            "options": [
+                "A) Ethnikos.",
+                "B) Ethnos (referring to non-Hellenic peoples).",
+                "C) Race.",
+                "D) Tribe."
+            ],
+            "correct_answer": "B) Ethnos (referring to non-Hellenic peoples).",
+            "explanation": "The module states: 'The word is derived from the Greek term 'ethnos'... which literally means \"a group of people bound together by the same manners, customs or other distinctive features\". Contrary to its literal meaning however, ancient Greeks were using the term 'ethnos' in reference to non-Hellenic people.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What was the term 'ethnic' used to refer to in early England (Middle Ages)?",
+            "options": [
+                "A) Greek philosophers.",
+                "B) Someone who was neither Christian nor Jewish (heathen or pagan).",
+                "C) The ruling class.",
+                "D) The king."
+            ],
+            "correct_answer": "B) Someone who was neither Christian nor Jewish (heathen or pagan).",
+            "explanation": "The module states: 'Likewise, in early England, it used to refer to someone who was neither Christian nor Jewish (to refer to heathen or pagan).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "When did the term 'ethnicity' first appear in the Oxford English Dictionary?",
+            "options": [
+                "A) 1900.",
+                "B) 1953.",
+                "C) 1980.",
+                "D) 2000."
+            ],
+            "correct_answer": "B) 1953.",
+            "explanation": "The module states: 'According to John Hutchinson and Anthony Smith (1996), the term \"ethnicity\" is relatively new, first appearing in the Oxford English Dictionary in 1953.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "How did the North American tradition adopt the term 'ethnic'?",
+            "options": [
+                "A) As a synonym for nationhood.",
+                "B) As a substitute for minority groups in the nation-state (e.g., Jews, Italians, Irish).",
+                "C) As a term for pre-modern societies.",
+                "D) As a biological category."
+            ],
+            "correct_answer": "B) As a substitute for minority groups in the nation-state (e.g., Jews, Italians, Irish).",
+            "explanation": "The module states: 'The North American tradition adopted 'ethnic' as a substitute for minority groups in the nation-state (referring to the Jews, Italians, Irish and other people who are considered inferior to the dominant group).'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "How did the European tradition use the term 'ethnic group'?",
+            "options": [
+                "A) As a substitute for minority groups.",
+                "B) As a synonym for nationhood, defined historically by descent or territory.",
+                "C) As a term for pre-modern societies.",
+                "D) As a biological category."
+            ],
+            "correct_answer": "B) As a synonym for nationhood, defined historically by descent or territory.",
+            "explanation": "The module states: 'The European tradition regularly opted to use 'ethnic group' as a synonym for nationhood, defined historically by descent or territory.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Why did the collapse of the colonial world in the 1950s and 1960s add confusion to the term 'ethnicity'?",
+            "options": [
+                "A) It eliminated all ethnic groups.",
+                "B) It populated former European colonizer nations with post-colonial immigrants who were defined as 'ethnic' immigrants, adding new meanings to the term.",
+                "C) It made ethnicity irrelevant.",
+                "D) It created a single global culture."
+            ],
+            "correct_answer": "B) It populated former European colonizer nations with post-colonial immigrants who were defined as 'ethnic' immigrants, adding new meanings to the term.",
+            "explanation": "The module states: 'The collapse of the colonial world in the 1950s and 1960s has brought even more confusion on questions of 'race', 'culture', and 'ethnicity'. The homelands of former European colonizers have become populated with new, post-colonial immigrants, who are visibly different and defined as 'ethnic'.'",
+            "difficulty": "hard"
+        }
+    ]
+}

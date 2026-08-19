@@ -1,0 +1,288 @@
+{
+    "course_code": "GeES1011",
+    "chapter_number": 4,
+    "week_number": 1,
+    "title": "VIP Chapter 4 Week 1: Drainage Systems",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Ethiopia is called 'Water Tower of Africa' because:",
+            "diagram": null,
+            "options": [
+                "A) It has the most rain",
+                "B) Its highlands are source of major rivers",
+                "C) It has oceans",
+                "D) It imports water"
+            ],
+            "correct_answer": "B) Its highlands are source of major rivers",
+            "explanation": "Highlands = source of Nile tributaries, Awash, Omo, etc.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "Abay River contributes what % of Nile's water during floods?",
+            "diagram": null,
+            "options": [
+                "A) 20%",
+                "B) 40%",
+                "C) 70%",
+                "D) 90%"
+            ],
+            "correct_answer": "C) 70%",
+            "explanation": "Abay = ~70% of Nile water during flood season.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "The Tekeze Dam is on the:",
+            "diagram": null,
+            "options": [
+                "A) Abay River",
+                "B) Tekeze River",
+                "C) Omo River",
+                "D) Awash River"
+            ],
+            "correct_answer": "B) Tekeze River",
+            "explanation": "Tekeze Dam built on Tekeze River.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "GERD is built on:",
+            "diagram": null,
+            "options": [
+                "A) Tekeze River",
+                "B) Abay (Blue Nile) River",
+                "C) Omo River",
+                "D) Awash River"
+            ],
+            "correct_answer": "B) Abay (Blue Nile) River",
+            "explanation": "GERD = Grand Ethiopian Renaissance Dam on Abay.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "The Baro-Akobo River flows through:",
+            "diagram": null,
+            "options": [
+                "A) Tigray",
+                "B) Gambella",
+                "C) Afar",
+                "D) Amhara"
+            ],
+            "correct_answer": "B) Gambella",
+            "explanation": "Baro-Akobo flows through Gambella region.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "Wabishebelle River originates from:",
+            "diagram": null,
+            "options": [
+                "A) Lake Tana",
+                "B) Bale Highlands",
+                "C) Simien Mountains",
+                "D) Afar"
+            ],
+            "correct_answer": "B) Bale Highlands",
+            "explanation": "Wabishebelle originates in Bale Highlands.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "Ghenalle and Wabishebelle rivers flow toward:",
+            "diagram": null,
+            "options": [
+                "A) Nile River",
+                "B) Indian Ocean (via Somalia)",
+                "C) Lake Tana",
+                "D) Red Sea"
+            ],
+            "correct_answer": "B) Indian Ocean (via Somalia)",
+            "explanation": "SE rivers flow toward Indian Ocean via Somalia.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Gilgel Gibe dams are on which river system?",
+            "diagram": null,
+            "options": [
+                "A) Western",
+                "B) Southeastern",
+                "C) Rift Valley (Omo)",
+                "D) None"
+            ],
+            "correct_answer": "C) Rift Valley (Omo)",
+            "explanation": "Gilgel Gibe on Omo River (Rift Valley system).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Awash River is important for:",
+            "diagram": null,
+            "options": [
+                "A) Navigation",
+                "B) Irrigation (sugarcane, cotton)",
+                "C) Fishing only",
+                "D) Drinking water only"
+            ],
+            "correct_answer": "B) Irrigation (sugarcane, cotton)",
+            "explanation": "Awash = irrigation for sugarcane and cotton.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "ENDORHEIC means:",
+            "diagram": null,
+            "options": [
+                "A) Reaches the ocean",
+                "B) Internal drainage (doesn't reach ocean)",
+                "C) Frozen river",
+                "D) Underground river"
+            ],
+            "correct_answer": "B) Internal drainage (doesn't reach ocean)",
+            "explanation": "Endorheic = internal, no ocean outlet.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "EXORHEIC means:",
+            "diagram": null,
+            "options": [
+                "A) Internal drainage",
+                "B) Reaches the ocean",
+                "C) Underground",
+                "D) Seasonal"
+            ],
+            "correct_answer": "B) Reaches the ocean",
+            "explanation": "Exorheic = drains to ocean.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "Which drainage system is the SMALLEST?",
+            "diagram": null,
+            "options": [
+                "A) Western",
+                "B) Southeastern",
+                "C) Rift Valley",
+                "D) All equal"
+            ],
+            "correct_answer": "C) Rift Valley",
+            "explanation": "Rift Valley = smallest (~27% of Ethiopia).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "Lake Abbe is in which region?",
+            "diagram": null,
+            "options": [
+                "A) Amhara",
+                "B) Afar",
+                "C) Oromia",
+                "D) Tigray"
+            ],
+            "correct_answer": "B) Afar",
+            "explanation": "Lake Abbe in Afar (Awash River terminus).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "Lake Turkana receives water from which river?",
+            "diagram": null,
+            "options": [
+                "A) Awash",
+                "B) Omo",
+                "C) Tekeze",
+                "D) Abay"
+            ],
+            "correct_answer": "B) Omo",
+            "explanation": "Omo River flows into Lake Turkana.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "Tekeze River joins which river in Sudan?",
+            "diagram": null,
+            "options": [
+                "A) White Nile",
+                "B) Atbara River",
+                "C) Blue Nile",
+                "D) Sobat"
+            ],
+            "correct_answer": "B) Atbara River",
+            "explanation": "Tekeze joins Atbara (then Nile).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 16,
+            "text": "Baro-Akobo joins which river in South Sudan?",
+            "diagram": null,
+            "options": [
+                "A) White Nile",
+                "B) Sobat River",
+                "C) Atbara",
+                "D) Blue Nile"
+            ],
+            "correct_answer": "B) Sobat River",
+            "explanation": "Baro-Akobo joins Sobat (then Nile).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "The Blue Nile Gorge is carved by:",
+            "diagram": null,
+            "options": [
+                "A) Wind",
+                "B) Abay River",
+                "C) Glacier",
+                "D) Tekeze River"
+            ],
+            "correct_answer": "B) Abay River",
+            "explanation": "Blue Nile Gorge = carved by Abay River.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "Wabishebelle is important for irrigation in:",
+            "diagram": null,
+            "options": [
+                "A) Tigray",
+                "B) Somali region",
+                "C) Amhara",
+                "D) Gambella"
+            ],
+            "correct_answer": "B) Somali region",
+            "explanation": "Wabishebelle irrigates Somali region.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "Which river flows NORTHWARD?",
+            "diagram": null,
+            "options": [
+                "A) Omo",
+                "B) Wabishebelle",
+                "C) Tekeze",
+                "D) Ghenalle"
+            ],
+            "correct_answer": "C) Tekeze",
+            "explanation": "Tekeze flows northward (Tigray → Sudan).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "Ethiopia's rivers provide what % of Nile's total flow?",
+            "diagram": null,
+            "options": [
+                "A) 30%",
+                "B) 50%",
+                "C) 86%",
+                "D) 100%"
+            ],
+            "correct_answer": "C) 86%",
+            "explanation": "Ethiopian rivers = ~86% of Nile's total flow.",
+            "difficulty": "hard"
+        }
+    ]
+}

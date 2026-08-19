@@ -1,0 +1,147 @@
+{
+    "course_code": "Econ1011",
+    "chapter": 1,
+    "title": "Part 1 Practice: Definition & Scope of Economics",
+    "questions": [
+        {
+            "id": 1,
+            "text": "The word 'Economics' originates from the Greek word 'Oikonomia'. What does 'Oikos' mean?",
+            "diagram": null,
+            "options": [
+                "A) Market",
+                "B) Household",
+                "C) Government",
+                "D) Money"
+            ],
+            "correct_answer": "B) Household",
+            "explanation": "'Oikonomia' comes from TWO Greek words: 'Oikos' (household) and 'Nomos' (management/law). So economics originally meant 'household management.' Over time, it evolved to mean the study of how societies manage scarce resources.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Who defined economics as 'a science which studies human behavior as a relationship between ends and scarce means which have alternative uses'?",
+            "diagram": null,
+            "options": [
+                "A) Adam Smith",
+                "B) Alfred Marshall",
+                "C) Lionel Robbins",
+                "D) Paul Samuelson"
+            ],
+            "correct_answer": "C) Lionel Robbins",
+            "explanation": "Lionel Robbins gave this famous definition in 1932. It emphasizes SCARCITY and CHOICE — the core of modern economics. His definition is widely accepted because it applies to ALL societies, rich or poor.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 3,
+            "text": "Microeconomics is primarily concerned with:",
+            "diagram": null,
+            "options": [
+                "A) The overall economy and aggregate variables",
+                "B) Individual economic units like households and firms",
+                "C) Government fiscal and monetary policy",
+                "D) International trade agreements"
+            ],
+            "correct_answer": "B) Individual economic units like households and firms",
+            "explanation": "MICROeconomics focuses on INDIVIDUAL units — how a single household spends income, how one firm sets prices, how a specific market works. MACROeconomics looks at the BIG picture: GDP, national inflation, total unemployment.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "Which of the following is a POSITIVE economic statement?",
+            "diagram": null,
+            "options": [
+                "A) The government should reduce taxes to help the poor",
+                "B) Unemployment is morally wrong and should be eliminated",
+                "C) Ethiopia's GDP grew by 7.2% last year",
+                "D) The central bank ought to lower interest rates"
+            ],
+            "correct_answer": "C) Ethiopia's GDP grew by 7.2% last year",
+            "explanation": "POSITIVE economics deals with FACTS that can be TESTED and VERIFIED. 'GDP grew by 7.2%' is a factual statement that can be checked with data. Options A, B, and D are NORMATIVE because they express opinions about what SHOULD be done.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "Which of the following is a NORMATIVE economic statement?",
+            "diagram": null,
+            "options": [
+                "A) Inflation is currently at 19% in Ethiopia",
+                "B) The unemployment rate is 8%",
+                "C) The government should provide free education for all",
+                "D) Coffee exports generate foreign exchange"
+            ],
+            "correct_answer": "C) The government should provide free education for all",
+            "explanation": "NORMATIVE economics involves VALUE JUDGMENTS — what SHOULD BE. 'The government SHOULD...' is an opinion, not a testable fact. It cannot be proven right or wrong because it depends on personal values and political views.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "A researcher observes that every time coffee prices increase, consumers buy less coffee. After many observations, she concludes: 'Price and quantity demanded have an inverse relationship.' This is:",
+            "diagram": null,
+            "options": [
+                "A) Deductive reasoning (general to specific)",
+                "B) Inductive reasoning (specific to general)",
+                "C) Normative analysis",
+                "D) Circular reasoning"
+            ],
+            "correct_answer": "B) Inductive reasoning (specific to general)",
+            "explanation": "INDUCTIVE reasoning moves from SPECIFIC observations to GENERAL conclusions. The researcher observed SPECIFIC instances (coffee price up → demand down) and formed a GENERAL law. Remember: INductive = IN from specific observations.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "An economist starts with the general principle 'people respond to incentives' and predicts that tax breaks for electric vehicles will increase EV purchases. This is:",
+            "diagram": null,
+            "options": [
+                "A) Inductive reasoning",
+                "B) Deductive reasoning (general to specific)",
+                "C) Normative statement",
+                "D) Fallacy of composition"
+            ],
+            "correct_answer": "B) Deductive reasoning (general to specific)",
+            "explanation": "DEDUCTIVE reasoning moves from GENERAL principles to SPECIFIC conclusions. The economist started with a GENERAL theory (people respond to incentives) and applied it to a SPECIFIC case (EV tax breaks → more EV purchases). Remember: DEductive = DE from general principles.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Examine the diagram below. Which reasoning method is shown?",
+            "diagram": "<svg width='320' height='180' viewBox='0 0 320 180'><rect width='320' height='180' fill='#111827' rx='8'/><text x='160' y='25' text-anchor='middle' fill='#f59e0b' font-size='13' font-weight='bold'>Reasoning Method</text><rect x='30' y='60' width='100' height='50' rx='6' fill='#1a2332' stroke='#38bdf8' stroke-width='2'/><text x='80' y='90' text-anchor='middle' fill='#f8fafc' font-size='11'>Specific Data</text><text x='160' y='110' text-anchor='middle' fill='#f59e0b' font-size='16' font-weight='bold'>→</text><rect x='190' y='60' width='100' height='50' rx='6' fill='#1a2332' stroke='#f43f5e' stroke-width='2'/><text x='240' y='90' text-anchor='middle' fill='#f8fafc' font-size='11'>General Theory</text><text x='160' y='145' text-anchor='middle' fill='#94a3b8' font-size='10'>Specific → General</text></svg>",
+            "options": [
+                "A) Deductive reasoning",
+                "B) Inductive reasoning",
+                "C) Normative analysis",
+                "D) Positive analysis"
+            ],
+            "correct_answer": "B) Inductive reasoning",
+            "explanation": "The diagram shows Specific → General, which is INDUCTIVE reasoning. You start with specific data/observations and build a general theory. This is how many scientific discoveries are made — observe patterns, then formulate laws.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "The scope of economics includes which of the following?",
+            "diagram": null,
+            "options": [
+                "A) Only money and banking",
+                "B) Only government policies",
+                "C) How individuals, businesses, and societies make choices",
+                "D) Only international trade"
+            ],
+            "correct_answer": "C) How individuals, businesses, and societies make choices",
+            "explanation": "Economics is BROAD — it covers how INDIVIDUALS make personal choices, how BUSINESSES decide production, how GOVERNMENTS set policies, and how SOCIETIES allocate resources. It's not just about money; it's about CHOICE under SCARCITY in all areas of life.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 10,
+            "text": "The term 'ceteris paribus' used in economics means:",
+            "diagram": null,
+            "options": [
+                "A) All things are equal",
+                "B) Other things held constant",
+                "C) Let the buyer beware",
+                "D) Supply creates its own demand"
+            ],
+            "correct_answer": "B) Other things held constant",
+            "explanation": "'Ceteris paribus' is a Latin phrase meaning 'other things held constant.' Economists use it to isolate the effect of ONE variable while keeping all others unchanged. Example: 'Ceteris paribus, when price increases, quantity demanded decreases' — we assume income, tastes, and other factors don't change.",
+            "difficulty": "medium"
+        }
+    ]
+}

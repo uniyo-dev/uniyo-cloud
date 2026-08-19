@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 2,
+    "title": "Part 1 Practice: Archaeological, Linguistic, and Socio-Cultural Anthropology",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What does Archaeological Anthropology study?",
+            "options": [
+                "A) Contemporary human societies.",
+                "B) The ways of life of past peoples by excavating and analyzing material culture and physical remains.",
+                "C) The evolution of languages.",
+                "D) Human biological variation."
+            ],
+            "correct_answer": "B) The ways of life of past peoples by excavating and analyzing material culture and physical remains.",
+            "explanation": "The module states: 'Archaeological anthropology or simply archaeology studies the ways of life of past peoples by excavating and analyzing the material culture/physical remains they left behind.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What are 'features' in archaeological terms?",
+            "options": [
+                "A) Remains that can be carried away from the site.",
+                "B) Material remains made or modified by past people that cannot be readily carried away from the site, such as house foundations and fireplaces.",
+                "C) Animal bones and plant remains.",
+                "D) Tools and ornaments."
+            ],
+            "correct_answer": "B) Material remains made or modified by past people that cannot be readily carried away from the site, such as house foundations and fireplaces.",
+            "explanation": "The module states: 'Features, like artifacts, are made or modified by past people, but they cannot be readily carried away from the site. Archaeological features include such things as house foundations, ancient buildings, fireplaces, steles, and postholes.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the focus of Prehistoric Archaeology?",
+            "options": [
+                "A) Cultures that used writing.",
+                "B) Human prehistoric cultures, focusing on the period between 6,000 years ago and the first stone tools (2.5 million years ago).",
+                "C) Only modern societies.",
+                "D) Only Ethiopian history."
+            ],
+            "correct_answer": "B) Human prehistoric cultures, focusing on the period between 6,000 years ago and the first stone tools (2.5 million years ago).",
+            "explanation": "The module states: 'Prehistoric archaeology investigates human prehistoric cultures. It focuses on the entire period called prehistory—between 6,000 years ago and the time of the first stone tools (the first artifacts), around 2.5 million years ago.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "What is the primary focus of Linguistic Anthropology?",
+            "options": [
+                "A) The study of ancient fossils.",
+                "B) The evolution of languages, how language is used within a society, and how the human brain acquires and uses languages.",
+                "C) The study of material culture.",
+                "D) The study of human biological variation."
+            ],
+            "correct_answer": "B) The evolution of languages, how language is used within a society, and how the human brain acquires and uses languages.",
+            "explanation": "The module states: 'Linguistic anthropology generally focuses on the evolution of languages by studying contemporary human languages as well as those of the past. It studies how language is used within a society, and how the human brain acquires and uses languages.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "Which branch of linguistic anthropology examines the relationship between language and culture?",
+            "options": [
+                "A) Structural Linguistics.",
+                "B) Historical Linguistics.",
+                "C) Ethno-linguistics (Cultural Linguistics).",
+                "D) Socio-linguistics."
+            ],
+            "correct_answer": "C) Ethno-linguistics (Cultural Linguistics).",
+            "explanation": "The module states: 'Ethno-linguistics (cultural linguistics): examines the relationship between language and culture... cultural linguists explore how different linguistic categories can affect how people categorize their experiences, how they think, and how they perceive the world around them.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the focus of Socio-Cultural Anthropology?",
+            "options": [
+                "A) Only ancient civilizations.",
+                "B) Contemporary societies and cultures throughout the world.",
+                "C) Only Western societies.",
+                "D) Only biological evolution."
+            ],
+            "correct_answer": "B) Contemporary societies and cultures throughout the world.",
+            "explanation": "The module states: 'Socio-cultural anthropology studies contemporary societies and cultures throughout the world.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the difference between Ethnography and Ethnology?",
+            "options": [
+                "A) Ethnography is comparative; Ethnology is descriptive.",
+                "B) Ethnography requires fieldwork and is descriptive; Ethnology uses data from multiple researchers and is comparative/cross-cultural.",
+                "C) They are the same thing.",
+                "D) Ethnography studies only Western cultures; Ethnology studies only non-Western cultures."
+            ],
+            "correct_answer": "B) Ethnography requires fieldwork and is descriptive; Ethnology uses data from multiple researchers and is comparative/cross-cultural.",
+            "explanation": "The module states: 'Ethnography: Requires field work to collect data, Often descriptive, Group/community specific. Ethnology: Uses data collected by a series of researchers, Usually synthesizes ethnographic data, Comparative/cross-cultural.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Which famous anthropological finding in Ethiopia is mentioned in the module?",
+            "options": [
+                "A) The Pyramids of Giza.",
+                "B) Lucy/Dinkinesh (Australopithecus afarensis) in the Afar Region.",
+                "C) The Great Wall of China.",
+                "D) The Colosseum in Rome."
+            ],
+            "correct_answer": "B) Lucy/Dinkinesh (Australopithecus afarensis) in the Afar Region.",
+            "explanation": "The module states: 'The discovery of Lucy/Dinkesh (Australopithecus afarensis) in the Afar Region shows that Ethiopia is among African countries regarded as the origin of human ancestors.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What is the term used for socio-cultural anthropology in North American universities?",
+            "options": [
+                "A) Social Anthropology.",
+                "B) Cultural Anthropology.",
+                "C) Ethnology.",
+                "D) Archaeology."
+            ],
+            "correct_answer": "B) Cultural Anthropology.",
+            "explanation": "The module states: 'This branch of anthropology is called differently in different parts of the world. It is called cultural anthropology in North American universities; ethnology in countries such as Germany; and social anthropology in other countries including the United Kingdom and Ethiopia.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "According to the module, what is one of the most distinctive features of being human?",
+            "options": [
+                "A) The ability to fly.",
+                "B) Language.",
+                "C) The ability to swim.",
+                "D) The ability to run fast."
+            ],
+            "correct_answer": "B) Language.",
+            "explanation": "The module states: 'In fact, some would argue that language is the most distinctive feature of being human.'",
+            "difficulty": "hard"
+        }
+    ]
+}

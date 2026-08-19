@@ -1,0 +1,288 @@
+{
+    "course_code": "GeES1011",
+    "chapter_number": 5,
+    "week_number": 2,
+    "title": "VIP Chapter 5 Week 2: Temperature and Rainfall Distribution",
+    "questions": [
+        {
+            "id": 1,
+            "text": "The Kiremt rainy season is caused by:",
+            "diagram": null,
+            "options": [
+                "A) Northeast monsoon",
+                "B) Southwest monsoon (from Atlantic/Congo)",
+                "C) Ocean currents",
+                "D) Local winds only"
+            ],
+            "correct_answer": "B) Southwest monsoon (from Atlantic/Congo)",
+            "explanation": "Kiremt = southwest monsoon brings moisture.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "Which zone is called 'cool highland'?",
+            "diagram": null,
+            "options": [
+                "A) Kolla",
+                "B) Dega",
+                "C) Bereha",
+                "D) Weyna Dega"
+            ],
+            "correct_answer": "B) Dega",
+            "explanation": "Dega = cool highland (2,300-3,200m).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "Coffee grows BEST in which zone?",
+            "diagram": null,
+            "options": [
+                "A) Wurch",
+                "B) Weyna Dega",
+                "C) Bereha",
+                "D) Kolla"
+            ],
+            "correct_answer": "B) Weyna Dega",
+            "explanation": "Coffee thrives in Weyna Dega (1,500-2,300m).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "The SOUTHWEST MONSOON brings rain to Ethiopia from:",
+            "diagram": null,
+            "options": [
+                "A) Indian Ocean",
+                "B) Atlantic Ocean and Congo Basin",
+                "C) Red Sea",
+                "D) Arabian Sea"
+            ],
+            "correct_answer": "B) Atlantic Ocean and Congo Basin",
+            "explanation": "SW monsoon brings moisture from Atlantic/Congo.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Which season is MOST CRITICAL for Ethiopian agriculture?",
+            "diagram": null,
+            "options": [
+                "A) Bega",
+                "B) Belg",
+                "C) Kiremt",
+                "D) All equal"
+            ],
+            "correct_answer": "C) Kiremt",
+            "explanation": "Kiremt = main cropping season.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "Frost is possible in which zone?",
+            "diagram": null,
+            "options": [
+                "A) Kolla",
+                "B) Bereha",
+                "C) Wurch",
+                "D) Weyna Dega"
+            ],
+            "correct_answer": "C) Wurch",
+            "explanation": "Wurch (above 3,200m) = frost possible.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "The BELG rains are MOST important for:",
+            "diagram": null,
+            "options": [
+                "A) Northern Ethiopia",
+                "B) Southern and southeastern Ethiopia",
+                "C) Western highlands only",
+                "D) Lake Tana area"
+            ],
+            "correct_answer": "B) Southern and southeastern Ethiopia",
+            "explanation": "Belg = crucial for southern/southeastern regions.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Which area receives MORE than 2,000mm annual rainfall?",
+            "diagram": null,
+            "options": [
+                "A) Afar",
+                "B) Somali lowlands",
+                "C) Jimma/Illubabor (SW Highlands)",
+                "D) Hararge"
+            ],
+            "correct_answer": "C) Jimma/Illubabor (SW Highlands)",
+            "explanation": "SW Highlands = highest rainfall (>2,000mm).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "The Afar region is DRY because:",
+            "diagram": null,
+            "options": [
+                "A) It's at high altitude",
+                "B) Rain shadow effect + low altitude",
+                "C) It's near the ocean",
+                "D) It has dense forests"
+            ],
+            "correct_answer": "B) Rain shadow effect + low altitude",
+            "explanation": "Afar = rain shadow + low elevation = dry/hot.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Bega season temperatures in highlands are:",
+            "diagram": null,
+            "options": [
+                "A) Very hot",
+                "B) Cool (coldest season)",
+                "C) Moderate",
+                "D) Same as summer"
+            ],
+            "correct_answer": "B) Cool (coldest season)",
+            "explanation": "Bega = coolest in highlands.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "Spatiotemporal variation means:",
+            "diagram": null,
+            "options": [
+                "A) Only spatial variation",
+                "B) Variation in space AND time",
+                "C) Only temporal variation",
+                "D) No variation"
+            ],
+            "correct_answer": "B) Variation in space AND time",
+            "explanation": "Spatiotemporal = both space and time.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "Mountains in Ethiopia receive MORE rainfall on which side?",
+            "diagram": null,
+            "options": [
+                "A) Leeward",
+                "B) Windward",
+                "C) North side",
+                "D) All sides equal"
+            ],
+            "correct_answer": "B) Windward",
+            "explanation": "Windward slopes = more rain (orographic).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "The 'rain shadow' creates:",
+            "diagram": null,
+            "options": [
+                "A) Wet conditions on leeward side",
+                "B) Dry conditions on leeward side",
+                "C) Equal rain both sides",
+                "D) No rain anywhere"
+            ],
+            "correct_answer": "B) Dry conditions on leeward side",
+            "explanation": "Rain shadow = dry on leeward side.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "Addis Ababa's climate is BEST described as:",
+            "diagram": null,
+            "options": [
+                "A) Hot desert",
+                "B) Temperate (Weyna Dega)",
+                "C) Alpine",
+                "D) Tropical rainforest"
+            ],
+            "correct_answer": "B) Temperate (Weyna Dega)",
+            "explanation": "Addis Ababa = Weyna Dega (temperate, 15-20°C).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "The ITCZ (Intertropical Convergence Zone) affects Ethiopia by:",
+            "diagram": null,
+            "options": [
+                "A) Creating deserts",
+                "B) Moving north/south bringing rains",
+                "C) Cooling oceans",
+                "D) Blocking all rain"
+            ],
+            "correct_answer": "B) Moving north/south bringing rains",
+            "explanation": "ITCZ movement controls rainy seasons.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 16,
+            "text": "Which month typically has HEAVIEST rainfall in Ethiopia?",
+            "diagram": null,
+            "options": [
+                "A) January",
+                "B) March",
+                "C) July/August",
+                "D) November"
+            ],
+            "correct_answer": "C) July/August",
+            "explanation": "July/August = peak Kiremt rains.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "Dallol's temperature can exceed:",
+            "diagram": null,
+            "options": [
+                "A) 30°C",
+                "B) 40°C",
+                "C) 50°C",
+                "D) 60°C"
+            ],
+            "correct_answer": "C) 50°C",
+            "explanation": "Dallol = among hottest places (50°C+).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "The BELG season FAILURE causes:",
+            "diagram": null,
+            "options": [
+                "A) Flooding",
+                "B) Drought in southern Ethiopia",
+                "C) Frost",
+                "D) Heavy snow"
+            ],
+            "correct_answer": "B) Drought in southern Ethiopia",
+            "explanation": "Belg failure = drought/famine in south.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "Ethiopia's climate diversity is PRIMARILY due to:",
+            "diagram": null,
+            "options": [
+                "A) Longitude",
+                "B) Altitude variation",
+                "C) Ocean proximity",
+                "D) Wind only"
+            ],
+            "correct_answer": "B) Altitude variation",
+            "explanation": "Altitude = main climate control in Ethiopia.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "The SOUTHEAST lowlands receive rain during:",
+            "diagram": null,
+            "options": [
+                "A) Kiremt only",
+                "B) Belg and autumn",
+                "C) Never",
+                "D) Only winter"
+            ],
+            "correct_answer": "B) Belg and autumn",
+            "explanation": "SE lowlands get Belg/autumn rains (different from west).",
+            "difficulty": "hard"
+        }
+    ]
+}

@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 5,
+    "title": "Part 1 Practice: Ethnic Groups & Ethnic Identity",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Who provided the earlier conception of an ethnic group as being formed based on a belief in common descent?",
+            "options": [
+                "A) Fredrik Barth",
+                "B) Max Weber",
+                "C) Benedict Anderson",
+                "D) Clifford Geertz"
+            ],
+            "correct_answer": "B) Max Weber",
+            "explanation": "The module states: 'The earlier conception of ethnic group was that of Max Weber, a German sociologist. According to him, an 'ethnic group' is formed based on belief in common descent shared by its members.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "How did Benedict Anderson describe ethnic groups?",
+            "options": [
+                "A) As a biological category.",
+                "B) As an 'imagined community' that possesses a character and quality.",
+                "C) As a political party.",
+                "D) As a religious sect."
+            ],
+            "correct_answer": "B) As an 'imagined community' that possesses a character and quality.",
+            "explanation": "The module states: 'On the other hand B. Anderson (1983) described ethnic groups as \"an imagined community\" that possesses a \"character and quality\".'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "According to Fredrik Barth, what is the primary basis for ethnic group distinctiveness?",
+            "options": [
+                "A) Isolated cultural traits.",
+                "B) Self-identification and ascription by others in the context of inter-ethnic interaction.",
+                "C) Biological differences.",
+                "D) Geographic isolation."
+            ],
+            "correct_answer": "B) Self-identification and ascription by others in the context of inter-ethnic interaction.",
+            "explanation": "The module states: 'F. Barth (1969) further illustrated that, in a context of inter-ethnic interaction, group distinctiveness depends on identification of self and ascription by others.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "Which of the following is NOT one of the six features of an ethnic group according to Hutchinson and Smith?",
+            "options": [
+                "A) A common proper name.",
+                "B) A myth of common ancestry.",
+                "C) Shared historical memories.",
+                "D) A shared political ideology."
+            ],
+            "correct_answer": "D) A shared political ideology.",
+            "explanation": "The module lists six features: common proper name, myth of common ancestry, shared historical memories, common culture elements, link with a homeland, and sense of solidarity. Political ideology is not one of them.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is a 'link with a homeland' in the context of ethnic groups?",
+            "options": [
+                "A) Physical occupation of the land is required.",
+                "B) It can be a symbolic attachment to the ancestral land, as seen in diaspora communities.",
+                "C) Only those who live in the homeland can belong.",
+                "D) It is not a feature of ethnic groups."
+            ],
+            "correct_answer": "B) It can be a symbolic attachment to the ancestral land, as seen in diaspora communities.",
+            "explanation": "The module states: 'A link with a homeland, not necessarily its physical occupation by the ethnic group but only symbolic attachment to the ancestral land, as is the case of people of the diaspora.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "How is ethnic identity defined at the individual level?",
+            "options": [
+                "A) As a purely biological trait.",
+                "B) As a social-psychological process that gives an individual a sense of belonging and identity.",
+                "C) As a legal status.",
+                "D) As a political affiliation."
+            ],
+            "correct_answer": "B) As a social-psychological process that gives an individual a sense of belonging and identity.",
+            "explanation": "The module states: 'At the individual level, ethnicity is a social-psychological process that gives an individual a sense of belonging and identity as a social phenomenon.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What are the three factors that influence ethnic affiliation?",
+            "options": [
+                "A) Political, economic, and social.",
+                "B) Racial, natal, and symbolic factors.",
+                "C) Religious, linguistic, and cultural.",
+                "D) Historical, geographical, and legal."
+            ],
+            "correct_answer": "B) Racial, natal, and symbolic factors.",
+            "explanation": "The module states: 'Affiliation can be influenced by racial, natal, symbolic, and cultural factors.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What are the objective aspects of ethnic identity?",
+            "options": [
+                "A) Feelings of belonging and emotional attachment.",
+                "B) Observable behaviors such as speaking an ethnic language, practicing traditions, and participating in social networks.",
+                "C) Cognitive knowledge of the group.",
+                "D) Moral obligations to the group."
+            ],
+            "correct_answer": "B) Observable behaviors such as speaking an ethnic language, practicing traditions, and participating in social networks.",
+            "explanation": "The module states: 'Ethnic identity has objective and subjective aspects. The Objective aspects refer to observable behavior... speaking an ethnic language, practicing ethnic traditions, participation in ethnic personal networks such as family and friendships.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What are the three types of subjective aspects of ethnic identity?",
+            "options": [
+                "A) Biological, social, and cultural.",
+                "B) Cognitive, moral, and affective.",
+                "C) Political, economic, and religious.",
+                "D) Historical, geographical, and symbolic."
+            ],
+            "correct_answer": "B) Cognitive, moral, and affective.",
+            "explanation": "The module states: 'Three types of subjective aspects of identity can include: (1) cognitive, (2) moral, and (3) affective domains.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "According to Barth, how are ethnic categories created?",
+            "options": [
+                "A) In isolation from other groups.",
+                "B) Out of the contact between groups, through social interaction and boundary maintenance.",
+                "C) By government decree.",
+                "D) Through biological inheritance."
+            ],
+            "correct_answer": "B) Out of the contact between groups, through social interaction and boundary maintenance.",
+            "explanation": "The module states: 'Eriksen stated that ethnic categories are created out of the contact between groups... Barth further illustrated that... group distinctiveness depends on identification of self and ascription by others.'",
+            "difficulty": "hard"
+        }
+    ]
+}

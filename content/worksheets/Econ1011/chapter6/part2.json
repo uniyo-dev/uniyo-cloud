@@ -1,0 +1,147 @@
+{
+    "course_code": "Econ1011",
+    "chapter": 6,
+    "title": "Part 2 Practice: Real GDP and Price Indices",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Nominal GDP is measured at:",
+            "diagram": null,
+            "options": [
+                "A) Constant (base year) prices",
+                "B) Current year prices",
+                "C) Average of all years",
+                "D) World prices"
+            ],
+            "correct_answer": "B) Current year prices",
+            "explanation": "NOMINAL GDP uses CURRENT year prices. REAL GDP uses CONSTANT (base year) prices to remove the effect of inflation. Example: If prices doubled, nominal GDP would double even if production stayed the same.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Real GDP is a BETTER measure of economic growth because it:",
+            "diagram": null,
+            "options": [
+                "A) Uses current prices",
+                "B) Removes the effect of price changes (inflation)",
+                "C) Includes foreign production",
+                "D) Is easier to calculate"
+            ],
+            "correct_answer": "B) Removes the effect of price changes (inflation)",
+            "explanation": "Real GDP holds prices constant, so any change reflects ONLY changes in QUANTITY produced. This shows TRUE economic growth. Nominal GDP can rise just because prices rose, not because more was produced.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 3,
+            "text": "If Nominal GDP = 1,500 and Real GDP = 1,000, the GDP Deflator is:",
+            "diagram": null,
+            "options": [
+                "A) 100",
+                "B) 150",
+                "C) 200",
+                "D) 250"
+            ],
+            "correct_answer": "B) 150",
+            "explanation": "GDP Deflator = (Nominal GDP / Real GDP) × 100 = (1500 / 1000) × 100 = 150. This means prices are 50% higher than the base year (150 - 100 = 50% inflation).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "The Consumer Price Index (CPI) measures:",
+            "diagram": null,
+            "options": [
+                "A) Prices of ALL goods produced",
+                "B) Prices of a FIXED basket of consumer goods",
+                "C) Only food prices",
+                "D) Government spending"
+            ],
+            "correct_answer": "B) Prices of a FIXED basket of consumer goods",
+            "explanation": "CPI tracks the cost of a FIXED basket of goods that typical households buy (food, housing, transport). It's the most common measure of cost-of-living changes. GDP Deflator covers ALL goods, not just consumer items.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "Which is a KEY DIFFERENCE between GDP Deflator and CPI?",
+            "diagram": null,
+            "options": [
+                "A) GDP Deflator includes imports, CPI excludes imports",
+                "B) CPI includes imports, GDP Deflator excludes imports",
+                "C) They are identical in all ways",
+                "D) Neither includes prices"
+            ],
+            "correct_answer": "B) CPI includes imports, GDP Deflator excludes imports",
+            "explanation": "CPI includes IMPORTED consumer goods (like imported electronics in the basket) because consumers buy them. GDP Deflator EXCLUDES imports because GDP only measures DOMESTIC production.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "If CPI in 2023 = 120 and CPI in 2024 = 132, the inflation rate is:",
+            "diagram": null,
+            "options": [
+                "A) 12%",
+                "B) 10%",
+                "C) 8%",
+                "D) 132%"
+            ],
+            "correct_answer": "B) 10%",
+            "explanation": "Inflation = (CPI new - CPI old) / CPI old × 100 = (132 - 120) / 120 × 100 = 12/120 × 100 = 10%. This means prices increased by 10% between 2023 and 2024.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "NDP (Net Domestic Product) equals:",
+            "diagram": null,
+            "options": [
+                "A) GDP + Depreciation",
+                "B) GDP - Depreciation",
+                "C) GNP + Depreciation",
+                "D) GDP × Depreciation"
+            ],
+            "correct_answer": "B) GDP - Depreciation",
+            "explanation": "NDP = GDP - Depreciation. Depreciation (capital consumption) is the wear and tear on machinery and equipment. NDP shows NET new production after accounting for used-up capital.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Disposable Income (DI) is:",
+            "diagram": null,
+            "options": [
+                "A) Income before taxes",
+                "B) Income after personal taxes (available for spending/saving)",
+                "C) Total national income",
+                "D) Government revenue"
+            ],
+            "correct_answer": "B) Income after personal taxes (available for spending/saving)",
+            "explanation": "Disposable Income = Personal Income - Personal Taxes. This is what households actually HAVE to spend or save. It's the most relevant income measure for consumer spending decisions.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "If Ethiopia produces 100 units at 10 Birr (base year) and 120 units at 15 Birr (current year), what is Real GDP?",
+            "diagram": null,
+            "options": [
+                "A) 1000 Birr",
+                "B) 1200 Birr",
+                "C) 1500 Birr",
+                "D) 1800 Birr"
+            ],
+            "correct_answer": "B) 1200 Birr",
+            "explanation": "Real GDP uses BASE year prices: 120 units × 10 Birr = 1,200 Birr. This shows actual production increased from 100 to 120 units (20% growth). Nominal GDP would be 120 × 15 = 1,800 Birr (includes price increase).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "If Nominal GDP grows by 8% and inflation is 3%, Real GDP growth is approximately:",
+            "diagram": null,
+            "options": [
+                "A) 11%",
+                "B) 5%",
+                "C) 3%",
+                "D) 8%"
+            ],
+            "correct_answer": "B) 5%",
+            "explanation": "Approximate Real GDP growth = Nominal GDP growth - Inflation = 8% - 3% = 5%. The remaining 3% is just price increases, not actual production growth. Exact formula: (1.08/1.03 - 1) × 100 ≈ 4.85%.",
+            "difficulty": "hard"
+        }
+    ]
+}

@@ -1,0 +1,147 @@
+<div class="lesson-section">
+    <h2>Chapter 1: Propositional Logic and Set Theory</h2>
+    <h3>Part 7: Set Operations & Venn Diagrams</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>Given two subsets \(A\) and \(B\) of a universal set \(U\), new sets can be formed using \(A\) and \(B\) in many ways, such as taking common elements or non-common elements, and putting everything together. Such processes of forming new sets are called <strong>set operations</strong>. In this final part of Chapter 1, we discuss the three most important operations: <strong>union, intersection, and complement</strong>, as well as set difference and symmetric difference.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Find the union, intersection, and complement of sets.</li>
+            <li>Find the difference and symmetric difference of sets.</li>
+            <li>Apply the laws of set operations (Commutative, Associative, Distributive, De Morgan's).</li>
+            <li>Illustrate set operations using Venn diagrams.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>1.4.3. Set Operations and Venn diagrams</h4>
+
+    <p>Given two subsets \(A\) and \(B\) of a universal set \(U\), new sets can be formed using \(A\) and \(B\) in many ways, such as taking common elements or non-common elements, and putting everything together. Such processes of forming new sets are called <strong>set operations</strong>.</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Operation</th><th>Symbol</th><th>Definition</th><th>Logical Counterpart</th></tr>
+            <tr>
+                <td><strong>Union</strong></td>
+                <td>\(A \cup B\)</td>
+                <td>\(\{x \mid (x \in A) \lor (x \in B)\}\)</td>
+                <td>\(\lor\) (OR)</td>
+            </tr>
+            <tr>
+                <td><strong>Intersection</strong></td>
+                <td>\(A \cap B\)</td>
+                <td>\(\{x \mid (x \in A) \land (x \in B)\}\)</td>
+                <td>\(\land\) (AND)</td>
+            </tr>
+            <tr>
+                <td><strong>Complement</strong></td>
+                <td>\(A'\) or \(\overline{A}\)</td>
+                <td>\(\{x \mid x \in U \text{ and } x \notin A\}\)</td>
+                <td>\(\neg\) (NOT)</td>
+            </tr>
+            <tr>
+                <td><strong>Difference</strong></td>
+                <td>\(A - B\)</td>
+                <td>\(\{x \mid x \in A \text{ and } x \notin B\}\)</td>
+                <td>\(A \cap B'\)</td>
+            </tr>
+            <tr>
+                <td><strong>Symmetric Difference</strong></td>
+                <td>\(A \Delta B\)</td>
+                <td>\((A - B) \cup (B - A)\)</td>
+                <td>Elements in exactly one of \(A\) or \(B\).</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Venn Diagrams: Shading Regions</text>
+            
+            <text x="70" y="55" fill="#f8fafc" font-size="10" text-anchor="middle">A ∪ B</text>
+            <rect x="20" y="60" width="100" height="60" fill="#14b8a6" rx="4"/>
+            <text x="70" y="105" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Union</text>
+
+            <text x="190" y="55" fill="#f8fafc" font-size="10" text-anchor="middle">A ∩ B</text>
+            <rect x="140" y="60" width="100" height="60" fill="#facc15" rx="4"/>
+            <text x="190" y="105" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Intersection</text>
+
+            <text x="310" y="55" fill="#f8fafc" font-size="10" text-anchor="middle">A'</text>
+            <rect x="260" y="60" width="100" height="60" fill="#f43f5e" rx="4"/>
+            <text x="310" y="105" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Complement</text>
+
+            <text x="70" y="150" fill="#f8fafc" font-size="10" text-anchor="middle">A - B</text>
+            <rect x="20" y="155" width="100" height="60" fill="#f59e0b" rx="4"/>
+            <text x="70" y="200" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Difference</text>
+
+            <text x="190" y="150" fill="#f8fafc" font-size="10" text-anchor="middle">A Δ B</text>
+            <rect x="140" y="155" width="100" height="60" fill="#38bdf8" rx="4"/>
+            <text x="190" y="200" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Symmetric Difference</text>
+
+            <text x="310" y="150" fill="#f8fafc" font-size="10" text-anchor="middle">A ⊆ B</text>
+            <rect x="260" y="155" width="100" height="60" fill="#94a3b8" rx="4"/>
+            <text x="310" y="200" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Subset</text>
+        </svg>
+    </div>
+
+    <p><strong>Example 1.32 (Union and Intersection):</strong></p>
+    <p>Let \(A = \{0, 1, 3, 5, 6\}\) and \(B = \{1, 2, 3, 4, 6, 7\}\). Then:</p>
+    <p>\(A \cup B = \{0, 1, 2, 3, 4, 5, 6, 7\}\) and \(A \cap B = \{1, 3, 6\}\).</p>
+
+    <p><strong>Example 1.33 (Set Difference):</strong></p>
+    <p>If \(A = \{1, 3, 5\}\) and \(B = \{1, 2\}\), then \(A - B = \{3, 5\}\) and \(B - A = \{2\}\).</p>
+
+    <p><strong>Example 1.35 (Symmetric Difference):</strong></p>
+    <p>Let \(U = \{1, 2, 3, \dots, 10\}\), \(A = \{2, 4, 6, 8, 9, 10\}\), and \(B = \{3, 5, 7, 9\}\). Then:</p>
+    <p>\(B - A = \{3, 5, 7\}\) and \(A - B = \{2, 4, 6, 8, 10\}\). Thus:</p>
+    <p>\(A \Delta B = \{2, 3, 4, 5, 6, 7, 8, 10\}\).</p>
+
+    <hr>
+
+    <h4>Important Theorems of Set Operations</h4>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Theorem</th><th>Description</th></tr>
+            <tr><td><strong>Commutative Laws</strong></td><td>\(A \cup B = B \cup A\) and \(A \cap B = B \cap A\)</td></tr>
+            <tr><td><strong>Associative Laws</strong></td><td>\((A \cup B) \cup C = A \cup (B \cup C)\) and \((A \cap B) \cap C = A \cap (B \cap C)\)</td></tr>
+            <tr><td><strong>Distributive Laws</strong></td><td>\(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\) and \(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\)</td></tr>
+            <tr><td><strong>De Morgan's Laws</strong></td><td>\((A \cup B)' = A' \cap B'\) and \((A \cap B)' = A' \cup B'\)</td></tr>
+            <tr><td><strong>Difference Law</strong></td><td>\(A - B = A \cap B'\)</td></tr>
+            <tr><td><strong>Double Complement</strong></td><td>\((A')' = A\)</td></tr>
+        </table>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">De Morgan's Laws Illustrated</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\((A \cup B)' = A' \cap B'\)</text>
+            <text x="100" y="105" fill="#111827" font-size="9" text-anchor="middle">Complement of a union</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\((A \cap B)' = A' \cup B'\)</text>
+            <text x="300" y="105" fill="#111827" font-size="9" text-anchor="middle">Complement of an intersection</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 These laws mirror De Morgan's Laws in propositional logic.</text>
+        </svg>
+    </div>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 7)</h4>
+        <ul>
+            <li><strong>Union (\(\cup\)):</strong> Elements in \(A\) <em>or</em> \(B\).</li>
+            <li><strong>Intersection (\(\cap\)):</strong> Elements in \(A\) <em>and</em> \(B\).</li>
+            <li><strong>Complement (\('\)):</strong> Elements in \(U\) but not in \(A\).</li>
+            <li><strong>Difference (\(-\)):</strong> Elements in \(A\) but not in \(B\). (\(A - B = A \cap B'\)).</li>
+            <li><strong>Symmetric Difference (\(\Delta\)):</strong> \((A - B) \cup (B - A)\).</li>
+            <li><strong>Key Theorems:</strong> Commutative, Associative, Distributive, De Morgan's Laws.</li>
+            <li><strong>Venn Diagrams:</strong> Visual representation of sets and operations using overlapping circles.</li>
+        </ul>
+    </div>
+</div>

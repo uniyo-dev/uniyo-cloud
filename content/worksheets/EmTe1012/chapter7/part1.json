@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 7,
+    "title": "Part 1 Practice: Nanotechnology & Biotechnology",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the size range of the nanoscale?",
+            "options": [
+                "A) 1 to 100 meters",
+                "B) 1 to 100 nanometers",
+                "C) 1 to 100 centimeters",
+                "D) 1 to 100 kilometers"
+            ],
+            "correct_answer": "B) 1 to 100 nanometers",
+            "explanation": "The module states: 'Nanotechnology is science, engineering, and technology conducted at the nanoscale, which is about 1 to 100 nanometers.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Who is credited with starting the ideas of nanotechnology with his 1959 talk 'There's plenty of room at the bottom'?",
+            "options": [
+                "A) Albert Einstein",
+                "B) Richard Feynman",
+                "C) Norio Taniguchi",
+                "D) Karl Ereky"
+            ],
+            "correct_answer": "B) Richard Feynman",
+            "explanation": "The module states: 'The ideas and concepts behind nanoscience and nanotechnology started with a talk entitled \"There's plenty of room at the bottom\" by physicist Richard Feynman... on December 29, 1959.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "How many nanometers are there in one inch?",
+            "options": [
+                "A) 100,000",
+                "B) 1,000,000",
+                "C) 25,400,000",
+                "D) 10,000"
+            ],
+            "correct_answer": "C) 25,400,000",
+            "explanation": "The module states: 'There are 25,400,000 nanometers in an inch.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "Why do materials behave differently at the nanoscale?",
+            "options": [
+                "A) Because they are heavier.",
+                "B) Because of larger surface area and quantum effects.",
+                "C) Because they are colder.",
+                "D) Because they are larger in size."
+            ],
+            "correct_answer": "B) Because of larger surface area and quantum effects.",
+            "explanation": "The module states: 'The properties of materials can be different at the nanoscale for two main reasons: First, nanomaterials have a relatively larger surface area... Second, quantum effects can begin to dominate the behavior of matter at the nanoscale.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "Which of the following is an application of nanotechnology in medicine?",
+            "options": [
+                "A) Creating larger organs.",
+                "B) Customized nanoparticles that deliver drugs directly to diseased cells.",
+                "C) Replacing all human doctors.",
+                "D) Building full-sized robots."
+            ],
+            "correct_answer": "B) Customized nanoparticles that deliver drugs directly to diseased cells.",
+            "explanation": "The module states: 'Medicine: customized nanoparticles the size of molecules that can deliver drugs directly to diseased cells in your body.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the simplest definition of biotechnology?",
+            "options": [
+                "A) Technology based on physics.",
+                "B) Technology based on biology, harnessing cellular and biomolecular processes.",
+                "C) Technology based on computers.",
+                "D) Technology based on engineering."
+            ],
+            "correct_answer": "B) Technology based on biology, harnessing cellular and biomolecular processes.",
+            "explanation": "The module states: 'At its simplest, biotechnology is technology based on biology - biotechnology harnesses cellular and biomolecular processes to develop technologies and products that help improve our lives.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 7,
+            "text": "What is a modern example of biotechnology?",
+            "options": [
+                "A) Brewing beer with yeast.",
+                "B) Genetic engineering, where genes are transferred or modified to add or remove traits.",
+                "C) Baking bread.",
+                "D) Making cheese."
+            ],
+            "correct_answer": "B) Genetic engineering, where genes are transferred or modified to add or remove traits.",
+            "explanation": "The module states: 'One example of modern biotechnology is genetic engineering. Genetic engineering is the process of transferring individual genes between organisms or modifying the genes in an organism to remove or add a desired trait or characteristic.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What is the technique called when a normal gene is transferred to replace a non-functional gene to treat genetic defects?",
+            "options": [
+                "A) Gene editing",
+                "B) Gene therapy",
+                "C) Genetic splicing",
+                "D) Gene cloning"
+            ],
+            "correct_answer": "B) Gene therapy",
+            "explanation": "The module states: 'It has also given rise to a technique known as gene therapy. Gene therapy is a technique to remove the genetic defect in an embryo or child. This technique involves the transfer of a normal gene that works over the non-functional gene.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "What is the process called when environmental engineers use bacteria to clean up waste sites?",
+            "options": [
+                "A) Biohacking",
+                "B) Bioremediation",
+                "C) Biodegradation",
+                "D) Bioengineering"
+            ],
+            "correct_answer": "B) Bioremediation",
+            "explanation": "The module states: 'Environmental engineers use bioremediation, the broadest application of environmental biotechnology... They introduce nutrients to stimulate the activity of bacteria already present in the soil at a waste site or add new bacteria to the soil. The bacteria digest the waste at the site and turn it into harmless byproducts.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Who coined the term 'biotechnology' in 1919?",
+            "options": [
+                "A) Richard Feynman",
+                "B) Karl Ereky",
+                "C) Norio Taniguchi",
+                "D) Edward Jenner"
+            ],
+            "correct_answer": "B) Karl Ereky",
+            "explanation": "The module states: 'When he coined the term in 1919, the agriculturalist Karl Ereky described 'biotechnology' as \"all lines of work by which products are produced from raw materials with the aid of living things.\"'",
+            "difficulty": "hard"
+        }
+    ]
+}

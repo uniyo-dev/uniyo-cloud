@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 1,
+    "title": "Part 3 Practice: Relationship with Other Disciplines, Contributions, & Unit Summary",
+    "questions": [
+        {
+            "id": 1,
+            "text": "How does anthropology relate to other disciplines in the sciences and humanities?",
+            "options": [
+                "A) It has no relationship with other disciplines.",
+                "B) It greatly overlaps with other disciplines and borrows theories and data from them.",
+                "C) It is completely separate from all other fields.",
+                "D) It only borrows from the natural sciences."
+            ],
+            "correct_answer": "B) It greatly overlaps with other disciplines and borrows theories and data from them.",
+            "explanation": "The module states: 'In terms of subject matter and areas of study, it greatly overlaps with other disciplines... anthropology may borrow theories and data from such and many other disciplines.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is a key distinction between anthropology and other disciplines?",
+            "options": [
+                "A) Anthropology only studies modern societies.",
+                "B) Anthropology studies humankind in its entirety, using a holistic, comparative, and relativistic approach, and emphasizes extended fieldwork.",
+                "C) Anthropology is only a biological science.",
+                "D) Anthropology does not use any research methods."
+            ],
+            "correct_answer": "B) Anthropology studies humankind in its entirety, using a holistic, comparative, and relativistic approach, and emphasizes extended fieldwork.",
+            "explanation": "The module states: 'Anthropology differs by its broad scope, unique approach, perspective, unit of analysis, and methods.' It studies humankind in its entirety, holistically, comparatively, and relativistic, with extended fieldwork.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What does anthropology use as its primary unit of analysis?",
+            "options": [
+                "A) The individual.",
+                "B) Culture as an organizing concept.",
+                "C) Economic systems.",
+                "D) Political parties."
+            ],
+            "correct_answer": "B) Culture as an organizing concept.",
+            "explanation": "The module states: 'In its unit of analysis, anthropology takes culture as an organizing concept.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "According to the module, what is a major contribution of anthropology to scientific understanding?",
+            "options": [
+                "A) It focuses only on Western cultures.",
+                "B) It examines all aspects of humanity, for all periods of time, and for all parts of the globe.",
+                "C) It only studies fossils.",
+                "D) It ignores cultural diversity."
+            ],
+            "correct_answer": "B) It examines all aspects of humanity, for all periods of time, and for all parts of the globe.",
+            "explanation": "The module states: 'Anthropology has carved out for itself the task of examining all aspects of humanity, for all periods of time, and for all parts of the globe.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "How does anthropology serve as a corrective tool to deterministic thinking?",
+            "options": [
+                "A) By accepting all cultural perspectives as absolute truths.",
+                "B) By counterbalancing oversimplified explanations with broad, comparative evidence from multiple cultures.",
+                "C) By ignoring other cultures.",
+                "D) By focusing only on one culture."
+            ],
+            "correct_answer": "B) By counterbalancing oversimplified explanations with broad, comparative evidence from multiple cultures.",
+            "explanation": "The module states: 'Its broad, comparative perspective counterbalances oversimplified explanations, concerning all of humanity, based on evidence obtained from a particular cultural world.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What does the phrase 'anthropology holds up a great mirror to man' mean?",
+            "options": [
+                "A) Anthropology only studies physical appearance.",
+                "B) Anthropology helps us better understand and appreciate ourselves by exposing us to the cultural variability of the world's diverse peoples.",
+                "C) Anthropology is only about looking at fossils.",
+                "D) Anthropology is not useful for self-reflection."
+            ],
+            "correct_answer": "B) Anthropology helps us better understand and appreciate ourselves by exposing us to the cultural variability of the world's diverse peoples.",
+            "explanation": "The module states: 'As Kluckhohn (1944), put it, \"anthropology holds up a great mirror to man and lets him look at himself, in this infinite variety.\"'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "How does anthropology contribute to fighting prejudice and discrimination?",
+            "options": [
+                "A) By promoting ethnocentrism.",
+                "B) By helping us fight against ethnocentrism and promoting a cross-cultural perspective that sees us as part of one human family.",
+                "C) By ignoring cultural differences.",
+                "D) By focusing only on one culture."
+            ],
+            "correct_answer": "B) By helping us fight against ethnocentrism and promoting a cross-cultural perspective that sees us as part of one human family.",
+            "explanation": "The module states: 'Anthropology promotes a cross-cultural perspective that allows us to see ourselves as part of one human family... It helps us fight against ethnocentrism; the belief that one's own culture and one's own way of life is superior to others.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What skills does anthropology help students acquire for the 21st century?",
+            "options": [
+                "A) Only technical skills.",
+                "B) Broad perspective, appreciating other points of view, operating comfortably in ambiguous situations, and working in cross-cultural teams.",
+                "C) Only language skills.",
+                "D) Only mathematical skills."
+            ],
+            "correct_answer": "B) Broad perspective, appreciating other points of view, operating comfortably in ambiguous situations, and working in cross-cultural teams.",
+            "explanation": "The module states: 'Anthropology helps us acquire skills crucial for living and working in the twenty-first century. These skills include developing a broad perspective, appreciating other points of view, operating comfortably in ambiguous situations, working effectively as part of cross-cultural teams.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What are some practical areas where anthropology is applied to solve problems?",
+            "options": [
+                "A) Only in museums.",
+                "B) Environmental change, globalization, poverty, health, education, ethnic conflicts, human rights, and indigenous cultures.",
+                "C) Only in archaeology.",
+                "D) Only in linguistics."
+            ],
+            "correct_answer": "B) Environmental change, globalization, poverty, health, education, ethnic conflicts, human rights, and indigenous cultures.",
+            "explanation": "The module states: 'It is often applied in areas of environmental change and development; globalization, culture change, and global inequalities; poverty; health and nutrition; bilingual and multicultural education; ethnic and religious conflicts; social justice and human rights; and the survival of indigenous cultures and languages.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is the fundamental contribution of anthropology summarized in the unit summary?",
+            "options": [
+                "A) Understanding only Western societies.",
+                "B) Understanding humanity in all its biological and cultural diversity, past and present, creating global awareness.",
+                "C) Preserving cultures in museums.",
+                "D) Ignoring cultural differences."
+            ],
+            "correct_answer": "B) Understanding humanity in all its biological and cultural diversity, past and present, creating global awareness.",
+            "explanation": "The module states: 'Understanding humanity in all its biological and cultural diversity, past and present, is the fundamental contribution of anthropology. With its holistic and comparative perspectives, it creates a global awareness and a deep appreciation of humanity's past and present.'",
+            "difficulty": "hard"
+        }
+    ]
+}

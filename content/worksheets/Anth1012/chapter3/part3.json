@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 3,
+    "title": "Part 3 Practice: Evaluating Cultural Differences & Culture Change",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the definition of ethnocentrism?",
+            "options": [
+                "A) Understanding a culture in its own context.",
+                "B) The tendency to view one's own culture as superior and to judge others by those standards.",
+                "C) The belief that all cultures are equal.",
+                "D) The rejection of all cultural norms."
+            ],
+            "correct_answer": "B) The tendency to view one's own culture as superior and to judge others by those standards.",
+            "explanation": "The module states: 'Ethnocentrism is the tendency to view one's own culture as superior to others and the basis for judging the behavior and beliefs of people raised in other cultures.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is a positive role of ethnocentrism mentioned in the module?",
+            "options": [
+                "A) It promotes global understanding.",
+                "B) It acts as a conservative force, helping maintain the separation and uniqueness of cultures.",
+                "C) It encourages open communication.",
+                "D) It eliminates all prejudices."
+            ],
+            "correct_answer": "B) It acts as a conservative force, helping maintain the separation and uniqueness of cultures.",
+            "explanation": "The module states: 'On the other hand, it is argued that a small amount of ethnocentrism is important. By causing a rejection of the foods, customs, and perceptions of people in other cultures, it acts as a conservative force in preserving traditions of one's own culture.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the core principle of cultural relativism?",
+            "options": [
+                "A) That one culture is superior to another.",
+                "B) That we must understand a culture within its own context and suspend judgment.",
+                "C) That all cultures are the same.",
+                "D) That we should ignore cultural differences."
+            ],
+            "correct_answer": "B) That we must understand a culture within its own context and suspend judgment.",
+            "explanation": "The module states: 'Cultural relativism suspends judgment and views about the behavior of people from the perspective of their own culture... A culture has to be studied in terms of its own meanings and values.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the relationship between human rights and cultural relativism?",
+            "options": [
+                "A) Human rights are only relevant to Western cultures.",
+                "B) Human rights are universal, inalienable, and challenge cultural relativism by invoking a realm of justice beyond particular cultures.",
+                "C) They are the same thing.",
+                "D) Cultural relativism always overrides human rights."
+            ],
+            "correct_answer": "B) Human rights are universal, inalienable, and challenge cultural relativism by invoking a realm of justice beyond particular cultures.",
+            "explanation": "The module states: 'Human rights: rights based on justice and morality beyond and superior to particular countries, cultures, and religions. The idea of human rights challenges cultural relativism by invoking a realm of justice and morality beyond and superior to the laws and customs of particular countries, cultures, and religions.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the process by which cultural elements are borrowed from another society called?",
+            "options": [
+                "A) Invention.",
+                "B) Acculturation.",
+                "C) Diffusion.",
+                "D) Globalization."
+            ],
+            "correct_answer": "C) Diffusion.",
+            "explanation": "The module states: 'The process by which cultural elements are borrowed from another society and incorporated into the culture of the recipient group is called diffusion.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the difference between acculturation and diffusion?",
+            "options": [
+                "A) Acculturation is the same as diffusion.",
+                "B) Acculturation results from continuous first-hand contact (e.g., trade or colonialism), while diffusion is the borrowing of traits.",
+                "C) Diffusion is only direct; acculturation is only indirect.",
+                "D) Acculturation is only about food; diffusion is about technology."
+            ],
+            "correct_answer": "B) Acculturation results from continuous first-hand contact (e.g., trade or colonialism), while diffusion is the borrowing of traits.",
+            "explanation": "The module states: 'Acculturation is the exchange of cultural features that results when groups have continuous first-hand contact... This usually happens in situations of trade or colonialism.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is a key mechanism of culture change where humans innovate and creatively find solutions to problems?",
+            "options": [
+                "A) Diffusion.",
+                "B) Acculturation.",
+                "C) Invention.",
+                "D) Globalization."
+            ],
+            "correct_answer": "C) Invention.",
+            "explanation": "The module states: 'Invention: The process by which humans innovate, creatively finding solutions to problems is a third mechanism of cultural change.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "How does globalization promote culture change?",
+            "options": [
+                "A) By isolating cultures from each other.",
+                "B) By interlinking nations through economic, political forces, and modern transportation/communication, promoting diffusion and acculturation.",
+                "C) By eliminating all cultural differences.",
+                "D) By preventing the spread of information."
+            ],
+            "correct_answer": "B) By interlinking nations through economic, political forces, and modern transportation/communication, promoting diffusion and acculturation.",
+            "explanation": "The module states: 'Globalization encompasses a series of processes, including diffusion and acculturation, working to promote change in a world in which nations and people are increasingly interlinked and mutually dependent. Promoting such linkages are economic and political forces, as well as modern systems of transportation and communication.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What is an example of independent invention mentioned in the module?",
+            "options": [
+                "A) The invention of the internet.",
+                "B) The independent invention of agriculture in the Middle East and Mexico.",
+                "C) The invention of the printing press.",
+                "D) The invention of the wheel."
+            ],
+            "correct_answer": "B) The independent invention of agriculture in the Middle East and Mexico.",
+            "explanation": "The module states: 'One example is the independent invention of agriculture in the Middle East and Mexico. Over the course of human history, major innovations have spread at the expense of earlier ones.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What does cultural relativism entail according to the module?",
+            "options": [
+                "A) Judging all cultures by one standard.",
+                "B) Appreciating cultural diversity, understanding one's own culture as one among many, and recognizing that what is acceptable in one culture may not be in another.",
+                "C) Ignoring cultural differences.",
+                "D) Promoting ethnocentrism."
+            ],
+            "correct_answer": "B) Appreciating cultural diversity, understanding one's own culture as one among many, and recognizing that what is acceptable in one culture may not be in another.",
+            "explanation": "The module states: 'To wind up, cultural relativism entails: Appreciating cultural diversity; accepting and respecting other cultures; Understanding one's own culture as only one among the many; Trying to understand every culture and its elements in terms of its own context and logic... Recognizing that what is immoral, ethical, and acceptable in one culture may not be so in another culture.'",
+            "difficulty": "hard"
+        }
+    ]
+}

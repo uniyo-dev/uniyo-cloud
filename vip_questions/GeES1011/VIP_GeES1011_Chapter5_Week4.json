@@ -1,0 +1,288 @@
+{
+    "course_code": "GeES1011",
+    "chapter_number": 5,
+    "week_number": 4,
+    "title": "VIP Chapter 5 Week 4: Climate Change",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Ethiopia's rate of warming per decade is approximately:",
+            "diagram": null,
+            "options": [
+                "A) 0.1°C",
+                "B) 0.28°C",
+                "C) 1°C",
+                "D) 5°C"
+            ],
+            "correct_answer": "B) 0.28°C",
+            "explanation": "Ethiopia warms ~0.28°C per decade.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "El Niño causes what in Ethiopia?",
+            "diagram": null,
+            "options": [
+                "A) Flooding",
+                "B) Drought (rainfall reduction)",
+                "C) Snow",
+                "D) No effect"
+            ],
+            "correct_answer": "B) Drought (rainfall reduction)",
+            "explanation": "El Niño often causes drought in Ethiopia.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "Milankovitch cycles refer to:",
+            "diagram": null,
+            "options": [
+                "A) Ocean currents",
+                "B) Earth's orbital changes (eccentricity, tilt, wobble)",
+                "C) Wind patterns",
+                "D) Volcanic cycles"
+            ],
+            "correct_answer": "B) Earth's orbital changes (eccentricity, tilt, wobble)",
+            "explanation": "Milankovitch = orbital variations affecting climate.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "Which GHG is MOST abundant from human activities?",
+            "diagram": null,
+            "options": [
+                "A) Methane",
+                "B) Carbon dioxide (CO₂)",
+                "C) Nitrous oxide",
+                "D) CFCs"
+            ],
+            "correct_answer": "B) Carbon dioxide (CO₂)",
+            "explanation": "CO₂ = most abundant anthropogenic GHG.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Methane is released primarily from:",
+            "diagram": null,
+            "options": [
+                "A) Solar panels",
+                "B) Livestock and rice paddies",
+                "C) Wind turbines",
+                "D) Forests"
+            ],
+            "correct_answer": "B) Livestock and rice paddies",
+            "explanation": "Methane from livestock digestion and rice paddies.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "Climate change affects coffee production by:",
+            "diagram": null,
+            "options": [
+                "A) Increasing yields everywhere",
+                "B) Forcing coffee to higher altitudes",
+                "C) No effect",
+                "D) Making coffee sweeter"
+            ],
+            "correct_answer": "B) Forcing coffee to higher altitudes",
+            "explanation": "Warming pushes coffee to higher, cooler elevations.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "Lake Haramaya disappeared primarily due to:",
+            "diagram": null,
+            "options": [
+                "A) Volcanic eruption",
+                "B) Climate change and overuse",
+                "C) Earthquake",
+                "D) Too much rain"
+            ],
+            "correct_answer": "B) Climate change and overuse",
+            "explanation": "Lake Haramaya = climate change + overexploitation.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Climate-smart agriculture combines:",
+            "diagram": null,
+            "options": [
+                "A) High emissions + high yield",
+                "B) Adaptation + mitigation + food security",
+                "C) Only irrigation",
+                "D) Only fertilizers"
+            ],
+            "correct_answer": "B) Adaptation + mitigation + food security",
+            "explanation": "Climate-smart = adapt + mitigate + food security.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Carbon sequestration means:",
+            "diagram": null,
+            "options": [
+                "A) Burning carbon",
+                "B) Capturing and storing CO₂",
+                "C) Releasing CO₂",
+                "D) Measuring CO₂"
+            ],
+            "correct_answer": "B) Capturing and storing CO₂",
+            "explanation": "Carbon sequestration = capture and store CO₂.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Ethiopia's CRGE strategy stands for:",
+            "diagram": null,
+            "options": [
+                "A) Climate Resilient Green Economy",
+                "B) Carbon Reduction Gas Emission",
+                "C) Climate Reduction Global Energy",
+                "D) Clean Renewable Green Energy"
+            ],
+            "correct_answer": "A) Climate Resilient Green Economy",
+            "explanation": "CRGE = Ethiopia's green economy strategy.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "Which is Ethiopia's MOST promising renewable energy?",
+            "diagram": null,
+            "options": [
+                "A) Coal",
+                "B) Hydroelectric power",
+                "C) Nuclear",
+                "D) Diesel"
+            ],
+            "correct_answer": "B) Hydroelectric power",
+            "explanation": "Hydro = Ethiopia's main renewable energy.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "AFLATOXIN contamination in crops increases with:",
+            "diagram": null,
+            "options": [
+                "A) Cold weather",
+                "B) Drought and high temperatures",
+                "C) Heavy rainfall",
+                "D) Frost"
+            ],
+            "correct_answer": "B) Drought and high temperatures",
+            "explanation": "Aflatoxin = increases with heat/drought stress.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "The Great Green Wall initiative aims to:",
+            "diagram": null,
+            "options": [
+                "A) Build a wall",
+                "B) Plant trees across Africa to stop desertification",
+                "C) Create dams",
+                "D) Urbanize rural areas"
+            ],
+            "correct_answer": "B) Plant trees across Africa to stop desertification",
+            "explanation": "Great Green Wall = reforestation across Sahel.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "Which international agreement addresses climate change?",
+            "diagram": null,
+            "options": [
+                "A) WTO Agreement",
+                "B) Paris Agreement (2015)",
+                "C) NAFTA",
+                "D) OPEC Agreement"
+            ],
+            "correct_answer": "B) Paris Agreement (2015)",
+            "explanation": "Paris Agreement = global climate accord.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "Ethiopia's forest cover has DECLINED from 40% (1900) to:",
+            "diagram": null,
+            "options": [
+                "A) 30%",
+                "B) 15%",
+                "C) 5%",
+                "D) Less than 5%"
+            ],
+            "correct_answer": "D) Less than 5%",
+            "explanation": "Ethiopia's forest cover declined to <5%.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 16,
+            "text": "Which ecosystem is MOST vulnerable to climate change in Ethiopia?",
+            "diagram": null,
+            "options": [
+                "A) Deserts",
+                "B) Afroalpine (Wurch) ecosystems",
+                "C) Grasslands",
+                "D) Wetlands"
+            ],
+            "correct_answer": "B) Afroalpine (Wurch) ecosystems",
+            "explanation": "Afroalpine species have nowhere to migrate upward.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "Early warning systems are which type of response?",
+            "diagram": null,
+            "options": [
+                "A) Mitigation",
+                "B) Adaptation",
+                "C) Both",
+                "D) Neither"
+            ],
+            "correct_answer": "B) Adaptation",
+            "explanation": "Early warning = adaptation (cope with impacts).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "Electric vehicles are which type of response?",
+            "diagram": null,
+            "options": [
+                "A) Mitigation",
+                "B) Adaptation",
+                "C) Both",
+                "D) Neither"
+            ],
+            "correct_answer": "A) Mitigation",
+            "explanation": "EVs = mitigation (reduce emissions).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "Which gas is 25x MORE potent than CO₂ for trapping heat?",
+            "diagram": null,
+            "options": [
+                "A) Oxygen",
+                "B) Methane (CH₄)",
+                "C) Nitrogen",
+                "D) Helium"
+            ],
+            "correct_answer": "B) Methane (CH₄)",
+            "explanation": "Methane = 25x more potent GHG than CO₂.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "The IPCC is:",
+            "diagram": null,
+            "options": [
+                "A) International Petroleum Company",
+                "B) Intergovernmental Panel on Climate Change",
+                "C) Internal Climate Council",
+                "D) International Peace Corps"
+            ],
+            "correct_answer": "B) Intergovernmental Panel on Climate Change",
+            "explanation": "IPCC = UN body assessing climate science.",
+            "difficulty": "hard"
+        }
+    ]
+}

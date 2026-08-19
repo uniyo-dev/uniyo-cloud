@@ -1,0 +1,134 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the size of the matrix $A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{bmatrix}$?",
+            "options": [
+                "A) 3 × 2",
+                "B) 2 × 3",
+                "C) 2 × 2",
+                "D) 3 × 3"
+            ],
+            "correct_answer": "B) 2 × 3",
+            "explanation": "The module states: 'Matrix A of size m × n has m rows and n columns.' The given matrix has 2 rows and 3 columns, so its size is 2 × 3.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the entry $a_{23}$ of the matrix $A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{bmatrix}$?",
+            "options": [
+                "A) 2",
+                "B) 5",
+                "C) 6",
+                "D) 8"
+            ],
+            "correct_answer": "C) 6",
+            "explanation": "The module states: '$a_{ij}$ appears at the intersection of the $i$-th row and the $j$-th column.' $a_{23}$ is the entry in the 2nd row and 3rd column, which is 6.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "When are two matrices $A$ and $B$ considered equal?",
+            "options": [
+                "A) When they have the same number of rows.",
+                "B) When they have the same number of columns.",
+                "C) When they have the same size and $a_{ij} = b_{ij}$ for all $i$ and $j$.",
+                "D) When they have the same determinant."
+            ],
+            "correct_answer": "C) When they have the same size and $a_{ij} = b_{ij}$ for all $i$ and $j$.",
+            "explanation": "The module states: 'Two matrices of the same size, $A = [a_{ij}]$ and $B = [b_{ij}]$, are said to be equal if and only if $a_{ij} = b_{ij}$, for all $i, j$.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the sum of $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$ and $B = \\begin{bmatrix} 5 & 6 \\\\ 7 & 8 \\end{bmatrix}$?",
+            "options": [
+                "A) $\\begin{bmatrix} 6 & 8 \\\\ 10 & 12 \\end{bmatrix}$",
+                "B) $\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$",
+                "C) $\\begin{bmatrix} 5 & 6 \\\\ 7 & 8 \\end{bmatrix}$",
+                "D) $\\begin{bmatrix} 4 & 4 \\\\ 4 & 4 \\end{bmatrix}$"
+            ],
+            "correct_answer": "A) $\\begin{bmatrix} 6 & 8 \\\\ 10 & 12 \\end{bmatrix}$",
+            "explanation": "The module states: '$A + B = [a_{ij} + b_{ij}]$.' Adding corresponding entries: $1+5=6, 2+6=8, 3+7=10, 4+8=12$.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 5,
+            "text": "What is the result of scalar multiplication $3A$ for $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$?",
+            "options": [
+                "A) $\\begin{bmatrix} 3 & 6 \\\\ 9 & 12 \\end{bmatrix}$",
+                "B) $\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$",
+                "C) $\\begin{bmatrix} 3 & 2 \\\\ 3 & 4 \\end{bmatrix}$",
+                "D) $\\begin{bmatrix} 1 & 6 \\\\ 3 & 12 \\end{bmatrix}$"
+            ],
+            "correct_answer": "A) $\\begin{bmatrix} 3 & 6 \\\\ 9 & 12 \\end{bmatrix}$",
+            "explanation": "The module states: 'Scalar multiplication: $\\alpha A = [\\alpha a_{ij}]$.' Multiplying every entry of $A$ by 3 gives $[[3, 6], [9, 12]]$.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 6,
+            "text": "If $A$ and $B$ are matrices of the same size, which of the following is true?",
+            "options": [
+                "A) $A + B = B + A$",
+                "B) $A - B = B - A$",
+                "C) $A \\times B = B \\times A$",
+                "D) $A + B$ is undefined"
+            ],
+            "correct_answer": "A) $A + B = B + A$",
+            "explanation": "The module states: 'Commutative Law: $A + B = B + A$.' Matrix addition is commutative.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the additive identity matrix for a 2 × 2 matrix?",
+            "options": [
+                "A) $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$",
+                "B) $\\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}$",
+                "C) $\\begin{bmatrix} 1 & 1 \\\\ 1 & 1 \\end{bmatrix}$",
+                "D) $\\begin{bmatrix} 2 & 2 \\\\ 2 & 2 \\end{bmatrix}$"
+            ],
+            "correct_answer": "B) $\\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}$",
+            "explanation": "The module states: 'Identity Law: $A + 0 = A$.' The zero matrix is the additive identity.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Solve for $X$ in the matrix equation $2X + A = B$, where $A = \\begin{bmatrix} 4 & 0 \\\\ -2 & 2 \\end{bmatrix}$ and $B = \\begin{bmatrix} 6 & -4 \\\\ 8 & 0 \\end{bmatrix}$.",
+            "options": [
+                "A) $\\begin{bmatrix} 1 & -2 \\\\ 5 & -1 \\end{bmatrix}$",
+                "B) $\\begin{bmatrix} 2 & -4 \\\\ 10 & -2 \\end{bmatrix}$",
+                "C) $\\begin{bmatrix} 1 & 2 \\\\ 5 & 1 \\end{bmatrix}$",
+                "D) $\\begin{bmatrix} -1 & 2 \\\\ -5 & 1 \\end{bmatrix}$"
+            ],
+            "correct_answer": "A) $\\begin{bmatrix} 1 & -2 \\\\ 5 & -1 \\end{bmatrix}$",
+            "explanation": "The module states: '$2X = B - A \\implies X = (1/2)(B - A)$.' $B - A = [[2, -4], [10, -2]]$. Multiplying by 1/2 gives $X = [[1, -2], [5, -1]]$.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "Which of the following is NOT a law of matrix addition?",
+            "options": [
+                "A) $A + B = B + A$",
+                "B) $(A + B) + C = A + (B + C)$",
+                "C) $A + 0 = A$",
+                "D) $A \\times B = B \\times A$"
+            ],
+            "correct_answer": "D) $A \\times B = B \\times A$",
+            "explanation": "The module states the laws of matrix addition: Commutative, Associative, Identity, and Inverse. Matrix multiplication is NOT commutative, which is discussed later.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "If matrix $A$ is multiplied by a scalar $\\alpha$, what is the size of the resulting matrix?",
+            "options": [
+                "A) It becomes a $1 \\times n$ matrix.",
+                "B) It becomes an $m \\times 1$ matrix.",
+                "C) It remains the same size $m \\times n$.",
+                "D) It becomes an $n \\times m$ matrix."
+            ],
+            "correct_answer": "C) It remains the same size $m \\times n$.",
+            "explanation": "The module states: 'Closure Law of Scalar Multiplication: $\\alpha A$ is an $m \\times n$ matrix.' Scalar multiplication does not change the size of the matrix.",
+            "difficulty": "hard"
+        }
+    ]
+}

@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 4,
+    "title": "Part 1 Practice: Overview, Definitions, History, Pros, Cons, and Challenges",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Which of the following is NOT listed as a key feature of IoT in the module?",
+            "options": [
+                "A) Artificial Intelligence (AI)",
+                "B) Connectivity",
+                "C) Sensors",
+                "D) Manual human intervention"
+            ],
+            "correct_answer": "D) Manual human intervention",
+            "explanation": "The module lists AI, Connectivity, Sensors, Active Engagement, and Small Devices. Manual human intervention is the opposite of IoT, which is designed to automate tasks without human intervention.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "According to the 2020 conceptual framework, what is the simple formula for IoT?",
+            "options": [
+                "A) IoT = Hardware + Software",
+                "B) IoT = Services + Data + Networks + Sensors",
+                "C) IoT = Computers + Internet",
+                "D) IoT = AI + ML + DL"
+            ],
+            "correct_answer": "B) IoT = Services + Data + Networks + Sensors",
+            "explanation": "The module states: 'The term Internet of Things (IoT) according to the 2020 conceptual framework is expressed through a simple formula such as: IoT = Services + Data + Networks + Sensors.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "Which organization defines IoT as 'the networking of smart objects' with constraints like limited bandwidth and power?",
+            "options": [
+                "A) Internet Architecture Board (IAB)",
+                "B) Internet Engineering Task Force (IETF)",
+                "C) IEEE Communications Magazine",
+                "D) Oxford Dictionary"
+            ],
+            "correct_answer": "B) Internet Engineering Task Force (IETF)",
+            "explanation": "The module states: 'According to the Internet Engineering Task Force (IETF) organization's definition, IoT is the networking of smart objects in which smart objects have some constraints such as limited bandwidth, power, and processing accessibility.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "In 1999, who was the first person to describe the Internet of Things?",
+            "options": [
+                "A) Alan Turing",
+                "B) Kevin Ashton",
+                "C) John McCarthy",
+                "D) Tim Berners-Lee"
+            ],
+            "correct_answer": "B) Kevin Ashton",
+            "explanation": "The module states: 'Kevin Ashton, the Executive Director of Auto-ID Labs at MIT, was the first to describe the Internet of Things during his 1999 speech.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 5,
+            "text": "What did Kevin Ashton conclude was a prerequisite for the Internet of Things?",
+            "options": [
+                "A) Wi-Fi connectivity",
+                "B) Radio Frequency Identification (RFID)",
+                "C) Bluetooth technology",
+                "D) 5G networks"
+            ],
+            "correct_answer": "B) Radio Frequency Identification (RFID)",
+            "explanation": "The module states: 'Kevin Ashton stated that Radio Frequency Identification (RFID) was a prerequisite for the Internet of Things. He concluded that if all devices were “tagged,” computers could manage, track, and inventory them.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Which of the following is an advantage of IoT according to the module?",
+            "options": [
+                "A) Increased waste of resources.",
+                "B) Improved Customer Engagement by transforming passive analytics into active engagement.",
+                "C) Lack of data collection.",
+                "D) Reduced accuracy of information."
+            ],
+            "correct_answer": "B) Improved Customer Engagement by transforming passive analytics into active engagement.",
+            "explanation": "The module lists 'Improved Customer Engagement' as an advantage: 'Current analytics suffer from blind-spots and significant flaws inaccuracy... IoT completely transforms this to achieve richer and more effective engagement with audiences.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is a major disadvantage of IoT related to security?",
+            "options": [
+                "A) IoT devices are immune to hacking.",
+                "B) As the number of connected devices increases, the potential for hackers to steal confidential information also increases.",
+                "C) IoT devices cannot connect to the internet.",
+                "D) IoT devices do not store any data."
+            ],
+            "correct_answer": "B) As the number of connected devices increases, the potential for hackers to steal confidential information also increases.",
+            "explanation": "The module states: 'As the number of connected devices increases and more information is shared between devices, the potential that a hacker could steal confidential information also increases.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What is one of the main challenges of IoT regarding flexibility?",
+            "options": [
+                "A) IoT systems are too easy to integrate with each other.",
+                "B) Many are concerned about the flexibility of an IoT system to integrate easily with another, worrying about conflicting or locking systems.",
+                "C) IoT devices do not require any software.",
+                "D) IoT systems are always 100% compatible."
+            ],
+            "correct_answer": "B) Many are concerned about the flexibility of an IoT system to integrate easily with another, worrying about conflicting or locking systems.",
+            "explanation": "The module states: 'Many are concerned about the flexibility of an IoT system to integrate easily with another. They worry about finding themselves with several conflicting or locking systems.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "What was one of the first examples of IoT from the early 1980s at Carnegie Mellon University?",
+            "options": [
+                "A) A self-driving car.",
+                "B) A Coca Cola machine connected to the internet to check if drinks were available and cold.",
+                "C) A smart home thermostat.",
+                "D) An internet-connected toaster."
+            ],
+            "correct_answer": "B) A Coca Cola machine connected to the internet to check if drinks were available and cold.",
+            "explanation": "The module states: 'One of the first examples of an Internet of Things was a Coca Cola machine, located at the Carnegie Melon University. Local programmers would connect by the Internet to the refrigerated appliance, and check to see if there was a drink available and if it was cold.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Why is compliance considered a significant challenge for IoT?",
+            "options": [
+                "A) Because IoT has no regulations.",
+                "B) Because IoT is exempt from all business laws.",
+                "C) Because IoT's complexity makes complying with regulations seem incredibly challenging when even standard software compliance is a battle.",
+                "D) Because IoT devices are not made by humans."
+            ],
+            "correct_answer": "C) Because IoT's complexity makes complying with regulations seem incredibly challenging when even standard software compliance is a battle.",
+            "explanation": "The module states: 'IoT, like any other technology in the realm of business, must comply with regulations. Its complexity makes the issue of compliance seem incredibly challenging when many consider standard software compliance a battle.'",
+            "difficulty": "hard"
+        }
+    ]
+}

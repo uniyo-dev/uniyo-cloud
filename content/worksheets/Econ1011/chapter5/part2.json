@@ -1,0 +1,147 @@
+{
+    "course_code": "Econ1011",
+    "chapter": 5,
+    "title": "Part 2 Practice: Monopoly Market",
+    "questions": [
+        {
+            "id": 1,
+            "text": "A monopoly is BEST defined as:",
+            "diagram": null,
+            "options": [
+                "A) A market with few firms selling differentiated products",
+                "B) A market with ONE seller and no close substitutes",
+                "C) A market with many firms selling identical products",
+                "D) A market with government price controls"
+            ],
+            "correct_answer": "B) A market with ONE seller and no close substitutes",
+            "explanation": "A MONOPOLY is a market structure with ONE seller and NO close substitutes. This gives the monopolist significant PRICING POWER — it can set prices without worrying about competitors. Examples: Ethiopian Electric Power (historically), pharmaceutical patents.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Which of the following is a SOURCE of monopoly power?",
+            "diagram": null,
+            "options": [
+                "A) Free entry of new firms",
+                "B) Patent protection",
+                "C) Product differentiation",
+                "D) Many competitors"
+            ],
+            "correct_answer": "B) Patent protection",
+            "explanation": "PATENTS are government-granted EXCLUSIVE rights to produce a product for a period (usually 20 years). This creates a LEGAL BARRIER to entry, giving the patent holder monopoly power. Pharmaceutical companies rely on patents to recover R&D costs.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 3,
+            "text": "A NATURAL monopoly occurs when:",
+            "diagram": null,
+            "options": [
+                "A) Government creates monopoly by law",
+                "B) Economies of scale make one firm most efficient",
+                "C) Firm owns key natural resources",
+                "D) Firm uses unfair competition"
+            ],
+            "correct_answer": "B) Economies of scale make one firm most efficient",
+            "explanation": "A NATURAL monopoly exists when ECONOMIES OF SCALE are so large that ONE firm can serve the entire market at LOWER cost than multiple firms. Examples: electricity distribution, water supply, railway infrastructure. It would be wasteful to duplicate these networks.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "Examine the monopoly diagram. The profit-maximizing output (Qm) is where:",
+            "diagram": "<svg width='350' height='200' viewBox='0 0 350 200'><rect width='350' height='200' fill='#111827' rx='8'/><line x1='40' y1='170' x2='330' y2='170' stroke='#38bdf8' stroke-width='2'/><line x1='40' y1='20' x2='40' y2='170' stroke='#38bdf8' stroke-width='2'/><line x1='50' y1='40' x2='320' y2='150' stroke='#f43f5e' stroke-width='3'/><text x='260' y='160' fill='#f43f5e' font-size='10' font-weight='bold'>Demand</text><line x1='50' y1='40' x2='320' y2='150' stroke='#f59e0b' stroke-width='2' stroke-dasharray='5,3'/><text x='160' y='55' fill='#f59e0b' font-size='10' font-weight='bold'>MR</text><path d='M 60 160 Q 140 100 200 30' stroke='#facc15' stroke-width='2' fill='none'/><text x='200' y='40' fill='#facc15' font-size='10' font-weight='bold'>MC</text><circle cx='140' cy='90' r='5' fill='#14b8a6'/><text x='150' y='85' fill='#14b8a6' font-size='10' font-weight='bold'>MR=MC</text><line x1='140' y1='90' x2='140' y2='170' stroke='#94a3b8' stroke-width='1' stroke-dasharray='3,3'/><text x='145' y='180' fill='#94a3b8' font-size='10'>Qm</text></svg>",
+            "options": [
+                "A) MC = Demand",
+                "B) MR = MC",
+                "C) MR > MC",
+                "D) MC is minimum"
+            ],
+            "correct_answer": "B) MR = MC",
+            "explanation": "ALL firms (including monopolies) maximize profit where MR = MC. At this point, the additional revenue from one more unit equals the additional cost. The monopolist then charges the price on the DEMAND curve corresponding to Qm.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Compared to perfect competition, a monopoly charges:",
+            "diagram": null,
+            "options": [
+                "A) Lower price and produces more output",
+                "B) Higher price and produces less output",
+                "C) Same price and same output",
+                "D) Higher price and produces more output"
+            ],
+            "correct_answer": "B) Higher price and produces less output",
+            "explanation": "Monopolies charge HIGHER prices and produce LESS output than perfectly competitive markets. This is the social cost of monopoly — consumers pay more and get less. This is why governments regulate monopolies or break them up.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "De Beers historically controlled the diamond market by:",
+            "diagram": null,
+            "options": [
+                "A) Patent protection",
+                "B) Government franchise",
+                "C) Control of key resources (diamond mines)",
+                "D) Network effects"
+            ],
+            "correct_answer": "C) Control of key resources (diamond mines)",
+            "explanation": "De Beers controlled over 80% of world diamond supply by owning the diamond MINES. This is a classic example of monopoly through CONTROL OF KEY RESOURCES. If a firm owns the essential input, competitors cannot produce.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "A monopoly's demand curve is:",
+            "diagram": null,
+            "options": [
+                "A) Horizontal (perfectly elastic)",
+                "B) Downward sloping (the market demand curve)",
+                "C) Vertical",
+                "D) Upward sloping"
+            ],
+            "correct_answer": "B) Downward sloping (the market demand curve)",
+            "explanation": "A monopoly IS the entire market, so it faces the downward-sloping MARKET demand curve. To sell more, it must lower the price. This is different from perfect competition where each firm faces a horizontal demand curve.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Network effects create monopoly power because:",
+            "diagram": null,
+            "options": [
+                "A) Government grants exclusive rights",
+                "B) The value of the product increases as more people use it",
+                "C) Firms own all natural resources",
+                "D) Patents protect innovation"
+            ],
+            "correct_answer": "B) The value of the product increases as more people use it",
+            "explanation": "NETWORK EFFECTS occur when a product becomes MORE valuable as MORE people use it. Example: Facebook is valuable because everyone else is on it. New competitors find it hard to attract users because the established platform already has the network. This creates a natural monopoly tendency.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Which is a major DISADVANTAGE of monopoly?",
+            "diagram": null,
+            "options": [
+                "A) Too much competition",
+                "B) Inefficient resource allocation and deadweight loss",
+                "C) Excessive product variety",
+                "D) Price too low"
+            ],
+            "correct_answer": "B) Inefficient resource allocation and deadweight loss",
+            "explanation": "Monopolies cause DEADWEIGHT LOSS — they produce LESS than the socially optimal quantity and charge MORE. This means some consumers who would benefit from the product can't afford it. Society loses welfare. This is why governments regulate monopolies.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Price discrimination by a monopolist requires:",
+            "diagram": null,
+            "options": [
+                "A) All consumers willing to pay the same price",
+                "B) Ability to separate markets and prevent resale",
+                "C) Government approval for all sales",
+                "D) Zero production costs"
+            ],
+            "correct_answer": "B) Ability to separate markets and prevent resale",
+            "explanation": "PRICE DISCRIMINATION requires: (1) Monopoly power, (2) Ability to separate markets (different elasticities), (3) Prevention of RESALE between markets. Example: Airlines charge business travelers more than leisure travelers because they can identify and separate them.",
+            "difficulty": "hard"
+        }
+    ]
+}

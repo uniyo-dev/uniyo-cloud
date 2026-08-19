@@ -1,0 +1,372 @@
+{% extends "base.html" %}
+
+{% block title %}Content - UNIYO Admin{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin_home.css') }}">
+<style>
+    .collapsed-section {
+        display: none !important;
+    }
+
+    .collapse-btn {
+        padding: 6px 14px;
+        border: none;
+        border-radius: 6px;
+        font-size: 11px;
+        cursor: pointer;
+        font-weight: 600;
+        background: #6D28D9;
+        color: white;
+    }
+    .collapse-btn-teal {
+        background: #14B8A6;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="admin-container">
+    
+    <header class="admin-header">
+        <div>
+            <h1>📝 Content Management</h1>
+            <p>Manage lessons, worksheets, VIPs, and past exams</p>
+        </div>
+        <a href="{{ url_for('admin.home') }}" class="btn btn-outline">← Dashboard</a>
+    </header>
+    
+    <section class="admin-section">
+        <form action="{{ url_for('admin.scan_content') }}" method="POST">
+            <button type="submit" class="btn btn-primary">🔍 Scan for New Content</button>
+        </form>
+    </section>
+    
+    <!-- LESSONS -->
+    <section class="admin-section" style="min-height: 100px;">
+        <h3 style="margin: 0 0 12px 0;">📄 Lessons ({{ lessons|length }})</h3>
+        <div id="lessonsTable" style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; min-width: 600px;">
+            <thead>
+                <tr>
+                    <th style="background: #1A2332; padding: 8px; text-align: left; color: #94A3B8; font-size: 10px;">File</th>
+                    <th style="background: #1A2332; padding: 8px; text-align: left; color: #94A3B8; font-size: 10px;">Course</th>
+                    <th style="background: #1A2332; padding: 8px; text-align: left; color: #94A3B8; font-size: 10px;">Status</th>
+                    <th style="background: #1A2332; padding: 8px; text-align: left; color: #94A3B8; font-size: 10px;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for lesson in lessons %}
+                <tr>
+                    <td style="padding: 8px; font-size: 11px; color: #E2E8F0;">{{ lesson.file_path }}</td>
+                    <td style="padding: 8px; font-size: 11px; color: #E2E8F0;">{{ lesson.course_code }}</td>
+                    <td style="padding: 8px;">
+                        <span style="padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: 600; {% if lesson.is_active %}background: rgba(20,184,166,0.2); color: #14B8A6;{% else %}background: rgba(245,158,11,0.2); color: #F59E0B;{% endif %}">
+                            {{ 'PUBLISHED' if lesson.is_active else 'PENDING' }}
+                        </span>
+                    </td>
+                    <td style="padding: 8px;">
+                        {% if lesson.is_active %}
+                        <form action="{{ url_for('admin.unpublish_lesson', lesson_id=lesson.id) }}" method="POST" style="display: inline;">
+                            <button type="submit" style="padding: 4px 10px; border: none; border-radius: 4px; font-size: 10px; cursor: pointer; background: rgba(245,158,11,0.2); color: #F59E0B;">Unpublish</button>
+                        </form>
+                        {% else %}
+                        <form action="{{ url_for('admin.publish_lesson', lesson_id=lesson.id) }}" method="POST" style="display: inline;">
+                            <button type="submit" style="padding: 4px 10px; border: none; border-radius: 4px; font-size: 10px; cursor: pointer; background: rgba(20,184,166,0.2); color: #14B8A6;">Publish</button>
+                        </form>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+        <div style="text-align: center; margin-top: 10px;">
+            <button onclick="toggleSection('lessonsTable')" id="lessonsTableBtn" style="padding: 4px 12px; border: 1px solid #6D28D9; border-radius: 15px; background: transparent; color: #6D28D9; font-size: 10px; cursor: pointer;">▼ Collapse</button>
+        </div>
+    </section>
+    
+    <!-- WORKSHEETS -->
+    <section class="admin-section" style="min-height: 100px;">
+        <h3 style="margin: 0 0 12px 0;">📝 Worksheets</h3>
+        <div id="worksheetsTable" style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; min-width: 600px;">
+            <thead>
+                <tr>
+                    <th style="background: #1A2332; padding: 8px; text-align: left; color: #94A3B8; font-size: 10px;">File</th>
+                    <th style="background: #1A2332; padding: 8px; text-align: left; color: #94A3B8; font-size: 10px;">Course</th>
+                    <th style="background: #1A2332; padding: 8px; text-align: left; color: #94A3B8; font-size: 10px;">Status</th>
+                    <th style="background: #1A2332; padding: 8px; text-align: left; color: #94A3B8; font-size: 10px;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ws in worksheets %}
+                <tr>
+                    <td style="padding: 8px; font-size: 11px; color: #E2E8F0;">{{ ws.question_file }}</td>
+                    <td style="padding: 8px; font-size: 11px; color: #E2E8F0;">{{ ws.course_code }}</td>
+                    <td style="padding: 8px;">
+                        <span style="padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: 600; {% if ws.is_active %}background: rgba(20,184,166,0.2); color: #14B8A6;{% else %}background: rgba(245,158,11,0.2); color: #F59E0B;{% endif %}">
+                            {{ 'PUBLISHED' if ws.is_active else 'PENDING' }}
+                        </span>
+                    </td>
+                    <td style="padding: 8px;">
+                        {% if ws.is_active %}
+                        <form action="{{ url_for('admin.unpublish_worksheet', worksheet_id=ws.id) }}" method="POST" style="display: inline;">
+                            <button type="submit" style="padding: 4px 10px; border: none; border-radius: 4px; font-size: 10px; cursor: pointer; background: rgba(245,158,11,0.2); color: #F59E0B;">Unpublish</button>
+                        </form>
+                        {% else %}
+                        <form action="{{ url_for('admin.publish_worksheet', worksheet_id=ws.id) }}" method="POST" style="display: inline;">
+                            <button type="submit" style="padding: 4px 10px; border: none; border-radius: 4px; font-size: 10px; cursor: pointer; background: rgba(20,184,166,0.2); color: #14B8A6;">Publish</button>
+                        </form>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+        <div style="text-align: center; margin-top: 10px;">
+            <button onclick="toggleSection('worksheetsTable')" id="worksheetsTableBtn" style="padding: 4px 12px; border: 1px solid #6D28D9; border-radius: 15px; background: transparent; color: #6D28D9; font-size: 10px; cursor: pointer;">▼ Collapse</button>
+        </div>
+    </section>
+    
+    <!-- VIP QUESTIONS -->
+    <section class="admin-section" style="min-height: 100px; border: 2px solid rgba(109, 40, 217, 0.4);">
+        <h3 style="margin: 0 0 12px 0;">🏆 VIP Questions ({{ vip_questions|length }})</h3>
+        <div id="vipTable" style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; min-width: 700px;">
+            <thead>
+                <tr>
+                    <th style="background: #1A2332; padding: 8px; text-align: left; color: #94A3B8; font-size: 10px;">File</th>
+                    <th style="background: #1A2332; padding: 8px; text-align: left; color: #94A3B8; font-size: 10px;">Course</th>
+                    <th style="background: #1A2332; padding: 8px; text-align: center; color: #94A3B8; font-size: 10px;">Chapter</th>
+                    <th style="background: #1A2332; padding: 8px; text-align: center; color: #94A3B8; font-size: 10px;">Week</th>
+                    <th style="background: #1A2332; padding: 8px; text-align: left; color: #94A3B8; font-size: 10px;">Status</th>
+                    <th style="background: #1A2332; padding: 8px; text-align: left; color: #94A3B8; font-size: 10px;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for vip in vip_questions %}
+                <tr>
+                    <td style="padding: 8px; font-size: 11px; color: #E2E8F0;">{{ vip.question_file }}</td>
+                    <td style="padding: 8px; font-size: 11px; color: #E2E8F0;">{{ vip.course_code }}</td>
+                    <td style="padding: 8px; text-align: center; font-size: 11px; color: #6D28D9; font-weight: 700;">Ch{{ vip.chapter_number }}</td>
+                    <td style="padding: 8px; text-align: center; font-size: 11px; color: #F59E0B; font-weight: 700;">W{{ vip.week_number }}</td>
+                    <td style="padding: 8px;">
+                        <span style="padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: 600; {% if vip.is_active %}background: rgba(20,184,166,0.2); color: #14B8A6;{% else %}background: rgba(245,158,11,0.2); color: #F59E0B;{% endif %}">
+                            {{ 'ACTIVE' if vip.is_active else 'INACTIVE' }}
+                        </span>
+                    </td>
+                    <td style="padding: 8px;">
+                        {% if vip.is_active %}
+                        <form action="{{ url_for('admin.toggle_vip', vip_id=vip.id) }}" method="POST" style="display: inline;">
+                            <button type="submit" style="padding: 4px 10px; border: none; border-radius: 4px; font-size: 10px; cursor: pointer; background: rgba(245,158,11,0.2); color: #F59E0B;">Deactivate</button>
+                        </form>
+                        {% else %}
+                        <button onclick="openVipGate({{ vip.id }})" style="padding: 4px 10px; border: none; border-radius: 4px; font-size: 10px; cursor: pointer; font-weight: 600; background: rgba(20,184,166,0.2); color: #14B8A6;">📤 Publish</button>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+        <div style="text-align: center; margin-top: 10px;">
+            <button onclick="toggleSection('vipTable')" id="vipTableBtn" style="padding: 4px 12px; border: 1px solid #6D28D9; border-radius: 15px; background: transparent; color: #6D28D9; font-size: 10px; cursor: pointer;">▼ Collapse</button>
+        </div>
+    </section>
+    
+    <!-- PAST EXAMS -->
+    <section class="admin-section" style="min-height: 100px; border: 2px solid #14B8A6;">
+        <h3 style="margin: 0 0 12px 0;">🎓 Past Exam Library ({{ past_exams|length }})</h3>
+        <div id="pastExamsTable" style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; min-width: 600px;">
+            <thead>
+                <tr>
+                    <th style="background: #1A2332; padding: 8px; text-align: left; color: #94A3B8; font-size: 10px;">File</th>
+                    <th style="background: #1A2332; padding: 8px; text-align: left; color: #94A3B8; font-size: 10px;">University</th>
+                    <th style="background: #1A2332; padding: 8px; text-align: left; color: #94A3B8; font-size: 10px;">Status</th>
+                    <th style="background: #1A2332; padding: 8px; text-align: left; color: #94A3B8; font-size: 10px;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for exam in past_exams %}
+                <tr>
+                    <td style="padding: 8px; font-size: 11px; color: #E2E8F0;">{{ exam.file_path }}</td>
+                    <td style="padding: 8px; font-size: 11px; color: #E2E8F0;">{{ exam.university }}</td>
+                    <td style="padding: 8px;">
+                        <span style="padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: 600; {% if exam.is_active %}background: rgba(20,184,166,0.2); color: #14B8A6;{% else %}background: rgba(245,158,11,0.2); color: #F59E0B;{% endif %}">
+                            {{ 'PUBLISHED' if exam.is_active else 'PENDING' }}
+                        </span>
+                    </td>
+                    <td style="padding: 8px;">
+                        {% if exam.is_active %}
+                        <form action="{{ url_for('admin.unpublish_past_exam', exam_id=exam.id) }}" method="POST" style="display: inline;">
+                            <button type="submit" style="padding: 4px 10px; border: none; border-radius: 4px; font-size: 10px; cursor: pointer; background: rgba(245,158,11,0.2); color: #F59E0B;">Unpublish</button>
+                        </form>
+                        {% else %}
+                        <button onclick="openExamGate({{ exam.id }})" style="padding: 4px 10px; border: none; border-radius: 4px; font-size: 10px; cursor: pointer; font-weight: 600; background: rgba(20,184,166,0.2); color: #14B8A6;">📤 Publish</button>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+        <div style="text-align: center; margin-top: 10px;">
+            <button onclick="toggleSection('pastExamsTable')" id="pastExamsTableBtn" style="padding: 4px 12px; border: 1px solid #14B8A6; border-radius: 15px; background: transparent; color: #14B8A6; font-size: 10px; cursor: pointer;">▼ Collapse</button>
+        </div>
+    </section>
+    
+</div>
+
+<!-- VIP EXIT GATE -->
+<div id="vipGateModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 99998; align-items: center; justify-content: center; overflow-y: auto; padding: 20px;">
+    <div style="background: #111827; border: 3px solid #6D28D9; border-radius: 16px; padding: 24px; max-width: 450px; width: 90%; margin: 20px auto;">
+        <h3 style="color: #F59E0B; text-align: center;">🛡️ EXIT GATE</h3>
+        <p style="color: #94A3B8; text-align: center; font-size: 12px;">VIP Publishing Authorization</p>
+        <form id="vipGateForm" method="POST" action="/admin/vip/schedule">
+            <input type="hidden" name="vip_id" id="vipGateId">
+            
+            <label style="display: block; font-size: 11px; color: #94A3B8; margin: 8px 0 4px;">Title</label>
+            <input type="text" name="title" required placeholder="VIP Chapter X Week Y" style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC; font-size: 12px; box-sizing: border-box;">
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <div>
+                    <label style="display: block; font-size: 11px; color: #94A3B8; margin: 8px 0 4px;">Chapter</label>
+                    <input type="number" name="chapter_number" required min="1" style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC; font-size: 12px; box-sizing: border-box;">
+                </div>
+                <div>
+                    <label style="display: block; font-size: 11px; color: #94A3B8; margin: 8px 0 4px;">Week</label>
+                    <input type="number" name="week_number" required min="1" max="4" style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC; font-size: 12px; box-sizing: border-box;">
+                </div>
+            </div>
+            
+            <label style="display: block; font-size: 11px; color: #94A3B8; margin: 8px 0 4px;">Question File</label>
+            <input type="text" name="question_file" required placeholder="VIP_Econ1011_Chapter1_Week1.json" style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC; font-size: 11px; font-family: monospace; box-sizing: border-box;">
+            
+            <label style="display: block; font-size: 11px; color: #94A3B8; margin: 8px 0 4px;">Start Date</label>
+            <input type="date" name="start_date" required style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC; font-size: 12px; box-sizing: border-box;">
+            
+            <label style="display: block; font-size: 11px; color: #94A3B8; margin: 8px 0 4px;">Start Time</label>
+            <input type="time" name="start_time" value="08:00" required style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC; font-size: 12px; box-sizing: border-box;">
+            
+            <label style="display: block; font-size: 11px; color: #94A3B8; margin: 8px 0 4px;">Duration</label>
+            <select name="duration_hours" required style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC; font-size: 12px; box-sizing: border-box;">
+                <option value="3">3 hours</option>
+                <option value="8">8 hours</option>
+                <option value="12" selected>12 hours</option>
+                <option value="24">24 hours</option>
+            </select>
+            
+            <div style="display: flex; gap: 8px; margin-top: 16px;">
+                <button type="button" onclick="document.getElementById('vipGateModal').style.display='none'" style="flex: 1; padding: 10px; border: 1px solid #64748B; border-radius: 6px; background: transparent; color: #94A3B8; cursor: pointer;">Cancel</button>
+                <button type="submit" style="flex: 2; padding: 10px; border: none; border-radius: 6px; background: #6D28D9; color: white; cursor: pointer; font-weight: 700;">🛡️ AUTHORIZE & PUBLISH</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- PAST EXAM EXIT GATE -->
+<div id="examGateModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 99999; align-items: center; justify-content: center; overflow-y: auto; padding: 20px;">
+    <div style="background: #111827; border: 3px solid #14B8A6; border-radius: 16px; padding: 24px; max-width: 450px; width: 90%; margin: 20px auto;">
+        <h3 style="color: #14B8A6; text-align: center;">🛡️ EXIT GATE</h3>
+        <p style="color: #94A3B8; text-align: center; font-size: 12px;">Past Exam Publishing Authorization</p>
+        <form id="examGateForm" method="POST" action="/admin/content/past-exam/0/publish">
+            <label style="display: block; font-size: 11px; color: #94A3B8; margin: 8px 0 4px;">Description *</label>
+            <textarea name="description" rows="2" required placeholder="Brief exam description..." style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC; font-size: 12px; box-sizing: border-box;"></textarea>
+            
+            <label style="display: block; font-size: 11px; color: #94A3B8; margin: 8px 0 4px;">About This Exam</label>
+            <textarea name="about" rows="3" placeholder="More details about the exam (structure, topics, what students should focus on, etc.)" style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC; font-size: 12px; box-sizing: border-box;"></textarea>
+            
+            <label style="display: block; font-size: 11px; color: #94A3B8; margin: 8px 0 4px;">Marks Description *</label>
+            <textarea name="marks_description" rows="3" required placeholder="e.g., MCQs = 20pts; True/False = 6pts; Short Answer = 4pts (Total: 30pts)" style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC; font-size: 12px; box-sizing: border-box;"></textarea>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <div>
+                    <label style="display: block; font-size: 11px; color: #94A3B8; margin: 8px 0 4px;">Topics Covered *</label>
+                    <input type="text" name="topics_covered" required placeholder="e.g., Chapters 1-5" style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC; font-size: 11px; box-sizing: border-box;">
+                </div>
+                <div>
+                    <label style="display: block; font-size: 11px; color: #94A3B8; margin: 8px 0 4px;">Difficulty Level *</label>
+                    <select name="difficulty_level" required style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC; font-size: 11px; box-sizing: border-box;">
+                        <option value="Easy">Easy</option>
+                        <option value="Medium" selected>Medium</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <div>
+                    <label style="display: block; font-size: 11px; color: #94A3B8; margin: 8px 0 4px;">Time Limit (minutes) *</label>
+                    <input type="number" name="time_limit_minutes" value="120" required min="1" style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC; font-size: 11px; box-sizing: border-box;">
+                </div>
+                <div>
+                    <label style="display: block; font-size: 11px; color: #94A3B8; margin: 8px 0 4px;">Total Questions *</label>
+                    <input type="number" name="total_questions" required placeholder="e.g., 15" min="1" style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC; font-size: 11px; box-sizing: border-box;">
+                </div>
+            </div>
+            
+            <label style="display: block; font-size: 11px; color: #94A3B8; margin: 8px 0 4px;">Semester</label>
+            <select name="semester" style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC; font-size: 11px; box-sizing: border-box;">
+                <option value="1">Semester 1</option>
+                <option value="2">Semester 2</option>
+            </select>
+            
+            <div style="display: flex; gap: 8px; margin-top: 16px;">
+                <button type="button" onclick="document.getElementById('examGateModal').style.display='none'" style="flex: 1; padding: 10px; border: 1px solid #64748B; border-radius: 6px; background: transparent; color: #94A3B8; cursor: pointer;">Cancel</button>
+                <button type="submit" style="flex: 2; padding: 10px; border: none; border-radius: 6px; background: #14B8A6; color: white; cursor: pointer; font-weight: 700;">🛡️ AUTHORIZE & PUBLISH</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+function toggleSection(id) {
+    var el = document.getElementById(id);
+    var btn = document.getElementById(id + 'Btn');
+    
+    if (!el) return;
+    if (!btn) return;
+    
+    if (el.classList.contains('collapsed-section')) {
+        el.classList.remove('collapsed-section');
+        el.style.display = 'block';
+        btn.textContent = '▼ Collapse';
+        localStorage.setItem('uniyo_' + id, 'expanded');
+    } else {
+        el.classList.add('collapsed-section');
+        el.style.display = 'none';
+        btn.textContent = '▶ Expand';
+        localStorage.setItem('uniyo_' + id, 'collapsed');
+    }
+}
+
+function openVipGate(id) {
+    document.getElementById('vipGateId').value = id;
+    document.getElementById('vipGateModal').style.display = 'flex';
+}
+
+function openExamGate(id) {
+    var form = document.getElementById('examGateForm');
+    form.action = '/admin/content/past-exam/' + id + '/publish';
+    document.getElementById('examGateModal').style.display = 'flex';
+}
+
+// Restore saved states
+document.addEventListener('DOMContentLoaded', function() {
+    ['lessonsTable', 'worksheetsTable', 'vipTable', 'pastExamsTable'].forEach(function(id) {
+        var saved = localStorage.getItem('uniyo_' + id);
+        var el = document.getElementById(id);
+        var btn = document.getElementById(id + 'Btn');
+        if (saved === 'collapsed' && el && btn) {
+            el.classList.add('collapsed-section');
+            el.style.display = 'none';
+            btn.textContent = '▶ Expand';
+        }
+    });
+});
+</script>
+
+{% endblock %}

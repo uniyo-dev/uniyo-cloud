@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 5,
+    "title": "Part 1 Practice: Overview of AR & The Reality-Virtuality Continuum",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the fundamental idea of Augmented Reality (AR)?",
+            "options": [
+                "A) To replace the real world with a completely virtual environment.",
+                "B) To combine or mix the view of the real environment with additional virtual content presented through computer graphics.",
+                "C) To create a 100% digital world with no physical elements.",
+                "D) To ignore the real world entirely."
+            ],
+            "correct_answer": "B) To combine or mix the view of the real environment with additional virtual content presented through computer graphics.",
+            "explanation": "The module states: 'The fundamental idea of AR is to combine, or mix, the view of the real environment with additional, virtual content that is presented through computer graphics.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is a key feature of Augmented Reality (AR) regarding the environment?",
+            "options": [
+                "A) It creates a totally artificial environment like VR.",
+                "B) It uses the existing environment and overlays new information on top of it.",
+                "C) It only works with audio, not video.",
+                "D) It requires expensive headsets to function."
+            ],
+            "correct_answer": "B) It uses the existing environment and overlays new information on top of it.",
+            "explanation": "The module states: 'Unlike virtual reality, which creates a totally artificial environment, augmented reality uses the existing environment and overlays new information on top of it.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "In Paul Milgram's Reality-Virtuality (RV) Continuum, what is the correct order from left to right?",
+            "options": [
+                "A) Virtual Environment → AR → AV → Real Environment",
+                "B) Real Environment → AR → AV → Virtual Environment",
+                "C) AV → Real Environment → VR → AR",
+                "D) Real Environment → VR → AV → AR"
+            ],
+            "correct_answer": "B) Real Environment → AR → AV → Virtual Environment",
+            "explanation": "The module's Figure 5.1 shows the continuum from Real Environment to AR to AV (Augmented Virtuality) to Virtual Environment. Mixed Reality (MR) encompasses the middle ground.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the primary characteristic of Virtual Reality (VR)?",
+            "options": [
+                "A) It is fully immersive and tricks the senses into thinking you are in a different environment.",
+                "B) It overlays digital content onto the real world.",
+                "C) It allows physical and digital objects to interact in real-time.",
+                "D) It only works on smartphones."
+            ],
+            "correct_answer": "A) It is fully immersive and tricks the senses into thinking you are in a different environment.",
+            "explanation": "The module states: 'VR is fully immersive, which tricks your senses into thinking you're in a different environment or world apart from the real world.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "Which of the following is an example of a standalone VR headset that works with a smartphone?",
+            "options": [
+                "A) Oculus Rift",
+                "B) PlayStation VR",
+                "C) Google Cardboard",
+                "D) HTC Vive"
+            ],
+            "correct_answer": "C) Google Cardboard",
+            "explanation": "The module states: 'Most standalone VR headsets work in combination with smartphones – you insert a smartphone, wear a headset, and immerse in the virtual reality (see Figure 5.3).' Google Cardboard is a prime example.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is a key difference between AR and VR?",
+            "options": [
+                "A) AR uses the existing environment, while VR creates a totally artificial environment.",
+                "B) VR uses the existing environment, while AR creates a totally artificial environment.",
+                "C) They are exactly the same.",
+                "D) AR is only used for gaming, while VR is only used for medicine."
+            ],
+            "correct_answer": "A) AR uses the existing environment, while VR creates a totally artificial environment.",
+            "explanation": "The module states: 'Unlike virtual reality, which creates a totally artificial environment, augmented reality uses the existing environment and overlays new information on top of it.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the key characteristic of Mixed Reality (MR)?",
+            "options": [
+                "A) It is 100% digital with no real-world interaction.",
+                "B) The synthetic content and the real-world content are able to react to each other in real-time.",
+                "C) It only works with sound, not graphics.",
+                "D) It is the same as AR."
+            ],
+            "correct_answer": "B) The synthetic content and the real-world content are able to react to each other in real-time.",
+            "explanation": "The module states: 'The key characteristic of MR is that the synthetic content and the real-world content are able to react to each other in real-time.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Which device is mentioned as an example of an AR headset?",
+            "options": [
+                "A) Oculus Rift",
+                "B) Google Glass",
+                "C) HTC Vive",
+                "D) PlayStation VR"
+            ],
+            "correct_answer": "B) Google Glass",
+            "explanation": "The module states: 'There's a different way to experience augmented reality, though – with special AR headsets, such as Google Glass, where digital content is displayed on a tiny screen in front of a user's eye.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "What is a major hardware challenge for Mixed Reality (MR) compared to VR?",
+            "options": [
+                "A) MR requires no hardware at all.",
+                "B) MR hardware is still emerging, expensive (over $2000), and requires exponentially more processing power.",
+                "C) MR hardware is cheaper than VR.",
+                "D) MR hardware is exactly the same as VR."
+            ],
+            "correct_answer": "B) MR hardware is still emerging, expensive (over $2000), and requires exponentially more processing power.",
+            "explanation": "The module states: 'Mixed reality hardware is still emerging and hasn't quite broken into the mainstream consumer market, most likely due to the price. The consumer releases of the Microsoft HoloLens and Magic Leap One retail for over $2000 USD... however, mixed reality applications sometimes require exponentially more processing power.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Which of the following is NOT a type of sensory input that AR uses to augment the real world?",
+            "options": [
+                "A) Sound",
+                "B) Video",
+                "C) GPS Data",
+                "D) Taste (Flavor)"
+            ],
+            "correct_answer": "D) Taste (Flavor)",
+            "explanation": "The module states: 'A live direct or indirect view of a physical, real-world environment whose elements are augmented by computer-generated sensory input such as sound, video, graphics, or GPS data.' Taste is not mentioned; it is typically associated with advanced VR, not standard AR.",
+            "difficulty": "hard"
+        }
+    ]
+}

@@ -1,0 +1,268 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 6,
+    "title": "Unit 6 Full Practice: Combined Parts",
+    "total_questions": 20,
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the Oromo Gadaa system?",
+            "options": [
+                "A) A centralized political system with a king.",
+                "B) An age-grading institution with a complex system of administration, law-making, and dispute settlement, with power transferred every 8 years.",
+                "C) A religious institution.",
+                "D) A modern state court system."
+            ],
+            "correct_answer": "B) An age-grading institution with a complex system of administration, law-making, and dispute settlement, with power transferred every 8 years.",
+            "explanation": "The module states: 'The Gadaa system is 'an age grading institution of the Oromo that has a complex system of administration, law making and dispute settlement'... political power is transferred from one generation set (Luuba) to another every eight years.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the name of the law-making assembly of the Borana Oromo that is held every eight years?",
+            "options": [
+                "A) Ya'a.",
+                "B) Gumi Gaayo.",
+                "C) Dere Dubusha.",
+                "D) Abba Gada."
+            ],
+            "correct_answer": "B) Gumi Gaayo.",
+            "explanation": "The module states: 'Gumi gaayo, a law making assembly of the Borana Oromo, is a good example. Gumi gaayo is held every eight years to revising, adapting, making and publicizing the customary law (seera) and custom (aadaa) of the Oromo.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What are the three major components of customary justice systems in Ethiopia?",
+            "options": [
+                "A) State law, police, and courts.",
+                "B) Customary laws, council of elders, and customary courts.",
+                "C) Religious courts, state courts, and federal courts.",
+                "D) Parliament, executive, and judiciary."
+            ],
+            "correct_answer": "B) Customary laws, council of elders, and customary courts.",
+            "explanation": "The module states: 'With some exceptions, customary justice institutions include three major components. The three components are 1) customary laws, 2) council of elders, and 3) customary courts or assemblies.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "What is the 'dere woga' of the Gamo people?",
+            "options": [
+                "A) The council of elders.",
+                "B) The customary law of the land, a comprehensive body of rules governing inheritance, property, marriage, and conflict resolution.",
+                "C) The general assembly.",
+                "D) The king."
+            ],
+            "correct_answer": "B) The customary law of the land, a comprehensive body of rules governing inheritance, property, marriage, and conflict resolution.",
+            "explanation": "The module states: 'The literal meaning of Dere Woga is the law of the land. Dere Woga is a comprehensive body of rules and procedures that govern a wide range of issues including inheritance, property ownership, marriage and divorce, conflict resolution and gender division of labor.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is a key strength of customary justice institutions?",
+            "options": [
+                "A) They are very expensive.",
+                "B) They incur limited cost, are held in public spaces, focus on restoring community cohesion, and rely on respect for elders.",
+                "C) They exclude community participation.",
+                "D) They are only for wealthy individuals."
+            ],
+            "correct_answer": "B) They incur limited cost, are held in public spaces, focus on restoring community cohesion, and rely on respect for elders.",
+            "explanation": "The module states: 'Strengths of customary justice institutions: Incur limited cost in terms of time and resources/money;... Conflict resolution process are held in public spaces... Customary systems aimed at restoring community cohesion, social relations, collective spirit and social solidarity. Rely on respect for elders.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is a major limitation of customary justice institutions?",
+            "options": [
+                "A) They are too fast.",
+                "B) They are dominated by men and exclude women, and they are limited in resolving inter-ethnic conflicts.",
+                "C) They are too expensive.",
+                "D) They involve too many people."
+            ],
+            "correct_answer": "B) They are dominated by men and exclude women, and they are limited in resolving inter-ethnic conflicts.",
+            "explanation": "The module states: 'Limitations related to protecting and safeguarding women's rights. Indigenous justice institutions are dominated by men... Women are excluded from participation at customary courts and assemblies... Their potential in resolving inter-ethnic conflicts and restoring long-lasting peace is very limited.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "What is the Abbo Gereb institution?",
+            "options": [
+                "A) A customary court for the Gamo people.",
+                "B) An inter-ethnic conflict resolution institution in Rayya and Wajirat district, Southern Tigray, that settles disputes between Tigrayans and Afar.",
+                "C) A women's peacemaking institution.",
+                "D) A religious court."
+            ],
+            "correct_answer": "B) An inter-ethnic conflict resolution institution in Rayya and Wajirat district, Southern Tigray, that settles disputes between Tigrayans and Afar.",
+            "explanation": "The module states: 'Abbo Gereb is one of the indigenous institutions that address inter-ethnic conflicts. It is a dispute resolution institution in Rayya and Wajirat district, Southern Tigray... It serves to settle disputes between individuals or groups from highland areas of Tigray and lowland areas of Afar.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "What is the name of the inter-ethnic conflict resolution mechanism among the Afar?",
+            "options": [
+                "A) Gereb.",
+                "B) Edible.",
+                "C) Xinto.",
+                "D) Aboroge."
+            ],
+            "correct_answer": "C) Xinto.",
+            "explanation": "The module states: 'The mechanisms of inter-ethnic disputes have different names. It is called Xinto among the Afar, Edible among the Issa, Gereb among the Tigrayans, and Aboroge among the Amhara.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What is the highest body of the Gamo indigenous governance system?",
+            "options": [
+                "A) The dere cima.",
+                "B) The dere dubusha (general assembly of local people).",
+                "C) The ka'o (king).",
+                "D) The halaqa (elected leader)."
+            ],
+            "correct_answer": "B) The dere dubusha (general assembly of local people).",
+            "explanation": "The module states: 'The highest body of the indigenous governance is the dere dubusha, a general assembly of local people. The dere dubusha is responsible to make and revise customary laws, resolve major disputes that cannot be solved at the lower levels.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "How are customary laws typically transmitted in Ethiopian communities?",
+            "options": [
+                "A) Only through written documents.",
+                "B) Orally, though some have been published in recent years (e.g., the Sebat Bet Gurage Kitcha).",
+                "C) Only through the internet.",
+                "D) Through state legislation."
+            ],
+            "correct_answer": "B) Orally, though some have been published in recent years (e.g., the Sebat Bet Gurage Kitcha).",
+            "explanation": "The module states: 'In most cases, customary laws are available orally. Some customary laws are published in recent years. For example, the Sebat Bet Gurage published their customary law named Kitcha: The Gurage Customary Law in 1998.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "What is the 'Yakka' among the Sidama people?",
+            "options": [
+                "A) A state court.",
+                "B) A women's association or unity group.",
+                "C) A religious institution.",
+                "D) A council of male elders."
+            ],
+            "correct_answer": "B) A women's association or unity group.",
+            "explanation": "The module states: 'Sidama women have two instruments of power: the Yakka and the Siqqo. The Yakka is women's association or unity group.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 12,
+            "text": "What is the 'Siqqo' among the Sidama people?",
+            "options": [
+                "A) A type of food.",
+                "B) A stick that symbolizes peace and women's honor.",
+                "C) A traditional dance.",
+                "D) A type of clothing."
+            ],
+            "correct_answer": "B) A stick that symbolizes peace and women's honor.",
+            "explanation": "The module states: 'The Siqqo is a stick that symbolizes peace and women honor. The Siqqo and the Yakka are closely associated.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 13,
+            "text": "What happens if a Sidama man prohibits his wife from participating in the Yakka or mistreats her?",
+            "options": [
+                "A) The man is ignored.",
+                "B) The women's group imposes a fine (e.g., an ox), and the Yakka leader mobilizes the women to the man's house holding the Siqqo.",
+                "C) The man is sent to jail.",
+                "D) The man is exiled from the community."
+            ],
+            "correct_answer": "B) The women's group imposes a fine (e.g., an ox), and the Yakka leader mobilizes the women to the man's house holding the Siqqo.",
+            "explanation": "The module states: 'For example, when a woman is beaten up by her husband or a pregnant woman is mistreated, the women group imposes a fine on him. The fine could be an ox... the Yakka leader... mobilizes the Yakka and leads them to the house of the man. The husband would not have a choice when he is surrounded by the Yakka holding their Siqqo shouting and singing.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 14,
+            "text": "What does 'Don Kachel' literally mean in the Agnuak context?",
+            "options": [
+                "A) 'Let us fight.'",
+                "B) 'Let us all live in peace.'",
+                "C) 'Let us go to war.'",
+                "D) 'Let us leave.'"
+            ],
+            "correct_answer": "B) 'Let us all live in peace.'",
+            "explanation": "The module states: 'Women in many regions of Ethiopia play an important role in peacemaking. Agnuak women have a peacemaking institution known as Don Kachel... Literally, Don Kachel means 'let us all live in peace'.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 15,
+            "text": "How does the Don Kachel institution function?",
+            "options": [
+                "A) Through formal court proceedings.",
+                "B) Through the Jaye (wise elderly women) who gather information via women's networking, call disputing parties, give a verdict, and conclude with a peace feast.",
+                "C) Through police intervention.",
+                "D) Through government officials."
+            ],
+            "correct_answer": "B) Through the Jaye (wise elderly women) who gather information via women's networking, call disputing parties, give a verdict, and conclude with a peace feast.",
+            "explanation": "The module states: 'It involves a peace-making movement initiated by Jaye, a group of wise and elderly Agnuak women. The Jaye start a peace-making movement based on information gathered through women's networking... The Jaye call the disputing parties for a meeting to settle the dispute... A sheep or goat is slaughtered after the conflict resolved... Finally the Jaye would announce the meeting is over, the problem resolved, using these words 'Now let us all live in peace together!''",
+            "difficulty": "medium"
+        },
+        {
+            "id": 16,
+            "text": "What is the role of the 'Debarte' institution in Tigray?",
+            "options": [
+                "A) To start wars.",
+                "B) To reconcile parties and stop the culture of revenge after a murder, using women's grief rituals to beg for forgiveness.",
+                "C) To settle business disputes.",
+                "D) To conduct religious ceremonies."
+            ],
+            "correct_answer": "B) To reconcile parties and stop the culture of revenge after a murder, using women's grief rituals to beg for forgiveness.",
+            "explanation": "The module states: 'The Debarte plays an important role in avoiding harms associated with the culture of revenge... The Debarte instruct the murderer's wife to gathering her female relatives... The Debarte kneel down and cover their heads with the dust of the compound... beg the relatives... to give up revenge and consider forgiveness... After persuading the victim's relatives to give up revenge, the Debarte give the way for elders who start the peace-making process.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "What is legal pluralism?",
+            "options": [
+                "A) The existence of only one legal system.",
+                "B) The co-existence of two or more legal or justice systems (customary, religious, state) working side-by-side in the same society.",
+                "C) The elimination of all courts.",
+                "D) The dominance of state law over all others."
+            ],
+            "correct_answer": "B) The co-existence of two or more legal or justice systems (customary, religious, state) working side-by-side in the same society.",
+            "explanation": "The module states: 'Legal pluralism is an important concept... It refers to the existence of two or more legal or justice systems in a given society or country. Legal pluralism indicates the co-existence of multiple legal systems working side-by-side in the same society.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "Which Articles of the FDRE Constitution provide recognition to customary and religious legal systems?",
+            "options": [
+                "A) Articles 10 and 20.",
+                "B) Articles 34(4) and 78(5).",
+                "C) Articles 50 and 60.",
+                "D) Articles 1 and 2."
+            ],
+            "correct_answer": "B) Articles 34(4) and 78(5).",
+            "explanation": "The module states: 'The FDRE Constitution provides some spaces for religious and customary laws and courts... The following two Articles show this reality: Article 34(4)... Article 78(5).'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "What is 'legal hybridism' in the context of Ethiopia?",
+            "options": [
+                "A) The complete separation of legal systems.",
+                "B) The cooperation and competition between legal systems, where one cannot stand without the other.",
+                "C) The dominance of state law.",
+                "D) The absence of any legal system."
+            ],
+            "correct_answer": "B) The cooperation and competition between legal systems, where one cannot stand without the other.",
+            "explanation": "The module states: 'the relation between the various legal systems is characterized by cooperation and competition... the legal sphere seems characterized by legal hybridism indicating one cannot stand without the cooperation of the other legal systems.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "What is the primary purpose of customary justice systems as summarized in the unit?",
+            "options": [
+                "A) To maximize punishments.",
+                "B) To restore social relationships, harmony, and peaceful coexistence.",
+                "C) To replace state courts.",
+                "D) To exclude women from society."
+            ],
+            "correct_answer": "B) To restore social relationships, harmony, and peaceful coexistence.",
+            "explanation": "The module states: 'Indigenous dispute resolution practices focus on restoring social relationships, harmony, and peaceful coexistence.' This is the core purpose of these systems.",
+            "difficulty": "hard"
+        }
+    ]
+}

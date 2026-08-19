@@ -1,0 +1,134 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is an argument (or logical deduction) in propositional logic?",
+            "options": [
+                "A) A single statement that is always true.",
+                "B) An assertion that a given set of premises (hypotheses) yields a conclusion.",
+                "C) A single proposition that is false.",
+                "D) A question or command."
+            ],
+            "correct_answer": "B) An assertion that a given set of premises (hypotheses) yields a conclusion.",
+            "explanation": "The module states: 'An argument (logical deduction) is an assertion that a given set of statements p₁, p₂, ..., pₙ, called hypotheses or premises, yield another statement Q, called the conclusion.' Options A, C, and D are not definitions of an argument.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "When is an argument form considered valid?",
+            "options": [
+                "A) If the conclusion is always false.",
+                "B) If the conclusion is true whenever all the premises are true.",
+                "C) If the premises are always false.",
+                "D) If the conclusion is independent of the premises."
+            ],
+            "correct_answer": "B) If the conclusion is true whenever all the premises are true.",
+            "explanation": "The module states: 'An argument form p₁, ..., pₙ ⊢ Q is said to be valid if Q is true whenever all the premises p₁, ..., pₙ are true; otherwise, it is invalid.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the Modus Tollens rule of inference?",
+            "options": [
+                "A) $p, p \\Rightarrow q \\vdash q$",
+                "B) $\\neg q, p \\Rightarrow q \\vdash \\neg p$",
+                "C) $p \\Rightarrow q, q \\Rightarrow r \\vdash p \\Rightarrow r$",
+                "D) $p, q \\vdash p \\wedge q$"
+            ],
+            "correct_answer": "B) $\\neg q, p \\Rightarrow q \\vdash \\neg p$",
+            "explanation": "The module states: 'Modus Tollens: ¬q, p ⇒ q ⊢ ¬p.' Option A is Modus Ponens. Option C is Syllogism. Option D is Adjunction.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the Principle of Syllogism?",
+            "options": [
+                "A) $p, p \\Rightarrow q \\vdash q$",
+                "B) $p \\Rightarrow q, q \\Rightarrow r \\vdash p \\Rightarrow r$",
+                "C) $\\neg q, p \\Rightarrow q \\vdash \\neg p$",
+                "D) $p, q \\vdash p \\wedge q$"
+            ],
+            "correct_answer": "B) $p \\Rightarrow q, q \\Rightarrow r \\vdash p \\Rightarrow r$",
+            "explanation": "The module states: 'Principle of Syllogism: p ⇒ q, q ⇒ r ⊢ p ⇒ r.' Option A is Modus Ponens. Option C is Modus Tollens. Option D is Adjunction.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "How can an argument form be proven valid using a truth table?",
+            "options": [
+                "A) By checking if the conclusion is false when premises are true.",
+                "B) By checking if the statement $(p_1 \\wedge p_2 \\wedge ... \\wedge p_n) \\Rightarrow Q$ is a tautology.",
+                "C) By checking if the premises are always false.",
+                "D) By counting the number of rows in the truth table."
+            ],
+            "correct_answer": "B) By checking if the statement $(p_1 \\wedge p_2 \\wedge ... \\wedge p_n) \\Rightarrow Q$ is a tautology.",
+            "explanation": "The module states: 'The argument form p₁, ..., pₙ ⊢ Q is valid iff the statement (p₁ ∧ p₂ ∧ ... ∧ pₙ) ⇒ Q is a tautology.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What does Modus Ponens allow you to conclude from $p$ and $p \\Rightarrow q$?",
+            "options": [
+                "A) $\\neg p$",
+                "B) $\\neg q$",
+                "C) $q$",
+                "D) $p \\wedge q$"
+            ],
+            "correct_answer": "C) $q$",
+            "explanation": "The module states: 'Modus Ponens: p, p ⇒ q ⊢ q.' Option A would require Modus Tollens. Option B is incorrect. Option D would require Adjunction.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "Which rule of inference allows you to conclude $p \\wedge q$ from $p$ and $q$?",
+            "options": [
+                "A) Modus Tollens",
+                "B) Principle of Syllogism",
+                "C) Principle of Adjunction",
+                "D) Constructive Dilemma"
+            ],
+            "correct_answer": "C) Principle of Adjunction",
+            "explanation": "The module states: 'Principle of Adjunction: p, q ⊢ p ∧ q.' Option A is Modus Tollens. Option B is Syllogism. Option D is Constructive Dilemma.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What is the Constructive Dilemma rule of inference?",
+            "options": [
+                "A) $p \\Rightarrow q, r \\Rightarrow s, p \\vee r \\vdash q \\vee s$",
+                "B) $p, p \\Rightarrow q \\vdash q$",
+                "C) $\\neg q, p \\Rightarrow q \\vdash \\neg p$",
+                "D) $p, q \\vdash p \\wedge q$"
+            ],
+            "correct_answer": "A) $p \\Rightarrow q, r \\Rightarrow s, p \\vee r \\vdash q \\vee s$",
+            "explanation": "The module states: 'Constructive Dilemma: (p ⇒ q) ∧ (r ⇒ s), p ∨ r ⊢ q ∨ s.' Option B is Modus Ponens. Option C is Modus Tollens. Option D is Adjunction.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What is the conclusion of the following argument: $p \\Rightarrow q, \\neg q \\vdash ?$",
+            "options": [
+                "A) $p$",
+                "B) $\\neg p$",
+                "C) $q$",
+                "D) $p \\wedge q$"
+            ],
+            "correct_answer": "B) $\\neg p$",
+            "explanation": "This is the Modus Tollens rule of inference: ¬q, p ⇒ q ⊢ ¬p. Option A would be the invalid fallacy of affirming the consequent. Option C would require Modus Ponens. Option D would require Adjunction.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What does the rule of Conditionalization state?",
+            "options": [
+                "A) $p, p \\Rightarrow q \\vdash q$",
+                "B) $p \\vdash q \\Rightarrow p$",
+                "C) $p \\Rightarrow q \\vdash \\neg q \\Rightarrow \\neg p$",
+                "D) $p \\Rightarrow q, q \\Rightarrow r \\vdash p \\Rightarrow r$"
+            ],
+            "correct_answer": "B) $p \\vdash q \\Rightarrow p$",
+            "explanation": "The module states: 'Principle of Conditionalization: p ⊢ q ⇒ p.' Option A is Modus Ponens. Option C is the Law of Contrapositive. Option D is Syllogism.",
+            "difficulty": "hard"
+        }
+    ]
+}

@@ -1,0 +1,147 @@
+{
+    "course_code": "GeES1011",
+    "chapter": 4,
+    "title": "Part 1 Practice: Drainage Systems of Ethiopia",
+    "questions": [
+        {
+            "id": 1,
+            "text": "How many MAJOR drainage systems does Ethiopia have?",
+            "diagram": null,
+            "options": [
+                "A) Two",
+                "B) Three",
+                "C) Four",
+                "D) Five"
+            ],
+            "correct_answer": "B) Three",
+            "explanation": "Ethiopia has THREE major drainage systems: (1) Western (flows to Nile), (2) Southeastern (flows to Indian Ocean), (3) Rift Valley (internal lakes). Each system drains a different portion of the country.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "The LARGEST drainage system in Ethiopia is:",
+            "diagram": null,
+            "options": [
+                "A) Rift Valley",
+                "B) Southeastern",
+                "C) Western",
+                "D) All are equal"
+            ],
+            "correct_answer": "C) Western",
+            "explanation": "The WESTERN drainage system is the LARGEST, covering about 40% of Ethiopia's land area. It includes the Abay (Blue Nile), Tekeze, and Baro-Akobo rivers, all flowing toward the Nile.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "The Abay (Blue Nile) River originates from:",
+            "diagram": null,
+            "options": [
+                "A) Lake Awasa",
+                "B) Lake Tana",
+                "C) Lake Ziway",
+                "D) Lake Turkana"
+            ],
+            "correct_answer": "B) Lake Tana",
+            "explanation": "The ABAY (BLUE NILE) RIVER originates from LAKE TANA in the North Central Massifs. It's Ethiopia's longest river (~1,450 km within Ethiopia) and contributes about 70% of the Nile's water during flood season.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "The WESTERN drainage system flows toward:",
+            "diagram": null,
+            "options": [
+                "A) Indian Ocean",
+                "B) Mediterranean Sea (via Nile)",
+                "C) Internal lakes",
+                "D) Red Sea"
+            ],
+            "correct_answer": "B) Mediterranean Sea (via Nile)",
+            "explanation": "The WESTERN rivers (Abay, Tekeze, Baro) flow WESTWARD and join the NILE RIVER, eventually reaching the MEDITERRANEAN SEA. This is an EXORHEIC system (reaches the ocean).",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "Which river is the LONGEST entirely within Ethiopia?",
+            "diagram": null,
+            "options": [
+                "A) Abay (Blue Nile)",
+                "B) Tekeze",
+                "C) Wabishebelle",
+                "D) Omo"
+            ],
+            "correct_answer": "C) Wabishebelle",
+            "explanation": "The WABISHEBELLE RIVER is the LONGEST river flowing ENTIRELY within Ethiopia (~1,200 km). It originates from Bale Highlands and flows through the Somali region. Abay is longer but flows into Sudan.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "The SOUTHEASTERN drainage system flows toward:",
+            "diagram": null,
+            "options": [
+                "A) Mediterranean Sea",
+                "B) Indian Ocean",
+                "C) Lake Tana",
+                "D) Red Sea"
+            ],
+            "correct_answer": "B) Indian Ocean",
+            "explanation": "The SOUTHEASTERN rivers (Wabishebelle, Ghenalle) flow SOUTHEASTWARD toward the INDIAN OCEAN (through Somalia). They originate from the Bale Highlands and flow through the Somali region.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "The RIFT VALLEY drainage system is described as:",
+            "diagram": null,
+            "options": [
+                "A) Exorheic (reaches ocean)",
+                "B) ENDORHEIC (internal, doesn't reach ocean)",
+                "C) Artificial",
+                "D) Frozen"
+            ],
+            "correct_answer": "B) ENDORHEIC (internal, doesn't reach ocean)",
+            "explanation": "The RIFT VALLEY system is ENDORHEIC — rivers flow INWARD and do NOT reach the ocean. They empty into RIFT VALLEY LAKES (Awash → Lake Abbe, Omo → Lake Turkana). This is an internal drainage system.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "The AWASH RIVER ends in:",
+            "diagram": null,
+            "options": [
+                "A) Lake Turkana",
+                "B) Lake Abbe (Afar)",
+                "C) Lake Tana",
+                "D) Indian Ocean"
+            ],
+            "correct_answer": "B) Lake Abbe (Afar)",
+            "explanation": "The AWASH RIVER flows northeast through the Rift Valley and ends in LAKE ABBE in the Afar region. It originates near Addis Ababa and is important for irrigation (sugarcane, cotton plantations).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "The OMO RIVER flows southward and ends in:",
+            "diagram": null,
+            "options": [
+                "A) Lake Abbe",
+                "B) Lake Turkana (Kenya border)",
+                "C) Lake Tana",
+                "D) Indian Ocean"
+            ],
+            "correct_answer": "B) Lake Turkana (Kenya border)",
+            "explanation": "The OMO RIVER flows south through the Rift Valley and empties into LAKE TURKANA on the Kenya-Ethiopia border. The Gilgel Gibe dams are built on the Omo River for hydropower.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Examine the drainage map. Which system flows WEST toward Nile?",
+            "diagram": "<svg width='350' height='180' viewBox='0 0 350 180'><rect width='350' height='180' fill='#111827' rx='8'/><text x='175' y='20' text-anchor='middle' fill='#f59e0b' font-size='12' font-weight='bold'>Drainage Systems</text><rect x='30' y='50' width='80' height='70' rx='6' fill='#1a2332' stroke='#14b8a6' stroke-width='2'/><text x='70' y='80' text-anchor='middle' fill='#14b8a6' font-size='9' font-weight='bold'>A</text><text x='70' y='95' text-anchor='middle' fill='#94a3b8' font-size='7'>→ West</text><rect x='135' y='50' width='80' height='70' rx='6' fill='#1a2332' stroke='#f43f5e' stroke-width='2'/><text x='175' y='80' text-anchor='middle' fill='#f43f5e' font-size='9' font-weight='bold'>B</text><text x='175' y='95' text-anchor='middle' fill='#94a3b8' font-size='7'>→ SE</text><rect x='240' y='50' width='80' height='70' rx='6' fill='#1a2332' stroke='#facc15' stroke-width='2'/><text x='280' y='80' text-anchor='middle' fill='#facc15' font-size='9' font-weight='bold'>C</text><text x='280' y='95' text-anchor='middle' fill='#94a3b8' font-size='7'>→ Inward</text><text x='175' y='150' text-anchor='middle' fill='#94a3b8' font-size='9'>Which is WESTERN system?</text></svg>",
+            "options": [
+                "A) A (green, West arrow)",
+                "B) B (red, SE arrow)",
+                "C) C (yellow, Inward arrow)",
+                "D) None"
+            ],
+            "correct_answer": "A) A (green, West arrow)",
+            "explanation": "The WESTERN system (green, A) flows WESTWARD toward the Nile. B (red) is Southeastern (flows SE to Indian Ocean). C (yellow) is Rift Valley (flows inward). The arrows show direction of flow.",
+            "difficulty": "medium"
+        }
+    ]
+}

@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 3,
+    "title": "Part 1 Practice: Conceptualizing Culture & Characteristic Features",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Which anthropologist defined culture as 'that complex whole which includes knowledge, belief, art, morals, law, custom, and any other capabilities acquired by man as a member of society'?",
+            "options": [
+                "A) Bronislaw Malinowski",
+                "B) Edward B. Tylor",
+                "C) Clyde Kluckhohn",
+                "D) Ralph Linton"
+            ],
+            "correct_answer": "B) Edward B. Tylor",
+            "explanation": "The module states: 'A pioneering and widely used definition of culture was provided by the British anthropologist Edward B. Tylor (1832-1917). He defined culture as \"that complex whole which includes knowledge, belief, art, morals, law, custom, and any other capabilities and habits acquired by man as a member of society.\"'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "How did Bronislaw Malinowski define culture?",
+            "options": [
+                "A) As a complex whole.",
+                "B) As the cumulative creation of man, the handiwork of man through which he achieves his ends.",
+                "C) As a way of thinking and feeling.",
+                "D) As the sum total of shared knowledge."
+            ],
+            "correct_answer": "B) As the cumulative creation of man, the handiwork of man through which he achieves his ends.",
+            "explanation": "The module states: 'Bronislaw Malinowski has defined culture \"as cumulative creation of man\". He regarded culture as the handiwork of man and the medium through which he achieves his ends.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the process by which an individual learns the rules and values of one's culture called?",
+            "options": [
+                "A) Evolution",
+                "B) Enculturation",
+                "C) Socialization",
+                "D) Adaptation"
+            ],
+            "correct_answer": "B) Enculturation",
+            "explanation": "The module states: 'This process of acquiring culture after we are born is called enculturation. Enculturation is specifically defined as the process by which an individual learns the rules and values of one's culture.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What does it mean that culture is 'symbolic'?",
+            "options": [
+                "A) That culture is only about art.",
+                "B) That humans have the capacity to use symbols with arbitrary meanings to communicate and learn.",
+                "C) That culture is based on genetic traits.",
+                "D) That culture is only passed down through writing."
+            ],
+            "correct_answer": "B) That humans have the capacity to use symbols with arbitrary meanings to communicate and learn.",
+            "explanation": "The module states: 'Until quite recently, anthropologists confidently asserted that what made humans distinctive was that they, unlike other primates, had a capacity to use symbols... Symbolic thought is unique and crucial to humans and to cultural learning.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What does it mean that culture is 'all-encompassing'?",
+            "options": [
+                "A) Culture only includes material objects.",
+                "B) Culture encompasses all aspects affecting people in their everyday lives, including material and non-material aspects.",
+                "C) Culture only includes religious beliefs.",
+                "D) Culture is limited to art and music."
+            ],
+            "correct_answer": "B) Culture encompasses all aspects affecting people in their everyday lives, including material and non-material aspects.",
+            "explanation": "The module states: 'Culture encompasses all aspects, which affect people in their everyday lives. Culture comprises countless material and non-material aspects of human lives.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "How is the integrated nature of culture best described in the module?",
+            "options": [
+                "A) As a random assortment of customs.",
+                "B) By using the analogy between a culture and a living organism, where various aspects are interconnected.",
+                "C) As a collection of unrelated beliefs.",
+                "D) As a static and unchanging system."
+            ],
+            "correct_answer": "B) By using the analogy between a culture and a living organism, where various aspects are interconnected.",
+            "explanation": "The module states: 'A good way of describing this integrated nature of culture is by using the analogy between a culture and a living organism. The physical human body comprises a number of systems, all functioning to maintain the overall health of the organisms.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What does it mean that culture is 'adaptive'?",
+            "options": [
+                "A) Humans adapt to their environment using culture, which has allowed global population to grow to over 7 billion.",
+                "B) Culture never changes.",
+                "C) Culture is only about biological adaptation.",
+                "D) Culture is not affected by the environment."
+            ],
+            "correct_answer": "A) Humans adapt to their environment using culture, which has allowed global population to grow to over 7 billion.",
+            "explanation": "The module states: 'People adapt themselves to the environment using culture. The ability to adapt to any ecological conditions, unlike other animals, makes humans unique. Culture has allowed the global human population size to grow from less than 10 million... to more than 7 billion today.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What does it mean that culture is 'dynamic'?",
+            "options": [
+                "A) Culture never changes.",
+                "B) Culture is constantly changing as new ideas and techniques are added, though some fundamental beliefs endure.",
+                "C) Culture is completely static.",
+                "D) Culture changes only through war."
+            ],
+            "correct_answer": "B) Culture is constantly changing as new ideas and techniques are added, though some fundamental beliefs endure.",
+            "explanation": "The module states: 'A culture is not static; it is always changing. There are no cultures that remain completely static year after year. Culture is changing constantly as new ideas and new techniques are added as time passes modifying or changing the old ways.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What is a common attribute of most definitions of culture?",
+            "options": [
+                "A) That culture is genetically transmitted.",
+                "B) That culture is learned and related to the social group or society.",
+                "C) That culture is an individual possession.",
+                "D) That culture is based on race."
+            ],
+            "correct_answer": "B) That culture is learned and related to the social group or society.",
+            "explanation": "The module states: 'A common attribute of most of the definitions, however, is that a culture is learned and that the learning is related to the social group or the society.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "According to the module, what was once attributed to race and heredity that is now seen as the result of cultural training?",
+            "options": [
+                "A) Physical strength.",
+                "B) Behavioral traits and characteristics (e.g., the Iroquois being savage fighters, the Hopi being calm).",
+                "C) Eye color.",
+                "D) Height."
+            ],
+            "correct_answer": "B) Behavioral traits and characteristics (e.g., the Iroquois being savage fighters, the Hopi being calm).",
+            "explanation": "The module states: 'They further state that much that was once attributed to race and heredity is now seen clearly as the result of cultural training. The Iroquois were savage fighters not because it was in their blood but because it was in their culture. The Hopi are outwardly calm and imperturbable not because it is in their blood... but because it is in their culture.'",
+            "difficulty": "hard"
+        }
+    ]
+}

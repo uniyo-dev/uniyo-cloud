@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 3,
+    "title": "Part 2 Practice: History of AI",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Who proposed the first model of artificial neurons in 1943?",
+            "options": [
+                "A) Alan Turing",
+                "B) John McCarthy",
+                "C) Warren McCulloch and Walter Pitts",
+                "D) Donald Hebb"
+            ],
+            "correct_answer": "C) Warren McCulloch and Walter Pitts",
+            "explanation": "The module states: 'The year 1943: The first work which is now recognized as AI was done by Warren McCulloch and Walter Pitts in 1943. They proposed a model of artificial neurons.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the name of the test proposed by Alan Turing in 1950 to check a machine's ability to exhibit intelligent behavior?",
+            "options": [
+                "A) The McCarthy Test",
+                "B) The Dartmouth Test",
+                "C) The Turing Test",
+                "D) The Hebbian Test"
+            ],
+            "correct_answer": "C) The Turing Test",
+            "explanation": "The module states: 'Alan Turing published \"Computing Machinery and Intelligence\" in which he proposed a test... called a Turing test.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "Who coined the term 'Artificial Intelligence' and in what year?",
+            "options": [
+                "A) Alan Turing, 1950",
+                "B) John McCarthy, 1956",
+                "C) Allen Newell, 1955",
+                "D) Joseph Weizenbaum, 1966"
+            ],
+            "correct_answer": "B) John McCarthy, 1956",
+            "explanation": "The module states: 'The year 1956: The word \"Artificial Intelligence\" first adopted by American Computer scientist John McCarthy at the Dartmouth Conference.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What was the name of the first artificial intelligence program created by Allen Newell and Herbert A. Simon in 1955?",
+            "options": [
+                "A) ELIZA",
+                "B) Logic Theorist",
+                "C) Deep Blue",
+                "D) Watson"
+            ],
+            "correct_answer": "B) Logic Theorist",
+            "explanation": "The module states: 'The year 1955: Allen Newell and Herbert A. Simon created the \"first artificial intelligence program\" which was named \"Logic Theorist\".'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "Who created the first chatbot named ELIZA in 1966?",
+            "options": [
+                "A) John McCarthy",
+                "B) Alan Turing",
+                "C) Joseph Weizenbaum",
+                "D) Donald Hebb"
+            ],
+            "correct_answer": "C) Joseph Weizenbaum",
+            "explanation": "The module states: 'Joseph Weizenbaum created the first chatbot in 1966, which was named as ELIZA.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the term used to describe the period between 1974-1980 when there was a severe shortage of funding for AI research?",
+            "options": [
+                "A) AI Boom",
+                "B) AI Winter",
+                "C) AI Golden Age",
+                "D) AI Renaissance"
+            ],
+            "correct_answer": "B) AI Winter",
+            "explanation": "The module states: 'AI winter refers to the time period where computer scientists dealt with a severe shortage of funding from the government for AI researches.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What technology brought AI back after the first AI winter in 1980?",
+            "options": [
+                "A) Neural Networks",
+                "B) Expert Systems",
+                "C) Deep Learning",
+                "D) Robotics"
+            ],
+            "correct_answer": "B) Expert Systems",
+            "explanation": "The module states: 'The year 1980: After AI winter duration, AI came back with \"Expert System\". Expert systems were programmed that emulate the decision-making ability of a human expert.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Why did the second AI winter occur between 1987-1993?",
+            "options": [
+                "A) Because there were no researchers in AI.",
+                "B) Because of high cost but not efficient results from expert systems like XCON.",
+                "C) Because everyone lost interest in computers.",
+                "D) Because Deep Blue lost to Kasparov."
+            ],
+            "correct_answer": "B) Because of high cost but not efficient results from expert systems like XCON.",
+            "explanation": "The module states: 'Again, Investors and government stopped in funding for AI research due to high cost but not efficient results. The expert system such as XCON was very cost-effective.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "In 1997, which AI system beat world chess champion Garry Kasparov?",
+            "options": [
+                "A) IBM Watson",
+                "B) Google DeepMind",
+                "C) IBM Deep Blue",
+                "D) ELIZA"
+            ],
+            "correct_answer": "C) IBM Deep Blue",
+            "explanation": "The module states: 'In the year 1997, IBM Deep Blue beat world chess champion, Gary Kasparov, and became the first computer to beat a world chess champion.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Which AI system won the quiz show Jeopardy in 2011 by understanding natural language and solving tricky questions?",
+            "options": [
+                "A) Google Duplex",
+                "B) IBM Watson",
+                "C) Eugene Goostman",
+                "D) Project Debater"
+            ],
+            "correct_answer": "B) IBM Watson",
+            "explanation": "The module states: 'In the year 2011, IBM's Watson won Jeopardy, a quiz show, where it had to solve complex questions as well as riddles. Watson had proved that it could understand natural language and can solve tricky questions quickly.'",
+            "difficulty": "hard"
+        }
+    ]
+}

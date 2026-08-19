@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 7,
+    "title": "Part 2 Practice: Blockchain Technology",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is a blockchain in the simplest terms?",
+            "options": [
+                "A) A single database controlled by one company.",
+                "B) A time-stamped series of immutable records of data managed by a cluster of computers not owned by any single entity.",
+                "C) A type of computer virus.",
+                "D) A physical chain made of metal."
+            ],
+            "correct_answer": "B) A time-stamped series of immutable records of data managed by a cluster of computers not owned by any single entity.",
+            "explanation": "The module states: 'A blockchain is, in the simplest terms, a time-stamped series of immutable records of data that is managed by a cluster of computers not owned by any single entity.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Who is credited with conceptualizing the first blockchain in 2008?",
+            "options": [
+                "A) Stuart Haber",
+                "B) W. Scott Stornetta",
+                "C) Satoshi Nakamoto",
+                "D) Karl Ereky"
+            ],
+            "correct_answer": "C) Satoshi Nakamoto",
+            "explanation": "The module states: 'The first blockchain was conceptualized by a person (or group of people) known as Satoshi Nakamoto in 2008.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What are the three main properties (pillars) of Blockchain Technology?",
+            "options": [
+                "A) Speed, Cost, and Size.",
+                "B) Decentralization, Transparency, and Immutability.",
+                "C) Centralization, Privacy, and Speed.",
+                "D) Data, Information, and Knowledge."
+            ],
+            "correct_answer": "B) Decentralization, Transparency, and Immutability.",
+            "explanation": "The module states: 'The three main properties of Blockchain Technology are: 1. Decentralization, 2. Transparency, 3. Immutability.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What does 'Immutability' mean in the context of blockchain?",
+            "options": [
+                "A) Data can be easily changed by anyone.",
+                "B) Once something has been entered into the blockchain, it cannot be tampered with.",
+                "C) The blockchain can be deleted at any time.",
+                "D) Only the owner can see the data."
+            ],
+            "correct_answer": "B) Once something has been entered into the blockchain, it cannot be tampered with.",
+            "explanation": "The module states: 'Immutability, in the context of the blockchain, means that once something has been entered into the blockchain, it cannot be tampered with.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the hashing algorithm used by Bitcoin?",
+            "options": [
+                "A) MD5",
+                "B) SHA-256",
+                "C) RSA",
+                "D) AES"
+            ],
+            "correct_answer": "B) SHA-256",
+            "explanation": "The module states: 'Bitcoin uses SHA-256 (Secure Hashing Algorithm 256).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is a key advantage of a peer-to-peer network over a client-server model?",
+            "options": [
+                "A) It is slower.",
+                "B) It has a single point of failure.",
+                "C) It has no central authority, is fast, and has no single point of failure.",
+                "D) It requires a central server to function."
+            ],
+            "correct_answer": "C) It has no central authority, is fast, and has no single point of failure.",
+            "explanation": "The module states: 'In a peer-to-peer system, there is no central authority, and hence even if one of the peers in the network goes out of the race, you still have more peers to download from. Plus, it is not subject to the idealistic standards of a central system.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is an application of blockchain in the sharing economy?",
+            "options": [
+                "A) Replacing all physical banks.",
+                "B) Enabling peer-to-peer payments, removing the need for intermediaries like Uber.",
+                "C) Creating new social media platforms.",
+                "D) Building physical chains."
+            ],
+            "correct_answer": "B) Enabling peer-to-peer payments, removing the need for intermediaries like Uber.",
+            "explanation": "The module states: 'By enabling peer-to-peer payments, the blockchain opens the door to direct interaction between parties—a truly decentralized sharing economy results.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What does the IPFS (Interplanetary File System) do?",
+            "options": [
+                "A) It stores files on a single central server.",
+                "B) It decentralizes file storage, distributing data throughout the network to protect files from getting hacked or lost.",
+                "C) It deletes files after 1 year.",
+                "D) It only works with Bitcoin."
+            ],
+            "correct_answer": "B) It decentralizes file storage, distributing data throughout the network to protect files from getting hacked or lost.",
+            "explanation": "The module states: 'Decentralizing file storage on the internet brings clear benefits. Distributing data throughout the network protects files from getting hacked or lost. Interplanetary File System (IPFS) makes it easy to conceptualize how a distributed web might operate.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "How does blockchain ensure transparency while protecting privacy?",
+            "options": [
+                "A) By showing real names of all participants.",
+                "B) By hiding all transaction data completely.",
+                "C) By using public addresses, so the person's identity is hidden, but all transactions done by that address are visible.",
+                "D) By not allowing anyone to see any data."
+            ],
+            "correct_answer": "C) By using public addresses, so the person's identity is hidden, but all transactions done by that address are visible.",
+            "explanation": "The module states: 'A person's identity is hidden via complex cryptography and represented only by their public address. So, while the person's real identity is secure, you will still see all the transactions that were done by their public address.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Which UK-based company offers supply chain auditing using the Ethereum blockchain to certify sustainable harvesting of fish?",
+            "options": [
+                "A) Provenance",
+                "B) Boardroom",
+                "C) IPFS",
+                "D) Bitcoin"
+            ],
+            "correct_answer": "A) Provenance",
+            "explanation": "The module states: 'The UK-based Provenance offers supply chain auditing for a range of consumer goods. Making use of the Ethereum blockchain, a Provenance pilot project ensures that fish sold in Sushi restaurants in Japan have been sustainably harvested by its suppliers in Indonesia.'",
+            "difficulty": "hard"
+        }
+    ]
+}

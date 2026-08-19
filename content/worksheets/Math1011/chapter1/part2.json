@@ -1,0 +1,134 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "text": "How many rows will a truth table have if it involves 4 propositions?",
+            "options": [
+                "A) 4 rows",
+                "B) 8 rows",
+                "C) 16 rows",
+                "D) 32 rows"
+            ],
+            "correct_answer": "C) 16 rows",
+            "explanation": "The module states: 'In general, a truth table involving \"n\" propositions p₁, p₂, ..., pₙ contains 2ⁿ possible combinations of truth values.' For n = 4, 2⁴ = 16 rows. Option A (4) is just n. Option B (8) is 2³. Option D (32) is 2⁵.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the correct reading of the expression $p \\wedge q \\Rightarrow r$?",
+            "options": [
+                "A) $p \\wedge (q \\Rightarrow r)$",
+                "B) $(p \\wedge q) \\Rightarrow r$",
+                "C) $p \\Rightarrow (q \\wedge r)$",
+                "D) $(p \\Rightarrow q) \\wedge r$"
+            ],
+            "correct_answer": "B) $(p \\wedge q) \\Rightarrow r$",
+            "explanation": "The module states: 'Whenever \"\\vee\" or \"\\wedge\" occur with \"\\Rightarrow\" or \"\\Leftrightarrow\", we shall assume that \"\\vee\" or \"\\wedge\" is applied first, and then \"\\Rightarrow\" or \"\\Leftrightarrow\" is then applied. For example, p ∧ q ⇒ r means (p ∧ q) ⇒ r.' Option A is incorrect because it applies ⇒ before ∧. Option C and D are incorrect bracket placements.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "Suppose p, q, r, and s have truth values T, F, F, T. What is the truth value of $(p \\vee q) \\Rightarrow (r \\Leftrightarrow \\neg s)$?",
+            "options": [
+                "A) True",
+                "B) False",
+                "C) Cannot be determined",
+                "D) Depends on the order of operations"
+            ],
+            "correct_answer": "A) True",
+            "explanation": "Evaluate step-by-step: p ∨ q = T ∨ F = T. ¬s = ¬T = F. r ⇔ ¬s = F ⇔ F = T. Finally, T ⇒ T = T. Option B would be true if the implication was F ⇒ T. Option C is incorrect because the values are fully determined. Option D is incorrect because the order is fixed by convention.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "Given $p \\equiv T$ and $q \\equiv F$, what is the truth value of $\\neg p \\land q$?",
+            "options": [
+                "A) True",
+                "B) False",
+                "C) Cannot be determined",
+                "D) Both true and false"
+            ],
+            "correct_answer": "B) False",
+            "explanation": "First, ¬p = ¬T = F. Then, F ∧ F = F. Option A would be true only if both components were true. Option C is incorrect because the values are fully determined.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the truth value of the compound proposition $(p \\Rightarrow q) \\Leftrightarrow (\\neg p \\vee q)$?",
+            "options": [
+                "A) Always True (Tautology)",
+                "B) Always False (Contradiction)",
+                "C) Depends on p and q",
+                "D) Only true when p is true"
+            ],
+            "correct_answer": "A) Always True (Tautology)",
+            "explanation": "This is the definition of logical equivalence for implication. Using a truth table: If p=T, q=T: (T⇒T) ⇔ (F∨T) = T ⇔ T = T. If p=T, q=F: (T⇒F) ⇔ (F∨F) = F ⇔ F = T. If p=F, q=T: (F⇒T) ⇔ (T∨T) = T ⇔ T = T. If p=F, q=F: (F⇒F) ⇔ (T∨F) = T ⇔ T = T. It is always true.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Let $P \\equiv (p \\land q) \\Rightarrow p$. Which of the following is true about $P$?",
+            "options": [
+                "A) It is always true (Tautology).",
+                "B) It is always false (Contradiction).",
+                "C) It depends on p and q.",
+                "D) It is only true when p is false."
+            ],
+            "correct_answer": "A) It is always true (Tautology).",
+            "explanation": "Evaluate the truth table: If p=T, q=T: (T∧T)⇒T = T⇒T = T. If p=T, q=F: (T∧F)⇒T = F⇒T = T. If p=F, q=T: (F∧T)⇒F = F⇒F = T. If p=F, q=F: (F∧F)⇒F = F⇒F = T. Thus, P is a tautology. Option B is incorrect because the statement is never false. Option C is incorrect because the truth value does not change. Option D is incorrect because it is true for all cases.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "If $p \\Leftrightarrow q$ is true, what is the truth value of $\\neg p \\Leftrightarrow \\neg q$?",
+            "options": [
+                "A) True",
+                "B) False",
+                "C) Cannot be determined",
+                "D) Depends on the value of p"
+            ],
+            "correct_answer": "A) True",
+            "explanation": "If p ⇔ q is true, then p and q have the same truth value. Therefore, ¬p and ¬q will also have the same truth value. When two propositions have the same truth value, their bi-implication is true. Option B would be true if p and q had different truth values. Option C and D are incorrect because the truth value is fully determined.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Suppose $p \\Rightarrow q$ is false. What can you conclude about the truth values of p and q?",
+            "options": [
+                "A) p is true and q is true.",
+                "B) p is true and q is false.",
+                "C) p is false and q is true.",
+                "D) p is false and q is false."
+            ],
+            "correct_answer": "B) p is true and q is false.",
+            "explanation": "The module states: 'p ⇒ q is false if and only if p is true and q is false.' Option A would make the implication true. Option C would make the implication true (by vacuous truth). Option D would make the implication true (by vacuous truth).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Which of the following is logically equivalent to $p \\Rightarrow q$?",
+            "options": [
+                "A) $q \\Rightarrow p$",
+                "B) $\\neg p \\Rightarrow \\neg q$",
+                "C) $\\neg q \\Rightarrow \\neg p$",
+                "D) $p \\Leftrightarrow q$"
+            ],
+            "correct_answer": "C) $\\neg q \\Rightarrow \\neg p$",
+            "explanation": "The module states: 'As we observed from example 1.7, the conditional p ⇒ q and its contrapositive ¬q ⇒ ¬p are equivalent.' Option A is the converse (not equivalent). Option B is the inverse (not equivalent). Option D is the biconditional (not equivalent).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Evaluate the truth value of the compound proposition $(p \\Rightarrow (q \\land r)) \\lor (\\neg p \\land q)$ when $p \\equiv F, q \\equiv T, r \\equiv F$.",
+            "options": [
+                "A) True",
+                "B) False",
+                "C) Cannot be determined",
+                "D) Depends on the order of operations"
+            ],
+            "correct_answer": "A) True",
+            "explanation": "Evaluate step-by-step: q ∧ r = T ∧ F = F. p ⇒ (q ∧ r) = F ⇒ F = T. ¬p = ¬F = T. ¬p ∧ q = T ∧ T = T. Finally, (p ⇒ (q ∧ r)) ∨ (¬p ∧ q) = T ∨ T = T. Option B would be true only if both sides were false. Option C is incorrect because values are fully determined. Option D is incorrect because the order of operations is fixed.",
+            "difficulty": "hard"
+        }
+    ]
+}

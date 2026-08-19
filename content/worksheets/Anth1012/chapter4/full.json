@@ -1,0 +1,398 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 4,
+    "title": "Unit 4 Full Practice: Combined Parts",
+    "total_questions": 30,
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the definition of marginalization according to the module?",
+            "options": [
+                "A) The celebration of cultural diversity.",
+                "B) The treatment of a person or social group as minor, insignificant, or peripheral, involving exclusion from social interactions and economic rights.",
+                "C) The process of integrating all groups into society.",
+                "D) The equal treatment of all social groups."
+            ],
+            "correct_answer": "B) The treatment of a person or social group as minor, insignificant, or peripheral, involving exclusion from social interactions and economic rights.",
+            "explanation": "The module states: 'Marginalization is defined as a treatment of a person or social group as minor, insignificant, or peripheral. Marginalization involves exclusion of certain groups from social interactions... and from basic economic rights.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Which groups are mentioned as being marginalized across the world?",
+            "options": [
+                "A) Only religious minorities.",
+                "B) Women, children, older people, and people with disabilities.",
+                "C) Only ethnic minorities.",
+                "D) Only occupational groups."
+            ],
+            "correct_answer": "B) Women, children, older people, and people with disabilities.",
+            "explanation": "The module states: 'Women, children, older people, and people with disabilities are among marginalized groups across the world.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is vulnerability?",
+            "options": [
+                "A) The state of being completely safe from harm.",
+                "B) The state of being exposed to physical or emotional injuries, requiring special attention and protection.",
+                "C) The state of being powerful.",
+                "D) The state of being rich."
+            ],
+            "correct_answer": "B) The state of being exposed to physical or emotional injuries, requiring special attention and protection.",
+            "explanation": "The module states: 'Vulnerability refers to the state of being exposed to physical or emotional injuries. Vulnerable groups are people exposed to possibilities of attack, harms, or mistreatment.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the key difference between sex and gender according to the module?",
+            "options": [
+                "A) Sex is cultural; gender is biological.",
+                "B) Sex refers to biological differences (chromosomes, hormones, organs); gender refers to socially/culturally constructed roles and behaviors.",
+                "C) They are the same thing.",
+                "D) Sex refers to roles; gender refers to biology."
+            ],
+            "correct_answer": "B) Sex refers to biological differences (chromosomes, hormones, organs); gender refers to socially/culturally constructed roles and behaviors.",
+            "explanation": "The module states: 'Sex differences between female and male human beings are closely associated with biological differences... The concept of gender has a different meaning. The meaning of gender is closely related to socially/culturally constructed characteristics of females/women and males/men.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What are gender roles?",
+            "options": [
+                "A) Biological functions of males and females.",
+                "B) Tasks and activities a culture assigns to men and women, including behaviors expected from them.",
+                "C) Legal rights of men and women.",
+                "D) Economic status of men and women."
+            ],
+            "correct_answer": "B) Tasks and activities a culture assigns to men and women, including behaviors expected from them.",
+            "explanation": "The module states: 'Gender differences are expressed in gender roles (i.e., behaviors expected from females and males in a given cultural setting). Gender roles are tasks and activities a culture assigns to men and women.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is a minority group?",
+            "options": [
+                "A) A large group that dominates society.",
+                "B) A small group of people within a community, region, or country that is different from the majority in terms of race, religion, ethnicity, or language.",
+                "C) A group that holds all political power.",
+                "D) A group that is always marginalized."
+            ],
+            "correct_answer": "B) A small group of people within a community, region, or country that is different from the majority in terms of race, religion, ethnicity, or language.",
+            "explanation": "The module states: 'The phrase 'minority group' refers to a small group of people within a community, region, or country. In most cases, minority groups are different from the majority population in terms of race, religion, ethnicity, and language.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the primary source of gender inequality according to the module?",
+            "options": [
+                "A) Biological differences between men and women.",
+                "B) Cultural values, norms, and beliefs rather than biology.",
+                "C) Economic factors only.",
+                "D) Political factors only."
+            ],
+            "correct_answer": "B) Cultural values, norms, and beliefs rather than biology.",
+            "explanation": "The module states: 'Gender inequality mainly arises from cultural values, norms, and beliefs rather than biological differences between women and men.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Which of the following is an example of gender-based marginalization in Ethiopia mentioned in the module?",
+            "options": [
+                "A) Men being excluded from property rights.",
+                "B) Women being excluded from the right to own and inherit key family resources such as land.",
+                "C) Children having equal rights to land.",
+                "D) Older persons having all property rights."
+            ],
+            "correct_answer": "B) Women being excluded from the right to own and inherit key family resources such as land.",
+            "explanation": "The module states: 'Women do not have equal property rights in many cultures in Ethiopia. For example, they are excluded from the right to own and inherit key family resources such as land.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "According to the module, what is the difference between sex and gender based on their origin?",
+            "options": [
+                "A) Sex is learned; gender is innate.",
+                "B) Sex is biological and innate; gender is socially and culturally constructed.",
+                "C) Sex is cultural; gender is biological.",
+                "D) Sex and gender both originate from biology."
+            ],
+            "correct_answer": "B) Sex is biological and innate; gender is socially and culturally constructed.",
+            "explanation": "The module states: 'Sex differences between female and male human beings are closely associated with biological differences... The meaning of gender is closely related to socially/culturally constructed characteristics.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What are the consequences of gender-based marginalization mentioned in the module?",
+            "options": [
+                "A) Equal distribution of wealth and power.",
+                "B) Social and economic inequalities involving unfair distribution of wealth, income, job opportunities, and political power.",
+                "C) Complete equality for all.",
+                "D) Women having more power than men."
+            ],
+            "correct_answer": "B) Social and economic inequalities involving unfair distribution of wealth, income, job opportunities, and political power.",
+            "explanation": "The module states: 'As a result, women are exposed to social and economic inequalities involving unfair distribution of wealth, income, job opportunities, and political power.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "Which occupational groups are mentioned as the most marginalized in Ethiopia?",
+            "options": [
+                "A) Teachers and doctors.",
+                "B) Tanners, potters, weavers, and ironsmiths.",
+                "C) Farmers and fishermen.",
+                "D) Soldiers and police."
+            ],
+            "correct_answer": "B) Tanners, potters, weavers, and ironsmiths.",
+            "explanation": "The module states: 'The most marginalized occupational groups are tanners, potters, weavers, and ironsmiths.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 12,
+            "text": "Why are craft-workers marginalized despite their contributions?",
+            "options": [
+                "A) Because they are considered impure and inferior.",
+                "B) Because they do not work hard.",
+                "C) Because they are too wealthy.",
+                "D) Because they are outsiders."
+            ],
+            "correct_answer": "A) Because they are considered impure and inferior.",
+            "explanation": "The module states: 'Craft-workers such as potters and tanners are considered as impure... Despite their contributions, these craft-workers are considered inferior and marginalized from wide areas of social interactions and economic activities.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 13,
+            "text": "What is spatial marginalization of craft-workers?",
+            "options": [
+                "A) They live in the city center.",
+                "B) They are forced to live on the outskirts of villages, on poor land, and are segregated at market places.",
+                "C) They own all the land.",
+                "D) They live in luxury homes."
+            ],
+            "correct_answer": "B) They are forced to live on the outskirts of villages, on poor land, and are segregated at market places.",
+            "explanation": "The module states: 'Craft-workers settle/live on the outskirts of villages, near to forests, on poor land, around steep slopes. They are segregated at market places (they sell their goods at the outskirts of markets).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 14,
+            "text": "What is the rule of marriage for marginalized occupational groups?",
+            "options": [
+                "A) They practice exogamy (marrying outside the group).",
+                "B) They practice endogamous marriage (marrying within their own group) because they are excluded from intermarriage.",
+                "C) They do not marry at all.",
+                "D) They only marry dominant group members."
+            ],
+            "correct_answer": "B) They practice endogamous marriage (marrying within their own group) because they are excluded from intermarriage.",
+            "explanation": "The module states: 'Craft-workers are excluded from intermarriage (i.e., marriage with members of the dominant group). As a result, they exercise endogamous marriage.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 15,
+            "text": "What is the definition of child marriage according to the module?",
+            "options": [
+                "A) Marriage involving girls below the age of 18.",
+                "B) Marriage involving boys below the age of 18.",
+                "C) Marriage between two people over 18.",
+                "D) Marriage involving people over 60."
+            ],
+            "correct_answer": "A) Marriage involving girls below the age of 18.",
+            "explanation": "The module states: 'Child marriage refers to marriage which involves girls below the age of 18.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 16,
+            "text": "What are the major factors that encourage child marriage in Ethiopia?",
+            "options": [
+                "A) Only economic factors.",
+                "B) Social norms (virginity, reputation) and economic factors (security, access to land).",
+                "C) Only cultural festivals.",
+                "D) Only government policies."
+            ],
+            "correct_answer": "B) Social norms (virginity, reputation) and economic factors (security, access to land).",
+            "explanation": "The module states: 'Social norms and economic factors are the two major factors that support the continuation of the practice. Social norms: Sexual purity of girls... Economic issues are among the major factors that support the continuation of child marriage... economic benefits such as access to land and other resources.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 17,
+            "text": "What is a major health consequence of child marriage mentioned in the module?",
+            "options": [
+                "A) Improved health.",
+                "B) Fistula (a severe reproductive health problem) and death of the mother or child.",
+                "C) Increased life expectancy.",
+                "D) Better education."
+            ],
+            "correct_answer": "B) Fistula (a severe reproductive health problem) and death of the mother or child.",
+            "explanation": "The module states: 'Child marriage leads to early pregnancies, which increase risks of diseases and complications during child delivery, fistula (a severe reproductive health problem affecting thousands of women in Ethiopia), and death of the mother or child.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "What does the term 'older persons' refer to in the module?",
+            "options": [
+                "A) Adults with the age of 60 and above.",
+                "B) Children under 18.",
+                "C) People between 18 and 30.",
+                "D) People between 30 and 50."
+            ],
+            "correct_answer": "A) Adults with the age of 60 and above.",
+            "explanation": "The module states: 'The phrase 'older persons' refers to adults with the age of 60 and above.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "What is ageism?",
+            "options": [
+                "A) Respect for older people.",
+                "B) Stereotyping, prejudice, and discrimination against people based on their age.",
+                "C) The celebration of youth.",
+                "D) The study of aging."
+            ],
+            "correct_answer": "B) Stereotyping, prejudice, and discrimination against people based on their age.",
+            "explanation": "The module states: 'Ageism is a widely observed social problem in the world. Ageism refer to stereotyping, prejudice, and discrimination against people based on their age.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "Why are older persons increasingly marginalized in modern times?",
+            "options": [
+                "A) Because they are too wealthy.",
+                "B) Because of modernization, globalization, and urbanization, they are considered a social burden rather than social assets.",
+                "C) Because they are too strong.",
+                "D) Because they are moving to cities."
+            ],
+            "correct_answer": "B) Because of modernization, globalization, and urbanization, they are considered a social burden rather than social assets.",
+            "explanation": "The module states: 'Older people are facing various problems as a result of modernization, globalization, and urbanization... Older persons are marginalized because they are considered as social burden rather than social assets.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 21,
+            "text": "Which historical event is mentioned as an example of persecution against religious and ethnic minorities?",
+            "options": [
+                "A) The French Revolution.",
+                "B) The Holocaust (the extermination of 6 million Jewish people in Nazi Germany).",
+                "C) The American Civil War.",
+                "D) The Industrial Revolution."
+            ],
+            "correct_answer": "B) The Holocaust (the extermination of 6 million Jewish people in Nazi Germany).",
+            "explanation": "The module states: 'More than 6 million Jewish people were killed during the period of Adolf Hitler, the leader of the Nazi Party in Germany. This large scale extermination of the Jewish people is called the Holocaust.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 22,
+            "text": "Which group is described as 'one of the most ill-treated and persecuted refugee groups in the world'?",
+            "options": [
+                "A) The Jewish people.",
+                "B) The Muslim Rohingyas.",
+                "C) The Tanners in Ethiopia.",
+                "D) The Potters in Ethiopia."
+            ],
+            "correct_answer": "B) The Muslim Rohingyas.",
+            "explanation": "The module states: 'According to Abdu Hasnat Milton et al (2017), the Rohingya are \"one of the most ill-treated and persecuted refugee groups in the world\".'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 23,
+            "text": "What is the human rights approach to people with disabilities?",
+            "options": [
+                "A) They do not have any rights.",
+                "B) They have the right to inclusive services and equal opportunities, and buildings must be accessible to them.",
+                "C) They should be isolated from society.",
+                "D) They are not entitled to education."
+            ],
+            "correct_answer": "B) They have the right to inclusive services and equal opportunities, and buildings must be accessible to them.",
+            "explanation": "The module states: 'People with disabilities have the right to inclusive services and equal opportunities. Hence, buildings and compounds of service giving institutions (e.g., schools and hospitals) must be accessible to people with disabilities.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 24,
+            "text": "According to the module, what is the key limitation of cultural relativism?",
+            "options": [
+                "A) Cultural relativism means we must accept all practices, even harmful ones.",
+                "B) Anthropologists do not support harmful customary practices like FGM/C and child marriage, even in the name of cultural relativism.",
+                "C) Cultural relativism is always wrong.",
+                "D) Cultural relativism has no limitations."
+            ],
+            "correct_answer": "B) Anthropologists do not support harmful customary practices like FGM/C and child marriage, even in the name of cultural relativism.",
+            "explanation": "The module states: 'This does not mean that we need to appreciate every custom and practice. Anthropologists do not support/appreciate customary practices that violate the rights and well-being of individuals and groups.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 25,
+            "text": "Why do anthropologists not support Female Genital Mutilation/Cutting (FGM/C)?",
+            "options": [
+                "A) Because it is a modern practice.",
+                "B) Because it violates the rights of girls to physical integrity and has severe health consequences.",
+                "C) Because it is a Western practice.",
+                "D) Because it is not practiced in Ethiopia."
+            ],
+            "correct_answer": "B) Because it violates the rights of girls to physical integrity and has severe health consequences.",
+            "explanation": "The module states: 'Anthropologists do not support FGM/C for practical reasons: FGM/C violates the rights of girls to physical integrity. Moreover, it has short and long term consequences for the health of girls and women.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 26,
+            "text": "Why do anthropologists not support child marriage?",
+            "options": [
+                "A) Because it is illegal only in Ethiopia.",
+                "B) Because it violates the rights of young girls to make decisions about their future, destroys their chance to education, and harms their physical and psychological well-being.",
+                "C) Because it is only practiced in rural areas.",
+                "D) Because it is a modern practice."
+            ],
+            "correct_answer": "B) Because it violates the rights of young girls to make decisions about their future, destroys their chance to education, and harms their physical and psychological well-being.",
+            "explanation": "The module states: 'Anthropologists do not support child marriage for similar reasons: Child marriage violates the rights of young girls to make decision about their future. It destroys their chance to education and professional development. Child marriage negatively affects the physical and psychological wellbeing of young girls.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 27,
+            "text": "What is the conclusion of the unit regarding culture?",
+            "options": [
+                "A) Culture is always harmful.",
+                "B) Culture embraces positive aspects essential for survival, but some cultural values and practices have negative implications for vulnerable groups.",
+                "C) Culture should be completely abandoned.",
+                "D) Culture has no impact on society."
+            ],
+            "correct_answer": "B) Culture embraces positive aspects essential for survival, but some cultural values and practices have negative implications for vulnerable groups.",
+            "explanation": "The module states: 'Culture embraces positive aspects (e.g., values, norms, knowledge, wisdom, and practices) that are essential for the survival of human societies. However, certain cultural values, beliefs, and practices have negative implications for the rights and wellbeing of social groups.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 28,
+            "text": "What is the key solution proposed in the unit to address harmful cultural practices?",
+            "options": [
+                "A) Ignoring the practices.",
+                "B) The human rights approach and inclusive approaches to protect the rights of marginalized and vulnerable groups.",
+                "C) Eliminating all cultural practices.",
+                "D) Forcing everyone to adopt one culture."
+            ],
+            "correct_answer": "B) The human rights approach and inclusive approaches to protect the rights of marginalized and vulnerable groups.",
+            "explanation": "The module states: 'As a remedy of this limitation of culture, we have also dealt with the human rights approach and the importance of inclusive approaches to protect the rights of marginalized, vulnerable, and minority groups.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 29,
+            "text": "What rights are mentioned as part of the human rights of women and girls?",
+            "options": [
+                "A) Only the right to work.",
+                "B) The right to be free from harmful practices such as forced marriage, child marriage, and FGM/C.",
+                "C) The right to own property only.",
+                "D) The right to vote only."
+            ],
+            "correct_answer": "B) The right to be free from harmful practices such as forced marriage, child marriage, and FGM/C.",
+            "explanation": "The module states: 'The human rights of women and girls include right to be free from harmful practices such as forced marriage, child marriage, and female genital mutilation/cutting.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 30,
+            "text": "According to the module, how should we view cultural relativism?",
+            "options": [
+                "A) We must accept every cultural practice without question.",
+                "B) We must understand cultures in their own context, but we do not have to appreciate practices that violate human rights and well-being.",
+                "C) Cultural relativism is always wrong.",
+                "D) Cultural relativism only applies to Western cultures."
+            ],
+            "correct_answer": "B) We must understand cultures in their own context, but we do not have to appreciate practices that violate human rights and well-being.",
+            "explanation": "The module states: 'Cultural relativism... is about the importance of understanding the values, norms, customs, and practices of a particular culture in its own context... This does not mean that we need to appreciate every custom and practice. Anthropologists do not support/appreciate customary practices that violate the rights and well-being of individuals and groups.'",
+            "difficulty": "hard"
+        }
+    ]
+}

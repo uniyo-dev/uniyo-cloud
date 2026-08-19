@@ -1,0 +1,186 @@
+<div class="lesson-section">
+    <h2>Chapter 3: Matrices, Determinant and Systems of Linear Equations</h2>
+    <h3>Part 3: Types of Matrices & Transpose</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In this part, we explore the various <strong>types of matrices</strong> that are so important that they have acquired names of their own, such as square, identity, diagonal, scalar, and triangular matrices. We also study the <strong>transpose</strong> of a matrix and the important property of <strong>symmetric matrices</strong>.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Identify and define square, identity, diagonal, scalar, and triangular matrices.</li>
+            <li>Compute the transpose of a matrix.</li>
+            <li>Determine whether a given matrix is symmetric.</li>
+            <li>Apply the properties of matrix transpose.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>3.3 Types of Matrices</h4>
+
+    <p>There are certain types of matrices that are so important that they have acquired names of their own. In this section, we are going to discuss some of these matrices and their properties.</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 3.9 (Square Matrix):</strong>
+        <p>A matrix \(A\) is said to be <strong>square</strong> if it has the same number of rows and columns. If \(A\) has \(n\) rows and \(n\) columns, we call it a square matrix of size \(n\).</p>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Types of Matrices</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">🟦 Square Matrix</text>
+            <text x="100" y="105" fill="#111827" font-size="8" text-anchor="middle">Rows = Columns (n × n)</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">🟩 Identity Matrix</text>
+            <text x="300" y="105" fill="#111827" font-size="8" text-anchor="middle">1s on diagonal, 0s elsewhere</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 Identity matrix: \(I_n\) is the multiplicative identity.</text>
+        </svg>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 3.10 (Identity Matrix):</strong>
+        <p>A square matrix \(A = [a_{ij}]_{n 	imes n}\) is called an <strong>identity matrix</strong> if</p>
+        <p>\[
+        a_{ij} = egin{cases} 1 & 	ext{if } i = j \ 0 & 	ext{if } i 
+eq j \end{cases}
+        \]</p>
+        <p>and it is denoted by \(I_n\).</p>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 3.11 (Diagonal Matrix):</strong>
+        <p>A square matrix \(D = [d_{ij}]\) is said to be <strong>diagonal</strong> if \(d_{ij} = 0\) whenever \(i 
+eq j\). Less formally, \(D\) is said to be diagonal when all the entries off the main diagonal are 0.</p>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 3.12 (Scalar Matrix):</strong>
+        <p>A <strong>diagonal matrix</strong> in which all diagonal entries are equal is called a <strong>scalar matrix</strong>.</p>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Diagonal, Scalar, and Triangular Matrices</text>
+            
+            <rect x="20" y="60" width="120" height="60" fill="#14b8a6" rx="8"/>
+            <text x="80" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">🔲 Diagonal</text>
+            <text x="80" y="105" fill="#111827" font-size="8" text-anchor="middle">Off-diagonal entries are 0</text>
+
+            <rect x="160" y="60" width="120" height="60" fill="#facc15" rx="8"/>
+            <text x="220" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">🌟 Scalar</text>
+            <text x="220" y="105" fill="#111827" font-size="8" text-anchor="middle">Diagonal entries are all equal</text>
+
+            <rect x="300" y="60" width="80" height="60" fill="#f43f5e" rx="8"/>
+            <text x="340" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">🔻 Triangular</text>
+            <text x="340" y="105" fill="#111827" font-size="8" text-anchor="middle">Upper or Lower</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 Any diagonal matrix is both upper and lower triangular.</text>
+        </svg>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 3.13 (Triangular Matrix):</strong>
+        <p>A square matrix \(A = [a_{ij}]_{n 	imes n}\) is said to be <strong>lower triangular</strong> if and only if \(a_{ij} = 0\) whenever \(i < j\).</p>
+        <p>\(A\) is said to be <strong>upper triangular</strong> if and only if \(a_{ij} = 0\) whenever \(i > j\).</p>
+    </div>
+
+    <hr>
+
+    <h4>Transpose of a Matrix</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 3.14 (Transpose):</strong>
+        <p>Let \(A = [a_{ij}]\) be an \(m 	imes n\) matrix. Then by the <strong>transpose</strong> of \(A\), we mean the \(n 	imes m\) matrix, denoted by \(A^t\), whose \((i,j)\)-th entry is the \((j,i)\)-th entry of \(A\). More precisely, if \(A = [a_{ij}]_{m 	imes n}\), then \(A^t = [a_{ji}]_{n 	imes m}\).</p>
+        <p>That is, the \(k\)-th row of matrix \(A\) becomes the \(k\)-th column of \(A^t\), and the \(k\)-th column of \(A\) becomes the \(k\)-th row of \(A^t\).</p>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Transpose of a Matrix</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Original Matrix \(A\)</text>
+            <text x="100" y="105" fill="#111827" font-size="8" text-anchor="middle">Rows: R₁, R₂</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Transpose \(A^t\)</text>
+            <text x="300" y="105" fill="#111827" font-size="8" text-anchor="middle">Rows become Columns</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 \(A^t_{ij} = A_{ji}\) — The row becomes the column.</text>
+        </svg>
+    </div>
+
+    <p><strong>Example 3.19:</strong> Compute the transposes of the following matrices:</p>
+    <p>\[
+    A = egin{bmatrix} 1 & 2 & 3 \ 4 & 5 & 6 \end{bmatrix}, \quad B = egin{bmatrix} 1 & 2 \ 3 & 4 \end{bmatrix}, \quad C = egin{bmatrix} 1 & 3 & 5 \end{bmatrix}.
+    \]</p>
+
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>\(A^t = egin{bmatrix} 1 & 4 \ 2 & 5 \ 3 & 6 \end{bmatrix}\) (Row 1 becomes Column 1, Row 2 becomes Column 2).</li>
+        <li>\(B^t = egin{bmatrix} 1 & 3 \ 2 & 4 \end{bmatrix}\).</li>
+        <li>\(C^t = egin{bmatrix} 1 \ 3 \ 5 \end{bmatrix}\).</li>
+    </ul>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 3.15 (Symmetric Matrix):</strong>
+        <p>A square matrix \(A\) is said to be <strong>symmetric</strong> if \(A = A^t\).</p>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Symmetric Matrix</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">✅ Symmetric</text>
+            <text x="100" y="105" fill="#111827" font-size="8" text-anchor="middle">\(A = A^t\)</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">❌ Not Symmetric</text>
+            <text x="300" y="105" fill="#111827" font-size="8" text-anchor="middle">\(A 
+eq A^t\)</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 A matrix is symmetric if it is equal to its transpose.</text>
+        </svg>
+    </div>
+
+    <p><strong>Example 3.20:</strong> Determine whether the given matrix is symmetric or not.</p>
+
+    <p>\(A = egin{bmatrix} 0 & 1 & 3 \ -1 & 0 & 2 \ -3 & -2 & 0 \end{bmatrix}\) is <strong>not symmetric</strong> because \(A^t = egin{bmatrix} 0 & -1 & -3 \ 1 & 0 & -2 \ 3 & 2 & 0 \end{bmatrix} 
+eq A\).</p>
+
+    <p>\(B = egin{bmatrix} 1 & 1 & 3 \ 1 & 2 & 2 \ 3 & 2 & 3 \end{bmatrix}\) is <strong>symmetric</strong> because \(B^t = B\).</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Theorem 3.5 (Properties of Matrix Transpose):</strong>
+        <p>When the relevant sums and products are defined, and \(lpha\) is a scalar:</p>
+        <ol>
+            <li>\((A^t)^t = A\)</li>
+            <li>\((A + B)^t = A^t + B^t\)</li>
+            <li>\((lpha A)^t = lpha (A^t)\)</li>
+            <li>\((AB)^t = B^t A^t\) (Note the reversed order!)</li>
+        </ol>
+    </div>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 3)</h4>
+        <ul>
+            <li><strong>Square Matrix:</strong> Rows = Columns.</li>
+            <li><strong>Identity Matrix (\(I_n\)):</strong> 1s on the diagonal, 0s elsewhere.</li>
+            <li><strong>Diagonal Matrix:</strong> Non-zero entries only on the main diagonal.</li>
+            <li><strong>Scalar Matrix:</strong> A diagonal matrix where all diagonal entries are equal.</li>
+            <li><strong>Triangular Matrix:</strong> Upper (zeros below diagonal) or Lower (zeros above diagonal).</li>
+            <li><strong>Transpose (\(A^t\)):</strong> Rows become columns, columns become rows.</li>
+            <li><strong>Symmetric Matrix:</strong> \(A = A^t\).</li>
+            <li><strong>Transpose Properties:</strong> \((AB)^t = B^t A^t\) (Order reverses).</li>
+        </ul>
+    </div>
+</div>

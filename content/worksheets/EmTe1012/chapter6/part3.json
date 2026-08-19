@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 6,
+    "title": "Part 3 Practice: Threats, Challenges & Risks",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is a major security challenge mentioned in the module regarding emerging technologies?",
+            "options": [
+                "A) Technology is moving too slowly.",
+                "B) Security professionals must keep pace with ever-changing technology and move beyond 'guards, guns & gates' to understand business and cyber/data security.",
+                "C) There are no security challenges.",
+                "D) Security is only about physical guards."
+            ],
+            "correct_answer": "B) Security professionals must keep pace with ever-changing technology and move beyond 'guards, guns & gates' to understand business and cyber/data security.",
+            "explanation": "The module states: 'With Technology moving at a fast pace, it is always been a challenge for Security... It is no more \"Guards, guns & gates\"; it is more than that & we need to play a major role for a security professional to support business.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Which of the following is listed as a security application of emerging technologies?",
+            "options": [
+                "A) Counter-terrorism and law enforcement informatics via predictive analytics and AI.",
+                "B) Only manual security guards.",
+                "C) Ignoring cyber threats.",
+                "D) Removing all surveillance."
+            ],
+            "correct_answer": "A) Counter-terrorism and law enforcement informatics via predictive analytics and AI.",
+            "explanation": "The module lists 10 applications including: 'Counter-terrorism and law enforcement informatics via predictive analytics and artificial intelligence.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is a challenge in using Artificial Intelligence (AI) regarding data quality?",
+            "options": [
+                "A) AI never needs data.",
+                "B) AI is only as good as the data it is exposed to, and humans could be the weak link in inputting large amounts of data.",
+                "C) AI always works perfectly with any data.",
+                "D) AI does not require any training."
+            ],
+            "correct_answer": "B) AI is only as good as the data it is exposed to, and humans could be the weak link in inputting large amounts of data.",
+            "explanation": "The module states: 'AI is only as good as the data it is exposed to... Humans could be the weak link here, as people are unlikely to want to input masses of data into a system.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "What is a major dilemma associated with AI regarding employment?",
+            "options": [
+                "A) AI will create unlimited jobs for everyone.",
+                "B) AI has the potential to replace human workers, even in higher-level jobs, but can also free up time for other tasks.",
+                "C) AI has no impact on employment.",
+                "D) AI only replaces low-level jobs."
+            ],
+            "correct_answer": "B) AI has the potential to replace human workers, even in higher-level jobs, but can also free up time for other tasks.",
+            "explanation": "The module states: 'Another dilemma that comes along with AI is its potential to replace human workers. As machines become more \"intelligent\" they could begin to replace experts in higher-level jobs.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is a challenge in using Robotics in manufacturing according to the module?",
+            "options": [
+                "A) Robots are too slow.",
+                "B) The potential for humans losing jobs, and ethical and cybersecurity concerns as robots learn to teach each other.",
+                "C) Robots do not require any maintenance.",
+                "D) Robots cannot work in factories."
+            ],
+            "correct_answer": "B) The potential for humans losing jobs, and ethical and cybersecurity concerns as robots learn to teach each other.",
+            "explanation": "The module states: 'With automation and robotics moving from production lines out into other areas... the potential for humans losing jobs is great here too... as robots learn to teach each other and themselves, there is the potential for much greater productivity, but this also raises ethical and cybersecurity concerns.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is a challenge of using the Internet of Things (IoT) in daily activities?",
+            "options": [
+                "A) IoT devices generate no data.",
+                "B) The massive generation of data from connected devices, requiring careful business planning, and severe security implications of mass connectivity.",
+                "C) IoT devices are too simple to use.",
+                "D) IoT does not connect to the internet."
+            ],
+            "correct_answer": "B) The massive generation of data from connected devices, requiring careful business planning, and severe security implications of mass connectivity.",
+            "explanation": "The module states: 'As more and more connected devices (such as smartwatches and fitness trackers) join the Internet of Things, the amount of data being generated is increasing. Companies will have to plan carefully... There are severe security implications of mass connectivity that need to be addressed.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is a challenge in Big Data regarding communicating insights?",
+            "options": [
+                "A) Big Data is always easy to understand.",
+                "B) Surfacing all data to humans in a way they can understand can be challenging; AI will play a role here.",
+                "C) Big Data does not require analysis.",
+                "D) Big Data is irrelevant to business."
+            ],
+            "correct_answer": "B) Surfacing all data to humans in a way they can understand can be challenging; AI will play a role here.",
+            "explanation": "The module states: 'Although data can be incredibly useful for spotting trends and analyzing impacts, surfacing all this data to humans in a way that they can understand can be challenging. AI will play a role here.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "What is a specific risk associated with driverless cars mentioned in the module?",
+            "options": [
+                "A) They are too slow.",
+                "B) Companies could face claims related to bodily injury and property damage.",
+                "C) They do not require any insurance.",
+                "D) They are immune to all risks."
+            ],
+            "correct_answer": "B) Companies could face claims related to bodily injury and property damage.",
+            "explanation": "The module states: 'Driverless car: while a compelling option for future fleets, companies could crash and burn from claims related to bodily injury and property damage.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What risk is associated with wearables like Google Glass and Fitbit?",
+            "options": [
+                "A) They have no risks.",
+                "B) They can expose companies to invasion of privacy claims that may not be covered by general liability.",
+                "C) They are too expensive.",
+                "D) They are not useful."
+            ],
+            "correct_answer": "B) They can expose companies to invasion of privacy claims that may not be covered by general liability.",
+            "explanation": "The module states: 'Wearables: Google glass, Fitbit and other wearables can expose companies to the invasion of privacy claims that may not be covered by general liability or personal injury claims that weren't foreseen.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What risk does the proliferation of IoT sensors and cross-platform integration create?",
+            "options": [
+                "A) Lower costs.",
+                "B) Potential exposure from privacy invasion, bodily injury, and property damage that may connect an organization to huge liabilities.",
+                "C) Increased efficiency without any downsides.",
+                "D) No risks at all."
+            ],
+            "correct_answer": "B) Potential exposure from privacy invasion, bodily injury, and property damage that may connect an organization to huge liabilities.",
+            "explanation": "The module states: 'Internet of things: The proliferation of sensors and cross-platform integration creates potential exposure from privacy invasion, bodily injury and property damage that may connect an organization to huge liabilities.'",
+            "difficulty": "hard"
+        }
+    ]
+}

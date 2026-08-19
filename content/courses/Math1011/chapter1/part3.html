@@ -1,0 +1,168 @@
+<div class="lesson-section">
+    <h2>Chapter 1: Propositional Logic and Set Theory</h2>
+    <h3>Part 3: Tautology, Contradiction, & Logical Equivalence Laws</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In this part, we explore the concepts of <strong>Tautology</strong> (always true) and <strong>Contradiction</strong> (always false). We will also study <strong>Logical Equivalence</strong>, where two compound propositions have identical truth tables, and learn how to use truth tables to prove these properties.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Define tautology and contradiction.</li>
+            <li>Identify tautologies and contradictions using truth tables.</li>
+            <li>Determine if two compound propositions are logically equivalent.</li>
+            <li>Write the converse, inverse, and contrapositive of a conditional statement.</li>
+            <li>Apply the core logical equivalence laws (Idempotent, Commutative, Associative, Distributive, De Morgan's, etc.).</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>1.1.4. Tautology and Contradiction</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition:</strong>
+        <p>A compound proposition is a <strong>tautology</strong> if it is always true regardless of the truth values of its component propositions. If, on the other hand, a compound proposition is always false regardless of its component propositions, we say that such a proposition is a <strong>contradiction</strong>.</p>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Tautology vs. Contradiction</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">✅ Tautology</text>
+            <text x="100" y="105" fill="#111827" font-size="9" text-anchor="middle">Always True (e.g., p ∨ ¬p)</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">❌ Contradiction</text>
+            <text x="300" y="105" fill="#111827" font-size="9" text-anchor="middle">Always False (e.g., p ∧ ¬p)</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 Tautology = Every row is T. Contradiction = Every row is F.</text>
+        </svg>
+    </div>
+
+    <p><strong>Examples 1.10:</strong></p>
+
+    <p><strong>a.</strong> Suppose \(p\) is any proposition. Consider the compound propositions \(p \vee \neg p\) and \(p \wedge \neg p\).</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>\(p\)</th><th>\(\neg p\)</th><th>\(p \vee \neg p\)</th><th>\(p \wedge \neg p\)</th></tr>
+            <tr><td>T</td><td>F</td><td>T</td><td>F</td></tr>
+            <tr><td>F</td><td>T</td><td>T</td><td>F</td></tr>
+        </table>
+    </div>
+
+    <p>Observe that \(p \vee \neg p\) is a <strong>tautology</strong> (always T) while \(p \wedge \neg p\) is a <strong>contradiction</strong> (always F).</p>
+
+    <p><strong>b.</strong> For any propositions \(p\) and \(q\), consider the compound proposition \(p \Rightarrow (q \Rightarrow p)\).</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>\(p\)</th><th>\(q\)</th><th>\(q \Rightarrow p\)</th><th>\(p \Rightarrow (q \Rightarrow p)\)</th></tr>
+            <tr><td>T</td><td>T</td><td>T</td><td>T</td></tr>
+            <tr><td>T</td><td>F</td><td>T</td><td>T</td></tr>
+            <tr><td>F</td><td>T</td><td>F</td><td>T</td></tr>
+            <tr><td>F</td><td>F</td><td>T</td><td>T</td></tr>
+        </table>
+    </div>
+
+    <p>We have exhibited all the possibilities and we see that for all truth values of the constituent propositions, the proposition \(p \Rightarrow (q \Rightarrow p)\) is always true. Thus, \(p \Rightarrow (q \Rightarrow p)\) is a <strong>tautology</strong>.</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #38bdf8;">
+        <strong>📌 Important Remarks:</strong>
+        <ol>
+            <li>In a truth table, if a proposition is a tautology, then every line in its column has <strong>T</strong> as its entry; if a proposition is a contradiction, every line in its column has <strong>F</strong> as its entry.</li>
+            <li>Two compound propositions \(P\) and \(Q\) are equivalent if and only if <strong>\(P \Leftrightarrow Q\) is a tautology</strong>.</li>
+        </ol>
+    </div>
+
+    <hr>
+
+    <h4>Logical Equivalence and Related Conditional Propositions</h4>
+
+    <p>Given the conditional \(p \Rightarrow q\), we give the related conditional propositions:</p>
+    <ul>
+        <li><strong>Converse:</strong> \(q \Rightarrow p\)</li>
+        <li><strong>Inverse:</strong> \(\neg p \Rightarrow \neg q\)</li>
+        <li><strong>Contrapositive:</strong> \(\neg q \Rightarrow \neg p\)</li>
+    </ul>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Conditional &amp; Its Relatives</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Conditional</text>
+            <text x="100" y="105" fill="#111827" font-size="9" text-anchor="middle">\(p \Rightarrow q\)</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#facc15" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Contrapositive</text>
+            <text x="300" y="105" fill="#111827" font-size="9" text-anchor="middle">\(\neg q \Rightarrow \neg p\) (Equivalent)</text>
+
+            <rect x="20" y="140" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="100" y="165" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Converse</text>
+            <text x="100" y="185" fill="#111827" font-size="9" text-anchor="middle">\(q \Rightarrow p\) (Not Equivalent)</text>
+
+            <rect x="220" y="140" width="160" height="60" fill="#f59e0b" rx="8"/>
+            <text x="300" y="165" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Inverse</text>
+            <text x="300" y="185" fill="#111827" font-size="9" text-anchor="middle">\(\neg p \Rightarrow \neg q\) (Not Equivalent)</text>
+        </svg>
+    </div>
+
+    <p>As we observed earlier, the conditional \(p \Rightarrow q\) and its contrapositive \(\neg q \Rightarrow \neg p\) are <strong>equivalent</strong>. On the other hand, \(p \Rightarrow q\) is <strong>not equivalent</strong> to \(q \Rightarrow p\), and \(p \Rightarrow q\) is <strong>not equivalent</strong> to \(\neg p \Rightarrow \neg q\).</p>
+
+    <p><strong>Do not confuse the contrapositive and the converse of the conditional proposition.</strong></p>
+    <ul>
+        <li><strong>Converse:</strong> The hypothesis of a converse statement is the conclusion of the conditional statement, and the conclusion of the converse statement is the hypothesis of the conditional statement.</li>
+        <li><strong>Contrapositive:</strong> The hypothesis of a contrapositive statement is the negation of the conclusion of the conditional statement, and the conclusion of the contrapositive statement is the negation of the hypothesis of the conditional statement.</li>
+    </ul>
+
+    <p><strong>Example 1.9:</strong></p>
+
+    <p><strong>a.</strong> If Kidist lives in Addis Ababa, then she lives in Ethiopia.</p>
+    <ul>
+        <li><strong>Converse:</strong> If Kidist lives in Ethiopia, then she lives in Addis Ababa.</li>
+        <li><strong>Contrapositive:</strong> If Kidist does not live in Ethiopia, then she does not live in Addis Ababa.</li>
+        <li><strong>Inverse:</strong> If Kidist does not live in Addis Ababa, then she does not live in Ethiopia.</li>
+    </ul>
+
+    <p><strong>b.</strong> If it is morning, then the sun is in the east.</p>
+    <ul>
+        <li><strong>Converse:</strong> If the sun is in the east, then it is morning.</li>
+        <li><strong>Contrapositive:</strong> If the sun is not in the east, then it is not morning.</li>
+        <li><strong>Inverse:</strong> If it is not morning, then the sun is not in the east.</li>
+    </ul>
+
+    <hr>
+
+    <h4>Laws of Logical Equivalence</h4>
+
+    <p>Propositions, under the relation of logical equivalence, satisfy various laws or identities, which are listed below.</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Law</th><th>Identity</th></tr>
+            <tr><td><strong>Idempotent Laws</strong></td><td>a. \(p \equiv p \lor p\)<br>b. \(p \equiv p \land p\)</td></tr>
+            <tr><td><strong>Commutative Laws</strong></td><td>a. \(p \land q \equiv q \land p\)<br>b. \(p \lor q \equiv q \lor p\)</td></tr>
+            <tr><td><strong>Associative Laws</strong></td><td>a. \(p \land (q \land r) \equiv (p \land q) \land r\)<br>b. \(p \lor (q \lor r) \equiv (p \lor q) \lor r\)</td></tr>
+            <tr><td><strong>Distributive Laws</strong></td><td>\(p \lor (q \land r) \equiv (p \lor q) \land (p \lor r)\)</td></tr>
+            <tr><td><strong>De Morgan's Laws</strong></td><td>a. \(\neg(p \land q) \equiv \neg p \lor \neg q\)<br>b. \(\neg(p \lor q) \equiv \neg p \land \neg q\)</td></tr>
+            <tr><td><strong>Law of Contrapositive</strong></td><td>\(p \Rightarrow q \equiv \neg q \Rightarrow \neg p\)</td></tr>
+            <tr><td><strong>Complement Law</strong></td><td>\(\neg(\neg p) \equiv p\)</td></tr>
+        </table>
+    </div>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 3)</h4>
+        <ul>
+            <li><strong>Tautology:</strong> Always True (e.g., \(p \vee \neg p\)).</li>
+            <li><strong>Contradiction:</strong> Always False (e.g., \(p \wedge \neg p\)).</li>
+            <li><strong>Logical Equivalence:</strong> Two propositions are equivalent if they have identical truth tables.</li>
+            <li><strong>Conditional Relatives:</strong> Converse (\(q \Rightarrow p\)), Inverse (\(\neg p \Rightarrow \neg q\)), Contrapositive (\(\neg q \Rightarrow \neg p\)).</li>
+            <li><strong>Key Equivalence:</strong> A conditional statement is <strong>equivalent</strong> to its contrapositive.</li>
+            <li><strong>Important Laws:</strong> De Morgan's Laws, Distributive Laws, Complement Law.</li>
+        </ul>
+    </div>
+</div>

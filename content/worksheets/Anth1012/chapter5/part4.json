@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 5,
+    "title": "Part 4 Practice: Theories of Ethnicity: Primordialism & Instrumentalism",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Which of the following is NOT one of the three major theories of ethnicity mentioned in the module?",
+            "options": [
+                "A) Primordialism.",
+                "B) Instrumentalism.",
+                "C) Social Constructivism.",
+                "D) Functionalism."
+            ],
+            "correct_answer": "D) Functionalism.",
+            "explanation": "The module states: 'Out of the debate, three important theoretical perspectives emerged. These are the Primordialist, Instrumentalist, and Constructivist approaches.' Functionalism is not one of them.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the core argument of Primordialism regarding ethnicity?",
+            "options": [
+                "A) Ethnicity is a rational choice made for political gain.",
+                "B) Ethnicity is fixed, natural, innate, and ascribed at birth based on deep ties of kinship and culture.",
+                "C) Ethnicity is a social construct that changes over time.",
+                "D) Ethnicity is irrelevant in modern society."
+            ],
+            "correct_answer": "B) Ethnicity is fixed, natural, innate, and ascribed at birth based on deep ties of kinship and culture.",
+            "explanation": "The module states: 'Primordialism is an \"objectivist or essentialist theory\" it argues, that \"ultimately there is some real, tangible, foundation for ethnic identification.\"'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "Which German Romantic philosopher is a precursor to Primordialist thinking?",
+            "options": [
+                "A) Karl Marx.",
+                "B) J.G. Herder.",
+                "C) Max Weber.",
+                "D) Fredrik Barth."
+            ],
+            "correct_answer": "B) J.G. Herder.",
+            "explanation": "The module states: 'The Primordialist thinking can be traced back to the German Romantic philosophers, such as J.G. Herder (1744–1803), who stated the primacy of emotions and language.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "According to Clifford Geertz, what are 'primordial attachments' based on?",
+            "options": [
+                "A) Political alliances.",
+                "B) Kinship, locality, and culture.",
+                "C) Economic interests.",
+                "D) Legal contracts."
+            ],
+            "correct_answer": "B) Kinship, locality, and culture.",
+            "explanation": "The module states: 'An anthropologist, Clifford Geertz (1973) systematized the primordial model. He articulated ethnicity as a natural phenomenon with its foundations in primordial ties deriving from kinship, locality, and culture.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What does Anthony D. Smith's 'myth-symbol complex' refer to?",
+            "options": [
+                "A) Economic theories of ethnicity.",
+                "B) The myths, memories, values, symbols, and styles that form the psychological and emotional core of ethnicity.",
+                "C) Political strategies for ethnic mobilization.",
+                "D) Biological traits of ethnic groups."
+            ],
+            "correct_answer": "B) The myths, memories, values, symbols, and styles that form the psychological and emotional core of ethnicity.",
+            "explanation": "The module states: 'According to him, the 'core' of ethnicity resides in the myths, memories, values, symbols, and the characteristic styles of particular historic configurations, i.e., what he calls 'a myth-symbol complex'.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the core argument of Instrumentalism regarding ethnicity?",
+            "options": [
+                "A) Ethnicity is fixed and unchangeable.",
+                "B) Ethnicity is situational, rational, and a tool for group mobilization to gain political and economic ends.",
+                "C) Ethnicity is purely biological.",
+                "D) Ethnicity does not exist."
+            ],
+            "correct_answer": "B) Ethnicity is situational, rational, and a tool for group mobilization to gain political and economic ends.",
+            "explanation": "The module states: 'The instrumentalist theorists view ethnicity as situationally defined, depending on rational calculations of advantage... an instrument of group mobilization for political and economic ends.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "According to Abner Cohen, what is the ethnic group primarily seen as?",
+            "options": [
+                "A) A fixed biological category.",
+                "B) A collectively organized strategy for the protection of economic and political interests.",
+                "C) A purely cultural community.",
+                "D) A random collection of individuals."
+            ],
+            "correct_answer": "B) A collectively organized strategy for the protection of economic and political interests.",
+            "explanation": "The module states: 'Abner Cohen (1974) placed a greater emphasis on the ethnic group as a collectively organized strategy for the protection of economic and political interests.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "How do instrumentalist theorists view political leaders in relation to ethnicity?",
+            "options": [
+                "A) Leaders have no role in ethnicity.",
+                "B) Leaders use and manipulate perceptions of ethnic identity to further their own ends and stay in power.",
+                "C) Leaders are always Primordialists.",
+                "D) Leaders are not involved in ethnicity."
+            ],
+            "correct_answer": "B) Leaders use and manipulate perceptions of ethnic identity to further their own ends and stay in power.",
+            "explanation": "The module states: 'In the contexts of modern states, leaders (political elites) use and manipulate perceptions of ethnic identity to further their own ends and stay in power.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What two claims does Primordialism make according to Anthony D. Smith?",
+            "options": [
+                "A) Ethnicity is political and economic.",
+                "B) Ethnicity and ethnic attachment are natural and innate, and they are ancient and perennial.",
+                "C) Ethnicity is situational and strategic.",
+                "D) Ethnicity is a modern invention."
+            ],
+            "correct_answer": "B) Ethnicity and ethnic attachment are natural and innate, and they are ancient and perennial.",
+            "explanation": "The module states: 'Smith concluded that, 'primordialism' makes two distinct claims. Firstly, ethnicity and ethnic attachment are \"natural and innate\"... and secondly, it is \"ancient and perennial\".'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "In Instrumentalism, what is ethnicity ultimately regarded as?",
+            "options": [
+                "A) A fixed status.",
+                "B) A rational and purposive association that can be changed, constructed, or manipulated for gain.",
+                "C) A biological category.",
+                "D) A purely emotional bond."
+            ],
+            "correct_answer": "B) A rational and purposive association that can be changed, constructed, or manipulated for gain.",
+            "explanation": "The module states: 'In extreme sense, the ethnic group should be regarded not as a community at all but as a rational and purposive association. By this, ethnicity is something that can be changed, constructed, or even manipulated to gain specific political and/or economic ends.'",
+            "difficulty": "hard"
+        }
+    ]
+}

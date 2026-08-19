@@ -1,0 +1,288 @@
+{
+    "course_code": "GeES1011",
+    "chapter_number": 2,
+    "week_number": 3,
+    "title": "VIP Chapter 2 Week 3: Rock and Mineral Resources",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Ethiopia's most economically important mineral is:",
+            "diagram": null,
+            "options": [
+                "A) Platinum",
+                "B) Gold",
+                "C) Tantalum",
+                "D) Potash"
+            ],
+            "correct_answer": "B) Gold",
+            "explanation": "Gold generates the most revenue among Ethiopian minerals.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "Yubdo in Wollega is famous for:",
+            "diagram": null,
+            "options": [
+                "A) Gold",
+                "B) Platinum",
+                "C) Tantalum",
+                "D) Gemstones"
+            ],
+            "correct_answer": "B) Platinum",
+            "explanation": "Yubdo = Ethiopia's platinum mining area.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "Kenticha mine is known for:",
+            "diagram": null,
+            "options": [
+                "A) Gold",
+                "B) Platinum",
+                "C) Tantalum",
+                "D) Marble"
+            ],
+            "correct_answer": "C) Tantalum",
+            "explanation": "Kenticha = tantalum for electronics.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "Potash from Dallol is used for:",
+            "diagram": null,
+            "options": [
+                "A) Electronics",
+                "B) Fertilizer",
+                "C) Jewelry",
+                "D) Fuel"
+            ],
+            "correct_answer": "B) Fertilizer",
+            "explanation": "Potash = potassium for fertilizer production.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Ethiopian opal is a:",
+            "diagram": null,
+            "options": [
+                "A) Metal",
+                "B) Gemstone",
+                "C) Rock",
+                "D) Fossil"
+            ],
+            "correct_answer": "B) Gemstone",
+            "explanation": "Ethiopian opal is a precious gemstone from Oromia/Tigray.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "The Western greenstone belt contains:",
+            "diagram": null,
+            "options": [
+                "A) Only marble",
+                "B) Gold and platinum",
+                "C) Only potash",
+                "D) Only clay"
+            ],
+            "correct_answer": "B) Gold and platinum",
+            "explanation": "Western belt = richest (gold + platinum).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "Tantalum is essential for:",
+            "diagram": null,
+            "options": [
+                "A) Building bridges",
+                "B) Mobile phones and capacitors",
+                "C) Making pottery",
+                "D) Producing cement"
+            ],
+            "correct_answer": "B) Mobile phones and capacitors",
+            "explanation": "Tantalum used in electronic capacitors.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "The northern greenstone belt is found in:",
+            "diagram": null,
+            "options": [
+                "A) Tigray",
+                "B) Gambella",
+                "C) Somali",
+                "D) Afar"
+            ],
+            "correct_answer": "A) Tigray",
+            "explanation": "Northern belt = Tigray (Shire, Aksum).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Clay in Ethiopia is used for:",
+            "diagram": null,
+            "options": [
+                "A) Jewelry",
+                "B) Pottery and bricks",
+                "C) Electronics",
+                "D) Fuel"
+            ],
+            "correct_answer": "B) Pottery and bricks",
+            "explanation": "Clay = ceramics, bricks, pottery.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Marble is classified as:",
+            "diagram": null,
+            "options": [
+                "A) Igneous rock",
+                "B) Metamorphic rock",
+                "C) Sedimentary rock",
+                "D) Mineral ore"
+            ],
+            "correct_answer": "B) Metamorphic rock",
+            "explanation": "Marble = metamorphosed limestone.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "Gypsum from Ogaden is used for:",
+            "diagram": null,
+            "options": [
+                "A) Electronics",
+                "B) Plaster and construction",
+                "C) Jewelry",
+                "D) Fertilizer"
+            ],
+            "correct_answer": "B) Plaster and construction",
+            "explanation": "Gypsum = plaster, drywall, construction.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "The SOUTHERN greenstone belt is found near:",
+            "diagram": null,
+            "options": [
+                "A) Adola and Kenticha",
+                "B) Shire and Aksum",
+                "C) Yubdo",
+                "D) Dallol"
+            ],
+            "correct_answer": "A) Adola and Kenticha",
+            "explanation": "Southern belt = Adola, Kenticha (gold, tantalum).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "Which mineral is RARE in Africa but found in Ethiopia?",
+            "diagram": null,
+            "options": [
+                "A) Gold",
+                "B) Platinum",
+                "C) Iron",
+                "D) Copper"
+            ],
+            "correct_answer": "B) Platinum",
+            "explanation": "Platinum is rare; Ethiopia has significant deposits.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "Construction stones in Ethiopia are used for:",
+            "diagram": null,
+            "options": [
+                "A) Jewelry",
+                "B) Roads, buildings, dams",
+                "C) Electronics",
+                "D) Fertilizer"
+            ],
+            "correct_answer": "B) Roads, buildings, dams",
+            "explanation": "Construction stones = infrastructure.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "The RICHEST greenstone belt in Ethiopia is:",
+            "diagram": null,
+            "options": [
+                "A) Northern",
+                "B) Southern",
+                "C) Western/South-Western",
+                "D) Eastern"
+            ],
+            "correct_answer": "C) Western/South-Western",
+            "explanation": "Western belt = most mineral-rich.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 16,
+            "text": "Tantalum is found in which Ethiopian region?",
+            "diagram": null,
+            "options": [
+                "A) Western",
+                "B) Southern (Adola)",
+                "C) Northern",
+                "D) Eastern"
+            ],
+            "correct_answer": "B) Southern (Adola)",
+            "explanation": "Tantalum in Kenticha, Adola area.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "Ethiopian opal is found in:",
+            "diagram": null,
+            "options": [
+                "A) Afar",
+                "B) Oromia (Wollo) and Tigray",
+                "C) Gambella",
+                "D) Ogaden"
+            ],
+            "correct_answer": "B) Oromia (Wollo) and Tigray",
+            "explanation": "Opal deposits in Wollo and Tigray.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "Which mineral is used in CATALYTIC CONVERTERS?",
+            "diagram": null,
+            "options": [
+                "A) Gold",
+                "B) Platinum",
+                "C) Tantalum",
+                "D) Marble"
+            ],
+            "correct_answer": "B) Platinum",
+            "explanation": "Platinum = catalytic converters in vehicles.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "Gold is found in ALL EXCEPT which Ethiopian region?",
+            "diagram": null,
+            "options": [
+                "A) Wollega",
+                "B) Adola",
+                "C) Tigray",
+                "D) Afar"
+            ],
+            "correct_answer": "D) Afar",
+            "explanation": "Gold in Wollega, Adola, Tigray — NOT Afar (Afar has potash/salt).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "The mineral sector in Ethiopia is:",
+            "diagram": null,
+            "options": [
+                "A) Fully developed",
+                "B) Developing (underutilized potential)",
+                "C) Non-existent",
+                "D) Declining"
+            ],
+            "correct_answer": "B) Developing (underutilized potential)",
+            "explanation": "Ethiopia's mineral sector is developing with vast untapped potential.",
+            "difficulty": "hard"
+        }
+    ]
+}

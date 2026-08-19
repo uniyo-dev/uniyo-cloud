@@ -1,0 +1,288 @@
+{
+    "course_code": "GeES1011",
+    "chapter_number": 2,
+    "week_number": 1,
+    "title": "VIP Chapter 2 Week 1: Geology of Ethiopia and the Horn",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Which is an ENDOGENIC process?",
+            "diagram": null,
+            "options": [
+                "A) Wind erosion",
+                "B) Volcanism",
+                "C) River deposition",
+                "D) Glacial erosion"
+            ],
+            "correct_answer": "B) Volcanism",
+            "explanation": "Volcanism comes from INSIDE the Earth (endogenic). Others are exogenic.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "Erta Ale volcano in Ethiopia is which type of feature?",
+            "diagram": null,
+            "options": [
+                "A) Exogenic",
+                "B) Endogenic",
+                "C) Atmospheric",
+                "D) Biological"
+            ],
+            "correct_answer": "B) Endogenic",
+            "explanation": "Volcanoes are created by ENDOGENIC forces (magma from within Earth).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "The Blue Nile Gorge was carved by which process?",
+            "diagram": null,
+            "options": [
+                "A) Faulting",
+                "B) Water erosion (exogenic)",
+                "C) Volcanism",
+                "D) Uplift"
+            ],
+            "correct_answer": "B) Water erosion (exogenic)",
+            "explanation": "The Blue Nile River eroded the gorge over millions of years (exogenic process).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "Which dating method gives EXACT age?",
+            "diagram": null,
+            "options": [
+                "A) Superposition",
+                "B) Absolute dating",
+                "C) Fossil correlation",
+                "D) Cross-cutting"
+            ],
+            "correct_answer": "B) Absolute dating",
+            "explanation": "Absolute dating (radiometric) gives exact age in years. Others are relative.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Potassium-Argon dating is BEST for:",
+            "diagram": null,
+            "options": [
+                "A) Recent organic materials",
+                "B) Ancient volcanic rocks",
+                "C) Living organisms",
+                "D) Water samples"
+            ],
+            "correct_answer": "B) Ancient volcanic rocks",
+            "explanation": "K-Ar dating works on volcanic rocks millions of years old.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "The principle of CROSS-CUTTING says:",
+            "diagram": null,
+            "options": [
+                "A) Faults are OLDER than rocks they cut",
+                "B) Faults are YOUNGER than rocks they cut",
+                "C) All rocks are same age",
+                "D) Faults don't affect dating"
+            ],
+            "correct_answer": "B) Faults are YOUNGER than rocks they cut",
+            "explanation": "A fault/intrusion must be younger than the rocks it cuts through.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "Which era is known for DINOSAURS?",
+            "diagram": null,
+            "options": [
+                "A) Precambrian",
+                "B) Paleozoic",
+                "C) Mesozoic",
+                "D) Cenozoic"
+            ],
+            "correct_answer": "C) Mesozoic",
+            "explanation": "Mesozoic (252-66 million years ago) = Age of Dinosaurs.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "The Cenozoic era is known as the age of:",
+            "diagram": null,
+            "options": [
+                "A) Fish",
+                "B) Dinosaurs",
+                "C) Mammals",
+                "D) First life"
+            ],
+            "correct_answer": "C) Mammals",
+            "explanation": "Cenozoic = Age of Mammals (66 million years ago to present).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Ethiopian Rift Valley is evidence of:",
+            "diagram": null,
+            "options": [
+                "A) Exogenic erosion",
+                "B) Endogenic faulting",
+                "C) Glacial activity",
+                "D) Wind deposition"
+            ],
+            "correct_answer": "B) Endogenic faulting",
+            "explanation": "Rift Valley = tectonic forces pulling crust apart (endogenic).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Weathering breaks rocks through:",
+            "diagram": null,
+            "options": [
+                "A) Internal heat",
+                "B) Temperature changes and chemical reactions (external)",
+                "C) Volcanic activity",
+                "D) Tectonic uplift"
+            ],
+            "correct_answer": "B) Temperature changes and chemical reactions (external)",
+            "explanation": "Weathering = exogenic process from atmosphere/water.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "Mass wasting is caused by:",
+            "diagram": null,
+            "options": [
+                "A) Wind",
+                "B) Gravity",
+                "C) Tectonic forces",
+                "D) Volcanism"
+            ],
+            "correct_answer": "B) Gravity",
+            "explanation": "Mass wasting = downslope movement of rocks/soil due to GRAVITY.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "Carbon-14 dating CANNOT date:",
+            "diagram": null,
+            "options": [
+                "A) Wood from ancient shipwreck",
+                "B) Dinosaur bones (millions of years old)",
+                "C) Egyptian mummy",
+                "D) Plant remains"
+            ],
+            "correct_answer": "B) Dinosaur bones (millions of years old)",
+            "explanation": "Carbon-14 only works up to ~50,000 years. Dinosaurs are millions of years old.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "Which is the LONGEST geological era?",
+            "diagram": null,
+            "options": [
+                "A) Cenozoic",
+                "B) Mesozoic",
+                "C) Paleozoic",
+                "D) Precambrian"
+            ],
+            "correct_answer": "D) Precambrian",
+            "explanation": "Precambrian = 4.6 billion to 541 million years ago (~88% of Earth history).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "Ethiopia's highlands were formed by:",
+            "diagram": null,
+            "options": [
+                "A) Erosion",
+                "B) Uplift (endogenic)",
+                "C) Deposition",
+                "D) Glaciation"
+            ],
+            "correct_answer": "B) Uplift (endogenic)",
+            "explanation": "Highlands = result of tectonic UPLIFT (endogenic).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "Relative dating uses ALL EXCEPT:",
+            "diagram": null,
+            "options": [
+                "A) Superposition",
+                "B) Cross-cutting relationships",
+                "C) Radiometric decay",
+                "D) Fossil correlation"
+            ],
+            "correct_answer": "C) Radiometric decay",
+            "explanation": "Radiometric decay = ABSOLUTE dating. Others are relative methods.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 16,
+            "text": "Glacial erosion creates:",
+            "diagram": null,
+            "options": [
+                "A) V-shaped valleys",
+                "B) U-shaped valleys",
+                "C) Sand dunes",
+                "D) Volcanoes"
+            ],
+            "correct_answer": "B) U-shaped valleys",
+            "explanation": "Glaciers carve U-shaped valleys (rivers create V-shaped).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "Wind erosion is most effective in:",
+            "diagram": null,
+            "options": [
+                "A) Rainforests",
+                "B) Deserts (dry areas)",
+                "C) Polar ice caps",
+                "D) Coastal areas"
+            ],
+            "correct_answer": "B) Deserts (dry areas)",
+            "explanation": "Wind erosion works best in DRY areas with loose sand and little vegetation.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "The Dallol depression in Ethiopia is known for:",
+            "diagram": null,
+            "options": [
+                "A) Glacial features",
+                "B) Volcanic and hydrothermal activity",
+                "C) River erosion",
+                "D) Wind erosion"
+            ],
+            "correct_answer": "B) Volcanic and hydrothermal activity",
+            "explanation": "Dallol = volcanic area with hot springs, mineral deposits (endogenic).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "Which process BUILDS UP the Earth's surface?",
+            "diagram": null,
+            "options": [
+                "A) Erosion",
+                "B) Weathering",
+                "C) Uplift",
+                "D) Deposition by wind"
+            ],
+            "correct_answer": "C) Uplift",
+            "explanation": "Uplift (endogenic) RAISES land. Erosion/weathering wear it down.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "The study of rock layers (stratigraphy) is used for:",
+            "diagram": null,
+            "options": [
+                "A) Absolute dating only",
+                "B) Relative dating (ordering events)",
+                "C) Weather prediction",
+                "D) Measuring rainfall"
+            ],
+            "correct_answer": "B) Relative dating (ordering events)",
+            "explanation": "Stratigraphy studies rock layers to determine relative ages.",
+            "difficulty": "hard"
+        }
+    ]
+}

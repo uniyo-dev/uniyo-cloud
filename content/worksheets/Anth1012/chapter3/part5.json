@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 3,
+    "title": "Part 5 Practice: Family, Kinship, Descent, Culture Areas & Summary",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What are the two fundamentally different types of family structure identified by cultural anthropologists?",
+            "options": [
+                "A) The nuclear family and the extended family.",
+                "B) The matrilineal and patrilineal family.",
+                "C) The monogamous and polygamous family.",
+                "D) The rural and urban family."
+            ],
+            "correct_answer": "A) The nuclear family and the extended family.",
+            "explanation": "The module states: 'Cultural anthropologists have identified two fundamentally different types of family structure--the nuclear family and the extended family.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is a 'family of orientation'?",
+            "options": [
+                "A) The family one establishes through marriage.",
+                "B) The family in which one is born and reared.",
+                "C) The extended family.",
+                "D) The family of one's spouse."
+            ],
+            "correct_answer": "B) The family in which one is born and reared.",
+            "explanation": "The module states: 'The family in which he was born and reared is called 'family of orientation'.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What percentage of societies listed in Murdock's Ethnographic Atlas have some type of extended family organization?",
+            "options": [
+                "A) 82%",
+                "B) 46%",
+                "C) 14%",
+                "D) 6%"
+            ],
+            "correct_answer": "B) 46%",
+            "explanation": "The module states: 'According to Murdock's Ethnographic Atlas (1967), approximately 46 percent of the 862 societies listed have some type of extended family organization.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the economic function of marriage and family?",
+            "options": [
+                "A) To regulate sexual relations.",
+                "B) To bring economic cooperation between men and women and ensure survival.",
+                "C) To perpetuate the family line.",
+                "D) To socialize children."
+            ],
+            "correct_answer": "B) To bring economic cooperation between men and women and ensure survival.",
+            "explanation": "The module states: 'Marriage brings economic co-operation between men and women and ensures survival of individuals in a society. With the birth of off-springs, the division of labor based on sex and generation come into play.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What are the three ways kinship can be created?",
+            "options": [
+                "A) Through blood, marriage, and adoption.",
+                "B) Through money, power, and status.",
+                "C) Through religion, language, and ethnicity.",
+                "D) Through education, work, and friendship."
+            ],
+            "correct_answer": "A) Through blood, marriage, and adoption.",
+            "explanation": "The module states: 'Kinship is universally found in all societies, and it can be created through three ways: blood, marriage, and through adoption/fostering/good-parenthood.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is consanguineous kinship?",
+            "options": [
+                "A) Kinship based on marriage.",
+                "B) Kinship based on blood ties.",
+                "C) Kinship based on adoption.",
+                "D) Kinship based on friendship."
+            ],
+            "correct_answer": "B) Kinship based on blood ties.",
+            "explanation": "The module states: 'The relationship based on blood ties is called \"consanguineous kinship\", and the relatives of this kind are called 'consanguineous kin'.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the rule of patrilineal descent?",
+            "options": [
+                "A) Descent traced solely through the female line.",
+                "B) Descent traced solely through the male line, with inheritance passing through sons.",
+                "C) Descent traced through either the male or female line.",
+                "D) Descent traced through adoption."
+            ],
+            "correct_answer": "B) Descent traced solely through the male line, with inheritance passing through sons.",
+            "explanation": "The module states: 'When descent is traced solely through the male line, it is called patrilineal descent. A man's sons and daughters all belong to the same descent group by birth, but it is only the sons who continue the affiliation. Succession and inheritance pass through the male line.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Which Ethiopian culture area is associated with the Gurage, Sidama, and Gedeo areas?",
+            "options": [
+                "A) Plough culture area.",
+                "B) Enset culture area.",
+                "C) Pastoral culture area.",
+                "D) Urban culture area."
+            ],
+            "correct_answer": "B) Enset culture area.",
+            "explanation": "The module states: 'Enset cultivating regions of the present-day SNNPRS such as the Gurage, Sidama, and Gedeo areas constitute enset culture area.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What is the primary characteristic of the pastoral culture area in Ethiopia?",
+            "options": [
+                "A) Highland farming using ploughs.",
+                "B) Enset cultivation as a staple diet.",
+                "C) Mobility of people and herds, relying on cattle for a living.",
+                "D) Urban industrial life."
+            ],
+            "correct_answer": "C) Mobility of people and herds, relying on cattle for a living.",
+            "explanation": "The module states: 'As opposed to the above cases, inhabitants of the pastoral culture area rely significantly on their herds and cattle for a living. Mobility of people and herds is a major characteristic feature of the people occupying the pastoral culture area.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "According to the unit summary, what are the mechanisms of cultural change?",
+            "options": [
+                "A) Only diffusion.",
+                "B) Diffusion, acculturation, independent invention, and globalization.",
+                "C) Only globalization.",
+                "D) Only invention."
+            ],
+            "correct_answer": "B) Diffusion, acculturation, independent invention, and globalization.",
+            "explanation": "The module states: 'Mechanisms of cultural change include diffusion, acculturation, and independent invention. In addition, globalization describes a series of processes that promote change in our world.'",
+            "difficulty": "hard"
+        }
+    ]
+}

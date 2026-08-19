@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 3,
+    "title": "Part 1 Practice: What is Artificial Intelligence?",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What does the word 'Artificial' mean in the context of Artificial Intelligence?",
+            "options": [
+                "A) Natural and organic.",
+                "B) Man-made or created by humans.",
+                "C) Something that is alive.",
+                "D) A type of computer hardware."
+            ],
+            "correct_answer": "B) Man-made or created by humans.",
+            "explanation": "The module defines: 'Artificial defines \"man-made,\"' meaning it is not natural but created by humans.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the formal definition of Artificial Intelligence (AI) according to the module?",
+            "options": [
+                "A) The study of computer hardware.",
+                "B) The branch of computer science by which we can create intelligent machines that can behave, think, and make decisions like humans.",
+                "C) The process of manually typing data into a computer.",
+                "D) A type of computer virus."
+            ],
+            "correct_answer": "B) The branch of computer science by which we can create intelligent machines that can behave, think, and make decisions like humans.",
+            "explanation": "The module states: 'Artificial Intelligence (AI) is the branch of computer science by which we can create intelligent machines which can behave like a human, think like humans, and able to make decisions.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What are the two primary reasons we need Artificial Intelligence according to the module?",
+            "options": [
+                "A) To create video games and to build faster computers.",
+                "B) To create expert systems and to help machines find solutions to complex problems.",
+                "C) To replace all human workers and to save electricity.",
+                "D) To print documents and to scan images."
+            ],
+            "correct_answer": "B) To create expert systems and to help machines find solutions to complex problems.",
+            "explanation": "The module lists: '1. To create expert systems that exhibit intelligent behavior... 2. Helping machines find solutions to complex problems like humans do.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "Which of the following is NOT listed as a goal of Artificial Intelligence?",
+            "options": [
+                "A) Replicate human intelligence.",
+                "B) Solve knowledge-intensive tasks.",
+                "C) Create an intelligent connection between perception and action.",
+                "D) Replace all human emotions with machine logic."
+            ],
+            "correct_answer": "D) Replace all human emotions with machine logic.",
+            "explanation": "The module lists 5 goals: Replicate intelligence, Solve knowledge-intensive tasks, Connect perception to action, Perform tasks requiring human intelligence, and Create self-learning systems. Replacing emotions is not a goal; in fact, it is listed as a disadvantage.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "To create AI, which disciplines are required according to the module?",
+            "options": [
+                "A) Only Computer Science.",
+                "B) Only Mathematics and Statistics.",
+                "C) Mathematics, Biology, Psychology, Sociology, Computer Science, Neurons Study, and Statistics.",
+                "D) Only Biology and Psychology."
+            ],
+            "correct_answer": "C) Mathematics, Biology, Psychology, Sociology, Computer Science, Neurons Study, and Statistics.",
+            "explanation": "The module lists: 'Mathematics, Biology, Psychology, Sociology, Computer Science, Neurons Study, Statistics' as the disciplines that contribute to AI.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the goal of 'Building a machine which can perform tasks that requires human intelligence'?",
+            "options": [
+                "A) To make machines that can prove theorems, play chess, plan surgeries, and drive cars.",
+                "B) To make machines that can only do simple math.",
+                "C) To make machines that replace teachers.",
+                "D) To make machines that can eat and sleep like humans."
+            ],
+            "correct_answer": "A) To make machines that can prove theorems, play chess, plan surgeries, and drive cars.",
+            "explanation": "The module lists examples: 'Proving a theorem, Playing chess, Plan some surgical operation, Driving a car in traffic.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "Which of the following is an advantage of Artificial Intelligence?",
+            "options": [
+                "A) High cost and expensive maintenance.",
+                "B) High accuracy with fewer errors and high-speed decision-making.",
+                "C) Lack of creativity.",
+                "D) No emotional attachment with humans."
+            ],
+            "correct_answer": "B) High accuracy with fewer errors and high-speed decision-making.",
+            "explanation": "The module lists advantages: 'High Accuracy with fewer errors' and 'High-Speed: AI systems can be of very high-speed and fast-decision making.' Options A, C, and D are disadvantages.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "How is AI useful in 'risky areas'?",
+            "options": [
+                "A) It replaces teachers in dangerous schools.",
+                "B) It can be used to defuse bombs, explore the ocean floor, or enter dangerous environments where human life is at risk.",
+                "C) It is used to cook food in kitchens.",
+                "D) It is used to clean office buildings."
+            ],
+            "correct_answer": "B) It can be used to defuse bombs, explore the ocean floor, or enter dangerous environments where human life is at risk.",
+            "explanation": "The module states: 'AI machines can be helpful in situations such as defusing a bomb, exploring the ocean floor, where to employ a human can be risky.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "What is a major disadvantage of AI regarding 'thinking out of the box'?",
+            "options": [
+                "A) AI machines can think creatively and imagine new ideas.",
+                "B) AI machines will only do the work for which they are trained or programmed; they cannot work out of the box.",
+                "C) AI machines can replace all human emotions.",
+                "D) AI machines are too slow to make decisions."
+            ],
+            "correct_answer": "B) AI machines will only do the work for which they are trained or programmed; they cannot work out of the box.",
+            "explanation": "The module states: 'Can't think out of the box: Even we are making smarter machines with AI, but still they cannot work out of the box, as the robot will only do that work for which they are trained, or programmed.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Which of the following is NOT a disadvantage of Artificial Intelligence listed in the module?",
+            "options": [
+                "A) High Cost.",
+                "B) No feelings and emotions.",
+                "C) Increase dependence on machines.",
+                "D) High reliability and ability to perform the same action multiple times with high accuracy."
+            ],
+            "correct_answer": "D) High reliability and ability to perform the same action multiple times with high accuracy.",
+            "explanation": "The module lists 'High reliability' as an advantage, not a disadvantage. Disadvantages include: High cost, No feelings/emotions, Increased dependency, No original creativity, and Can't think out of the box.",
+            "difficulty": "hard"
+        }
+    ]
+}

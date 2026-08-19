@@ -1,0 +1,857 @@
+/* ============================================
+   UNIYO LMS - Global Styles & Design Tokens
+   ============================================ */
+
+:root {
+    --bg-primary: #0B0F19;
+    --bg-surface: #111827;
+    --bg-elevated: #1A2332;
+    --border-glass: rgba(255, 255, 255, 0.08);
+    --brand-violet: #6D28D9;
+    --brand-violet-hover: #5B21B6;
+    --brand-gold: #F59E0B;
+    --brand-pink: #EC4899;
+    --brand-teal: #14B8A6;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --success: #14B8A6;
+    --warning: #F59E0B;
+    --danger: #EC4899;
+    --info: #38BDF8;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 9999px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+a {
+    color: var(--brand-violet);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--brand-violet-hover);
+}
+
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.flash-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10001;
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    animation: slideDown 0.3s ease;
+    max-width: 90%;
+    text-align: center;
+}
+
+.flash-success { background: var(--success); color: white; }
+.flash-danger { background: var(--danger); color: white; }
+.flash-warning { background: var(--warning); color: #0B0F19; }
+.flash-info { background: var(--info); color: #0B0F19; }
+
+.flash-close { margin-left: 12px; font-weight: 700; }
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--radius-md);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary { background: var(--brand-violet); color: white; }
+.btn-primary:hover { background: var(--brand-violet-hover); transform: translateY(-2px); }
+
+.btn-gold { background: var(--brand-gold); color: #0B0F19; }
+.btn-gold:hover { background: #D97706; transform: translateY(-2px); }
+
+.btn-outline { background: transparent; border: 2px solid var(--brand-violet); color: var(--brand-violet); }
+.btn-outline:hover { background: var(--brand-violet); color: white; }
+
+.btn-danger { background: var(--danger); color: white; }
+.btn-danger:hover { background: #D61F69; }
+
+.btn-success { background: var(--success); color: white; }
+
+.btn-block { width: 100%; }
+
+.form-group {
+    margin-bottom: var(--space-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--border-glass);
+    border-radius: var(--radius-md);
+    background: var(--bg-surface);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--brand-violet);
+}
+
+.form-group small {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-md);
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translate(-50%, -20px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.text-center { text-align: center; }
+.text-muted { color: var(--text-muted); }
+.mt-1 { margin-top: var(--space-sm); }
+.mt-2 { margin-top: var(--space-md); }
+.mt-3 { margin-top: var(--space-lg); }
+.mb-1 { margin-bottom: var(--space-sm); }
+.mb-2 { margin-bottom: var(--space-md); }
+.mb-3 { margin-bottom: var(--space-lg); }
+.hidden { display: none !important; }
+
+/* ============================================
+   LIGHT MODE STYLES
+   ============================================ */
+
+body.light-mode {
+    --bg-primary: #F8FAFC;
+    --bg-surface: #FFFFFF;
+    --bg-elevated: #F1F5F9;
+    --border-glass: rgba(0, 0, 0, 0.08);
+    --text-primary: #0B0F19;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+    background-color: #F8FAFC;
+    color: #0B0F19;
+}
+
+/* Override specific components for light mode */
+body.light-mode .auth-container {
+    background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 50%, #F8FAFC 100%);
+}
+
+body.light-mode .auth-card,
+body.light-mode .dashboard-header,
+body.light-mode .course-card,
+body.light-mode .payment-container,
+body.light-mode .settings-section,
+body.light-mode .settings-header,
+body.light-mode .lesson-content,
+body.light-mode .progress-tracker,
+body.light-mode .self-check-section,
+body.light-mode .chapter-nav,
+body.light-mode .worksheet-header,
+body.light-mode .question-card,
+body.light-mode .admin-header,
+body.light-mode .admin-section,
+body.light-mode .stat-card,
+body.light-mode .payment-card {
+    background: #FFFFFF;
+    border-color: rgba(0, 0, 0, 0.08);
+    color: #0B0F19;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4 {
+    color: #0B0F19;
+}
+
+body.light-mode p,
+body.light-mode .text-muted,
+body.light-mode .lesson-body {
+    color: #475569;
+}
+
+body.light-mode .form-group input,
+body.light-mode .form-group select,
+body.light-mode .form-group textarea {
+    background: #F8FAFC;
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #0B0F19;
+}
+
+body.light-mode .form-section {
+    background: #F1F5F9;
+}
+
+body.light-mode .course-code {
+    color: #6D28D9;
+}
+
+body.light-mode .question-text {
+    color: #334155;
+}
+
+body.light-mode .option-btn {
+    background: #F8FAFC;
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #0B0F19;
+}
+
+body.light-mode .option-btn:hover {
+    background: rgba(109, 40, 217, 0.1);
+    border-color: #6D28D9;
+}
+
+body.light-mode .explanation-content {
+    color: #475569;
+}
+
+body.light-mode .highlight-box {
+    background: rgba(109, 40, 217, 0.1);
+}
+
+body.light-mode .cheat-notes {
+    background: rgba(245, 158, 11, 0.1);
+}
+
+body.light-mode .admin-table th {
+    background: #F1F5F9;
+    color: #475569;
+}
+
+body.light-mode .admin-table td {
+    color: #334155;
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .lesson-watermark {
+    color: rgba(0, 0, 0, 0.03);
+}
+
+body.light-mode .stat-value {
+    color: #0B0F19;
+}
+
+body.light-mode .stat-label {
+    color: #64748B;
+}
+
+/* ============================================
+   COMPLETE LIGHT MODE - ALL PAGES
+   ============================================ */
+
+body.light-mode,
+html.light-mode-active body {
+    --bg-primary: #F8FAFC !important;
+    --bg-surface: #FFFFFF !important;
+    --bg-elevated: #F1F5F9 !important;
+    --border-glass: rgba(0, 0, 0, 0.08) !important;
+    --text-primary: #0B0F19 !important;
+    --text-secondary: #475569 !important;
+    --text-muted: #64748B !important;
+    background-color: #F8FAFC !important;
+    color: #0B0F19 !important;
+}
+
+/* Headings */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode .course-title,
+body.light-mode .lesson-meta h1,
+body.light-mode .admin-header h1,
+body.light-mode .settings-header h1,
+body.light-mode .worksheet-header h1,
+body.light-mode .vip-header h1 {
+    color: #0B0F19 !important;
+}
+
+/* Cards and containers */
+body.light-mode .course-card,
+body.light-mode .question-card,
+body.light-mode .lesson-content,
+body.light-mode .admin-section,
+body.light-mode .admin-header,
+body.light-mode .settings-section,
+body.light-mode .settings-header,
+body.light-mode .payment-container,
+body.light-mode .dashboard-header,
+body.light-mode .worksheet-header,
+body.light-mode .progress-tracker,
+body.light-mode .self-check-section,
+body.light-mode .chapter-nav,
+body.light-mode .stat-card,
+body.light-mode .payment-card,
+body.light-mode .announcement-card,
+body.light-mode .auth-card {
+    background: #FFFFFF !important;
+    border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Text */
+body.light-mode p,
+body.light-mode .text-muted,
+body.light-mode .lesson-body,
+body.light-mode .question-text,
+body.light-mode .course-details,
+body.light-mode .worksheet-meta,
+body.light-mode .leaderboard-info small {
+    color: #475569 !important;
+}
+
+/* Forms */
+body.light-mode .form-group input,
+body.light-mode .form-group select,
+body.light-mode .form-group textarea {
+    background: #F8FAFC !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    color: #0B0F19 !important;
+}
+
+body.light-mode .form-section {
+    background: #F1F5F9 !important;
+}
+
+/* Options */
+body.light-mode .option-btn {
+    background: #F8FAFC !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    color: #0B0F19 !important;
+}
+
+/* Tables */
+body.light-mode .admin-table th {
+    background: #F1F5F9 !important;
+    color: #475569 !important;
+}
+
+body.light-mode .admin-table td {
+    color: #334155 !important;
+    border-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Watermark */
+body.light-mode .lesson-watermark {
+    color: rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Buttons that need dark text on light background */
+body.light-mode .btn-icon {
+    background: #F1F5F9 !important;
+}
+
+/* ============================================
+   LIGHT MODE FOR DIAGRAMS, TABLES, MODELS
+   ============================================ */
+
+/* SVG Diagrams - Change dark background to light */
+body.light-mode .diagram-container svg rect[fill="#111827"],
+body.light-mode .question-diagram svg rect[fill="#111827"] {
+    fill: #FFFFFF !important;
+    stroke: #E2E8F0 !important;
+}
+
+/* SVG Text - Change white text to dark text */
+body.light-mode .diagram-container svg text[fill="#f8fafc"],
+body.light-mode .question-diagram svg text[fill="#f8fafc"],
+body.light-mode .diagram-container svg text[fill="#F8FAFC"],
+body.light-mode .question-diagram svg text[fill="#F8FAFC"] {
+    fill: #0B0F19 !important;
+}
+
+/* SVG Text - Change gray text to darker */
+body.light-mode .diagram-container svg text[fill="#94a3b8"],
+body.light-mode .question-diagram svg text[fill="#94a3b8"] {
+    fill: #475569 !important;
+}
+
+/* SVG Sub-elements - Dark backgrounds */
+body.light-mode .diagram-container svg rect[fill="#1a2332"],
+body.light-mode .question-diagram svg rect[fill="#1a2332"] {
+    fill: #F1F5F9 !important;
+    stroke: #CBD5E1 !important;
+}
+
+/* Tables */
+body.light-mode .table-container table {
+    background: #FFFFFF;
+    border-color: #E2E8F0;
+}
+
+body.light-mode .table-container th {
+    background: #F1F5F9 !important;
+    color: #0B0F19 !important;
+    border-color: #E2E8F0;
+}
+
+body.light-mode .table-container td {
+    color: #334155 !important;
+    border-color: #E2E8F0;
+}
+
+body.light-mode .table-container tr:hover {
+    background: #F8FAFC;
+}
+
+/* Diagram container backgrounds */
+body.light-mode .diagram-container {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+/* ============================================
+   DEFAULT DARK THEME - GUARANTEED
+   ============================================ */
+
+/* Body default is dark */
+body {
+    background-color: #0B0F19;
+    color: #F8FAFC;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+/* Light mode */
+body.light-mode {
+    background-color: #F8FAFC;
+    color: #0B0F19;
+}
+
+/* Main content */
+.main-content {
+    min-height: 100vh;
+}
+
+body.light-mode .main-content {
+    background-color: #F8FAFC;
+}
+
+/* ============================================
+   DEFAULT DARK THEME - GUARANTEED
+   ============================================ */
+
+/* Body default is dark */
+body {
+    background-color: #0B0F19;
+    color: #F8FAFC;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+/* Light mode */
+body.light-mode {
+    background-color: #F8FAFC;
+    color: #0B0F19;
+}
+
+/* Main content */
+.main-content {
+    min-height: 100vh;
+}
+
+body.light-mode .main-content {
+    background-color: #F8FAFC;
+}
+
+/* ============================================
+   COMPLETE GLOBAL LIGHT MODE - EVERYTHING
+   ============================================ */
+
+body.light-mode {
+    background-color: #F8FAFC !important;
+    color: #0B0F19 !important;
+}
+
+/* All containers */
+body.light-mode .dashboard-container,
+body.light-mode .lesson-container,
+body.light-mode .worksheet-container,
+body.light-mode .vip-container,
+body.light-mode .vip-take-container,
+body.light-mode .vip-exam-container,
+body.light-mode .settings-container,
+body.light-mode .certificates-container,
+body.light-mode .certificate-view-container,
+body.light-mode .admin-container {
+    background-color: #F8FAFC !important;
+}
+
+/* All cards and sections */
+body.light-mode .course-card,
+body.light-mode .question-card,
+body.light-mode .vip-question-card,
+body.light-mode .lesson-content,
+body.light-mode .admin-section,
+body.light-mode .admin-header,
+body.light-mode .settings-section,
+body.light-mode .settings-header,
+body.light-mode .payment-container,
+body.light-mode .payment-card,
+body.light-mode .payment-method-card,
+body.light-mode .dashboard-header,
+body.light-mode .worksheet-header,
+body.light-mode .vip-header,
+body.light-mode .progress-tracker,
+body.light-mode .self-check-section,
+body.light-mode .chapter-nav,
+body.light-mode .stat-card,
+body.light-mode .announcement-card,
+body.light-mode .auth-card,
+body.light-mode .notification-item,
+body.light-mode .leaderboard-entry,
+body.light-mode .past-vip-card,
+body.light-mode .upcoming-vip-card,
+body.light-mode .active-vip-card,
+body.light-mode .worksheet-link-section,
+body.light-mode .vip-progress-section {
+    background-color: #FFFFFF !important;
+    border-color: #E2E8F0 !important;
+    color: #0B0F19 !important;
+}
+
+/* All headings */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode .course-title,
+body.light-mode .lesson-meta h1,
+body.light-mode .admin-header h1,
+body.light-mode .settings-header h1,
+body.light-mode .worksheet-header h1,
+body.light-mode .vip-header h1,
+body.light-mode .vip-exam-header h1,
+body.light-mode .question-number,
+body.light-mode .vip-question-number {
+    color: #0B0F19 !important;
+}
+
+/* All body text */
+body.light-mode p,
+body.light-mode .lesson-body,
+body.light-mode .question-text,
+body.light-mode .vip-question-text,
+body.light-mode .course-details,
+body.light-mode .worksheet-meta,
+body.light-mode .text-muted,
+body.light-mode .leaderboard-info small,
+body.light-mode .progress-info,
+body.light-mode .explanation-content {
+    color: #334155 !important;
+}
+
+/* Strong and emphasis */
+body.light-mode .lesson-body strong,
+body.light-mode .question-text strong {
+    color: #D97706 !important;
+}
+
+body.light-mode .lesson-body em {
+    color: #0284C7 !important;
+}
+
+/* Forms */
+body.light-mode .form-group input,
+body.light-mode .form-group select,
+body.light-mode .form-group textarea,
+body.light-mode .vip-schedule-form input,
+body.light-mode .vip-schedule-form select {
+    background-color: #F8FAFC !important;
+    border-color: #CBD5E1 !important;
+    color: #0B0F19 !important;
+}
+
+body.light-mode .form-section {
+    background-color: #F1F5F9 !important;
+}
+
+/* Options */
+body.light-mode .option-btn,
+body.light-mode .vip-option-btn {
+    background-color: #F8FAFC !important;
+    border-color: #CBD5E1 !important;
+    color: #0B0F19 !important;
+}
+
+body.light-mode .option-btn:hover,
+body.light-mode .vip-option-btn:hover {
+    background-color: rgba(109, 40, 217, 0.05) !important;
+    border-color: #6D28D9 !important;
+}
+
+body.light-mode .option-btn.selected,
+body.light-mode .vip-option-btn.selected {
+    background-color: rgba(245, 158, 11, 0.1) !important;
+    border-color: #F59E0B !important;
+}
+
+/* Tables */
+body.light-mode .admin-table th,
+body.light-mode .content-table th,
+body.light-mode .table-container th {
+    background-color: #F1F5F9 !important;
+    color: #0B0F19 !important;
+    border-color: #E2E8F0 !important;
+}
+
+body.light-mode .admin-table td,
+body.light-mode .content-table td,
+body.light-mode .table-container td {
+    color: #334155 !important;
+    border-color: #E2E8F0 !important;
+}
+
+body.light-mode .table-container table {
+    background-color: #FFFFFF !important;
+    border-color: #E2E8F0 !important;
+}
+
+/* SVG Diagrams */
+body.light-mode .diagram-container,
+body.light-mode .question-diagram {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+body.light-mode .diagram-container svg rect[fill="#111827"],
+body.light-mode .question-diagram svg rect[fill="#111827"] {
+    fill: #FFFFFF !important;
+}
+
+body.light-mode .diagram-container svg rect[fill="#1a2332"],
+body.light-mode .question-diagram svg rect[fill="#1a2332"] {
+    fill: #F1F5F9 !important;
+}
+
+body.light-mode .diagram-container svg text[fill="#f8fafc"],
+body.light-mode .diagram-container svg text[fill="#F8FAFC"],
+body.light-mode .question-diagram svg text[fill="#f8fafc"],
+body.light-mode .question-diagram svg text[fill="#F8FAFC"] {
+    fill: #0B0F19 !important;
+}
+
+body.light-mode .diagram-container svg text[fill="#94a3b8"],
+body.light-mode .question-diagram svg text[fill="#94a3b8"] {
+    fill: #475569 !important;
+}
+
+/* Highlight and Cheat Notes */
+body.light-mode .highlight-box {
+    background-color: rgba(109, 40, 217, 0.08) !important;
+    color: #334155 !important;
+}
+
+body.light-mode .cheat-notes {
+    background-color: rgba(245, 158, 11, 0.08) !important;
+    color: #334155 !important;
+}
+
+/* Part buttons */
+body.light-mode .part-btn {
+    background-color: #F1F5F9 !important;
+    color: #475569 !important;
+}
+
+body.light-mode .part-btn.active {
+    background-color: #6D28D9 !important;
+    color: #FFFFFF !important;
+}
+
+/* Back buttons */
+body.light-mode .back-btn {
+    color: #475569 !important;
+}
+
+/* Buttons */
+body.light-mode .btn-icon {
+    background-color: #F1F5F9 !important;
+}
+
+/* Watermark */
+body.light-mode .lesson-watermark {
+    color: rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Empty states */
+body.light-mode .empty-state {
+    color: #64748B !important;
+}
+
+/* Coming soon box */
+body.light-mode .coming-soon-box {
+    background-color: rgba(245, 158, 11, 0.05) !important;
+    border-color: #F59E0B !important;
+}
+
+body.light-mode .coming-soon-box h4 {
+    color: #D97706 !important;
+}
+
+body.light-mode .coming-soon-box p {
+    color: #475569 !important;
+}
+
+/* Explanation boxes */
+body.light-mode .explanation-box {
+    background-color: #F8FAFC !important;
+    border-color: #E2E8F0 !important;
+}
+
+body.light-mode .explanation-result.correct {
+    color: #0D9488 !important;
+}
+
+body.light-mode .explanation-result.wrong {
+    color: #D61F69 !important;
+}
+
+/* ============================================
+   PREVENT FLASH OF WRONG THEME
+   ============================================ */
+
+/* Content is visible by default */
+body {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.1s ease;
+}
+
+/* When light mode is active on html tag */
+html.light-mode-active body {
+    background-color: #F8FAFC !important;
+    color: #0B0F19 !important;
+}
+
+/* Light mode active on body */
+body.light-mode {
+    background-color: #F8FAFC !important;
+    color: #0B0F19 !important;
+}
+
+/* Dark mode (default) */
+body:not(.light-mode) {
+    background-color: #0B0F19 !important;
+    color: #F8FAFC !important;
+}
+
+/* ============================================
+   SMOOTH PAGE TRANSITIONS - NO LAG
+   ============================================ */
+
+/* Instant theme application - zero delay */
+html {
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+
+/* Prevent any transition delays on page load */
+body, 
+.lesson-content, 
+.chapter-nav, 
+.progress-tracker, 
+.self-check-section,
+.highlight-box,
+.cheat-notes,
+.part-btn {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Only allow transitions AFTER page is fully loaded */
+body.loaded {
+    transition: background-color 0.15s ease;
+}
+
+body.loaded .lesson-content,
+body.loaded .chapter-nav,
+body.loaded .progress-tracker,
+body.loaded .self-check-section {
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}

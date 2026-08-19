@@ -1,0 +1,216 @@
+<div class="lesson-section">
+    <h2>Chapter 1: Propositional Logic and Set Theory</h2>
+    <h3>Part 4: Open Propositions & Quantifiers</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In mathematics, one frequently comes across sentences that involve a variable. For example, $x^2 + 2x - 3 = 0$ is one such. The truth value of this statement depends on the value we assign for the variable $x$. In this part, we study these <strong>open propositions</strong> and how they can be converted into propositions using <strong>quantifiers</strong>.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Define open proposition (predicate).</li>
+            <li>Analyze the difference between a proposition and an open proposition.</li>
+            <li>Differentiate the two types of quantifiers.</li>
+            <li>Convert open propositions into propositions using quantifiers.</li>
+            <li>Determine the truth value of a quantified proposition.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>1.2. Open propositions and quantifiers</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 1.4:</strong>
+        <p>An open statement (also called a <strong>predicate</strong>) is a sentence that contains one or more variables and whose truth value depends on the values assigned for the variables. We represent an open statement by a capital letter followed by the variable(s) in parentheses, e.g., $P(x), Q(x)$, etc.</p>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Open Proposition vs. Proposition</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">📄 Proposition</text>
+            <text x="100" y="105" fill="#111827" font-size="9" text-anchor="middle">Has a definite truth value (T or F)</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">📝 Open Proposition (Predicate)</text>
+            <text x="300" y="105" fill="#111827" font-size="9" text-anchor="middle">Truth value depends on the variable(s)</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 Example: $P(x): x^2 + 2x - 3 = 0$ (True if $x=1$, False if $x=-1$)</text>
+        </svg>
+    </div>
+
+    <p><strong>Example 1.11:</strong> Here are some open propositions:</p>
+    <ul>
+        <li>a. $x$ is the day before Sunday.</li>
+        <li>b. $y$ is a city in Africa.</li>
+        <li>c. $x$ is greater than $y$.</li>
+        <li>d. $x + 4 = -9$.</li>
+    </ul>
+
+    <p>It is clear that each one of these examples involves variables but is not a proposition as we cannot assign a truth value to it. However, if individuals are substituted for the variables, then each one of them is a proposition or statement. For example, we may have the following:</p>
+    <ul>
+        <li>a. Monday is the day before Sunday. (T)</li>
+        <li>b. London is a city in Africa. (F)</li>
+        <li>c. 5 is greater than 9. (F)</li>
+        <li>d. $-13 + 4 = -9$. (T)</li>
+    </ul>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #38bdf8;">
+        <strong>📌 Remark:</strong>
+        <p>The collection of all allowable values for the variable in an open sentence is called the <strong>universal set</strong> (the universe of discourse) and denoted by <strong>\(U\)</strong>.</p>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 1.5:</strong>
+        <p>Two open propositions $P(x)$ and $Q(x)$ are said to be equivalent if and only if $P(a) = Q(a)$ for all individuals $a$ in $U$.</p>
+    </div>
+
+    <p><strong>Example 1.12:</strong> Let $P(x): x^2 - 1 = 0$ and $Q(x): |x| \geq 1$. Let $U = \{-1, -\frac{1}{2}, 0, 1\}$.</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>\(a\)</th><th>\(P(a)\)</th><th>\(Q(a)\)</th></tr>
+            <tr><td>$-1$</td><td>$(-1)^2 - 1 = 0$ (T)</td><td>$|-1| \geq 1$ (T)</td></tr>
+            <tr><td>$-\frac{1}{2}$</td><td>$(-\frac{1}{2})^2 - 1 = 0$ (F)</td><td>$|-\frac{1}{2}| \geq 1$ (F)</td></tr>
+            <tr><td>$0$</td><td>$0 - 1 = 0$ (F)</td><td>$|0| \geq 1$ (F)</td></tr>
+            <tr><td>$1$</td><td>$1^2 - 1 = 0$ (T)</td><td>$|1| \geq 1$ (T)</td></tr>
+        </table>
+    </div>
+
+    <p>Therefore, $P(a) = Q(a)$ for all $a \in U$. Thus, $P(x)$ and $Q(x)$ are equivalent over the given universe $U$.</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 1.6:</strong>
+        <p>Let \(U\) be the universal set. An open proposition \(P(x)\) is a <strong>tautology</strong> if and only if $P(a)$ is always true for all values of \(a \in U\).</p>
+    </div>
+
+    <p><strong>Example 1.13:</strong> The open proposition $P(x): x^2 \geq 0$ is a tautology (over the real numbers), since the square of any real number is non-negative.</p>
+
+    <hr>
+
+    <h4>The Three Possibilities of Open Propositions</h4>
+
+    <p>As we have observed, an open proposition can be converted into a proposition by substituting the individuals for the variables. However, there are other ways that an open proposition can be converted into a proposition, namely by a method called <strong>quantification</strong>. Let $P(x)$ be an open proposition over the domain $S$. Adding the phrase "For every $x \in S$" to $P(x)$ or "For some $x \in S$" to $P(x)$ produces a statement called a <strong>quantified statement</strong>.</p>
+
+    <p>Consider the following open propositions with universe $\mathbb{R}$:</p>
+    <ul>
+        <li>a. $R(x): x^2 \geq 0$ (Always true for each $x \in \mathbb{R}$)</li>
+        <li>b. $P(x): (x + 2)(x - 3) = 0$ (True only for $x = -2$ and $x = 3$)</li>
+        <li>c. $Q(x): x^2 < 0$ (Always false for all values of $x \in \mathbb{R}$)</li>
+    </ul>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">The Three Possibilities of Open Propositions</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">✅ Always True</text>
+            <text x="100" y="105" fill="#111827" font-size="9" text-anchor="middle">(Tautology)</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#facc15" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">✅ Some True</text>
+            <text x="300" y="105" fill="#111827" font-size="9" text-anchor="middle">(Satisfiable)</text>
+
+            <rect x="120" y="140" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="200" y="165" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">❌ Always False</text>
+            <text x="200" y="185" fill="#111827" font-size="9" text-anchor="middle">(Unsatisfiable)</text>
+        </svg>
+    </div>
+
+    <p>Hence, given an open proposition $P(x)$ with universe $U$, we observe that there are three possibilities:</p>
+    <ol>
+        <li><strong>$P(x)$ is true for all $x \in U$.</strong> (Tautology)</li>
+        <li><strong>$P(x)$ is true for some $x \in U$.</strong> (Satisfiable)</li>
+        <li><strong>$P(x)$ is false for all $x \in U$.</strong> (Unsatisfiable)</li>
+    </ol>
+
+    <hr>
+
+    <h4>Quantifiers</h4>
+
+    <p>Now we proceed to study open propositions which are satisfied by "all" and "some" members of the given universe.</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Universal Quantifier ($\forall$):</strong>
+        <p>The phrase "for every $x$" is called a <strong>universal quantifier</strong>. We regard "for every $x$", "for all $x$", and "for each $x$" as having the same meaning and symbolize each by <strong>$(\forall x)$</strong>. Think of the symbol $\forall$ as an inverted A (representing "All"). If $P(x)$ is an open proposition with universe $U$, then $(\forall x)P(x)$ is a quantified proposition and is read as "every $x \in U$ has the property $P$".</p>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Existential Quantifier ($\exists$):</strong>
+        <p>The phrase "there exists an $x$" is called an <strong>existential quantifier</strong>. We regard "there exists an $x$", "for some $x$", and "for at least one $x$" as having the same meaning and symbolize each by <strong>$(\exists x)$</strong>. Think of the symbol $\exists$ as the backwards capital E (representing "Exists"). If $P(x)$ is an open proposition with universe $U$, then $(\exists x)P(x)$ is a quantified proposition and is read as "there exists $x \in U$ with the property $P$".</p>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Quantifiers: Universal vs. Existential</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">$\forall$ Universal</text>
+            <text x="100" y="105" fill="#111827" font-size="9" text-anchor="middle">"For all" (Inverted A)</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">$\exists$ Existential</text>
+            <text x="300" y="105" fill="#111827" font-size="9" text-anchor="middle">"There exists" (Backwards E)</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 Quantifiers convert open propositions into propositions.</text>
+        </svg>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #38bdf8;">
+        <strong>📌 Important Remarks:</strong>
+        <ol>
+            <li>To show that $(\forall x)P(x)$ is <strong>F</strong>, it is sufficient to find at least one $a \in U$ such that $P(a)$ is F. Such an element $a \in U$ is called a <strong>counterexample</strong>.</li>
+            <li>$(\exists x)P(x)$ is <strong>F</strong> if we cannot find any $a \in U$ having the property $P$.</li>
+        </ol>
+    </div>
+
+    <p><strong>Example 1.14:</strong></p>
+
+    <p><strong>a.</strong> Write the following statements using quantifiers.</p>
+    <ul>
+        <li>i. For each real number $x > 0$, $x^2 + x - 6 = 0$. $\rightarrow$ <strong>$(\forall x > 0)(x^2 + x - 6 = 0)$</strong></li>
+        <li>ii. There is a real number $x > 0$ such that $x^2 + x - 6 = 0$. $\rightarrow$ <strong>$(\exists x > 0)(x^2 + x - 6 = 0)$</strong></li>
+        <li>iii. The square of any real number is nonnegative. $\rightarrow$ <strong>$(\forall x \in \mathbb{R})(x^2 \geq 0)$</strong></li>
+    </ul>
+
+    <p><strong>b.</strong></p>
+    <ul>
+        <li>i. Let $P(x): x^2 + 1 \geq 0$. The truth value for $(\forall x)P(x)$ is <strong>T</strong>.</li>
+        <li>ii. Let $P(x): x < x^2$. The truth value for $(\forall x)(x < x^2)$ is <strong>F</strong>. $x = \frac{1}{2}$ is a counterexample since $\frac{1}{2} \in \mathbb{R}$ but $\frac{1}{2} < \frac{1}{4}$.</li>
+        <li>iii. Let $P(x): |x| = -1$. The truth value for $(\exists x)P(x)$ is <strong>F</strong> since there is no real number whose absolute value is $-1$.</li>
+    </ul>
+
+    <hr>
+
+    <h4>Negation of Quantifiers</h4>
+
+    <p>Let $P(x)$ be an open proposition. Then $(\forall x)P(x)$ is false only if we can find an individual "a" in the universe such that $P(a)$ is false. If we succeed in getting such an individual, then $(\exists x)\neg P(x)$ is true. Hence, $(\forall x)P(x)$ will be false if $(\exists x)\neg P(x)$ is true.</p>
+
+    <p>Therefore, the negation of $(\forall x)P(x)$ is $(\exists x)\neg P(x)$. Similarly, we can easily verify that the negation of $(\exists x)P(x)$ is $(\forall x)\neg P(x)$.</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 To negate a statement involving quantifiers:</strong>
+        <p>Change each $\forall$ to $\exists$, change each $\exists$ to $\forall$, and negate the open statement.</p>
+    </div>
+
+    <p><strong>Example 1.15:</strong></p>
+    <ul>
+        <li>a. $\neg(\exists x)(x < x^2) \equiv (\forall x)\neg(x < x^2) \equiv (\forall x)(x \geq x^2)$</li>
+        <li>b. $\neg(\forall x)(4x + 1 = 0) \equiv (\exists x)\neg(4x + 1 = 0) \equiv (\exists x)(4x + 1 \neq 0)$</li>
+    </ul>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 4)</h4>
+        <ul>
+            <li><strong>Open Proposition (Predicate):</strong> A sentence with variables; truth value depends on the variable.</li>
+            <li><strong>Quantifiers:</strong> Universal ($\forall$) = "For all"; Existential ($\exists$) = "There exists".</li>
+            <li><strong>Counterexample:</strong> One element that makes a universal statement false.</li>
+            <li><strong>Negation Rule:</strong> $\forall \rightarrow \exists$, $\exists \rightarrow \forall$, and negate the predicate.</li>
+            <li><strong>Combined Quantifiers:</strong> $(\forall x)(\exists y) = y$ depends on $x$; $(\exists y)(\forall x) = y$ must work for all $x$.</li>
+        </ul>
+    </div>
+</div>

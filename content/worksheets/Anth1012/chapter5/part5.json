@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 5,
+    "title": "Part 5 Practice: Constructivist Theory & Unit Summary",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the core idea of the Constructivist theory of ethnicity?",
+            "options": [
+                "A) Ethnicity is fixed and innate at birth.",
+                "B) Ethnicity is negotiated and constructed in everyday living, continuing as a process.",
+                "C) Ethnicity is a tool for political elites.",
+                "D) Ethnicity does not exist."
+            ],
+            "correct_answer": "B) Ethnicity is negotiated and constructed in everyday living, continuing as a process.",
+            "explanation": "The module states: 'The basic notion in this approach is that ethnicity is something that is being negotiated and constructed in everyday living. It regards ethnicity as a process, which continues in the making.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "How did Fredrik Barth view ethnic identity within the Constructivist framework?",
+            "options": [
+                "A) As a fixed biological trait.",
+                "B) As an individualistic strategy to advance personal economic and political interests.",
+                "C) As a purely emotional bond.",
+                "D) As a myth-symbol complex."
+            ],
+            "correct_answer": "B) As an individualistic strategy to advance personal economic and political interests.",
+            "explanation": "The module states: 'F. Barth, who is the leading figure of this approach, viewed ethnic identity as an \"individualistic strategy\" in which individuals move from one identity to another to \"advance their personal economic and political interests, or to minimize their losses.\"'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "According to the Constructivist view, what are ethnic boundaries like?",
+            "options": [
+                "A) They are fixed and permanent.",
+                "B) They are permeable and osmotic, allowing for the flow of individuals between groups.",
+                "C) They are purely physical and biological.",
+                "D) They are irrelevant to ethnicity."
+            ],
+            "correct_answer": "B) They are permeable and osmotic, allowing for the flow of individuals between groups.",
+            "explanation": "The module states: 'Jenkins (1997) further noted that, as far as the flow of individuals from one ethnic group to another is possible, it is possible to argue that the boundaries of ethnicity are permeable and osmotic.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "What is the definition of multiculturalism according to the module?",
+            "options": [
+                "A) The assimilation of all cultures into one.",
+                "B) The way in which a given society engages with cultural diversity, presupposing that society benefits from harmonious coexistence.",
+                "C) The elimination of all cultural differences.",
+                "D) The dominance of one culture over others."
+            ],
+            "correct_answer": "B) The way in which a given society engages with cultural diversity, presupposing that society benefits from harmonious coexistence.",
+            "explanation": "The module states: 'Multiculturalism can be defined as the way in which a given society engages with cultural diversity. The underlying assumption is that members of very different cultures can coexist peacefully and multiculturalism articulates the view that society is strengthened through preserving, respecting, and even encouraging cultural diversity.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What are the two theories/models of multiculturalism mentioned in the module?",
+            "options": [
+                "A) The assimilation model and the integration model.",
+                "B) The melting pot theory and the salad bowl theory.",
+                "C) The diversity theory and the unity theory.",
+                "D) The national model and the global model."
+            ],
+            "correct_answer": "B) The melting pot theory and the salad bowl theory.",
+            "explanation": "The module states: 'There are two theories or models to conceptualize multiculturalism... These are the \"melting pot\" theory or the \"salad bowl\" theory.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the main criticism of the melting pot theory?",
+            "options": [
+                "A) It preserves cultural diversity.",
+                "B) It reduces diversity into a single entity, causing people to lose their traditions, and has been implemented through coercive governmental policies.",
+                "C) It is too liberal.",
+                "D) It encourages cultural differences."
+            ],
+            "correct_answer": "B) It reduces diversity into a single entity, causing people to lose their traditions, and has been implemented through coercive governmental policies.",
+            "explanation": "The module states: 'The melting pot theory has been criticized because it reduced diversity into a single entity and causing people to lose their traditions, and for having to be implemented through governmental policy.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "What is the salad bowl theory of multiculturalism?",
+            "options": [
+                "A) It argues that all cultures should assimilate into one.",
+                "B) It illustrates a heterogeneous society where people coexist by retaining the distinctiveness of their traditional cultures.",
+                "C) It argues that cultural diversity should be eliminated.",
+                "D) It is the same as the melting pot theory."
+            ],
+            "correct_answer": "B) It illustrates a heterogeneous society where people coexist by retaining the distinctiveness of their traditional cultures.",
+            "explanation": "The module states: 'The salad bowl theory illustrates a heterogeneous society in which people coexist by retaining at least some of the distinctiveness aspects of their traditional culture.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "According to the module, how is multiculturalism implemented in public schools?",
+            "options": [
+                "A) By ignoring minority histories.",
+                "B) By introducing curricula that emphasize the histories and traditions of minorities, though occasionally criticized as 'political correctness.'",
+                "C) By teaching only one culture.",
+                "D) By banning cultural studies."
+            ],
+            "correct_answer": "B) By introducing curricula that emphasize the histories and traditions of minorities, though occasionally criticized as 'political correctness.'",
+            "explanation": "The module states: 'However, occasionally criticized as a form of \"political correctness,\" educational systems in multicultural societies emphasize the histories and traditions of minorities in classrooms and textbooks.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What does the unit summary conclude about the nature of ethnicity?",
+            "options": [
+                "A) Ethnicity is a purely biological construct.",
+                "B) Ethnicity is a constructed, artificial category, and race itself is also a human construct.",
+                "C) Ethnicity is fixed and unchangeable.",
+                "D) Ethnicity is irrelevant in modern society."
+            ],
+            "correct_answer": "B) Ethnicity is a constructed, artificial category, and race itself is also a human construct.",
+            "explanation": "The module states: 'Most social scientists from Weber to Barth agreed today that ethnicity is a constructed, artificial category... as it has been already elucidated, race itself is a human construct.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is the core distinction between Primordialism and Constructivism as summarized in the unit?",
+            "options": [
+                "A) Primordialism sees ethnicity as a social construct; Constructivism sees it as fixed.",
+                "B) Primordialism sees ethnicity as fixed and rooted in kinship/biology; Constructivism sees it as a product of human social interaction and valid only as a social construct.",
+                "C) They are the same theory.",
+                "D) Primordialism is a modern theory; Constructivism is an ancient theory."
+            ],
+            "correct_answer": "B) Primordialism sees ethnicity as fixed and rooted in kinship/biology; Constructivism sees it as a product of human social interaction and valid only as a social construct.",
+            "explanation": "The module states: 'Constructivism sees the primordialist views as basically flawed and holds that ethnic groups are only products of human social interaction, maintained only in so far as they are maintained as valid social constructs in societies. Instrumentalism is a perspective towards ethnicity that sees ethnic classification as a mechanism of social stratification.'",
+            "difficulty": "hard"
+        }
+    ]
+}

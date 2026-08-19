@@ -1,0 +1,147 @@
+{
+    "course_code": "GeES1011",
+    "chapter": 3,
+    "title": "Part 3 Practice: Rift Valley and Impacts of Relief",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Ethiopia's Rift Valley is divided into HOW MANY main sections?",
+            "diagram": null,
+            "options": [
+                "A) Two",
+                "B) Three",
+                "C) Four",
+                "D) Five"
+            ],
+            "correct_answer": "B) Three",
+            "explanation": "Ethiopia's Rift Valley has THREE main sections: (1) Afar Triangle (northern), (2) Main Ethiopian Rift/Central Rift (middle), (3) Chew Bahir Rift (southern). Each has distinct characteristics.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "The AFAR TRIANGLE is characterized by:",
+            "diagram": null,
+            "options": [
+                "A) Dense forests and high rainfall",
+                "B) Low elevation, extreme heat, active volcanoes",
+                "C) Alpine glaciers",
+                "D) Deep freshwater lakes"
+            ],
+            "correct_answer": "B) Low elevation, extreme heat, active volcanoes",
+            "explanation": "The AFAR TRIANGLE is Ethiopia's LOWEST region (Dallol = -125m), with EXTREME HEAT (hottest place on Earth) and ACTIVE VOLCANOES (Erta Ale). It's a TRIPLE JUNCTION where three tectonic plates meet.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 3,
+            "text": "How many MAJOR lakes are in the Central Rift?",
+            "diagram": null,
+            "options": [
+                "A) Two",
+                "B) Five",
+                "C) Seven",
+                "D) Ten"
+            ],
+            "correct_answer": "C) Seven",
+            "explanation": "The CENTRAL RIFT contains SEVEN major lakes: Ziway, Langano, Abijatta, Shalla, Awasa, Abaya, and Chamo. These lakes are important for fishing, tourism, and irrigation.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "Examine the Rift Valley diagram. Which section is the AFAR TRIANGLE?",
+            "diagram": "<svg width='350' height='200' viewBox='0 0 350 200'><rect width='350' height='200' fill='#111827' rx='8'/><text x='175' y='20' text-anchor='middle' fill='#f59e0b' font-size='12' font-weight='bold'>Rift Valley Sections</text><path d='M 150 30 L 220 50 L 170 50 Z' fill='#f43f5e'/><text x='175' y='70' text-anchor='middle' fill='#f43f5e' font-size='9' font-weight='bold'>A (Top)</text><rect x='140' y='80' width='70' height='60' fill='#facc15'/><text x='175' y='115' text-anchor='middle' fill='#0B0F19' font-size='9' font-weight='bold'>B (Middle)</text><rect x='140' y='150' width='70' height='30' fill='#14b8a6'/><text x='175' y='170' text-anchor='middle' fill='#f8fafc' font-size='9' font-weight='bold'>C (Bottom)</text></svg>",
+            "options": [
+                "A) A (top, red triangle)",
+                "B) B (middle, yellow)",
+                "C) C (bottom, green)",
+                "D) None"
+            ],
+            "correct_answer": "A) A (top, red triangle)",
+            "explanation": "The AFAR TRIANGLE is at the TOP (north) of the Rift Valley — represented by the RED triangle (A). The YELLOW middle (B) is the Main/Central Rift, and the GREEN bottom (C) is the Chew Bahir Rift.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "The CHEW BAHIR RIFT extends toward:",
+            "diagram": null,
+            "options": [
+                "A) Lake Tana",
+                "B) Lake Turkana (Kenya border)",
+                "C) Red Sea",
+                "D) Indian Ocean"
+            ],
+            "correct_answer": "B) Lake Turkana (Kenya border)",
+            "explanation": "The CHEW BAHIR RIFT extends from Lake Chamo southward to LAKE TURKANA on the Kenya border. It contains Lake Chew Bahir and is semi-arid with pastoralist communities.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "Erta Ale (active volcano) is located in:",
+            "diagram": null,
+            "options": [
+                "A) Central Rift",
+                "B) Afar Triangle",
+                "C) Chew Bahir Rift",
+                "D) Western Highlands"
+            ],
+            "correct_answer": "B) Afar Triangle",
+            "explanation": "ERTA ALE, one of the world's most active volcanoes with a permanent lava lake, is located in the AFAR TRIANGLE. This region is part of the triple junction where the Arabian, Nubian, and Somali plates meet.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "Ethiopia is called the 'WATER TOWER OF AFRICA' because:",
+            "diagram": null,
+            "options": [
+                "A) It has the most lakes in Africa",
+                "B) Its HIGHLANDS are the source of many major rivers",
+                "C) It has the highest rainfall",
+                "D) It has the largest dam in Africa"
+            ],
+            "correct_answer": "B) Its HIGHLANDS are the source of many major rivers",
+            "explanation": "Ethiopia's HIGHLANDS are the source of many major rivers (Abay/Blue Nile, Tekeze, Awash, Omo, Wabishebelle) that flow to neighboring countries. This gives Ethiopia the nickname 'Water Tower of Africa' and significant hydroelectric potential.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Which relief region is MOST DENSELY populated in Ethiopia?",
+            "diagram": null,
+            "options": [
+                "A) Lowlands",
+                "B) Highlands",
+                "C) Deserts",
+                "D) Swamps"
+            ],
+            "correct_answer": "B) Highlands",
+            "explanation": "The HIGHLANDS are MOST DENSELY populated because they have COOLER temperatures, FERTILE soils, and RELIABLE rainfall. The lowlands are sparsely populated due to hot, arid conditions. Most of Ethiopia's major cities are in the highlands.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "How does RELIEF affect CLIMATE in Ethiopia?",
+            "diagram": null,
+            "options": [
+                "A) Higher elevation = warmer temperatures",
+                "B) Higher elevation = cooler temperatures",
+                "C) Relief has no effect on climate",
+                "D) Only rainfall is affected"
+            ],
+            "correct_answer": "B) Higher elevation = cooler temperatures",
+            "explanation": "In Ethiopia, HIGHER ELEVATION means COOLER TEMPERATURES. Despite its tropical location, the Ethiopian Highlands have MODERATE climate due to high altitude. This is why Addis Ababa (2,400m) has pleasant weather year-round.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 10,
+            "text": "The GERD (Grand Ethiopian Renaissance Dam) is built on which river?",
+            "diagram": null,
+            "options": [
+                "A) Tekeze River",
+                "B) Abay (Blue Nile) River",
+                "C) Omo River",
+                "D) Awash River"
+            ],
+            "correct_answer": "B) Abay (Blue Nile) River",
+            "explanation": "The GERD is built on the ABAY (BLUE NILE) RIVER. Ethiopia's relief (deep gorges, high water head) makes it ideal for hydroelectric power. The GERD is Africa's largest hydroelectric project.",
+            "difficulty": "medium"
+        }
+    ]
+}

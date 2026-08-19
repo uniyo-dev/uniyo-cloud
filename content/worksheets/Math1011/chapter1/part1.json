@@ -1,0 +1,134 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "text": "Which of the following sentences is a proposition?",
+            "options": [
+                "A) May God bless you!",
+                "B) Give me that book.",
+                "C) 2 is an even number.",
+                "D) What is your name?"
+            ],
+            "correct_answer": "C) 2 is an even number.",
+            "explanation": "The module states: 'A proposition (or statement) is a sentence which has a truth value (either True or False but not both).' Sentences that are questions, commands, or exclamations are not propositions. Option A is an exclamation. Option B is a command. Option D is a question. Option C is a declarative sentence with a definite truth value (True).",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the logical symbol for the connective 'and'?",
+            "options": [
+                "A) \\vee",
+                "B) \\wedge",
+                "C) \\Rightarrow",
+                "D) \\Leftrightarrow"
+            ],
+            "correct_answer": "B) \\wedge",
+            "explanation": "The module states: 'When two propositions are joined with the connective \"and,\" the proposition formed is a logical conjunction. \"and\" is denoted by \"\\wedge\".' Option A is 'or' (disjunction). Option C is 'implies'. Option D is 'if and only if'.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "Under what condition is the conjunction $p \\wedge q$ true?",
+            "options": [
+                "A) When $p$ is true and $q$ is false.",
+                "B) When $p$ is false and $q$ is true.",
+                "C) When both $p$ and $q$ are true.",
+                "D) When both $p$ and $q$ are false."
+            ],
+            "correct_answer": "C) When both $p$ and $q$ are true.",
+            "explanation": "The module states: '$p \\wedge q$ is true if and only if $p$ is true and $q$ is true.' Option A is false because $q$ is false. Option B is false because $p$ is false. Option D is false because both are false.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the truth value of the disjunction $p \\vee q$ when both $p$ and $q$ are false?",
+            "options": [
+                "A) True",
+                "B) False",
+                "C) Cannot be determined",
+                "D) Both true and false"
+            ],
+            "correct_answer": "B) False",
+            "explanation": "The module states: '$p \\vee q$ is false if and only if both $p$ and $q$ are false.' Option A is the value when at least one is true. Option C and D are incorrect because the truth value is fully determined by the truth values of $p$ and $q$.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 5,
+            "text": "How is the implication $p \\Rightarrow q$ read in words?",
+            "options": [
+                "A) $p$ and $q$",
+                "B) $p$ or $q$",
+                "C) $p$ implies $q$ or if $p$, then $q$",
+                "D) $p$ if and only if $q$"
+            ],
+            "correct_answer": "C) $p$ implies $q$ or if $p$, then $q$",
+            "explanation": "The module states: 'The function of the connective \"implies\" between two propositions is the same as the use of \"If ... then ...\" Thus $p \\Rightarrow q$ can be read as \"if $p$, then $q$.'' Option A is conjunction. Option B is disjunction. Option D is bi-implication.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Under what condition is the implication $p \\Rightarrow q$ false?",
+            "options": [
+                "A) When $p$ is false and $q$ is true.",
+                "B) When both $p$ and $q$ are true.",
+                "C) When $p$ is true and $q$ is false.",
+                "D) When both $p$ and $q$ are false."
+            ],
+            "correct_answer": "C) When $p$ is true and $q$ is false.",
+            "explanation": "The module states: '$p \\Rightarrow q$ is false if and only if $p$ is true and $q$ is false.' Option A is true by vacuous truth. Option B is true. Option D is true by vacuous truth.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the truth value of $p \\Leftrightarrow q$ when $p$ is true and $q$ is false?",
+            "options": [
+                "A) True",
+                "B) False",
+                "C) Cannot be determined",
+                "D) Both true and false"
+            ],
+            "correct_answer": "B) False",
+            "explanation": "The module states: '$p \\Leftrightarrow q$ is false if and only if $p$ and $q$ have different truth values.' Since $p$ is true and $q$ is false, their truth values are different, so the bi-implication is false. Option A is incorrect because the truth values differ. Options C and D are incorrect because the bi-implication's truth value is fully determined.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What is the negation of the statement '0 is not a negative integer'?",
+            "options": [
+                "A) 0 is a negative integer.",
+                "B) 0 is a positive integer.",
+                "C) 0 is not a positive integer.",
+                "D) 0 is an even integer."
+            ],
+            "correct_answer": "A) 0 is a negative integer.",
+            "explanation": "The module states: 'Given any proposition $p$, we can form the proposition $\\neg p$ called the negation of $p$.' To negate a statement, we reverse its truth value. The negation of '0 is not a negative integer' is '0 is a negative integer.' Option B is a different statement. Option C is the negation of '0 is a positive integer'. Option D is a true statement but not the negation.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "Which of the following is the correct negation of '$\\sqrt{2}$ is a rational number'?",
+            "options": [
+                "A) $\\sqrt{2}$ is a real number.",
+                "B) $\\sqrt{2}$ is not a rational number.",
+                "C) $\\sqrt{2}$ is an irrational number.",
+                "D) Both B and C."
+            ],
+            "correct_answer": "D) Both B and C.",
+            "explanation": "The negation of '$\\sqrt{2}$ is a rational number' is '$\\sqrt{2}$ is not a rational number.' Since an irrational number is defined as a number that is not rational, '$\\sqrt{2}$ is an irrational number' is also a correct negation in this context. Option A is a true statement but not the negation.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "If $p$ is false and $q$ is true, what is the truth value of $\\neg p \\vee q$?",
+            "options": [
+                "A) True",
+                "B) False",
+                "C) Cannot be determined",
+                "D) Both true and false"
+            ],
+            "correct_answer": "A) True",
+            "explanation": "First, evaluate $\\neg p$: since $p$ is false, $\\neg p$ is true. Then, evaluate the disjunction $\\neg p \\vee q$: true $\\vee$ true = true. Option B would be true only if both were false. Options C and D are incorrect because the truth value is fully determined.",
+            "difficulty": "hard"
+        }
+    ]
+}

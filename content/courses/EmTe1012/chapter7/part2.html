@@ -1,0 +1,211 @@
+<div class="lesson-section">
+    <h2>Chapter 7: Other Emerging Technologies</h2>
+    <h3>Part 2: Blockchain Technology</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In this part, we dive deep into <strong>Blockchain Technology</strong>—one of the most revolutionary technologies of the 21st century. We will explore its history, how it works, its three fundamental pillars (Decentralization, Transparency, Immutability), and its real-world applications in business, governance, and supply chain auditing.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Explain what blockchain is and how it works.</li>
+            <li>Identify the three pillars of blockchain technology.</li>
+            <li>Understand the concept of peer-to-peer networks and decentralization.</li>
+            <li>List and describe applications of blockchain in various sectors.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>7.3. Blockchain technology</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 7.6 (From Module):</strong>
+        <ul>
+            <li><em>What do you think blockchain is all about? Just begin by defining the two words block and chain?</em></li>
+            <li><em>Do you know anything about bitcoin? If your answer is yes, is it related to blockchain?</em></li>
+            <li><em>Do you think blockchain is an old science? Can you guess who coined the term blockchain?</em></li>
+        </ul>
+    </div>
+
+    <p><strong>What is Blockchain?</strong></p>
+    <p>Originally, a <strong>blockchain</strong> is a <strong>growing list of records, called blocks, that are linked using cryptography</strong>. Each block contains a <strong>cryptography hash</strong> of the previous block, a <strong>timestamp</strong>, and transaction data (generally represented as a Merkle tree).</p>
+    
+    <p>A blockchain is, in the simplest terms, a <strong>time-stamped series of immutable records of data</strong> that is managed by a <strong>cluster of computers not owned by any single entity</strong>. Each of these blocks of data (i.e., a block) is secured and bound to each other using <strong>cryptographic principles</strong> (i.e., a chain).</p>
+
+    <p><strong>What is Inside a Block?</strong></p>
+    <p>"Blocks" on the blockchain are made up of digital pieces of information. Specifically, they have <strong>three parts</strong>:</p>
+    <ol>
+        <li><strong>Transaction Data:</strong> Blocks store information about transactions like the date, time, and dollar amount of your most recent purchase. (NOTE: This Amazon example is for illustrative purchases; Amazon retail does not work on a blockchain principle).</li>
+        <li><strong>Participant Data:</strong> Blocks store information about who is participating in transactions. Instead of using your actual name, your purchase is recorded without any identifying information using a unique <strong>"digital signature,"</strong> sort of like a username.</li>
+        <li><strong>Unique Code (Hash):</strong> Blocks store information that distinguishes them from other blocks. Each block stores a unique code called a <strong>"hash"</strong> that allows us to tell it apart from every other block.</li>
+    </ol>
+
+    <p><strong>How a Block is Added:</strong></p>
+    <p>When a block stores new data, it is added to the blockchain. Blockchain, as its name suggests, consists of multiple blocks strung together. In order for a block to be added to the blockchain, however, <strong>four things must happen</strong>:</p>
+    <ol>
+        <li><strong>A transaction must occur.</strong> (Example: an Amazon purchase).</li>
+        <li><strong>That transaction must be verified.</strong> With blockchain, that job is left up to a <strong>network of computers</strong>. These networks often consist of thousands (or in the case of Bitcoin, about five million) computers spread across the globe. When you make your purchase, that network of computers rushes to check that your transaction happened in the way you said it did.</li>
+        <li><strong>That transaction must be stored in a block.</strong> After your transaction is verified as accurate, it gets the green light. The transaction's dollar amount, your digital signature, and Amazon's digital signature are all stored in a block.</li>
+        <li><strong>That block must be given a hash.</strong> Once all of a block's transactions have been verified, it must be given a unique, identifying code called a <strong>hash</strong>. The block is also given the hash of the most recent block added to the blockchain. Once hashed, the block can be added to the blockchain.</li>
+    </ol>
+
+    <p>By design, a blockchain is <strong>resistant to modification of the data</strong>. It is <strong>"an open, distributed ledger that can record transactions between two parties efficiently and in a verifiable and permanent way."</strong></p>
+
+    <p>For use as a distributed ledger, a blockchain is typically managed by a <strong>peer-to-peer network</strong> collectively adhering to a protocol for inter-node communication and validating new blocks. Once recorded, the data in any given block cannot be altered retroactively without the alteration of all subsequent blocks, which requires the consensus of the network majority. Although blockchain records are not alterable, blockchains may be considered secure by design and exemplify a distributed computing system.</p>
+
+    <p>The blockchain network <strong>has no central authority</strong>; it is the very definition of a <strong>democratized system</strong>. Since it is a shared and immutable ledger, the information in it is open for anyone and everyone to see. Hence, anything that is built on the blockchain is by its very nature <strong>transparent</strong> and everyone involved is accountable for their actions.</p>
+
+    <hr>
+
+    <h4>7.3.1. History</h4>
+
+    <p>The first work on a cryptographically secured chain of blocks was described in <strong>1991</strong> by <strong>Stuart Haber and W. Scott Stornetta</strong>. They wanted to implement a system where document timestamps could not be tampered with. In <strong>1992</strong>, Bayer, Haber, and Stornetta incorporated Merkle trees to the design, which improved its efficiency by allowing several document certificates to be collected into one block.</p>
+
+    <p>The first blockchain was conceptualized by a person (or group of people) known as <strong>Satoshi Nakamoto</strong> in <strong>2008</strong>. Nakamoto improved the design in an important way using the <strong>Hash cash</strong> like the method to add blocks to the chain without requiring them to be signed by a trusted party. The design was implemented the following year by Nakamoto as a <strong>core component of the cryptocurrency bitcoin</strong>, where it serves as the public ledger for all transactions on the network.</p>
+
+    <p>In August 2014, the bitcoin blockchain file size, containing records of all transactions that have occurred on the network, reached <strong>20 GB</strong>. In January 2015, the size had grown to almost <strong>30 GB</strong>, and from January 2016 to January 2017, the bitcoin blockchain grew from 50 GB to <strong>100 GB</strong> in size.</p>
+
+    <p>The words <strong>block</strong> and <strong>chain</strong> were used separately in Satoshi Nakamoto's original paper but were eventually popularized as a single word, blockchain, by <strong>2016</strong>.</p>
+
+    <hr>
+
+    <h4>7.3.2. Blockchain Explained</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 7.7 (From Module):</strong>
+        <ul>
+            <li><em>From your previous discussion, what is a transaction in blockchain? Does transaction have a cost in blockchain? Why?</em></li>
+            <li><em>Can you give a concrete example of blockchain?</em></li>
+        </ul>
+    </div>
+
+    <p>A blockchain carries <strong>no transaction cost</strong>. (An infrastructure cost exists, but no transaction cost.) The blockchain is a simple yet ingenious way of <strong>passing information from A to B in a fully automated and safe manner</strong>. One party to a transaction initiates the process by creating a block. This block is <strong>verified by thousands, perhaps millions of computers distributed around the net</strong>. The verified block is added to a chain, which is stored across the net, creating not just a unique record, but a unique record with a unique history. <strong>Falsifying a single record would mean falsifying the entire chain in millions of instances. That is virtually impossible.</strong> Bitcoin uses this model for monetary transactions, but it can be deployed in many other ways.</p>
+
+    <p>Think of a railway company. We buy tickets on an app or the web. The credit card company takes a cut for processing the transaction. With blockchain, not only can the railway operator save on credit card processing fees, it can <strong>move the entire ticketing process to the blockchain</strong>. The two parties in the transaction are the railway company and the passenger. The ticket is a <strong>block</strong>, which will be added to a <strong>ticket blockchain</strong>. Just as a monetary transaction on the blockchain is a unique, independently verifiable, and unfalsifiable record, so can your ticket be. Incidentally, the final ticket blockchain is also a record of all transactions for, say, a certain train route, or even the entire train network, comprising every ticket ever sold, every journey ever taken.</p>
+
+    <p>But the key here is this: <strong>it's free</strong>. Not only can the blockchain transfer and store money, but it can also <strong>replace all processes and business models that rely on charging a small fee for a transaction or any other transaction between two parties</strong>.</p>
+
+    <p>Blockchain may make selling recorded music profitable again for artists by <strong>cutting out music companies and distributors like Apple or Spotify</strong>. The music you buy could even be encoded in the blockchain itself, making it a <strong>cloud archive for any song purchased</strong>. Because the amounts charged can be so small, subscription and streaming services will become irrelevant.</p>
+
+    <hr>
+
+    <h4>7.3.3. The Three Pillars of Blockchain Technology</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 7.8 (From Module):</strong>
+        <ul>
+            <li><em>What are the most important principles in blockchains? Is it possible for the blockchain to be centralized? If your answer is no, Why?</em></li>
+        </ul>
+    </div>
+
+    <p>The <strong>three main properties</strong> of Blockchain Technology are:</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Pillar</th><th>Description</th></tr>
+            <tr>
+                <td><strong>1. Decentralization</strong></td>
+                <td>In a decentralized system, the information is <strong>not stored by one single entity</strong>. In fact, everyone in the network owns the information. In a decentralized network, if you wanted to interact with your friend then you can do so <strong>directly without going through a third party</strong>. That was the main ideology behind Bitcoins. You and you alone are in charge of your money. You can send your money to anyone you want without having to go through a bank.</td>
+            </tr>
+            <tr>
+                <td><strong>2. Transparency</strong></td>
+                <td>One of the most interesting and misunderstood concepts in blockchain technology is "transparency." Some people say that blockchain gives you privacy while some say that it is transparent. A person's identity is hidden via complex cryptography and represented only by their <strong>public address</strong>. So, if you were to look up a person's transaction history, you will not see "Bob sent 1 BTC" instead you will see "1MF1bhsFLkBzz9vpFYEmvwT2TbyCt7NZJ sent 1 BTC". So, while the person's real identity is secure, you will still see <strong>all the transactions that were done by their public address</strong>. This level of transparency has never existed before within a financial system. It adds that extra, and much needed, level of <strong>accountability</strong> which is required by some of these biggest institutions.</td>
+            </tr>
+            <tr>
+                <td><strong>3. Immutability</strong></td>
+                <td>Immutability, in the context of the blockchain, means that <strong>once something has been entered into the blockchain, it cannot be tampered with</strong>. The reason why the blockchain gets this property is that of the <strong>cryptographic hash function</strong>. In simple terms, hashing means taking an input string of any length and giving out an output of a fixed length. In the context of cryptocurrencies like bitcoin, the transactions are taken as input and run through a hashing algorithm (<strong>Bitcoin uses SHA-256</strong>) which gives an output of a fixed length. (Example: Input "Hi" → Output "3639EFCD...3266B8". Input "Welcome to blockgeeks..." → Output "53A53FC9...C68A7C8".) <strong>No matter how big or small your input is, the output will always have a fixed 256-bits length.</strong> This becomes critical when you are dealing with a huge amount of data and transactions. Instead of remembering the input data which could be huge, you can just remember the hash and keep track.</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <h4>7.3.4. How Blockchain Works</h4>
+
+    <p>Picture a <strong>spreadsheet that is duplicated thousands of times across a network of computers</strong>. Then imagine that this network is designed to <strong>regularly update this spreadsheet</strong> and you have a basic understanding of the blockchain.</p>
+
+    <p>Information held on a blockchain exists as a <strong>shared and continually reconciled database</strong>. This is a way of using the network that has obvious benefits. The blockchain database <strong>isn't stored in any single location</strong>, meaning the records it keeps are <strong>truly public and easily verifiable</strong>. <strong>No centralized version</strong> of this information exists for a hacker to corrupt. Hosted by millions of computers simultaneously, its data is <strong>accessible to anyone on the internet</strong>.</p>
+
+    <p><strong>The Google Spreadsheet Analogy:</strong></p>
+    <p>"The traditional way of sharing documents with collaboration is to send a Microsoft Word document to another recipient and ask them to make revisions to it. The problem with that scenario is that you need to wait until receiving a return copy before you can see or make other changes because you are locked out of editing it until the other person is done with it. That's how databases work today. Two owners can't be messing with the same record at once. That's how banks maintain money balances and transfers; they briefly lock access (or decrease the balance) while they make a transfer, then update the other side, then re-open access (or update again). With Google Docs (or Google Sheets), both parties have access to the same document at the same time, and the single version of that document is always visible to both of them. It is like a shared ledger, but it is a shared document. The distributed part comes into play when sharing involves a number of people."</p>
+
+    <p>Imagine the number of legal documents that should be used that way. Instead of passing them to each other, losing track of versions, and not being in sync with the other version, why can't all business documents become shared instead of transferred back and forth? So many types of legal contracts would be ideal for that kind of workflow. <strong>You don't need a blockchain to share documents, but the shared documents analogy is a powerful one.</strong></p>
+
+    <p>The reason why the blockchain has gained so much admiration is that:</p>
+    <ul>
+        <li>It is <strong>not owned by a single entity</strong>, hence it is decentralized.</li>
+        <li>The data is <strong>cryptographically stored inside</strong>.</li>
+        <li>The blockchain is <strong>immutable</strong>, so no one can tamper with the data that is inside the blockchain.</li>
+        <li>The blockchain is <strong>transparent</strong> so one can track the data if they want to.</li>
+    </ul>
+
+    <hr>
+
+    <h4>7.3.5. Why do people use the peer-to-peer network?</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 7.13 (From Module):</strong>
+        <ul>
+            <li><em>What is peer to peer means? Does it have a relationship with BitTorrent?</em></li>
+        </ul>
+    </div>
+
+    <p>One of the main uses of the <strong>peer-to-peer network</strong> is file sharing, also called <strong>torrenting</strong>. If you are to use a client-server model for downloading, then it is usually extremely slow and entirely dependent on the health of the server. Plus, as we said, it is prone to censorship.</p>
+
+    <p>However, in a peer-to-peer system, there is <strong>no central authority</strong>, and hence even if one of the peers in the network goes out of the race, you still have more peers to download from. Plus, it is <strong>not subject to the idealistic standards of a central system</strong>.</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #38bdf8;">
+        <strong>📌 Comparison: Centralized vs. Decentralized Downloading</strong>
+        <p><strong>Traditional Centralized Downloading:</strong> Slow, Single point of failure, High bandwidth usage for the server.</p>
+        <p><strong>Decentralized Peer-to-Peer Downloading:</strong> Fast, No single point of failure, All downloaders are also uploaders.</p>
+    </div>
+
+    <hr>
+
+    <h4>7.3.6. Application of blockchain</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 7.14 (From Module):</strong>
+        <ul>
+            <li><em>List some applications of blockchain in business, file storage, in supply chain auditing?</em></li>
+        </ul>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Application</th><th>Description</th></tr>
+            <tr>
+                <td><strong>A. The sharing economy</strong></td>
+                <td>With companies like Uber and Airbnb flourishing, the sharing economy is already a proven success. Currently, however, users who want to hail a ride-sharing service have to rely on an intermediary like Uber. By enabling <strong>peer-to-peer payments</strong>, the blockchain opens the door to direct interaction between parties—a truly decentralized sharing economy results.</td>
+            </tr>
+            <tr>
+                <td><strong>B. Crowdfunding</strong></td>
+                <td>Crowdfunding initiatives like Kickstarter and GoFundMe are doing the advance work for the emerging peer-to-peer economy. Blockchains take this interest to the next level, potentially creating <strong>crowd-sourced venture capital funds</strong>. In 2016, one such experiment, the Ethereum-based DAO (Decentralized Autonomous Organization), raised an astonishing <strong>$200 million USD</strong> in just over two months.</td>
+            </tr>
+            <tr>
+                <td><strong>C. Governance</strong></td>
+                <td>By making the results fully transparent and publicly accessible, distributed database technology could bring <strong>full transparency to elections</strong> or any other kind of poll taking. Ethereum-based smart contracts help to automate the process. The app, Boardroom, enables <strong>organizational decision-making to happen on the blockchain</strong>. In practice, this means company governance becomes fully transparent and verifiable when managing digital assets, equity, or information.</td>
+            </tr>
+            <tr>
+                <td><strong>D. Supply chain auditing</strong></td>
+                <td>Consumers increasingly want to know that the ethical claims companies make about their products are real. Distributed ledgers provide an <strong>easy way to certify that the backstories of the things we buy are genuine</strong>. Transparency comes with blockchain-based timestamping of a date and location — on ethical diamonds, for instance — that corresponds to a product number. The UK-based Provenance offers supply chain auditing for a range of consumer goods. Making use of the Ethereum blockchain, a Provenance pilot project ensures that fish sold in Sushi restaurants in Japan have been <strong>sustainably harvested</strong> by its suppliers in Indonesia.</td>
+            </tr>
+            <tr>
+                <td><strong>E. File storage</strong></td>
+                <td>Decentralizing file storage on the internet brings clear benefits. Distributing data throughout the network <strong>protects files from getting hacked or lost</strong>. Interplanetary File System (IPFS) makes it easy to conceptualize how a distributed web might operate. Similar to the way a BitTorrent moves data around the internet, IPFS gets rid of the need for centralized client-server relationships (i.e., the current web). An internet made up of completely decentralized websites has the potential to <strong>speed up file transfer and streaming times</strong>.</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 2)</h4>
+        <ul>
+            <li><strong>Blockchain:</strong> A growing list of cryptographically linked blocks containing a hash, timestamp, and transaction data.</li>
+            <li><strong>History:</strong> Haber & Stornetta (1991), Satoshi Nakamoto (2008 - Bitcoin).</li>
+            <li><strong>3 Pillars:</strong> Decentralization (no single owner), Transparency (public addresses show all transactions), Immutability (data cannot be tampered with due to SHA-256 hashing).</li>
+            <li><strong>How it works:</strong> Transaction → Verification by thousands of computers → Stored in a block → Given a unique hash → Added to the chain.</li>
+            <li><strong>Peer-to-Peer:</strong> No central authority, fast, no single point of failure (used in torrenting).</li>
+            <li><strong>Applications:</strong> Sharing economy (Uber/Airbnb replacement), Crowdfunding (DAOs), Governance (transparent elections), Supply chain auditing (Provenance), File storage (IPFS).</li>
+        </ul>
+    </div>
+</div>

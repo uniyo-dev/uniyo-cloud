@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 1,
+    "title": "Part 3 Practice: Enabling Devices and Network (Programmable Devices)",
+    "questions": [
+        {
+            "id": 1,
+            "text": "According to the module, what are the four basic kinds of devices in digital electronic systems?",
+            "options": [
+                "A) Input, Output, Storage, and Processors",
+                "B) Memory, Microprocessors, Logic, and Networks",
+                "C) Hardware, Software, Firmware, and Malware",
+                "D) Sensors, Actuators, Controllers, and Switches"
+            ],
+            "correct_answer": "B) Memory, Microprocessors, Logic, and Networks",
+            "explanation": "The module explicitly states: 'In the world of digital electronic systems, there are four basic kinds of devices: memory, microprocessors, logic, and networks.' Options A, C, and D are not mentioned in the module.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the primary function of memory devices in a digital system?",
+            "options": [
+                "A) To execute software instructions for running applications",
+                "B) To store random information such as spreadsheet or database contents",
+                "C) To provide device-to-device interfacing and signal processing",
+                "D) To connect multiple computers and share data"
+            ],
+            "correct_answer": "B) To store random information such as spreadsheet or database contents",
+            "explanation": "The module states: 'Memory devices store random information such as the contents of a spreadsheet or database.' Option A is microprocessors, C is logic devices, D is networks.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "Why is a computer fundamentally referred to as a programmable device?",
+            "options": [
+                "A) Because it can be turned on and off with a power button",
+                "B) Because it follows a set of instructions to perform tasks",
+                "C) Because it has a graphical user interface (GUI)",
+                "D) Because it requires electricity to function"
+            ],
+            "correct_answer": "B) Because it follows a set of instructions to perform tasks",
+            "explanation": "The module explains: 'Because what makes a computer a computer is that it follows a set of instructions. Many electronic devices are computers that perform only one operation, but they are still following instructions.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "Which of the following is an example of a Programmable Device explicitly listed in the module?",
+            "options": [
+                "A) Intel Core i9 Processor",
+                "B) Atmel's AT91CAP7L",
+                "C) AMD Ryzen 9",
+                "D) Nvidia RTX 4090 GPU"
+            ],
+            "correct_answer": "B) Atmel's AT91CAP7L",
+            "explanation": "The module lists specific programmable devices including: 'Atmel's AT91CAP7L'. The others are general consumer processors not specifically listed in the module's list of programmable devices.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What does the acronym SED stand for in the context of network equipment?",
+            "options": [
+                "A) Service Enabling Devices",
+                "B) System Execution Drivers",
+                "C) Software Engineering Design",
+                "D) Security Encryption Devices"
+            ],
+            "correct_answer": "A) Service Enabling Devices",
+            "explanation": "The module explicitly states: 'A full range of network-related equipment referred to as Service Enabling Devices (SEDs)...'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Which of the following is NOT listed as a Service Enabling Device (SED) in the module?",
+            "options": [
+                "A) Modems",
+                "B) Routers",
+                "C) Switches",
+                "D) Microprocessors"
+            ],
+            "correct_answer": "D) Microprocessors",
+            "explanation": "The module lists Modems, Routers, and Switches under SEDs. Microprocessors are listed earlier as a basic kind of device, not specifically as an SED.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What do the acronyms FPGA, CPLD, and PLD refer to?",
+            "options": [
+                "A) Types of memory devices used in computers",
+                "B) Types of programmable devices (chips) used in digital systems",
+                "C) Types of network appliances",
+                "D) Types of microprocessors"
+            ],
+            "correct_answer": "B) Types of programmable devices (chips) used in digital systems",
+            "explanation": "The module states: 'Programmable devices (see Figure 1.5) usually refer to chips that incorporate field programmable logic devices (FPGAs), complex programmable logic devices (CPLD) and programmable logic devices (PLD).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What is a primary function of logic devices in an electronic system?",
+            "options": [
+                "A) To store database contents indefinitely",
+                "B) To execute video games and web browsers",
+                "C) To provide specific functions like data communication, signal processing, and timing control",
+                "D) To connect to the Internet and share files"
+            ],
+            "correct_answer": "C) To provide specific functions like data communication, signal processing, and timing control",
+            "explanation": "The module states: 'Logic devices provide specific functions, including device-to-device interfacing, data communication, signal processing, data display, timing and control operations...'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "Which of the following is the most well-known example of a network as described in the module?",
+            "options": [
+                "A) A standalone desktop computer",
+                "B) A single microprocessor chip",
+                "C) The Internet",
+                "D) A logic gate circuit"
+            ],
+            "correct_answer": "C) The Internet",
+            "explanation": "The module explicitly states: 'An excellent example of a network is the Internet, which connects millions of people all over the world.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is the analog equivalent of digital programmable logic devices?",
+            "options": [
+                "A) Digital signal processors (DSPs)",
+                "B) Field-programmable analog arrays (FPAAs)",
+                "C) Microcontrollers (MCUs)",
+                "D) Network switches"
+            ],
+            "correct_answer": "B) Field-programmable analog arrays (FPAAs)",
+            "explanation": "The module states: 'There are also devices that are the analog equivalent of these called field-programmable analog arrays.'",
+            "difficulty": "hard"
+        }
+    ]
+}

@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 3,
+    "title": "Part 4 Practice: Types of AI & Mapping Human Thinking to AI",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What are the two main ways AI is classified according to the module?",
+            "options": [
+                "A) Fast AI and Slow AI.",
+                "B) Based on strength and based on functionality.",
+                "C) Based on color and based on size.",
+                "D) Based on programming language and based on operating system."
+            ],
+            "correct_answer": "B) Based on strength and based on functionality.",
+            "explanation": "The module states: 'There are mainly two types of the main categorization which are based on strength and based on functionality of AI.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is a key characteristic of Narrow AI (Weak AI)?",
+            "options": [
+                "A) It can perform any intellectual task like a human.",
+                "B) It is the most common and currently available AI, but it is limited to one specific task.",
+                "C) It has its own consciousness and self-awareness.",
+                "D) It can understand human emotions and beliefs."
+            ],
+            "correct_answer": "B) It is the most common and currently available AI, but it is limited to one specific task.",
+            "explanation": "The module states: 'Narrow AI is a type of AI which is able to perform a dedicated task with intelligence. The most common and currently available AI in the world is Narrow AI.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is a major challenge preventing General AI from being developed today?",
+            "options": [
+                "A) Lack of interest from researchers.",
+                "B) Hardware limitations, energy consumption, and catastrophic memory loss.",
+                "C) Lack of programming languages.",
+                "D) Too much public criticism."
+            ],
+            "correct_answer": "B) Hardware limitations, energy consumption, and catastrophic memory loss.",
+            "explanation": "The module states: 'It may arrive within the next 20 or so years but it has challenges relating to hardware, the energy consumption required in today's powerful machines, and the need to solve for catastrophic memory loss.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "Which type of AI based on functionality is the most basic, and does not store memories or past experiences?",
+            "options": [
+                "A) Limited Memory",
+                "B) Theory of Mind",
+                "C) Reactive Machines",
+                "D) Self-Awareness"
+            ],
+            "correct_answer": "C) Reactive Machines",
+            "explanation": "The module states: 'Purely reactive machines are the most basic types of Artificial Intelligence. Such AI systems do not store memories or past experiences for future actions.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 5,
+            "text": "Which of the following is an example of a Reactive Machine?",
+            "options": [
+                "A) Apple Siri",
+                "B) IBM Deep Blue (the chess computer)",
+                "C) A self-driving car",
+                "D) An AI chatbot"
+            ],
+            "correct_answer": "B) IBM Deep Blue (the chess computer)",
+            "explanation": "The module explicitly states: 'Deep Blue system is an example of reactive machines.' Deep Blue analyzes the current chess board and makes the best move, without remembering past games.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Which type of AI based on functionality is exemplified by self-driving cars?",
+            "options": [
+                "A) Reactive Machines",
+                "B) Limited Memory",
+                "C) Theory of Mind",
+                "D) Self-Awareness"
+            ],
+            "correct_answer": "B) Limited Memory",
+            "explanation": "The module states: 'Self-driving cars are one of the best examples of Limited Memory systems. These cars can store the recent speed of nearby cars, the distance of other cars, speed limits, and other information to navigate the road.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What are the three stages of human thinking described in the module?",
+            "options": [
+                "A) Input, Processing, Output",
+                "B) Observe, Interpret, Decide",
+                "C) Think, Analyze, Act",
+                "D) Plan, Execute, Review"
+            ],
+            "correct_answer": "B) Observe, Interpret, Decide",
+            "explanation": "The module states: 'How does a human being think? Intelligence or the cognitive process is composed of three main stages: Observe, Interpret, and Decide.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "In mapping human thinking to AI components, which AI layer corresponds to the human 'Observe' stage?",
+            "options": [
+                "A) Interpretation Layer",
+                "B) Interaction Layer",
+                "C) Sensing Layer",
+                "D) Decision Layer"
+            ],
+            "correct_answer": "C) Sensing Layer",
+            "explanation": "The module states: 'In AI models, this stage is represented by the sensing layer, which perceives information from the surrounding environment. There are sensing agents such as voice recognition and visual imaging recognition.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "What is the status of 'Theory of Mind' AI according to the module?",
+            "options": [
+                "A) It is fully developed and used in self-driving cars.",
+                "B) This type of AI machines is still not developed, but researchers are making lots of efforts.",
+                "C) It is a hypothetical concept that does not exist.",
+                "D) It was developed in 1997 by IBM."
+            ],
+            "correct_answer": "B) This type of AI machines is still not developed, but researchers are making lots of efforts.",
+            "explanation": "The module states: 'This type of AI machines is still not developed, but researchers are making lots of efforts and improvement for developing such AI machines.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Which AI layer is responsible for performing tasks like robotic movement control and speech generation?",
+            "options": [
+                "A) Sensing Layer",
+                "B) Interpretation Layer",
+                "C) Interaction Layer",
+                "D) Memory Layer"
+            ],
+            "correct_answer": "C) Interaction Layer",
+            "explanation": "The module states: 'After evaluating the input data, the interacting layer performs the necessary tasks. Robotic movement control and speech generation are examples of functions that are implemented in the interacting layer.'",
+            "difficulty": "hard"
+        }
+    ]
+}

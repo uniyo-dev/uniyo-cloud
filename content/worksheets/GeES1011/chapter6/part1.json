@@ -1,0 +1,147 @@
+{
+  "course_code": "Geog1011",
+  "chapter": 6,
+  "title": "Part 1 Practice: Introduction to Soils, Weathering, and Soil Properties",
+  "questions": [
+    {
+      "id": 1,
+      "text": "What is soil?",
+      "diagram": null,
+      "options": [
+        "A) Pure mineral material with no organic content",
+        "B) A dynamic natural body composed of mineral particles, organic matter, water, air, and living organisms",
+        "C) Only the top layer of rocks",
+        "D) A man-made material for construction"
+      ],
+      "correct_answer": "B) A dynamic natural body composed of mineral particles, organic matter, water, air, and living organisms",
+      "explanation": "Correct: Soil is a complex natural body with both mineral and organic components. A is wrong\u2014soil contains organic matter. C is wrong\u2014soil is more than just rock fragments. D is wrong\u2014soil is natural, not man-made.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "text": "Which type of weathering involves the physical breakdown of rocks without changing their chemical composition?",
+      "diagram": null,
+      "options": [
+        "A) Chemical weathering",
+        "B) Biological weathering",
+        "C) Mechanical weathering",
+        "D) Oxidation"
+      ],
+      "correct_answer": "C) Mechanical weathering",
+      "explanation": "Correct: Mechanical weathering breaks rocks physically. A is wrong\u2014chemical weathering changes composition. B is wrong\u2014biological weathering involves organisms. D is wrong\u2014oxidation is a chemical process.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "text": "In which Ethiopian region is freeze-thaw weathering most active?",
+      "diagram": null,
+      "options": [
+        "A) Afar Depression",
+        "B) Simien Mountains",
+        "C) Ogaden Region",
+        "D) Rift Valley"
+      ],
+      "correct_answer": "B) Simien Mountains",
+      "explanation": "Correct: Freeze-thaw occurs in high-altitude areas with freezing temperatures. A is wrong\u2014Afar is hot and dry. C is wrong\u2014Ogaden is lowland. D is wrong\u2014Rift Valley is warmer.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 4,
+      "text": "What chemical process involves the reaction of oxygen with iron-bearing minerals in rocks?",
+      "diagram": null,
+      "options": [
+        "A) Hydrolysis",
+        "B) Carbonation",
+        "C) Oxidation",
+        "D) Solution"
+      ],
+      "correct_answer": "C) Oxidation",
+      "explanation": "Correct: Oxidation is the reaction with oxygen. A is wrong\u2014hydrolysis involves water. B is wrong\u2014carbonation involves CO\u2082. D is wrong\u2014solution involves dissolving in water.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 5,
+      "text": "The red color of Ethiopian Nitisols is primarily due to which chemical weathering process?",
+      "diagram": null,
+      "options": [
+        "A) Hydrolysis",
+        "B) Oxidation",
+        "C) Carbonation",
+        "D) Hydration"
+      ],
+      "correct_answer": "B) Oxidation",
+      "explanation": "Correct: Oxidation of iron minerals forms iron oxides (hematite) giving red color. A is wrong\u2014hydrolysis forms clay. C is wrong\u2014carbonation dissolves carbonates. D is wrong\u2014hydration absorbs water.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 6,
+      "text": "Which soil property measures the soil's ability to retain and exchange nutrients?",
+      "diagram": null,
+      "options": [
+        "A) pH",
+        "B) Texture",
+        "C) Cation Exchange Capacity (CEC)",
+        "D) Bulk density"
+      ],
+      "correct_answer": "C) Cation Exchange Capacity (CEC)",
+      "explanation": "Correct: CEC measures nutrient retention. A is wrong\u2014pH measures acidity. B is wrong\u2014texture measures particle size. D is wrong\u2014bulk density measures soil mass.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 7,
+      "text": "What is the approximate time required to form one centimeter of topsoil?",
+      "diagram": null,
+      "options": [
+        "A) 1-5 years",
+        "B) 10-20 years",
+        "C) 100-400 years",
+        "D) 1000-2000 years"
+      ],
+      "correct_answer": "C) 100-400 years",
+      "explanation": "Correct: Soil formation is extremely slow\u2014100-400 years per centimeter. A is wrong\u2014too short. B is wrong\u2014still too short. D is wrong\u2014too long; full soil profile takes millennia but topsoil formation is 100-400 years.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "text": "Which Ethiopian soil type typically has the highest cation exchange capacity (CEC)?",
+      "diagram": null,
+      "options": [
+        "A) Nitisols",
+        "B) Vertisols",
+        "C) Cambisols",
+        "D) Solonchaks"
+      ],
+      "correct_answer": "B) Vertisols",
+      "explanation": "Correct: Vertisols have high clay content (>50%) giving high CEC (40-60 cmol/kg). A is wrong\u2014Nitisols have 20-30 cmol/kg. C is wrong\u2014Cambisols have moderate CEC. D is wrong\u2014Solonchaks have low CEC due to salinity.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 9,
+      "text": "How do lichens contribute to soil formation in Ethiopia's highlands?",
+      "diagram": null,
+      "options": [
+        "A) By breaking rocks through physical pressure",
+        "B) By secreting acids that dissolve rock minerals",
+        "C) By adding organic matter through decomposition",
+        "D) By holding soil particles together"
+      ],
+      "correct_answer": "B) By secreting acids that dissolve rock minerals",
+      "explanation": "Correct: Lichens secrete organic acids that chemically weather rocks. A is wrong\u2014roots exert physical pressure. C is wrong\u2014lichen decomposition adds organic matter but their main role is chemical weathering. D is wrong\u2014this is a secondary effect.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 10,
+      "text": "Which physical property of soil is most affected by the proportion of sand, silt, and clay particles?",
+      "diagram": null,
+      "options": [
+        "A) Color",
+        "B) Texture",
+        "C) Structure",
+        "D) Porosity"
+      ],
+      "correct_answer": "B) Texture",
+      "explanation": "Correct: Texture is defined by sand/silt/clay ratios. A is wrong\u2014color is influenced by mineral content. C is wrong\u2014structure is about particle arrangement. D is wrong\u2014porosity is about pore space, influenced but not defined by texture.",
+      "difficulty": "hard"
+    }
+  ]
+}

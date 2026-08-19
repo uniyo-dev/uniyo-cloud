@@ -1,0 +1,217 @@
+{
+    "course_code": "Econ1011",
+    "week_number": 5,
+    "title": "VIP Week 5: Market Structure",
+    "questions": [
+        {
+            "id": 1,
+            "text": "A perfectly competitive firm's short-run supply curve is its:",
+            "diagram": null,
+            "options": [
+                "A) ATC curve above AVC",
+                "B) MC curve above AVC",
+                "C) MC curve above ATC",
+                "D) AVC curve"
+            ],
+            "correct_answer": "B) MC curve above AVC",
+            "explanation": "The firm's supply curve is the portion of MC above AVC. Below AVC, the firm shuts down. The MC curve shows how much the firm will supply at each price. Summing all firms' MC curves gives the industry supply curve.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "A monopolist faces demand Q = 100 - P. If MC = 20, what is the profit-maximizing price?",
+            "diagram": null,
+            "options": [
+                "A) 20",
+                "B) 40",
+                "C) 60",
+                "D) 80"
+            ],
+            "correct_answer": "C) 60",
+            "explanation": "First find MR: TR = P×Q = (100-Q)Q = 100Q - Q². MR = dTR/dQ = 100 - 2Q. Set MR = MC: 100 - 2Q = 20 → 2Q = 80 → Q = 40. Price: P = 100 - Q = 100 - 40 = 60. The monopolist produces 40 units and charges 60 Birr.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "Deadweight loss in a monopoly arises because:",
+            "diagram": null,
+            "options": [
+                "A) Price is below marginal cost",
+                "B) Quantity produced is LESS than socially optimal",
+                "C) Too many firms in the market",
+                "D) Government intervention"
+            ],
+            "correct_answer": "B) Quantity produced is LESS than socially optimal",
+            "explanation": "Deadweight loss occurs because the monopolist produces LESS than the socially optimal quantity (where P = MC). Consumers who value the product above MC but below the monopoly price are excluded. This lost consumer surplus is the deadweight loss.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "In the long run, a monopolistically competitive firm operates where:",
+            "diagram": null,
+            "options": [
+                "A) P = MC (like perfect competition)",
+                "B) P > MC but P = ATC (zero economic profit)",
+                "C) P < ATC (economic loss)",
+                "D) P > ATC (economic profit)"
+            ],
+            "correct_answer": "B) P > MC but P = ATC (zero economic profit)",
+            "explanation": "In the long run, monopolistic competitors earn ZERO economic profit (P = ATC) because free entry eliminates profit. However, P > MC (unlike perfect competition) because product differentiation gives firms some pricing power. This is the 'excess capacity' result.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "The Prisoner's Dilemma in oligopoly shows that:",
+            "diagram": null,
+            "options": [
+                "A) Cooperation always prevails",
+                "B) Individual rational behavior leads to suboptimal outcomes",
+                "C) Firms should always raise prices",
+                "D) Government intervention is always beneficial"
+            ],
+            "correct_answer": "B) Individual rational behavior leads to suboptimal outcomes",
+            "explanation": "The Prisoner's Dilemma shows that when each firm acts in its OWN self-interest, the outcome is WORSE than if they cooperated. Both firms would be better off colluding, but each has an incentive to cheat, leading to lower profits for both.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "A natural monopoly is REGULATED by government because:",
+            "diagram": null,
+            "options": [
+                "A) It should be broken up into smaller firms",
+                "B) Competition would be inefficient (wasteful duplication)",
+                "C) It always earns excessive profit",
+                "D) It provides luxury goods"
+            ],
+            "correct_answer": "B) Competition would be inefficient (wasteful duplication)",
+            "explanation": "Natural monopolies are regulated (NOT broken up) because having MULTIPLE firms would be wasteful — two power grids, two water systems would duplicate infrastructure. Instead, government allows one firm but regulates its prices to protect consumers.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "A firm in an oligopoly is LEAST likely to lower prices because:",
+            "diagram": null,
+            "options": [
+                "A) Rivals will ignore the price cut",
+                "B) Rivals will match the price cut, eliminating any benefit",
+                "C) Prices are set by government",
+                "D) Demand is perfectly inelastic"
+            ],
+            "correct_answer": "B) Rivals will match the price cut, eliminating any benefit",
+            "explanation": "In oligopoly, price cuts are SELF-DEFEATING because rivals MATCH the cut to protect their market share. This leads to all firms having lower prices but similar market shares — everyone loses revenue. This explains price rigidity in oligopolies.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Which market structure has the HIGHEST barriers to entry?",
+            "diagram": null,
+            "options": [
+                "A) Perfect competition",
+                "B) Monopolistic competition",
+                "C) Oligopoly",
+                "D) Monopoly"
+            ],
+            "correct_answer": "D) Monopoly",
+            "explanation": "Monopoly has the HIGHEST barriers to entry — new firms CANNOT enter. Barriers include: patents, control of key resources, government franchises, natural monopoly economies of scale, and network effects. Perfect competition has zero barriers.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "In long-run equilibrium, which market structure achieves ALLOCATIVE efficiency (P = MC)?",
+            "diagram": null,
+            "options": [
+                "A) Perfect competition only",
+                "B) Monopoly only",
+                "C) Oligopoly only",
+                "D) All market structures"
+            ],
+            "correct_answer": "A) Perfect competition only",
+            "explanation": "Only PERFECT COMPETITION achieves allocative efficiency (P = MC) in the long run. All other market structures have P > MC, meaning they underproduce relative to the social optimum. This is why perfect competition is considered the 'ideal' benchmark.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Price leadership in oligopoly means:",
+            "diagram": null,
+            "options": [
+                "A) Government sets all prices",
+                "B) One dominant firm sets price and others follow",
+                "C) All firms set prices independently",
+                "D) Prices are determined by consumers"
+            ],
+            "correct_answer": "B) One dominant firm sets price and others follow",
+            "explanation": "PRICE LEADERSHIP occurs when the DOMINANT firm (largest market share) sets the price, and smaller firms FOLLOW. This is a form of tacit collusion (without explicit agreement). Example: A major airline raises fares, and competitors follow.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "A firm has Q = 50, P = 10, TC = 400. What is its economic profit?",
+            "diagram": null,
+            "options": [
+                "A) 50",
+                "B) 100",
+                "C) 400",
+                "D) 500"
+            ],
+            "correct_answer": "B) 100",
+            "explanation": "Economic Profit = Total Revenue - Total Cost = (P × Q) - TC = (10 × 50) - 400 = 500 - 400 = 100. Economic profit is positive, meaning the firm earns more than normal profit. In the long run, competitors would enter.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "Product differentiation in monopolistic competition creates:",
+            "diagram": null,
+            "options": [
+                "A) Perfectly elastic demand for each firm",
+                "B) Downward-sloping demand for each firm",
+                "C) No pricing power",
+                "D) Identical products"
+            ],
+            "correct_answer": "B) Downward-sloping demand for each firm",
+            "explanation": "Product differentiation gives each firm a DOWNWARD-SLOPING demand curve (unlike perfect competition's horizontal curve). The firm can raise price slightly without losing ALL customers because its product is somewhat unique. However, close substitutes limit this pricing power.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "Excess capacity in monopolistic competition means:",
+            "diagram": null,
+            "options": [
+                "A) Firms produce too much",
+                "B) Firms operate below minimum ATC output",
+                "C) Firms cannot produce enough",
+                "D) There are too many firms"
+            ],
+            "correct_answer": "B) Firms operate below minimum ATC output",
+            "explanation": "EXCESS CAPACITY means monopolistic competitors operate at output levels BELOW minimum ATC. Because each firm faces downward-sloping demand, it produces where P = ATC but at less than the efficient scale. This is a social cost of product differentiation.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "A monopoly's MC curve is horizontal at 10. Demand is Q = 100 - 2P. What is the profit-maximizing Q?",
+            "diagram": null,
+            "options": [
+                "A) 20",
+                "B) 40",
+                "C) 60",
+                "D) 80"
+            ],
+            "correct_answer": "B) 40",
+            "explanation": "First express demand as P = 50 - Q/2. TR = P×Q = 50Q - Q²/2. MR = dTR/dQ = 50 - Q. Set MR = MC: 50 - Q = 10 → Q = 40. The monopolist produces 40 units where marginal revenue equals marginal cost.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "Which of the following is TRUE about a monopoly's MR curve?",
+            "diagram": null,
+            "options": [
+                "A) MR curve is above the demand curve",
+                "B) MR curve is below the demand curve (twice as steep)",
+                "C) MR curve is the same as the demand curve",
+                "D) MR curve is horizontal"
+            ],
+            "correct_answer": "B) MR curve is below the demand curve (twice as steep)",
+            "explanation": "For a linear demand curve, the MR curve is TWICE AS STEEP and lies BELOW the demand curve. This is because to sell one more unit, the monopolist must lower the price on ALL units sold, not just the additional unit. This drives a wedge between price and marginal revenue.",
+            "difficulty": "hard"
+        }
+    ]
+}

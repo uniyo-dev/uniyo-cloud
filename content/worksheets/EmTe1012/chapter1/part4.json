@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 1,
+    "title": "Part 4 Practice: Human to Machine Interaction (HMI / HCI)",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What does the acronym HMI stand for in the context of this module?",
+            "options": [
+                "A) Human-Machine Integration",
+                "B) Human-Machine Interaction",
+                "C) High-Memory Interface",
+                "D) Hardware-Management Interface"
+            ],
+            "correct_answer": "B) Human-Machine Interaction",
+            "explanation": "The module starts section 1.4 with: 'Human-machine interaction (HMI) refers to the communication and interaction between a human and a machine via a user interface.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What are the three parts of Human-Computer Interaction (HCI) as defined in the module?",
+            "options": [
+                "A) Hardware, Software, and Firmware",
+                "B) The user, the computer itself, and the ways they work together",
+                "C) Input, Output, and Processing",
+                "D) Data, Information, and Knowledge"
+            ],
+            "correct_answer": "B) The user, the computer itself, and the ways they work together",
+            "explanation": "The module states: 'As its name implies, HCI consists of three parts: the user, the computer itself, and the ways they work together.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "How do users typically interact with computers according to the module?",
+            "options": [
+                "A) Through telepathy or mind control",
+                "B) Directly with hardware for input/output (like displays) and through a software interface (like a GUI)",
+                "C) By physically touching the motherboard",
+                "D) Through manual wiring and soldering"
+            ],
+            "correct_answer": "B) Directly with hardware for input/output (like displays) and through a software interface (like a GUI)",
+            "explanation": "The module says: 'The user interacts directly with hardware for the human input and output such as displays, e.g. through a graphical user interface. The user interacts with the computer over this software interface using the given input and output (I/O) hardware.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the primary goal of Human-Computer Interaction (HCI)?",
+            "options": [
+                "A) To eliminate the need for computers in daily life",
+                "B) To make computers more user-friendly and receptive to the user's needs",
+                "C) To increase the complexity of computer systems",
+                "D) To reduce the processing speed of computers"
+            ],
+            "correct_answer": "B) To make computers more user-friendly and receptive to the user's needs",
+            "explanation": "The module states: 'The goal of HCI is to improve the interaction between users and computers by making computers more user-friendly and receptive to the user's needs.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "Which of the following is NOT listed as a discipline contributing to HCI in the module?",
+            "options": [
+                "A) Cognitive Psychology",
+                "B) Computer Science",
+                "C) Linguistics",
+                "D) Geology"
+            ],
+            "correct_answer": "D) Geology",
+            "explanation": "The module lists Cognitive Psychology, Computer Science, Linguistics, Engineering and Design, Artificial Intelligence, and Human Factors. Geology is not listed.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is a key advantage of good HCI design mentioned in the module?",
+            "options": [
+                "A) It increases the cost of deployment",
+                "B) It reduces solution design time and integration complexity",
+                "C) It makes the system harder to use",
+                "D) It requires more extensive employee training"
+            ],
+            "correct_answer": "B) It reduces solution design time and integration complexity",
+            "explanation": "The module states: 'They also reduce solution design time and integration complexity.' Other advantages include simplicity, ease of deployment, and cost savings.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "How does Cognitive Psychology contribute to HCI?",
+            "options": [
+                "A) By building the actual software code",
+                "B) By studying human limitations, information processing, and learning",
+                "C) By designing the physical hardware",
+                "D) By analyzing network traffic"
+            ],
+            "correct_answer": "B) By studying human limitations, information processing, and learning",
+            "explanation": "The module explains that Cognitive Psychology contributes to HCI by studying 'limitations, information processing, performance prediction, cooperative working, and capabilities.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Which discipline helps in designing voice user interfaces that understand natural languages like Amharic or Oromo?",
+            "options": [
+                "A) Computer Science",
+                "B) Linguistics",
+                "C) Human Factors",
+                "D) Artificial Intelligence"
+            ],
+            "correct_answer": "B) Linguistics",
+            "explanation": "The module lists Linguistics as a contributing discipline. Linguistics helps in the design of natural language processing (NLP) and language-based interactions, ensuring the computer understands human language.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "What does the module state about 'natural user interfaces' like gestures?",
+            "options": [
+                "A) They are outdated and rarely used today",
+                "B) They have gained increasing attention as they allow humans to control machines through natural and intuitive behaviors",
+                "C) They are only used in video games",
+                "D) They require extensive coding knowledge to use"
+            ],
+            "correct_answer": "B) They have gained increasing attention as they allow humans to control machines through natural and intuitive behaviors",
+            "explanation": "The module states: 'Nowadays, natural user interfaces such as gestures have gained increasing attention as they allow humans to control machines through natural and intuitive behaviors.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Which of the following is NOT one of the main advantages of HCI listed in the module?",
+            "options": [
+                "A) Simplicity",
+                "B) Ease of deployment and operations",
+                "C) Cost savings for smaller set-ups",
+                "D) Increased integration complexity"
+            ],
+            "correct_answer": "D) Increased integration complexity",
+            "explanation": "The module explicitly lists 'simplicity, ease of deployment & operations and cost savings for smaller set-ups' as advantages. It also states they 'reduce solution design time and integration complexity,' so increased complexity is the opposite of what HCI achieves.",
+            "difficulty": "hard"
+        }
+    ]
+}

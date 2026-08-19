@@ -1,0 +1,162 @@
+<div class="lesson-section">
+    <h2>Chapter 3: Matrices, Determinant and Systems of Linear Equations</h2>
+    <h3>Part 7: Systems of Linear Equations: Gaussian Elimination, Cramer’s Rule, & Inverse Method</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In this final part of Chapter 3, we apply all the concepts we have learned—matrices, determinants, row operations, and inverses—to solve <strong>systems of linear equations</strong>. We explore three powerful methods: <strong>Gaussian Elimination</strong> (row reduction), <strong>Cramer’s Rule</strong> (using determinants), and the <strong>Inverse Method</strong> (using the matrix inverse).</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Solve a system using Gaussian elimination.</li>
+            <li>Apply Cramer’s rule to solve systems with a unique solution.</li>
+            <li>Use the inverse method to solve linear systems.</li>
+            <li>Determine the number of solutions using the rank of a matrix.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>3.9 System of Linear Equations</h4>
+
+    <p>Consider an oil refinery that produces gasoline, kerosene, and jet fuel from light crude oil and heavy crude oil. The refinery produces 0.3, 0.2, and 0.4 of gasoline, kerosene, and jet fuel, respectively, per barrel of light crude oil. And it produces 0.2, 0.4, and 0.3 of gasoline, kerosene, and jet fuel, respectively, per barrel of heavy crude oil. This is shown in Table 2. Note that 10% of each of the crude oil is lost during the refining process.</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th></th><th>Gasoline</th><th>Kerosene</th><th>Jet Fuel</th></tr>
+            <tr><td><strong>Light Crude Oil</strong></td><td>0.3</td><td>0.2</td><td>0.4</td></tr>
+            <tr><td><strong>Heavy Crude Oil</strong></td><td>0.2</td><td>0.4</td><td>0.3</td></tr>
+        </table>
+    </div>
+
+    <p>Suppose that the refinery has contracted to deliver 550 barrels of gasoline, 500 barrels of kerosene, and 750 barrels of jet fuel. The problem is to find the number of barrels of each crude oil that satisfies the demand.</p>
+
+    <p>If \(l\) and \(h\) represent the number of barrels of light and heavy crude oil, respectively, then the given problem can be expressed as a system of linear equations:</p>
+    <p>\[
+    0.3l + 0.2h = 550, \quad 0.2l + 0.4h = 500, \quad 0.4l + 0.3h = 750.
+    \]</p>
+
+    <div class="diagram-container">
+        <svg width="400" height="200" viewBox="0 0 400 200">
+            <rect width="400" height="200" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Oil Refinery Problem</text>
+            
+            <rect x="20" y="60" width="160" height="40" fill="#14b8a6" rx="8"/>
+            <text x="100" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">🛢️ Light Crude (\(l\))</text>
+
+            <rect x="220" y="60" width="160" height="40" fill="#f43f5e" rx="8"/>
+            <text x="300" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">🛢️ Heavy Crude (\(h\))</text>
+
+            <text x="200" y="140" fill="#f8fafc" font-size="10" text-anchor="middle">📖 \(0.3l + 0.2h = 550\), \(0.2l + 0.4h = 500\), \(0.4l + 0.3h = 750\)</text>
+        </svg>
+    </div>
+
+    <p>This linear system has three equations and two unknowns. The coefficient matrix is:</p>
+    <p>\[
+    A = egin{bmatrix} 0.3 & 0.2 \ 0.2 & 0.4 \ 0.4 & 0.3 \end{bmatrix}
+    \]</p>
+
+    <hr>
+
+    <h4>Possible Solutions of a Linear System</h4>
+
+    <p>For a system of linear equations, precisely one of the following statements is true:</p>
+    <ol>
+        <li><strong>Unique Solution:</strong> The system is consistent and has exactly one solution.</li>
+        <li><strong>Infinitely Many Solutions:</strong> The system is consistent and has infinitely many solutions.</li>
+        <li><strong>No Solution:</strong> The system is inconsistent.</li>
+    </ol>
+
+    <div class="diagram-container">
+        <svg width="400" height="200" viewBox="0 0 400 200">
+            <rect width="400" height="200" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Possible Solutions of a Linear System</text>
+            
+            <rect x="20" y="60" width="100" height="40" fill="#14b8a6" rx="8"/>
+            <text x="70" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">✅ Unique</text>
+
+            <rect x="150" y="60" width="100" height="40" fill="#facc15" rx="8"/>
+            <text x="200" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">♾️ Infinite</text>
+
+            <rect x="280" y="60" width="100" height="40" fill="#f43f5e" rx="8"/>
+            <text x="330" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">❌ No Solution</text>
+
+            <text x="200" y="140" fill="#f8fafc" font-size="10" text-anchor="middle">📖 Rank(\(A\)) vs. Rank(\([A|b]\)) determines the outcome.</text>
+        </svg>
+    </div>
+
+    <hr>
+
+    <h4>3.9.1 Gaussian Elimination</h4>
+
+    <p>Gaussian elimination, also known as row reduction, is used for solving a system of linear equations. It is usually understood as a sequence of elementary row operations performed on the corresponding matrix of coefficients.</p>
+
+    <p>The <strong>augmented matrix</strong> which represents the system is given by \([A \mid b]\).</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Theorem 3.13:</strong>
+        <p>Row-equivalent linear systems have the <strong>same set of solutions</strong>.</p>
+    </div>
+
+    <p><strong>Steps for Gaussian Elimination:</strong></p>
+    <ol>
+        <li>Write the augmented matrix for the linear system.</li>
+        <li>Use elementary row operations to rewrite the matrix in row echelon form.</li>
+        <li>Write the system of linear equations corresponding to the matrix in row echelon form, and use <strong>back-substitution</strong> to find the solution.</li>
+    </ol>
+
+    <hr>
+
+    <h4>3.9.2 Cramer’s Rule</h4>
+
+    <p>Cramer’s Rule is a method for solving linear systems where the number of equations and the number of unknowns are equal. Cramer’s rule relies on determinants.</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Theorem 3.15 (Cramer’s Rule):</strong>
+        <p>If a linear system of \(n\) equations in \(n\) unknowns has a nonzero coefficient determinant \(D = |A|\), then the system has precisely one solution. This solution is given by:</p>
+        <p>\[
+        x_1 = rac{D_1}{D}, \quad x_2 = rac{D_2}{D}, \quad \dots, \quad x_n = rac{D_n}{D},
+        \]</p>
+        <p>where \(D_j\) is the determinant of the matrix obtained from \(A\) by replacing the \(j\)-th column with the column vector \(b\).</p>
+    </div>
+
+    <hr>
+
+    <h4>3.9.3 Inverse Method</h4>
+
+    <p>The Inverse method is one of the important methods to solve a linear system with \(n\) equations in \(n\) unknowns.</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Theorem 3.16:</strong>
+        <p>If \(A\) is an invertible matrix, then for each \(b \in \mathbb{R}^n\), the linear system \(Ax = b\) has a <strong>unique solution</strong>, which is given by:</p>
+        <p>\[
+        x = A^{-1}b.
+        \]</p>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="200" viewBox="0 0 400 200">
+            <rect width="400" height="200" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Inverse Method: \(x = A^{-1}b\)</text>
+            
+            <rect x="20" y="60" width="160" height="40" fill="#14b8a6" rx="8"/>
+            <text x="100" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(Ax = b\)</text>
+
+            <rect x="220" y="60" width="160" height="40" fill="#f43f5e" rx="8"/>
+            <text x="300" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(x = A^{-1}b\)</text>
+
+            <text x="200" y="140" fill="#f8fafc" font-size="10" text-anchor="middle">📖 Multiply both sides by \(A^{-1}\) on the left.</text>
+        </svg>
+    </div>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 7)</h4>
+        <ul>
+            <li><strong>Augmented Matrix:</strong> \([A \mid b]\).</li>
+            <li><strong>Gaussian Elimination:</strong> Row reduce \([A \mid b]\) to row echelon form, then use back-substitution.</li>
+            <li><strong>Cramer’s Rule:</strong> \(x_j = D_j / D\). Requires \(D = \det(A) 
+eq 0\).</li>
+            <li><strong>Inverse Method:</strong> \(x = A^{-1}b\). Requires \(A\) to be invertible.</li>
+            <li><strong>Consistency:</strong> Unique if rank(\(A\)) = rank([\(A|b\)]) = number of unknowns. Infinite if rank(\(A\)) = rank([\(A|b\)]) < number of unknowns. No solution if rank(\(A\)) < rank([\(A|b\)]).</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+venv/
+env/
+UNIYO.db
+UNIYO.db-wal
+UNIYO.db-shm
+uploads/students/*
+!uploads/students/default.png
+uploads/payments/*
+certificates/pdf/*
+certificates/qr/*
+backups/
+logs/
+.env

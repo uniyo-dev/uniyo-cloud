@@ -1,0 +1,147 @@
+{
+    "course_code": "Econ1011",
+    "chapter": 6,
+    "title": "Part 4 Practice: Macroeconomic Policy Instruments",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Monetary policy is conducted by:",
+            "diagram": null,
+            "options": [
+                "A) The Ministry of Finance",
+                "B) The Central Bank (NBE)",
+                "C) Commercial banks",
+                "D) The Parliament"
+            ],
+            "correct_answer": "B) The Central Bank (NBE)",
+            "explanation": "MONETARY POLICY is the responsibility of the CENTRAL BANK (National Bank of Ethiopia). It controls money supply, interest rates, and banking regulations. FISCAL POLICY is the government's job (Ministry of Finance).",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Fiscal policy involves:",
+            "diagram": null,
+            "options": [
+                "A) Controlling money supply",
+                "B) Government TAXATION and SPENDING decisions",
+                "C) Setting interest rates",
+                "D) Regulating banks"
+            ],
+            "correct_answer": "B) Government TAXATION and SPENDING decisions",
+            "explanation": "FISCAL POLICY is about government TAXES (revenue) and SPENDING (expenditure). To stimulate the economy, government can CUT TAXES or INCREASE SPENDING. To cool inflation, it can RAISE TAXES or CUT SPENDING.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 3,
+            "text": "During a RECESSION, the appropriate fiscal policy is:",
+            "diagram": null,
+            "options": [
+                "A) Contractionary (reduce spending, increase taxes)",
+                "B) Expansionary (increase spending, reduce taxes)",
+                "C) No policy change",
+                "D) Only monetary policy works"
+            ],
+            "correct_answer": "B) Expansionary (increase spending, reduce taxes)",
+            "explanation": "During a RECESSION, the economy needs STIMULUS. EXPANSIONARY fiscal policy (more spending, lower taxes) increases aggregate demand, creating jobs and boosting GDP. This is like adding fuel to a slowing engine.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "To COMBAT high inflation, the central bank should:",
+            "diagram": null,
+            "options": [
+                "A) Lower interest rates",
+                "B) Raise interest rates",
+                "C) Print more money",
+                "D) Buy government bonds"
+            ],
+            "correct_answer": "B) Raise interest rates",
+            "explanation": "To fight INFLATION, the central bank RAISES interest rates. Higher rates make borrowing MORE expensive, reducing spending and cooling demand. This slows price increases. It's like applying brakes to a speeding car.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Open Market Operations involve:",
+            "diagram": null,
+            "options": [
+                "A) Government changing tax rates",
+                "B) Central bank buying/selling government securities",
+                "C) Banks lending to each other",
+                "D) International trade agreements"
+            ],
+            "correct_answer": "B) Central bank buying/selling government securities",
+            "explanation": "OPEN MARKET OPERATIONS are when the central bank BUYS government bonds (increases money supply) or SELLS them (decreases money supply). This is the most frequently used monetary policy tool.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "If NBE increases reserve requirements for banks, what happens?",
+            "diagram": null,
+            "options": [
+                "A) Banks can lend more",
+                "B) Banks must hold more reserves and lend LESS",
+                "C) Interest rates fall",
+                "D) Money supply increases"
+            ],
+            "correct_answer": "B) Banks must hold more reserves and lend LESS",
+            "explanation": "RESERVE REQUIREMENTS are the minimum percentage of deposits banks must hold as reserves. INCREASING them means banks keep more cash and lend LESS, reducing money supply. This is contractionary monetary policy.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "A BUDGET DEFICIT means:",
+            "diagram": null,
+            "options": [
+                "A) Government revenue > spending",
+                "B) Government spending > revenue",
+                "C) Exports > imports",
+                "D) Imports > exports"
+            ],
+            "correct_answer": "B) Government spending > revenue",
+            "explanation": "BUDGET DEFICIT occurs when government SPENDING exceeds TAX REVENUE. This means the government must BORROW money. Budget SURPLUS is when revenue > spending. Persistent deficits increase government debt.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 8,
+            "text": "Which policy instrument is FASTER to implement?",
+            "diagram": null,
+            "options": [
+                "A) Fiscal policy (takes time through parliament)",
+                "B) Monetary policy (central bank can act quickly)",
+                "C) Both take the same time",
+                "D) Neither works quickly"
+            ],
+            "correct_answer": "B) Monetary policy (central bank can act quickly)",
+            "explanation": "MONETARY policy is FASTER because the central bank can change interest rates at its regular meetings. FISCAL policy is SLOWER because budget changes must go through parliament, which involves political debate and takes time.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Expansionary MONETARY policy involves:",
+            "diagram": null,
+            "options": [
+                "A) Raising interest rates",
+                "B) Lowering interest rates and increasing money supply",
+                "C) Increasing taxes",
+                "D) Reducing government spending"
+            ],
+            "correct_answer": "B) Lowering interest rates and increasing money supply",
+            "explanation": "EXPANSIONARY monetary policy (easy money policy) LOWERS interest rates and INCREASES money supply to stimulate borrowing, spending, and economic growth. Used during recessions. CONTRACTIONARY policy does the opposite.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Who is responsible for FISCAL policy in Ethiopia?",
+            "diagram": null,
+            "options": [
+                "A) National Bank of Ethiopia",
+                "B) Ministry of Finance and Parliament",
+                "C) Commercial banks",
+                "D) Private companies"
+            ],
+            "correct_answer": "B) Ministry of Finance and Parliament",
+            "explanation": "FISCAL policy (taxes and spending) is the responsibility of the GOVERNMENT — the Ministry of Finance proposes the budget, and Parliament approves it. The National Bank of Ethiopia handles MONETARY policy independently.",
+            "difficulty": "medium"
+        }
+    ]
+}

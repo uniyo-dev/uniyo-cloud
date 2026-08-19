@@ -1,0 +1,288 @@
+{
+    "course_code": "GeES1011",
+    "chapter_number": 5,
+    "week_number": 1,
+    "title": "VIP Chapter 5 Week 1: Elements and Controls of Climate",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Summer Solstice occurs when the sun is overhead at:",
+            "diagram": null,
+            "options": [
+                "A) Equator",
+                "B) Tropic of Cancer (23.5°N)",
+                "C) Tropic of Capricorn (23.5°S)",
+                "D) North Pole"
+            ],
+            "correct_answer": "B) Tropic of Cancer (23.5°N)",
+            "explanation": "June 21: Sun overhead at Tropic of Cancer.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "The EQUINOX occurs when the sun is overhead at:",
+            "diagram": null,
+            "options": [
+                "A) Tropic of Cancer",
+                "B) Tropic of Capricorn",
+                "C) Equator",
+                "D) Arctic Circle"
+            ],
+            "correct_answer": "C) Equator",
+            "explanation": "Equinox: Sun overhead at equator (equal day/night).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "Why is the wet adiabatic lapse rate SLOWER than dry?",
+            "diagram": null,
+            "options": [
+                "A) Water is heavy",
+                "B) Latent heat release during condensation",
+                "C) Wet air sinks",
+                "D) Clouds block sunlight"
+            ],
+            "correct_answer": "B) Latent heat release during condensation",
+            "explanation": "Condensation releases latent heat, slowing cooling.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "At 3,000m altitude, temperature is approximately how much cooler than sea level?",
+            "diagram": null,
+            "options": [
+                "A) 10°C",
+                "B) 19.5°C",
+                "C) 25°C",
+                "D) 30°C"
+            ],
+            "correct_answer": "B) 19.5°C",
+            "explanation": "6.5°C/km × 3km = 19.5°C cooler.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Ethiopia's tropical location means it receives:",
+            "diagram": null,
+            "options": [
+                "A) Oblique sunlight",
+                "B) Direct sunlight year-round",
+                "C) No sunlight",
+                "D) Only winter sunlight"
+            ],
+            "correct_answer": "B) Direct sunlight year-round",
+            "explanation": "Near equator = direct overhead sun throughout year.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "Winter Solstice (Dec 21) has the sun overhead at:",
+            "diagram": null,
+            "options": [
+                "A) Equator",
+                "B) Tropic of Cancer",
+                "C) Tropic of Capricorn (23.5°S)",
+                "D) South Pole"
+            ],
+            "correct_answer": "C) Tropic of Capricorn (23.5°S)",
+            "explanation": "Dec 21: Sun overhead at Tropic of Capricorn.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "The environmental lapse rate applies to:",
+            "diagram": null,
+            "options": [
+                "A) Rising air parcels",
+                "B) The actual atmosphere",
+                "C) Saturated air only",
+                "D) Dry air only"
+            ],
+            "correct_answer": "B) The actual atmosphere",
+            "explanation": "Environmental lapse rate = actual atmosphere temperature profile.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "A dry air parcel rises 2,000m. How much does it cool?",
+            "diagram": null,
+            "options": [
+                "A) 10°C",
+                "B) 13°C",
+                "C) 20°C",
+                "D) 5°C"
+            ],
+            "correct_answer": "C) 20°C",
+            "explanation": "Dry adiabatic: 10°C/km × 2km = 20°C cooling.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "A saturated air parcel rises 2,000m. How much does it cool?",
+            "diagram": null,
+            "options": [
+                "A) 10°C",
+                "B) 13°C",
+                "C) 20°C",
+                "D) 5°C"
+            ],
+            "correct_answer": "A) 10°C",
+            "explanation": "Wet adiabatic: 5°C/km × 2km = 10°C cooling.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Which factor MOST determines Ethiopia's climate zones?",
+            "diagram": null,
+            "options": [
+                "A) Longitude",
+                "B) Altitude",
+                "C) Distance from sea",
+                "D) Wind direction only"
+            ],
+            "correct_answer": "B) Altitude",
+            "explanation": "Altitude = primary climate control in Ethiopia.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "March 21 is known as:",
+            "diagram": null,
+            "options": [
+                "A) Summer Solstice",
+                "B) Vernal (Spring) Equinox",
+                "C) Winter Solstice",
+                "D) Autumn Equinox"
+            ],
+            "correct_answer": "B) Vernal (Spring) Equinox",
+            "explanation": "March 21 = Vernal Equinox (equal day/night).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "September 23 is known as:",
+            "diagram": null,
+            "options": [
+                "A) Vernal Equinox",
+                "B) Summer Solstice",
+                "C) Autumn Equinox",
+                "D) Winter Solstice"
+            ],
+            "correct_answer": "C) Autumn Equinox",
+            "explanation": "September 23 = Autumn Equinox.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "At the equator, day length is always:",
+            "diagram": null,
+            "options": [
+                "A) 8 hours",
+                "B) 12 hours",
+                "C) 16 hours",
+                "D) 24 hours"
+            ],
+            "correct_answer": "B) 12 hours",
+            "explanation": "Equator = 12 hours daylight year-round.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "Ethiopia's seasons are primarily caused by:",
+            "diagram": null,
+            "options": [
+                "A) Distance from sun",
+                "B) Earth's tilt + monsoon winds",
+                "C) Ocean currents",
+                "D) Moon phases"
+            ],
+            "correct_answer": "B) Earth's tilt + monsoon winds",
+            "explanation": "Tilt causes seasonal changes; monsoons bring wet/dry seasons.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "Dallol's extreme heat is due to:",
+            "diagram": null,
+            "options": [
+                "A) High altitude",
+                "B) LOW altitude (-125m)",
+                "C) Proximity to ocean",
+                "D) Forest cover"
+            ],
+            "correct_answer": "B) LOW altitude (-125m)",
+            "explanation": "Dallol = below sea level = extreme heat.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 16,
+            "text": "Ras Dashen's cold temperature is due to:",
+            "diagram": null,
+            "options": [
+                "A) Low latitude",
+                "B) HIGH altitude (4,550m)",
+                "C) Proximity to sea",
+                "D) Desert location"
+            ],
+            "correct_answer": "B) HIGH altitude (4,550m)",
+            "explanation": "Ras Dashen = high altitude = cold.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "The sun is overhead at the equator TWICE per year at:",
+            "diagram": null,
+            "options": [
+                "A) Solstices",
+                "B) Equinoxes",
+                "C) Only June 21",
+                "D) Never"
+            ],
+            "correct_answer": "B) Equinoxes",
+            "explanation": "Sun overhead at equator at both equinoxes.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "The longest day in Ethiopia (Northern Hemisphere) is:",
+            "diagram": null,
+            "options": [
+                "A) March 21",
+                "B) June 21 (Summer Solstice)",
+                "C) September 23",
+                "D) December 21"
+            ],
+            "correct_answer": "B) June 21 (Summer Solstice)",
+            "explanation": "Longest day = June 21 (Summer Solstice).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "Latent heat is released during:",
+            "diagram": null,
+            "options": [
+                "A) Evaporation",
+                "B) Condensation",
+                "C) Freezing",
+                "D) Melting"
+            ],
+            "correct_answer": "B) Condensation",
+            "explanation": "Condensation releases latent heat.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "Addis Ababa's average temperature (~16°C) vs Djibouti (~30°C) is due to:",
+            "diagram": null,
+            "options": [
+                "A) Latitude",
+                "B) Altitude difference",
+                "C) Ocean currents",
+                "D) Wind patterns"
+            ],
+            "correct_answer": "B) Altitude difference",
+            "explanation": "Addis (2,400m) cooler than sea-level Djibouti.",
+            "difficulty": "hard"
+        }
+    ]
+}

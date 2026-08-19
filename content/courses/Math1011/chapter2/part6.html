@@ -1,0 +1,166 @@
+<div class="lesson-section">
+    <h2>Chapter 2: Functions</h2>
+    <h3>Part 6: Polynomials, Zeros, Rational Functions & Graphs</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In this part, we explore <strong>polynomial functions</strong>, their properties, and how to find their zeros using theorems like the Remainder Theorem, Factor Theorem, and Rational Root Theorem. We also study <strong>rational functions</strong> and learn how to sketch their graphs by analyzing asymptotes and intercepts.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Define polynomial and rational functions.</li>
+            <li>Apply theorems on polynomials to find zeros.</li>
+            <li>Use the division algorithm to find quotient and remainder.</li>
+            <li>Sketch and analyze the graphs of rational functions.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>2.6 Polynomials, zeros of polynomials, rational functions and their graphs</h4>
+
+    <p>The functions described in this section frequently occur as mathematical models of real-life situations. For instance, in business, the demand function gives the price per item, \(p\), in terms of the number of items sold, \(x\). The manufacturer's revenue is determined by multiplying the number of items sold (\(x\)) by the price per item (\(p\)). Thus, the revenue function is \(R = xp = x(80 - x^2) = 80x - x^3\). These demand and revenue functions are examples of <strong>polynomial functions</strong>.</p>
+
+    <hr>
+
+    <h4>Polynomial Functions</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 2.15:</strong>
+        <p>A <strong>polynomial function</strong> is a function of the form</p>
+        <p>\[y = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0, \quad a_n \neq 0.\]</p>
+        <p>Each \(a_i\) is a real number, and \(n\) is a non-negative integer. \(a_n\) is called the <strong>leading coefficient</strong>. Such a polynomial is said to be of <strong>degree \(n\)</strong>.</p>
+    </div>
+
+    <p><strong>Types of Polynomials:</strong></p>
+    <ul>
+        <li><strong>Linear:</strong> Degree 1 (\(p(x) = a_1x + a_0, a_1 \neq 0\))</li>
+        <li><strong>Quadratic:</strong> Degree 2 (\(p(x) = a_2x^2 + a_1x + a_0, a_2 \neq 0\))</li>
+        <li><strong>Cubic:</strong> Degree 3 (\(p(x) = a_3x^3 + a_2x^2 + a_1x + a_0, a_3 \neq 0\))</li>
+    </ul>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Polynomial Graph Properties</text>
+            
+            <rect x="20" y="60" width="160" height="40" fill="#14b8a6" rx="8"/>
+            <text x="100" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">📈 Smooth, Unbroken Curve</text>
+
+            <rect x="220" y="60" width="160" height="40" fill="#f43f5e" rx="8"/>
+            <text x="300" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">🔢 At most n zeros</text>
+
+            <rect x="20" y="120" width="160" height="40" fill="#facc15" rx="8"/>
+            <text x="100" y="144" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">🔄 At most n-1 turning points</text>
+
+            <rect x="220" y="120" width="160" height="40" fill="#f59e0b" rx="8"/>
+            <text x="300" y="144" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">📈 |y| → ∞ as |x| → ∞</text>
+
+            <text x="200" y="190" fill="#f8fafc" font-size="10" text-anchor="middle">📖 Domain of any polynomial is always ℝ.</text>
+        </svg>
+    </div>
+
+    <p><strong>Properties of Polynomial Functions:</strong></p>
+    <ol>
+        <li>The graph of a polynomial is a <strong>smooth, unbroken curve</strong> (no sharp corners).</li>
+        <li>If \(p\) is a polynomial of degree \(n\), it has <strong>at most \(n\) zeros</strong>.</li>
+        <li>The graph of a polynomial of degree \(n\) can have <strong>at most \(n-1\) turning points</strong>.</li>
+        <li>As \(|x|\) gets very large, \(|y|\) gets very large.</li>
+    </ol>
+
+    <hr>
+
+    <h4>Zeros of a Polynomial</h4>
+
+    <p>The zeros of a polynomial function provide valuable information for sketching its graph. We can find zeros by factorizing, but we need more advanced methods for higher-degree polynomials.</p>
+
+    <p><strong>Division Algorithm:</strong> Let \(p(x)\) and \(d(x)\) be polynomials with \(d(x) \neq 0\) and \(degree(d) \leq degree(p)\). Then there exist polynomials \(q(x)\) and \(R(x)\) such that \(p(x) = d(x) \cdot q(x) + R(x)\), where either \(R(x) = 0\) or the degree of \(R(x)\) is less than the degree of \(d(x)\).</p>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Division Algorithm</text>
+            
+            <rect x="20" y="60" width="160" height="40" fill="#14b8a6" rx="8"/>
+            <text x="100" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(p(x) = d(x) \cdot q(x) + R(x)\)</text>
+
+            <rect x="220" y="60" width="160" height="40" fill="#f43f5e" rx="8"/>
+            <text x="300" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(R(x) = 0\) or \(deg(R) < deg(d)\)</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 If \(d(x) = x - r\), then \(R(x)\) is a constant.</text>
+        </svg>
+    </div>
+
+    <p><strong>Remainder Theorem:</strong> When a polynomial \(p(x)\) of degree at least 1 is divided by \(x - r\), the remainder is \(p(r)\).</p>
+
+    <p><strong>Factor Theorem:</strong> \(x - r\) is a factor of \(p(x)\) <strong>if and only if</strong> \(p(r) = 0\).</p>
+
+    <p><strong>Location Theorem:</strong> Let \(f\) be a polynomial function and \(a < b\) be real numbers. If \(f(a)f(b) < 0\), then there is at least one zero of \(f\) between \(a\) and \(b\).</p>
+
+    <p><strong>Fundamental Theorem of Algebra:</strong> If \(p(x)\) is a polynomial of degree \(n > 0\) with complex coefficients, then \(p(x)\) has at least one zero in the complex number system.</p>
+
+    <p><strong>Linear Factorization Theorem:</strong> Every polynomial of degree \(n \geq 1\) has exactly \(n\) zeros in the complex number system (counting multiplicities).</p>
+
+    <p><strong>Rational Root Theorem:</strong> Let \(f(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0\) be a polynomial with integer coefficients. If \(\frac{p}{q}\) is a rational root of \(f(x) = 0\) (where \(p\) and \(q\) have no common factor other than \(\pm 1\)), then \(p\) is a factor of \(a_0\) and \(q\) is a factor of \(a_n\).</p>
+
+    <hr>
+
+    <h4>Rational Functions and Their Graphs</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition:</strong>
+        <p>A <strong>rational function</strong> is a function of the form \(f(x) = \frac{n(x)}{d(x)}\), where \(n(x)\) and \(d(x)\) are polynomials and \(d(x) \neq 0\).</p>
+    </div>
+
+    <p><strong>Steps to Sketch a Rational Function:</strong></p>
+    <ol>
+        <li>Find the domain and simplify the function.</li>
+        <li>Find the <strong>y-intercept</strong> (set \(x = 0\)) and <strong>x-intercepts</strong> (set \(y = 0\)).</li>
+        <li>Determine the <strong>asymptotes</strong>.</li>
+    </ol>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Asymptotes of Rational Functions</text>
+            
+            <rect x="20" y="60" width="160" height="50" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">⬆️ Vertical Asymptote (VA)</text>
+            <text x="100" y="100" fill="#111827" font-size="8" text-anchor="middle">\(x = a\) where \(d(a) = 0\), \(n(a) \neq 0\)</text>
+
+            <rect x="220" y="60" width="160" height="50" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">➡️ Horizontal Asymptote (HA)</text>
+            <text x="300" y="100" fill="#111827" font-size="8" text-anchor="middle">\(y = b\) as \(x \to \pm \infty\)</text>
+
+            <text x="200" y="155" fill="#f8fafc" font-size="10" text-anchor="middle">📖 HA exists only if \(deg(n) \leq deg(d)\)</text>
+        </svg>
+    </div>
+
+    <p><strong>Vertical Asymptote (VA):</strong> The line \(x = a\) is a VA if \(a \notin Dom(f)\) and \(f(x) \to \pm \infty\) as \(x \to a\).</p>
+
+    <p><strong>Horizontal Asymptote (HA):</strong> The line \(y = b\) is a HA if \(f(x) \to b\) as \(x \to \pm \infty\).</p>
+    <ul>
+        <li>If \(deg(n) < deg(d)\), then \(y = 0\) (the x-axis) is the HA.</li>
+        <li>If \(deg(n) = deg(d)\), then \(y = \frac{a_n}{b_n}\) (ratio of leading coefficients) is the HA.</li>
+    </ul>
+
+    <p><strong>Oblique (Slant) Asymptote (OA):</strong> The line \(y = ax + b\) (with \(a \neq 0\)) is an OA if \(f(x) \to ax + b\) as \(x \to \pm \infty\). This occurs only when \(deg(n) = deg(d) + 1\).</p>
+
+    <p><strong>Example 2.42:</strong> Sketch \(f(x) = \frac{x+2}{x-1}\).</p>
+    <ul>
+        <li>Domain: \(\mathbb{R} \setminus \{1\}\)</li>
+        <li>y-intercept: \((0, -2)\), x-intercept: \((-2, 0)\)</li>
+        <li>VA: \(x = 1\)</li>
+        <li>HA: \(y = 1\)</li>
+    </ul>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 6)</h4>
+        <ul>
+            <li><strong>Polynomial:</strong> \(y = a_n x^n + \dots + a_0\). Domain = \(\mathbb{R}\). Degree = highest power.</li>
+            <li><strong>Zeros:</strong> Found using factorization, Remainder Theorem, Factor Theorem, Rational Root Theorem.</li>
+            <li><strong>Key Theorems:</strong> Remainder, Factor, Location, Fundamental Theorem of Algebra, Linear Factorization, Rational Root.</li>
+            <li><strong>Rational Function:</strong> \(f(x) = \frac{n(x)}{d(x)}\).</li>
+            <li><strong>Asymptotes:</strong> VA (denominator = 0), HA (end behavior), OA (slant, when degree numerator = degree denominator + 1).</li>
+        </ul>
+    </div>
+</div>

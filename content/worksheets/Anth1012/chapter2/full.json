@@ -1,0 +1,398 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 2,
+    "title": "Unit 2 Full Practice: Combined Parts",
+    "total_questions": 30,
+    "questions": [
+        {
+            "id": 1,
+            "text": "What does Archaeological Anthropology study?",
+            "options": [
+                "A) Contemporary human societies.",
+                "B) The ways of life of past peoples by excavating and analyzing material culture and physical remains.",
+                "C) The evolution of languages.",
+                "D) Human biological variation."
+            ],
+            "correct_answer": "B) The ways of life of past peoples by excavating and analyzing material culture and physical remains.",
+            "explanation": "The module states: 'Archaeological anthropology or simply archaeology studies the ways of life of past peoples by excavating and analyzing the material culture/physical remains they left behind.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What are 'features' in archaeological terms?",
+            "options": [
+                "A) Remains that can be carried away from the site.",
+                "B) Material remains made or modified by past people that cannot be readily carried away from the site, such as house foundations and fireplaces.",
+                "C) Animal bones and plant remains.",
+                "D) Tools and ornaments."
+            ],
+            "correct_answer": "B) Material remains made or modified by past people that cannot be readily carried away from the site, such as house foundations and fireplaces.",
+            "explanation": "The module states: 'Features, like artifacts, are made or modified by past people, but they cannot be readily carried away from the site. Archaeological features include such things as house foundations, ancient buildings, fireplaces, steles, and postholes.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the focus of Prehistoric Archaeology?",
+            "options": [
+                "A) Cultures that used writing.",
+                "B) Human prehistoric cultures, focusing on the period between 6,000 years ago and the first stone tools (2.5 million years ago).",
+                "C) Only modern societies.",
+                "D) Only Ethiopian history."
+            ],
+            "correct_answer": "B) Human prehistoric cultures, focusing on the period between 6,000 years ago and the first stone tools (2.5 million years ago).",
+            "explanation": "The module states: 'Prehistoric archaeology investigates human prehistoric cultures. It focuses on the entire period called prehistory—between 6,000 years ago and the time of the first stone tools (the first artifacts), around 2.5 million years ago.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "What is the primary focus of Linguistic Anthropology?",
+            "options": [
+                "A) The study of ancient fossils.",
+                "B) The evolution of languages, how language is used within a society, and how the human brain acquires and uses languages.",
+                "C) The study of material culture.",
+                "D) The study of human biological variation."
+            ],
+            "correct_answer": "B) The evolution of languages, how language is used within a society, and how the human brain acquires and uses languages.",
+            "explanation": "The module states: 'Linguistic anthropology generally focuses on the evolution of languages by studying contemporary human languages as well as those of the past. It studies how language is used within a society, and how the human brain acquires and uses languages.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "Which branch of linguistic anthropology examines the relationship between language and culture?",
+            "options": [
+                "A) Structural Linguistics.",
+                "B) Historical Linguistics.",
+                "C) Ethno-linguistics (Cultural Linguistics).",
+                "D) Socio-linguistics."
+            ],
+            "correct_answer": "C) Ethno-linguistics (Cultural Linguistics).",
+            "explanation": "The module states: 'Ethno-linguistics (cultural linguistics): examines the relationship between language and culture... cultural linguists explore how different linguistic categories can affect how people categorize their experiences, how they think, and how they perceive the world around them.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the focus of Socio-Cultural Anthropology?",
+            "options": [
+                "A) Only ancient civilizations.",
+                "B) Contemporary societies and cultures throughout the world.",
+                "C) Only Western societies.",
+                "D) Only biological evolution."
+            ],
+            "correct_answer": "B) Contemporary societies and cultures throughout the world.",
+            "explanation": "The module states: 'Socio-cultural anthropology studies contemporary societies and cultures throughout the world.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the difference between Ethnography and Ethnology?",
+            "options": [
+                "A) Ethnography is comparative; Ethnology is descriptive.",
+                "B) Ethnography requires fieldwork and is descriptive; Ethnology uses data from multiple researchers and is comparative/cross-cultural.",
+                "C) They are the same thing.",
+                "D) Ethnography studies only Western cultures; Ethnology studies only non-Western cultures."
+            ],
+            "correct_answer": "B) Ethnography requires fieldwork and is descriptive; Ethnology uses data from multiple researchers and is comparative/cross-cultural.",
+            "explanation": "The module states: 'Ethnography: Requires field work to collect data, Often descriptive, Group/community specific. Ethnology: Uses data collected by a series of researchers, Usually synthesizes ethnographic data, Comparative/cross-cultural.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Which famous anthropological finding in Ethiopia is mentioned in the module?",
+            "options": [
+                "A) The Pyramids of Giza.",
+                "B) Lucy/Dinkinesh (Australopithecus afarensis) in the Afar Region.",
+                "C) The Great Wall of China.",
+                "D) The Colosseum in Rome."
+            ],
+            "correct_answer": "B) Lucy/Dinkinesh (Australopithecus afarensis) in the Afar Region.",
+            "explanation": "The module states: 'The discovery of Lucy/Dinkesh (Australopithecus afarensis) in the Afar Region shows that Ethiopia is among African countries regarded as the origin of human ancestors.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What is the term used for socio-cultural anthropology in North American universities?",
+            "options": [
+                "A) Social Anthropology.",
+                "B) Cultural Anthropology.",
+                "C) Ethnology.",
+                "D) Archaeology."
+            ],
+            "correct_answer": "B) Cultural Anthropology.",
+            "explanation": "The module states: 'This branch of anthropology is called differently in different parts of the world. It is called cultural anthropology in North American universities; ethnology in countries such as Germany; and social anthropology in other countries including the United Kingdom and Ethiopia.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "According to the module, what is one of the most distinctive features of being human?",
+            "options": [
+                "A) The ability to fly.",
+                "B) Language.",
+                "C) The ability to swim.",
+                "D) The ability to run fast."
+            ],
+            "correct_answer": "B) Language.",
+            "explanation": "The module states: 'In fact, some would argue that language is the most distinctive feature of being human.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "What are the two major areas of research in physical anthropology?",
+            "options": [
+                "A) Human evolution and modern human variation.",
+                "B) Ancient history and modern politics.",
+                "C) Language and culture.",
+                "D) Archaeology and linguistics."
+            ],
+            "correct_answer": "A) Human evolution and modern human variation.",
+            "explanation": "The module states: 'There are two major areas of research in physical anthropology: 1) human evolution, and 2) modern human variation.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 12,
+            "text": "Where is the origin of humanity traced back to, according to research in human evolution?",
+            "options": [
+                "A) Europe",
+                "B) Asia",
+                "C) Africa, specifically the Great Rift Valley in East Africa.",
+                "D) North America."
+            ],
+            "correct_answer": "C) Africa, specifically the Great Rift Valley in East Africa.",
+            "explanation": "The module states: 'Research in human evolution shows that the origin of humanity is traced back over 6 million years. Africa is found to be the cradle of human beings. Research findings indicate that East Africa, especially the Great Rift Valley, is the origin of mankind.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 13,
+            "text": "What is the study of human biological evolution through the analysis of fossil remains called?",
+            "options": [
+                "A) Primatology.",
+                "B) Paleoanthropology.",
+                "C) Genetics.",
+                "D) Archaeology."
+            ],
+            "correct_answer": "B) Paleoanthropology.",
+            "explanation": "The module states: 'Paleoanthropology is the study of human biological evolution through the analysis of fossil remains from prehistoric times to determine the missing link that connects modern humans with biological ancestors.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 14,
+            "text": "Who is the British naturalist known for the theory of natural selection and the idea of survival of the fittest?",
+            "options": [
+                "A) Gregor Mendel.",
+                "B) Charles Darwin.",
+                "C) Louis Pasteur.",
+                "D) Isaac Newton."
+            ],
+            "correct_answer": "B) Charles Darwin.",
+            "explanation": "The module states: 'One of the prominent persons in this regard is Charles Darwin (1809-1882), a British Naturalist of the period. Charles Darwin is known for his theory of natural selection in the evolution of species and the idea of survival of the fittest.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 15,
+            "text": "What are the three cumulative effects of evolution that can be observed in nature every day?",
+            "options": [
+                "A) Birth, growth, and death.",
+                "B) Replication, Variation, and Selection.",
+                "C) Adaptation, Migration, and Mutation.",
+                "D) Food, shelter, and water."
+            ],
+            "correct_answer": "B) Replication, Variation, and Selection.",
+            "explanation": "The module states: 'Evolution is used to describe the cumulative effects of three independent facts... Replication: The fact that life forms have offspring; Variation: The fact that each offspring is slightly different from its parents; Selection: The fact that not all offspring survive, and those that do tend to be the ones best suited to their environment.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 16,
+            "text": "What is the adaptive value of lighter skin in northern Europe?",
+            "options": [
+                "A) To protect against sunburn.",
+                "B) To allow the body to produce Vitamin D in areas with less sunlight, preventing bone deformities like rickets.",
+                "C) To make people look more attractive.",
+                "D) To prevent skin cancer."
+            ],
+            "correct_answer": "B) To allow the body to produce Vitamin D in areas with less sunlight, preventing bone deformities like rickets.",
+            "explanation": "The module states: 'Humans naturally produce Vitamin D through the skin when they're exposed to sunlight, but cloudier parts of the world—like northern Europe—are exposed to much less sunlight... Lighter skin, then, is an adaptation to the geographical conditions of Europe.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 17,
+            "text": "What does Bergmann's rule state?",
+            "options": [
+                "A) In colder regions, warm-blooded animals will have stockier bodies to retain heat better.",
+                "B) In warmer regions, animals are larger.",
+                "C) Skin color is determined solely by diet.",
+                "D) Humans are not affected by climate."
+            ],
+            "correct_answer": "A) In colder regions, warm-blooded animals will have stockier bodies to retain heat better.",
+            "explanation": "The module states: 'Bergmann's rule indicates that in colder regions, warm-blooded animals will have stockier bodies than their counterparts from warmer regions, because stockier bodies are more efficient at retaining body heat.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 18,
+            "text": "What is the difference between biological adaptation and habituation?",
+            "options": [
+                "A) Biological adaptation is genetic and takes generations; habituation is a rapid, reversible physiological change during a lifetime.",
+                "B) They are the same thing.",
+                "C) Habituation is genetic; adaptation is not.",
+                "D) Adaptation is only cultural; habituation is only biological."
+            ],
+            "correct_answer": "A) Biological adaptation is genetic and takes generations; habituation is a rapid, reversible physiological change during a lifetime.",
+            "explanation": "The module states: 'The rapid physiological changes that occur in one's lifetime... are referred to as habituation or acclimatization. These aren't passed on genetically to the next generation... and they're reversible.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "Which fossil discovery in Ethiopia is mentioned as evidence that the country is the origin of human ancestors?",
+            "options": [
+                "A) The fossil of a dinosaur.",
+                "B) Lucy/Dinknesh (Australopithecus afarensis) in the Afar Region.",
+                "C) A fossil of a whale.",
+                "D) A fossil of a bird."
+            ],
+            "correct_answer": "B) Lucy/Dinknesh (Australopithecus afarensis) in the Afar Region.",
+            "explanation": "The module states: 'The discovery of fossils such as Lucy/Dinknesh (Australopithecus afarensis) in the Afar Region shows that Ethiopia is among African countries regarded as the origin of human ancestors.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "What is the study of primates or recent human ancestors to explain human evolution called?",
+            "options": [
+                "A) Paleoanthropology.",
+                "B) Primatology.",
+                "C) Genetics.",
+                "D) Ethnology."
+            ],
+            "correct_answer": "B) Primatology.",
+            "explanation": "The module states: 'Primatology studies about primates or recent human ancestors to explain human evolution. Primatologists study the anatomy and social behavior of such non-human primate species as gorillas and chimpanzees.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 21,
+            "text": "During the 16th century Age of Discovery, what did Europeans primarily base their racial classifications on?",
+            "options": [
+                "A) Language and religion.",
+                "B) Skin color and the lack of Christian/European culture.",
+                "C) Head shape and size.",
+                "D) Economic status."
+            ],
+            "correct_answer": "B) Skin color and the lack of Christian/European culture.",
+            "explanation": "The module states: 'Because skin color was so noticeable, many racial classifications were based only on that factor. Additionally, these unknown people weren't Christian and didn't share European culture and values, so the Europeans labeled them Savages.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 22,
+            "text": "What was the 'cephalic index' used for in the mid-1800s?",
+            "options": [
+                "A) To measure intelligence.",
+                "B) To describe the shape of the head (length vs. width) as a method of racial classification.",
+                "C) To measure height.",
+                "D) To determine skin color."
+            ],
+            "correct_answer": "B) To describe the shape of the head (length vs. width) as a method of racial classification.",
+            "explanation": "The module states: 'By the mid-1800s, naturalists began using a method of describing the shape of the head called the cephalic index, a ratio measurement of the length and width of the head.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 23,
+            "text": "What is the root problem of historical racial classification according to the module?",
+            "options": [
+                "A) It was based on accurate science.",
+                "B) Biological determinism—the false idea that physical traits are linked to behavior, intellect, and morals.",
+                "C) It was too complex.",
+                "D) It ignored language."
+            ],
+            "correct_answer": "B) Biological determinism—the false idea that physical traits are linked to behavior, intellect, and morals.",
+            "explanation": "The module states: 'The root problem of all this flailing around at the identification of human types was biological determinism, the idea that physical traits were somehow linked to behavior. Many thought traits like intellect, values, and morals were all products of one's race.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 24,
+            "text": "Why is the concept of a 'master race' considered biologically suicidal?",
+            "options": [
+                "A) Because it is too expensive.",
+                "B) Because it leads to a genetically uniform and vulnerable population with no buffer against catastrophic diseases.",
+                "C) Because it creates too many people.",
+                "D) Because it is politically incorrect."
+            ],
+            "correct_answer": "B) Because it leads to a genetically uniform and vulnerable population with no buffer against catastrophic diseases.",
+            "explanation": "The module states: 'If all members of a population are the same, the population has no buffer against a particularly lethal or catastrophic disease... The idea of a master race is therefore suicidal.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 25,
+            "text": "What did Harvard anthropologist R.C. Lewontin conclude in his 1972 study on human racial classification?",
+            "options": [
+                "A) Race is biologically and genetically meaningful.",
+                "B) Human racial classification is of no social value, is destructive to human relations, and has virtually no genetic or taxonomic significance.",
+                "C) Race should be used to determine intelligence.",
+                "D) There are distinct biological races."
+            ],
+            "correct_answer": "B) Human racial classification is of no social value, is destructive to human relations, and has virtually no genetic or taxonomic significance.",
+            "explanation": "The module states: 'One thorough 1972 study by Harvard anthropologist R.C. Lewontin concluded that \"Human racial classification is of no social value and is positively destructive of social and human relations. Since such racial classification is now seen to be of virtually no genetic or taxonomic significance, either, no justification can be offered for its continuance.\"'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 26,
+            "text": "What is the anthropological consensus on human behavior and race?",
+            "options": [
+                "A) Behavior is genetically determined by race.",
+                "B) Most human behavior is culturally learned, not biologically determined. Genes are 99.9% identical across all humans.",
+                "C) Race determines intelligence.",
+                "D) There are significant species-level genetic differences between races."
+            ],
+            "correct_answer": "B) Most human behavior is culturally learned, not biologically determined. Genes are 99.9% identical across all humans.",
+            "explanation": "The module states: 'A look at the genes shows no significant species-level differences... Most of human behavior isn't biologically determined... most of it is culturally learned.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 27,
+            "text": "What does Kluckhohn mean by saying 'Anthropology holds up a great mirror to man'?",
+            "options": [
+                "A) Anthropology only studies physical appearance.",
+                "B) Anthropology helps human beings look into themselves and understand their own infinite variety.",
+                "C) Anthropology is only about the past.",
+                "D) Anthropology is not useful."
+            ],
+            "correct_answer": "B) Anthropology helps human beings look into themselves and understand their own infinite variety.",
+            "explanation": "The module states: 'As Kluckhohn correctly pointed out, \"Anthropology holds up a great mirror to man and lets him look at himself in his infinite variety.\"'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 28,
+            "text": "What does it mean for humans to be a 'bio-cultural animal'?",
+            "options": [
+                "A) Humans evolve only through biological factors.",
+                "B) Human biology and culture have evolved together over millions of years, affecting each other.",
+                "C) Humans are only cultural animals.",
+                "D) Humans do not evolve."
+            ],
+            "correct_answer": "B) Human biology and culture have evolved together over millions of years, affecting each other.",
+            "explanation": "The module states: 'Human biology and culture have evolved over millions of years and they will continue to evolve together. Human biology affects human culture; and similarly, human culture affects human biology.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 29,
+            "text": "Which of the following is NOT a characteristic of humanity listed in the module?",
+            "options": [
+                "A) Bipedalism (walking on two legs).",
+                "B) Relatively large brains for primates of our size.",
+                "C) Using modern language to communicate ideas.",
+                "D) Having a tail."
+            ],
+            "correct_answer": "D) Having a tail.",
+            "explanation": "The module lists the characteristics of humanity as: 'Bipedalism (walking on two legs); Relatively small teeth for primates of our size; Relatively large brains for primates of our size; Using modern language to communicate ideas; and Using complex sets of ideas called culture to survive.' Having a tail is not a human characteristic.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 30,
+            "text": "What is the difference between anatomical modernity and behavioral modernity?",
+            "options": [
+                "A) They are the same thing.",
+                "B) Anatomical modernity refers to physical traits (bipedalism, brain size); behavioral modernity refers to the use of language and complex culture.",
+                "C) Anatomical modernity is cultural; behavioral modernity is biological.",
+                "D) There is no difference."
+            ],
+            "correct_answer": "B) Anatomical modernity refers to physical traits (bipedalism, brain size); behavioral modernity refers to the use of language and complex culture.",
+            "explanation": "The module states: 'Exactly when Homo sapiens evolved into Homo sapiens sapiens is a complex question based on when humans became anatomically modern and when they became behaviorally modern.' This refers to physical traits vs. cultural/behavioral traits.",
+            "difficulty": "hard"
+        }
+    ]
+}

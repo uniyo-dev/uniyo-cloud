@@ -1,0 +1,658 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 3,
+    "title": "Unit 3 Full Practice: Combined Parts",
+    "total_questions": 50,
+    "questions": [
+        {
+            "id": 1,
+            "text": "Which anthropologist defined culture as 'that complex whole which includes knowledge, belief, art, morals, law, custom, and any other capabilities acquired by man as a member of society'?",
+            "options": [
+                "A) Bronislaw Malinowski",
+                "B) Edward B. Tylor",
+                "C) Clyde Kluckhohn",
+                "D) Ralph Linton"
+            ],
+            "correct_answer": "B) Edward B. Tylor",
+            "explanation": "The module states: 'A pioneering and widely used definition of culture was provided by the British anthropologist Edward B. Tylor (1832-1917). He defined culture as \"that complex whole which includes knowledge, belief, art, morals, law, custom, and any other capabilities and habits acquired by man as a member of society.\"'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "How did Bronislaw Malinowski define culture?",
+            "options": [
+                "A) As a complex whole.",
+                "B) As the cumulative creation of man, the handiwork of man through which he achieves his ends.",
+                "C) As a way of thinking and feeling.",
+                "D) As the sum total of shared knowledge."
+            ],
+            "correct_answer": "B) As the cumulative creation of man, the handiwork of man through which he achieves his ends.",
+            "explanation": "The module states: 'Bronislaw Malinowski has defined culture \"as cumulative creation of man\". He regarded culture as the handiwork of man and the medium through which he achieves his ends.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the process by which an individual learns the rules and values of one's culture called?",
+            "options": [
+                "A) Evolution",
+                "B) Enculturation",
+                "C) Socialization",
+                "D) Adaptation"
+            ],
+            "correct_answer": "B) Enculturation",
+            "explanation": "The module states: 'This process of acquiring culture after we are born is called enculturation. Enculturation is specifically defined as the process by which an individual learns the rules and values of one's culture.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What does it mean that culture is 'symbolic'?",
+            "options": [
+                "A) That culture is only about art.",
+                "B) That humans have the capacity to use symbols with arbitrary meanings to communicate and learn.",
+                "C) That culture is based on genetic traits.",
+                "D) That culture is only passed down through writing."
+            ],
+            "correct_answer": "B) That humans have the capacity to use symbols with arbitrary meanings to communicate and learn.",
+            "explanation": "The module states: 'Until quite recently, anthropologists confidently asserted that what made humans distinctive was that they, unlike other primates, had a capacity to use symbols... Symbolic thought is unique and crucial to humans and to cultural learning.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What does it mean that culture is 'all-encompassing'?",
+            "options": [
+                "A) Culture only includes material objects.",
+                "B) Culture encompasses all aspects affecting people in their everyday lives, including material and non-material aspects.",
+                "C) Culture only includes religious beliefs.",
+                "D) Culture is limited to art and music."
+            ],
+            "correct_answer": "B) Culture encompasses all aspects affecting people in their everyday lives, including material and non-material aspects.",
+            "explanation": "The module states: 'Culture encompasses all aspects, which affect people in their everyday lives. Culture comprises countless material and non-material aspects of human lives.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "How is the integrated nature of culture best described in the module?",
+            "options": [
+                "A) As a random assortment of customs.",
+                "B) By using the analogy between a culture and a living organism, where various aspects are interconnected.",
+                "C) As a collection of unrelated beliefs.",
+                "D) As a static and unchanging system."
+            ],
+            "correct_answer": "B) By using the analogy between a culture and a living organism, where various aspects are interconnected.",
+            "explanation": "The module states: 'A good way of describing this integrated nature of culture is by using the analogy between a culture and a living organism. The physical human body comprises a number of systems, all functioning to maintain the overall health of the organisms.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What does it mean that culture is 'adaptive'?",
+            "options": [
+                "A) Humans adapt to their environment using culture, which has allowed global population to grow to over 7 billion.",
+                "B) Culture never changes.",
+                "C) Culture is only about biological adaptation.",
+                "D) Culture is not affected by the environment."
+            ],
+            "correct_answer": "A) Humans adapt to their environment using culture, which has allowed global population to grow to over 7 billion.",
+            "explanation": "The module states: 'People adapt themselves to the environment using culture. The ability to adapt to any ecological conditions, unlike other animals, makes humans unique. Culture has allowed the global human population size to grow from less than 10 million... to more than 7 billion today.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What does it mean that culture is 'dynamic'?",
+            "options": [
+                "A) Culture never changes.",
+                "B) Culture is constantly changing as new ideas and techniques are added, though some fundamental beliefs endure.",
+                "C) Culture is completely static.",
+                "D) Culture changes only through war."
+            ],
+            "correct_answer": "B) Culture is constantly changing as new ideas and techniques are added, though some fundamental beliefs endure.",
+            "explanation": "The module states: 'A culture is not static; it is always changing. There are no cultures that remain completely static year after year. Culture is changing constantly as new ideas and new techniques are added as time passes modifying or changing the old ways.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What is a common attribute of most definitions of culture?",
+            "options": [
+                "A) That culture is genetically transmitted.",
+                "B) That culture is learned and related to the social group or society.",
+                "C) That culture is an individual possession.",
+                "D) That culture is based on race."
+            ],
+            "correct_answer": "B) That culture is learned and related to the social group or society.",
+            "explanation": "The module states: 'A common attribute of most of the definitions, however, is that a culture is learned and that the learning is related to the social group or the society.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "According to the module, what was once attributed to race and heredity that is now seen as the result of cultural training?",
+            "options": [
+                "A) Physical strength.",
+                "B) Behavioral traits and characteristics (e.g., the Iroquois being savage fighters, the Hopi being calm).",
+                "C) Eye color.",
+                "D) Height."
+            ],
+            "correct_answer": "B) Behavioral traits and characteristics (e.g., the Iroquois being savage fighters, the Hopi being calm).",
+            "explanation": "The module states: 'They further state that much that was once attributed to race and heredity is now seen clearly as the result of cultural training. The Iroquois were savage fighters not because it was in their blood but because it was in their culture. The Hopi are outwardly calm and imperturbable not because it is in their blood... but because it is in their culture.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "What are the two most important aspects of culture according to the module?",
+            "options": [
+                "A) Religious and political.",
+                "B) Material and non-material culture.",
+                "C) Economic and social.",
+                "D) Historical and futuristic."
+            ],
+            "correct_answer": "B) Material and non-material culture.",
+            "explanation": "The module states: 'Two of the most important aspects of culture are material and nonmaterial culture.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 12,
+            "text": "Which of the following is an example of material culture?",
+            "options": [
+                "A) Language.",
+                "B) Beliefs and values.",
+                "C) Tools, buildings, roads, and automobiles.",
+                "D) Norms."
+            ],
+            "correct_answer": "C) Tools, buildings, roads, and automobiles.",
+            "explanation": "The module states: 'Material culture consists of human-made objects such as tools, implements, furniture, automobiles, buildings, dams, roads, bridges...'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 13,
+            "text": "What are the four common non-material cultural components found in all cultures?",
+            "options": [
+                "A) Tools, buildings, roads, and bridges.",
+                "B) Symbols, language, values, and norms.",
+                "C) Money, resources, power, and status.",
+                "D) Food, clothing, shelter, and transportation."
+            ],
+            "correct_answer": "B) Symbols, language, values, and norms.",
+            "explanation": "The module states: 'Even though the specifics of individual culture vary widely, all cultures have four common nonmaterial cultural components: symbols, language, value, and norms.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 14,
+            "text": "What is a symbol in the context of culture?",
+            "options": [
+                "A) A physical object only.",
+                "B) Anything verbal or nonverbal that meaningfully represents something else for communication.",
+                "C) A type of language.",
+                "D) A form of government."
+            ],
+            "correct_answer": "B) Anything verbal or nonverbal that meaningfully represents something else for communication.",
+            "explanation": "The module states: 'A symbol is anything that meaningfully represents something else which people use to communicate with others. It is something verbal or nonverbal...'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 15,
+            "text": "What is the relationship between values and norms?",
+            "options": [
+                "A) Values are derived from norms.",
+                "B) Norms are derived from values; values provide ideals, while norms are specific behavioral rules.",
+                "C) They are the same thing.",
+                "D) Norms have no connection to values."
+            ],
+            "correct_answer": "B) Norms are derived from values; values provide ideals, while norms are specific behavioral rules.",
+            "explanation": "The module states: 'They are derived from value. Values provide ideals or beliefs about behavior but do not state explicitly how we should behave. Norms on the other hand, do have specific behavioral expectations.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 16,
+            "text": "What is the difference between folkways and mores?",
+            "options": [
+                "A) Folkways are stricter than mores.",
+                "B) Mores are much stronger norms essential to core values; folkways are ordinary norms not strictly enforced.",
+                "C) There is no difference.",
+                "D) Folkways are always enforced by law."
+            ],
+            "correct_answer": "B) Mores are much stronger norms essential to core values; folkways are ordinary norms not strictly enforced.",
+            "explanation": "The module states: 'Mores (pronounced MORE-rays) are much stronger norms than are folkways. Mores are norms that are believed to be essential to core values and we insist on conformity... Folkways: Norms guiding ordinary usages and conventions of everyday life. Folkways are norms that are not strictly enforced.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 17,
+            "text": "What are cultural universals according to George Murdock?",
+            "options": [
+                "A) Traits unique to one culture.",
+                "B) Customs and practices that occur across all societies, such as family, law, and religion.",
+                "C) Traits found only in Western cultures.",
+                "D) Traits that change every year."
+            ],
+            "correct_answer": "B) Customs and practices that occur across all societies, such as family, law, and religion.",
+            "explanation": "The module states: 'Anthropologist George Murdock (1945) compiled a list of over seventy cultural universals--customs and practices that occur across all societies. His categories included... social institutions (such as family, law, and religion).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 18,
+            "text": "What is a cultural particularity?",
+            "options": [
+                "A) A trait found in all cultures.",
+                "B) A unique cultural trait that is not widespread, specific to a few societies.",
+                "C) A trait found in many cultures.",
+                "D) A biological universal."
+            ],
+            "correct_answer": "B) A unique cultural trait that is not widespread, specific to a few societies.",
+            "explanation": "The module states: 'Particularities are unique to certain cultural tradition. It is a culture trait not widespread. Cultural particulars include the specific practices that distinguish cultures form one another... They occur rarely.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "What are cultural generalities?",
+            "options": [
+                "A) Traits found in all cultures.",
+                "B) Cultural traits that occur in many societies but not in all societies.",
+                "C) Traits found in only one culture.",
+                "D) Biological traits."
+            ],
+            "correct_answer": "B) Cultural traits that occur in many societies but not in all societies.",
+            "explanation": "The module states: 'Generalities are cultural traits that occur in many societies but not in all societies.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "What is the role of sanctions in enforcing norms?",
+            "options": [
+                "A) Sanctions are only positive.",
+                "B) Sanctions are positive or negative reactions (approval or disapproval) to the ways people follow or break norms.",
+                "C) Sanctions are only monetary fines.",
+                "D) Sanctions are only physical punishment."
+            ],
+            "correct_answer": "B) Sanctions are positive or negative reactions (approval or disapproval) to the ways people follow or break norms.",
+            "explanation": "The module states: 'Norms are enforced by sanctions. Sociologists and anthropologists use the term sanctions to refer to positive or negative reactions to the ways in which people follow norms. The term positive sanction refers to an expression of approval given for following a norm, while a negative sanction is disapproval for breaking it.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 21,
+            "text": "What is the definition of ethnocentrism?",
+            "options": [
+                "A) Understanding a culture in its own context.",
+                "B) The tendency to view one's own culture as superior and to judge others by those standards.",
+                "C) The belief that all cultures are equal.",
+                "D) The rejection of all cultural norms."
+            ],
+            "correct_answer": "B) The tendency to view one's own culture as superior and to judge others by those standards.",
+            "explanation": "The module states: 'Ethnocentrism is the tendency to view one's own culture as superior to others and the basis for judging the behavior and beliefs of people raised in other cultures.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 22,
+            "text": "What is a positive role of ethnocentrism mentioned in the module?",
+            "options": [
+                "A) It promotes global understanding.",
+                "B) It acts as a conservative force, helping maintain the separation and uniqueness of cultures.",
+                "C) It encourages open communication.",
+                "D) It eliminates all prejudices."
+            ],
+            "correct_answer": "B) It acts as a conservative force, helping maintain the separation and uniqueness of cultures.",
+            "explanation": "The module states: 'On the other hand, it is argued that a small amount of ethnocentrism is important. By causing a rejection of the foods, customs, and perceptions of people in other cultures, it acts as a conservative force in preserving traditions of one's own culture.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 23,
+            "text": "What is the core principle of cultural relativism?",
+            "options": [
+                "A) That one culture is superior to another.",
+                "B) That we must understand a culture within its own context and suspend judgment.",
+                "C) That all cultures are the same.",
+                "D) That we should ignore cultural differences."
+            ],
+            "correct_answer": "B) That we must understand a culture within its own context and suspend judgment.",
+            "explanation": "The module states: 'Cultural relativism suspends judgment and views about the behavior of people from the perspective of their own culture... A culture has to be studied in terms of its own meanings and values.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 24,
+            "text": "What is the relationship between human rights and cultural relativism?",
+            "options": [
+                "A) Human rights are only relevant to Western cultures.",
+                "B) Human rights are universal, inalienable, and challenge cultural relativism by invoking a realm of justice beyond particular cultures.",
+                "C) They are the same thing.",
+                "D) Cultural relativism always overrides human rights."
+            ],
+            "correct_answer": "B) Human rights are universal, inalienable, and challenge cultural relativism by invoking a realm of justice beyond particular cultures.",
+            "explanation": "The module states: 'Human rights: rights based on justice and morality beyond and superior to particular countries, cultures, and religions. The idea of human rights challenges cultural relativism by invoking a realm of justice and morality beyond and superior to the laws and customs of particular countries, cultures, and religions.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 25,
+            "text": "What is the process by which cultural elements are borrowed from another society called?",
+            "options": [
+                "A) Invention.",
+                "B) Acculturation.",
+                "C) Diffusion.",
+                "D) Globalization."
+            ],
+            "correct_answer": "C) Diffusion.",
+            "explanation": "The module states: 'The process by which cultural elements are borrowed from another society and incorporated into the culture of the recipient group is called diffusion.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 26,
+            "text": "What is the difference between acculturation and diffusion?",
+            "options": [
+                "A) Acculturation is the same as diffusion.",
+                "B) Acculturation results from continuous first-hand contact (e.g., trade or colonialism), while diffusion is the borrowing of traits.",
+                "C) Diffusion is only direct; acculturation is only indirect.",
+                "D) Acculturation is only about food; diffusion is about technology."
+            ],
+            "correct_answer": "B) Acculturation results from continuous first-hand contact (e.g., trade or colonialism), while diffusion is the borrowing of traits.",
+            "explanation": "The module states: 'Acculturation is the exchange of cultural features that results when groups have continuous first-hand contact... This usually happens in situations of trade or colonialism.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 27,
+            "text": "What is a key mechanism of culture change where humans innovate and creatively find solutions to problems?",
+            "options": [
+                "A) Diffusion.",
+                "B) Acculturation.",
+                "C) Invention.",
+                "D) Globalization."
+            ],
+            "correct_answer": "C) Invention.",
+            "explanation": "The module states: 'Invention: The process by which humans innovate, creatively finding solutions to problems is a third mechanism of cultural change.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 28,
+            "text": "How does globalization promote culture change?",
+            "options": [
+                "A) By isolating cultures from each other.",
+                "B) By interlinking nations through economic, political forces, and modern transportation/communication, promoting diffusion and acculturation.",
+                "C) By eliminating all cultural differences.",
+                "D) By preventing the spread of information."
+            ],
+            "correct_answer": "B) By interlinking nations through economic, political forces, and modern transportation/communication, promoting diffusion and acculturation.",
+            "explanation": "The module states: 'Globalization encompasses a series of processes, including diffusion and acculturation, working to promote change in a world in which nations and people are increasingly interlinked and mutually dependent. Promoting such linkages are economic and political forces, as well as modern systems of transportation and communication.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 29,
+            "text": "What is an example of independent invention mentioned in the module?",
+            "options": [
+                "A) The invention of the internet.",
+                "B) The independent invention of agriculture in the Middle East and Mexico.",
+                "C) The invention of the printing press.",
+                "D) The invention of the wheel."
+            ],
+            "correct_answer": "B) The independent invention of agriculture in the Middle East and Mexico.",
+            "explanation": "The module states: 'One example is the independent invention of agriculture in the Middle East and Mexico. Over the course of human history, major innovations have spread at the expense of earlier ones.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 30,
+            "text": "What does cultural relativism entail according to the module?",
+            "options": [
+                "A) Judging all cultures by one standard.",
+                "B) Appreciating cultural diversity, understanding one's own culture as one among many, and recognizing that what is acceptable in one culture may not be in another.",
+                "C) Ignoring cultural differences.",
+                "D) Promoting ethnocentrism."
+            ],
+            "correct_answer": "B) Appreciating cultural diversity, understanding one's own culture as one among many, and recognizing that what is acceptable in one culture may not be in another.",
+            "explanation": "The module states: 'To wind up, cultural relativism entails: Appreciating cultural diversity; accepting and respecting other cultures; Understanding one's own culture as only one among the many; Trying to understand every culture and its elements in terms of its own context and logic... Recognizing that what is immoral, ethical, and acceptable in one culture may not be so in another culture.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 31,
+            "text": "Why is it difficult to have a single universally applicable definition of marriage?",
+            "options": [
+                "A) Because marriage is the same in all cultures.",
+                "B) Because of cross-cultural variability and the existence of rare forms of marriage (e.g., Nuer woman marriage, fraternal polyandry).",
+                "C) Because marriage is only defined by law.",
+                "D) Because marriage does not exist in some cultures."
+            ],
+            "correct_answer": "B) Because of cross-cultural variability and the existence of rare forms of marriage (e.g., Nuer woman marriage, fraternal polyandry).",
+            "explanation": "The module states: 'There is no one universally applicable definition of marriage, because of the Cross-Cultural Variability in the existence of rare forms of marriage in specific societies.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 32,
+            "text": "What is the rule of exogamy?",
+            "options": [
+                "A) A rule requiring individuals to marry within their own group.",
+                "B) A rule prohibiting marriage with someone from one's own social group, often considered incest.",
+                "C) A rule allowing marriage with any relative.",
+                "D) A rule requiring marriage with a specific cousin."
+            ],
+            "correct_answer": "B) A rule prohibiting marriage with someone from one's own social group, often considered incest.",
+            "explanation": "The module states: 'Exogamy: This is the rule by which a man is not allowed to marry someone from his own social group. Such a prohibited union is designated as incest.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 33,
+            "text": "What is the primary adaptive value of exogamy according to Kottak?",
+            "options": [
+                "A) It keeps wealth within the family.",
+                "B) It links people into a wider social network, establishing alliances and providing protection.",
+                "C) It prevents all marriage.",
+                "D) It ensures everyone marries a relative."
+            ],
+            "correct_answer": "B) It links people into a wider social network, establishing alliances and providing protection.",
+            "explanation": "The module states: 'Kottak claimed also that exogamy has adaptive value, because it links people into a wider social network that nurtures, helps, and protects them in times of need pushing social organization outward, establishing and preserving alliances among groups.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 34,
+            "text": "What is the rule of endogamy?",
+            "options": [
+                "A) A rule requiring individuals to marry within their own group.",
+                "B) A rule requiring marriage outside the group.",
+                "C) A rule allowing marriage with any relative.",
+                "D) A rule against marriage."
+            ],
+            "correct_answer": "A) A rule requiring individuals to marry within their own group.",
+            "explanation": "The module states: 'A rule of endogamy requires individuals to marry within their own group and forbids them to marry outside it.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 35,
+            "text": "What is the difference between cross cousins and parallel cousins?",
+            "options": [
+                "A) Cross cousins are children of siblings of the opposite sex; parallel cousins are children of siblings of the same sex.",
+                "B) They are the same.",
+                "C) Cross cousins are the same as parallel cousins.",
+                "D) Cross cousins are siblings of the same sex; parallel cousins are siblings of the opposite sex."
+            ],
+            "correct_answer": "A) Cross cousins are children of siblings of the opposite sex; parallel cousins are children of siblings of the same sex.",
+            "explanation": "The module states: 'Cross Cousins: are children of siblings of the opposite sex... Parallel Cousins: When marriage takes place between the children of the siblings of the same sex, it is called parallel cousin marriage.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 36,
+            "text": "What is the Levirate custom?",
+            "options": [
+                "A) A widower marries the sister of his deceased wife.",
+                "B) A widow is expected to marry the brother of her dead husband.",
+                "C) A woman marries multiple men.",
+                "D) A man marries multiple women."
+            ],
+            "correct_answer": "B) A widow is expected to marry the brother of her dead husband.",
+            "explanation": "The module states: 'The levirate- is the custom whereby a widow is expected to marry the brother (or some close male relative) of her dead husband.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 37,
+            "text": "What is the Sororate custom?",
+            "options": [
+                "A) A widower marries the sister of his deceased wife.",
+                "B) A widow marries the brother of her dead husband.",
+                "C) A man marries multiple women.",
+                "D) A woman marries multiple men."
+            ],
+            "correct_answer": "A) A widower marries the sister of his deceased wife.",
+            "explanation": "The module states: 'The sororate, which comes into play when a wife dies, is the practice of a widower's marrying the sister (or some close female relative) of his deceased wife.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 38,
+            "text": "What is the most common form of polygamy?",
+            "options": [
+                "A) Polyandry.",
+                "B) Polygyny.",
+                "C) Monogamy.",
+                "D) Serial monogamy."
+            ],
+            "correct_answer": "B) Polygyny.",
+            "explanation": "The module states: 'Polygyny is much more common.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 39,
+            "text": "What is bride wealth?",
+            "options": [
+                "A) Payment from the bride's family to the groom's family.",
+                "B) Compensation given by the family of the groom to the family of the bride upon marriage.",
+                "C) A gift exchanged equally between families.",
+                "D) The labor a groom provides to the bride's family."
+            ],
+            "correct_answer": "B) Compensation given by the family of the groom to the family of the bride upon marriage.",
+            "explanation": "The module states: 'Bride wealth: It is the compensation given upon marriage by the family of the groom to the family of the bride.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 40,
+            "text": "What does dowry correlate with according to the module?",
+            "options": [
+                "A) Higher female status.",
+                "B) Lower female status, as women are perceived as burdens.",
+                "C) Equal status.",
+                "D) No correlation."
+            ],
+            "correct_answer": "B) Lower female status, as women are perceived as burdens.",
+            "explanation": "The module states: 'Dowry, best known in India but also practiced in Europe, correlates with lower female status. Women are perceived as burdens.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 41,
+            "text": "What are the two fundamentally different types of family structure identified by cultural anthropologists?",
+            "options": [
+                "A) The nuclear family and the extended family.",
+                "B) The matrilineal and patrilineal family.",
+                "C) The monogamous and polygamous family.",
+                "D) The rural and urban family."
+            ],
+            "correct_answer": "A) The nuclear family and the extended family.",
+            "explanation": "The module states: 'Cultural anthropologists have identified two fundamentally different types of family structure--the nuclear family and the extended family.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 42,
+            "text": "What is a 'family of orientation'?",
+            "options": [
+                "A) The family one establishes through marriage.",
+                "B) The family in which one is born and reared.",
+                "C) The extended family.",
+                "D) The family of one's spouse."
+            ],
+            "correct_answer": "B) The family in which one is born and reared.",
+            "explanation": "The module states: 'The family in which he was born and reared is called 'family of orientation'.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 43,
+            "text": "What percentage of societies listed in Murdock's Ethnographic Atlas have some type of extended family organization?",
+            "options": [
+                "A) 82%",
+                "B) 46%",
+                "C) 14%",
+                "D) 6%"
+            ],
+            "correct_answer": "B) 46%",
+            "explanation": "The module states: 'According to Murdock's Ethnographic Atlas (1967), approximately 46 percent of the 862 societies listed have some type of extended family organization.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 44,
+            "text": "What is the economic function of marriage and family?",
+            "options": [
+                "A) To regulate sexual relations.",
+                "B) To bring economic cooperation between men and women and ensure survival.",
+                "C) To perpetuate the family line.",
+                "D) To socialize children."
+            ],
+            "correct_answer": "B) To bring economic cooperation between men and women and ensure survival.",
+            "explanation": "The module states: 'Marriage brings economic co-operation between men and women and ensures survival of individuals in a society. With the birth of off-springs, the division of labor based on sex and generation come into play.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 45,
+            "text": "What are the three ways kinship can be created?",
+            "options": [
+                "A) Through blood, marriage, and adoption.",
+                "B) Through money, power, and status.",
+                "C) Through religion, language, and ethnicity.",
+                "D) Through education, work, and friendship."
+            ],
+            "correct_answer": "A) Through blood, marriage, and adoption.",
+            "explanation": "The module states: 'Kinship is universally found in all societies, and it can be created through three ways: blood, marriage, and through adoption/fostering/good-parenthood.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 46,
+            "text": "What is consanguineous kinship?",
+            "options": [
+                "A) Kinship based on marriage.",
+                "B) Kinship based on blood ties.",
+                "C) Kinship based on adoption.",
+                "D) Kinship based on friendship."
+            ],
+            "correct_answer": "B) Kinship based on blood ties.",
+            "explanation": "The module states: 'The relationship based on blood ties is called \"consanguineous kinship\", and the relatives of this kind are called 'consanguineous kin'.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 47,
+            "text": "What is the rule of patrilineal descent?",
+            "options": [
+                "A) Descent traced solely through the female line.",
+                "B) Descent traced solely through the male line, with inheritance passing through sons.",
+                "C) Descent traced through either the male or female line.",
+                "D) Descent traced through adoption."
+            ],
+            "correct_answer": "B) Descent traced solely through the male line, with inheritance passing through sons.",
+            "explanation": "The module states: 'When descent is traced solely through the male line, it is called patrilineal descent. A man's sons and daughters all belong to the same descent group by birth, but it is only the sons who continue the affiliation. Succession and inheritance pass through the male line.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 48,
+            "text": "Which Ethiopian culture area is associated with the Gurage, Sidama, and Gedeo areas?",
+            "options": [
+                "A) Plough culture area.",
+                "B) Enset culture area.",
+                "C) Pastoral culture area.",
+                "D) Urban culture area."
+            ],
+            "correct_answer": "B) Enset culture area.",
+            "explanation": "The module states: 'Enset cultivating regions of the present-day SNNPRS such as the Gurage, Sidama, and Gedeo areas constitute enset culture area.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 49,
+            "text": "What is the primary characteristic of the pastoral culture area in Ethiopia?",
+            "options": [
+                "A) Highland farming using ploughs.",
+                "B) Enset cultivation as a staple diet.",
+                "C) Mobility of people and herds, relying on cattle for a living.",
+                "D) Urban industrial life."
+            ],
+            "correct_answer": "C) Mobility of people and herds, relying on cattle for a living.",
+            "explanation": "The module states: 'As opposed to the above cases, inhabitants of the pastoral culture area rely significantly on their herds and cattle for a living. Mobility of people and herds is a major characteristic feature of the people occupying the pastoral culture area.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 50,
+            "text": "According to the unit summary, what are the mechanisms of cultural change?",
+            "options": [
+                "A) Only diffusion.",
+                "B) Diffusion, acculturation, independent invention, and globalization.",
+                "C) Only globalization.",
+                "D) Only invention."
+            ],
+            "correct_answer": "B) Diffusion, acculturation, independent invention, and globalization.",
+            "explanation": "The module states: 'Mechanisms of cultural change include diffusion, acculturation, and independent invention. In addition, globalization describes a series of processes that promote change in our world.'",
+            "difficulty": "hard"
+        }
+    ]
+}

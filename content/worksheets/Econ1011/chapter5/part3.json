@@ -1,0 +1,147 @@
+{
+    "course_code": "Econ1011",
+    "chapter": 5,
+    "title": "Part 3 Practice: Monopolistic Competition & Oligopoly",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Monopolistic competition is characterized by:",
+            "diagram": null,
+            "options": [
+                "A) One firm and no substitutes",
+                "B) Many firms selling differentiated products",
+                "C) Few firms selling identical products",
+                "D) Government-owned firms"
+            ],
+            "correct_answer": "B) Many firms selling differentiated products",
+            "explanation": "MONOPOLISTIC COMPETITION has MANY firms selling DIFFERENTIATED products. Each firm has a 'mini-monopoly' on its brand/variety, but faces competition from close substitutes. Examples: restaurants, clothing stores, hair salons.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Product differentiation in monopolistic competition means:",
+            "diagram": null,
+            "options": [
+                "A) All products are identical",
+                "B) Products are similar but have unique features",
+                "C) Products are completely unrelated",
+                "D) Only one product exists"
+            ],
+            "correct_answer": "B) Products are similar but have unique features",
+            "explanation": "PRODUCT DIFFERENTIATION means products are SIMILAR but NOT IDENTICAL — different brands, quality, location, service, packaging. Example: All coffee shops sell coffee, but each offers something slightly different. This gives firms some pricing power.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 3,
+            "text": "An OLIGOPOLY is a market structure with:",
+            "diagram": null,
+            "options": [
+                "A) Many small firms",
+                "B) One dominant firm",
+                "C) A FEW large firms that are interdependent",
+                "D) No firms"
+            ],
+            "correct_answer": "C) A FEW large firms that are interdependent",
+            "explanation": "OLIGOPOLY has a FEW large firms that dominate the market. Key feature: INTERDEPENDENCE — each firm's decisions affect the others. Examples: mobile networks (2-3 providers), airlines, banks, cement manufacturers.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "The key feature that distinguishes oligopoly from other market structures is:",
+            "diagram": null,
+            "options": [
+                "A) Many sellers",
+                "B) Interdependence among firms",
+                "C) Identical products",
+                "D) Free entry and exit"
+            ],
+            "correct_answer": "B) Interdependence among firms",
+            "explanation": "INTERDEPENDENCE is the defining feature of oligopoly. Each firm must consider how its actions (pricing, advertising, output) will affect rivals and how rivals will respond. This strategic behavior is analyzed using GAME THEORY.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Examine the market structure spectrum. What goes from LEFT to RIGHT?",
+            "diagram": "<svg width='350' height='150' viewBox='0 0 350 150'><rect width='350' height='150' fill='#111827' rx='8'/><line x1='40' y1='75' x2='310' y2='75' stroke='#38bdf8' stroke-width='3'/><circle cx='70' cy='75' r='20' fill='#14b8a6'/><text x='70' y='80' text-anchor='middle' fill='#0B0F19' font-size='8' font-weight='bold'>Perfect</text><circle cx='170' cy='75' r='20' fill='#f59e0b'/><text x='170' y='80' text-anchor='middle' fill='#0B0F19' font-size='8' font-weight='bold'>Monopolistic</text><circle cx='260' cy='75' r='20' fill='#f43f5e'/><text x='260' y='80' text-anchor='middle' fill='#0B0F19' font-size='8' font-weight='bold'>Oligopoly</text><rect x='290' y='55' width='50' height='40' rx='6' fill='#6d28d9'/><text x='315' y='80' text-anchor='middle' fill='#f8fafc' font-size='8' font-weight='bold'>Monopoly</text></svg>",
+            "options": [
+                "A) More competition to less competition",
+                "B) Less competition to more competition",
+                "C) More firms to more firms",
+                "D) Lower prices to lower prices"
+            ],
+            "correct_answer": "A) More competition to less competition",
+            "explanation": "The spectrum shows DECREASING competition from left to right: Perfect Competition (most competitive) → Monopolistic Competition → Oligopoly → Monopoly (least competitive). As competition decreases, firms have more pricing power.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "A CARTEL (like OPEC) is an example of:",
+            "diagram": null,
+            "options": [
+                "A) Perfect competition",
+                "B) Collusive oligopoly",
+                "C) Monopolistic competition",
+                "D) Natural monopoly"
+            ],
+            "correct_answer": "B) Collusive oligopoly",
+            "explanation": "A CARTEL is a group of oligopolistic firms that COLLUDE to act like a monopoly — setting prices and output jointly. OPEC (oil-producing countries) is the most famous example. Cartels are illegal in most countries but exist internationally.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "In monopolistic competition, firms earn ZERO economic profit in the long run because:",
+            "diagram": null,
+            "options": [
+                "A) Government regulation",
+                "B) Free entry and exit",
+                "C) High barriers to entry",
+                "D) Price controls"
+            ],
+            "correct_answer": "B) Free entry and exit",
+            "explanation": "In monopolistic competition, FREE ENTRY AND EXIT means new firms enter when existing firms earn profit. Entry increases competition, reducing demand for each existing firm until economic profit becomes zero. This is similar to perfect competition's long-run outcome.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "The KINKED DEMAND CURVE model explains:",
+            "diagram": null,
+            "options": [
+                "A) Price stability in oligopoly",
+                "B) Why perfect competition is efficient",
+                "C) How monopolies maximize profit",
+                "D) Product differentiation"
+            ],
+            "correct_answer": "A) Price stability in oligopoly",
+            "explanation": "The KINKED DEMAND CURVE explains PRICE RIGIDITY in oligopoly: if a firm RAISES price, rivals DON'T follow (losing customers); if it LOWERS price, rivals DO follow (no gain). This creates a 'kink' where firms have little incentive to change prices.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Which of the following is an example of an oligopoly in Ethiopia?",
+            "diagram": null,
+            "options": [
+                "A) Coffee farmers",
+                "B) Mobile telecom providers (Ethio Telecom, Safaricom)",
+                "C) Small retail shops",
+                "D) Street food vendors"
+            ],
+            "correct_answer": "B) Mobile telecom providers (Ethio Telecom, Safaricom)",
+            "explanation": "The Ethiopian telecom market is an OLIGOPOLY with only 2 providers (Ethio Telecom and Safaricom Ethiopia). These firms are INTERDEPENDENT — pricing and service decisions by one affect the other. High infrastructure costs create barriers to entry.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 10,
+            "text": "Game theory is MOST useful for analyzing:",
+            "diagram": null,
+            "options": [
+                "A) Perfect competition",
+                "B) Oligopoly strategic behavior",
+                "C) Natural monopoly",
+                "D) Consumer behavior"
+            ],
+            "correct_answer": "B) Oligopoly strategic behavior",
+            "explanation": "GAME THEORY analyzes strategic interactions where each player's payoff depends on others' choices. This is ESSENTIAL for oligopoly analysis because firms must anticipate rivals' responses. The Prisoner's Dilemma is the classic game theory example.",
+            "difficulty": "hard"
+        }
+    ]
+}

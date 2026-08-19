@@ -1,0 +1,163 @@
+<div class="lesson-section">
+    <h2>Chapter 3: Matrices, Determinant and Systems of Linear Equations</h2>
+    <h3>Part 5: Determinants, Minors, Cofactors, & Their Properties</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In this part, we explore the <strong>determinant</strong>—a function that takes a square matrix as input and produces a scalar as output. We define determinants for \(2 	imes 2\) and \(3 	imes 3\) matrices, introduce <strong>minors</strong> and <strong>cofactors</strong>, and learn the powerful <strong>cofactor expansion</strong> method for computing determinants of larger matrices. We also study the key <strong>properties of determinants</strong> that make computations much easier.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Compute the determinant of \(2 	imes 2\) and \(3 	imes 3\) matrices.</li>
+            <li>Find minors and cofactors of a matrix.</li>
+            <li>Use cofactor expansion to compute determinants.</li>
+            <li>Apply the properties of determinants.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>3.7 Determinant and its properties</h4>
+
+    <p>The determinant is a function that takes a square matrix as input and produces a scalar as output. It has many beneficial properties for studying matrices and systems of equations.</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 3.21 (Determinant of \(2 	imes 2\) matrix):</strong>
+        <p>The determinant of a \(2 	imes 2\) matrix \(A = egin{bmatrix} a & c \ d & b \end{bmatrix}\), denoted by \(\det(A)\) (or \(|A|\)), is defined by the formula:</p>
+        <p>\[
+        \det(A) = egin{vmatrix} a & c \ d & b \end{vmatrix} = ab - cd.
+        \]</p>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="200" viewBox="0 0 400 200">
+            <rect width="400" height="200" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Determinant of a 2×2 Matrix</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(A = egin{bmatrix} a & c \ d & b \end{bmatrix}\)</text>
+            <text x="100" y="105" fill="#111827" font-size="8" text-anchor="middle">\(\det(A) = ab - cd\)</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Example: \(egin{bmatrix} 5 & 2 \ 3 & 4 \end{bmatrix}\)</text>
+            <text x="300" y="105" fill="#111827" font-size="8" text-anchor="middle">\(\det = (5)(4) - (3)(2) = 14\)</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 Determinant is a scalar value associated with a square matrix.</text>
+        </svg>
+    </div>
+
+    <hr>
+
+    <h4>Minors and Cofactors</h4>
+
+    <p>The determinant of a \(3 	imes 3\) matrix can be defined using the determinants of \(2 	imes 2\) matrices. This leads to the concepts of <strong>minors</strong> and <strong>cofactors</strong>.</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 3.23:</strong>
+        <p>Let \(A = (a_{ij})_{n 	imes n}\), and let \(A_{ij}\) be the submatrix of \(A\) obtained by deleting the \(i\)-th row and \(j\)-th column of \(A\) for \(i, j = 1, 2, 3, \dots, n\).</p>
+        <ul>
+            <li>The <strong>minor</strong> for \(A\) at location \((i,j)\), denoted by \(M_{ij}(A)\), is the determinant of the submatrix \(A_{ij}\). That is, \(M_{ij}(A) = \det(A_{ij})\).</li>
+            <li>The <strong>cofactor</strong>, denoted by \(C_{ij}(A)\), for \(A\) at location \((i,j)\) is the signed determinant of the submatrix \(A_{ij}\). That is, \(C_{ij}(A) = (-1)^{i+j} \det(A_{ij})\).</li>
+        </ul>
+    </div>
+
+    <p><strong>Sign Pattern for Cofactors:</strong></p>
+    <div class="table-container">
+        <table>
+            <tr><td>\(+\)</td><td>\(-\)</td><td>\(+\)</td></tr>
+            <tr><td>\(-\)</td><td>\(+\)</td><td>\(-\)</td></tr>
+            <tr><td>\(+\)</td><td>\(-\)</td><td>\(+\)</td></tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <h4>Cofactor Expansion (Laplace Expansion)</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 3.24:</strong>
+        <p>The determinant of a square matrix \(A = [a_{ij}]\) of size \(n 	imes n\), denoted by \(\det(A)\) (or \(|A|\)), is defined recursively. If \(n = 1\), then \(\det(A) = a_{11}\). Otherwise, we use <strong>cofactor expansion</strong>:</p>
+        <p>\[
+        \det(A) = \sum_{k=1}^{n} a_{k1} C_{k1}(A) = a_{11} C_{11}(A) + a_{21} C_{21}(A) + \dots + a_{n1} C_{n1}(A).
+        \]</p>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Cofactor Expansion Across Any Row or Column</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(i\)-th Row Expansion</text>
+            <text x="100" y="105" fill="#111827" font-size="8" text-anchor="middle">\(\sum_{j} a_{ij} C_{ij}(A)\)</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(j\)-th Column Expansion</text>
+            <text x="300" y="105" fill="#111827" font-size="8" text-anchor="middle">\(\sum_{i} a_{ij} C_{ij}(A)\)</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 Choose the row or column with the most zeros for easiest computation!</text>
+        </svg>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #38bdf8;">
+        <strong>📌 Theorem 3.7:</strong>
+        <p>The determinant of an \(n 	imes n\) matrix \(A\) can be computed by cofactor expansion across <strong>any row or any column</strong>. The value is the same regardless of which row or column is chosen.</p>
+    </div>
+
+    <hr>
+
+    <h4>Properties of Determinants</h4>
+
+    <p>Let \(A\) be a square matrix of size \(n\).</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Property</th><th>Description</th></tr>
+            <tr><td><strong>1. Zero Row/Column</strong></td><td>If an entire row or column consists of zeros, then \(\det(A) = 0\).</td></tr>
+            <tr><td><strong>2. Equal Rows/Columns</strong></td><td>If two rows (or columns) are equal, then \(\det(A) = 0\).</td></tr>
+            <tr><td><strong>3. Scalar Multiple</strong></td><td>If one row (or column) is a scalar multiple of another, then \(\det(A) = 0\).</td></tr>
+            <tr><td><strong>4. Triangular/Diagonal</strong></td><td>The determinant of an upper triangular, lower triangular, or diagonal matrix is the <strong>product of the entries on the main diagonal</strong>.</td></tr>
+            <tr><td><strong>5. Transpose</strong></td><td>\(\det(A) = \det(A^t)\) (Theorem 3.8).</td></tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <h4>Effects of Elementary Row Operations on Determinants</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Theorem 3.9:</strong>
+        <p>Let \(B\) be obtained from a square matrix \(A\) by an elementary row operation.</p>
+        <ol>
+            <li><strong>Interchanging two rows (\(R_i \leftrightarrow R_j\)):</strong> \(\det(B) = -\det(A)\).</li>
+            <li><strong>Multiplying a row by a nonzero scalar (\(R_i 	o lpha R_i\)):</strong> \(\det(B) = lpha \det(A)\).</li>
+            <li><strong>Adding a multiple of one row to another (\(R_i 	o R_i + lpha R_j\)):</strong> \(\det(B) = \det(A)\) (the determinant is unchanged!).</li>
+        </ol>
+    </div>
+
+    <p><strong>Why Property (III) is Important:</strong> This property is particularly interesting because it doesn't change the determinant. It can be used to transform a matrix into triangular form (upper or lower), for which the determinant is simply the product of the diagonal entries—much easier than direct computation.</p>
+
+    <hr>
+
+    <h4>Product Rule for Determinants</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Theorem 3.10:</strong>
+        <p>If \(A\) and \(B\) are two matrices for which the product \(AB\) is defined, then:</p>
+        <p>\[
+        \det(AB) = \det(A) \det(B).
+        \]</p>
+    </div>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 5)</h4>
+        <ul>
+            <li><strong>2×2 Determinant:</strong> \(\detegin{bmatrix} a & c \ d & b \end{bmatrix} = ab - cd\).</li>
+            <li><strong>Minor:</strong> \(M_{ij}(A) = \det(	ext{submatrix after deleting row } i 	ext{ and column } j)\).</li>
+            <li><strong>Cofactor:</strong> \(C_{ij}(A) = (-1)^{i+j} M_{ij}(A)\).</li>
+            <li><strong>Cofactor Expansion:</strong> Expand across any row or column. Choose the one with the most zeros!</li>
+            <li><strong>Triangular/Diagonal Determinant:</strong> Product of diagonal entries.</li>
+            <li><strong>Row Operations:</strong> Interchange → negates; Scale → multiplies; Replacement → no change.</li>
+            <li><strong>Product Rule:</strong> \(\det(AB) = \det(A) \det(B)\).</li>
+        </ul>
+    </div>
+</div>

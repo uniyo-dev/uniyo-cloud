@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 4,
+    "title": "Part 1 Practice: Concepts of Marginalization & Gender-Based Marginalization",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the definition of marginalization according to the module?",
+            "options": [
+                "A) The celebration of cultural diversity.",
+                "B) The treatment of a person or social group as minor, insignificant, or peripheral, involving exclusion from social interactions and economic rights.",
+                "C) The process of integrating all groups into society.",
+                "D) The equal treatment of all social groups."
+            ],
+            "correct_answer": "B) The treatment of a person or social group as minor, insignificant, or peripheral, involving exclusion from social interactions and economic rights.",
+            "explanation": "The module states: 'Marginalization is defined as a treatment of a person or social group as minor, insignificant, or peripheral. Marginalization involves exclusion of certain groups from social interactions... and from basic economic rights.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Which groups are mentioned as being marginalized across the world?",
+            "options": [
+                "A) Only religious minorities.",
+                "B) Women, children, older people, and people with disabilities.",
+                "C) Only ethnic minorities.",
+                "D) Only occupational groups."
+            ],
+            "correct_answer": "B) Women, children, older people, and people with disabilities.",
+            "explanation": "The module states: 'Women, children, older people, and people with disabilities are among marginalized groups across the world.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is vulnerability?",
+            "options": [
+                "A) The state of being completely safe from harm.",
+                "B) The state of being exposed to physical or emotional injuries, requiring special attention and protection.",
+                "C) The state of being powerful.",
+                "D) The state of being rich."
+            ],
+            "correct_answer": "B) The state of being exposed to physical or emotional injuries, requiring special attention and protection.",
+            "explanation": "The module states: 'Vulnerability refers to the state of being exposed to physical or emotional injuries. Vulnerable groups are people exposed to possibilities of attack, harms, or mistreatment.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the key difference between sex and gender according to the module?",
+            "options": [
+                "A) Sex is cultural; gender is biological.",
+                "B) Sex refers to biological differences (chromosomes, hormones, organs); gender refers to socially/culturally constructed roles and behaviors.",
+                "C) They are the same thing.",
+                "D) Sex refers to roles; gender refers to biology."
+            ],
+            "correct_answer": "B) Sex refers to biological differences (chromosomes, hormones, organs); gender refers to socially/culturally constructed roles and behaviors.",
+            "explanation": "The module states: 'Sex differences between female and male human beings are closely associated with biological differences... The concept of gender has a different meaning. The meaning of gender is closely related to socially/culturally constructed characteristics of females/women and males/men.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What are gender roles?",
+            "options": [
+                "A) Biological functions of males and females.",
+                "B) Tasks and activities a culture assigns to men and women, including behaviors expected from them.",
+                "C) Legal rights of men and women.",
+                "D) Economic status of men and women."
+            ],
+            "correct_answer": "B) Tasks and activities a culture assigns to men and women, including behaviors expected from them.",
+            "explanation": "The module states: 'Gender differences are expressed in gender roles (i.e., behaviors expected from females and males in a given cultural setting). Gender roles are tasks and activities a culture assigns to men and women.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is a minority group?",
+            "options": [
+                "A) A large group that dominates society.",
+                "B) A small group of people within a community, region, or country that is different from the majority in terms of race, religion, ethnicity, or language.",
+                "C) A group that holds all political power.",
+                "D) A group that is always marginalized."
+            ],
+            "correct_answer": "B) A small group of people within a community, region, or country that is different from the majority in terms of race, religion, ethnicity, or language.",
+            "explanation": "The module states: 'The phrase 'minority group' refers to a small group of people within a community, region, or country. In most cases, minority groups are different from the majority population in terms of race, religion, ethnicity, and language.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the primary source of gender inequality according to the module?",
+            "options": [
+                "A) Biological differences between men and women.",
+                "B) Cultural values, norms, and beliefs rather than biology.",
+                "C) Economic factors only.",
+                "D) Political factors only."
+            ],
+            "correct_answer": "B) Cultural values, norms, and beliefs rather than biology.",
+            "explanation": "The module states: 'Gender inequality mainly arises from cultural values, norms, and beliefs rather than biological differences between women and men.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Which of the following is an example of gender-based marginalization in Ethiopia mentioned in the module?",
+            "options": [
+                "A) Men being excluded from property rights.",
+                "B) Women being excluded from the right to own and inherit key family resources such as land.",
+                "C) Children having equal rights to land.",
+                "D) Older persons having all property rights."
+            ],
+            "correct_answer": "B) Women being excluded from the right to own and inherit key family resources such as land.",
+            "explanation": "The module states: 'Women do not have equal property rights in many cultures in Ethiopia. For example, they are excluded from the right to own and inherit key family resources such as land.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "According to the module, what is the difference between sex and gender based on their origin?",
+            "options": [
+                "A) Sex is learned; gender is innate.",
+                "B) Sex is biological and innate; gender is socially and culturally constructed.",
+                "C) Sex is cultural; gender is biological.",
+                "D) Sex and gender both originate from biology."
+            ],
+            "correct_answer": "B) Sex is biological and innate; gender is socially and culturally constructed.",
+            "explanation": "The module states: 'Sex differences between female and male human beings are closely associated with biological differences... The meaning of gender is closely related to socially/culturally constructed characteristics.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What are the consequences of gender-based marginalization mentioned in the module?",
+            "options": [
+                "A) Equal distribution of wealth and power.",
+                "B) Social and economic inequalities involving unfair distribution of wealth, income, job opportunities, and political power.",
+                "C) Complete equality for all.",
+                "D) Women having more power than men."
+            ],
+            "correct_answer": "B) Social and economic inequalities involving unfair distribution of wealth, income, job opportunities, and political power.",
+            "explanation": "The module states: 'As a result, women are exposed to social and economic inequalities involving unfair distribution of wealth, income, job opportunities, and political power.'",
+            "difficulty": "hard"
+        }
+    ]
+}

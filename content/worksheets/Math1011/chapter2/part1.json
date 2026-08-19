@@ -1,0 +1,134 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "text": "Which of the following is an irrational number?",
+            "options": [
+                "A) $\\frac{3}{4}$",
+                "B) $-7$",
+                "C) $\\sqrt{2}$",
+                "D) $0$"
+            ],
+            "correct_answer": "C) $\\sqrt{2}$",
+            "explanation": "The module states: 'They showed that while \\sqrt{2} measures the hypotenuse... it cannot be written as a quotient of two integers. Thus, \\sqrt{2} is an irrational number.' Option A is rational (fraction). Option B is an integer (rational). Option D is an integer (rational).",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the additive identity for real numbers?",
+            "options": [
+                "A) $1$",
+                "B) $0$",
+                "C) $-1$",
+                "D) $\\frac{1}{a}$"
+            ],
+            "correct_answer": "B) $0$",
+            "explanation": "The module states: 'There is a unique number called the additive identity, represented by 0, which has the property that a + 0 = a.' Option A is the multiplicative identity. Option C is the additive inverse of 1. Option D is the multiplicative inverse of a.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "Which of the following is the correct Distributive Property?",
+            "options": [
+                "A) $a(b + c) = ab + c$",
+                "B) $a(b + c) = ab + ac$",
+                "C) $a + (b + c) = (a + b) + c$",
+                "D) $a(bc) = (ab)c$"
+            ],
+            "correct_answer": "B) $a(b + c) = ab + ac$",
+            "explanation": "The module states: 'The distributive property: a(b + c) = ab + ac.' Option A incorrectly leaves c unmultiplied. Option C is the Associative Law. Option D is the Associative Law for multiplication.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the value of $8^0$?",
+            "options": [
+                "A) 0",
+                "B) 1",
+                "C) 8",
+                "D) Undefined"
+            ],
+            "correct_answer": "B) 1",
+            "explanation": "The module states: 'Definition of zero Exponent: x^0 = 1 (x ≠ 0).' Option A is incorrect; 0 is the additive identity. Option C is x^1. Option D is only true for 0^0, not for 8^0.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the correct interval notation for the set of all real numbers $x$ such that $x \\leq 34$?",
+            "options": [
+                "A) $(34, \\infty)$",
+                "B) $[34, \\infty)$",
+                "C) $(-\\infty, 34]$",
+                "D) $(-\\infty, 34)$"
+            ],
+            "correct_answer": "C) $(-\\infty, 34]$",
+            "explanation": "The set includes all numbers less than or equal to 34, extending infinitely to the left. The bracket on 34 indicates it is included. Option A excludes 34 and goes to the right (wrong side). Option B includes 34 but goes to the right. Option D excludes 34.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "If $a < b$ and $c < 0$, which of the following is true?",
+            "options": [
+                "A) $ac < bc$",
+                "B) $ac > bc$",
+                "C) $a + c > b + c$",
+                "D) $a - c < b - c$"
+            ],
+            "correct_answer": "B) $ac > bc$",
+            "explanation": "The module states: 'When z is negative, x < y ⇔ xz > yz.' Multiplying by a negative flips the inequality. Option A would be true if c were positive. Option C is false because adding the same number preserves the inequality direction. Option D is false because subtracting c is adding -c (which flips the inequality).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "Which of the following statements is <strong>false</strong>?",
+            "options": [
+                "A) The sum of any two rational numbers is rational.",
+                "B) The product of any two rational numbers is rational.",
+                "C) The sum of any two irrational numbers is irrational.",
+                "D) The product of any two irrational numbers can be rational."
+            ],
+            "correct_answer": "C) The sum of any two irrational numbers is irrational.",
+            "explanation": "The module provides a counterexample: '√2 + (-√2) = 0.' 0 is rational. Therefore, C is false. A and B are true by closure of rationals. D is true because √2 × √8 = √16 = 4 (rational).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "What is the correct simplified form of the expression $2[3 - 2(4 - 8)]$?",
+            "options": [
+                "A) 22",
+                "B) -10",
+                "C) 14",
+                "D) -6"
+            ],
+            "correct_answer": "A) 22",
+            "explanation": "Order of operations (PEMDAS/BODMAS): 1. Innermost parentheses: (4 - 8) = -4. 2. Multiplication: 2(-4) = -8. 3. Inner brackets: 3 - (-8) = 11. 4. Outer multiplication: 2(11) = 22. Options B, C, D result from arithmetic errors in the sequence of operations.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Which of the following is a correct application of the Trichotomy property?",
+            "options": [
+                "A) For any $x$ and $y$, exactly one of $x < y, x = y,$ or $x > y$ holds.",
+                "B) $x < y$ and $y < z \\implies x < z$.",
+                "C) $x < y \\implies x + z < y + z$.",
+                "D) $x < y$ and $z > 0 \\implies xz < yz$."
+            ],
+            "correct_answer": "A) For any $x$ and $y$, exactly one of $x < y, x = y,$ or $x > y$ holds.",
+            "explanation": "The module states: 'Trichotomy: If x and y are numbers, exactly one of the following holds: x < y, x = y, or x > y.' Option B is Transitivity. Option C is the Addition property. Option D is the Multiplication property for positive z.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "If $a > 0$ and $b > 0$, which of the following is always true?",
+            "options": [
+                "A) $a < b \\iff a^2 < b^2$",
+                "B) $a < b \\iff \\frac{1}{a} > \\frac{1}{b}$",
+                "C) Both A and B are true.",
+                "D) Neither A nor B is true."
+            ],
+            "correct_answer": "C) Both A and B are true.",
+            "explanation": "The module asks: 'Prove each if a > 0, b > 0: a) a < b ⇔ a² < b²; b) a < b ⇔ 1/a > 1/b.' Both are true for positive numbers. Option A follows from the monotonicity of squaring. Option B follows from the fact that smaller positive numbers have larger reciprocals.",
+            "difficulty": "hard"
+        }
+    ]
+}

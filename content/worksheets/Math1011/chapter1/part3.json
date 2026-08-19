@@ -1,0 +1,134 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is a tautology in propositional logic?",
+            "options": [
+                "A) A compound proposition that is always false.",
+                "B) A compound proposition that is always true regardless of the truth values of its components.",
+                "C) A proposition that is sometimes true and sometimes false.",
+                "D) A single proposition that is false."
+            ],
+            "correct_answer": "B) A compound proposition that is always true regardless of the truth values of its components.",
+            "explanation": "The module states: 'A compound proposition is a tautology if it is always true regardless of the truth values of its component propositions.' Option A is the definition of a contradiction. Option C is neither tautology nor contradiction. Option D is a false proposition.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Which of the following is an example of a tautology?",
+            "options": [
+                "A) $p \\wedge \\neg p$",
+                "B) $p \\vee \\neg p$",
+                "C) $p \\Rightarrow q$",
+                "D) $p \\wedge q$"
+            ],
+            "correct_answer": "B) $p \\vee \\neg p$",
+            "explanation": "The module states: 'Observe that p ∨ ¬p is a tautology while p ∧ ¬p is a contradiction.' Option A is a contradiction. Option C and D are not always true.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is a contradiction in propositional logic?",
+            "options": [
+                "A) A compound proposition that is always true.",
+                "B) A compound proposition that is always false regardless of the truth values of its components.",
+                "C) A proposition that is sometimes true and sometimes false.",
+                "D) A single proposition that is true."
+            ],
+            "correct_answer": "B) A compound proposition that is always false regardless of the truth values of its components.",
+            "explanation": "The module states: 'If, on the other hand, a compound proposition is always false regardless of its component propositions, we say that such a proposition is a contradiction.' Option A is a tautology. Option C is neither. Option D is a true proposition.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "How can you determine if two compound propositions $P$ and $Q$ are logically equivalent?",
+            "options": [
+                "A) By checking if they have the same number of variables.",
+                "B) By checking if $P \\Leftrightarrow Q$ is a tautology.",
+                "C) By checking if $P$ and $Q$ are both false.",
+                "D) By checking if $P$ and $Q$ are both true."
+            ],
+            "correct_answer": "B) By checking if $P \\Leftrightarrow Q$ is a tautology.",
+            "explanation": "The module states: 'Two compound propositions P and Q are equivalent if and only if P ⇔ Q is a tautology.' Option A is not sufficient. Options C and D are incorrect because equivalence depends on all truth combinations, not just one.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the contrapositive of the statement $p \\Rightarrow q$?",
+            "options": [
+                "A) $q \\Rightarrow p$",
+                "B) $\\neg p \\Rightarrow \\neg q$",
+                "C) $\\neg q \\Rightarrow \\neg p$",
+                "D) $\\neg p \\Rightarrow q$"
+            ],
+            "correct_answer": "C) $\\neg q \\Rightarrow \\neg p$",
+            "explanation": "The module states: 'Contrapositive: The hypothesis of a contrapositive statement is the negation of conclusion of the conditional statement and the conclusion of the contrapositive statement is the negation of hypothesis of the conditional statement.' Option A is the converse. Option B is the inverse. Option D is incorrect.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Which of the following is equivalent to $p \\Rightarrow q$?",
+            "options": [
+                "A) $q \\Rightarrow p$",
+                "B) $\\neg p \\Rightarrow \\neg q$",
+                "C) $\\neg q \\Rightarrow \\neg p$",
+                "D) $p \\Rightarrow \\neg q$"
+            ],
+            "correct_answer": "C) $\\neg q \\Rightarrow \\neg p$",
+            "explanation": "The module states: 'The conditional p ⇒ q and its contrapositive ¬q ⇒ ¬p are equivalent.' Option A is the converse (not equivalent). Option B is the inverse (not equivalent). Option D is incorrect.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the inverse of the statement $p \\Rightarrow q$?",
+            "options": [
+                "A) $q \\Rightarrow p$",
+                "B) $\\neg p \\Rightarrow \\neg q$",
+                "C) $\\neg q \\Rightarrow \\neg p$",
+                "D) $\\neg p \\Rightarrow q$"
+            ],
+            "correct_answer": "B) $\\neg p \\Rightarrow \\neg q$",
+            "explanation": "The module states: 'Inverse: ¬p ⇒ ¬q.' Option A is the converse. Option C is the contrapositive. Option D is incorrect.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "According to De Morgan's Laws, what is $\\neg(p \\wedge q)$ equivalent to?",
+            "options": [
+                "A) $\\neg p \\wedge \\neg q$",
+                "B) $\\neg p \\vee \\neg q$",
+                "C) $p \\wedge q$",
+                "D) $p \\vee q$"
+            ],
+            "correct_answer": "B) $\\neg p \\vee \\neg q$",
+            "explanation": "The module states: 'De Morgan's Laws: ¬(p ∧ q) ≡ ¬p ∨ ¬q.' Option A is the negation of a disjunction. Option C and D are the original expressions.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What is the converse of the statement: 'If it is cold, then the lake is frozen'?",
+            "options": [
+                "A) If the lake is frozen, then it is cold.",
+                "B) If it is not cold, then the lake is not frozen.",
+                "C) If the lake is not frozen, then it is not cold.",
+                "D) If it is cold, then the lake is not frozen."
+            ],
+            "correct_answer": "A) If the lake is frozen, then it is cold.",
+            "explanation": "The module states: 'Converse: The hypothesis of a converse statement is the conclusion of the conditional statement and the conclusion of the converse statement is the hypothesis of the conditional statement.' For 'If it is cold, then the lake is frozen,' the converse is 'If the lake is frozen, then it is cold.' Option B is the inverse. Option C is the contrapositive. Option D is incorrect.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Which of the following is a correct application of the Distributive Law?",
+            "options": [
+                "A) $p \\vee (q \\wedge r) \\equiv (p \\vee q) \\wedge (p \\vee r)$",
+                "B) $p \\wedge (q \\vee r) \\equiv (p \\wedge q) \\vee (p \\wedge r)$",
+                "C) Both A and B are correct.",
+                "D) Neither A nor B is correct."
+            ],
+            "correct_answer": "C) Both A and B are correct.",
+            "explanation": "The module lists the Distributive Laws as: 'p ∨ (q ∧ r) ≡ (p ∨ q) ∧ (p ∨ r)' and by symmetry, p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r) also holds. Both are correct applications of the distributive property.",
+            "difficulty": "hard"
+        }
+    ]
+}

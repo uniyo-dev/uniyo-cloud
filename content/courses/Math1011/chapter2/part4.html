@@ -1,0 +1,158 @@
+<div class="lesson-section">
+    <h2>Chapter 2: Functions</h2>
+    <h3>Part 4: Operations on Functions & Composition</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In this part, we learn how to perform arithmetic operations on functions: addition, subtraction, multiplication, and division. We also explore <strong>composition of functions</strong>, a powerful way to combine two functions by using the output of one as the input of another.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Perform the four fundamental operations on functions.</li>
+            <li>Determine the domain of the sum, difference, product, and quotient of two functions.</li>
+            <li>Compose functions to get a new function.</li>
+            <li>Define equality of two functions.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>2.4 Real Valued functions and their properties</h4>
+
+    <p>Let \(f\) be a function from set \(A\) to set \(B\). If \(B\) is a subset of the real number system \(\mathbb{R}\), then \(f\) is called a <strong>real-valued function</strong>. In particular, if \(A\) is also a subset of \(\mathbb{R}\), then \(f: A \to B\) is called a <strong>real function</strong>.</p>
+
+    <p><strong>Example 2.24:</strong> The function \(f: \mathbb{R} \to \mathbb{R}\) defined by \(f(x) = x^2 + 3x + 7\) is a real function. The function \(f(x) = |x|\) is also a real-valued function.</p>
+
+    <hr>
+
+    <h4>Operations on Functions</h4>
+
+    <p>Functions are not numbers. But just as two numbers \(a\) and \(b\) can be added to produce a new number \(a + b\), so two functions \(f\) and \(g\) can be added to produce a new function \(f + g\). This is just one of several operations on functions that we will describe in this section.</p>
+
+    <p>Consider functions \(f\) and \(g\) with formulas \(f(x) = \frac{x-3}{2}\) and \(g(x) = \sqrt{x}\). We can make a new function \(f + g\) by having it assign to \(x\) the value \(\frac{x-3}{2} + \sqrt{x}\). That is, \((f + g)(x) = f(x) + g(x)\).</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 2.9: Sum, Difference, Product, and Quotient of Two Functions</strong>
+        <p>Let \(f(x)\) and \(g(x)\) be two functions. We define the following four functions:</p>
+        <ol>
+            <li><strong>Sum:</strong> \((f + g)(x) = f(x) + g(x)\)</li>
+            <li><strong>Difference:</strong> \((f - g)(x) = f(x) - g(x)\)</li>
+            <li><strong>Product:</strong> \((f \cdot g)(x) = f(x)g(x)\)</li>
+            <li><strong>Quotient:</strong> \(\left(\frac{f}{g}\right)(x) = \frac{f(x)}{g(x)}\) (provided \(g(x) \neq 0\))</li>
+        </ol>
+    </div>
+
+    <p><strong>Domain Rules for Function Operations:</strong></p>
+    <ul>
+        <li>Since an \(x\)-value must be an input into both \(f\) and \(g\), the domain of \((f + g)(x)\) is the set of all \(x\) common to the domain of \(f\) and \(g\): \(Dom(f + g) = Dom(f) \cap Dom(g)\).</li>
+        <li>The same rule applies to the difference and product of two functions.</li>
+        <li>For the quotient, we must impose the additional restriction that all elements in the domain of \(g\) for which \(g(x) = 0\) are excluded.</li>
+    </ul>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Operations on Functions</text>
+            
+            <rect x="20" y="60" width="160" height="40" fill="#14b8a6" rx="8"/>
+            <text x="100" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">➕ Sum: (f + g)(x)</text>
+
+            <rect x="220" y="60" width="160" height="40" fill="#f43f5e" rx="8"/>
+            <text x="300" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">➖ Difference: (f - g)(x)</text>
+
+            <rect x="20" y="120" width="160" height="40" fill="#facc15" rx="8"/>
+            <text x="100" y="144" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">✖ Product: (f · g)(x)</text>
+
+            <rect x="220" y="120" width="160" height="40" fill="#f59e0b" rx="8"/>
+            <text x="300" y="144" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">➗ Quotient: (f/g)(x)</text>
+
+            <text x="200" y="190" fill="#f8fafc" font-size="10" text-anchor="middle">📖 Domain of quotient: \(Dom(f) \cap Dom(g)\) excluding \(g(x) = 0\)</text>
+        </svg>
+    </div>
+
+    <p><strong>Example 2.25:</strong> Let \(f(x) = 3x^2 + 2\) and \(g(x) = 5x - 4\).</p>
+    <ul>
+        <li>\((f + g)(x) = 3x^2 + 5x - 2\)</li>
+        <li>\((f - g)(x) = 3x^2 - 5x + 6\)</li>
+        <li>\((f \cdot g)(x) = 15x^3 - 12x^2 + 10x - 8\)</li>
+        <li>\(\left(\frac{f}{g}\right)(x) = \frac{3x^2 + 2}{5x - 4}\)</li>
+    </ul>
+    <p>Domains: \(Dom(f+g) = Dom(f-g) = Dom(fg) = \mathbb{R}\). \(Dom(f/g) = \mathbb{R} \setminus \{\frac{5}{4}\}\).</p>
+
+    <hr>
+
+    <h4>Composition of Functions</h4>
+
+    <p>There is yet another way of producing a new function from two given functions.</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 2.10: Composition of Functions</strong>
+        <p>Given two functions \(f(x)\) and \(g(x)\), the <strong>composition</strong> of the two functions is denoted by \(f \circ g\) and is defined by:</p>
+        <p>\[(f \circ g)(x) = f[g(x)].\]</p>
+        <p>\((f \circ g)(x)\) is read as "\(f\) composed with \(g\) of \(x\)".</p>
+    </div>
+
+    <p><strong>Domain of Composition:</strong> The domain of \(f \circ g\) consists of those \(x\)'s in the domain of \(g\) whose range values are in the domain of \(f\). That is, those \(x\)'s for which \(g(x)\) is in the domain of \(f\).</p>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Function Composition: f ∘ g</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(g(x)\)</text>
+            <text x="100" y="105" fill="#111827" font-size="8" text-anchor="middle">Input: x</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(f(x)\)</text>
+            <text x="300" y="105" fill="#111827" font-size="8" text-anchor="middle">Output: g(x)</text>
+
+            <text x="200" y="145" fill="#facc15" font-size="10" text-anchor="middle">\((f \circ g)(x) = f(g(x))\)</text>
+            <text x="200" y="165" fill="#94a3b8" font-size="8" text-anchor="middle">Start with x → apply g → apply f</text>
+        </svg>
+    </div>
+
+    <p><strong>Example 2.26:</strong> Suppose \(f = \{(2,z),(3,q)\}\) and \(g = \{(a,2),(b,3),(c,5)\}\).</p>
+    <ul>
+        <li>\((f \circ g)(a) = f(g(a)) = f(2) = z\)</li>
+        <li>\((f \circ g)(b) = f(g(b)) = f(3) = q\)</li>
+        <li>\((f \circ g)(c) = f(g(c)) = f(5)\) is undefined because 5 is not in the domain of \(f\).</li>
+    </ul>
+    <p>Thus, \(f \circ g = \{(a,z),(b,q)\}\).</p>
+
+    <p><strong>Example 2.27:</strong> Given \(f(x) = 5x^2 - 3x + 2\) and \(g(x) = 4x + 3\).</p>
+    <ul>
+        <li>\((f \circ g)(x) = f(4x + 3) = 5(4x + 3)^2 - 3(4x + 3) + 2 = 80x^2 + 108x + 38\).</li>
+        <li>\((g \circ f)(x) = g(5x^2 - 3x + 2) = 4(5x^2 - 3x + 2) + 3 = 20x^2 - 12x + 11\).</li>
+    </ul>
+    <p><strong>Note:</strong> In general, \(f \circ g \neq g \circ f\).</p>
+
+    <hr>
+
+    <h4>Equality of Functions</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 2.11: Equality of Functions</strong>
+        <p>Two functions are said to be <strong>equal</strong> if and only if the following two conditions hold:</p>
+        <ol>
+            <li>The functions have the <strong>same domain</strong>.</li>
+            <li>Their functional values are <strong>equal at each element of the domain</strong>.</li>
+        </ol>
+    </div>
+
+    <p><strong>Example 2.28:</strong></p>
+    <ul>
+        <li>\(f(n) = n^2\) and \(g(n) = |n|^2\) for all \(n \in \mathbb{Z}\) are equal because \(Dom(f) = Dom(g) = \mathbb{Z}\) and \(f(n) = g(n)\) for all \(n\).</li>
+        <li>\(f(x) = \frac{x^2 - 25}{x - 5}\) (domain \(\mathbb{R} \setminus \{5\}\)) and \(g(x) = x + 5\) (domain \(\mathbb{R}\)) are <strong>not equal</strong> because their domains are different.</li>
+    </ul>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 4)</h4>
+        <ul>
+            <li><strong>Operations on Functions:</strong> Sum \((f+g)\), Difference \((f-g)\), Product \((fg)\), Quotient \((f/g)\).</li>
+            <li><strong>Domain of Operations:</strong> Sum/Difference/Product: \(Dom(f) \cap Dom(g)\). Quotient: \(Dom(f) \cap Dom(g) \setminus \{x \mid g(x) = 0\}\).</li>
+            <li><strong>Composition:</strong> \((f \circ g)(x) = f(g(x))\). Domain: \(x \in Dom(g)\) such that \(g(x) \in Dom(f)\).</li>
+            <li><strong>Equality of Functions:</strong> Same domain AND same values at every point in the domain.</li>
+            <li><strong>Note:</strong> In general, \(f \circ g \neq g \circ f\).</li>
+        </ul>
+    </div>
+</div>

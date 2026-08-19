@@ -1,0 +1,210 @@
+/* ============================================
+   UNIYO LMS - Authentication Styles
+   ============================================ */
+
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #0B0F19 0%, #111827 50%, #0B0F19 100%);
+}
+
+.auth-card {
+    background: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.register-card {
+    max-width: 600px;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.auth-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    color: #F8FAFC;
+    letter-spacing: 2px;
+}
+
+.auth-header p {
+    color: #94A3B8;
+    margin-top: 4px;
+}
+
+.auth-subtitle {
+    color: #6D28D9;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-section {
+    margin-bottom: 24px;
+    padding: 16px;
+    background: #1A2332;
+    border-radius: 12px;
+}
+
+.form-section h4 {
+    color: #6D28D9;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+@media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; }
+    .auth-card { padding: 24px; }
+}
+
+.photo-upload-group { text-align: center; }
+
+.photo-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.photo-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #6D28D9;
+}
+
+.stream-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+@media (max-width: 600px) {
+    .stream-options { grid-template-columns: 1fr; }
+}
+
+.stream-option input[type="radio"] { display: none; }
+
+.stream-card {
+    display: block;
+    padding: 16px;
+    background: #0B0F19;
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.stream-card strong {
+    display: block;
+    color: #F8FAFC;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.stream-card small {
+    display: block;
+    color: #94A3B8;
+    font-size: 11px;
+}
+
+.stream-option input[type="radio"]:checked + .stream-card {
+    border-color: #6D28D9;
+    background: rgba(109, 40, 217, 0.1);
+}
+
+.validation-message {
+    font-size: 13px;
+    margin-top: 8px;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.validation-message.success { color: #14B8A6; background: rgba(20, 184, 166, 0.1); }
+.validation-message.error { color: #EC4899; background: rgba(236, 72, 153, 0.1); }
+
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #94A3B8;
+}
+
+.auth-footer a { color: #6D28D9; font-weight: 600; }
+
+.btn-block { width: 100%; margin-top: 16px; }
+
+/* Logo */
+.auth-logo {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.auth-logo-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+}
+
+/* COMPLETE LIGHT MODE OVERRIDES */
+body.light-mode .auth-container {
+    background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 50%, #F8FAFC 100%);
+}
+
+body.light-mode .auth-card {
+    background: #FFFFFF;
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .auth-header h1 {
+    color: #0B0F19;
+}
+
+body.light-mode .auth-header p {
+    color: #475569;
+}
+
+body.light-mode .form-section {
+    background: #F8FAFC;
+}
+
+body.light-mode .form-section h4 {
+    color: #6D28D9;
+}
+
+body.light-mode .stream-card {
+    background: #FFFFFF;
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .stream-card strong {
+    color: #0B0F19;
+}
+
+body.light-mode .stream-card small {
+    color: #475569;
+}
+
+body.light-mode .auth-footer {
+    color: #475569;
+}

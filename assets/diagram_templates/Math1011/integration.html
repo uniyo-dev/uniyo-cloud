@@ -1,0 +1,54 @@
+<svg width="700" height="500" viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg">
+    <rect width="700" height="500" fill="#111827" rx="10"/>
+    
+    <!-- Title -->
+    <text x="200" y="35" fill="#facc15" font-size="24" font-weight="bold">INTEGRATION - AREA UNDER CURVE</text>
+    
+    <!-- Grid -->
+    <line x1="80" y1="420" x2="620" y2="420" stroke="#334155" stroke-width="1"/>
+    <line x1="350" y1="60" x2="350" y2="420" stroke="#334155" stroke-width="1"/>
+    
+    <!-- Grid Lines -->
+    <line x1="140" y1="420" x2="140" y2="415" stroke="#334155" stroke-width="1"/>
+    <line x1="210" y1="420" x2="210" y2="415" stroke="#334155" stroke-width="1"/>
+    <line x1="280" y1="420" x2="280" y2="415" stroke="#334155" stroke-width="1"/>
+    <line x1="420" y1="420" x2="420" y2="415" stroke="#334155" stroke-width="1"/>
+    <line x1="490" y1="420" x2="490" y2="415" stroke="#334155" stroke-width="1"/>
+    <line x1="560" y1="420" x2="560" y2="415" stroke="#334155" stroke-width="1"/>
+    
+    <line x1="75" y1="350" x2="80" y2="350" stroke="#334155" stroke-width="1"/>
+    <line x1="75" y1="280" x2="80" y2="280" stroke="#334155" stroke-width="1"/>
+    <line x1="75" y1="210" x2="80" y2="210" stroke="#334155" stroke-width="1"/>
+    <line x1="75" y1="140" x2="80" y2="140" stroke="#334155" stroke-width="1"/>
+    
+    <!-- Axes Labels -->
+    <text x="620" y="440" fill="#f8fafc" font-size="14">x</text>
+    <text x="350" y="50" fill="#f8fafc" font-size="14">y</text>
+    
+    <!-- Function -->
+    <path d="M 120 350 Q 200 280 280 210 Q 350 140 420 210 Q 500 280 580 350" 
+    stroke="#38bdf8" stroke-width="3" fill="none"/>
+    <text x="590" y="360" fill="#38bdf8" font-size="14">f(x)</text>
+    
+    <!-- Area Under Curve (Shaded) -->
+    <path d="M 140 400 L 140 330 Q 200 280 280 220 Q 350 160 420 220 Q 500 280 560 330 L 560 400 Z" 
+    fill="#f43f5e" opacity="0.3" stroke="#f43f5e" stroke-width="1"/>
+    
+    <!-- Bounds -->
+    <line x1="140" y1="400" x2="140" y2="420" stroke="#f8fafc" stroke-width="2"/>
+    <text x="135" y="438" fill="#f8fafc" font-size="12">a</text>
+    
+    <line x1="560" y1="400" x2="560" y2="420" stroke="#f8fafc" stroke-width="2"/>
+    <text x="555" y="438" fill="#f8fafc" font-size="12">b</text>
+    
+    <!-- Rectangle Approximation -->
+    <rect x="280" y="220" width="70" height="180" fill="#14b8a6" opacity="0.2" stroke="#14b8a6" stroke-width="1"/>
+    <text x="285" y="300" fill="#14b8a6" font-size="10">Δx</text>
+    
+    <rect x="350" y="160" width="70" height="240" fill="#facc15" opacity="0.2" stroke="#facc15" stroke-width="1"/>
+    
+    <!-- Legend -->
+    <rect x="60" y="440" width="580" height="45" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="80" y="462" fill="#f8fafc" font-size="13" font-weight="bold">Definite Integral:</text>
+    <text x="280" y="462" fill="#facc15" font-size="14">∫ₐᵇ f(x) dx = Area under curve</text>
+</svg>

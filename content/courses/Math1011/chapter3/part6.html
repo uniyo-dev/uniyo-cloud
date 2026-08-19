@@ -1,0 +1,161 @@
+<div class="lesson-section">
+    <h2>Chapter 3: Matrices, Determinant and Systems of Linear Equations</h2>
+    <h3>Part 6: Adjoint, Inverse of a Matrix, & Gauss-Jordan Elimination</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In this part, we define the <strong>Adjoint (Adjugate)</strong> of a matrix and use it to derive a formula for the <strong>Inverse</strong> of a matrix. We also explore the <strong>Gauss-Jordan Elimination</strong> method, a powerful technique for finding the inverse using elementary row operations. Finally, we study the key <strong>properties of inverses</strong>.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Compute the adjoint of a matrix.</li>
+            <li>Determine whether a matrix is invertible.</li>
+            <li>Find the inverse of a matrix using the adjoint formula.</li>
+            <li>Find the inverse using Gauss-Jordan elimination.</li>
+            <li>Apply the laws of inverses.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>3.8 Adjoint and Inverse of a Matrix</h4>
+
+    <p>The inverses of matrices are useful to solve linear systems. In this section, we define the inverse of a matrix, discuss different methods to compute an inverse, and the properties of inverses.</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 3.26 (Adjoint of a Matrix):</strong>
+        <p>Let \(A\) be an \(n 	imes n\) matrix. If \([C_{ij}(A)]\) denotes the matrix of cofactors for \(A\), then the <strong>adjugate</strong> (or adjoint) matrix of \(A\), denoted by \(	ext{Adj}(A)\), is defined by the formula:</p>
+        <p>\[
+        	ext{Adj}(A) = [C_{ij}(A)]^t
+        \]</p>
+        <p>That is, the adjoint of matrix \(A\) is the transpose of the matrix of cofactors for \(A\).</p>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Adjoint of a Matrix</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Matrix of Cofactors \([C_{ij}]\)</text>
+            <text x="100" y="105" fill="#111827" font-size="8" text-anchor="middle">C_{11} = 2, C_{12} = 1, etc.</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Adjoint: Transpose of Cofactors</text>
+            <text x="300" y="105" fill="#111827" font-size="8" text-anchor="middle">Adj(A) = [C_{ij}]^t</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 The adjoint is the transpose of the cofactor matrix.</text>
+        </svg>
+    </div>
+
+    <p><strong>Example 3.41:</strong> Compute the adjoint of \(A = egin{bmatrix} 1 & 2 \ 3 & 4 \end{bmatrix}\).</p>
+    <p>The matrix of cofactors is \(egin{bmatrix} 4 & -3 \ -2 & 1 \end{bmatrix}\). Thus, \(	ext{Adj}(A) = egin{bmatrix} 4 & -2 \ -3 & 1 \end{bmatrix}\).</p>
+
+    <hr>
+
+    <h4>Inverse of a Matrix</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 3.27:</strong>
+        <p>The <strong>inverse</strong> of a square matrix \(A\) is an \(n 	imes n\) matrix \(B\) such that:</p>
+        <p>\[
+        AB = I_n = BA,
+        \]</p>
+        <p>where \(I_n\) is the \(n 	imes n\) identity matrix. If such a matrix \(B\) exists, then \(A\) is said to be <strong>invertible</strong> (or nonsingular), and its inverse is denoted by \(A^{-1}\) (i.e., \(B = A^{-1}\)). A matrix that does not have an inverse is said to be <strong>noninvertible</strong> (or singular).</p>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Theorem 3.11:</strong>
+        <p>Let \(A\) be an \(n 	imes n\) matrix. If \(A\) is invertible (nonsingular), then \(\det(A) 
+eq 0\), and the inverse \(A^{-1}\) is given by the formula:</p>
+        <p>\[
+        A^{-1} = rac{1}{\det(A)} 	ext{Adj}(A).
+        \]</p>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Inverse Formula: \(A^{-1} = rac{1}{\det(A)} 	ext{Adj}(A)\)</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(A = egin{bmatrix} 1 & 2 \ 3 & 4 \end{bmatrix}\)</text>
+            <text x="100" y="105" fill="#111827" font-size="8" text-anchor="middle">\(\det(A) = -2\)</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(A^{-1} = rac{1}{-2} egin{bmatrix} 4 & -2 \ -3 & 1 \end{bmatrix}\)</text>
+            <text x="300" y="105" fill="#111827" font-size="8" text-anchor="middle">\(A^{-1} = egin{bmatrix} -2 & 1 \ 3/2 & -1/2 \end{bmatrix}\)</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 If \(\det(A) = 0\), the matrix is singular and has no inverse.</text>
+        </svg>
+    </div>
+
+    <hr>
+
+    <h4>Gauss-Jordan Elimination (Computing the Inverse)</h4>
+
+    <p>Let \(A\) be an \(n 	imes n\) invertible matrix and \(I_n\) be the identity matrix of size \(n 	imes n\). The inverse \(A^{-1}\) can be obtained using elementary row operations as follows:</p>
+
+    <ol>
+        <li>Write the \(n 	imes 2n\) matrix that consists of \(A\) on the left and the \(n 	imes n\) identity matrix \(I_n\) on the right to obtain \([A \mid I_n]\).</li>
+        <li>If possible, row reduce \(A\) to \(I_n\) using elementary row operations on the entire matrix \([A \mid I_n]\). The result will be the matrix \([I_n \mid A^{-1}]\). If this is not possible, then \(A\) is noninvertible (or singular).</li>
+        <li>Check your work by multiplying to see that \(AA^{-1} = I_n = A^{-1}A\).</li>
+    </ol>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Gauss-Jordan Elimination</text>
+            
+            <rect x="20" y="60" width="160" height="40" fill="#14b8a6" rx="8"/>
+            <text x="100" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Step 1: \([A \mid I_n]\)</text>
+
+            <rect x="220" y="60" width="160" height="40" fill="#f43f5e" rx="8"/>
+            <text x="300" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Step 2: Row reduce to \([I_n \mid A^{-1}]\)</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 If row reduction fails, the matrix is singular.</text>
+        </svg>
+    </div>
+
+    <p><strong>Example 3.45:</strong> Compute the inverse of \(A = egin{bmatrix} 1 & -1 \ 3 & 2 \end{bmatrix}\) using Gauss-Jordan elimination.</p>
+
+    <p>\[
+    [A \mid I_2] = egin{bmatrix} 1 & -1 & 1 & 0 \ 3 & 2 & 0 & 1 \end{bmatrix}
+    \]</p>
+
+    <p>Apply \(R_2 	o R_2 - 3R_1\), then \(R_2 	o rac{1}{5}R_2\), then \(R_1 	o R_1 + R_2\):</p>
+
+    <p>\[
+    egin{bmatrix} 1 & 0 & 2/5 & 1/5 \ 0 & 1 & -3/5 & 1/5 \end{bmatrix}
+    \]</p>
+
+    <p>Thus, \(A^{-1} = egin{bmatrix} 2/5 & 1/5 \ -3/5 & 1/5 \end{bmatrix}\).</p>
+
+    <hr>
+
+    <h4>Laws of Inverse</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Theorem 3.12:</strong>
+        <p>Let \(A, B, C\) be matrices of appropriate sizes, \(I\) the identity matrix, and \(lpha\) a nonzero scalar.</p>
+        <ol>
+            <li>If \(A\) is invertible, it has <strong>one and only one</strong> inverse, \(A^{-1}\).</li>
+            <li>If \(A\) is invertible, then so is \(A^{-1}\), and \((A^{-1})^{-1} = A\).</li>
+            <li>If any two of \(A, B, AB\) are invertible, then so is the third, and \((AB)^{-1} = B^{-1}A^{-1}\).</li>
+            <li>If \(A\) is invertible, then so is \(lpha A\), and \((lpha A)^{-1} = rac{1}{lpha} A^{-1}\).</li>
+            <li>If \(A\) is invertible, then so is \(A^t\), and \((A^t)^{-1} = (A^{-1})^t\).</li>
+            <li>If \(A\) is invertible, then \(AB = AC\) or \(BA = CA \Rightarrow B = C\).</li>
+        </ol>
+    </div>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 6)</h4>
+        <ul>
+            <li><strong>Adjoint:</strong> Transpose of the matrix of cofactors.</li>
+            <li><strong>Invertibility Condition:</strong> \(\det(A) 
+eq 0\).</li>
+            <li><strong>Formula:</strong> \(A^{-1} = rac{1}{\det(A)} 	ext{Adj}(A)\).</li>
+            <li><strong>Gauss-Jordan:</strong> Row reduce \([A \mid I_n]\) to \([I_n \mid A^{-1}]\).</li>
+            <li><strong>Key Properties:</strong> \((AB)^{-1} = B^{-1}A^{-1}\), \((A^t)^{-1} = (A^{-1})^t\), \((lpha A)^{-1} = rac{1}{lpha} A^{-1}\).</li>
+        </ul>
+    </div>
+</div>

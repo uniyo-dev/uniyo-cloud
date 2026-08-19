@@ -1,0 +1,137 @@
+{
+    "course_code": "Math1011",
+    "chapter": 3,
+    "title": "Part 3 Practice: Types of Matrices & Transpose",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is a square matrix?",
+            "options": [
+                "A) A matrix with more rows than columns.",
+                "B) A matrix with the same number of rows and columns.",
+                "C) A matrix with more columns than rows.",
+                "D) A matrix with all entries equal to zero."
+            ],
+            "correct_answer": "B) A matrix with the same number of rows and columns.",
+            "explanation": "The module states: 'A matrix A is said to be square if it has the same number of rows and columns.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is an identity matrix?",
+            "options": [
+                "A) A matrix with all entries equal to 1.",
+                "B) A square matrix with 1s on the main diagonal and 0s elsewhere.",
+                "C) A matrix with all entries equal to 0.",
+                "D) A matrix with 1s in the first row and 0s elsewhere."
+            ],
+            "correct_answer": "B) A square matrix with 1s on the main diagonal and 0s elsewhere.",
+            "explanation": "The module states: 'A square matrix A is called an identity matrix if a_{ij} = 1 when i = j, and a_{ij} = 0 when i ≠ j.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is a diagonal matrix?",
+            "options": [
+                "A) A matrix where all entries are 1.",
+                "B) A matrix where all entries off the main diagonal are 0.",
+                "C) A matrix with all entries equal to 0.",
+                "D) A matrix with 1s in the first column."
+            ],
+            "correct_answer": "B) A matrix where all entries off the main diagonal are 0.",
+            "explanation": "The module states: 'A square matrix D is said to be diagonal if d_{ij} = 0 whenever i ≠ j.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the transpose of matrix A = [[1, 2, 3], [4, 5, 6]]?",
+            "options": [
+                "A) [[1, 4], [2, 5], [3, 6]]",
+                "B) [[1, 2, 3], [4, 5, 6]]",
+                "C) [[1, 2], [3, 4], [5, 6]]",
+                "D) [[1, 3, 5], [2, 4, 6]]"
+            ],
+            "correct_answer": "A) [[1, 4], [2, 5], [3, 6]]",
+            "explanation": "The module states: 'Row 1 of matrix A becomes column 1 of Aᵗ, and row 2 of A becomes column 2 of Aᵗ.' Thus, Aᵗ = [[1, 4], [2, 5], [3, 6]].",
+            "difficulty": "easy"
+        },
+        {
+            "id": 5,
+            "text": "When is a square matrix A called symmetric?",
+            "options": [
+                "A) When A is diagonal.",
+                "B) When A = Aᵗ.",
+                "C) When A is upper triangular.",
+                "D) When A is lower triangular."
+            ],
+            "correct_answer": "B) When A = Aᵗ.",
+            "explanation": "The module states: 'A square matrix A is said to be Symmetric if A = Aᵗ.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Which of the following is a symmetric matrix?",
+            "options": [
+                "A) [[0, 1, 3], [-1, 0, 2], [-3, -2, 0]]",
+                "B) [[1, 1, 3], [1, 2, 2], [3, 2, 3]]",
+                "C) [[1, 0, 0], [0, 2, 0], [0, 0, 3]]",
+                "D) Both B and C"
+            ],
+            "correct_answer": "D) Both B and C",
+            "explanation": "Matrix B is symmetric because Bᵗ = B. Matrix C is a diagonal matrix, which is always symmetric because Cᵗ = C. Matrix A is not symmetric because Aᵗ ≠ A.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is (Aᵗ)ᵗ equal to?",
+            "options": [
+                "A) A²",
+                "B) A",
+                "C) I",
+                "D) 0"
+            ],
+            "correct_answer": "B) A",
+            "explanation": "The module states: '(Aᵗ)ᵗ = A.' The transpose of the transpose returns the original matrix.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What is the transpose of the product (AB)ᵗ?",
+            "options": [
+                "A) AᵗBᵗ",
+                "B) BᵗAᵗ",
+                "C) AB",
+                "D) BA"
+            ],
+            "correct_answer": "B) BᵗAᵗ",
+            "explanation": "The module states: '(AB)ᵗ = BᵗAᵗ.' The order of multiplication is reversed when taking the transpose of a product.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What is a scalar matrix?",
+            "options": [
+                "A) A diagonal matrix with all diagonal entries equal to 1.",
+                "B) A diagonal matrix in which all diagonal entries are equal.",
+                "C) Any matrix with all entries equal.",
+                "D) A 1 × 1 matrix."
+            ],
+            "correct_answer": "B) A diagonal matrix in which all diagonal entries are equal.",
+            "explanation": "The module states: 'A diagonal matrix in which all diagonal entries are equal is called a scalar matrix.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Which of the following is a scalar matrix?",
+            "options": [
+                "A) [[1, 0], [0, 1]]",
+                "B) [[2, 0], [0, 2]]",
+                "C) [[2, 0], [0, 3]]",
+                "D) Both A and B"
+            ],
+            "correct_answer": "D) Both A and B",
+            "explanation": "A scalar matrix is a diagonal matrix where all diagonal entries are equal. A is the identity matrix (scalar with 1s). B is a scalar matrix with 2s. C is a diagonal matrix but not scalar because 2 ≠ 3.",
+            "difficulty": "hard"
+        }
+    ]
+}

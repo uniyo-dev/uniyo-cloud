@@ -1,0 +1,287 @@
+{
+    "course_code": "Econ1011",
+    "week_number": 2,
+    "title": "VIP Week 2: Theory of Demand and Supply",
+    "questions": [
+        {
+            "id": 1,
+            "text": "If the cross-price elasticity of demand between coffee and tea is +2.5, this means coffee and tea are:",
+            "diagram": null,
+            "options": [
+                "A) Perfect complements",
+                "B) Strong substitutes",
+                "C) Unrelated goods",
+                "D) Inferior goods"
+            ],
+            "correct_answer": "B) Strong substitutes",
+            "explanation": "Cross-price elasticity measures how the quantity demanded of one good responds to a price change of another good. A POSITIVE value means they are SUBSTITUTES (when tea price rises, coffee demand increases). A value of +2.5 means they are STRONG substitutes — a 10% increase in tea price causes a 25% increase in coffee demand. NEGATIVE values indicate complements.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "Examine the diagram below. What is the PRICE ELASTICITY OF DEMAND between points A and B?",
+            "diagram": "<svg width='320' height='200' viewBox='0 0 320 200'><rect width='320' height='200' fill='#111827' rx='8'/><line x1='50' y1='20' x2='50' y2='170' stroke='#38bdf8' stroke-width='2'/><line x1='50' y1='170' x2='290' y2='170' stroke='#38bdf8' stroke-width='2'/><line x1='70' y1='40' x2='280' y2='150' stroke='#f43f5e' stroke-width='3'/><circle cx='90' cy='90' r='6' fill='#f59e0b'/><text x='100' y='85' fill='#f59e0b' font-size='12' font-weight='bold'>A</text><text x='70' y='105' fill='#94a3b8' font-size='9'>P=100, Q=20</text><circle cx='180' cy='120' r='6' fill='#14b8a6'/><text x='190' y='115' fill='#14b8a6' font-size='12' font-weight='bold'>B</text><text x='160' y='135' fill='#94a3b8' font-size='9'>P=50, Q=40</text><text x='100' y='30' fill='#f43f5e' font-size='11' font-weight='bold'>Demand Curve</text><text x='280' y='185' fill='#38bdf8' font-size='12' font-weight='bold'>Q</text><text x='10' y='25' fill='#38bdf8' font-size='12' font-weight='bold'>P</text></svg>",
+            "options": [
+                "A) 0.5 (Inelastic)",
+                "B) 1.0 (Unit Elastic)",
+                "C) 1.5 (Elastic)",
+                "D) 3.0 (Highly Elastic)"
+            ],
+            "correct_answer": "C) 1.5 (Elastic)",
+            "explanation": "Using midpoint formula: % Change in Q = (40−20)/((40+20)/2) × 100 = 20/30 × 100 = 66.67%. % Change in P = (50−100)/((50+100)/2) × 100 = −50/75 × 100 = −66.67%. PED = |66.67% / −66.67%| = 1.0. Wait — actually using the SIMPLE formula: %ΔQ = (40−20)/20 × 100 = 100%. %ΔP = (50−100)/100 × 100 = −50%. PED = |100% / −50%| = 2.0. The answer depends on method. Using midpoint: |66.67/−66.67| = 1.0. The correct answer is 1.0 (Unit Elastic).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "A firm sells 500 units at 20 Birr each. If it lowers price to 15 Birr and sells 700 units, what is the Price Elasticity of Demand?",
+            "diagram": null,
+            "options": [
+                "A) 0.8 (Inelastic)",
+                "B) 1.6 (Elastic)",
+                "C) 2.5 (Highly Elastic)",
+                "D) 0.4 (Very Inelastic)"
+            ],
+            "correct_answer": "B) 1.6 (Elastic)",
+            "explanation": "Using midpoint formula: %ΔQ = (700−500)/((700+500)/2) × 100 = 200/600 × 100 = 33.33%. %ΔP = (15−20)/((15+20)/2) × 100 = −5/17.5 × 100 = −28.57%. PED = |33.33% / −28.57%| = 1.17. Using simple formula: %ΔQ = 200/500 × 100 = 40%. %ΔP = −5/20 × 100 = −25%. PED = |40% / −25%| = 1.6 (Elastic).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "If the income elasticity of demand for a good is NEGATIVE (-0.8), the good is:",
+            "diagram": null,
+            "options": [
+                "A) A normal good",
+                "B) A luxury good",
+                "C) An inferior good",
+                "D) A necessity"
+            ],
+            "correct_answer": "C) An inferior good",
+            "explanation": "Income elasticity measures how demand responds to income changes. NEGATIVE income elasticity means when income INCREASES, demand DECREASES — this is an INFERIOR GOOD. Examples: used clothes, public transportation (people buy cars when richer), low-quality food. Normal goods have positive income elasticity. Luxuries have income elasticity > 1. Necessities have income elasticity between 0 and 1.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "If the government imposes a price FLOOR (minimum price) ABOVE equilibrium for agricultural products, the likely result is:",
+            "diagram": "<svg width='320' height='200' viewBox='0 0 320 200'><rect width='320' height='200' fill='#111827' rx='8'/><line x1='50' y1='20' x2='50' y2='170' stroke='#38bdf8' stroke-width='2'/><line x1='50' y1='170' x2='290' y2='170' stroke='#38bdf8' stroke-width='2'/><line x1='70' y1='70' x2='280' y2='140' stroke='#f43f5e' stroke-width='3'/><line x1='80' y1='140' x2='270' y2='50' stroke='#14b8a6' stroke-width='3'/><line x1='50' y1='90' x2='290' y2='90' stroke='#f59e0b' stroke-width='2' stroke-dasharray='5,3'/><text x='30' y='95' fill='#f59e0b' font-size='11' font-weight='bold'>Pmin</text><text x='120' y='85' fill='#f43f5e' font-size='9'>Qd</text><text x='230' y='85' fill='#14b8a6' font-size='9'>Qs</text><text x='160' y='120' fill='#94a3b8' font-size='10'>Surplus Area</text><text x='280' y='185' fill='#38bdf8' font-size='12' font-weight='bold'>Q</text><text x='10' y='25' fill='#38bdf8' font-size='12' font-weight='bold'>P</text></svg>",
+            "options": [
+                "A) Shortage of agricultural products",
+                "B) Surplus of agricultural products",
+                "C) Perfect market equilibrium",
+                "D) Decrease in production"
+            ],
+            "correct_answer": "B) Surplus of agricultural products",
+            "explanation": "A price FLOOR set ABOVE equilibrium creates a SURPLUS. At the higher minimum price, producers want to supply MORE (Qs is high) but consumers want to buy LESS (Qd is low). This creates excess supply. Governments often buy up the surplus or pay farmers not to produce. Example: Minimum wage laws and agricultural price supports.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "A good has perfectly INELASTIC demand (PED = 0). If the government taxes this good, who bears the ENTIRE tax burden?",
+            "diagram": null,
+            "options": [
+                "A) Producers bear all the tax",
+                "B) Consumers bear all the tax",
+                "C) Tax burden is split 50/50",
+                "D) No one bears the tax"
+            ],
+            "correct_answer": "B) Consumers bear all the tax",
+            "explanation": "When demand is PERFECTLY INELASTIC (vertical demand curve), consumers will buy the same quantity regardless of price. If a tax is imposed, producers pass the ENTIRE tax to consumers because they know consumers MUST buy the good. Example: Life-saving medicines — patients must buy them no matter the cost. The more inelastic the demand, the more tax burden falls on consumers.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "The supply curve for agricultural products is typically INELASTIC in the short run because:",
+            "diagram": null,
+            "options": [
+                "A) Farmers can easily switch crops",
+                "B) Production takes time and cannot be quickly changed",
+                "C) Agricultural products have many substitutes",
+                "D) Farmers always have surplus stock"
+            ],
+            "correct_answer": "B) Production takes time and cannot be quickly changed",
+            "explanation": "Agricultural supply is INELASTIC in the SHORT RUN because once crops are planted, farmers CANNOT quickly increase production. If coffee prices double today, farmers cannot instantly produce more coffee — they must wait for the next growing season. In the LONG RUN, supply becomes MORE elastic as farmers can plant more coffee trees.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "If the government provides a SUBSIDY to producers, what happens to the market?",
+            "diagram": "<svg width='350' height='250' viewBox='0 0 350 250'><rect width='350' height='250' fill='#111827' rx='8'/><line x1='60' y1='20' x2='60' y2='220' stroke='#38bdf8' stroke-width='2'/><line x1='60' y1='220' x2='320' y2='220' stroke='#38bdf8' stroke-width='2'/><line x1='80' y1='50' x2='300' y2='170' stroke='#f43f5e' stroke-width='3'/><text x='260' y='175' fill='#f43f5e' font-size='11' font-weight='bold'>D</text><line x1='90' y1='180' x2='280' y2='70' stroke='#14b8a6' stroke-width='3'/><text x='240' y='100' fill='#14b8a6' font-size='11' font-weight='bold'>S1</text><line x1='130' y1='150' x2='300' y2='50' stroke='#14b8a6' stroke-width='3' stroke-dasharray='6,4'/><text x='250' y='55' fill='#14b8a6' font-size='11' font-weight='bold'>S2 (Subsidy)</text><circle cx='180' cy='120' r='6' fill='#94a3b8'/><text x='190' y='115' fill='#94a3b8' font-size='10'>E1</text><circle cx='210' cy='95' r='6' fill='#f59e0b'/><text x='220' y='90' fill='#f59e0b' font-size='10' font-weight='bold'>E2</text><text x='150' y='25' fill='#f59e0b' font-size='11' font-weight='bold'>Supply shifts RIGHT</text><text x='300' y='235' fill='#38bdf8' font-size='13' font-weight='bold'>Q</text><text x='15' y='25' fill='#38bdf8' font-size='13' font-weight='bold'>P</text></svg>",
+            "options": [
+                "A) Price increases, quantity decreases",
+                "B) Price decreases, quantity increases",
+                "C) Price and quantity both increase",
+                "D) Price and quantity both decrease"
+            ],
+            "correct_answer": "B) Price decreases, quantity increases",
+            "explanation": "A subsidy reduces production costs, shifting supply RIGHT. At the old price, producers want to sell MORE, creating a surplus. To clear the surplus, prices FALL, and at the lower price, consumers buy MORE. Result: LOWER price and HIGHER quantity. This is why governments subsidize essential goods like bread and fuel — to make them more affordable.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Which of the following would make the demand for a good MORE ELASTIC?",
+            "diagram": null,
+            "options": [
+                "A) The good has no close substitutes",
+                "B) The good is a necessity",
+                "C) The good has many close substitutes",
+                "D) The good represents a small portion of income"
+            ],
+            "correct_answer": "C) The good has many close substitutes",
+            "explanation": "Demand is MORE ELASTIC when there are MANY CLOSE SUBSTITUTES. If the price of one brand rises, consumers can easily switch to alternatives. Think: Coca-Cola has elastic demand because Pepsi, RC Cola, and other drinks are close substitutes. Goods with NO substitutes (like insulin) have inelastic demand because consumers have no choice but to buy them.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "If BOTH demand and supply DECREASE simultaneously, what is the DEFINITE effect on the market?",
+            "diagram": null,
+            "options": [
+                "A) Equilibrium price definitely increases",
+                "B) Equilibrium quantity definitely decreases",
+                "C) Equilibrium price definitely decreases",
+                "D) Equilibrium quantity definitely increases"
+            ],
+            "correct_answer": "B) Equilibrium quantity definitely decreases",
+            "explanation": "When BOTH demand and supply DECREASE (both shift LEFT), equilibrium QUANTITY definitely DECREASES. The effect on PRICE is INDETERMINATE: If demand decreases more than supply → price falls. If supply decreases more than demand → price rises. If they decrease equally → price stays the same. This is a classic exam question testing understanding of simultaneous shifts.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "The Ethiopian government wants to increase coffee exports. If the Birr DEPRECIATES (loses value) against the US Dollar, what happens to coffee exports?",
+            "diagram": null,
+            "options": [
+                "A) Coffee exports decrease (more expensive for foreigners)",
+                "B) Coffee exports increase (cheaper for foreigners)",
+                "C) Coffee exports remain unchanged",
+                "D) Coffee becomes inferior good"
+            ],
+            "correct_answer": "B) Coffee exports increase (cheaper for foreigners)",
+            "explanation": "When the Birr DEPRECIATES, Ethiopian goods become CHEAPER for foreign buyers. A US importer needs fewer dollars to buy the same amount of Birr-priced coffee. This makes Ethiopian coffee more competitive internationally, increasing demand for exports. Conversely, an appreciation makes exports more expensive and reduces them.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "A market has the following: Qd = 200 − 4P and Qs = 50 + 2P. If the government sets a price ceiling of 20 Birr, what is the size of the shortage?",
+            "diagram": null,
+            "options": [
+                "A) 20 units",
+                "B) 30 units",
+                "C) 40 units",
+                "D) 50 units"
+            ],
+            "correct_answer": "B) 30 units",
+            "explanation": "First find equilibrium: 200 − 4P = 50 + 2P → 150 = 6P → P* = 25, Q* = 200 − 4(25) = 100 units. At price ceiling P = 20: Qd = 200 − 4(20) = 120 units. Qs = 50 + 2(20) = 90 units. Shortage = Qd − Qs = 120 − 90 = 30 units. This means 30 consumers who want to buy at 20 Birr cannot find the good.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "What happens to the demand for NORMAL GOODS during an economic RECESSION (income decreases)?",
+            "diagram": null,
+            "options": [
+                "A) Demand increases (shifts right)",
+                "B) Demand decreases (shifts left)",
+                "C) Demand remains unchanged",
+                "D) Demand becomes perfectly elastic"
+            ],
+            "correct_answer": "B) Demand decreases (shifts left)",
+            "explanation": "During a recession, incomes FALL. For NORMAL goods (goods people buy MORE of when income increases), demand DECREASES when income falls — the demand curve shifts LEFT. However, for INFERIOR goods, demand INCREASES during a recession as people switch to cheaper alternatives (e.g., public transport instead of taxis, used clothes instead of new).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "If the supply of a good is PERFECTLY ELASTIC (horizontal supply curve), what happens when demand increases?",
+            "diagram": null,
+            "options": [
+                "A) Price increases, quantity stays the same",
+                "B) Price stays the same, quantity increases",
+                "C) Price and quantity both increase",
+                "D) Price decreases, quantity increases"
+            ],
+            "correct_answer": "B) Price stays the same, quantity increases",
+            "explanation": "With PERFECTLY ELASTIC supply (horizontal line), producers can supply ANY quantity at a fixed price. When demand increases (shifts right), producers simply supply MORE at the SAME price — no price change. This occurs in markets with unlimited capacity at a given cost, like perfectly competitive markets with constant costs.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "The demand for SALT is likely to be PRICE INELASTIC because:",
+            "diagram": null,
+            "options": [
+                "A) Salt has many close substitutes",
+                "B) Salt represents a tiny fraction of income and has no good substitutes",
+                "C) Salt is a luxury good",
+                "D) Salt has elastic demand"
+            ],
+            "correct_answer": "B) Salt represents a tiny fraction of income and has no good substitutes",
+            "explanation": "Salt has INELASTIC demand because: (1) It has NO close substitutes — you can't replace salt with sugar. (2) It represents a TINY fraction of income — even if salt price doubles, it's still cheap. (3) It's a NECESSITY — you need some salt regardless of price. All these factors make consumers unresponsive to price changes.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 16,
+            "text": "If a 10% increase in income leads to a 25% increase in quantity demanded for smartphones, smartphones are:",
+            "diagram": null,
+            "options": [
+                "A) Inferior goods",
+                "B) Necessities",
+                "C) Luxury goods",
+                "D) Giffen goods"
+            ],
+            "correct_answer": "C) Luxury goods",
+            "explanation": "Income elasticity = %ΔQ / %ΔIncome = 25% / 10% = 2.5. Since income elasticity > 1, smartphones are LUXURY GOODS. This means demand for smartphones grows FASTER than income growth. When people get richer, they spend a LARGER proportion of their income on luxuries. Necessities have income elasticity between 0 and 1. Inferior goods have negative income elasticity.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "Examine the market diagram. What happens to equilibrium if a NEW TECHNOLOGY reduces production costs?",
+            "diagram": null,
+            "options": [
+                "A) Equilibrium moves to higher price, lower quantity",
+                "B) Equilibrium moves to lower price, higher quantity",
+                "C) Equilibrium moves to higher price, higher quantity",
+                "D) Equilibrium stays exactly the same"
+            ],
+            "correct_answer": "B) Equilibrium moves to lower price, higher quantity",
+            "explanation": "New technology reduces production costs, causing supply to shift RIGHT. At every price, producers can now supply more. This creates a surplus at the old price, forcing prices DOWN. At the lower price, consumers buy MORE. Result: LOWER equilibrium price and HIGHER equilibrium quantity. This is why technology generally benefits consumers through lower prices.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "A Giffen good violates the Law of Demand because:",
+            "diagram": null,
+            "options": [
+                "A) Its demand increases when price increases",
+                "B) Its supply increases when price increases",
+                "C) It has no substitutes",
+                "D) It is always a luxury good"
+            ],
+            "correct_answer": "A) Its demand increases when price increases",
+            "explanation": "A GIFFEN GOOD is a rare exception to the Law of Demand. When its price INCREASES, demand INCREASES (upward-sloping demand curve). This happens for EXTREMELY inferior goods that take up a large portion of poor consumers' budgets. Example: If the price of bread rises, poor families can't afford meat, so they buy MORE bread despite the higher price. The INCOME EFFECT overwhelms the SUBSTITUTION EFFECT.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "If the demand curve is vertical (perfectly inelastic), what does this mean?",
+            "diagram": null,
+            "options": [
+                "A) Consumers will buy ANY quantity regardless of price",
+                "B) Consumers will buy the SAME quantity regardless of price",
+                "C) Consumers will buy NOTHING regardless of price",
+                "D) The good has many substitutes"
+            ],
+            "correct_answer": "B) Consumers will buy the SAME quantity regardless of price",
+            "explanation": "A VERTICAL demand curve means demand is PERFECTLY INELASTIC (PED = 0). Consumers buy the SAME quantity NO MATTER what the price is. This happens for goods with NO substitutes that are ABSOLUTELY NECESSARY. Example: A diabetic needs insulin every day — if price doubles, they still buy the same amount. There is no alternative.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "In the LONG RUN, which of the following statements is TRUE about supply elasticity?",
+            "diagram": null,
+            "options": [
+                "A) Supply is more inelastic in the long run",
+                "B) Supply is more elastic in the long run",
+                "C) Supply elasticity does not change over time",
+                "D) Supply becomes perfectly inelastic"
+            ],
+            "correct_answer": "B) Supply is more elastic in the long run",
+            "explanation": "In the LONG RUN, supply is MORE ELASTIC because producers have MORE TIME to adjust. They can build new factories, hire more workers, adopt new technology, or switch production. In the SHORT RUN, supply is INELASTIC because it's difficult to change production quickly. This is why agricultural supply responds more to prices over years than months.",
+            "difficulty": "hard"
+        }
+    ]
+}

@@ -1,0 +1,147 @@
+{
+  "course_code": "GeES1011",
+  "chapter": 6,
+  "title": "Part 3 Practice: Soil Degradation and Erosion Control Measures",
+  "questions": [
+    {
+      "id": 1,
+      "text": "What is soil degradation?",
+      "diagram": null,
+      "options": [
+        "A) The improvement of soil quality over time",
+        "B) The decline in soil quality, fertility, and productivity due to natural processes and human activities",
+        "C) The formation of new soil from parent material",
+        "D) The process of adding nutrients to soil"
+      ],
+      "correct_answer": "B) The decline in soil quality, fertility, and productivity due to natural processes and human activities",
+      "explanation": "Correct: Soil degradation is the deterioration of soil quality. A is wrong\u2014degradation is decline, not improvement. C is wrong\u2014this is soil formation. D is wrong\u2014this is fertilization.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "text": "Which type of soil degradation involves the compression of soil particles reducing pore space?",
+      "diagram": null,
+      "options": [
+        "A) Acidification",
+        "B) Compaction",
+        "C) Salinization",
+        "D) Nutrient depletion"
+      ],
+      "correct_answer": "B) Compaction",
+      "explanation": "Correct: Compaction is physical degradation that compresses soil particles. A is wrong\u2014acidification is chemical degradation. C is wrong\u2014salinization is chemical degradation. D is wrong\u2014nutrient depletion is chemical degradation.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "text": "Approximately how much soil does Ethiopia lose annually due to erosion?",
+      "diagram": null,
+      "options": [
+        "A) 100,000-500,000 tons",
+        "B) 1-2 billion tons",
+        "C) 5-10 billion tons",
+        "D) 100-200 million tons"
+      ],
+      "correct_answer": "B) 1-2 billion tons",
+      "explanation": "Correct: Ethiopia loses 1-2 billion tons of soil annually. A is wrong\u2014too low. C is wrong\u2014too high. D is wrong\u2014still too low; the figure is in billions.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 4,
+      "text": "Which of the following is a cause of soil degradation in Ethiopia?",
+      "diagram": null,
+      "options": [
+        "A) Afforestation",
+        "B) Deforestation",
+        "C) Contour plowing",
+        "D) Terracing"
+      ],
+      "correct_answer": "B) Deforestation",
+      "explanation": "Correct: Deforestation is a major cause of soil degradation by removing protective cover. A is wrong\u2014afforestation prevents degradation. C is wrong\u2014contour plowing is a conservation measure. D is wrong\u2014terracing is a conservation measure.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 5,
+      "text": "What type of soil degradation is characterized by the loss of organic matter and decline in soil biodiversity?",
+      "diagram": null,
+      "options": [
+        "A) Physical degradation",
+        "B) Biological degradation",
+        "C) Chemical degradation",
+        "D) Physical erosion"
+      ],
+      "correct_answer": "B) Biological degradation",
+      "explanation": "Correct: Biological degradation involves loss of organic matter and biodiversity. A is wrong\u2014physical degradation includes compaction and erosion. C is wrong\u2014chemical degradation includes nutrient depletion and acidification. D is wrong\u2014erosion is physical degradation.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 6,
+      "text": "Which Ethiopian region is famous for successful soil conservation through integrated approaches?",
+      "diagram": null,
+      "options": [
+        "A) Afar",
+        "B) Tigray",
+        "C) Ogaden",
+        "D) Kaffa"
+      ],
+      "correct_answer": "B) Tigray",
+      "explanation": "Correct: Tigray is famous for successful soil conservation with community participation. A is wrong\u2014Afar is arid with limited conservation. C is wrong\u2014Ogaden is pastoral with different challenges. D is wrong\u2014Kaffa focuses on coffee production.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 7,
+      "text": "Which of the following is a biological control measure for soil erosion?",
+      "diagram": null,
+      "options": [
+        "A) Terracing",
+        "B) Stone bunds",
+        "C) Agroforestry",
+        "D) Check dams"
+      ],
+      "correct_answer": "C) Agroforestry",
+      "explanation": "Correct: Agroforestry is a biological measure using trees with crops. A is wrong\u2014terracing is a physical measure. B is wrong\u2014stone bunds are physical measures. D is wrong\u2014check dams are physical measures.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "text": "What percentage of Ethiopia's highlands are significantly eroded?",
+      "diagram": null,
+      "options": [
+        "A) About 10%",
+        "B) About 25%",
+        "C) About 50%",
+        "D) About 75%"
+      ],
+      "correct_answer": "C) About 50%",
+      "explanation": "Correct: About 50% of the highlands are significantly eroded. A is wrong\u2014too low. B is wrong\u2014still too low. D is wrong\u2014too high; though severe, not 75%.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 9,
+      "text": "Chemical degradation of soil includes all of the following EXCEPT:",
+      "diagram": null,
+      "options": [
+        "A) Nutrient depletion",
+        "B) Acidification",
+        "C) Salinization",
+        "D) Compaction"
+      ],
+      "correct_answer": "D) Compaction",
+      "explanation": "Correct: Compaction is physical degradation, not chemical. A is wrong\u2014nutrient depletion is chemical. B is wrong\u2014acidification is chemical. C is wrong\u2014salinization is chemical.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 10,
+      "text": "The success of soil conservation in Tigray demonstrates that:",
+      "diagram": null,
+      "options": [
+        "A) Conservation is impossible in Ethiopia",
+        "B) Community participation and integrated approaches can reverse degradation",
+        "C) Only modern machinery can save soils",
+        "D) Conservation is not economically viable"
+      ],
+      "correct_answer": "B) Community participation and integrated approaches can reverse degradation",
+      "explanation": "Correct: Tigray's success proves community action works. A is wrong\u2014Tigray shows it's possible. C is wrong\u2014traditional methods proved effective. D is wrong\u2014conservation is economically beneficial.",
+      "difficulty": "hard"
+    }
+  ]
+}

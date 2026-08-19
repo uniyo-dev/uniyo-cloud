@@ -1,0 +1,177 @@
+{
+  "course_code": "GeES1011",
+  "chapter": 7,
+  "title": "Part 4 Practice: Factors Affecting Population Distribution and Socio-cultural Aspects",
+  "questions": [
+    {
+      "id": 1,
+      "text": "The diagram below shows factors affecting population distribution. Which of the following is a PHYSICAL factor?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Factors Affecting Population Distribution</text>\n                    <rect x=\"15\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"1.5\"/>\n                    <text x=\"30\" y=\"48\" fill=\"#38bdf8\" font-size=\"7\" font-weight=\"bold\">Physical</text>\n                    <text x=\"25\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Climate</text>\n                    <text x=\"25\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Soil</text>\n                    <text x=\"25\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Topography</text>\n                    <text x=\"25\" y=\"102\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Water</text>\n                    <text x=\"25\" y=\"115\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Altitude</text>\n                    <rect x=\"110\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"125\" y=\"48\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Human</text>\n                    <text x=\"120\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Infrastructure</text>\n                    <text x=\"120\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Employment</text>\n                    <text x=\"120\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Education</text>\n                    <text x=\"120\" y=\"102\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Culture</text>\n                    <text x=\"120\" y=\"115\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Politics</text>\n                    <rect x=\"205\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n                    <text x=\"220\" y=\"48\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">Economic</text>\n                    <text x=\"215\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Agriculture</text>\n                    <text x=\"215\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Trade</text>\n                    <text x=\"215\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Industry</text>\n                    <text x=\"215\" y=\"102\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Services</text>\n                </svg>"
+      },
+      "options": [
+        "A) Infrastructure and services",
+        "B) Employment opportunities",
+        "C) Climate and soil quality",
+        "D) Cultural ties and politics"
+      ],
+      "correct_answer": "C) Climate and soil quality",
+      "explanation": "Correct: Climate and soil are physical factors. A is wrong\u2014infrastructure is a human factor. B is wrong\u2014employment is a human factor. D is wrong\u2014cultural ties and politics are human factors.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "text": "According to the diagram, approximately what percentage of Ethiopia's population lives in the highlands?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Population Distribution in Ethiopia</text>\n                    <rect x=\"20\" y=\"30\" width=\"150\" height=\"80\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"2\"/>\n                    <text x=\"50\" y=\"50\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Highlands</text>\n                    <text x=\"35\" y=\"65\" fill=\"#f8fafc\" font-size=\"7\">\u2022 40% of land area</text>\n                    <text x=\"35\" y=\"80\" fill=\"#f8fafc\" font-size=\"7\">\u2022 80-85% of population</text>\n                    <text x=\"35\" y=\"95\" fill=\"#94a3b8\" font-size=\"7\">\u2022 Favorable climate</text>\n                    <rect x=\"180\" y=\"30\" width=\"100\" height=\"80\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f43f5e\" stroke-width=\"2\"/>\n                    <text x=\"195\" y=\"50\" fill=\"#f43f5e\" font-size=\"7\" font-weight=\"bold\">Lowlands</text>\n                    <text x=\"190\" y=\"65\" fill=\"#f8fafc\" font-size=\"7\">\u2022 60% of land area</text>\n                    <text x=\"190\" y=\"80\" fill=\"#f8fafc\" font-size=\"7\">\u2022 15-20% of pop.</text>\n                    <text x=\"190\" y=\"95\" fill=\"#94a3b8\" font-size=\"7\">\u2022 Arid climate</text>\n                </svg>"
+      },
+      "options": [
+        "A) 50-60%",
+        "B) 60-70%",
+        "C) 80-85%",
+        "D) 90-95%"
+      ],
+      "correct_answer": "C) 80-85%",
+      "explanation": "Correct: About 80-85% of the population lives in the highlands. A is wrong\u2014too low. B is wrong\u2014too low. D is wrong\u2014too high.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "text": "The diagram below shows Ethiopia's education indicators. What is the national literacy rate?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Education Indicators in Ethiopia</text>\n                    <rect x=\"20\" y=\"30\" width=\"120\" height=\"40\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"35\" y=\"45\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">National Literacy</text>\n                    <text x=\"35\" y=\"58\" fill=\"#f8fafc\" font-size=\"7\">~52%</text>\n                    <rect x=\"160\" y=\"30\" width=\"120\" height=\"40\" rx=\"4\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"1.5\"/>\n                    <text x=\"175\" y=\"45\" fill=\"#38bdf8\" font-size=\"7\" font-weight=\"bold\">Female Literacy</text>\n                    <text x=\"175\" y=\"58\" fill=\"#f8fafc\" font-size=\"7\">~45%</text>\n                    <rect x=\"20\" y=\"80\" width=\"120\" height=\"40\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n                    <text x=\"35\" y=\"95\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">Primary GER</text>\n                    <text x=\"35\" y=\"108\" fill=\"#f8fafc\" font-size=\"7\">90%+</text>\n                    <rect x=\"160\" y=\"80\" width=\"120\" height=\"40\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f43f5e\" stroke-width=\"1.5\"/>\n                    <text x=\"175\" y=\"95\" fill=\"#f43f5e\" font-size=\"7\" font-weight=\"bold\">Secondary GER</text>\n                    <text x=\"175\" y=\"108\" fill=\"#f8fafc\" font-size=\"7\">~40%</text>\n                </svg>"
+      },
+      "options": [
+        "A) 30%",
+        "B) 52%",
+        "C) 70%",
+        "D) 90%"
+      ],
+      "correct_answer": "B) 52%",
+      "explanation": "Correct: National literacy rate is ~52%. A is wrong\u2014too low. C is wrong\u2014too high. D is wrong\u2014too high.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 4,
+      "text": "The diagram shows health indicators for Ethiopia. What is the current life expectancy?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Health Indicators in Ethiopia</text>\n                    <rect x=\"20\" y=\"30\" width=\"120\" height=\"40\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"35\" y=\"45\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Life Expectancy</text>\n                    <text x=\"35\" y=\"58\" fill=\"#f8fafc\" font-size=\"7\">65-68 years</text>\n                    <rect x=\"160\" y=\"30\" width=\"120\" height=\"40\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f43f5e\" stroke-width=\"1.5\"/>\n                    <text x=\"175\" y=\"45\" fill=\"#f43f5e\" font-size=\"7\" font-weight=\"bold\">Infant Mortality</text>\n                    <text x=\"175\" y=\"58\" fill=\"#f8fafc\" font-size=\"7\">43/1,000</text>\n                    <rect x=\"20\" y=\"80\" width=\"120\" height=\"40\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n                    <text x=\"35\" y=\"95\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">Maternal Mortality</text>\n                    <text x=\"35\" y=\"108\" fill=\"#f8fafc\" font-size=\"7\">267/100,000</text>\n                    <rect x=\"160\" y=\"80\" width=\"120\" height=\"40\" rx=\"4\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"1.5\"/>\n                    <text x=\"175\" y=\"95\" fill=\"#38bdf8\" font-size=\"7\" font-weight=\"bold\">Immunization</text>\n                    <text x=\"175\" y=\"108\" fill=\"#f8fafc\" font-size=\"7\">70-75%</text>\n                </svg>"
+      },
+      "options": [
+        "A) 45 years",
+        "B) 52 years",
+        "C) 65-68 years",
+        "D) 75 years"
+      ],
+      "correct_answer": "C) 65-68 years",
+      "explanation": "Correct: Life expectancy is 65-68 years. A is wrong\u2014that was 1990. B is wrong\u2014that was 2000. D is wrong\u2014too high.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 5,
+      "text": "The diagram below shows progress in health since 1990. How much has infant mortality declined?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Health Progress Since 1990</text>\n                    <rect x=\"20\" y=\"30\" width=\"250\" height=\"40\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"35\" y=\"45\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Infant Mortality</text>\n                    <text x=\"35\" y=\"58\" fill=\"#f8fafc\" font-size=\"7\">1990: 115/1,000 \u2192 2023: 43/1,000</text>\n                    <rect x=\"20\" y=\"75\" width=\"250\" height=\"40\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f43f5e\" stroke-width=\"1.5\"/>\n                    <text x=\"35\" y=\"90\" fill=\"#f43f5e\" font-size=\"7\" font-weight=\"bold\">Maternal Mortality</text>\n                    <text x=\"35\" y=\"103\" fill=\"#f8fafc\" font-size=\"7\">1990: 1,050/100,000 \u2192 2023: 267/100,000</text>\n                    <text x=\"30\" y=\"138\" fill=\"#94a3b8\" font-size=\"7\">Significant progress but challenges remain</text>\n                </svg>"
+      },
+      "options": [
+        "A) Declined by 50 per 1,000",
+        "B) Declined by 72 per 1,000",
+        "C) Declined by 100 per 1,000",
+        "D) Declined by 150 per 1,000"
+      ],
+      "correct_answer": "B) Declined by 72 per 1,000",
+      "explanation": "Correct: 115 - 43 = 72 per 1,000 decline. A is wrong\u2014too low. C is wrong\u2014too high. D is wrong\u2014too high.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 6,
+      "text": "Which of the following is a HUMAN factor affecting population distribution in Ethiopia?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Factors Affecting Population Distribution</text>\n                    <rect x=\"15\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"1.5\"/>\n                    <text x=\"30\" y=\"48\" fill=\"#38bdf8\" font-size=\"7\" font-weight=\"bold\">Physical</text>\n                    <text x=\"25\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Climate</text>\n                    <text x=\"25\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Soil</text>\n                    <text x=\"25\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Topography</text>\n                    <text x=\"25\" y=\"102\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Water</text>\n                    <text x=\"25\" y=\"115\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Altitude</text>\n                    <rect x=\"110\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"125\" y=\"48\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Human</text>\n                    <text x=\"120\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Infrastructure</text>\n                    <text x=\"120\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Employment</text>\n                    <text x=\"120\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Education</text>\n                    <text x=\"120\" y=\"102\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Culture</text>\n                    <text x=\"120\" y=\"115\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Politics</text>\n                    <rect x=\"205\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n                    <text x=\"220\" y=\"48\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">Economic</text>\n                    <text x=\"215\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Agriculture</text>\n                    <text x=\"215\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Trade</text>\n                    <text x=\"215\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Industry</text>\n                    <text x=\"215\" y=\"102\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Services</text>\n                </svg>"
+      },
+      "options": [
+        "A) Climate and rainfall",
+        "B) Soil fertility",
+        "C) Infrastructure and services",
+        "D) Altitude and topography"
+      ],
+      "correct_answer": "C) Infrastructure and services",
+      "explanation": "Correct: Infrastructure is a human factor. A is wrong\u2014climate is physical. B is wrong\u2014soil is physical. D is wrong\u2014altitude and topography are physical.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 7,
+      "text": "The diagram shows literacy rates in Ethiopia. What is the literacy rate for females?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Literacy Rates in Ethiopia</text>\n                    <rect x=\"20\" y=\"30\" width=\"80\" height=\"40\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"35\" y=\"45\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">National</text>\n                    <text x=\"35\" y=\"58\" fill=\"#f8fafc\" font-size=\"7\">~52%</text>\n                    <rect x=\"110\" y=\"30\" width=\"80\" height=\"40\" rx=\"4\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"1.5\"/>\n                    <text x=\"125\" y=\"45\" fill=\"#38bdf8\" font-size=\"7\" font-weight=\"bold\">Urban</text>\n                    <text x=\"125\" y=\"58\" fill=\"#f8fafc\" font-size=\"7\">~70%</text>\n                    <rect x=\"200\" y=\"30\" width=\"80\" height=\"40\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f43f5e\" stroke-width=\"1.5\"/>\n                    <text x=\"215\" y=\"45\" fill=\"#f43f5e\" font-size=\"7\" font-weight=\"bold\">Rural</text>\n                    <text x=\"215\" y=\"58\" fill=\"#f8fafc\" font-size=\"7\">~40%</text>\n                    <rect x=\"20\" y=\"85\" width=\"80\" height=\"40\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n                    <text x=\"35\" y=\"100\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">Male</text>\n                    <text x=\"35\" y=\"113\" fill=\"#f8fafc\" font-size=\"7\">~60%</text>\n                    <rect x=\"110\" y=\"85\" width=\"80\" height=\"40\" rx=\"4\" fill=\"#1e293b\" stroke=\"#facc15\" stroke-width=\"1.5\"/>\n                    <text x=\"125\" y=\"100\" fill=\"#facc15\" font-size=\"7\" font-weight=\"bold\">Female</text>\n                    <text x=\"125\" y=\"113\" fill=\"#f8fafc\" font-size=\"7\">~45%</text>\n                </svg>"
+      },
+      "options": [
+        "A) 30%",
+        "B) 45%",
+        "C) 52%",
+        "D) 70%"
+      ],
+      "correct_answer": "B) 45%",
+      "explanation": "Correct: Female literacy is ~45%. A is wrong\u2014too low. C is wrong\u2014that's national average. D is wrong\u2014that's urban literacy.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "text": "The Health Extension Program diagram shows one of Ethiopia's most successful health initiatives. What is its primary focus?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Health Extension Program</text>\n                    <rect x=\"20\" y=\"30\" width=\"260\" height=\"35\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"35\" y=\"45\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Community-Based Healthcare</text>\n                    <text x=\"35\" y=\"58\" fill=\"#f8fafc\" font-size=\"7\">Over 40,000 health extension workers</text>\n                    <rect x=\"20\" y=\"70\" width=\"260\" height=\"35\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f43f5e\" stroke-width=\"1.5\"/>\n                    <text x=\"35\" y=\"85\" fill=\"#f43f5e\" font-size=\"7\" font-weight=\"bold\">Key Services</text>\n                    <text x=\"35\" y=\"98\" fill=\"#f8fafc\" font-size=\"7\">Immunization, Family Planning, Maternal Health, Nutrition, Sanitation</text>\n                    <text x=\"30\" y=\"135\" fill=\"#94a3b8\" font-size=\"7\">Launched 2003 - Transformed rural healthcare delivery</text>\n                </svg>"
+      },
+      "options": [
+        "A) Building large hospitals in cities",
+        "B) Community-based healthcare in rural areas",
+        "C) Importing medicines",
+        "D) Training doctors only"
+      ],
+      "correct_answer": "B) Community-based healthcare in rural areas",
+      "explanation": "Correct: HEP focuses on community-based healthcare in rural areas. A is wrong\u2014it focuses on primary healthcare, not large hospitals. C is wrong\u2014this is not the primary focus. D is wrong\u2014it trains health extension workers, not just doctors.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 9,
+      "text": "The diagram shows population distribution patterns. Which factor explains why the highlands have higher population density?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Population Distribution in Ethiopia</text>\n                    <rect x=\"20\" y=\"30\" width=\"150\" height=\"80\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"2\"/>\n                    <text x=\"50\" y=\"50\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Highlands</text>\n                    <text x=\"35\" y=\"65\" fill=\"#f8fafc\" font-size=\"7\">\u2022 40% of land area</text>\n                    <text x=\"35\" y=\"80\" fill=\"#f8fafc\" font-size=\"7\">\u2022 80-85% of population</text>\n                    <text x=\"35\" y=\"95\" fill=\"#f8fafc\" font-size=\"7\">\u2022 High density</text>\n                    <rect x=\"180\" y=\"30\" width=\"100\" height=\"80\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f43f5e\" stroke-width=\"2\"/>\n                    <text x=\"195\" y=\"50\" fill=\"#f43f5e\" font-size=\"7\" font-weight=\"bold\">Lowlands</text>\n                    <text x=\"190\" y=\"65\" fill=\"#f8fafc\" font-size=\"7\">\u2022 60% of land area</text>\n                    <text x=\"190\" y=\"80\" fill=\"#f8fafc\" font-size=\"7\">\u2022 15-20% of pop.</text>\n                    <text x=\"190\" y=\"95\" fill=\"#f8fafc\" font-size=\"7\">\u2022 Low density</text>\n                    <text x=\"30\" y=\"135\" fill=\"#94a3b8\" font-size=\"7\">Highlands: Favorable climate, fertile soils, better water availability</text>\n                </svg>"
+      },
+      "options": [
+        "A) Favorable climate, fertile soils, and reliable water",
+        "B) Government policies only",
+        "C) Historical settlement only",
+        "D) Higher birth rates"
+      ],
+      "correct_answer": "A) Favorable climate, fertile soils, and reliable water",
+      "explanation": "Correct: Physical factors explain highland concentration. B is wrong\u2014policies are not the primary reason. C is wrong\u2014historical patterns are part of it but not the only reason. D is wrong\u2014birth rates are not significantly different.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 10,
+      "text": "The diagram shows progress in education and health. What is the relationship between women's education and fertility in Ethiopia?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Education and Health Progress</text>\n                    <rect x=\"20\" y=\"30\" width=\"260\" height=\"35\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"35\" y=\"45\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Education Progress</text>\n                    <text x=\"35\" y=\"58\" fill=\"#f8fafc\" font-size=\"7\">Literacy: 20% (1990) \u2192 52% (2023)</text>\n                    <rect x=\"20\" y=\"70\" width=\"260\" height=\"35\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f43f5e\" stroke-width=\"1.5\"/>\n                    <text x=\"35\" y=\"85\" fill=\"#f43f5e\" font-size=\"7\" font-weight=\"bold\">Health Progress</text>\n                    <text x=\"35\" y=\"98\" fill=\"#f8fafc\" font-size=\"7\">Life Expectancy: 45 yrs (1990) \u2192 65-68 yrs (2023)</text>\n                    <text x=\"30\" y=\"135\" fill=\"#94a3b8\" font-size=\"7\">Women's education lowers fertility and improves health outcomes</text>\n                </svg>"
+      },
+      "options": [
+        "A) Higher education leads to higher fertility",
+        "B) Higher education leads to lower fertility",
+        "C) There is no relationship",
+        "D) Education only affects health, not fertility"
+      ],
+      "correct_answer": "B) Higher education leads to lower fertility",
+      "explanation": "Correct: Educated women tend to have fewer children. A is wrong\u2014education reduces fertility. C is wrong\u2014there is a clear relationship. D is wrong\u2014education affects both health and fertility.",
+      "difficulty": "hard"
+    }
+  ]
+}

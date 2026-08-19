@@ -1,0 +1,288 @@
+{
+    "course_code": "GeES1011",
+    "chapter_number": 3,
+    "week_number": 3,
+    "title": "VIP Chapter 3 Week 3: Rift Valley and Impacts of Relief",
+    "questions": [
+        {
+            "id": 1,
+            "text": "The Afar Triangle is a TRIPLE JUNCTION where which plates meet?",
+            "diagram": null,
+            "options": [
+                "A) African, European, Asian",
+                "B) Arabian, Nubian, Somali",
+                "C) Pacific, Atlantic, Indian",
+                "D) North, South, Central American"
+            ],
+            "correct_answer": "B) Arabian, Nubian, Somali",
+            "explanation": "Afar = where Arabian, Nubian, Somali plates meet.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "Lake Langano is popular for tourism because it is:",
+            "diagram": null,
+            "options": [
+                "A) Saltwater",
+                "B) Safe for swimming (bilharzia-free)",
+                "C) Frozen",
+                "D) Man-made"
+            ],
+            "correct_answer": "B) Safe for swimming (bilharzia-free)",
+            "explanation": "Lake Langano is safe for swimming (no bilharzia).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "Which Rift Valley lake is the DEEPEST in Ethiopia?",
+            "diagram": null,
+            "options": [
+                "A) Lake Ziway",
+                "B) Lake Shalla (266m deep)",
+                "C) Lake Abijatta",
+                "D) Lake Awasa"
+            ],
+            "correct_answer": "B) Lake Shalla (266m deep)",
+            "explanation": "Lake Shalla is the deepest Rift Valley lake (266m).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "Orographic rainfall in Ethiopia occurs when:",
+            "diagram": null,
+            "options": [
+                "A) Wind blows over flat plains",
+                "B) Moist air rises over mountains, cools, and rains",
+                "C) Sun heats the ground",
+                "D) Ocean currents change"
+            ],
+            "correct_answer": "B) Moist air rises over mountains, cools, and rains",
+            "explanation": "Orographic rain = moist air forced up mountains cools and condenses.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Which Rift Valley section has the MOST lakes?",
+            "diagram": null,
+            "options": [
+                "A) Afar Triangle",
+                "B) Central Rift",
+                "C) Chew Bahir Rift",
+                "D) All have equal"
+            ],
+            "correct_answer": "B) Central Rift",
+            "explanation": "Central Rift has 7 major lakes.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "The RAIN SHADOW effect causes:",
+            "diagram": null,
+            "options": [
+                "A) Leeward slopes to be DRY",
+                "B) Windward slopes to be dry",
+                "C) Both slopes equally wet",
+                "D) No rain anywhere"
+            ],
+            "correct_answer": "A) Leeward slopes to be DRY",
+            "explanation": "Rain shadow = dry conditions on leeward side.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "Ethiopia's hydroelectric potential is DUE TO its:",
+            "diagram": null,
+            "options": [
+                "A) Flat terrain",
+                "B) High relief and deep river gorges",
+                "C) Coastal location",
+                "D) Desert climate"
+            ],
+            "correct_answer": "B) High relief and deep river gorges",
+            "explanation": "Deep gorges + high elevation = hydropower potential.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Afroalpine vegetation is found:",
+            "diagram": null,
+            "options": [
+                "A) In lowland deserts",
+                "B) On high mountain peaks (above 3000m)",
+                "C) Along river banks",
+                "D) In Rift Valley lakes"
+            ],
+            "correct_answer": "B) On high mountain peaks (above 3000m)",
+            "explanation": "Afroalpine = giant lobelia on high peaks (Bale, Simien).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Terracing in Ethiopian highlands is used to:",
+            "diagram": null,
+            "options": [
+                "A) Increase erosion",
+                "B) Prevent soil erosion on slopes",
+                "C) Drain swamps",
+                "D) Irrigate deserts"
+            ],
+            "correct_answer": "B) Prevent soil erosion on slopes",
+            "explanation": "Terraces = reduce erosion on steep slopes.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "The Tekeze Dam is built on which river?",
+            "diagram": null,
+            "options": [
+                "A) Abay",
+                "B) Tekeze",
+                "C) Awash",
+                "D) Omo"
+            ],
+            "correct_answer": "B) Tekeze",
+            "explanation": "Tekeze Dam on Tekeze River.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "Gilgel Gibe dams are on the:",
+            "diagram": null,
+            "options": [
+                "A) Abay River",
+                "B) Omo River",
+                "C) Tekeze River",
+                "D) Awash River"
+            ],
+            "correct_answer": "B) Omo River",
+            "explanation": "Gilgel Gibe = Omo River basin.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "Which crops grow at HIGHEST elevation?",
+            "diagram": null,
+            "options": [
+                "A) Sorghum",
+                "B) Wheat and barley",
+                "C) Cotton",
+                "D) Bananas"
+            ],
+            "correct_answer": "B) Wheat and barley",
+            "explanation": "Wheat/barley = high altitude crops.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "The Chew Bahir Rift is used primarily for:",
+            "diagram": null,
+            "options": [
+                "A) Industrial agriculture",
+                "B) Pastoralism",
+                "C) Dense settlement",
+                "D) Mining"
+            ],
+            "correct_answer": "B) Pastoralism",
+            "explanation": "Chew Bahir = semi-arid pastoralism.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "Saline soils in lowlands are caused by:",
+            "diagram": null,
+            "options": [
+                "A) Heavy rainfall",
+                "B) High evaporation concentrating salts",
+                "C) Glacial action",
+                "D) Forest cover"
+            ],
+            "correct_answer": "B) High evaporation concentrating salts",
+            "explanation": "High evaporation = salt accumulation.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "The Awash River flows INTO:",
+            "diagram": null,
+            "options": [
+                "A) Lake Tana",
+                "B) Lake Abbe (Afar)",
+                "C) Indian Ocean",
+                "D) Nile River"
+            ],
+            "correct_answer": "B) Lake Abbe (Afar)",
+            "explanation": "Awash River ends in Lake Abbe (Afar).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 16,
+            "text": "Which factor MOST influences settlement patterns in Ethiopia?",
+            "diagram": null,
+            "options": [
+                "A) Distance from rivers",
+                "B) Elevation and climate",
+                "C) Political boundaries",
+                "D) Mineral deposits"
+            ],
+            "correct_answer": "B) Elevation and climate",
+            "explanation": "Elevation/climate determine habitability.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "The Rift Valley escarpments are:",
+            "diagram": null,
+            "options": [
+                "A) Flat plains",
+                "B) Steep fault walls bounding the valley",
+                "C) Gentle slopes",
+                "D) River deltas"
+            ],
+            "correct_answer": "B) Steep fault walls bounding the valley",
+            "explanation": "Escarpments = steep fault-bounded walls.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "Coffee forests are found at:",
+            "diagram": null,
+            "options": [
+                "A) Lowlands below 1000m",
+                "B) Middle altitudes (1500-2000m)",
+                "C) Above 4000m",
+                "D) Desert areas"
+            ],
+            "correct_answer": "B) Middle altitudes (1500-2000m)",
+            "explanation": "Coffee grows best at middle altitudes.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "Ethiopia's relief creates NATURAL BARRIERS for transportation because of:",
+            "diagram": null,
+            "options": [
+                "A) Flat plains",
+                "B) Deep gorges and steep mountains",
+                "C) Coastal areas",
+                "D) Sand dunes only"
+            ],
+            "correct_answer": "B) Deep gorges and steep mountains",
+            "explanation": "Gorges/mountains = transportation challenges.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "The Omo National Park is in which Rift section?",
+            "diagram": null,
+            "options": [
+                "A) Afar Triangle",
+                "B) Chew Bahir Rift",
+                "C) Central Rift",
+                "D) None"
+            ],
+            "correct_answer": "B) Chew Bahir Rift",
+            "explanation": "Omo NP in southern (Chew Bahir) Rift.",
+            "difficulty": "hard"
+        }
+    ]
+}

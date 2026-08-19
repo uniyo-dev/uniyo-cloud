@@ -1,0 +1,60 @@
+<svg width="700" height="500" viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg">
+    <rect width="700" height="500" fill="#111827" rx="10"/>
+    
+    <!-- Title -->
+    <text x="180" y="35" fill="#facc15" font-size="24" font-weight="bold">DIFFERENTIATION - TANGENT LINE</text>
+    
+    <!-- Grid -->
+    <line x1="80" y1="420" x2="620" y2="420" stroke="#334155" stroke-width="1"/>
+    <line x1="350" y1="60" x2="350" y2="420" stroke="#334155" stroke-width="1"/>
+    
+    <!-- Grid Lines -->
+    <line x1="120" y1="420" x2="120" y2="415" stroke="#334155" stroke-width="1"/>
+    <line x1="190" y1="420" x2="190" y2="415" stroke="#334155" stroke-width="1"/>
+    <line x1="260" y1="420" x2="260" y2="415" stroke="#334155" stroke-width="1"/>
+    <line x1="440" y1="420" x2="440" y2="415" stroke="#334155" stroke-width="1"/>
+    <line x1="510" y1="420" x2="510" y2="415" stroke="#334155" stroke-width="1"/>
+    <line x1="580" y1="420" x2="580" y2="415" stroke="#334155" stroke-width="1"/>
+    
+    <line x1="75" y1="350" x2="80" y2="350" stroke="#334155" stroke-width="1"/>
+    <line x1="75" y1="280" x2="80" y2="280" stroke="#334155" stroke-width="1"/>
+    <line x1="75" y1="210" x2="80" y2="210" stroke="#334155" stroke-width="1"/>
+    <line x1="75" y1="140" x2="80" y2="140" stroke="#334155" stroke-width="1"/>
+    
+    <!-- Axes Labels -->
+    <text x="620" y="440" fill="#f8fafc" font-size="14">x</text>
+    <text x="350" y="50" fill="#f8fafc" font-size="14">y</text>
+    
+    <!-- Function (Parabola) -->
+    <path d="M 120 385 Q 250 210 350 140 Q 450 210 580 385" 
+    stroke="#38bdf8" stroke-width="3" fill="none"/>
+    <text x="590" y="395" fill="#38bdf8" font-size="14">f(x) = x²</text>
+    
+    <!-- Tangent at point -->
+    <line x1="160" y1="280" x2="540" y2="40" stroke="#f43f5e" stroke-width="3"/>
+    <text x="550" y="35" fill="#f43f5e" font-size="14">Tangent (slope = 2x)</text>
+    
+    <!-- Point of tangency -->
+    <circle cx="350" cy="140" r="6" fill="#facc15"/>
+    <text x="360" y="135" fill="#facc15" font-size="12">P (a, f(a))</text>
+    
+    <!-- Secant Line -->
+    <line x1="200" y1="350" x2="500" y2="50" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6,4"/>
+    <text x="510" y="45" fill="#14b8a6" font-size="14">Secant (slope = Δy/Δx)</text>
+    
+    <!-- Delta markers -->
+    <text x="260" y="390" fill="#f8fafc" font-size="12">Δx</text>
+    <path d="M 260 410 L 260 425" stroke="#f8fafc" stroke-width="1"/>
+    <path d="M 350 410 L 350 425" stroke="#f8fafc" stroke-width="1"/>
+    <line x1="260" y1="418" x2="350" y2="418" stroke="#f8fafc" stroke-width="1"/>
+    
+    <text x="380" y="340" fill="#f8fafc" font-size="12">Δy</text>
+    <path d="M 375 250 L 385 250" stroke="#f8fafc" stroke-width="1"/>
+    <path d="M 375 350 L 385 350" stroke="#f8fafc" stroke-width="1"/>
+    <line x1="380" y1="255" x2="380" y2="345" stroke="#f8fafc" stroke-width="1"/>
+    
+    <!-- Legend -->
+    <rect x="60" y="440" width="580" height="45" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="80" y="462" fill="#f8fafc" font-size="13" font-weight="bold">Derivative Definition:</text>
+    <text x="280" y="462" fill="#facc15" font-size="14">f'(x) = lim (Δx→0) [f(x+Δx) - f(x)]/Δx</text>
+</svg>

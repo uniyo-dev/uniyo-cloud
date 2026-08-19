@@ -1,0 +1,35 @@
+/* ============================================
+   UNIYO LMS - Responsive Styles
+   ============================================ */
+
+@media (max-width: 768px) {
+    body { font-size: 14px; }
+    .dashboard-container, .lesson-container, .worksheet-container,
+    .vip-container, .settings-container, .certificates-container, .admin-container {
+        padding: 12px;
+    }
+    h1 { font-size: 22px !important; }
+    h2 { font-size: 18px !important; }
+}
+
+@media (max-width: 720px) {
+    .dashboard-header, .admin-header { flex-direction: column; gap: 12px; text-align: center; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .course-grid { grid-template-columns: 1fr; gap: 12px; }
+    .payment-methods { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; gap: 8px; }
+    .stream-options { grid-template-columns: 1fr; }
+    .admin-table { font-size: 12px; }
+    .admin-table th, .admin-table td { padding: 8px 6px; }
+    .btn { padding: 10px 16px; font-size: 13px; }
+    .option-btn, .part-btn, .filter-btn, .tab-btn { min-height: 44px; }
+}
+
+@media (max-width: 360px) {
+    .stats-grid { grid-template-columns: 1fr; }
+    .lesson-content { padding: 12px; font-size: 14px; }
+}
+
+@media print {
+    .no-print, .btn, .tab-bar, .navbar { display: none !important; }
+}

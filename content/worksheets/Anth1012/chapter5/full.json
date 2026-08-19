@@ -1,0 +1,658 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 5,
+    "title": "Unit 5 Full Practice: Combined Parts",
+    "total_questions": 50,
+    "questions": [
+        {
+            "id": 1,
+            "text": "Who provided the earlier conception of an ethnic group as being formed based on a belief in common descent?",
+            "options": [
+                "A) Fredrik Barth",
+                "B) Max Weber",
+                "C) Benedict Anderson",
+                "D) Clifford Geertz"
+            ],
+            "correct_answer": "B) Max Weber",
+            "explanation": "The module states: 'The earlier conception of ethnic group was that of Max Weber, a German sociologist. According to him, an 'ethnic group' is formed based on belief in common descent shared by its members.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "How did Benedict Anderson describe ethnic groups?",
+            "options": [
+                "A) As a biological category.",
+                "B) As an 'imagined community' that possesses a character and quality.",
+                "C) As a political party.",
+                "D) As a religious sect."
+            ],
+            "correct_answer": "B) As an 'imagined community' that possesses a character and quality.",
+            "explanation": "The module states: 'On the other hand B. Anderson (1983) described ethnic groups as \"an imagined community\" that possesses a \"character and quality\".'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "According to Fredrik Barth, what is the primary basis for ethnic group distinctiveness?",
+            "options": [
+                "A) Isolated cultural traits.",
+                "B) Self-identification and ascription by others in the context of inter-ethnic interaction.",
+                "C) Biological differences.",
+                "D) Geographic isolation."
+            ],
+            "correct_answer": "B) Self-identification and ascription by others in the context of inter-ethnic interaction.",
+            "explanation": "The module states: 'F. Barth (1969) further illustrated that, in a context of inter-ethnic interaction, group distinctiveness depends on identification of self and ascription by others.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "Which of the following is NOT one of the six features of an ethnic group according to Hutchinson and Smith?",
+            "options": [
+                "A) A common proper name.",
+                "B) A myth of common ancestry.",
+                "C) Shared historical memories.",
+                "D) A shared political ideology."
+            ],
+            "correct_answer": "D) A shared political ideology.",
+            "explanation": "The module lists six features: common proper name, myth of common ancestry, shared historical memories, common culture elements, link with a homeland, and sense of solidarity. Political ideology is not one of them.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is a 'link with a homeland' in the context of ethnic groups?",
+            "options": [
+                "A) Physical occupation of the land is required.",
+                "B) It can be a symbolic attachment to the ancestral land, as seen in diaspora communities.",
+                "C) Only those who live in the homeland can belong.",
+                "D) It is not a feature of ethnic groups."
+            ],
+            "correct_answer": "B) It can be a symbolic attachment to the ancestral land, as seen in diaspora communities.",
+            "explanation": "The module states: 'A link with a homeland, not necessarily its physical occupation by the ethnic group but only symbolic attachment to the ancestral land, as is the case of people of the diaspora.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "How is ethnic identity defined at the individual level?",
+            "options": [
+                "A) As a purely biological trait.",
+                "B) As a social-psychological process that gives an individual a sense of belonging and identity.",
+                "C) As a legal status.",
+                "D) As a political affiliation."
+            ],
+            "correct_answer": "B) As a social-psychological process that gives an individual a sense of belonging and identity.",
+            "explanation": "The module states: 'At the individual level, ethnicity is a social-psychological process that gives an individual a sense of belonging and identity as a social phenomenon.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What are the three factors that influence ethnic affiliation?",
+            "options": [
+                "A) Political, economic, and social.",
+                "B) Racial, natal, and symbolic factors.",
+                "C) Religious, linguistic, and cultural.",
+                "D) Historical, geographical, and legal."
+            ],
+            "correct_answer": "B) Racial, natal, and symbolic factors.",
+            "explanation": "The module states: 'Affiliation can be influenced by racial, natal, symbolic, and cultural factors.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What are the objective aspects of ethnic identity?",
+            "options": [
+                "A) Feelings of belonging and emotional attachment.",
+                "B) Observable behaviors such as speaking an ethnic language, practicing traditions, and participating in social networks.",
+                "C) Cognitive knowledge of the group.",
+                "D) Moral obligations to the group."
+            ],
+            "correct_answer": "B) Observable behaviors such as speaking an ethnic language, practicing traditions, and participating in social networks.",
+            "explanation": "The module states: 'Ethnic identity has objective and subjective aspects. The Objective aspects refer to observable behavior... speaking an ethnic language, practicing ethnic traditions, participation in ethnic personal networks such as family and friendships.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What are the three types of subjective aspects of ethnic identity?",
+            "options": [
+                "A) Biological, social, and cultural.",
+                "B) Cognitive, moral, and affective.",
+                "C) Political, economic, and religious.",
+                "D) Historical, geographical, and symbolic."
+            ],
+            "correct_answer": "B) Cognitive, moral, and affective.",
+            "explanation": "The module states: 'Three types of subjective aspects of identity can include: (1) cognitive, (2) moral, and (3) affective domains.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "According to Barth, how are ethnic categories created?",
+            "options": [
+                "A) In isolation from other groups.",
+                "B) Out of the contact between groups, through social interaction and boundary maintenance.",
+                "C) By government decree.",
+                "D) Through biological inheritance."
+            ],
+            "correct_answer": "B) Out of the contact between groups, through social interaction and boundary maintenance.",
+            "explanation": "The module states: 'Eriksen stated that ethnic categories are created out of the contact between groups... Barth further illustrated that... group distinctiveness depends on identification of self and ascription by others.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "According to Brubaker (2004), how should we understand identity?",
+            "options": [
+                "A) Identity is a 'thing' that people possess.",
+                "B) Identity is not a real 'thing' but a process of identification that people engage in.",
+                "C) Identity is purely biological.",
+                "D) Identity is a fixed status."
+            ],
+            "correct_answer": "B) Identity is not a real 'thing' but a process of identification that people engage in.",
+            "explanation": "The module states: 'According to Brubaker (2004), identity is not real, either, in the sense that it is not a 'thing' that people can be said to have or to be. Identity depends on processes of identification.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 12,
+            "text": "When did the terms 'ethnicity' and 'ethnic groups' become common terms in the English language?",
+            "options": [
+                "A) During the Middle Ages.",
+                "B) After the end of the Second World War.",
+                "C) In ancient Greece.",
+                "D) In the 21st century."
+            ],
+            "correct_answer": "B) After the end of the Second World War.",
+            "explanation": "The module states: 'After the end of the second world war, words like \"ethnicity\", \"ethnic groups\", \"ethnic conflict\", and \"nationalism\" have become quite common terms in the English language.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 13,
+            "text": "What did social theorists in the early twentieth century predict about ethnicity and nationalism?",
+            "options": [
+                "A) They would grow in importance.",
+                "B) They would decrease in importance and vanish due to modernization, industrialization, and individualism.",
+                "C) They would remain unchanged.",
+                "D) They would become purely religious."
+            ],
+            "correct_answer": "B) They would decrease in importance and vanish due to modernization, industrialization, and individualism.",
+            "explanation": "The module states: 'In the early twentieth century, many social theorists held that ethnicity and nationalism would decrease in importance and eventually vanish as a result of modernization, industrialization, and individualism. This never came about.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 14,
+            "text": "What event led to the term 'ethnicity' gradually replacing the term 'race'?",
+            "options": [
+                "A) The French Revolution.",
+                "B) The close link between the term 'race' and Nazi ideology after WWII.",
+                "C) The Industrial Revolution.",
+                "D) The discovery of America."
+            ],
+            "correct_answer": "B) The close link between the term 'race' and Nazi ideology after WWII.",
+            "explanation": "The module states: 'Due to the close link between the term \"race\" and Nazi ideology, after the end of II WW, the term \"ethnicity\" gradually replaced \"race\" both in North American and European traditions.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 15,
+            "text": "What is the original Greek root of the term 'ethnicity'?",
+            "options": [
+                "A) Ethnikos.",
+                "B) Ethnos (referring to non-Hellenic peoples).",
+                "C) Race.",
+                "D) Tribe."
+            ],
+            "correct_answer": "B) Ethnos (referring to non-Hellenic peoples).",
+            "explanation": "The module states: 'The word is derived from the Greek term 'ethnos'... which literally means \"a group of people bound together by the same manners, customs or other distinctive features\". Contrary to its literal meaning however, ancient Greeks were using the term 'ethnos' in reference to non-Hellenic people.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 16,
+            "text": "What was the term 'ethnic' used to refer to in early England (Middle Ages)?",
+            "options": [
+                "A) Greek philosophers.",
+                "B) Someone who was neither Christian nor Jewish (heathen or pagan).",
+                "C) The ruling class.",
+                "D) The king."
+            ],
+            "correct_answer": "B) Someone who was neither Christian nor Jewish (heathen or pagan).",
+            "explanation": "The module states: 'Likewise, in early England, it used to refer to someone who was neither Christian nor Jewish (to refer to heathen or pagan).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 17,
+            "text": "When did the term 'ethnicity' first appear in the Oxford English Dictionary?",
+            "options": [
+                "A) 1900.",
+                "B) 1953.",
+                "C) 1980.",
+                "D) 2000."
+            ],
+            "correct_answer": "B) 1953.",
+            "explanation": "The module states: 'According to John Hutchinson and Anthony Smith (1996), the term \"ethnicity\" is relatively new, first appearing in the Oxford English Dictionary in 1953.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "How did the North American tradition adopt the term 'ethnic'?",
+            "options": [
+                "A) As a synonym for nationhood.",
+                "B) As a substitute for minority groups in the nation-state (e.g., Jews, Italians, Irish).",
+                "C) As a term for pre-modern societies.",
+                "D) As a biological category."
+            ],
+            "correct_answer": "B) As a substitute for minority groups in the nation-state (e.g., Jews, Italians, Irish).",
+            "explanation": "The module states: 'The North American tradition adopted 'ethnic' as a substitute for minority groups in the nation-state (referring to the Jews, Italians, Irish and other people who are considered inferior to the dominant group).'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "How did the European tradition use the term 'ethnic group'?",
+            "options": [
+                "A) As a substitute for minority groups.",
+                "B) As a synonym for nationhood, defined historically by descent or territory.",
+                "C) As a term for pre-modern societies.",
+                "D) As a biological category."
+            ],
+            "correct_answer": "B) As a synonym for nationhood, defined historically by descent or territory.",
+            "explanation": "The module states: 'The European tradition regularly opted to use 'ethnic group' as a synonym for nationhood, defined historically by descent or territory.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "Why did the collapse of the colonial world in the 1950s and 1960s add confusion to the term 'ethnicity'?",
+            "options": [
+                "A) It eliminated all ethnic groups.",
+                "B) It populated former European colonizer nations with post-colonial immigrants who were defined as 'ethnic' immigrants, adding new meanings to the term.",
+                "C) It made ethnicity irrelevant.",
+                "D) It created a single global culture."
+            ],
+            "correct_answer": "B) It populated former European colonizer nations with post-colonial immigrants who were defined as 'ethnic' immigrants, adding new meanings to the term.",
+            "explanation": "The module states: 'The collapse of the colonial world in the 1950s and 1960s has brought even more confusion on questions of 'race', 'culture', and 'ethnicity'. The homelands of former European colonizers have become populated with new, post-colonial immigrants, who are visibly different and defined as 'ethnic'.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 21,
+            "text": "According to Max Weber, what is the foundation of an ethnic group?",
+            "options": [
+                "A) Biological similarities.",
+                "B) Belief in common descent shared by its members, extending beyond kinship.",
+                "C) A shared political ideology.",
+                "D) A common economic system."
+            ],
+            "correct_answer": "B) Belief in common descent shared by its members, extending beyond kinship.",
+            "explanation": "The module states: 'According to Weber, an \"ethnic group\" is based on the belief in a common descent shared by its members, extending beyond kinship, and political solidarity in relation to other groups, and has common customs, language, religion, values, morality, and etiquette.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 22,
+            "text": "What did Max Weber argue is the primary role of ethnic membership?",
+            "options": [
+                "A) It always forms a distinct group.",
+                "B) It facilitates group formation, particularly in the political sphere, but does not constitute a group in itself.",
+                "C) It is purely biological.",
+                "D) It has no political relevance."
+            ],
+            "correct_answer": "B) It facilitates group formation, particularly in the political sphere, but does not constitute a group in itself.",
+            "explanation": "The module states: 'Perhaps the most significant part of Weber's argument is that: \"ethnic membership does not constitute a group; it only facilitates group formation of any kind, particularly in the political sphere.\"'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 23,
+            "text": "What was Fredrik Barth's major contribution to the study of ethnicity?",
+            "options": [
+                "A) He focused on the cultural content of ethnic groups.",
+                "B) He shifted the focus from the \"cultural stuff\" inside a group to the social boundaries and relationships between groups.",
+                "C) He argued that ethnicity is purely biological.",
+                "D) He ignored the role of social interaction."
+            ],
+            "correct_answer": "B) He shifted the focus from the \"cultural stuff\" inside a group to the social boundaries and relationships between groups.",
+            "explanation": "The module states: 'Barth focused not upon the cultural characteristics of ethnic groups but upon relationships of cultural differentiation, and specifically upon contact between collectivities which thus differentiated, 'us' and 'them'.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 24,
+            "text": "According to Barth, what is the critical focus of investigating ethnicity?",
+            "options": [
+                "A) The language and customs of the group.",
+                "B) The ethnic boundary that defines the group, not the cultural stuff that it encloses.",
+                "C) The physical appearance of group members.",
+                "D) The economic activities of the group."
+            ],
+            "correct_answer": "B) The ethnic boundary that defines the group, not the cultural stuff that it encloses.",
+            "explanation": "The module states: 'In Barth's own words: \"the critical focus of investigation from this point of view becomes the ethnic boundary that defines the group, not the cultural stuff that it encloses.\"'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 25,
+            "text": "What are the two orders of ethnic dichotomies according to Barth?",
+            "options": [
+                "A) Biological and cultural.",
+                "B) Overt signals or signs (e.g., dress, language) and basic value orientations (standards of morality and excellence).",
+                "C) Political and economic.",
+                "D) Religious and linguistic."
+            ],
+            "correct_answer": "B) Overt signals or signs (e.g., dress, language) and basic value orientations (standards of morality and excellence).",
+            "explanation": "The module states: 'The cultural contents of ethnic dichotomies would seem analytically to be of two orders: (i) overt signals or signs - visible features... and (ii) basic value orientations: the standards of morality and excellence by which performance is judged.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 26,
+            "text": "According to Barth, what creates ethnic collectivities?",
+            "options": [
+                "A) Cultural difference alone.",
+                "B) Social contact and interaction with other groups, leading to the definition of 'us' and 'them'.",
+                "C) Geographic isolation.",
+                "D) Biological inheritance."
+            ],
+            "correct_answer": "B) Social contact and interaction with other groups, leading to the definition of 'us' and 'them'.",
+            "explanation": "The module states: 'Cultural difference per se does not create ethnic collectivities. It is the social contact with others that leads to definition and categorization of an 'us' and a 'them'.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 27,
+            "text": "How does Barth view ethnicity?",
+            "options": [
+                "A) As a fixed property of a group.",
+                "B) As an aspect of a relationship, not a property of a group.",
+                "C) As a purely biological trait.",
+                "D) As a legal status."
+            ],
+            "correct_answer": "B) As an aspect of a relationship, not a property of a group.",
+            "explanation": "The module states: 'Ethnicity is essentially an aspect of a relationship, not a property of a group.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 28,
+            "text": "According to the module, how is the identity of the Oromo in Ethiopia created?",
+            "options": [
+                "A) In isolation from other groups.",
+                "B) Through interaction with other groups such as Amhara, Gurage, and Somali.",
+                "C) Through government decree.",
+                "D) Through biological inheritance."
+            ],
+            "correct_answer": "B) Through interaction with other groups such as Amhara, Gurage, and Somali.",
+            "explanation": "The module states: 'The Oromoness is created and becomes culturally and politically meaningful only through the encounter with Amharaness, Gurageness, Somaliness, etc.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 29,
+            "text": "According to the module, what conditions are necessary for ethnicity to come about?",
+            "options": [
+                "A) Total isolation of groups.",
+                "B) A minimum of contact between groups, and the idea that each other is culturally different.",
+                "C) A single shared language.",
+                "D) A common economic system."
+            ],
+            "correct_answer": "B) A minimum of contact between groups, and the idea that each other is culturally different.",
+            "explanation": "The module states: 'For ethnicity to come about, the groups must have a minimum of contact between them, and they must have the ideas of each other as being culturally different from themselves. If these conditions are not fulfilled, there is no ethnicity.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 30,
+            "text": "How did Clifford Geertz define ethnicity?",
+            "options": [
+                "A) As a biological category.",
+                "B) As the 'world of personal identity collectively ratified and publicly expressed' and 'socially ratified personal identity'.",
+                "C) As a purely political concept.",
+                "D) As an economic class."
+            ],
+            "correct_answer": "B) As the 'world of personal identity collectively ratified and publicly expressed' and 'socially ratified personal identity'.",
+            "explanation": "The module states: 'Other than Barth, Clifford Geertz has elegantly defined ethnicity as the 'world of personal identity collectively ratified and publicly expressed' and 'socially ratified personal identity'.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 31,
+            "text": "Which of the following is NOT one of the three major theories of ethnicity mentioned in the module?",
+            "options": [
+                "A) Primordialism.",
+                "B) Instrumentalism.",
+                "C) Social Constructivism.",
+                "D) Functionalism."
+            ],
+            "correct_answer": "D) Functionalism.",
+            "explanation": "The module states: 'Out of the debate, three important theoretical perspectives emerged. These are the Primordialist, Instrumentalist, and Constructivist approaches.' Functionalism is not one of them.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 32,
+            "text": "What is the core argument of Primordialism regarding ethnicity?",
+            "options": [
+                "A) Ethnicity is a rational choice made for political gain.",
+                "B) Ethnicity is fixed, natural, innate, and ascribed at birth based on deep ties of kinship and culture.",
+                "C) Ethnicity is a social construct that changes over time.",
+                "D) Ethnicity is irrelevant in modern society."
+            ],
+            "correct_answer": "B) Ethnicity is fixed, natural, innate, and ascribed at birth based on deep ties of kinship and culture.",
+            "explanation": "The module states: 'Primordialism is an \"objectivist or essentialist theory\" it argues, that \"ultimately there is some real, tangible, foundation for ethnic identification.\"'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 33,
+            "text": "Which German Romantic philosopher is a precursor to Primordialist thinking?",
+            "options": [
+                "A) Karl Marx.",
+                "B) J.G. Herder.",
+                "C) Max Weber.",
+                "D) Fredrik Barth."
+            ],
+            "correct_answer": "B) J.G. Herder.",
+            "explanation": "The module states: 'The Primordialist thinking can be traced back to the German Romantic philosophers, such as J.G. Herder (1744–1803), who stated the primacy of emotions and language.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 34,
+            "text": "According to Clifford Geertz, what are 'primordial attachments' based on?",
+            "options": [
+                "A) Political alliances.",
+                "B) Kinship, locality, and culture.",
+                "C) Economic interests.",
+                "D) Legal contracts."
+            ],
+            "correct_answer": "B) Kinship, locality, and culture.",
+            "explanation": "The module states: 'An anthropologist, Clifford Geertz (1973) systematized the primordial model. He articulated ethnicity as a natural phenomenon with its foundations in primordial ties deriving from kinship, locality, and culture.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 35,
+            "text": "What does Anthony D. Smith's 'myth-symbol complex' refer to?",
+            "options": [
+                "A) Economic theories of ethnicity.",
+                "B) The myths, memories, values, symbols, and styles that form the psychological and emotional core of ethnicity.",
+                "C) Political strategies for ethnic mobilization.",
+                "D) Biological traits of ethnic groups."
+            ],
+            "correct_answer": "B) The myths, memories, values, symbols, and styles that form the psychological and emotional core of ethnicity.",
+            "explanation": "The module states: 'According to him, the 'core' of ethnicity resides in the myths, memories, values, symbols, and the characteristic styles of particular historic configurations, i.e., what he calls 'a myth-symbol complex'.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 36,
+            "text": "What is the core argument of Instrumentalism regarding ethnicity?",
+            "options": [
+                "A) Ethnicity is fixed and unchangeable.",
+                "B) Ethnicity is situational, rational, and a tool for group mobilization to gain political and economic ends.",
+                "C) Ethnicity is purely biological.",
+                "D) Ethnicity does not exist."
+            ],
+            "correct_answer": "B) Ethnicity is situational, rational, and a tool for group mobilization to gain political and economic ends.",
+            "explanation": "The module states: 'The instrumentalist theorists view ethnicity as situationally defined, depending on rational calculations of advantage... an instrument of group mobilization for political and economic ends.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 37,
+            "text": "According to Abner Cohen, what is the ethnic group primarily seen as?",
+            "options": [
+                "A) A fixed biological category.",
+                "B) A collectively organized strategy for the protection of economic and political interests.",
+                "C) A purely cultural community.",
+                "D) A random collection of individuals."
+            ],
+            "correct_answer": "B) A collectively organized strategy for the protection of economic and political interests.",
+            "explanation": "The module states: 'Abner Cohen (1974) placed a greater emphasis on the ethnic group as a collectively organized strategy for the protection of economic and political interests.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 38,
+            "text": "How do instrumentalist theorists view political leaders in relation to ethnicity?",
+            "options": [
+                "A) Leaders have no role in ethnicity.",
+                "B) Leaders use and manipulate perceptions of ethnic identity to further their own ends and stay in power.",
+                "C) Leaders are always Primordialists.",
+                "D) Leaders are not involved in ethnicity."
+            ],
+            "correct_answer": "B) Leaders use and manipulate perceptions of ethnic identity to further their own ends and stay in power.",
+            "explanation": "The module states: 'In the contexts of modern states, leaders (political elites) use and manipulate perceptions of ethnic identity to further their own ends and stay in power.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 39,
+            "text": "What two claims does Primordialism make according to Anthony D. Smith?",
+            "options": [
+                "A) Ethnicity is political and economic.",
+                "B) Ethnicity and ethnic attachment are natural and innate, and they are ancient and perennial.",
+                "C) Ethnicity is situational and strategic.",
+                "D) Ethnicity is a modern invention."
+            ],
+            "correct_answer": "B) Ethnicity and ethnic attachment are natural and innate, and they are ancient and perennial.",
+            "explanation": "The module states: 'Smith concluded that, 'primordialism' makes two distinct claims. Firstly, ethnicity and ethnic attachment are \"natural and innate\"... and secondly, it is \"ancient and perennial\".'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 40,
+            "text": "In Instrumentalism, what is ethnicity ultimately regarded as?",
+            "options": [
+                "A) A fixed status.",
+                "B) A rational and purposive association that can be changed, constructed, or manipulated for gain.",
+                "C) A biological category.",
+                "D) A purely emotional bond."
+            ],
+            "correct_answer": "B) A rational and purposive association that can be changed, constructed, or manipulated for gain.",
+            "explanation": "The module states: 'In extreme sense, the ethnic group should be regarded not as a community at all but as a rational and purposive association. By this, ethnicity is something that can be changed, constructed, or even manipulated to gain specific political and/or economic ends.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 41,
+            "text": "What is the core idea of the Constructivist theory of ethnicity?",
+            "options": [
+                "A) Ethnicity is fixed and innate at birth.",
+                "B) Ethnicity is negotiated and constructed in everyday living, continuing as a process.",
+                "C) Ethnicity is a tool for political elites.",
+                "D) Ethnicity does not exist."
+            ],
+            "correct_answer": "B) Ethnicity is negotiated and constructed in everyday living, continuing as a process.",
+            "explanation": "The module states: 'The basic notion in this approach is that ethnicity is something that is being negotiated and constructed in everyday living. It regards ethnicity as a process, which continues in the making.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 42,
+            "text": "How did Fredrik Barth view ethnic identity within the Constructivist framework?",
+            "options": [
+                "A) As a fixed biological trait.",
+                "B) As an individualistic strategy to advance personal economic and political interests.",
+                "C) As a purely emotional bond.",
+                "D) As a myth-symbol complex."
+            ],
+            "correct_answer": "B) As an individualistic strategy to advance personal economic and political interests.",
+            "explanation": "The module states: 'F. Barth, who is the leading figure of this approach, viewed ethnic identity as an \"individualistic strategy\" in which individuals move from one identity to another to \"advance their personal economic and political interests, or to minimize their losses.\"'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 43,
+            "text": "According to the Constructivist view, what are ethnic boundaries like?",
+            "options": [
+                "A) They are fixed and permanent.",
+                "B) They are permeable and osmotic, allowing for the flow of individuals between groups.",
+                "C) They are purely physical and biological.",
+                "D) They are irrelevant to ethnicity."
+            ],
+            "correct_answer": "B) They are permeable and osmotic, allowing for the flow of individuals between groups.",
+            "explanation": "The module states: 'Jenkins (1997) further noted that, as far as the flow of individuals from one ethnic group to another is possible, it is possible to argue that the boundaries of ethnicity are permeable and osmotic.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 44,
+            "text": "What is the definition of multiculturalism according to the module?",
+            "options": [
+                "A) The assimilation of all cultures into one.",
+                "B) The way in which a given society engages with cultural diversity, presupposing that society benefits from harmonious coexistence.",
+                "C) The elimination of all cultural differences.",
+                "D) The dominance of one culture over others."
+            ],
+            "correct_answer": "B) The way in which a given society engages with cultural diversity, presupposing that society benefits from harmonious coexistence.",
+            "explanation": "The module states: 'Multiculturalism can be defined as the way in which a given society engages with cultural diversity. The underlying assumption is that members of very different cultures can coexist peacefully and multiculturalism articulates the view that society is strengthened through preserving, respecting, and even encouraging cultural diversity.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 45,
+            "text": "What are the two theories/models of multiculturalism mentioned in the module?",
+            "options": [
+                "A) The assimilation model and the integration model.",
+                "B) The melting pot theory and the salad bowl theory.",
+                "C) The diversity theory and the unity theory.",
+                "D) The national model and the global model."
+            ],
+            "correct_answer": "B) The melting pot theory and the salad bowl theory.",
+            "explanation": "The module states: 'There are two theories or models to conceptualize multiculturalism... These are the \"melting pot\" theory or the \"salad bowl\" theory.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 46,
+            "text": "What is the main criticism of the melting pot theory?",
+            "options": [
+                "A) It preserves cultural diversity.",
+                "B) It reduces diversity into a single entity, causing people to lose their traditions, and has been implemented through coercive governmental policies.",
+                "C) It is too liberal.",
+                "D) It encourages cultural differences."
+            ],
+            "correct_answer": "B) It reduces diversity into a single entity, causing people to lose their traditions, and has been implemented through coercive governmental policies.",
+            "explanation": "The module states: 'The melting pot theory has been criticized because it reduced diversity into a single entity and causing people to lose their traditions, and for having to be implemented through governmental policy.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 47,
+            "text": "What is the salad bowl theory of multiculturalism?",
+            "options": [
+                "A) It argues that all cultures should assimilate into one.",
+                "B) It illustrates a heterogeneous society where people coexist by retaining the distinctiveness of their traditional cultures.",
+                "C) It argues that cultural diversity should be eliminated.",
+                "D) It is the same as the melting pot theory."
+            ],
+            "correct_answer": "B) It illustrates a heterogeneous society where people coexist by retaining the distinctiveness of their traditional cultures.",
+            "explanation": "The module states: 'The salad bowl theory illustrates a heterogeneous society in which people coexist by retaining at least some of the distinctiveness aspects of their traditional culture.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 48,
+            "text": "According to the module, how is multiculturalism implemented in public schools?",
+            "options": [
+                "A) By ignoring minority histories.",
+                "B) By introducing curricula that emphasize the histories and traditions of minorities, though occasionally criticized as 'political correctness.'",
+                "C) By teaching only one culture.",
+                "D) By banning cultural studies."
+            ],
+            "correct_answer": "B) By introducing curricula that emphasize the histories and traditions of minorities, though occasionally criticized as 'political correctness.'",
+            "explanation": "The module states: 'However, occasionally criticized as a form of \"political correctness,\" educational systems in multicultural societies emphasize the histories and traditions of minorities in classrooms and textbooks.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 49,
+            "text": "What does the unit summary conclude about the nature of ethnicity?",
+            "options": [
+                "A) Ethnicity is a purely biological construct.",
+                "B) Ethnicity is a constructed, artificial category, and race itself is also a human construct.",
+                "C) Ethnicity is fixed and unchangeable.",
+                "D) Ethnicity is irrelevant in modern society."
+            ],
+            "correct_answer": "B) Ethnicity is a constructed, artificial category, and race itself is also a human construct.",
+            "explanation": "The module states: 'Most social scientists from Weber to Barth agreed today that ethnicity is a constructed, artificial category... as it has been already elucidated, race itself is a human construct.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 50,
+            "text": "What is the core distinction between Primordialism and Constructivism as summarized in the unit?",
+            "options": [
+                "A) Primordialism sees ethnicity as a social construct; Constructivism sees it as fixed.",
+                "B) Primordialism sees ethnicity as fixed and rooted in kinship/biology; Constructivism sees it as a product of human social interaction and valid only as a social construct.",
+                "C) They are the same theory.",
+                "D) Primordialism is a modern theory; Constructivism is an ancient theory."
+            ],
+            "correct_answer": "B) Primordialism sees ethnicity as fixed and rooted in kinship/biology; Constructivism sees it as a product of human social interaction and valid only as a social construct.",
+            "explanation": "The module states: 'Constructivism sees the primordialist views as basically flawed and holds that ethnic groups are only products of human social interaction, maintained only in so far as they are maintained as valid social constructs in societies. Instrumentalism is a perspective towards ethnicity that sees ethnic classification as a mechanism of social stratification.'",
+            "difficulty": "hard"
+        }
+    ]
+}

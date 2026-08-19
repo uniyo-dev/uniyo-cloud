@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 3,
+    "title": "Part 5 Practice: Influencers, Applications, Tools, and Sample Applications",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Which of the following is NOT listed as an influencer of AI in the module?",
+            "options": [
+                "A) Big Data (Structured vs. Unstructured data).",
+                "B) Advancements in computer processing speed and new chip architectures.",
+                "C) Cloud computing and application programming interfaces (APIs).",
+                "D) The invention of the steam engine."
+            ],
+            "correct_answer": "D) The invention of the steam engine.",
+            "explanation": "The module lists: Big data, Advancements in processing speed, Cloud computing/APIs, and The emergence of data science. The steam engine is from the Industrial Revolution, not an influencer of modern AI.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Why is unstructured data considered a major driver of AI?",
+            "options": [
+                "A) Because it is easier to analyze than structured data.",
+                "B) Because it is growing exponentially and makes up most of the data in the world, enabling new AI capabilities.",
+                "C) Because it only exists in relational databases.",
+                "D) Because it is cheaper to store."
+            ],
+            "correct_answer": "B) Because it is growing exponentially and makes up most of the data in the world, enabling new AI capabilities.",
+            "explanation": "The module states: 'Unstructured data is not contained in a regular database and is growing exponentially, making up most of the data in the world. The exponential growth of unstructured data drives the need for a new kind of computer system.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "Which of the following is an AI application in the healthcare sector according to the module?",
+            "options": [
+                "A) Automated grading of student assignments.",
+                "B) Better and faster diagnosis, and informing doctors when a patient is worsening.",
+                "C) Stock market prediction.",
+                "D) Creating video game characters."
+            ],
+            "correct_answer": "B) Better and faster diagnosis, and informing doctors when a patient is worsening.",
+            "explanation": "The module states: 'Healthcare Industries are applying AI to make a better and faster diagnosis than humans. AI can help doctors with diagnoses and can inform when patients are worsening so that medical help can reach the patient before hospitalization.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "How is AI used in the agriculture sector?",
+            "options": [
+                "A) To play chess.",
+                "B) To automate grading of crops.",
+                "C) For agricultural robotics, soil monitoring, and predictive analysis to help farmers.",
+                "D) To recommend movies."
+            ],
+            "correct_answer": "C) For agricultural robotics, soil monitoring, and predictive analysis to help farmers.",
+            "explanation": "The module states: 'Agriculture is applying AI as agriculture robotics, solid and crop monitoring, predictive analysis. AI in agriculture can be very helpful for farmers.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "Which cloud platforms are mentioned in the module as delivering AI services?",
+            "options": [
+                "A) Only Google Cloud.",
+                "B) IBM Cloud, Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform.",
+                "C) Only Microsoft Azure.",
+                "D) Only Amazon Web Services (AWS)."
+            ],
+            "correct_answer": "B) IBM Cloud, Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform.",
+            "explanation": "The module lists: 'IBM delivers Watson AI services over IBM Cloud. Amazon AI services over Amazon Web Services (AWS). Microsoft AI tools over MS Azure cloud. Google AI services over Google Cloud Platform.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the role of Application Programming Interfaces (APIs) in AI?",
+            "options": [
+                "A) They are used to build physical robots.",
+                "B) They enable software components to communicate with each other, allowing developers to infuse AI capabilities into applications easily.",
+                "C) They are only used for video games.",
+                "D) They replace the need for cloud computing."
+            ],
+            "correct_answer": "B) They enable software components to communicate with each other, allowing developers to infuse AI capabilities into applications easily.",
+            "explanation": "The module states: 'In general, application programming interfaces (APIs) expose capabilities and services. APIs enable software components to communicate with each other easily... AI APIs are usually delivered on an open cloud-based platform on which developers can infuse AI capabilities into digital applications.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "In the context of AI in education, what is one of the roles of AI chatbots?",
+            "options": [
+                "A) To replace all teachers.",
+                "B) To act as a teaching assistant, communicating with students and providing support.",
+                "C) To only grade multiple-choice exams.",
+                "D) To manage school finances."
+            ],
+            "correct_answer": "B) To act as a teaching assistant, communicating with students and providing support.",
+            "explanation": "The module states: 'AI can automate grading so that the tutor can have more time to teach. AI chatbot can communicate with students so that the teaching assistant.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Which of the following is an example of a popular AI platform listed in the module?",
+            "options": [
+                "A) Microsoft Azure Machine Learning",
+                "B) Adobe Photoshop",
+                "C) Microsoft Word",
+                "D) Google Docs"
+            ],
+            "correct_answer": "A) Microsoft Azure Machine Learning",
+            "explanation": "The module lists common AI platforms including: 'Microsoft AZURE Machine Learning, Google Cloud Prediction API, IBM Watson, TensorFlow, Infosys Nia, Wipro HOLMES, API.AI, Premonition, Rainbird, Ayasdi, MindMeld, Meya.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "How does AI enhance the online shopping experience according to the sample applications?",
+            "options": [
+                "A) By delivering products physically.",
+                "B) By providing personalized product recommendations based on search history and 'customers who bought this also bought' data.",
+                "C) By replacing human cashiers.",
+                "D) By printing receipts."
+            ],
+            "correct_answer": "B) By providing personalized product recommendations based on search history and 'customers who bought this also bought' data.",
+            "explanation": "The module states: 'You see recommendations for products you're interested in as “customers who viewed this item also viewed” and “customers who bought this item also bought”. Amazon uses artificial neural networks to generate these product recommendations.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Which AI-powered personal assistant is mentioned as being pre-loaded on Windows computers and Microsoft smartphones?",
+            "options": [
+                "A) Siri",
+                "B) Alexa",
+                "C) Cortana",
+                "D) Google Assistant"
+            ],
+            "correct_answer": "C) Cortana",
+            "explanation": "The module states: 'Microsoft has followed suit with Cortana, its own AI assistant that comes pre-loaded on Windows computers and Microsoft smartphones.'",
+            "difficulty": "hard"
+        }
+    ]
+}

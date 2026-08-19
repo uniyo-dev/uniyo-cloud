@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 2,
+    "title": "Part 2 Practice: Physical/Biological Anthropology & Perspectives on Human Origins",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What are the two major areas of research in physical anthropology?",
+            "options": [
+                "A) Human evolution and modern human variation.",
+                "B) Ancient history and modern politics.",
+                "C) Language and culture.",
+                "D) Archaeology and linguistics."
+            ],
+            "correct_answer": "A) Human evolution and modern human variation.",
+            "explanation": "The module states: 'There are two major areas of research in physical anthropology: 1) human evolution, and 2) modern human variation.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Where is the origin of humanity traced back to, according to research in human evolution?",
+            "options": [
+                "A) Europe",
+                "B) Asia",
+                "C) Africa, specifically the Great Rift Valley in East Africa.",
+                "D) North America."
+            ],
+            "correct_answer": "C) Africa, specifically the Great Rift Valley in East Africa.",
+            "explanation": "The module states: 'Research in human evolution shows that the origin of humanity is traced back over 6 million years. Africa is found to be the cradle of human beings. Research findings indicate that East Africa, especially the Great Rift Valley, is the origin of mankind.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the study of human biological evolution through the analysis of fossil remains called?",
+            "options": [
+                "A) Primatology.",
+                "B) Paleoanthropology.",
+                "C) Genetics.",
+                "D) Archaeology."
+            ],
+            "correct_answer": "B) Paleoanthropology.",
+            "explanation": "The module states: 'Paleoanthropology is the study of human biological evolution through the analysis of fossil remains from prehistoric times to determine the missing link that connects modern humans with biological ancestors.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "Who is the British naturalist known for the theory of natural selection and the idea of survival of the fittest?",
+            "options": [
+                "A) Gregor Mendel.",
+                "B) Charles Darwin.",
+                "C) Louis Pasteur.",
+                "D) Isaac Newton."
+            ],
+            "correct_answer": "B) Charles Darwin.",
+            "explanation": "The module states: 'One of the prominent persons in this regard is Charles Darwin (1809-1882), a British Naturalist of the period. Charles Darwin is known for his theory of natural selection in the evolution of species and the idea of survival of the fittest.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What are the three cumulative effects of evolution that can be observed in nature every day?",
+            "options": [
+                "A) Birth, growth, and death.",
+                "B) Replication, Variation, and Selection.",
+                "C) Adaptation, Migration, and Mutation.",
+                "D) Food, shelter, and water."
+            ],
+            "correct_answer": "B) Replication, Variation, and Selection.",
+            "explanation": "The module states: 'Evolution is used to describe the cumulative effects of three independent facts... Replication: The fact that life forms have offspring; Variation: The fact that each offspring is slightly different from its parents; Selection: The fact that not all offspring survive, and those that do tend to be the ones best suited to their environment.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the adaptive value of lighter skin in northern Europe?",
+            "options": [
+                "A) To protect against sunburn.",
+                "B) To allow the body to produce Vitamin D in areas with less sunlight, preventing bone deformities like rickets.",
+                "C) To make people look more attractive.",
+                "D) To prevent skin cancer."
+            ],
+            "correct_answer": "B) To allow the body to produce Vitamin D in areas with less sunlight, preventing bone deformities like rickets.",
+            "explanation": "The module states: 'Humans naturally produce Vitamin D through the skin when they're exposed to sunlight, but cloudier parts of the world—like northern Europe—are exposed to much less sunlight... Lighter skin, then, is an adaptation to the geographical conditions of Europe.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What does Bergmann's rule state?",
+            "options": [
+                "A) In colder regions, warm-blooded animals will have stockier bodies to retain heat better.",
+                "B) In warmer regions, animals are larger.",
+                "C) Skin color is determined solely by diet.",
+                "D) Humans are not affected by climate."
+            ],
+            "correct_answer": "A) In colder regions, warm-blooded animals will have stockier bodies to retain heat better.",
+            "explanation": "The module states: 'Bergmann's rule indicates that in colder regions, warm-blooded animals will have stockier bodies than their counterparts from warmer regions, because stockier bodies are more efficient at retaining body heat.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What is the difference between biological adaptation and habituation?",
+            "options": [
+                "A) Biological adaptation is genetic and takes generations; habituation is a rapid, reversible physiological change during a lifetime.",
+                "B) They are the same thing.",
+                "C) Habituation is genetic; adaptation is not.",
+                "D) Adaptation is only cultural; habituation is only biological."
+            ],
+            "correct_answer": "A) Biological adaptation is genetic and takes generations; habituation is a rapid, reversible physiological change during a lifetime.",
+            "explanation": "The module states: 'The rapid physiological changes that occur in one's lifetime... are referred to as habituation or acclimatization. These aren't passed on genetically to the next generation... and they're reversible.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Which fossil discovery in Ethiopia is mentioned as evidence that the country is the origin of human ancestors?",
+            "options": [
+                "A) The fossil of a dinosaur.",
+                "B) Lucy/Dinknesh (Australopithecus afarensis) in the Afar Region.",
+                "C) A fossil of a whale.",
+                "D) A fossil of a bird."
+            ],
+            "correct_answer": "B) Lucy/Dinknesh (Australopithecus afarensis) in the Afar Region.",
+            "explanation": "The module states: 'The discovery of fossils such as Lucy/Dinknesh (Australopithecus afarensis) in the Afar Region shows that Ethiopia is among African countries regarded as the origin of human ancestors.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is the study of primates or recent human ancestors to explain human evolution called?",
+            "options": [
+                "A) Paleoanthropology.",
+                "B) Primatology.",
+                "C) Genetics.",
+                "D) Ethnology."
+            ],
+            "correct_answer": "B) Primatology.",
+            "explanation": "The module states: 'Primatology studies about primates or recent human ancestors to explain human evolution. Primatologists study the anatomy and social behavior of such non-human primate species as gorillas and chimpanzees.'",
+            "difficulty": "hard"
+        }
+    ]
+}

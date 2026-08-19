@@ -1,0 +1,147 @@
+{
+  "course_code": "GeES1011",
+  "chapter": 6,
+  "title": "Part 5 Practice: Wildlife Resources and Conservation in Ethiopia",
+  "questions": [
+    {
+      "id": 1,
+      "text": "Which animal is considered Africa's rarest canid and is found only in Ethiopia?",
+      "diagram": null,
+      "options": [
+        "A) Walia Ibex",
+        "B) Ethiopian Wolf",
+        "C) Mountain Nyala",
+        "D) Gelada Baboon"
+      ],
+      "correct_answer": "B) Ethiopian Wolf",
+      "explanation": "Correct: The Ethiopian Wolf (Semien Fox) is Africa's rarest canid. A is wrong\u2014Walia Ibex is a goat species. C is wrong\u2014Mountain Nyala is an antelope. D is wrong\u2014Gelada Baboon is a primate.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "text": "Which Ethiopian national park is predominantly a bird sanctuary known for flamingos and pelicans?",
+      "diagram": null,
+      "options": [
+        "A) Simien Mountains National Park",
+        "B) Bale Mountains National Park",
+        "C) Abijatta-Shalla Lakes National Park",
+        "D) Omo National Park"
+      ],
+      "correct_answer": "C) Abijatta-Shalla Lakes National Park",
+      "explanation": "Correct: Abijatta-Shalla is primarily a bird sanctuary. A is wrong\u2014Simien has rare mammals. B is wrong\u2014Bale has afro-alpine species. D is wrong\u2014Omo has hippos and crocodiles.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "text": "Which Ethiopian national park is known for the Walia Ibex and Gelada Baboon?",
+      "diagram": null,
+      "options": [
+        "A) Bale Mountains National Park",
+        "B) Simien Mountains National Park",
+        "C) Gambela National Park",
+        "D) Mago National Park"
+      ],
+      "correct_answer": "B) Simien Mountains National Park",
+      "explanation": "Correct: Simien Mountains has Walia Ibex and Gelada Baboon. A is wrong\u2014Bale has Mountain Nyala. C is wrong\u2014Gambela has hippos and crocodiles. D is wrong\u2014Mago has hippos and crocodiles.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 4,
+      "text": "Which category of wildlife includes animals that spend most of their lives in trees and forests?",
+      "diagram": null,
+      "options": [
+        "A) Game animals",
+        "B) Arboreals",
+        "C) Common animals",
+        "D) Rare animals"
+      ],
+      "correct_answer": "B) Arboreals",
+      "explanation": "Correct: Arboreals are tree-dwelling animals. A is wrong\u2014game animals live in lowlands. C is wrong\u2014common animals are widespread. D is wrong\u2014rare animals are endangered.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 5,
+      "text": "Which Ethiopian national parks are known for hippopotamus and crocodiles in rivers and lakes?",
+      "diagram": null,
+      "options": [
+        "A) Simien and Bale Mountains",
+        "B) Omo, Mago, and Gambela",
+        "C) Abijatta-Shalla",
+        "D) Awash and Nechsar"
+      ],
+      "correct_answer": "B) Omo, Mago, and Gambela",
+      "explanation": "Correct: These parks have hippos and crocodiles. A is wrong\u2014Simien and Bale have mountain species. C is wrong\u2014Abijatta-Shalla has birds. D is wrong\u2014Awash and Nechsar have different species.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 6,
+      "text": "The Mountain Nyala is an endemic antelope found only in which Ethiopian national park?",
+      "diagram": null,
+      "options": [
+        "A) Simien Mountains National Park",
+        "B) Bale Mountains National Park",
+        "C) Awash National Park",
+        "D) Gambela National Park"
+      ],
+      "correct_answer": "B) Bale Mountains National Park",
+      "explanation": "Correct: Mountain Nyala is endemic to Bale Mountains. A is wrong\u2014Simien has Walia Ibex. C is wrong\u2014Awash has different species. D is wrong\u2014Gambela has hippos and crocodiles.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 7,
+      "text": "Which of the following is NOT a challenge facing wildlife conservation in Ethiopia?",
+      "diagram": null,
+      "options": [
+        "A) Habitat loss",
+        "B) Poaching",
+        "C) Strong community involvement",
+        "D) Human-wildlife conflict"
+      ],
+      "correct_answer": "C) Strong community involvement",
+      "explanation": "Correct: Strong community involvement is a solution, not a challenge. A is wrong\u2014habitat loss is a challenge. B is wrong\u2014poaching is a challenge. D is wrong\u2014human-wildlife conflict is a challenge.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "text": "Approximately how many Ethiopian Wolf individuals remain in the wild?",
+      "diagram": null,
+      "options": [
+        "A) Less than 100",
+        "B) Less than 500",
+        "C) Less than 1,000",
+        "D) Less than 5,000"
+      ],
+      "correct_answer": "B) Less than 500",
+      "explanation": "Correct: Less than 500 Ethiopian Wolves remain. A is wrong\u2014too low. C is wrong\u2014too high. D is wrong\u2014far too high.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 9,
+      "text": "The Ethiopian Rift Valley lakes are globally important for:",
+      "diagram": null,
+      "options": [
+        "A) Large mammals like elephants",
+        "B) Waterbirds including flamingos and pelicans",
+        "C) Afro-alpine species",
+        "D) Desert-adapted species"
+      ],
+      "correct_answer": "B) Waterbirds including flamingos and pelicans",
+      "explanation": "Correct: The Rift Valley lakes are important for waterbirds. A is wrong\u2014large mammals are in savannahs. C is wrong\u2014afro-alpine species are in mountains. D is wrong\u2014desert species are in lowlands.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 10,
+      "text": "Which of the following is an endemic primate found only in the Bale Mountains?",
+      "diagram": null,
+      "options": [
+        "A) Gelada Baboon",
+        "B) Bale Monkey",
+        "C) Grivet Monkey",
+        "D) Olive Baboon"
+      ],
+      "correct_answer": "B) Bale Monkey",
+      "explanation": "Correct: Bale Monkey is endemic to Bale Mountains. A is wrong\u2014Gelada is in highlands but not only Bale. C is wrong\u2014Grivet is widely distributed. D is wrong\u2014Olive Baboon is widely distributed.",
+      "difficulty": "hard"
+    }
+  ]
+}

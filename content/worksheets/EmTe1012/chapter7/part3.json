@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 7,
+    "title": "Part 3 Practice: Cloud, Quantum, Autonomic Computing & Computer Vision",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What are the three main types of cloud infrastructure mentioned in the module?",
+            "options": [
+                "A) Public, Private, and Hybrid Cloud.",
+                "B) Local, Remote, and Global Cloud.",
+                "C) Small, Medium, and Large Cloud.",
+                "D) Free, Paid, and Premium Cloud."
+            ],
+            "correct_answer": "A) Public, Private, and Hybrid Cloud.",
+            "explanation": "The module states: 'One of the following three types of cloud infrastructure is used: The first type is a public cloud... A business or organization would typically use a private cloud... The third option is a hybrid cloud.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the 'economy of scale' advantage of cloud computing?",
+            "options": [
+                "A) It makes computing more expensive.",
+                "B) It provides cheap computing power because hardware and software are shared, eliminating costly capital investment.",
+                "C) It forces businesses to buy their own servers.",
+                "D) It has no cost benefits."
+            ],
+            "correct_answer": "B) It provides cheap computing power because hardware and software are shared, eliminating costly capital investment.",
+            "explanation": "The module states: 'Much like with any utility, a business benefits from economy of scale, which means cheap computing power. Because a cloud provider's hardware and software are shared, there's no need for the initial costly capital investment.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is a qubit in quantum computing?",
+            "options": [
+                "A) A bit that only stores the value 0.",
+                "B) A sequence of quantum bits that can exist in two states (1 and 0) at the same time due to superposition.",
+                "C) A physical wire that connects computers.",
+                "D) A type of cloud storage."
+            ],
+            "correct_answer": "B) A sequence of quantum bits that can exist in two states (1 and 0) at the same time due to superposition.",
+            "explanation": "The module states: 'Qubit is short for a sequence of quantum bits... With a quantum computer, the data is stored in qubits. Thanks to the mechanics of quantum physics... a qubit can exist in two states at the same time. This phenomenon is called superposition.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "Which company provided the fastest quantum computer with 53 qubits, completing a computation in 200 seconds that would take a supercomputer 10,000 years?",
+            "options": [
+                "A) IBM",
+                "B) Microsoft",
+                "C) Google",
+                "D) Amazon"
+            ],
+            "correct_answer": "C) Google",
+            "explanation": "The module states: 'Not to be outdone, Google provided the fastest quantum computer with 53 qubits and speed of 200 seconds computation while the supercomputer took 10000 years.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the goal of Autonomic Computing (AC)?",
+            "options": [
+                "A) To make computers slower.",
+                "B) To create systems that run themselves, capable of high-level functioning while keeping the system's complexity invisible to the user.",
+                "C) To eliminate all computer systems.",
+                "D) To only work on mainframes."
+            ],
+            "correct_answer": "B) To create systems that run themselves, capable of high-level functioning while keeping the system's complexity invisible to the user.",
+            "explanation": "The module states: 'The goal of autonomic computing is to create systems that run themselves, capable of high-level functioning while keeping the system's complexity invisible to the user.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Which characteristic of autonomic systems allows them to detect and recover from potential problems?",
+            "options": [
+                "A) Self-Configuring",
+                "B) Self-Healing",
+                "C) Self-Optimizing",
+                "D) Self-Protecting"
+            ],
+            "correct_answer": "B) Self-Healing",
+            "explanation": "The module states: 'Self-Healing: An autonomic application/system should be able to detect and recover from potential problems and continue to function smoothly.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What are the three main steps of how computer vision works?",
+            "options": [
+                "A) Input, Processing, Output.",
+                "B) Acquiring an image, Processing the image, Understanding the image.",
+                "C) Scanning, Saving, Printing.",
+                "D) Detecting, Analyzing, Deleting."
+            ],
+            "correct_answer": "B) Acquiring an image, Processing the image, Understanding the image.",
+            "explanation": "The module states: 'Computer vision works in three main steps: 1. Acquiring an image... 2. Processing the image... 3. Understanding the image.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What is the first commercial use of computer vision mentioned in the module's history section?",
+            "options": [
+                "A) Facial recognition.",
+                "B) Optical Character Recognition (OCR) to interpret text for the blind.",
+                "C) Self-driving cars.",
+                "D) Video game graphics."
+            ],
+            "correct_answer": "B) Optical Character Recognition (OCR) to interpret text for the blind.",
+            "explanation": "The module states: 'In the 1970s, the first commercial use of computer vision interpreted typed or handwritten text using optical character recognition. This advancement was used to interpret written text for the blind.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Which technique in computer vision partitions an image into multiple regions to be examined separately?",
+            "options": [
+                "A) Object detection.",
+                "B) Image segmentation.",
+                "C) Facial recognition.",
+                "D) Edge detection."
+            ],
+            "correct_answer": "B) Image segmentation.",
+            "explanation": "The module states: 'Image segmentation partitions an image into multiple regions or pieces to be examined separately.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Which of the following is NOT listed as an application of computer vision in the module?",
+            "options": [
+                "A) Optical character recognition (OCR) and automatic number plate recognition (ANPR).",
+                "B) Medical imaging and automotive safety.",
+                "C) Surveillance and fingerprint recognition.",
+                "D) Cloud storage and file sharing."
+            ],
+            "correct_answer": "D) Cloud storage and file sharing.",
+            "explanation": "The module lists: OCR, Machine inspection, Retail, Medical imaging, Automotive safety, Surveillance, and Fingerprint recognition. Cloud storage is a cloud computing application, not a computer vision application.",
+            "difficulty": "hard"
+        }
+    ]
+}

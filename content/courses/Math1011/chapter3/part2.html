@@ -1,0 +1,201 @@
+<div class="lesson-section">
+    <h2>Chapter 3: Matrices, Determinant and Systems of Linear Equations</h2>
+    <h3>Part 2: Matrix Multiplication</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In this part, we explore the third and most important matrix operation: <strong>Matrix Multiplication</strong>. Unlike addition and scalar multiplication, matrix multiplication is not performed entry-by-entry. Instead, it follows a specific row-by-column rule that has powerful applications in real-world scenarios, such as calculating total sales in a stadium.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Understand the condition for matrix multiplication.</li>
+            <li>Compute the product of two matrices using the row-by-column rule.</li>
+            <li>Identify when matrix multiplication is not commutative.</li>
+            <li>Apply matrix multiplication to real-life problems.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>3.2.2 Matrix Multiplication</h4>
+
+    <p>An important matrix operation is <strong>matrix multiplication</strong>. To see the usefulness of this operation, consider the application below, in which matrices are helpful for organizing information.</p>
+
+    <p>A football stadium has three concession areas, located in South, North, and West stands. The top-selling items are peanuts, hot dogs, and soda. Sales for one day are given in the first matrix below, and the prices (in dollars) of the three items are given in the second matrix (note that the price per peanuts, hot dogs, and soda are given by $2.00, $3.00, and $2.75, respectively).</p>
+
+    <p>\[
+    	ext{Sales} = egin{bmatrix} 120 & 250 & 305 \ 207 & 140 & 419 \ 29 & 120 & 190 \end{bmatrix}, \quad 	ext{Prices} = egin{bmatrix} 2.00 \ 3.00 \ 2.75 \end{bmatrix}
+    \]</p>
+
+    <div class="diagram-container">
+        <svg width="400" height="200" viewBox="0 0 400 200">
+            <rect width="400" height="200" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Matrix Multiplication in Action</text>
+            
+            <rect x="20" y="60" width="160" height="40" fill="#14b8a6" rx="8"/>
+            <text x="100" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">🏟️ Sales Matrix (3 × 3)</text>
+
+            <rect x="220" y="60" width="160" height="40" fill="#f43f5e" rx="8"/>
+            <text x="300" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">💰 Price Matrix (3 × 1)</text>
+
+            <text x="200" y="140" fill="#f8fafc" font-size="10" text-anchor="middle">📖 Total Sales = Sales × Prices (3 × 1 matrix)</text>
+        </svg>
+    </div>
+
+    <p>To calculate the total sales of the three top-selling items at the South stand, multiply each entry in the first row of the matrix on the left by the corresponding entry in the price column matrix on the right and add the results. Thus, we have:</p>
+
+    <p>\[
+    120(2.00) + 250(3.00) + 305(2.75) = 1828.75 \quad 	ext{(South stand sales)}.
+    \]</p>
+
+    <p>Similarly, the sales for the other two stands are given below:</p>
+    <ul>
+        <li>North stand: \(207(2.00) + 140(3.00) + 419(2.75) = 1986.25\)</li>
+        <li>West stand: \(29(2.00) + 120(3.00) + 190(2.75) = 940.5\)</li>
+    </ul>
+
+    <p>The product of these matrices is the \(3 	imes 1\) matrix giving the total sales for each of the three stands.</p>
+
+    <hr>
+
+    <h4>Definition of Matrix Multiplication</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 3.8:</strong>
+        <p>Let \(A = [a_{ij}]_{m 	imes n}\) and \(B = [b_{ij}]_{n 	imes p}\) be two matrices. Then the <strong>product</strong> of \(A\) and \(B\), denoted by \(AB\), is an \(m 	imes p\) matrix whose \((i,j)\)-th entry is defined by the formula:</p>
+        <p>\[
+        [AB]_{ij} = \sum_{k=1}^{n} a_{ik} b_{kj} = a_{i1}b_{1j} + a_{i2}b_{2j} + \dots + a_{in}b_{nj}.
+        \]</p>
+        <p>In other words, the \((i,j)\)-th entry of the product \(AB\) is obtained by summing the products of the elements in the \(i\)-th row of \(A\) with corresponding elements in the \(j\)-th column of \(B\).</p>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Row-by-Column Rule for Matrix Multiplication</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Row of A</text>
+            <text x="100" y="105" fill="#111827" font-size="8" text-anchor="middle">[a₁₁, a₁₂, ..., a₁ₙ]</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Column of B</text>
+            <text x="300" y="105" fill="#111827" font-size="8" text-anchor="middle">[b₁ⱼ, b₂ⱼ, ..., bₙⱼ]ᵀ</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 \((AB)_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \dots + a_{in}b_{nj}\)</text>
+        </svg>
+    </div>
+
+    <p><strong>Remark:</strong> The product \(AB\) of two matrices \(A\) and \(B\) is defined only if the <strong>number of columns in \(A\)</strong> and the <strong>number of rows in \(B\)</strong> are equal.</p>
+
+    <hr>
+
+    <h4>Examples of Matrix Multiplication</h4>
+
+    <p><strong>Example 3.10:</strong> Let \(A = egin{bmatrix} a_{11} & a_{12} & a_{13} \ a_{21} & a_{22} & a_{23} \end{bmatrix}\) and \(B = egin{bmatrix} b_{11} & b_{12} \ b_{21} & b_{22} \ b_{31} & b_{32} \end{bmatrix}\). Clearly, the product \(AB\) is defined in this case, since the number of columns of \(A\) and the number of rows of \(B\) are equal. Thus, we have:</p>
+
+    <p>\[
+    AB = egin{bmatrix}
+    a_{11}b_{11} + a_{12}b_{21} + a_{13}b_{31} & a_{11}b_{12} + a_{12}b_{22} + a_{13}b_{32} \
+    a_{21}b_{11} + a_{22}b_{21} + a_{23}b_{31} & a_{21}b_{12} + a_{22}b_{22} + a_{23}b_{32}
+    \end{bmatrix}
+    \]</p>
+
+    <p><strong>Example 3.11:</strong> Compute the product \(AB\) of the given matrices:</p>
+
+    <p>\[
+    A = egin{bmatrix} 1 & 2 \ 3 & 4 \end{bmatrix}, \quad B = egin{bmatrix} 5 & 6 \ 7 & 8 \end{bmatrix}.
+    \]</p>
+
+    <p><strong>Solution:</strong> The product \(AB\) is defined since the number of columns in matrix \(A\) and the number of rows in matrix \(B\) are equal. Thus, we have:</p>
+
+    <p>\[
+    AB = egin{bmatrix}
+    (1)(5) + (2)(7) & (1)(6) + (2)(8) \
+    (3)(5) + (4)(7) & (3)(6) + (4)(8)
+    \end{bmatrix} = egin{bmatrix} 19 & 22 \ 43 & 50 \end{bmatrix}.
+    \]</p>
+
+    <p>Note that the product \(BA\) is <strong>not defined</strong> in this case because the number of columns in \(B\) (2) does not equal the number of rows in \(A\) (2). Wait—actually, \(B\) is 2×2 and \(A\) is 2×2, so \(BA\) is defined! Let's check:</p>
+
+    <p>\[
+    BA = egin{bmatrix} 5 & 6 \ 7 & 8 \end{bmatrix} egin{bmatrix} 1 & 2 \ 3 & 4 \end{bmatrix} = egin{bmatrix} (5)(1)+(6)(3) & (5)(2)+(6)(4) \ (7)(1)+(8)(3) & (7)(2)+(8)(4) \end{bmatrix} = egin{bmatrix} 23 & 34 \ 31 & 46 \end{bmatrix}.
+    \]</p>
+
+    <p>Since \(AB 
+eq BA\), matrix multiplication is <strong>not commutative</strong>.</p>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Matrix Multiplication is Not Commutative</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(AB\)</text>
+            <text x="100" y="105" fill="#111827" font-size="8" text-anchor="middle">\(AB = egin{bmatrix} 19 & 22 \ 43 & 50 \end{bmatrix}\)</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(BA\)</text>
+            <text x="300" y="105" fill="#111827" font-size="8" text-anchor="middle">\(BA = egin{bmatrix} 23 & 34 \ 31 & 46 \end{bmatrix}\)</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 In general, \(AB 
+eq BA\). Commutativity is NOT guaranteed.</text>
+        </svg>
+    </div>
+
+    <p><strong>Example 3.12:</strong> Let \(A = egin{bmatrix} 0 & 1 \ 0 & 0 \end{bmatrix}\) and \(B = egin{bmatrix} 1 & 0 \ 0 & 0 \end{bmatrix}\) be the given matrices. Then we have:</p>
+
+    <p>\[
+    AB = egin{bmatrix} 0 & 0 \ 0 & 0 \end{bmatrix}, \quad BA = egin{bmatrix} 0 & 1 \ 0 & 0 \end{bmatrix}.
+    \]</p>
+
+    <p>In this example, we observe that both products \(AB\) and \(BA\) are defined. This is true in general—the products \(AB\) and \(BA\) are defined for any two square matrices \(A\) and \(B\) of the same size. However, for the matrices \(A\) and \(B\) given above, we have \(AB 
+eq BA\). Hence, matrix multiplication is <strong>not commutative</strong>.</p>
+
+    <p><strong>Example 3.13:</strong> Consider the following diagonal matrices:</p>
+
+    <p>\[
+    A = egin{bmatrix} 2 & 0 \ 0 & 3 \end{bmatrix}, \quad B = egin{bmatrix} 4 & 0 \ 0 & 5 \end{bmatrix}.
+    \]</p>
+
+    <p>The product \(AB\) is given by:</p>
+
+    <p>\[
+    AB = egin{bmatrix} 2 & 0 \ 0 & 3 \end{bmatrix} egin{bmatrix} 4 & 0 \ 0 & 5 \end{bmatrix} = egin{bmatrix} 8 & 0 \ 0 & 15 \end{bmatrix}.
+    \]</p>
+
+    <p>Similarly, \(BA = egin{bmatrix} 8 & 0 \ 0 & 15 \end{bmatrix}\). In this case, we have \(AB = BA\), and hence the given matrices \(A\) and \(B\) <strong>commute</strong>. More generally, if \(A\) and \(B\) are any two diagonal matrices of the same size, then \(AB = BA\).</p>
+
+    <hr>
+
+    <h4>Theorems on Matrix Multiplication</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Theorem 3.3:</strong>
+        <p>Matrix multiplication is <strong>associative</strong>, i.e., whenever the products are defined, we have \(A(BC) = (AB)C\).</p>
+        <p>From Theorem 3.3, we shall write \(ABC\) for either \(A(BC)\) or \((AB)C\). Also, for every positive integer \(n\), we shall write \(A^n\) for the product \(AAA \dots A\) (\(n\) terms).</p>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Theorem 3.4:</strong>
+        <p>If all multiplications and additions make sense, the following hold for matrices \(A, B, C\) and scalars \(lpha, eta\):</p>
+        <p>\[
+        A(lpha B + eta C) = lpha(AB) + eta(AC),
+        \]</p>
+        <p>\[
+        (lpha B + eta C)A = lpha(BA) + eta(CA).
+        \]</p>
+    </div>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 2)</h4>
+        <ul>
+            <li><strong>Condition for Multiplication:</strong> Number of columns of \(A\) must equal number of rows of \(B\).</li>
+            <li><strong>Row-by-Column Rule:</strong> \((AB)_{ij} = \sum_{k} a_{ik} b_{kj}\).</li>
+            <li><strong>Not Commutative:</strong> In general, \(AB 
+eq BA\).</li>
+            <li><strong>Diagonal Matrices Commute:</strong> If \(A\) and \(B\) are diagonal matrices of the same size, then \(AB = BA\).</li>
+            <li><strong>Associative:</strong> \(A(BC) = (AB)C\).</li>
+            <li><strong>Distributive:</strong> \(A(lpha B + eta C) = lpha(AB) + eta(AC)\).</li>
+        </ul>
+    </div>
+</div>

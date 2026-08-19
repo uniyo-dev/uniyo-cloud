@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 7,
+    "title": "Part 2 Practice: Domains, Challenges, & Unit Summary",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Which of the following is NOT a crop domesticated by early Ethiopian farmers mentioned in the module?",
+            "options": [
+                "A) Teff.",
+                "B) Enset.",
+                "C) Nug.",
+                "D) Wheat."
+            ],
+            "correct_answer": "D) Wheat.",
+            "explanation": "The module states: 'Among crops selected and domesticated by early Ethiopian farmers include: teff, enset, and nug.' Wheat is not explicitly mentioned.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What percentage of Africa's population makes use of Traditional Medicine (TM)?",
+            "options": [
+                "A) 20%.",
+                "B) 50%.",
+                "C) 80%.",
+                "D) 100%."
+            ],
+            "correct_answer": "C) 80%.",
+            "explanation": "The module states: 'It has been determined that 80% of the population in Africa makes use of Traditional Medicine either alone or in conjunction with conventional medicine.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the well-known plant-based traditional medicine in Ethiopia used to treat tapeworm infection?",
+            "options": [
+                "A) Coffee.",
+                "B) Koso.",
+                "C) Teff.",
+                "D) Enset."
+            ],
+            "correct_answer": "B) Koso.",
+            "explanation": "The module states: 'One of the well-known plant-based traditional medicines in Ethiopia is Koso, which is prepared from flowers of the Koso tree (Hagenia abyssinica) and used to treat tapeworm infection.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the primary challenge to IKS posed by globalization?",
+            "options": [
+                "A) It preserves IKS.",
+                "B) It leads to intense modernization and cultural homogenization (westernization), causing the loss of IKS.",
+                "C) It has no impact on IKS.",
+                "D) It strengthens IKS."
+            ],
+            "correct_answer": "B) It leads to intense modernization and cultural homogenization (westernization), causing the loss of IKS.",
+            "explanation": "The module states: 'Intense modernization and cultural homogenization (westernization) are leading to the loss of IKS and useful traditions in the least developed parts of the world.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "How does modern education sometimes negatively impact IKS?",
+            "options": [
+                "A) It always protects IKS.",
+                "B) Uncritically accepted modern education can devalue IK, equating formal schooling with being civilized and assuming modern knowledge is superior.",
+                "C) It has no impact.",
+                "D) It teaches only IKS."
+            ],
+            "correct_answer": "B) Uncritically accepted modern education can devalue IK, equating formal schooling with being civilized and assuming modern knowledge is superior.",
+            "explanation": "The module states: 'Uncritically accepted modern education could also serves as a major means of the expansion of western culture and values... Having formal schooling is equated with being civilized and acquiring modern knowledge, which is assumed to be superior to indigenous knowledge.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is a major flaw in the modernization approach to development according to the module?",
+            "options": [
+                "A) It always supports local knowledge.",
+                "B) It uncritically adopts modern knowledge and technologies, assuming they are superior to local knowledge, and devalues locally adapted species.",
+                "C) It promotes organic farming.",
+                "D) It protects the environment."
+            ],
+            "correct_answer": "B) It uncritically adopts modern knowledge and technologies, assuming they are superior to local knowledge, and devalues locally adapted species.",
+            "explanation": "The module states: 'Attempts are not only often made to adopt modern knowledge and technologies uncritically but also to assume them as superior to local knowledge and technologies. For instance, policies promoting generic rice and wheat varieties devalue locally adapted species.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "How does rapid population growth impact IKS?",
+            "options": [
+                "A) It has no impact.",
+                "B) It puts pressure on the natural environment as people search for more land to cultivate, leading to deforestation and loss of medicinal plants.",
+                "C) It strengthens IKS.",
+                "D) It promotes biodiversity."
+            ],
+            "correct_answer": "B) It puts pressure on the natural environment as people search for more land to cultivate, leading to deforestation and loss of medicinal plants.",
+            "explanation": "The module states: 'Population puts pressure on the natural environment as more and more people search for more land to cultivate, which could be accessed by cutting down trees... certain medicinal plants become more difficult to find (and the knowledge or culture associated with the plant would also decline).'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Why is the preservation of IKS essential according to the module?",
+            "options": [
+                "A) It is not important.",
+                "B) Just as the world needs genetic diversity of species, it needs diversity of knowledge systems, and IK is a vital tool for rural development.",
+                "C) Only for historical records.",
+                "D) Only for academic study."
+            ],
+            "correct_answer": "B) Just as the world needs genetic diversity of species, it needs diversity of knowledge systems, and IK is a vital tool for rural development.",
+            "explanation": "The module states: 'The loss of IK would impoverish society because, just as the world needs genetic diversity of species, it needs diversity of knowledge systems... IK, and the technical expertise developed there from become vital tools for rural development.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What is the primary reason why IKS needs to be preserved according to the unit summary?",
+            "options": [
+                "A) It is outdated.",
+                "B) Since IK is essential to development, it must be preserved by gathering, recording, organizing, and disseminating it.",
+                "C) It is not important.",
+                "D) Only for tourism."
+            ],
+            "correct_answer": "B) Since IK is essential to development, it must be preserved by gathering, recording, organizing, and disseminating it.",
+            "explanation": "The module states: 'Since IK is essential to development, it must be preserved as in being gathered, recorded, organized, and disseminated knowledge.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is the role of the Koso tree in Ethiopian traditional medicine?",
+            "options": [
+                "A) It is used to build houses.",
+                "B) It is used to make coffee.",
+                "C) It is used to treat tapeworm infection (Koso).",
+                "D) It is used as a food source."
+            ],
+            "correct_answer": "C) It is used to treat tapeworm infection (Koso).",
+            "explanation": "The module states: 'One of the well-known plant-based traditional medicines in Ethiopia is Koso, which is prepared from flowers of the Koso tree... and used to treat tapeworm infection.'",
+            "difficulty": "hard"
+        }
+    ]
+}

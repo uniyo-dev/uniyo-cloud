@@ -1,0 +1,147 @@
+{
+    "course_code": "Econ1011",
+    "chapter": 1,
+    "title": "Part 4 Practice: Decision Making Units & Circular Flow",
+    "questions": [
+        {
+            "id": 1,
+            "text": "In the circular flow model, households provide firms with:",
+            "diagram": null,
+            "options": [
+                "A) Goods and services",
+                "B) Factors of production (land, labor, capital, entrepreneurship)",
+                "C) Money for purchases",
+                "D) Government subsidies"
+            ],
+            "correct_answer": "B) Factors of production (land, labor, capital, entrepreneurship)",
+            "explanation": "Households OWN the factors of production (labor, land, capital, entrepreneurship) and PROVIDE them to firms. In return, firms PAY households wages (for labor), rent (for land), interest (for capital), and profit (for entrepreneurship). This is the FACTOR MARKET flow.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 2,
+            "text": "Examine the circular flow diagram. What do the RED arrows represent?",
+            "diagram": "<svg width='300' height='200' viewBox='0 0 300 200'><rect width='300' height='200' fill='#111827' rx='8'/><rect x='20' y='50' width='90' height='60' rx='8' fill='#1a2332' stroke='#6d28d9' stroke-width='2'/><text x='65' y='75' text-anchor='middle' fill='#f8fafc' font-size='10' font-weight='bold'>Households</text><text x='65' y='90' text-anchor='middle' fill='#94a3b8' font-size='8'>Consumers</text><rect x='190' y='50' width='90' height='60' rx='8' fill='#1a2332' stroke='#6d28d9' stroke-width='2'/><text x='235' y='75' text-anchor='middle' fill='#f8fafc' font-size='10' font-weight='bold'>Firms</text><text x='235' y='90' text-anchor='middle' fill='#94a3b8' font-size='8'>Businesses</text><path d='M 110 80 L 190 80' stroke='#f43f5e' stroke-width='3'/><path d='M 190 95 L 110 95' stroke='#f43f5e' stroke-width='3'/><text x='150' y='72' text-anchor='middle' fill='#f43f5e' font-size='8' font-weight='bold'>Red arrows</text><text x='150' y='130' text-anchor='middle' fill='#94a3b8' font-size='9'>Red = Money Flow</text></svg>",
+            "options": [
+                "A) Flow of goods and services",
+                "B) Flow of money (payments)",
+                "C) Flow of factors of production",
+                "D) Flow of government services"
+            ],
+            "correct_answer": "B) Flow of money (payments)",
+            "explanation": "In the circular flow model, RED arrows (inner loop) represent MONEY flows: households pay firms for goods/services, and firms pay households wages/rent/interest/profit. The GREEN arrows (outer loop) represent PHYSICAL flows: goods/services from firms to households, and factors of production from households to firms.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "What do firms provide to households in the circular flow model?",
+            "diagram": null,
+            "options": [
+                "A) Factors of production",
+                "B) Goods and services",
+                "C) Money and credit",
+                "D) Government services"
+            ],
+            "correct_answer": "B) Goods and services",
+            "explanation": "Firms PRODUCE and PROVIDE goods and services to households. This is the PRODUCT MARKET flow. Examples: bakeries provide bread, schools provide education, hospitals provide healthcare. In exchange, households PAY firms for these goods and services.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "The three main decision-making units in an economy are:",
+            "diagram": null,
+            "options": [
+                "A) Households, Firms, Government",
+                "B) Producers, Consumers, Workers",
+                "C) Buyers, Sellers, Traders",
+                "D) Land, Labor, Capital"
+            ],
+            "correct_answer": "A) Households, Firms, Government",
+            "explanation": "The THREE main decision-making units are: (1) HOUSEHOLDS — own factors of production and consume goods, (2) FIRMS — produce goods and services, (3) GOVERNMENT — regulates, taxes, provides public goods. All three interact in the circular flow.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 5,
+            "text": "In the circular flow model, what do households receive from firms in exchange for providing labor?",
+            "diagram": null,
+            "options": [
+                "A) Goods and services",
+                "B) Wages and salaries",
+                "C) Government subsidies",
+                "D) Profit only"
+            ],
+            "correct_answer": "B) Wages and salaries",
+            "explanation": "Households provide LABOR to firms and receive WAGES and SALARIES in return. This is the FACTOR MARKET: labor → wages, land → rent, capital → interest, entrepreneurship → profit. These payments become household income, which households use to buy goods and services.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "In the circular flow, money flows in which direction compared to goods?",
+            "diagram": null,
+            "options": [
+                "A) Same direction as goods",
+                "B) OPPOSITE direction to goods",
+                "C) Random direction",
+                "D) No relationship"
+            ],
+            "correct_answer": "B) OPPOSITE direction to goods",
+            "explanation": "Money flows in the OPPOSITE direction to goods and services. When firms provide goods to households, households pay money BACK to firms. When households provide labor to firms, firms pay wages BACK to households. The two flows (real and money) always move in opposite directions simultaneously.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "What is the role of GOVERNMENT in the circular flow model?",
+            "diagram": null,
+            "options": [
+                "A) Only produces goods",
+                "B) Only consumes goods",
+                "C) Regulates, taxes, and provides public goods",
+                "D) Has no role"
+            ],
+            "correct_answer": "C) Regulates, taxes, and provides public goods",
+            "explanation": "GOVERNMENT plays multiple roles: (1) TAXES households and firms, (2) Provides PUBLIC GOODS (roads, defense, education), (3) REGULATES economic activity, (4) REDISTRIBUTES income through transfers. This makes the circular flow more complex in a mixed economy.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Which of the following is a REAL flow (not money flow) in the circular flow model?",
+            "diagram": null,
+            "options": [
+                "A) Wages paid to workers",
+                "B) Rent paid for land",
+                "C) Labor provided by households",
+                "D) Interest paid on capital"
+            ],
+            "correct_answer": "C) Labor provided by households",
+            "explanation": "REAL flows are PHYSICAL — actual goods, services, and resources moving. Labor is a REAL flow (workers physically providing their effort). Wages, rent, and interest are MONEY flows (payments). Remember: Real = Physical things, Money = Payments.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "The product market in the circular flow model is where:",
+            "diagram": null,
+            "options": [
+                "A) Firms buy factors of production from households",
+                "B) Households buy goods and services from firms",
+                "C) Government collects taxes",
+                "D) Banks provide loans"
+            ],
+            "correct_answer": "B) Households buy goods and services from firms",
+            "explanation": "The PRODUCT MARKET is where FINISHED goods and services are bought and sold. Households BUY from firms (e.g., buying bread from a bakery). The FACTOR MARKET is where factors of production (labor, land, capital) are bought and sold — firms buy these from households.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "If households increase their savings, what happens in the circular flow?",
+            "diagram": null,
+            "options": [
+                "A) Money flow increases",
+                "B) Money flow decreases (leakage from the system)",
+                "C) Real flow increases",
+                "D) No effect"
+            ],
+            "correct_answer": "B) Money flow decreases (leakage from the system)",
+            "explanation": "SAVINGS are a LEAKAGE from the circular flow. When households save instead of spend, money exits the circular flow, reducing the flow of spending to firms. This can slow economic activity. Other leakages include taxes and imports. INJECTIONS (investment, government spending, exports) add money back into the flow.",
+            "difficulty": "hard"
+        }
+    ]
+}

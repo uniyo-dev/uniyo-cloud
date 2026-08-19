@@ -1,0 +1,288 @@
+{
+    "course_code": "GeES1011",
+    "chapter_number": 5,
+    "week_number": 3,
+    "title": "VIP Chapter 5 Week 3: Rainfall Regions and Agro-ecological Zones",
+    "questions": [
+        {
+            "id": 1,
+            "text": "The smallest rainfall region in Ethiopia is:",
+            "diagram": null,
+            "options": [
+                "A) Summer",
+                "B) Winter (Afar)",
+                "C) All year",
+                "D) Autumn/Spring"
+            ],
+            "correct_answer": "B) Winter (Afar)",
+            "explanation": "Winter rainfall region (Afar) = smallest.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "Jimma and Illubabor are in which rainfall region?",
+            "diagram": null,
+            "options": [
+                "A) Summer",
+                "B) Winter",
+                "C) All year-round",
+                "D) Autumn only"
+            ],
+            "correct_answer": "C) All year-round",
+            "explanation": "Jimma/Illubabor = all year rainfall.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "Borena pastoralists depend on which rainfall?",
+            "diagram": null,
+            "options": [
+                "A) Summer",
+                "B) Autumn and Spring",
+                "C) Winter",
+                "D) All year"
+            ],
+            "correct_answer": "B) Autumn and Spring",
+            "explanation": "Borena (south) = Belg/autumn rains.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "Which agro-ecological zone supports the DENSEST population?",
+            "diagram": null,
+            "options": [
+                "A) Wurch",
+                "B) Weyna Dega",
+                "C) Berha",
+                "D) Kolla"
+            ],
+            "correct_answer": "B) Weyna Dega",
+            "explanation": "Weyna Dega = most populated (moderate climate).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Chat (khat) grows BEST in which zone?",
+            "diagram": null,
+            "options": [
+                "A) Wurch",
+                "B) Dega",
+                "C) Weyna Dega",
+                "D) Berha"
+            ],
+            "correct_answer": "C) Weyna Dega",
+            "explanation": "Chat thrives in Weyna Dega.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "Which zone supports ONLY limited barley cultivation?",
+            "diagram": null,
+            "options": [
+                "A) Kolla",
+                "B) Weyna Dega",
+                "C) Wurch",
+                "D) Berha"
+            ],
+            "correct_answer": "C) Wurch",
+            "explanation": "Wurch = only barley (too cold for other crops).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "The Afar region's winter rainfall comes from:",
+            "diagram": null,
+            "options": [
+                "A) Southwest monsoon",
+                "B) Red Sea influence",
+                "C) Indian Ocean",
+                "D) Congo Basin"
+            ],
+            "correct_answer": "B) Red Sea influence",
+            "explanation": "Afar winter rain from Red Sea moisture.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Sesame grows BEST in which zone?",
+            "diagram": null,
+            "options": [
+                "A) Wurch",
+                "B) Dega",
+                "C) Kolla",
+                "D) Weyna Dega"
+            ],
+            "correct_answer": "C) Kolla",
+            "explanation": "Sesame = Kolla (warm lowland).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Giant lobelia is characteristic of which zone?",
+            "diagram": null,
+            "options": [
+                "A) Berha",
+                "B) Kolla",
+                "C) Wurch (Afroalpine)",
+                "D) Weyna Dega"
+            ],
+            "correct_answer": "C) Wurch (Afroalpine)",
+            "explanation": "Giant lobelia = Afroalpine (Wurch zone).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "The MOST INTENSIVE agricultural zone is:",
+            "diagram": null,
+            "options": [
+                "A) Berha",
+                "B) Wurch",
+                "C) Weyna Dega",
+                "D) Kolla"
+            ],
+            "correct_answer": "C) Weyna Dega",
+            "explanation": "Weyna Dega = most intensive agriculture.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "Camels are MOST common in which zone?",
+            "diagram": null,
+            "options": [
+                "A) Wurch",
+                "B) Dega",
+                "C) Weyna Dega",
+                "D) Berha"
+            ],
+            "correct_answer": "D) Berha",
+            "explanation": "Berha = camels (hot desert adaptation).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "The Somali region receives MOST rain during:",
+            "diagram": null,
+            "options": [
+                "A) Summer (Kiremt)",
+                "B) Autumn and Spring (Belg)",
+                "C) Winter",
+                "D) All year"
+            ],
+            "correct_answer": "B) Autumn and Spring (Belg)",
+            "explanation": "Somali region = Belg/autumn rains.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "Juniper and Hagenia forests are found in:",
+            "diagram": null,
+            "options": [
+                "A) Berha",
+                "B) Kolla",
+                "C) Dega",
+                "D) Weyna Dega"
+            ],
+            "correct_answer": "C) Dega",
+            "explanation": "Dega = Juniper/Hagenia forests.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "The HIGHEST rainfall (>2,000mm) supports:",
+            "diagram": null,
+            "options": [
+                "A) Desert scrub",
+                "B) Dense forests and coffee",
+                "C) Grassland only",
+                "D) Alpine vegetation"
+            ],
+            "correct_answer": "B) Dense forests and coffee",
+            "explanation": "High rainfall = dense forests + coffee.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "Irrigation is ESSENTIAL for agriculture in:",
+            "diagram": null,
+            "options": [
+                "A) Weyna Dega",
+                "B) Dega",
+                "C) Berha",
+                "D) Wurch"
+            ],
+            "correct_answer": "C) Berha",
+            "explanation": "Berha = irrigation essential (very dry).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 16,
+            "text": "The Shewa Plateau is in which rainfall region?",
+            "diagram": null,
+            "options": [
+                "A) Summer",
+                "B) Winter",
+                "C) All year",
+                "D) Autumn only"
+            ],
+            "correct_answer": "A) Summer",
+            "explanation": "Shewa = summer rainfall region.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "Podocarpus (Zigba) trees are characteristic of:",
+            "diagram": null,
+            "options": [
+                "A) Berha",
+                "B) Weyna Dega",
+                "C) Kolla",
+                "D) Wurch"
+            ],
+            "correct_answer": "B) Weyna Dega",
+            "explanation": "Podocarpus = Weyna Dega forests.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "The OGADEN region (Somali) is classified as:",
+            "diagram": null,
+            "options": [
+                "A) Weyna Dega",
+                "B) Berha",
+                "C) Dega",
+                "D) Wurch"
+            ],
+            "correct_answer": "B) Berha",
+            "explanation": "Ogaden = hot dry lowland (Berha).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "Which zone has the SHORTEST growing season?",
+            "diagram": null,
+            "options": [
+                "A) Kolla",
+                "B) Weyna Dega",
+                "C) Wurch",
+                "D) Berha"
+            ],
+            "correct_answer": "C) Wurch",
+            "explanation": "Wurch = shortest growing season (cold).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "The RIFT VALLEY floor is classified as:",
+            "diagram": null,
+            "options": [
+                "A) Dega",
+                "B) Weyna Dega",
+                "C) Kolla",
+                "D) Wurch"
+            ],
+            "correct_answer": "C) Kolla",
+            "explanation": "Rift Valley floor = Kolla (1,500m or below).",
+            "difficulty": "hard"
+        }
+    ]
+}

@@ -1,0 +1,147 @@
+{
+    "course_code": "GeES1011",
+    "chapter": 4,
+    "title": "Part 2 Practice: Water Resources of Ethiopia",
+    "questions": [
+        {
+            "id": 1,
+            "text": "The LARGEST lake in Ethiopia is:",
+            "diagram": null,
+            "options": [
+                "A) Lake Awasa",
+                "B) Lake Tana",
+                "C) Lake Abaya",
+                "D) Lake Ziway"
+            ],
+            "correct_answer": "B) Lake Tana",
+            "explanation": "LAKE TANA is Ethiopia's LARGEST lake (~3,600 km²), located in the North Central Massifs at ~1,800m elevation. It's the source of the Abay (Blue Nile) River and contains 37 islands with historic monasteries.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Which Rift Valley lake is the DEEPEST in Ethiopia?",
+            "diagram": null,
+            "options": [
+                "A) Lake Ziway",
+                "B) Lake Langano",
+                "C) Lake Shalla (266m)",
+                "D) Lake Awasa"
+            ],
+            "correct_answer": "C) Lake Shalla (266m)",
+            "explanation": "LAKE SHALLA is the DEEPEST Rift Valley lake at 266 meters. It's a soda lake (high mineral content) and is part of the Abijatta-Shalla Lakes National Park.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 3,
+            "text": "Lake Langano is popular because it is:",
+            "diagram": null,
+            "options": [
+                "A) The largest lake",
+                "B) Safe for swimming (bilharzia-free)",
+                "C) The deepest lake",
+                "D) A salt lake"
+            ],
+            "correct_answer": "B) Safe for swimming (bilharzia-free)",
+            "explanation": "LAKE LANGANO is popular for TOURISM because it's SAFE FOR SWIMMING — it's bilharzia-free (unlike most other Ethiopian lakes). Many other Rift Valley lakes have bilharzia (schistosomiasis) parasites.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "Ethiopia's total annual surface runoff is approximately:",
+            "diagram": null,
+            "options": [
+                "A) 50 billion m³",
+                "B) 122 billion m³",
+                "C) 500 billion m³",
+                "D) 1 billion m³"
+            ],
+            "correct_answer": "B) 122 billion m³",
+            "explanation": "Ethiopia's total annual surface runoff is about 122 BILLION cubic meters. This vast water resource makes Ethiopia the 'Water Tower of Africa.' However, much of it flows to neighboring countries.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "How many MAJOR river basins does Ethiopia have?",
+            "diagram": null,
+            "options": [
+                "A) Five",
+                "B) Eight",
+                "C) Twelve",
+                "D) Twenty"
+            ],
+            "correct_answer": "C) Twelve",
+            "explanation": "Ethiopia has TWELVE major river basins: Abay, Tekeze, Baro-Akobo, Wabishebelle, Ghenalle, Awash, Omo-Ghibe, and others. The Abay basin is the largest in terms of runoff (54.5 BCM).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "GROUNDWATER in Ethiopia is stored in:",
+            "diagram": null,
+            "options": [
+                "A) River channels",
+                "B) Aquifers (porous rock formations)",
+                "C) Lake beds only",
+                "D) Surface ponds"
+            ],
+            "correct_answer": "B) Aquifers (porous rock formations)",
+            "explanation": "GROUNDWATER is stored in AQUIFERS — porous and permeable rock formations (sandstone, fractured basalt, alluvial deposits) that can hold and transmit water. It's accessed through wells and springs.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "Ethiopia's HYDROELECTRIC potential is estimated at:",
+            "diagram": null,
+            "options": [
+                "A) 5,000 MW",
+                "B) 25,000 MW",
+                "C) 45,000 MW",
+                "D) 100,000 MW"
+            ],
+            "correct_answer": "C) 45,000 MW",
+            "explanation": "Ethiopia's hydroelectric potential is estimated at 45,000 MW — the SECOND HIGHEST in Africa (after DR Congo). Currently, less than 10% is developed. The GERD alone will add 6,450 MW.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "The GERD (Grand Ethiopian Renaissance Dam) is on which river?",
+            "diagram": null,
+            "options": [
+                "A) Tekeze River",
+                "B) Abay (Blue Nile) River",
+                "C) Omo River",
+                "D) Awash River"
+            ],
+            "correct_answer": "B) Abay (Blue Nile) River",
+            "explanation": "The GERD is built on the ABAY (BLUE NILE) RIVER in western Ethiopia (Benishangul-Gumuz region). It will be Africa's LARGEST hydroelectric project with a capacity of 6,450 MW.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "Which lake is the LARGEST Rift Valley lake in Ethiopia?",
+            "diagram": null,
+            "options": [
+                "A) Lake Ziway",
+                "B) Lake Awasa",
+                "C) Lake Abaya",
+                "D) Lake Chamo"
+            ],
+            "correct_answer": "C) Lake Abaya",
+            "explanation": "LAKE ABAYA is the LARGEST Rift Valley lake in Ethiopia (1,162 km²). It's located in the southern Rift Valley and is an important fishing ground. Lake Chamo lies just south of Abaya.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What percentage of Ethiopia's irrigation potential is currently developed?",
+            "diagram": null,
+            "options": [
+                "A) More than 50%",
+                "B) About 30%",
+                "C) Less than 10%",
+                "D) 100%"
+            ],
+            "correct_answer": "C) Less than 10%",
+            "explanation": "Ethiopia's irrigation potential is 3.7 million hectares, but LESS THAN 10% is currently developed. This represents a HUGE opportunity for agricultural development. Major schemes include Awash Valley and Omo Valley.",
+            "difficulty": "hard"
+        }
+    ]
+}

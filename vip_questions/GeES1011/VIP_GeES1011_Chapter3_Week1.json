@@ -1,0 +1,288 @@
+{
+    "course_code": "GeES1011",
+    "chapter_number": 3,
+    "week_number": 1,
+    "title": "VIP Chapter 3 Week 1: Topography of Ethiopia",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Ethiopia's elevation range spans from:",
+            "diagram": null,
+            "options": [
+                "A) 0 to 2,000m",
+                "B) -125m to 4,550m",
+                "C) 500m to 3,000m",
+                "D) 1,000m to 5,000m"
+            ],
+            "correct_answer": "B) -125m to 4,550m",
+            "explanation": "Dallol (-125m) to Ras Dashen (4,550m).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "The Simien Mountains are in which sub-region?",
+            "diagram": null,
+            "options": [
+                "A) Tigray Plateau",
+                "B) North Central Massifs",
+                "C) Shewa Plateau",
+                "D) SW Highlands"
+            ],
+            "correct_answer": "B) North Central Massifs",
+            "explanation": "Simien Mountains = North Central Massifs (Amhara).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "Lake Tana is located in:",
+            "diagram": null,
+            "options": [
+                "A) Shewa Plateau",
+                "B) North Central Massifs",
+                "C) Western Lowlands",
+                "D) Rift Valley"
+            ],
+            "correct_answer": "B) North Central Massifs",
+            "explanation": "Lake Tana is in the North Central Massifs (Amhara).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "The Awash River drains which sub-region?",
+            "diagram": null,
+            "options": [
+                "A) Tigray Plateau",
+                "B) Shewa Plateau",
+                "C) SW Highlands",
+                "D) North Central Massifs"
+            ],
+            "correct_answer": "B) Shewa Plateau",
+            "explanation": "Awash River drains the Shewa Plateau.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Which river drains the Tekeze Lowland?",
+            "diagram": null,
+            "options": [
+                "A) Abay River",
+                "B) Baro River",
+                "C) Tekeze River",
+                "D) Ghibe River"
+            ],
+            "correct_answer": "C) Tekeze River",
+            "explanation": "Tekeze Lowland drained by Tekeze River.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "The BARO LOWLAND is in:",
+            "diagram": null,
+            "options": [
+                "A) NW Ethiopia",
+                "B) SW Ethiopia",
+                "C) NE Ethiopia",
+                "D) SE Ethiopia"
+            ],
+            "correct_answer": "B) SW Ethiopia",
+            "explanation": "Baro Lowland in southwestern Ethiopia.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "Which sub-region has the HIGHEST rainfall?",
+            "diagram": null,
+            "options": [
+                "A) Tigray Plateau",
+                "B) SW Highlands",
+                "C) Shewa Plateau",
+                "D) North Central Massifs"
+            ],
+            "correct_answer": "B) SW Highlands",
+            "explanation": "SW Highlands = highest rainfall in Ethiopia.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "The Ghibe Lowland is drained by:",
+            "diagram": null,
+            "options": [
+                "A) Abay River",
+                "B) Ghibe/Omo River",
+                "C) Tekeze River",
+                "D) Awash River"
+            ],
+            "correct_answer": "B) Ghibe/Omo River",
+            "explanation": "Ghibe Lowland drained by Ghibe/Omo River system.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Tigray Plateau elevation is approximately:",
+            "diagram": null,
+            "options": [
+                "A) 500-1000m",
+                "B) 2000-3000m",
+                "C) 100-500m",
+                "D) 4000-5000m"
+            ],
+            "correct_answer": "B) 2000-3000m",
+            "explanation": "Tigray Plateau = 2000-3000 meters.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Which region contains AKSUM?",
+            "diagram": null,
+            "options": [
+                "A) Shewa Plateau",
+                "B) Tigray Plateau",
+                "C) SW Highlands",
+                "D) North Central Massifs"
+            ],
+            "correct_answer": "B) Tigray Plateau",
+            "explanation": "Aksum is in Tigray Plateau.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "The Western Lowlands border which countries?",
+            "diagram": null,
+            "options": [
+                "A) Kenya and Somalia",
+                "B) Sudan and South Sudan",
+                "C) Eritrea and Djibouti",
+                "D) Egypt and Libya"
+            ],
+            "correct_answer": "B) Sudan and South Sudan",
+            "explanation": "Western Lowlands border Sudan and South Sudan.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "Which is NOT a Western Highland sub-region?",
+            "diagram": null,
+            "options": [
+                "A) Tigray Plateau",
+                "B) Shewa Plateau",
+                "C) Harar Plateau",
+                "D) North Central Massifs"
+            ],
+            "correct_answer": "C) Harar Plateau",
+            "explanation": "Harar Plateau is in EASTERN Highlands, not western.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "Addis Ababa elevation is approximately:",
+            "diagram": null,
+            "options": [
+                "A) 1,000m",
+                "B) 2,400m",
+                "C) 3,500m",
+                "D) 500m"
+            ],
+            "correct_answer": "B) 2,400m",
+            "explanation": "Addis Ababa is at ~2,400 meters elevation.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "The North Central Massifs are composed of:",
+            "diagram": null,
+            "options": [
+                "A) Sandstone",
+                "B) Volcanic basalt",
+                "C) Limestone",
+                "D) Granite only"
+            ],
+            "correct_answer": "B) Volcanic basalt",
+            "explanation": "North Central Massifs = volcanic basalt (Cenozoic).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "Which river is the LONGEST in Ethiopia?",
+            "diagram": null,
+            "options": [
+                "A) Tekeze",
+                "B) Abay (Blue Nile)",
+                "C) Awash",
+                "D) Omo"
+            ],
+            "correct_answer": "B) Abay (Blue Nile)",
+            "explanation": "Abay (Blue Nile) is longest river in Ethiopia.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 16,
+            "text": "The Shewa Plateau contains which mountain?",
+            "diagram": null,
+            "options": [
+                "A) Ras Dashen",
+                "B) Mount Zuqualla",
+                "C) Mount Batu",
+                "D) Mount Guna"
+            ],
+            "correct_answer": "B) Mount Zuqualla",
+            "explanation": "Zuqualla is in Shewa Plateau near Addis Ababa.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "Which lowland is closest to Eritrea border?",
+            "diagram": null,
+            "options": [
+                "A) Tekeze Lowland",
+                "B) Baro Lowland",
+                "C) Ghibe Lowland",
+                "D) Abay-Dinder Lowland"
+            ],
+            "correct_answer": "A) Tekeze Lowland",
+            "explanation": "Tekeze Lowland is in NW near Eritrea border.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "The SW Highlands are drained by:",
+            "diagram": null,
+            "options": [
+                "A) Awash River",
+                "B) Omo and Ghibe rivers",
+                "C) Tekeze River",
+                "D) Abay River"
+            ],
+            "correct_answer": "B) Omo and Ghibe rivers",
+            "explanation": "SW Highlands drained by Omo and Ghibe rivers.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "The Eastern Highlands are separated from Western Highlands by:",
+            "diagram": null,
+            "options": [
+                "A) Abay River",
+                "B) Rift Valley",
+                "C) Tekeze River",
+                "D) Lake Tana"
+            ],
+            "correct_answer": "B) Rift Valley",
+            "explanation": "Rift Valley separates eastern and western highlands.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "Which sub-region has the DENSEST population?",
+            "diagram": null,
+            "options": [
+                "A) Western Lowlands",
+                "B) Shewa Plateau",
+                "C) SW Highlands",
+                "D) Afar Lowlands"
+            ],
+            "correct_answer": "B) Shewa Plateau",
+            "explanation": "Shewa Plateau (Addis Ababa area) has densest population.",
+            "difficulty": "hard"
+        }
+    ]
+}

@@ -1,0 +1,288 @@
+{
+    "course_code": "GeES1011",
+    "chapter_number": 1,
+    "week_number": 2,
+    "title": "VIP Chapter 1 Week 2: Shape of Ethiopia & Map Reading",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Ethiopia's compact shape gives it which ADVANTAGE?",
+            "diagram": null,
+            "options": [
+                "A) Easier border defense",
+                "B) More maritime access",
+                "C) Longer coastlines",
+                "D) Greater isolation"
+            ],
+            "correct_answer": "A) Easier border defense",
+            "explanation": "Compact shape = shorter borders to defend, easier internal communication.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "A country with MANY ISLANDS has which shape?",
+            "diagram": null,
+            "options": [
+                "A) Compact",
+                "B) Fragmented",
+                "C) Protruded",
+                "D) Perforated"
+            ],
+            "correct_answer": "B) Fragmented",
+            "explanation": "Fragmented = many separate pieces/islands (Philippines, Indonesia).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "Which country has an ELONGATED shape?",
+            "diagram": null,
+            "options": [
+                "A) Poland",
+                "B) Chile",
+                "C) Philippines",
+                "D) South Africa"
+            ],
+            "correct_answer": "B) Chile",
+            "explanation": "Chile is long and narrow (4,300 km long, 350 km wide).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "South Africa surrounds Lesotho. South Africa is:",
+            "diagram": null,
+            "options": [
+                "A) Compact",
+                "B) Fragmented",
+                "C) Perforated",
+                "D) Elongated"
+            ],
+            "correct_answer": "C) Perforated",
+            "explanation": "Perforated = completely surrounds another country.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Thailand's peninsula extension makes it:",
+            "diagram": null,
+            "options": [
+                "A) Compact",
+                "B) Protruded",
+                "C) Fragmented",
+                "D) Perforated"
+            ],
+            "correct_answer": "B) Protruded",
+            "explanation": "Protruded = large extension from main body.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "Compactness formula is:",
+            "diagram": null,
+            "options": [
+                "A) Boundary/Area",
+                "B) Area/Boundary",
+                "C) Area×Boundary",
+                "D) Area-Boundary"
+            ],
+            "correct_answer": "B) Area/Boundary",
+            "explanation": "Higher ratio = more compact.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "Ethiopia's compactness ratio is approximately:",
+            "diagram": null,
+            "options": [
+                "A) 50 km²/km",
+                "B) 100 km²/km",
+                "C) 206 km²/km",
+                "D) 500 km²/km"
+            ],
+            "correct_answer": "C) 206 km²/km",
+            "explanation": "1,100,000/5,328 ≈ 206.5 km² per km boundary.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "A map showing POPULATION DENSITY is which type?",
+            "diagram": null,
+            "options": [
+                "A) Topographical",
+                "B) Statistical",
+                "C) Topical",
+                "D) Physical"
+            ],
+            "correct_answer": "B) Statistical",
+            "explanation": "Statistical maps show numerical data distributions.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "The LEGEND on a map:",
+            "diagram": null,
+            "options": [
+                "A) Shows direction",
+                "B) Explains symbols and colors",
+                "C) Shows scale",
+                "D) Gives title"
+            ],
+            "correct_answer": "B) Explains symbols and colors",
+            "explanation": "Legend/Key decodes the map's symbols.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Contour lines on a topographical map show:",
+            "diagram": null,
+            "options": [
+                "A) Population",
+                "B) Elevation/Relief",
+                "C) Climate",
+                "D) Political boundaries"
+            ],
+            "correct_answer": "B) Elevation/Relief",
+            "explanation": "Contour lines connect equal elevation points.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "Which is NOT a marginal information element?",
+            "diagram": null,
+            "options": [
+                "A) Title",
+                "B) Scale",
+                "C) River color",
+                "D) Legend"
+            ],
+            "correct_answer": "C) River color",
+            "explanation": "River color is IN the map body. Title, scale, legend are marginal.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "A country with a PROTRUDED shape faces which challenge?",
+            "diagram": null,
+            "options": [
+                "A) Easy to govern all regions equally",
+                "B) Harder to govern distant protruding regions",
+                "C) No challenges",
+                "D) Easier communication"
+            ],
+            "correct_answer": "B) Harder to govern distant protruding regions",
+            "explanation": "Protrusions are far from the center, making administration harder.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "The NORTH ARROW on a map shows:",
+            "diagram": null,
+            "options": [
+                "A) Scale",
+                "B) Direction/Orientation",
+                "C) Legend",
+                "D) Title"
+            ],
+            "correct_answer": "B) Direction/Orientation",
+            "explanation": "North Arrow indicates which way is north.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "FRAGMENTED countries have which ADVANTAGE?",
+            "diagram": null,
+            "options": [
+                "A) Easier defense",
+                "B) More maritime resources",
+                "C) Easier communication",
+                "D) Shorter borders"
+            ],
+            "correct_answer": "B) More maritime resources",
+            "explanation": "Many islands = more coastlines = more marine resources.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "Ethiopia's borders measure approximately:",
+            "diagram": null,
+            "options": [
+                "A) 2,000 km",
+                "B) 5,328 km",
+                "C) 10,000 km",
+                "D) 15,000 km"
+            ],
+            "correct_answer": "B) 5,328 km",
+            "explanation": "Ethiopia has ~5,328 km of borders.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 16,
+            "text": "A TOPICAL map shows:",
+            "diagram": null,
+            "options": [
+                "A) Single theme (climate, soil, vegetation)",
+                "B) Physical relief only",
+                "C) Population only",
+                "D) All features"
+            ],
+            "correct_answer": "A) Single theme (climate, soil, vegetation)",
+            "explanation": "Topical/Special purpose maps focus on one theme.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "PERFORATED countries are RARE because:",
+            "diagram": null,
+            "options": [
+                "A) No country surrounds another",
+                "B) They create complex political situations",
+                "C) All countries are compact",
+                "D) Geography prevents it"
+            ],
+            "correct_answer": "B) They create complex political situations",
+            "explanation": "Surrounding another country creates political/economic dependencies.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "Map SCALE tells you:",
+            "diagram": null,
+            "options": [
+                "A) Which direction is north",
+                "B) The relationship between map distance and ground distance",
+                "C) What colors mean",
+                "D) When the map was made"
+            ],
+            "correct_answer": "B) The relationship between map distance and ground distance",
+            "explanation": "Scale = map distance : ground distance ratio.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "Ethiopia's compact shape makes INTERNAL CONFLICT:",
+            "diagram": null,
+            "options": [
+                "A) More likely",
+                "B) Less likely (easier unity)",
+                "C) Impossible",
+                "D) Unaffected"
+            ],
+            "correct_answer": "B) Less likely (easier unity)",
+            "explanation": "Compact shape = easier communication = stronger national unity.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "Which is the FIRST step in reading a map?",
+            "diagram": null,
+            "options": [
+                "A) Read the title",
+                "B) Look at the legend",
+                "C) Find north",
+                "D) Check the date"
+            ],
+            "correct_answer": "A) Read the title",
+            "explanation": "Always start with the TITLE to understand what the map shows.",
+            "difficulty": "hard"
+        }
+    ]
+}

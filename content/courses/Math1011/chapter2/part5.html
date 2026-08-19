@@ -1,0 +1,182 @@
+<div class="lesson-section">
+    <h2>Chapter 2: Functions</h2>
+    <h3>Part 5: Types of Functions & Inverse Functions</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In this part, we study three important types of functions: <strong>One-to-One</strong>, <strong>Onto</strong>, and <strong>One-to-One Correspondence</strong>. We then explore the concept of <strong>inverse functions</strong>, which exist only for one-to-one functions.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Define one-to-one, onto, and one-to-one correspondence.</li>
+            <li>Check invertibility of a function.</li>
+            <li>Find the inverse of an invertible function.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>2.5 Types of functions</h4>
+
+    <p>In this section, we shall study some important types of functions.</p>
+
+    <hr>
+
+    <h4>One-to-One Functions</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 2.12:</strong>
+        <p>A function \(f: A \to B\) is called <strong>one-to-one</strong> (often written \(1-1\)), if and only if for all \(x_1, x_2 \in A\), \(f(x_1) = f(x_2)\) implies \(x_1 = x_2\). In words, <strong>no two elements of \(A\) are mapped to the same element of \(B\)</strong>.</p>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">One-to-One vs. Not One-to-One</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">✅ One-to-One (1-1)</text>
+            <text x="100" y="105" fill="#111827" font-size="8" text-anchor="middle">Each input maps to a unique output</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">❌ Not One-to-One</text>
+            <text x="300" y="105" fill="#111827" font-size="8" text-anchor="middle">Two inputs map to the same output</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 \(f(3) = f(4)\) but \(3 \neq 4\) → not 1-1</text>
+        </svg>
+    </div>
+
+    <p><strong>Example 2.28:</strong> Let \(A = \{1,2,3,4,5,6\}\) and \(B = \{7,a,b,c,d,8,e\}\).</p>
+    <ul>
+        <li>\(f = \{(1,7),(2,a),(3,b),(4,b),(5,c),(6,8)\}\) is <strong>not</strong> one-to-one because \(f(3) = f(4)\) but \(3 \neq 4\).</li>
+        <li>\(g = \{(1,7),(2,a),(3,b),(4,c),(5,8),(6,d)\}\) <strong>is</strong> one-to-one.</li>
+    </ul>
+
+    <hr>
+
+    <h4>Onto Functions</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 2.13:</strong>
+        <p>Let \(f\) be a function from a set \(A\) into a set \(B\). Then \(f\) is called an <strong>onto</strong> function (or \(f\) <strong>maps onto</strong> \(B\)) if every element of \(B\) is the image of some element in \(A\). That is, \(\text{Range}(f) = B\).</p>
+    </div>
+
+    <p><strong>Example 2.29:</strong></p>
+    <ul>
+        <li>\(A = \{1,2,3\}\), \(B = \{1,4,5\}\). \(f(1)=1, f(2)=5, f(3)=1\) is <strong>not onto</strong> because 4 has no preimage.</li>
+        <li>\(g = \{(1,4),(2,5),(3,1)\}\) <strong>is onto</strong> because every element of \(B\) has a preimage.</li>
+    </ul>
+
+    <p><strong>Identity Map:</strong> If \(A\) is a non-empty set, the function \(i_A: A \to A\) defined by \(i_A(x) = x\) for all \(x \in A\) is a one-to-one function from \(A\) onto \(A\). \(i_A\) is called the <strong>identity map</strong> on \(A\).</p>
+
+    <p><strong>Example 2.30:</strong></p>
+    <ul>
+        <li>\(f: \mathbb{Z} \to \mathbb{Z}\) defined by \(f(n) = n^2\) is <strong>not one-to-one</strong> (\(f(1)=f(-1)\)) and <strong>not onto</strong> (negative integers have no preimage).</li>
+        <li>\(f: \mathbb{Z} \to \mathbb{Z}\) defined by \(f(n) = 2n\) is <strong>one-to-one</strong> (\(f(n)=f(n') \Rightarrow n=n'\)) but <strong>not onto</strong> (odd integers have no preimage).</li>
+    </ul>
+
+    <hr>
+
+    <h4>One-to-One Correspondence</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 2.14:</strong>
+        <p>A function \(f: A \to B\) is said to be a <strong>one-to-one correspondence</strong> if \(f\) is <strong>both one-to-one and onto</strong>.</p>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">One-to-One Correspondence (Bijection)</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">✅ One-to-One</text>
+            <text x="100" y="105" fill="#111827" font-size="8" text-anchor="middle">Each output has exactly one input</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#facc15" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">✅ Onto</text>
+            <text x="300" y="105" fill="#111827" font-size="8" text-anchor="middle">Every output is used</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 \(f(x) = 5x\) with \(A = \{0,1,2,3,4,5\}\) is a 1-1 correspondence.</text>
+        </svg>
+    </div>
+
+    <p><strong>Example 2.31:</strong> Let \(A = \{0,1,2,3,4,5\}\) and \(B = \{0,5,10,15,20,25\}\). The function \(f(x) = 5x\) is a one-to-one correspondence between \(A\) and \(B\).</p>
+
+    <p><strong>Theorem:</strong> If \(A\) is a finite set and \(f: A \to A\) is onto, then it is one-to-one.</p>
+
+    <hr>
+
+    <h4>Inverse of a Function</h4>
+
+    <p>Since a function is a relation, the <strong>inverse</strong> of a function \(f\) is denoted by \(f^{-1}\) and is defined by:</p>
+    <p>\[f^{-1} = \{(y,x) \mid (x,y) \in f\}\]</p>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Inverse Function Mapping</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(f: A \to B\)</text>
+            <text x="100" y="105" fill="#111827" font-size="8" text-anchor="middle">\(x \to f(x)\)</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(f^{-1}: B \to A\)</text>
+            <text x="300" y="105" fill="#111827" font-size="8" text-anchor="middle">\(f(x) \to x\)</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 \(Dom(f) = Range(f^{-1})\) and \(Range(f) = Dom(f^{-1})\)</text>
+        </svg>
+    </div>
+
+    <p><strong>Important Fact:</strong> The inverse of a function is <strong>not always a function</strong>. For example, \(f = \{(2,4),(3,6),(5,4)\}\) has inverse \(f^{-1} = \{(4,2),(6,3),(4,5)\}\), which is not a function because 4 maps to both 2 and 5.</p>
+
+    <p><strong>Key Rule:</strong> A function has an inverse <strong>if and only if it is one-to-one</strong>.</p>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">A Function That Has No Inverse</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(f = \{(2,4),(3,6),(5,4)\}\)</text>
+            <text x="100" y="105" fill="#111827" font-size="8" text-anchor="middle">4 maps to 2 and 5 → Not a function!</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 Not all functions have inverses. Only 1-1 functions do!</text>
+        </svg>
+    </div>
+
+    <p><strong>Steps to Find the Inverse of a One-to-One Function:</strong></p>
+    <ol>
+        <li>Interchange \(x\) and \(y\) in the equation \(y = f(x)\).</li>
+        <li>Solve the resulting equation for \(y\) to obtain the inverse function.</li>
+    </ol>
+
+    <p><strong>Important Note:</strong> The domain of the inverse function is the range of the original function, and the range of the inverse function is the domain of the original function.</p>
+
+    <p><strong>Example 2.31:</strong> Find the inverse of \(f(x) = x^3\).</p>
+    <p>\(y = x^3 \Rightarrow x = y^3 \Rightarrow y = \sqrt[3]{x}\). Thus, \(f^{-1}(x) = \sqrt[3]{x}\).</p>
+
+    <p><strong>Example 2.32:</strong> Find the inverse of \(f(x) = \frac{x}{x+2}\).</p>
+    <p>\(y = \frac{x}{x+2} \Rightarrow x = \frac{y}{y+2} \Rightarrow xy + 2x = y \Rightarrow y(1-x) = 2x \Rightarrow y = \frac{2x}{1-x}\).</p>
+    <p>Thus, \(f^{-1}(x) = \frac{2x}{1-x}\).</p>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #38bdf8;">
+        <strong>📌 Crucial Warning:</strong>
+        <p>In general, a negative exponent indicates a reciprocal. However, <strong>inverse function notation is an exception</strong>. Please be aware that:</p>
+        <p>\[f^{-1}(x) \neq \frac{1}{f(x)}\]</p>
+        <p>If you want to write the reciprocal of \(f(x)\) using a negative exponent, you must write \(\frac{1}{f(x)} = [f(x)]^{-1}\).</p>
+    </div>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 5)</h4>
+        <ul>
+            <li><strong>One-to-One (1-1):</strong> Each input maps to a unique output. \(f(x_1) = f(x_2) \Rightarrow x_1 = x_2\).</li>
+            <li><strong>Onto:</strong> Every element of the codomain is used. \(Range(f) = B\).</li>
+            <li><strong>One-to-One Correspondence:</strong> Both 1-1 and onto.</li>
+            <li><strong>Inverse Function:</strong> Exists <strong>if and only if</strong> the function is one-to-one.</li>
+            <li><strong>To find the inverse:</strong> Interchange \(x\) and \(y\), then solve for \(y\).</li>
+            <li><strong>Domain/Range of Inverse:</strong> \(Dom(f^{-1}) = Range(f)\) and \(Range(f^{-1}) = Dom(f)\).</li>
+            <li><strong>⚠️ Warning:</strong> \(f^{-1}(x) \neq \frac{1}{f(x)}\).</li>
+        </ul>
+    </div>
+</div>

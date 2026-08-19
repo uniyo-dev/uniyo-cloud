@@ -1,0 +1,147 @@
+{
+    "course_code": "GeES1011",
+    "chapter": 5,
+    "title": "Part 4 Practice: Climate Change",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Climate change refers to:",
+            "diagram": null,
+            "options": [
+                "A) Daily weather changes",
+                "B) Long-term shifts in climate patterns",
+                "C) Seasonal changes only",
+                "D) Short-term temperature fluctuations"
+            ],
+            "correct_answer": "B) Long-term shifts in climate patterns",
+            "explanation": "Climate change is a LONG-TERM shift in temperature, rainfall, and weather patterns over DECADES or longer. It's different from daily weather changes (A) or seasonal changes (C).",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Ethiopia's average temperature has increased by approximately:",
+            "diagram": null,
+            "options": [
+                "A) 0.1°C since 1960",
+                "B) 1°C since 1960",
+                "C) 5°C since 1960",
+                "D) No change"
+            ],
+            "correct_answer": "B) 1°C since 1960",
+            "explanation": "Ethiopia's average temperature has risen by about 1°C since 1960, at a rate of about 0.28°C per decade. This warming trend is consistent with global climate change.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 3,
+            "text": "Which is a NATURAL cause of climate change?",
+            "diagram": null,
+            "options": [
+                "A) Burning fossil fuels",
+                "B) Deforestation",
+                "C) Volcanic eruptions",
+                "D) Industrial processes"
+            ],
+            "correct_answer": "C) Volcanic eruptions",
+            "explanation": "VOLCANIC ERUPTIONS are a NATURAL cause of climate change — they release ash and sulfur dioxide that can temporarily cool the climate. Fossil fuels, deforestation, and industrial processes are ANTHROPOGENIC (human) causes.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "The MAIN anthropogenic (human) cause of climate change is:",
+            "diagram": null,
+            "options": [
+                "A) Volcanic activity",
+                "B) Burning of fossil fuels (coal, oil, gas)",
+                "C) Solar variations",
+                "D) Earth's orbital changes"
+            ],
+            "correct_answer": "B) Burning of fossil fuels (coal, oil, gas)",
+            "explanation": "BURNING FOSSIL FUELS releases CO₂ — the main greenhouse gas driving climate change. Volcanic activity and solar variations are NATURAL causes. Fossil fuel burning (industry, transport, electricity) is the dominant human cause.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 5,
+            "text": "Examine the greenhouse effect diagram. What traps heat?",
+            "diagram": "<svg width='350' height='180' viewBox='0 0 350 180'><rect width='350' height='180' fill='#111827' rx='8'/><circle cx='60' cy='90' r='25' fill='#facc15'/><text x='60' y='95' text-anchor='middle' fill='#0B0F19' font-size='7' font-weight='bold'>SUN</text><rect x='130' y='60' width='170' height='80' rx='8' fill='#1a2332' stroke='#14b8a6' stroke-width='2'/><text x='215' y='100' text-anchor='middle' fill='#14b8a6' font-size='10' font-weight='bold'>EARTH</text><path d='M 215 70 Q 260 40 215 20 Q 170 40 215 70' fill='rgba(236,72,153,0.4)'/><text x='270' y='45' fill='#f43f5e' font-size='9' font-weight='bold'>???</text></svg>",
+            "options": [
+                "A) Oxygen",
+                "B) Greenhouse gases (CO₂, CH₄)",
+                "C) Water vapor only",
+                "D) Clouds"
+            ],
+            "correct_answer": "B) Greenhouse gases (CO₂, CH₄)",
+            "explanation": "GREENHOUSE GASES (CO₂, CH₄, N₂O) trap heat in the atmosphere, causing global warming. The pink layer in the diagram represents these gases. Oxygen doesn't trap heat. Water vapor is a greenhouse gas but CO₂/CH₄ are the main drivers.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "How does climate change affect MALARIA in Ethiopia?",
+            "diagram": null,
+            "options": [
+                "A) Malaria disappears completely",
+                "B) Malaria spreads to higher altitude areas (warmer)",
+                "C) No effect on malaria",
+                "D) Malaria only affects animals"
+            ],
+            "correct_answer": "B) Malaria spreads to higher altitude areas (warmer)",
+            "explanation": "As temperatures WARM, malaria-carrying mosquitoes can survive at HIGHER ALTITUDES. Areas that were previously too cold for mosquitoes (like highlands) are becoming suitable, expanding malaria transmission zones.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "MITIGATION strategies focus on:",
+            "diagram": null,
+            "options": [
+                "A) Coping with impacts",
+                "B) Reducing greenhouse gas emissions",
+                "C) Ignoring climate change",
+                "D) Only planting trees"
+            ],
+            "correct_answer": "B) Reducing greenhouse gas emissions",
+            "explanation": "MITIGATION focuses on REDUCING greenhouse gas emissions — tackling the CAUSE of climate change. Examples: reforestation, renewable energy, energy efficiency. ADAPTATION focuses on coping with impacts.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "ADAPTATION strategies focus on:",
+            "diagram": null,
+            "options": [
+                "A) Reducing emissions",
+                "B) Coping with climate change impacts",
+                "C) Stopping all development",
+                "D) Only building dams"
+            ],
+            "correct_answer": "B) Coping with climate change impacts",
+            "explanation": "ADAPTATION focuses on COPING with the impacts of climate change — adjusting to new conditions. Examples: drought-resistant crops, water harvesting, early warning systems. MITIGATION reduces emissions.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "Which is a MITIGATION strategy?",
+            "diagram": null,
+            "options": [
+                "A) Building flood defenses",
+                "B) Planting trees (reforestation)",
+                "C) Developing drought-resistant crops",
+                "D) Building water tanks"
+            ],
+            "correct_answer": "B) Planting trees (reforestation)",
+            "explanation": "REFORESTATION is a MITIGATION strategy — trees absorb CO₂, reducing greenhouse gas concentrations. Flood defenses, drought-resistant crops, and water tanks are ADAPTATION strategies (coping with impacts).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Which is an ADAPTATION strategy?",
+            "diagram": null,
+            "options": [
+                "A) Solar energy development",
+                "B) Wind power",
+                "C) Drought-resistant crops",
+                "D) Electric vehicles"
+            ],
+            "correct_answer": "C) Drought-resistant crops",
+            "explanation": "DROUGHT-RESISTANT CROPS are an ADAPTATION strategy — they help farmers COPE with reduced rainfall. Solar energy, wind power, and electric vehicles are MITIGATION strategies (reducing emissions).",
+            "difficulty": "hard"
+        }
+    ]
+}

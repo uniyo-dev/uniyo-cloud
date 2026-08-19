@@ -1,0 +1,147 @@
+{
+    "course_code": "Econ1011",
+    "chapter": 6,
+    "title": "Part 3 Practice: Business Cycle and Macroeconomic Problems",
+    "questions": [
+        {
+            "id": 1,
+            "text": "The business cycle refers to:",
+            "diagram": null,
+            "options": [
+                "A) Daily fluctuations in stock prices",
+                "B) Alternating periods of economic expansion and contraction",
+                "C) Seasonal changes in agriculture",
+                "D) Government policy cycles"
+            ],
+            "correct_answer": "B) Alternating periods of economic expansion and contraction",
+            "explanation": "The BUSINESS CYCLE is the natural rhythm of the economy: EXPANSION (growing GDP) followed by CONTRACTION (falling GDP). Phases: Expansion → Peak → Recession → Trough → Recovery. This cycle repeats over years.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "A RECESSION is technically defined as:",
+            "diagram": null,
+            "options": [
+                "A) One quarter of negative growth",
+                "B) Two consecutive quarters of negative GDP growth",
+                "C) Any period of high inflation",
+                "D) Rising unemployment for one month"
+            ],
+            "correct_answer": "B) Two consecutive quarters of negative GDP growth",
+            "explanation": "A RECESSION is officially defined as TWO CONSECUTIVE QUARTERS (6 months) of NEGATIVE GDP growth. A DEPRESSION is a severe, prolonged recession (like the 1930s). Recessions mean falling output and rising unemployment.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 3,
+            "text": "The unemployment rate formula is:",
+            "diagram": null,
+            "options": [
+                "A) Unemployed / Total Population × 100",
+                "B) Unemployed / Labor Force × 100",
+                "C) Employed / Labor Force × 100",
+                "D) Labor Force / Total Population × 100"
+            ],
+            "correct_answer": "B) Unemployed / Labor Force × 100",
+            "explanation": "Unemployment Rate = (Unemployed / Labor Force) × 100. The LABOR FORCE = Employed + Unemployed (actively seeking work). People not looking for work (students, retirees) are NOT in the labor force.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "A recent graduate who is SEARCHING for their first job is:",
+            "diagram": null,
+            "options": [
+                "A) Structurally unemployed",
+                "B) Frictionally unemployed",
+                "C) Cyclically unemployed",
+                "D) Not unemployed"
+            ],
+            "correct_answer": "B) Frictionally unemployed",
+            "explanation": "FRICTIONAL unemployment is the temporary unemployment during JOB SEARCH — graduates looking for first jobs, workers between jobs. It's natural and even healthy (allows matching workers to best jobs).",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "When technology replaces workers (e.g., ATMs replacing bank tellers), this is:",
+            "diagram": null,
+            "options": [
+                "A) Frictional unemployment",
+                "B) Structural unemployment",
+                "C) Cyclical unemployment",
+                "D) Seasonal unemployment"
+            ],
+            "correct_answer": "B) Structural unemployment",
+            "explanation": "STRUCTURAL unemployment occurs when workers' SKILLS don't match available jobs. Technology changes (ATMs, automation) eliminate some jobs while creating others requiring different skills. Workers need retraining.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Unemployment caused by an economic RECESSION is:",
+            "diagram": null,
+            "options": [
+                "A) Frictional",
+                "B) Structural",
+                "C) Cyclical",
+                "D) Seasonal"
+            ],
+            "correct_answer": "C) Cyclical",
+            "explanation": "CYCLICAL unemployment results from economic downturns. During recessions, firms lay off workers because demand falls. When the economy recovers, these workers are rehired. It's the most concerning type for policymakers.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "Demand-Pull inflation occurs when:",
+            "diagram": null,
+            "options": [
+                "A) Production costs increase",
+                "B) Aggregate demand exceeds aggregate supply",
+                "C) Government reduces spending",
+                "D) Imports become cheaper"
+            ],
+            "correct_answer": "B) Aggregate demand exceeds aggregate supply",
+            "explanation": "DEMAND-PULL inflation happens when TOTAL DEMAND exceeds TOTAL SUPPLY — 'too much money chasing too few goods.' Consumers, businesses, and government all want more than the economy can produce, pulling prices UP.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "A trade deficit occurs when:",
+            "diagram": null,
+            "options": [
+                "A) Exports exceed Imports",
+                "B) Imports exceed Exports",
+                "C) Government spending exceeds revenue",
+                "D) Tax revenue exceeds spending"
+            ],
+            "correct_answer": "B) Imports exceed Exports",
+            "explanation": "TRADE DEFICIT = Imports > Exports (buying more from abroad than selling). BUDGET DEFICIT = Government spending > Tax revenue. Both are common problems in developing countries like Ethiopia.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "Cost-Push inflation is caused by:",
+            "diagram": null,
+            "options": [
+                "A) Excess consumer demand",
+                "B) Rising production costs (e.g., oil prices)",
+                "C) Government spending",
+                "D) Low interest rates"
+            ],
+            "correct_answer": "B) Rising production costs (e.g., oil prices)",
+            "explanation": "COST-PUSH inflation occurs when production COSTS rise (oil, wages, raw materials), forcing producers to charge higher prices. Example: Oil price increase raises transport costs, pushing up prices of all transported goods.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "If Labor Force = 50 million and Unemployed = 5 million, the unemployment rate is:",
+            "diagram": null,
+            "options": [
+                "A) 5%",
+                "B) 10%",
+                "C) 15%",
+                "D) 50%"
+            ],
+            "correct_answer": "B) 10%",
+            "explanation": "Unemployment Rate = (5 / 50) × 100 = 10%. This means 10% of the labor force is actively seeking work but can't find it. The remaining 90% (45 million) are employed.",
+            "difficulty": "easy"
+        }
+    ]
+}

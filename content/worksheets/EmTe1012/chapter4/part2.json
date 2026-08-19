@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 4,
+    "title": "Part 2 Practice: How IoT Works, Architecture, and Devices & Networks",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the first step in an IoT ecosystem according to the module?",
+            "options": [
+                "A) Data is sent to the cloud.",
+                "B) Smart devices use embedded processors and sensors to collect data from their environments.",
+                "C) Data is analyzed locally.",
+                "D) An actuator moves a robotic gripper."
+            ],
+            "correct_answer": "B) Smart devices use embedded processors and sensors to collect data from their environments.",
+            "explanation": "The module states: 'An IoT ecosystem consists of web-enabled smart devices that use embedded processors, sensors, and communication hardware to collect, send, and act on data they acquire from their environments.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What are the four major components of IoT architecture?",
+            "options": [
+                "A) Input, Output, Storage, Processing",
+                "B) Sensing, Network, Data Processing, and Application Layers",
+                "C) Hardware, Software, Firmware, Malware",
+                "D) Wi-Fi, Bluetooth, Zigbee, LoRa"
+            ],
+            "correct_answer": "B) Sensing, Network, Data Processing, and Application Layers",
+            "explanation": "The module states: 'the architecture of IoT devices comprises four major components: sensing, network, data processing, and application layers.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the primary function of the Sensing Layer in IoT architecture?",
+            "options": [
+                "A) To transmit data via Wi-Fi or Bluetooth.",
+                "B) To identify phenomena in the device's peripheral and obtain data from the real world.",
+                "C) To analyze data and make decisions.",
+                "D) To present results to the user."
+            ],
+            "correct_answer": "B) To identify phenomena in the device's peripheral and obtain data from the real world.",
+            "explanation": "The module states: 'The main purpose of the sensing layer is to identify any phenomena in the devices' peripheral and obtain data from the real world.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "Which layer of IoT architecture acts as a communication channel using technologies like Wi-Fi, Bluetooth, Zigbee, and LoRa?",
+            "options": [
+                "A) Sensing Layer",
+                "B) Network Layer",
+                "C) Data Processing Layer",
+                "D) Application Layer"
+            ],
+            "correct_answer": "B) Network Layer",
+            "explanation": "The module states: 'The network layer acts as a communication channel to transfer data, collected in the sensing layer, to other connected devices... implemented by using diverse communication technologies (e.g., Wi-Fi, Bluetooth, Zigbee, Z-Wave, LoRa, cellular network, etc.).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "In the Data Processing Layer, what happens to the data collected by the sensing layer?",
+            "options": [
+                "A) It is stored permanently without analysis.",
+                "B) It is analyzed to make decisions based on the result.",
+                "C) It is deleted immediately.",
+                "D) It is transmitted to another device without processing."
+            ],
+            "correct_answer": "B) It is analyzed to make decisions based on the result.",
+            "explanation": "The module states: 'The data processing layer takes data collected in the sensing layer and analyzes the data to make decisions based on the result.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the role of an actuator in the sensing layer?",
+            "options": [
+                "A) To collect data only.",
+                "B) To intervene and change the physical conditions that generate the data (e.g., shut off power, adjust valves).",
+                "C) To display data to the user.",
+                "D) To connect to the internet."
+            ],
+            "correct_answer": "B) To intervene and change the physical conditions that generate the data (e.g., shut off power, adjust valves).",
+            "explanation": "The module states: 'Actuators can also intervene to change the physical conditions that generate the data. An actuator might, for example, shut off a power supply, adjust an airflow valve, or move a robotic gripper.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "Which category of IoT devices includes smart TVs, smart speakers, and wearables?",
+            "options": [
+                "A) Consumer",
+                "B) Enterprise",
+                "C) Industrial",
+                "D) Government"
+            ],
+            "correct_answer": "A) Consumer",
+            "explanation": "The module states: 'Consumer connected devices include smart TVs, smart speakers, toys, wearables, and smart appliances.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What is the purpose of the M4DN.IoT platform?",
+            "options": [
+                "A) To replace all IoT devices with AI.",
+                "B) To manage IoT networks and devices, integrating their functionalities and monitoring their status.",
+                "C) To design new sensors.",
+                "D) To disconnect devices from the internet."
+            ],
+            "correct_answer": "B) To manage IoT networks and devices, integrating their functionalities and monitoring their status.",
+            "explanation": "The module states: 'M4DN.IoT (Management for Device and Network in the Internet of Things) is a platform for IoT networks and devices management. This solution integrates and controls the individual functionalities of the devices in an IoT network as well as the status and characteristics of this network.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What are the two scopes of management defined by M4DN.IoT?",
+            "options": [
+                "A) Local management and Remote management.",
+                "B) Cloud management and On-premise management.",
+                "C) Physical management and Virtual management.",
+                "D) Hardware management and Software management."
+            ],
+            "correct_answer": "A) Local management and Remote management.",
+            "explanation": "The module states: 'M4DN.IoT defines a management structure in two scopes: local management, where the platform runs in the same environment as the devices, and remote management, where the platform controls the devices in different networks.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is an example of a Position Sensor mentioned in the module?",
+            "options": [
+                "A) Light sensor",
+                "B) GPS (Global Positioning System)",
+                "C) Pressure sensor",
+                "D) Temperature sensor"
+            ],
+            "correct_answer": "B) GPS (Global Positioning System)",
+            "explanation": "The module states: 'Position sensors of IoT devices deal with the physical position and location of the device... GPS is used for navigation purposes in IoT devices.'",
+            "difficulty": "hard"
+        }
+    ]
+}

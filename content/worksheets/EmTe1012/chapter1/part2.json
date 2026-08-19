@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 1,
+    "title": "Part 2 Practice: Role of Data for Emerging Technologies",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Why is data referred to as the 'new oil' in the modern era?",
+            "options": [
+                "A) Because it is a physical liquid used in machines.",
+                "B) Because it is a strategic asset that drives the future of science, technology, and the economy.",
+                "C) Because it is cheap and unlimited in supply.",
+                "D) Because it is only used by oil companies."
+            ],
+            "correct_answer": "B) Because it is a strategic asset that drives the future of science, technology, and the economy.",
+            "explanation": "The module states: 'Data is regarded as the new oil and strategic asset since we are living in the age of big data, and drives or even determines the future of science, technology, the economy.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the relationship between data and the Fourth Industrial Revolution?",
+            "options": [
+                "A) Data is irrelevant to the Fourth Industrial Revolution.",
+                "B) Data-intensive scientific discovery is a core characteristic of the Fourth Industrial Revolution.",
+                "C) The Fourth Industrial Revolution only uses steam power.",
+                "D) Data is only used in agriculture."
+            ],
+            "correct_answer": "B) Data-intensive scientific discovery is a core characteristic of the Fourth Industrial Revolution.",
+            "explanation": "The module explicitly links the preceding trend of big data to 'data-intensive scientific discovery as an emerging technology, the so-called “fourth industrial revolution.”'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "Which fields are recognizing the potential of data science and analytics?",
+            "options": [
+                "A) Only Computing and Informatics.",
+                "B) Only Social Sciences and Business.",
+                "C) Only Health and Medical Sciences.",
+                "D) Core disciplines (computing, informatics, statistics) and broad-based fields (business, social science, health)."
+            ],
+            "correct_answer": "D) Core disciplines (computing, informatics, statistics) and broad-based fields (business, social science, health).",
+            "explanation": "The module states: 'This involves not only core disciplines such as computing, informatics, and statistics, but also the broad-based fields of business, social science, and health/medical science.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the first step in the data value chain as illustrated in the lesson?",
+            "options": [
+                "A) Data Analysis",
+                "B) Data Action",
+                "C) Data Collection",
+                "D) Data Deletion"
+            ],
+            "correct_answer": "C) Data Collection",
+            "explanation": "The data value chain starts with raw data collection, then moves to processing, then to insights, and finally to action. This is the logical flow of turning raw data into value.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What does the phrase 'paradigm-shifting' refer to in the context of data?",
+            "options": [
+                "A) A shift from using data to ignoring data.",
+                "B) A reshaping of industries by understanding, exploring, and utilizing data.",
+                "C) A shift from digital to analog systems.",
+                "D) A change in government policies."
+            ],
+            "correct_answer": "B) A reshaping of industries by understanding, exploring, and utilizing data.",
+            "explanation": "The module highlights: 'This reshaping and paradigm-shifting are driven not just by data itself but all other aspects that could be created, transformed, and/or adjusted by understanding, exploring, and utilizing data.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Data has not only triggered hype but also what other significant outcome?",
+            "options": [
+                "A) Economic decline in all sectors.",
+                "B) Enormous challenges that bring incredible innovation and economic opportunities.",
+                "C) Political instability in developing countries.",
+                "D) A reduction in the use of technology."
+            ],
+            "correct_answer": "B) Enormous challenges that bring incredible innovation and economic opportunities.",
+            "explanation": "The module explicitly says: 'Data has not only triggered tremendous hype and buzz but more importantly, presents enormous challenges that in turn bring incredible innovation and economic opportunities.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "According to the module, which industries can benefit from data-driven approaches?",
+            "options": [
+                "A) Only the tech industry.",
+                "B) Only the finance industry.",
+                "C) Healthcare, transportation, education, and agriculture, among others.",
+                "D) Only government agencies."
+            ],
+            "correct_answer": "C) Healthcare, transportation, education, and agriculture, among others.",
+            "explanation": "The lesson expands on how data is used in healthcare (predicting diseases), transportation (optimizing traffic), education (tailoring instruction), and agriculture (predicting crop yields), as well as business and social sciences.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "How is Ethiopia using data in the agricultural sector, as mentioned in the lesson?",
+            "options": [
+                "A) By ignoring weather data.",
+                "B) By using satellite, weather, and soil data to predict crop yields and manage food security.",
+                "C) By relying only on traditional farming methods without any data.",
+                "D) By exporting all agricultural data to other countries."
+            ],
+            "correct_answer": "B) By using satellite, weather, and soil data to predict crop yields and manage food security.",
+            "explanation": "The lesson provides an Ethiopian example: 'The Ethiopian government... uses satellite data, weather data, and soil data to predict crop yields and warn farmers about droughts. This data-driven approach allows the country to better manage food security.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "What is the ultimate purpose of collecting and analyzing data in the digital economy?",
+            "options": [
+                "A) To store it indefinitely without use.",
+                "B) To turn it into actionable insights that drive innovation and economic growth.",
+                "C) To sell it to other companies for profit only.",
+                "D) To delete it after a few days."
+            ],
+            "correct_answer": "B) To turn it into actionable insights that drive innovation and economic growth.",
+            "explanation": "The lesson and module emphasize that data collection and analysis are not ends in themselves; they are means to create knowledge, improve decision-making, and drive innovation and economic opportunities across all sectors.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Which statement best describes the impact of data science and analytics on professional development?",
+            "options": [
+                "A) It has no impact on professional development.",
+                "B) It enables data-driven theory, economy, and professional development across multiple fields.",
+                "C) It only benefits computer scientists.",
+                "D) It reduces the need for professional skills."
+            ],
+            "correct_answer": "B) It enables data-driven theory, economy, and professional development across multiple fields.",
+            "explanation": "The module emphasizes: '...the potential of data science and analytics to enable data-driven theory, economy, and professional development is increasingly being recognized. This involves not only core disciplines... but also the broad-based fields...'",
+            "difficulty": "hard"
+        }
+    ]
+}

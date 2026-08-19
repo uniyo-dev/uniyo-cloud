@@ -1,0 +1,147 @@
+{
+  "course_code": "GeES1011",
+  "chapter": 6,
+  "title": "Part 4 Practice: Natural Vegetation of Ethiopia",
+  "questions": [
+    {
+      "id": 1,
+      "text": "Which vegetation region in Ethiopia is found above 3,200 meters altitude?",
+      "diagram": null,
+      "options": [
+        "A) Forest Region",
+        "B) Woodland Savannah Region",
+        "C) Afro-alpine Region",
+        "D) Steppe Region"
+      ],
+      "correct_answer": "C) Afro-alpine Region",
+      "explanation": "Correct: Afro-alpine region is found above 3,200m. A is wrong\u2014forest region is 1,500-3,000m. B is wrong\u2014woodland savannah is 500-1,500m. D is wrong\u2014steppe is 500-1,000m.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "text": "The giant lobelia (Lobelia rhynchopetalum) is found in which Ethiopian vegetation region?",
+      "diagram": null,
+      "options": [
+        "A) Semi-desert Region",
+        "B) Forest Region",
+        "C) Afro-alpine Region",
+        "D) Woodland Savannah Region"
+      ],
+      "correct_answer": "C) Afro-alpine Region",
+      "explanation": "Correct: Giant lobelia is endemic to the afro-alpine region. A is wrong\u2014semi-desert has drought-tolerant species. B is wrong\u2014forest has trees like Podocarpus. D is wrong\u2014woodland savannah has Acacia species.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "text": "Which vegetation region is characterized by Podocarpus falcatus and Juniperus procera as dominant species?",
+      "diagram": null,
+      "options": [
+        "A) Steppe Region",
+        "B) Forest Region",
+        "C) Semi-desert Region",
+        "D) Afro-alpine Region"
+      ],
+      "correct_answer": "B) Forest Region",
+      "explanation": "Correct: Podocarpus and Juniperus are dominant in forest region. A is wrong\u2014steppe has grasses. C is wrong\u2014semi-desert has Acacia and Aloe. D is wrong\u2014afro-alpine has Lobelia and Erica.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 4,
+      "text": "The Simien Mountains National Park primarily protects which vegetation type?",
+      "diagram": null,
+      "options": [
+        "A) Semi-desert vegetation",
+        "B) Forest vegetation",
+        "C) Afro-alpine vegetation",
+        "D) Woodland Savannah"
+      ],
+      "correct_answer": "C) Afro-alpine vegetation",
+      "explanation": "Correct: Simien Mountains protect afro-alpine vegetation. A is wrong\u2014semi-desert is in lowlands. B is wrong\u2014forest is at lower altitudes. D is wrong\u2014woodland savannah is in lowlands.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 5,
+      "text": "Which of the following is a cause of natural vegetation degradation in Ethiopia?",
+      "diagram": null,
+      "options": [
+        "A) Afforestation",
+        "B) Deforestation",
+        "C) Reforestation",
+        "D) Agroforestry"
+      ],
+      "correct_answer": "B) Deforestation",
+      "explanation": "Correct: Deforestation is a major cause of vegetation degradation. A is wrong\u2014afforestation is conservation. C is wrong\u2014reforestation is restoration. D is wrong\u2014agroforestry is conservation.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 6,
+      "text": "The Afro-alpine region is found on which of the following mountains?",
+      "diagram": null,
+      "options": [
+        "A) Simien Mountains",
+        "B) Mount Kilimanjaro",
+        "C) Mount Kenya",
+        "D) Mount Rwenzori"
+      ],
+      "correct_answer": "A) Simien Mountains",
+      "explanation": "Correct: Simien Mountains have afro-alpine vegetation. B is wrong\u2014Kilimanjaro is in Tanzania. C is wrong\u2014Mount Kenya is in Kenya. D is wrong\u2014Rwenzori is in Uganda.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 7,
+      "text": "In which vegetation region would you find Acacia and Combretum as dominant tree species?",
+      "diagram": null,
+      "options": [
+        "A) Afro-alpine Region",
+        "B) Forest Region",
+        "C) Woodland Savannah Region",
+        "D) Semi-desert Region"
+      ],
+      "correct_answer": "C) Woodland Savannah Region",
+      "explanation": "Correct: Acacia and Combretum are dominant in woodland savannah. A is wrong\u2014afro-alpine has Lobelia. B is wrong\u2014forest has Podocarpus. D is wrong\u2014semi-desert has drought-tolerant species.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "text": "What percentage of Ethiopia's forests were lost in the last century?",
+      "diagram": null,
+      "options": [
+        "A) 50%",
+        "B) 70%",
+        "C) 90%",
+        "D) 95%"
+      ],
+      "correct_answer": "C) 90%",
+      "explanation": "Correct: Ethiopia lost about 90% of its forests in the last century. A is wrong\u2014too low. B is wrong\u2014still too low. D is wrong\u2014slightly high, though severe.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 9,
+      "text": "Which of the following is a conservation strategy for natural vegetation in Ethiopia?",
+      "diagram": null,
+      "options": [
+        "A) Deforestation",
+        "B) Overgrazing",
+        "C) Establishment of National Parks",
+        "D) Burning of vegetation"
+      ],
+      "correct_answer": "C) Establishment of National Parks",
+      "explanation": "Correct: National Parks protect vegetation. A is wrong\u2014deforestation degrades vegetation. B is wrong\u2014overgrazing degrades vegetation. D is wrong\u2014burning degrades vegetation.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 10,
+      "text": "The Ethiopian Green Legacy Initiative contributes to vegetation conservation through:",
+      "diagram": null,
+      "options": [
+        "A) Building roads in forests",
+        "B) Planting billions of trees",
+        "C) Expanding agriculture",
+        "D) Constructing dams"
+      ],
+      "correct_answer": "B) Planting billions of trees",
+      "explanation": "Correct: Green Legacy is a massive tree-planting campaign. A is wrong\u2014roads degrade forests. C is wrong\u2014agriculture expansion degrades vegetation. D is wrong\u2014dams are not the primary focus.",
+      "difficulty": "hard"
+    }
+  ]
+}

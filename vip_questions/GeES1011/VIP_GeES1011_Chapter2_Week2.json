@@ -1,0 +1,288 @@
+{
+    "course_code": "GeES1011",
+    "chapter_number": 2,
+    "week_number": 2,
+    "title": "VIP Chapter 2 Week 2: Geological Processes and Landforms",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Adigrat Sandstone was deposited during which era?",
+            "diagram": null,
+            "options": [
+                "A) Precambrian",
+                "B) Mesozoic",
+                "C) Cenozoic",
+                "D) Quaternary"
+            ],
+            "correct_answer": "B) Mesozoic",
+            "explanation": "Adigrat Sandstone = Mesozoic era (225-70 million years ago).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "Antalo Limestone indicates Ethiopia was once covered by:",
+            "diagram": null,
+            "options": [
+                "A) Deserts",
+                "B) Shallow seas",
+                "C) Glaciers",
+                "D) Forests"
+            ],
+            "correct_answer": "B) Shallow seas",
+            "explanation": "Limestone forms in marine environments — evidence of ancient shallow seas.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "The Trap Series basalts were formed by:",
+            "diagram": null,
+            "options": [
+                "A) River deposition",
+                "B) Volcanic lava outpouring (Cenozoic)",
+                "C) Wind erosion",
+                "D) Glacial activity"
+            ],
+            "correct_answer": "B) Volcanic lava outpouring (Cenozoic)",
+            "explanation": "Trap Series = thick volcanic basalt layers from Cenozoic lava flows.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "The Rift Valley is getting WIDER because:",
+            "diagram": null,
+            "options": [
+                "A) Erosion is cutting deeper",
+                "B) Tectonic plates are pulling apart",
+                "C) Volcanoes are filling it",
+                "D) It never changes"
+            ],
+            "correct_answer": "B) Tectonic plates are pulling apart",
+            "explanation": "The Rift Valley widens a few mm per year as tectonic forces pull the crust apart.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Which lake is in Ethiopia's Rift Valley?",
+            "diagram": null,
+            "options": [
+                "A) Lake Tana",
+                "B) Lake Abaya",
+                "C) Lake Victoria",
+                "D) Lake Malawi"
+            ],
+            "correct_answer": "B) Lake Abaya",
+            "explanation": "Lake Abaya is in the Rift Valley. Lake Tana is in the highlands. Victoria/Malawi are outside Ethiopia.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "Erta Ale volcano is located in:",
+            "diagram": null,
+            "options": [
+                "A) Western Plateau",
+                "B) The Afar Rift",
+                "C) Southern highlands",
+                "D) Coastal plain"
+            ],
+            "correct_answer": "B) The Afar Rift",
+            "explanation": "Erta Ale is an active volcano in the Afar Rift Valley.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "Precambrian rocks are BEST exposed in:",
+            "diagram": null,
+            "options": [
+                "A) Tigray and Wollega",
+                "B) Harar only",
+                "C) Ogaden desert",
+                "D) Lake Tana area"
+            ],
+            "correct_answer": "A) Tigray and Wollega",
+            "explanation": "Precambrian basement rocks are exposed in northern (Tigray) and western (Wollega) Ethiopia.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "GONDWANALAND was:",
+            "diagram": null,
+            "options": [
+                "A) An ancient supercontinent",
+                "B) A volcanic island",
+                "C) A type of rock",
+                "D) An ocean"
+            ],
+            "correct_answer": "A) An ancient supercontinent",
+            "explanation": "Gondwanaland = southern supercontinent that broke up during Mesozoic.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "The Ethiopian Plateaus are SEPARATED by:",
+            "diagram": null,
+            "options": [
+                "A) The Blue Nile River",
+                "B) The Great Rift Valley",
+                "C) Mountain ranges",
+                "D) Deserts"
+            ],
+            "correct_answer": "B) The Great Rift Valley",
+            "explanation": "The Rift Valley separates the Western and Eastern Plateaus.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Quaternary volcanism in Ethiopia is EVIDENCED by:",
+            "diagram": null,
+            "options": [
+                "A) Ancient granite",
+                "B) Active volcanoes (Erta Ale) and hot springs (Dallol)",
+                "C) Sandstone deposits",
+                "D) Glacial features"
+            ],
+            "correct_answer": "B) Active volcanoes (Erta Ale) and hot springs (Dallol)",
+            "explanation": "Active volcanoes and hot springs prove ongoing Quaternary volcanism.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "The lowest point in Ethiopia is:",
+            "diagram": null,
+            "options": [
+                "A) Lake Tana",
+                "B) Dallol Depression (-125m)",
+                "C) Blue Nile Gorge",
+                "D) Awash Valley"
+            ],
+            "correct_answer": "B) Dallol Depression (-125m)",
+            "explanation": "Dallol is about 125m BELOW sea level — lowest point in Ethiopia.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "Peneplanation during the Paleozoic means:",
+            "diagram": null,
+            "options": [
+                "A) Mountain building",
+                "B) Wearing down of mountains to flat surfaces",
+                "C) Volcanic eruption",
+                "D) Sea floor spreading"
+            ],
+            "correct_answer": "B) Wearing down of mountains to flat surfaces",
+            "explanation": "Peneplanation = erosion reducing mountains to nearly flat plains.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "The break-up of Gondwanaland began during:",
+            "diagram": null,
+            "options": [
+                "A) Precambrian",
+                "B) Mesozoic",
+                "C) Paleozoic",
+                "D) Quaternary"
+            ],
+            "correct_answer": "B) Mesozoic",
+            "explanation": "Gondwanaland break-up started during Mesozoic (225-70 million years ago).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "Ethiopia's Rift Valley is part of:",
+            "diagram": null,
+            "options": [
+                "A) The Great African Rift System",
+                "B) The Andes",
+                "C) The Himalayas",
+                "D) The Alps"
+            ],
+            "correct_answer": "A) The Great African Rift System",
+            "explanation": "Ethiopia's Rift is part of the Great African Rift System spanning from Middle East to Mozambique.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "The Blue Nile Gorge was carved by:",
+            "diagram": null,
+            "options": [
+                "A) Volcanic activity",
+                "B) River erosion (exogenic)",
+                "C) Tectonic faulting",
+                "D) Glacial movement"
+            ],
+            "correct_answer": "B) River erosion (exogenic)",
+            "explanation": "The Blue Nile River eroded the gorge through millions of years (exogenic process).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 16,
+            "text": "Which rock type is the YOUNGEST in Ethiopia?",
+            "diagram": null,
+            "options": [
+                "A) Precambrian granite",
+                "B) Mesozoic limestone",
+                "C) Quaternary volcanic basalt",
+                "D) Paleozoic sandstone"
+            ],
+            "correct_answer": "C) Quaternary volcanic basalt",
+            "explanation": "Quaternary (last 2.6 million years) volcanic rocks are the youngest.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "The Afar region is known for:",
+            "diagram": null,
+            "options": [
+                "A) Dense forests",
+                "B) Active tectonics and volcanism",
+                "C) Glacial features",
+                "D) Ancient coral reefs"
+            ],
+            "correct_answer": "B) Active tectonics and volcanism",
+            "explanation": "Afar = one of the most geologically active places on Earth.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "Fossils of early marine life (trilobites) are found in Ethiopia's:",
+            "diagram": null,
+            "options": [
+                "A) Precambrian granite",
+                "B) Paleozoic sedimentary rocks",
+                "C) Quaternary basalt",
+                "D) Recent river deposits"
+            ],
+            "correct_answer": "B) Paleozoic sedimentary rocks",
+            "explanation": "Paleozoic sedimentary rocks contain marine fossils like trilobites.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "Ethiopia's HIGHEST point (Ras Dashen) is made of:",
+            "diagram": null,
+            "options": [
+                "A) Sandstone",
+                "B) Volcanic basalt (Cenozoic)",
+                "C) Limestone",
+                "D) Granite"
+            ],
+            "correct_answer": "B) Volcanic basalt (Cenozoic)",
+            "explanation": "Ras Dashen (4,550m) is composed of Cenozoic volcanic rocks.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "The Rift Valley lakes were formed by:",
+            "diagram": null,
+            "options": [
+                "A) Meteor impacts",
+                "B) Tectonic depression + water accumulation",
+                "C) Glacial scouring",
+                "D) Wind erosion"
+            ],
+            "correct_answer": "B) Tectonic depression + water accumulation",
+            "explanation": "Rift Valley lakes formed in the tectonic depression as water collected.",
+            "difficulty": "hard"
+        }
+    ]
+}

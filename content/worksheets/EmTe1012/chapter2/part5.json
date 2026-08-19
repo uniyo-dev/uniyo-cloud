@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 2,
+    "title": "Part 5 Practice: Clustered Computing and Hadoop Ecosystem",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Why are individual computers often inadequate for handling Big Data?",
+            "options": [
+                "A) Because they are too expensive to buy.",
+                "B) Because they cannot handle the high storage and computational needs of Big Data (Volume, Velocity, Variety, Veracity).",
+                "C) Because they do not have internet access.",
+                "D) Because they can only process text files."
+            ],
+            "correct_answer": "B) Because they cannot handle the high storage and computational needs of Big Data (Volume, Velocity, Variety, Veracity).",
+            "explanation": "The module states: 'Because of the qualities of big data, individual computers are often inadequate for handling the data at most stages. To better address the high storage and computational needs of big data, computer clusters are a better fit.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is a key benefit of Clustered Computing mentioned in the module?",
+            "options": [
+                "A) It uses only one large supercomputer.",
+                "B) It provides Resource Pooling (storage, CPU, memory) and High Availability (fault tolerance).",
+                "C) It increases the cost of data processing.",
+                "D) It reduces the need for any software."
+            ],
+            "correct_answer": "B) It provides Resource Pooling (storage, CPU, memory) and High Availability (fault tolerance).",
+            "explanation": "The module lists: 'Resource Pooling: Combining the available storage space... CPU and memory pooling are also extremely important.' and 'High Availability: Clusters can provide varying levels of fault tolerance and availability guarantees.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What does YARN stand for in the Hadoop ecosystem?",
+            "options": [
+                "A) Yet Another Resource Negotiator",
+                "B) Yes Another Runtime Network",
+                "C) Yet Advanced Reducer Node",
+                "D) Your Allocated Resource Node"
+            ],
+            "correct_answer": "A) Yet Another Resource Negotiator",
+            "explanation": "The module states: 'Cluster membership and resource allocation can be handled by software like Hadoop's YARN (which stands for Yet Another Resource Negotiator).'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What makes Hadoop economical compared to traditional supercomputers?",
+            "options": [
+                "A) It requires specialized, expensive hardware.",
+                "B) It uses ordinary computers for data processing, making it highly cost-effective.",
+                "C) It is free but requires a license fee.",
+                "D) It only works on cloud servers."
+            ],
+            "correct_answer": "B) It uses ordinary computers for data processing, making it highly cost-effective.",
+            "explanation": "The module states: 'Economical: Its systems are highly economical as ordinary computers can be used for data processing.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "Which Hadoop component acts as a NoSQL Database for column-based storage?",
+            "options": [
+                "A) HDFS",
+                "B) HBase",
+                "C) MapReduce",
+                "D) Hive"
+            ],
+            "correct_answer": "B) HBase",
+            "explanation": "The module lists HBase under Data Storage: 'HBase: NoSQL Database (Column DB storage).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Which Hadoop component is used for SQL-like querying on structured data?",
+            "options": [
+                "A) HDFS",
+                "B) MapReduce",
+                "C) Hive",
+                "D) ZooKeeper"
+            ],
+            "correct_answer": "C) Hive",
+            "explanation": "The module lists Hive under Data Access: 'Hive: SQL-like querying for structured data.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the purpose of ZooKeeper in the Hadoop ecosystem?",
+            "options": [
+                "A) To store data in a distributed file system.",
+                "B) To manage cluster coordination and synchronization.",
+                "C) To perform machine learning algorithms.",
+                "D) To transfer data between RDBMS and Hadoop."
+            ],
+            "correct_answer": "B) To manage cluster coordination and synchronization.",
+            "explanation": "The module lists ZooKeeper under Data Management: 'ZooKeeper: Managing cluster coordination and synchronization.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Which Hadoop component is responsible for moving data between RDBMS and HDFS?",
+            "options": [
+                "A) Flume",
+                "B) Sqoop",
+                "C) Oozie",
+                "D) Spark"
+            ],
+            "correct_answer": "B) Sqoop",
+            "explanation": "The module lists Sqoop under Data Access: 'Sqoop: RDBMS connector for transferring data between SQL and Hadoop.' Flume is for log ingestion, not RDBMS.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "What is the primary difference between MapReduce and Spark in the Hadoop ecosystem?",
+            "options": [
+                "A) MapReduce is faster than Spark.",
+                "B) Spark is an in-memory data processing engine, which makes it faster than MapReduce for many tasks.",
+                "C) MapReduce is used for storage, Spark is used for management.",
+                "D) There is no difference."
+            ],
+            "correct_answer": "B) Spark is an in-memory data processing engine, which makes it faster than MapReduce for many tasks.",
+            "explanation": "The module lists Spark as: 'Spark: In-Memory data processing.' Because it processes data in RAM rather than reading/writing to disk repeatedly (like MapReduce), it is significantly faster.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "In the Ethio Telecom example, which Hadoop layer is used by analysts to generate reports using SQL-like queries?",
+            "options": [
+                "A) Data Storage (HDFS)",
+                "B) Data Processing (MapReduce)",
+                "C) Data Access (Hive)",
+                "D) Data Management (Oozie)"
+            ],
+            "correct_answer": "C) Data Access (Hive)",
+            "explanation": "The module example states: 'Hive (Access): Analysts use SQL-like queries to generate reports for management.' Hive is the component that allows users to write SQL queries to analyze data stored in HDFS.",
+            "difficulty": "hard"
+        }
+    ]
+}

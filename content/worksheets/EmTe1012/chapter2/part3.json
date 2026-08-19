@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 2,
+    "title": "Part 3 Practice: The Data Value Chain",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the primary purpose of the Data Value Chain?",
+            "options": [
+                "A) To delete unnecessary data.",
+                "B) To describe the information flow and series of steps needed to generate value and useful insights from data.",
+                "C) To store data permanently without any analysis.",
+                "D) To convert all data into unstructured formats."
+            ],
+            "correct_answer": "B) To describe the information flow and series of steps needed to generate value and useful insights from data.",
+            "explanation": "The module states: 'The Data Value Chain is introduced to describe the information flow within a big data system as a series of steps needed to generate value and useful insights from data.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the first stage of the Data Value Chain?",
+            "options": [
+                "A) Data Analysis",
+                "B) Data Storage",
+                "C) Data Acquisition",
+                "D) Data Usage"
+            ],
+            "correct_answer": "C) Data Acquisition",
+            "explanation": "The Data Value Chain starts with Data Acquisition, which is the process of gathering, filtering, and cleaning data before it is stored.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What are the three main challenges of Data Acquisition infrastructure mentioned in the module?",
+            "options": [
+                "A) High cost, slow speed, and limited storage.",
+                "B) Low predictable latency, high transaction volumes, and support for flexible data structures.",
+                "C) Lack of data, lack of users, and lack of software.",
+                "D) Too many databases, too many formats, and too many users."
+            ],
+            "correct_answer": "B) Low predictable latency, high transaction volumes, and support for flexible data structures.",
+            "explanation": "The module lists: 'The infrastructure required to support the acquisition of big data must deliver low, predictable latency... be able to handle very high transaction volumes... and support flexible and dynamic data structures.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "In the Data Analysis stage, what does 'modeling' refer to?",
+            "options": [
+                "A) Building physical models of data centers.",
+                "B) Applying mathematical and statistical models to the data to uncover patterns.",
+                "C) Deleting irrelevant data.",
+                "D) Formatting data for printing."
+            ],
+            "correct_answer": "B) Applying mathematical and statistical models to the data to uncover patterns.",
+            "explanation": "The module states: 'Data analysis involves exploring, transforming, and modeling data with the goal of highlighting relevant data, synthesizing, and extracting useful hidden information.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the goal of Data Curation?",
+            "options": [
+                "A) To delete old data to save space.",
+                "B) To actively manage data over its life cycle to ensure it meets necessary quality requirements for effective usage.",
+                "C) To analyze data for business decisions.",
+                "D) To store data in RDBMS only."
+            ],
+            "correct_answer": "B) To actively manage data over its life cycle to ensure it meets necessary quality requirements for effective usage.",
+            "explanation": "The module defines: 'Data Curation is the active management of data over its life cycle to ensure it meets the necessary data quality requirements for its effective usage.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Which of the following is NOT a responsibility of a data curator?",
+            "options": [
+                "A) Ensuring data is trustworthy and discoverable.",
+                "B) Validating and classifying data.",
+                "C) Building machine learning models for prediction.",
+                "D) Preserving data for long-term use."
+            ],
+            "correct_answer": "C) Building machine learning models for prediction.",
+            "explanation": "Data curators are responsible for ensuring data is trustworthy, discoverable, accessible, reusable, and fit for purpose. Building ML models is part of Data Analysis, not Data Curation.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "Why is RDBMS often unsuitable for big data scenarios?",
+            "options": [
+                "A) Because it is too expensive.",
+                "B) Because ACID properties lack flexibility with schema changes, and performance suffers with large volumes.",
+                "C) Because it is only available on mainframe computers.",
+                "D) Because it does not support SQL queries."
+            ],
+            "correct_answer": "B) Because ACID properties lack flexibility with schema changes, and performance suffers with large volumes.",
+            "explanation": "The module states: 'However, the ACID properties that guarantee database transactions lack flexibility with regard to schema changes and the performance and fault tolerance when data volumes and complexity grow, making them unsuitable for big data scenarios.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "What is a key trend in Data Curation mentioned in the module?",
+            "options": [
+                "A) Using only one expert curator per database.",
+                "B) Utilizing community and crowdsourcing approaches for curation.",
+                "C) Deleting all data after 1 year.",
+                "D) Using only paper records."
+            ],
+            "correct_answer": "B) Utilizing community and crowdsourcing approaches for curation.",
+            "explanation": "The module states: 'A key trend for the duration of big data utilizes community and crowdsourcing approaches—where the public or a community of experts helps to curate and validate data.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "What is the final stage of the Data Value Chain where data is used for business activities?",
+            "options": [
+                "A) Data Acquisition",
+                "B) Data Analysis",
+                "C) Data Curation",
+                "D) Data Usage"
+            ],
+            "correct_answer": "D) Data Usage",
+            "explanation": "The module states: 'Data Usage covers the data-driven business activities that need access to data, its analysis, and the tools needed to integrate the data analysis within the business activity.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 10,
+            "text": "How does Data Usage enhance business competitiveness according to the module?",
+            "options": [
+                "A) By increasing costs.",
+                "B) By reduction of costs, increased added value, and improved performance metrics.",
+                "C) By ignoring data and relying on intuition only.",
+                "D) By storing data without analyzing it."
+            ],
+            "correct_answer": "B) By reduction of costs, increased added value, and improved performance metrics.",
+            "explanation": "The module states: 'Data usage in business decision-making can enhance competitiveness through the reduction of costs, increased added value, or any other parameter that can be measured against existing performance criteria.'",
+            "difficulty": "medium"
+        }
+    ]
+}

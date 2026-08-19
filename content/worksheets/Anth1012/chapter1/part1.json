@@ -1,0 +1,137 @@
+{
+    "course_code": "Anth1012",
+    "chapter": 1,
+    "title": "Part 1 Practice: Definition, Scope, Subject Matter & History of Anthropology",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the etymological meaning of the word 'anthropology'?",
+            "options": [
+                "A) The study of animals.",
+                "B) The systematic study of humankind, derived from Greek 'anthropos' (human) and 'logia' (study of).",
+                "C) The study of the Earth.",
+                "D) The study of plants."
+            ],
+            "correct_answer": "B) The systematic study of humankind, derived from Greek 'anthropos' (human) and 'logia' (study of).",
+            "explanation": "The module states: 'The word anthropology is derived from the Greek words, 'anthropos', meaning 'human beings' or 'humankind' and 'logia', which can be translated as 'the study of' or 'knowledge of'.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Which of the following best describes the approach of anthropology?",
+            "options": [
+                "A) It focuses only on biological aspects of humans.",
+                "B) It is a holistic, comparative, and relativistic study of humanity.",
+                "C) It only studies ancient civilizations.",
+                "D) It is strictly a natural science."
+            ],
+            "correct_answer": "B) It is a holistic, comparative, and relativistic study of humanity.",
+            "explanation": "The module states: 'In more appropriate terms, we can define anthropology as the holistic and comparative study of humanity.' It also emphasizes the relativistic approach.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "Who is considered the first philosophical relativist in the European tradition?",
+            "options": [
+                "A) Herodotus",
+                "B) The Sophists of Athens",
+                "C) Ibn Khaldun",
+                "D) Franz Boas"
+            ],
+            "correct_answer": "B) The Sophists of Athens",
+            "explanation": "The module states: 'The group of philosophers known as Sophists (of Athens), who are considered as the first philosophical relativists in the European tradition, used to argue that there can be 'no absolute truth'.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the main achievement of Ibn Khaldun (1332-1406) in the history of social thought?",
+            "options": [
+                "A) He invented the printing press.",
+                "B) He stressed differing forms of social cohesion (kinship and religion) as a key variable in accounting for historical change.",
+                "C) He discovered America.",
+                "D) He wrote the first novel."
+            ],
+            "correct_answer": "B) He stressed differing forms of social cohesion (kinship and religion) as a key variable in accounting for historical change.",
+            "explanation": "The module states: 'Khaldun's main achievement lies in his non-religious, theoretical framework, where he stresses differing forms of social cohesion (kinship and religion) as a key variable in accounting for historical change.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "When did anthropology emerge as an academic discipline?",
+            "options": [
+                "A) 5th century BC",
+                "B) 14th century AD",
+                "C) 19th century",
+                "D) 20th century"
+            ],
+            "correct_answer": "C) 19th century",
+            "explanation": "The module states: 'It was only during the 19th century that anthropology was born as an academic discipline, out of the intellectual atmosphere of Enlightenment... and based on the Darwinian theory of evolution.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What was a major impetus for the growth of anthropology as a profession in the late 1800s?",
+            "options": [
+                "A) The invention of the internet.",
+                "B) The expansion of western colonial powers and their desire to understand peoples under colonial domination.",
+                "C) The discovery of the New World.",
+                "D) The invention of the microscope."
+            ],
+            "correct_answer": "B) The expansion of western colonial powers and their desire to understand peoples under colonial domination.",
+            "explanation": "The module states: 'A major impetus for its growth was the expansion of western colonial powers and their consequent desire to better understand the peoples living under colonial domination.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the difference between ethnography and ethnology?",
+            "options": [
+                "A) Ethnography studies ancient fossils; ethnology studies modern societies.",
+                "B) Ethnography emphasizes the study of specific social and cultural differences (description), while ethnology aims at comparative understanding of human groups across time and space.",
+                "C) Ethnography is the same as ethnology.",
+                "D) Ethnography is a natural science; ethnology is a social science."
+            ],
+            "correct_answer": "B) Ethnography emphasizes the study of specific social and cultural differences (description), while ethnology aims at comparative understanding of human groups across time and space.",
+            "explanation": "The module states: 'Anthropologists of the early 1900s emphasized the study of social and cultural differences... This approach is called ethnography... By the mid-1900s, anthropologists attempted to discover universal human patterns... This approach is called ethnology. Ethnology aims at the comparative understanding and analysis of different human groups across time and space.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Who are considered the 'founding fathers' of anthropology in the 20th century?",
+            "options": [
+                "A) Marx, Durkheim, and Weber.",
+                "B) Franz Boas, A.R. Radcliffe-Brown, Bronislaw Malinowski, and Marcel Mauss.",
+                "C) Herodotus, Ibn Khaldun, and Montaigne.",
+                "D) Darwin, Comte, and Spencer."
+            ],
+            "correct_answer": "B) Franz Boas, A.R. Radcliffe-Brown, Bronislaw Malinowski, and Marcel Mauss.",
+            "explanation": "The module states: 'The emergence of the discipline known today is associated with four outstanding scholars... Franz Boas... A.R. Radcliffe-Brown... Bronislaw Malinowski... Marcel Mauss. They may be considered as the founding fathers of anthropology.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "According to Eric Wolf, how is anthropology described?",
+            "options": [
+                "A) Anthropology is purely a physical science.",
+                "B) Anthropology is both the most scientific of the humanities and the most humanistic of the sciences.",
+                "C) Anthropology is only about ancient history.",
+                "D) Anthropology is not a science."
+            ],
+            "correct_answer": "B) Anthropology is both the most scientific of the humanities and the most humanistic of the sciences.",
+            "explanation": "The module states: 'Another prominent anthropologist, Eric Wolf (1964), asserted that \"anthropology is both the most scientific of the humanities and the most humanistic of the sciences.\"'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "When did professional anthropology begin in Ethiopia?",
+            "options": [
+                "A) Early 1900s",
+                "B) Late 1950s",
+                "C) 1990s",
+                "D) 2000s"
+            ],
+            "correct_answer": "B) Late 1950s",
+            "explanation": "The module states: 'In Ethiopia, professional anthropologists have been studying culture and society on a more intensive level only since the late 1950s.'",
+            "difficulty": "hard"
+        }
+    ]
+}

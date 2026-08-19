@@ -1,0 +1,506 @@
+/* ============================================
+   UNIYO LMS - Student Dashboard Styles
+   ============================================ */
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 20px;
+    background: #111827;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-left h1 { font-size: 24px; color: #F8FAFC; }
+.header-left p { color: #94A3B8; font-size: 14px; margin-top: 4px; }
+
+.header-right { display: flex; gap: 8px; }
+
+.btn-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1A2332;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.btn-icon:hover { background: #6D28D9; transform: scale(1.1); }
+
+.subscription-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    gap: 16px;
+}
+
+.premium-banner { background: linear-gradient(135deg, #6D28D9 0%, #4C1D95 100%); }
+.pending-banner { background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); }
+.active-banner { background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%); }
+
+.banner-text h3 { color: white; margin-bottom: 4px; }
+.banner-text p { color: rgba(255, 255, 255, 0.9); font-size: 14px; }
+.banner-text a { color: white; text-decoration: underline; font-weight: 700; }
+
+.notifications-panel { margin-bottom: 24px; }
+
+.notification-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #111827;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.notification-payment { border-left: 3px solid #F59E0B; }
+.notification-vip { border-left: 3px solid #EC4899; }
+.notification-certificate { border-left: 3px solid #14B8A6; }
+.notification-announcement { border-left: 3px solid #6D28D9; }
+
+.catalog-section { margin-bottom: 32px; }
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.section-header h2 { font-size: 22px; color: #F8FAFC; }
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.course-card {
+    background: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+    border-color: #6D28D9;
+    box-shadow: 0 8px 24px rgba(109, 40, 217, 0.2);
+}
+
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.course-code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: #6D28D9;
+    font-weight: 700;
+}
+
+.course-title {
+    font-size: 16px;
+    color: #F8FAFC;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.course-details {
+    display: flex;
+    gap: 16px;
+    color: #94A3B8;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.payment-section { margin-bottom: 32px; }
+
+.payment-container {
+    background: #111827;
+    border: 2px solid #6D28D9;
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.payment-container h2 { text-align: center; color: #F8FAFC; margin-bottom: 8px; }
+
+.payment-subtitle { text-align: center; color: #94A3B8; margin-bottom: 24px; }
+
+.payment-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.payment-method-card {
+    background: #1A2332;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+}
+
+.payment-method-card h4 { color: #6D28D9; margin-bottom: 8px; }
+.payment-method-card p { color: #94A3B8; font-size: 13px; }
+.payment-method-card strong { color: #F8FAFC; }
+
+.payment-contact {
+    text-align: center;
+    margin-bottom: 24px;
+    padding: 16px;
+    background: rgba(109, 40, 217, 0.1);
+    border-radius: 8px;
+}
+
+.telegram-link { color: #38BDF8; font-size: 16px; }
+
+.payment-form {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.payment-form h3 { margin-bottom: 16px; color: #F8FAFC; }
+
+.payment-history {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.payment-status {
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.status-pending { background: rgba(245, 158, 11, 0.1); color: #F59E0B; }
+.status-approved { background: rgba(20, 184, 166, 0.1); color: #14B8A6; }
+.status-rejected { background: rgba(236, 72, 153, 0.1); color: #EC4899; }
+
+.rejection-reason { margin-top: 8px; font-size: 13px; }
+
+.announcements-section { margin-bottom: 32px; }
+.announcements-section h2 { margin-bottom: 16px; color: #F8FAFC; }
+
+.announcement-card {
+    background: #111827;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.announcement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.announcement-header h4 { color: #F8FAFC; }
+
+.priority-badge {
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.priority-high .priority-badge { background: rgba(236, 72, 153, 0.2); color: #EC4899; }
+.priority-medium .priority-badge { background: rgba(245, 158, 11, 0.2); color: #F59E0B; }
+.priority-normal .priority-badge { background: rgba(148, 163, 184, 0.2); color: #94A3B8; }
+
+.announcement-card p { color: #94A3B8; font-size: 14px; margin-bottom: 8px; }
+.announcement-card small { color: #64748B; font-size: 12px; }
+
+/* Free Sample Lessons */
+.free-samples-section {
+    margin-bottom: 32px;
+    padding: 20px;
+    background: rgba(245, 158, 11, 0.05);
+    border: 2px dashed #F59E0B;
+    border-radius: 16px;
+}
+
+.free-samples-section h2 {
+    color: #F59E0B;
+    margin-bottom: 4px;
+}
+
+.free-lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.free-lesson-card {
+    background: #111827;
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.free-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #14B8A6;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.free-lesson-card h4 {
+    color: #F8FAFC;
+    margin-bottom: 4px;
+    margin-top: 16px;
+}
+
+.free-lesson-card p {
+    color: #94A3B8;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+/* VIP Banner */
+.vip-banner-link {
+    display: block;
+    margin-bottom: 24px;
+    text-decoration: none;
+}
+
+.vip-banner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: linear-gradient(135deg, #6D28D9 0%, #EC4899 100%);
+    border-radius: 16px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.vip-banner:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(109, 40, 217, 0.4);
+}
+
+.vip-banner-icon {
+    font-size: 40px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.vip-banner-text {
+    flex: 1;
+}
+
+.vip-banner-text h3 {
+    color: white;
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+
+.vip-banner-text p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+}
+
+.vip-banner-arrow {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+}
+
+/* VIP Competition Banner */
+.vip-banner-link {
+    display: block;
+    margin-bottom: 24px;
+    text-decoration: none;
+}
+
+.vip-banner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: linear-gradient(135deg, #6D28D9 0%, #EC4899 100%);
+    border-radius: 16px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.vip-banner:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(109, 40, 217, 0.4);
+}
+
+.vip-banner-icon {
+    font-size: 40px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.vip-banner-text {
+    flex: 1;
+}
+
+.vip-banner-text h3 {
+    color: white;
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+
+.vip-banner-text p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.vip-cta {
+    color: #F59E0B;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Light Mode Overrides */
+body.light-mode .card,
+body.light-mode .course-card,
+body.light-mode .question-card,
+body.light-mode .payment-card,
+body.light-mode .admin-section {
+    background: #FFFFFF;
+    border-color: rgba(0, 0, 0, 0.08);
+    color: #0B0F19;
+}
+
+body.light-mode .course-title,
+body.light-mode .question-number,
+body.light-mode .admin-section h3 {
+    color: #0B0F19;
+}
+
+body.light-mode .course-details,
+body.light-mode .worksheet-meta,
+body.light-mode .payment-method-card p {
+    color: #475569;
+}
+
+/* COMPLETE LIGHT MODE OVERRIDES */
+body.light-mode .dashboard-container,
+body.light-mode .payment-section,
+body.light-mode .announcements-section {
+    background: #F8FAFC;
+}
+
+body.light-mode .dashboard-header,
+body.light-mode .course-card,
+body.light-mode .payment-container,
+body.light-mode .payment-method-card,
+body.light-mode .announcement-card,
+body.light-mode .notification-item {
+    background: #FFFFFF;
+    border-color: rgba(0, 0, 0, 0.08);
+    color: #0B0F19;
+}
+
+body.light-mode .header-left h1,
+body.light-mode .course-title,
+body.light-mode .section-header h2,
+body.light-mode .announcement-header h4,
+body.light-mode .payment-container h2 {
+    color: #0B0F19;
+}
+
+body.light-mode .header-left p,
+body.light-mode .course-details,
+body.light-mode .payment-subtitle,
+body.light-mode .payment-method-card p,
+body.light-mode .announcement-card p,
+body.light-mode .payment-form h3 {
+    color: #475569;
+}
+
+body.light-mode .payment-method-card {
+    background: #F8FAFC;
+}
+
+body.light-mode .btn-icon {
+    background: #F1F5F9;
+}
+
+body.light-mode .payment-status {
+    background: #F1F5F9;
+}
+
+/* Past Exam Library Banner */
+.past-exam-banner-link {
+    display: block;
+    margin-bottom: 24px;
+    text-decoration: none;
+}
+
+.past-exam-banner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: linear-gradient(135deg, #14B8A6 0%, #38BDF8 100%);
+    border-radius: 16px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.past-exam-banner:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(20, 184, 166, 0.4);
+}
+
+.past-exam-banner-icon {
+    font-size: 40px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.past-exam-banner-text {
+    flex: 1;
+}
+
+.past-exam-banner-text h3 {
+    color: white;
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+
+.past-exam-banner-text p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.past-exam-cta {
+    color: #F59E0B;
+    font-weight: 700;
+    font-size: 14px;
+}

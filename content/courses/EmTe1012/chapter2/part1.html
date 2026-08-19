@@ -1,0 +1,176 @@
+<div class="lesson-section">
+    <h2>Chapter 2: Data Science</h2>
+    <h3>Part 1: An Overview of Data Science, Data vs. Information, and the Data Processing Cycle</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In the previous chapter, the concept of the role of data for emerging technologies was discussed. In this chapter, we dive deep into <strong>Data Science</strong>. You will learn about data vs. information, data types and representation, the data value chain, and the basic concepts of big data.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Define data science and describe the role of data scientists.</li>
+            <li>Differentiate between data and information with real-world examples.</li>
+            <li>Describe the data processing life cycle (Input, Processing, Output).</li>
+            <li>Understand how data transforms into actionable insights.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>2.1. An Overview of Data Science</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 2.1 (From Module):</strong>
+        <ul>
+            <li><em>What is data science? Can you describe the role of data in emerging technology?</em></li>
+            <li><em>What are data and information?</em></li>
+            <li><em>What is big data?</em></li>
+        </ul>
+    </div>
+
+    <p><strong>What is Data Science?</strong></p>
+    <p><strong>Data science</strong> is a <strong>multi-disciplinary field</strong> that uses <strong>scientific methods, processes, algorithms, and systems</strong> to extract knowledge and insights from <strong>structured, semi-structured, and unstructured data</strong>. It is much more than simply analyzing data. It offers a range of roles and requires a wide range of skills. Data science is the bridge between raw numbers and real-world decision-making.</p>
+
+    <div class="example-box">
+        <h4>💡 Real World Example (Ethiopia - Buying Cereal):</h4>
+        <p>The module illustrates data science with a simple everyday example: buying a box of cereal from a store.</p>
+        <ul>
+            <li><strong>Your Purchase:</strong> Whether your cereal preference is <strong>teff, wheat, or barley</strong>, you prepare for the purchase by writing "cereal" in your notebook. This planned purchase is a piece of <strong>data</strong>—though it is written in pencil, it is still data that you can read.</li>
+            <li><strong>At the Store:</strong> You use your data (the note) as a reminder to grab the item. At the checkout line, the cashier scans the barcode on your container, and the cash register logs the price.</li>
+            <li><strong>Inventory System:</strong> In the warehouse, a computer tells the stock manager that it is time to request another order from the distributor because your purchase was one of the last boxes in the store.</li>
+            <li><strong>Coupon Redemption:</strong> You also have a coupon for your big box, and the cashier scans that, giving you a predetermined discount. At the end of the week, a report of all the scanned manufacturer coupons gets uploaded to the cereal company so they can issue a reimbursement to the grocery store.</li>
+            <li><strong>Store Manager's Decision:</strong> Finally, at the end of the month, a store manager looks at a colorful collection of pie charts showing all the different kinds of cereal that were sold. Based on the strong sales of teff-based cereals, the manager decides to offer more varieties of these on the store's limited shelf space next month.</li>
+        </ul>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="250" viewBox="0 0 400 250">
+            <rect width="400" height="250" fill="#111827" rx="8"/>
+            <text x="200" y="30" fill="#f8fafc" font-size="14" text-anchor="middle" font-weight="bold">The Data Journey: From Notebook to Manager's Desk</text>
+            
+            <rect x="20" y="60" width="80" height="40" fill="#14b8a6" rx="6"/>
+            <text x="60" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Notebook</text>
+            
+            <rect x="120" y="60" width="80" height="40" fill="#facc15" rx="6"/>
+            <text x="160" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Barcode Scan</text>
+            
+            <rect x="220" y="60" width="80" height="40" fill="#f43f5e" rx="6"/>
+            <text x="260" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Coupon Data</text>
+
+            <rect x="320" y="60" width="60" height="40" fill="#f59e0b" rx="6"/>
+            <text x="350" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">Report</text>
+
+            <rect x="80" y="140" width="240" height="50" fill="#38bdf8" rx="8"/>
+            <text x="200" y="160" fill="#111827" font-size="12" text-anchor="middle" font-weight="bold">📊 Store Manager analyzes sales data</text>
+            <text x="200" y="178" fill="#111827" font-size="10" text-anchor="middle">Decides to stock more Teff-based cereals next month</text>
+
+            <path d="M 60 100 L 120 100" stroke="#94a3b8" stroke-width="2"/>
+            <path d="M 160 100 L 220 100" stroke="#94a3b8" stroke-width="2"/>
+            <path d="M 260 100 L 320 100" stroke="#94a3b8" stroke-width="2"/>
+            <path d="M 350 100 L 340 150" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4"/>
+        </svg>
+    </div>
+
+    <p><strong>The Big Picture of Data Science:</strong></p>
+    <p>So, the small piece of information that began as a scribble on your notebook ended up in many different places, most notably on the desk of a manager as an aid to decision-making. On the trip from your pencil to the manager's desk, the data went through many transformations:</p>
+    <ul>
+        <li><strong>Hardware:</strong> In addition to the computers where the data might have stopped by or stayed on for the long term, lots of other pieces of hardware—such as the barcode scanner—were involved in collecting, manipulating, transmitting, and storing the data.</li>
+        <li><strong>Software:</strong> Many different pieces of software were used to organize, aggregate, visualize, and present the data.</li>
+        <li><strong>Human Systems:</strong> Finally, many different human systems were involved in working with the data. People decided which systems to buy and install, who should get access to what kinds of data, and what would happen to the data after its immediate purpose was fulfilled.</li>
+    </ul>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #f43f5e;">
+        <strong>📌 The Role of a Data Scientist:</strong>
+        <p>As an academic discipline and profession, data science continues to evolve as one of the most <strong>promising and in-demand career paths</strong> for skilled professionals. Today, successful data professionals must advance past the traditional skills of analyzing large amounts of data, data mining, and programming skills. In order to uncover useful intelligence for their organizations, data scientists must master the <strong>full spectrum of the data science life cycle</strong> and possess a level of flexibility and understanding to maximize returns at each phase of the process.</p>
+        <p><strong>Key Traits of a Data Scientist:</strong></p>
+        <ul>
+            <li><strong>Curious and result-oriented:</strong> They ask the right questions.</li>
+            <li><strong>Exceptional industry-specific knowledge:</strong> They understand the domain they are working in.</li>
+            <li><strong>Communication skills:</strong> They can explain highly technical results to non-technical counterparts.</li>
+            <li><strong>Strong quantitative background:</strong> They possess deep knowledge of statistics and linear algebra.</li>
+            <li><strong>Programming knowledge:</strong> They focus on data warehousing, mining, and modeling to build and analyze algorithms.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>2.1.1. What are data and information?</h4>
+
+    <p>To understand data science, we must first clearly distinguish between <strong>data</strong> and <strong>information</strong>—two terms that are often used interchangeably but have fundamentally different meanings.</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Concept</th><th>Definition</th><th>Key Characteristics</th><th>Example</th></tr>
+            <tr>
+                <td><strong>Data</strong></td>
+                <td>Representation of facts, concepts, or instructions in a formalized manner, suitable for communication, interpretation, or processing by human or electronic machines.</td>
+                <td>Unprocessed facts and figures. Represented with the help of characters such as alphabets (A-Z, a-z), digits (0-9), or special characters (+, -, /, *, <, >, =, etc.). It is raw.</td>
+                <td>"25", "Teff", "Birr" – these are just raw numbers and words with no context.</td>
+            </tr>
+            <tr>
+                <td><strong>Information</strong></td>
+                <td>Processed data on which decisions and actions are based. It is data that has been processed into a form that is meaningful to the recipient.</td>
+                <td>It has real or perceived value in the current or prospective action or decision of the recipient. It is interpreted data; created from organized, structured, and processed data in a particular context.</td>
+                <td>"The price of 1 kg of Teff is 25 Birr." – This is meaningful information that helps a shopper decide whether to buy.</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <h4>2.1.2. Data Processing Cycle</h4>
+
+    <p><strong>Data processing</strong> is the re-structuring or re-ordering of data by people or machines to increase their usefulness and add values for a particular purpose. Data processing consists of the following basic steps: <strong>Input, Processing, and Output</strong>. These three steps constitute the <strong>data processing cycle</strong>.</p>
+
+    <div class="diagram-container">
+        <svg width="400" height="180" viewBox="0 0 400 180">
+            <rect width="400" height="180" fill="#111827" rx="8"/>
+            <text x="200" y="30" fill="#f8fafc" font-size="14" text-anchor="middle" font-weight="bold">The Data Processing Cycle</text>
+            
+            <rect x="30" y="60" width="90" height="50" fill="#14b8a6" rx="8"/>
+            <text x="75" y="84" fill="#111827" font-size="14" text-anchor="middle" font-weight="bold">Input</text>
+            <text x="75" y="100" fill="#111827" font-size="9" text-anchor="middle">(Data Collection)</text>
+
+            <rect x="155" y="60" width="90" height="50" fill="#facc15" rx="8"/>
+            <text x="200" y="84" fill="#111827" font-size="14" text-anchor="middle" font-weight="bold">Processing</text>
+            <text x="200" y="100" fill="#111827" font-size="9" text-anchor="middle">(Data Transformation)</text>
+
+            <rect x="280" y="60" width="90" height="50" fill="#f43f5e" rx="8"/>
+            <text x="325" y="84" fill="#111827" font-size="14" text-anchor="middle" font-weight="bold">Output</text>
+            <text x="325" y="100" fill="#111827" font-size="9" text-anchor="middle">(Useful Information)</text>
+
+            <path d="M 120 85 L 155 85" stroke="#38bdf8" stroke-width="3" marker-end="url(#arrow)"/>
+            <path d="M 245 85 L 280 85" stroke="#38bdf8" stroke-width="3" marker-end="url(#arrow)"/>
+
+            <text x="200" y="150" fill="#94a3b8" font-size="10" text-anchor="middle">↺ The cycle repeats as new data is collected.</text>
+        </svg>
+    </div>
+
+    <p><strong>Step 1: Input</strong></p>
+    <p>In this step, the input data is prepared in some convenient form for processing. The form will depend on the processing machine. For example, when electronic computers are used, the input data can be recorded on any one of the several types of storage medium, such as <strong>hard disk, CD, flash disk, and so on</strong>.</p>
+
+    <p><strong>Step 2: Processing</strong></p>
+    <p>In this step, the input data is changed to produce data in a more useful form. For example, <strong>interest can be calculated on a deposit to a bank</strong>, or a <strong>summary of sales for the month can be calculated from the sales orders</strong>.</p>
+
+    <p><strong>Step 3: Output</strong></p>
+    <p>At this stage, the result of the preceding processing step is collected. The particular form of the output data depends on the use of the data. For example, <strong>output data may be payroll for employees</strong>.</p>
+
+    <div class="example-box">
+        <h4>💡 Real World Example (Ethiopia - Commercial Bank of Ethiopia):</h4>
+        <ul>
+            <li><strong>Input:</strong> A customer deposits 10,000 Birr into a savings account. This transaction is entered into the bank's database.</li>
+            <li><strong>Processing:</strong> The bank's computer system calculates the monthly interest (let's say 3% per annum) and adds it to the customer's balance at the end of the month.</li>
+            <li><strong>Output:</strong> The bank generates a monthly statement showing the customer's new balance, which is then sent via SMS or email to the customer. The manager also uses aggregated data to decide if the bank should offer a special promotion on savings accounts.</li>
+        </ul>
+    </div>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 1)</h4>
+        <ul>
+            <li><strong>Data Science:</strong> A multi-disciplinary field using scientific methods to extract knowledge from data.</li>
+            <li><strong>Data Scientist:</strong> A professional who is curious, industry-savvy, and skilled in programming, statistics, and communication.</li>
+            <li><strong>Data:</strong> Raw, unprocessed facts and figures (e.g., "25", "Teff").</li>
+            <li><strong>Information:</strong> Processed data that is meaningful and useful for decision-making (e.g., "1 kg of Teff costs 25 Birr").</li>
+            <li><strong>Data Processing Cycle:</strong> Consists of 3 steps: <strong>Input</strong> (data collection), <strong>Processing</strong> (data transformation), and <strong>Output</strong> (generating useful information).</li>
+        </ul>
+    </div>
+</div>

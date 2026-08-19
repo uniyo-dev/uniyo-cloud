@@ -1,0 +1,140 @@
+<div class="lesson-section">
+    <h2>Chapter 5: Augmented Reality (AR)</h2>
+    <h3>Part 2: Architecture of AR Systems</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In this part, we dive into the technical architecture of Augmented Reality (AR) Systems. The first Augmented Reality Systems (ARS) were designed with a basis on three main building blocks: the Infrastructure Tracker Unit, the Processing Unit, and the Visual Unit.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Describe the three main blocks of the AR system architecture.</li>
+            <li>Explain the functions of the Infrastructure Tracking Unit, the Processing Unit, and the Visual Unit.</li>
+            <li>Differentiate between Video see-through and Optical see-through visualization technologies.</li>
+            <li>Understand the challenges and limitations of HMDs (Head-Mounted Displays) in AR.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>5.3. The architecture of AR Systems</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 5.2 (From Module):</strong>
+        <ul>
+            <li><em>Describe AR, VR, and MR.</em></li>
+            <li><em>Compare and contrast AR, VR, and MR.</em></li>
+        </ul>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>🔑 Activity 5.3 (From Module):</strong>
+        <ul>
+            <li><em>What are the three blocks/components of the AR system architecture?</em></li>
+            <li><em>Describe the functions of the Infrastructure Tracking Unit, the Processing Unit, and the Visual Unit?</em></li>
+            <li><em>What is the difference between Video-see through and Optical-see through visualization technologies?</em></li>
+        </ul>
+    </div>
+
+    <p>The first Augmented Reality Systems (ARS) were usually designed with a basis on <strong>three main blocks</strong>, as is illustrated in Figure 5.7:</p>
+
+    <ol>
+        <li><strong>Infrastructure Tracker Unit</strong></li>
+        <li><strong>Processing Unit</strong></li>
+        <li><strong>Visual Unit</strong></li>
+    </ol>
+
+    <hr>
+
+    <h4>The Three Main Blocks of ARS</h4>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Block</th><th>Function</th><th>Data Flow / Key Actions</th></tr>
+            <tr>
+                <td><strong>1. Infrastructure Tracker Unit</strong></td>
+                <td>Responsible for <strong>collecting data from the real world</strong>, sending them to the Processing Unit.</td>
+                <td>Uses sensors, cameras, and GPS to gather real-world positioning and orientation data.</td>
+            </tr>
+            <tr>
+                <td><strong>2. Processing Unit</strong></td>
+                <td><strong>Mixes the virtual content with the real content</strong> and sends the result to the Video Out module of the Visual Unit.</td>
+                <td>Receives real-world data from the Tracker. Takes visual content from the system. Merges them into a single "Mixed Realities" output.</td>
+            </tr>
+            <tr>
+                <td><strong>3. Visual Unit</strong></td>
+                <td>Consists of a <strong>Video In</strong> (to acquire required data for the Infrastructure Tracker Unit) and a <strong>Video Out</strong> (to display the mixed realities to the user).</td>
+                <td>Video In captures the real world. Video Out displays the augmented view.</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="250" viewBox="0 0 400 250">
+            <rect width="400" height="250" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="14" text-anchor="middle" font-weight="bold">Standard AR System Architecture</text>
+            
+            <rect x="40" y="50" width="120" height="40" fill="#14b8a6" rx="6"/>
+            <text x="100" y="74" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">1. Tracker Unit</text>
+            <text x="100" y="86" fill="#111827" font-size="8" text-anchor="middle">(Data Collection)</text>
+
+            <rect x="200" y="50" width="120" height="40" fill="#facc15" rx="6"/>
+            <text x="260" y="74" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">2. Processing Unit</text>
+            <text x="260" y="86" fill="#111827" font-size="8" text-anchor="middle">(Mixing Reality)</text>
+
+            <rect x="120" y="120" width="120" height="40" fill="#f43f5e" rx="6"/>
+            <text x="180" y="144" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">3. Visual Unit</text>
+            <text x="180" y="156" fill="#111827" font-size="8" text-anchor="middle">(Video In / Video Out)</text>
+
+            <path d="M 160 90 L 160 120" stroke="#38bdf8" stroke-width="2"/>
+            <path d="M 260 90 L 260 120" stroke="#38bdf8" stroke-width="2"/>
+            <path d="M 240 120 L 300 120" stroke="#38bdf8" stroke-width="2"/>
+            
+            <text x="200" y="190" fill="#94a3b8" font-size="9" text-anchor="middle">📊 Data flows: Real World → Tracker → Processor → Visual Unit → User</text>
+        </svg>
+    </div>
+
+    <hr>
+
+    <h4>Visualization Technologies: Video See-Through vs. Optical See-Through</h4>
+
+    <p>The <strong>Visual Unit</strong> can be classified into <strong>two types of systems</strong>, depending on the visualization technology used:</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Technology</th><th>Description</th><th>Key Feature</th></tr>
+            <tr>
+                <td><strong>Video see-through</strong></td>
+                <td>Uses a <strong>Head-Mounted Display (HMD)</strong> that employs a video-mixing and displays the merged images on a <strong>closed-view HMD</strong>.</td>
+                <td>The user sees the real world through a video feed on a screen inside the headset.</td>
+            </tr>
+            <tr>
+                <td><strong>Optical see-through</strong></td>
+                <td>Uses an HMD that employs <strong>optical combiners</strong> to merge the images within an <strong>open-view HMD</strong>.</td>
+                <td>The user sees the real world directly through the glasses, and digital content is projected onto the lenses.</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #f43f5e;">
+        <strong>📌 The Limitations of HMDs (Head-Mounted Displays):</strong>
+        <p>HMDs are currently the <strong>dominant display technology</strong> in the AR field. However, they lack in several aspects, such as <strong>ergonomics, high prices, and relatively low mobility</strong> due to their sizes and connectivity features.</p>
+        <p>An additional problem involving HMDs is the <strong>interaction with the real environment</strong>, which places virtual interactive zones to the user, making the collision with these zones hard due to the difficulty to interact with multiple points in different depths.</p>
+        <p><strong>Alternative Approaches:</strong></p>
+        <ul>
+            <li><strong>Monitors:</strong> Used as an option for indirect view since the user does not look directly into the mixed world.</li>
+            <li><strong>Tablets:</strong> Used in direct view since the user points the camera to the scene and looks directly into the mixed world.</li>
+        </ul>
+        <p>Both approaches (monitors and tablets) still have difficulties in getting a collision.</p>
+    </div>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 2)</h4>
+        <ul>
+            <li><strong>3 Main Blocks:</strong> Infrastructure Tracker Unit (collects data), Processing Unit (mixes virtual + real), Visual Unit (Video In/Out).</li>
+            <li><strong>Video See-through:</strong> Uses a closed-view HMD; the user sees the real world through a video feed.</li>
+            <li><strong>Optical See-through:</strong> Uses an open-view HMD; the user sees the real world directly with digital overlays.</li>
+            <li><strong>HMD Limitations:</strong> Poor ergonomics, high cost, low mobility, and difficulty interacting with virtual objects at different depths.</li>
+            <li><strong>Alternatives:</strong> Monitors (indirect view) and Tablets (direct view) are used to avoid HMD issues.</li>
+        </ul>
+    </div>
+</div>

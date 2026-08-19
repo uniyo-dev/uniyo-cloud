@@ -1,0 +1,658 @@
+{
+    "course_code": "Math1011",
+    "chapter": 1,
+    "title": "Chapter 1 Full Practice: Propositional Logic and Set Theory",
+    "total_questions": 50,
+    "questions": [
+        {
+            "id": 1,
+            "text": "Which of the following sentences is a proposition?",
+            "options": [
+                "A) May God bless you!",
+                "B) Give me that book.",
+                "C) 2 is an even number.",
+                "D) What is your name?"
+            ],
+            "correct_answer": "C) 2 is an even number.",
+            "explanation": "The module states: 'A proposition (or statement) is a sentence which has a truth value (either True or False but not both).' Sentences that are questions, commands, or exclamations are not propositions. 2 is an even number is a true proposition.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the logical symbol for the connective 'and'?",
+            "options": [
+                "A) ∨",
+                "B) ∧",
+                "C) ⇒",
+                "D) ⇔"
+            ],
+            "correct_answer": "B) ∧",
+            "explanation": "The module states: 'When two propositions are joined with the connective \"and,\" the proposition formed is a logical conjunction. \"and\" is denoted by \"∧\".'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "Under what condition is the conjunction p ∧ q true?",
+            "options": [
+                "A) When p is true and q is false.",
+                "B) When p is false and q is true.",
+                "C) When both p and q are true.",
+                "D) When both p and q are false."
+            ],
+            "correct_answer": "C) When both p and q are true.",
+            "explanation": "The module states: 'p ∧ q is true if and only if p is true and q is true.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What is the truth value of the disjunction p ∨ q when both p and q are false?",
+            "options": [
+                "A) True",
+                "B) False",
+                "C) Cannot be determined",
+                "D) Both true and false"
+            ],
+            "correct_answer": "B) False",
+            "explanation": "The module states: 'p ∨ q is false if and only if both p and q are false.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 5,
+            "text": "How is the implication p ⇒ q read in words?",
+            "options": [
+                "A) p and q",
+                "B) p or q",
+                "C) p implies q or if p, then q",
+                "D) p if and only if q"
+            ],
+            "correct_answer": "C) p implies q or if p, then q",
+            "explanation": "The module states: 'The function of the connective \"implies\" between two propositions is the same as the use of \"If ... then ...\" Thus p ⇒ q can be read as \"if p, then q.\"'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Under what condition is the implication p ⇒ q false?",
+            "options": [
+                "A) When p is false and q is true.",
+                "B) When both p and q are true.",
+                "C) When p is true and q is false.",
+                "D) When both p and q are false."
+            ],
+            "correct_answer": "C) When p is true and q is false.",
+            "explanation": "The module states: 'p ⇒ q is false if and only if p is true and q is false.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the truth value of p ⇔ q when p is true and q is false?",
+            "options": [
+                "A) True",
+                "B) False",
+                "C) Cannot be determined",
+                "D) Both true and false"
+            ],
+            "correct_answer": "B) False",
+            "explanation": "The module states: 'p ⇔ q is false if and only if p and q have different truth values.' Since p is true and q is false, their truth values are different, so the bi-implication is false.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What is the negation of the statement '0 is not a negative integer'?",
+            "options": [
+                "A) 0 is a negative integer.",
+                "B) 0 is a positive integer.",
+                "C) 0 is not a positive integer.",
+                "D) 0 is an even integer."
+            ],
+            "correct_answer": "A) 0 is a negative integer.",
+            "explanation": "The module states: 'Given any proposition p, we can form the proposition ¬p called the negation of p.' To negate a statement, we reverse its truth value. The negation of '0 is not a negative integer' is '0 is a negative integer.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "If a compound proposition involves 4 propositions, how many rows will its truth table have?",
+            "options": [
+                "A) 4 rows",
+                "B) 8 rows",
+                "C) 16 rows",
+                "D) 32 rows"
+            ],
+            "correct_answer": "C) 16 rows",
+            "explanation": "The module states: 'In general, a truth table involving \"n\" propositions p₁, p₂, ..., pₙ contains 2ⁿ possible combinations of truth values.' For n = 4, 2⁴ = 16 rows.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is the correct reading of the expression p ∧ q ⇒ r?",
+            "options": [
+                "A) p ∧ (q ⇒ r)",
+                "B) (p ∧ q) ⇒ r",
+                "C) p ⇒ (q ∧ r)",
+                "D) (p ⇒ q) ∧ r"
+            ],
+            "correct_answer": "B) (p ∧ q) ⇒ r",
+            "explanation": "The module states: 'Whenever \"∨\" or \"∧\" occur with \"⇒\" or \"⇔\", we shall assume that \"∨\" or \"∧\" is applied first, and then \"⇒\" or \"⇔\" is then applied. For example, p ∧ q ⇒ r means (p ∧ q) ⇒ r.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "What is a tautology in propositional logic?",
+            "options": [
+                "A) A compound proposition that is always false.",
+                "B) A compound proposition that is always true regardless of the truth values of its components.",
+                "C) A proposition that is sometimes true and sometimes false.",
+                "D) A single proposition that is false."
+            ],
+            "correct_answer": "B) A compound proposition that is always true regardless of the truth values of its components.",
+            "explanation": "The module states: 'A compound proposition is a tautology if it is always true regardless of the truth values of its component propositions.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 12,
+            "text": "Which of the following is an example of a tautology?",
+            "options": [
+                "A) p ∧ ¬p",
+                "B) p ∨ ¬p",
+                "C) p ⇒ q",
+                "D) p ∧ q"
+            ],
+            "correct_answer": "B) p ∨ ¬p",
+            "explanation": "The module states: 'Observe that p ∨ ¬p is a tautology while p ∧ ¬p is a contradiction.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 13,
+            "text": "What is a contradiction in propositional logic?",
+            "options": [
+                "A) A compound proposition that is always true.",
+                "B) A compound proposition that is always false regardless of the truth values of its components.",
+                "C) A proposition that is sometimes true and sometimes false.",
+                "D) A single proposition that is true."
+            ],
+            "correct_answer": "B) A compound proposition that is always false regardless of the truth values of its components.",
+            "explanation": "The module states: 'If, on the other hand, a compound proposition is always false regardless of its component propositions, we say that such a proposition is a contradiction.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 14,
+            "text": "How can you determine if two compound propositions P and Q are logically equivalent?",
+            "options": [
+                "A) By checking if they have the same number of variables.",
+                "B) By checking if P ⇔ Q is a tautology.",
+                "C) By checking if P and Q are both false.",
+                "D) By checking if P and Q are both true."
+            ],
+            "correct_answer": "B) By checking if P ⇔ Q is a tautology.",
+            "explanation": "The module states: 'Two compound propositions P and Q are equivalent if and only if P ⇔ Q is a tautology.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 15,
+            "text": "What is the contrapositive of the statement p ⇒ q?",
+            "options": [
+                "A) q ⇒ p",
+                "B) ¬p ⇒ ¬q",
+                "C) ¬q ⇒ ¬p",
+                "D) ¬p ⇒ q"
+            ],
+            "correct_answer": "C) ¬q ⇒ ¬p",
+            "explanation": "The module states: 'Contrapositive: The hypothesis of a contrapositive statement is the negation of conclusion of the conditional statement and the conclusion of the contrapositive statement is the negation of hypothesis of the conditional statement.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 16,
+            "text": "Which of the following is equivalent to p ⇒ q?",
+            "options": [
+                "A) q ⇒ p",
+                "B) ¬p ⇒ ¬q",
+                "C) ¬q ⇒ ¬p",
+                "D) p ⇒ ¬q"
+            ],
+            "correct_answer": "C) ¬q ⇒ ¬p",
+            "explanation": "The module states: 'The conditional p ⇒ q and its contrapositive ¬q ⇒ ¬p are equivalent.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 17,
+            "text": "What is the inverse of the statement p ⇒ q?",
+            "options": [
+                "A) q ⇒ p",
+                "B) ¬p ⇒ ¬q",
+                "C) ¬q ⇒ ¬p",
+                "D) ¬p ⇒ q"
+            ],
+            "correct_answer": "B) ¬p ⇒ ¬q",
+            "explanation": "The module states: 'Inverse: ¬p ⇒ ¬q.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 18,
+            "text": "According to De Morgan's Laws, what is ¬(p ∧ q) equivalent to?",
+            "options": [
+                "A) ¬p ∧ ¬q",
+                "B) ¬p ∨ ¬q",
+                "C) p ∧ q",
+                "D) p ∨ q"
+            ],
+            "correct_answer": "B) ¬p ∨ ¬q",
+            "explanation": "The module states: 'De Morgan's Laws: ¬(p ∧ q) ≡ ¬p ∨ ¬q.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "What is the converse of the statement: 'If it is cold, then the lake is frozen'?",
+            "options": [
+                "A) If the lake is frozen, then it is cold.",
+                "B) If it is not cold, then the lake is not frozen.",
+                "C) If the lake is not frozen, then it is not cold.",
+                "D) If it is cold, then the lake is not frozen."
+            ],
+            "correct_answer": "A) If the lake is frozen, then it is cold.",
+            "explanation": "The module states: 'Converse: The hypothesis of a converse statement is the conclusion of the conditional statement and the conclusion of the converse statement is the hypothesis of the conditional statement.' For 'If it is cold, then the lake is frozen,' the converse is 'If the lake is frozen, then it is cold.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "Which of the following is a correct application of the Distributive Law?",
+            "options": [
+                "A) p ∨ (q ∧ r) ≡ (p ∨ q) ∧ (p ∨ r)",
+                "B) p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r)",
+                "C) Both A and B are correct.",
+                "D) Neither A nor B is correct."
+            ],
+            "correct_answer": "C) Both A and B are correct.",
+            "explanation": "The module lists the Distributive Laws as: 'p ∨ (q ∧ r) ≡ (p ∨ q) ∧ (p ∨ r)' and by symmetry, p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r) also holds. Both are correct applications of the distributive property.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 21,
+            "text": "What is an open proposition (or predicate)?",
+            "options": [
+                "A) A sentence that is always true.",
+                "B) A sentence that contains one or more variables and whose truth value depends on the values assigned to the variables.",
+                "C) A sentence that is always false.",
+                "D) A proposition without any variables."
+            ],
+            "correct_answer": "B) A sentence that contains one or more variables and whose truth value depends on the values assigned to the variables.",
+            "explanation": "The module states: 'An open statement (also called a predicate) is a sentence that contains one or more variables and whose truth value depends on the values assigned for the variables.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 22,
+            "text": "What is the universal set (universe of discourse)?",
+            "options": [
+                "A) The set of all true propositions.",
+                "B) The collection of all allowable values for the variable in an open sentence.",
+                "C) The set of all false propositions.",
+                "D) The set of all quantifiers."
+            ],
+            "correct_answer": "B) The collection of all allowable values for the variable in an open sentence.",
+            "explanation": "The module states: 'The collection of all allowable values for the variable in an open sentence is called the universal set (the universe of discourse) and denoted by U.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 23,
+            "text": "What is the symbol for the universal quantifier?",
+            "options": [
+                "A) ∃",
+                "B) ∀",
+                "C) ⇒",
+                "D) ⇔"
+            ],
+            "correct_answer": "B) ∀",
+            "explanation": "The module states: 'The phrase \"for every x\" is called a universal quantifier... symbolize each by (∀x). Think of the symbol ∀ as an inverted A (representing all).'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 24,
+            "text": "What is the symbol for the existential quantifier?",
+            "options": [
+                "A) ∀",
+                "B) ∃",
+                "C) ⇒",
+                "D) ∧"
+            ],
+            "correct_answer": "B) ∃",
+            "explanation": "The module states: 'The phrase \"there exists an x\" is called an existential quantifier... symbolize each by (∃x). Think of the symbol ∃ as the backwards capital E (representing exists).'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 25,
+            "text": "How do you show that a universal statement (∀x)P(x) is false?",
+            "options": [
+                "A) By proving it is true for all x.",
+                "B) By finding at least one counterexample a ∈ U such that P(a) is false.",
+                "C) By finding one example where P(a) is true.",
+                "D) By using the existential quantifier."
+            ],
+            "correct_answer": "B) By finding at least one counterexample a ∈ U such that P(a) is false.",
+            "explanation": "The module states: 'To show that (∀x)P(x) is F, it is sufficient to find at least one a ∈ U such that P(a) is F. Such an element a ∈ U is called a counter example.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 26,
+            "text": "What is the negation of (∀x)P(x)?",
+            "options": [
+                "A) (∀x)¬P(x)",
+                "B) (∃x)¬P(x)",
+                "C) (∃x)P(x)",
+                "D) (∀x)P(x)"
+            ],
+            "correct_answer": "B) (∃x)¬P(x)",
+            "explanation": "The module states: 'The negation of (∀x)P(x) is (∃x)¬P(x). Similarly, we can easily verify that the negation of (∃x)P(x) is (∀x)¬P(x).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 27,
+            "text": "What is the negation of (∃x)P(x)?",
+            "options": [
+                "A) (∀x)¬P(x)",
+                "B) (∃x)¬P(x)",
+                "C) (∀x)P(x)",
+                "D) (∃x)P(x)"
+            ],
+            "correct_answer": "A) (∀x)¬P(x)",
+            "explanation": "The module states: 'The negation of (∃x)P(x) is (∀x)¬P(x).'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 28,
+            "text": "What does the quantified statement (∀x)(∃y)P(x,y) mean?",
+            "options": [
+                "A) For every y, there exists an x such that P(x,y) holds.",
+                "B) For every x, there exists a y such that P(x,y) holds.",
+                "C) There exists an x such that for all y, P(x,y) holds.",
+                "D) For all x and for all y, P(x,y) holds."
+            ],
+            "correct_answer": "B) For every x, there exists a y such that P(x,y) holds.",
+            "explanation": "The module states: '(∀x)(∃y)P(x,y) means \"For every x there is a y such that P(x,y) holds.\"'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 29,
+            "text": "In the statement (∀x)(∃y)P(x,y), how does y relate to x?",
+            "options": [
+                "A) y is independent of x and must work for all x.",
+                "B) The choice of y is allowed to depend on x; the y that works for one x need not work for another.",
+                "C) y is always equal to x.",
+                "D) y is always greater than x."
+            ],
+            "correct_answer": "B) The choice of y is allowed to depend on x; the y that works for one x need not work for another.",
+            "explanation": "The module states: 'In the statement (∀x)(∃y)P(x,y), the choice of y is allowed to depend on x—the y that works for one x need not work for another x.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 30,
+            "text": "What is the correct negation of the statement: 'For every rational number r, the number 1/r is rational'?",
+            "options": [
+                "A) For every rational number r, the number 1/r is not rational.",
+                "B) There exists a rational number r such that 1/r is not rational.",
+                "C) There exists a rational number r such that 1/r is rational.",
+                "D) For every rational number r, 1/r is irrational."
+            ],
+            "correct_answer": "B) There exists a rational number r such that 1/r is not rational.",
+            "explanation": "The module states: 'The negation of (∀x)P(x) is (∃x)¬P(x).' For the statement 'For every rational number r, 1/r is rational,' the negation is 'There exists a rational number r such that 1/r is not rational.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 31,
+            "text": "What is an argument (or logical deduction) in propositional logic?",
+            "options": [
+                "A) A single statement that is always true.",
+                "B) An assertion that a given set of premises (hypotheses) yields a conclusion.",
+                "C) A single proposition that is false.",
+                "D) A question or command."
+            ],
+            "correct_answer": "B) An assertion that a given set of premises (hypotheses) yields a conclusion.",
+            "explanation": "The module states: 'An argument (logical deduction) is an assertion that a given set of statements p₁, p₂, ..., pₙ, called hypotheses or premises, yield another statement Q, called the conclusion.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 32,
+            "text": "When is an argument form considered valid?",
+            "options": [
+                "A) If the conclusion is always false.",
+                "B) If the conclusion is true whenever all the premises are true.",
+                "C) If the premises are always false.",
+                "D) If the conclusion is independent of the premises."
+            ],
+            "correct_answer": "B) If the conclusion is true whenever all the premises are true.",
+            "explanation": "The module states: 'An argument form p₁, p₂, ..., pₙ ⊢ Q is said to be valid if Q is true whenever all the premises p₁, p₂, ..., pₙ are true; otherwise, it is invalid.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 33,
+            "text": "What is the Modus Tollens rule of inference?",
+            "options": [
+                "A) p, p ⇒ q ⊢ q",
+                "B) ¬q, p ⇒ q ⊢ ¬p",
+                "C) p ⇒ q, q ⇒ r ⊢ p ⇒ r",
+                "D) p, q ⊢ p ∧ q"
+            ],
+            "correct_answer": "B) ¬q, p ⇒ q ⊢ ¬p",
+            "explanation": "The module states: 'Modus Tollens: ¬q, p ⇒ q ⊢ ¬p.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 34,
+            "text": "What is the Principle of Syllogism?",
+            "options": [
+                "A) p, p ⇒ q ⊢ q",
+                "B) p ⇒ q, q ⇒ r ⊢ p ⇒ r",
+                "C) ¬q, p ⇒ q ⊢ ¬p",
+                "D) p, q ⊢ p ∧ q"
+            ],
+            "correct_answer": "B) p ⇒ q, q ⇒ r ⊢ p ⇒ r",
+            "explanation": "The module states: 'Principle of Syllogism: p ⇒ q, q ⇒ r ⊢ p ⇒ r.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 35,
+            "text": "How can an argument form be proven valid using a truth table?",
+            "options": [
+                "A) By checking if the conclusion is false when premises are true.",
+                "B) By checking if the statement (p₁ ∧ p₂ ∧ ... ∧ pₙ) ⇒ Q is a tautology.",
+                "C) By checking if the premises are always false.",
+                "D) By counting the number of rows in the truth table."
+            ],
+            "correct_answer": "B) By checking if the statement (p₁ ∧ p₂ ∧ ... ∧ pₙ) ⇒ Q is a tautology.",
+            "explanation": "The module states: 'The argument form p₁, ..., pₙ ⊢ Q is valid iff the statement (p₁ ∧ p₂ ∧ ... ∧ pₙ) ⇒ Q is a tautology.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 36,
+            "text": "What does Modus Ponens allow you to conclude from p and p ⇒ q?",
+            "options": [
+                "A) ¬p",
+                "B) ¬q",
+                "C) q",
+                "D) p ∧ q"
+            ],
+            "correct_answer": "C) q",
+            "explanation": "The module states: 'Modus Ponens: p, p ⇒ q ⊢ q.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 37,
+            "text": "Which rule of inference allows you to conclude p ∧ q from p and q?",
+            "options": [
+                "A) Modus Tollens",
+                "B) Principle of Syllogism",
+                "C) Principle of Adjunction",
+                "D) Constructive Dilemma"
+            ],
+            "correct_answer": "C) Principle of Adjunction",
+            "explanation": "The module states: 'Principle of Adjunction: p, q ⊢ p ∧ q.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 38,
+            "text": "What is the Constructive Dilemma rule of inference?",
+            "options": [
+                "A) p ⇒ q, r ⇒ s, p ∨ r ⊢ q ∨ s",
+                "B) p, p ⇒ q ⊢ q",
+                "C) ¬q, p ⇒ q ⊢ ¬p",
+                "D) p, q ⊢ p ∧ q"
+            ],
+            "correct_answer": "A) p ⇒ q, r ⇒ s, p ∨ r ⊢ q ∨ s",
+            "explanation": "The module states: 'Constructive Dilemma: (p ⇒ q) ∧ (r ⇒ s), p ∨ r ⊢ q ∨ s.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 39,
+            "text": "What is the conclusion of the following argument: p ⇒ q, ¬q ⊢ ?",
+            "options": [
+                "A) p",
+                "B) ¬p",
+                "C) q",
+                "D) p ∧ q"
+            ],
+            "correct_answer": "B) ¬p",
+            "explanation": "This is the Modus Tollens rule of inference: ¬q, p ⇒ q ⊢ ¬p.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 40,
+            "text": "What does the rule of Conditionalization state?",
+            "options": [
+                "A) p, p ⇒ q ⊢ q",
+                "B) p ⊢ q ⇒ p",
+                "C) p ⇒ q ⊢ ¬q ⇒ ¬p",
+                "D) p ⇒ q, q ⇒ r ⊢ p ⇒ r"
+            ],
+            "correct_answer": "B) p ⊢ q ⇒ p",
+            "explanation": "The module states: 'Principle of Conditionalization: p ⊢ q ⇒ p.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 41,
+            "text": "What is a set in mathematics?",
+            "options": [
+                "A) A collection of undefined objects.",
+                "B) A well-defined collection of objects that share a certain property.",
+                "C) A collection of numbers only.",
+                "D) A collection of letters only."
+            ],
+            "correct_answer": "B) A well-defined collection of objects that share a certain property.",
+            "explanation": "The module states: 'The term set refers to a well-defined collection of objects that share a certain property or certain properties.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 42,
+            "text": "Which of the following is a correct way to describe the set of vowels in the English alphabet using the Roster (Complete Listing) method?",
+            "options": [
+                "A) {a, e, i, o, u}",
+                "B) {a, e, i, o, u, a}",
+                "C) {x | x is a vowel}",
+                "D) The set of vowels"
+            ],
+            "correct_answer": "A) {a, e, i, o, u}",
+            "explanation": "The module states: 'The set of vowels in English alphabet may also be described as {a, e, i, o, u}.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 43,
+            "text": "What is the power set of A = {a, b}?",
+            "options": [
+                "A) {a, b}",
+                "B) {a, b, {a, b}}",
+                "C) {∅, {a}, {b}, {a, b}}",
+                "D) {{a}, {b}}"
+            ],
+            "correct_answer": "C) {∅, {a}, {b}, {a, b}}",
+            "explanation": "The power set of a set A is the set of all subsets of A. For A = {a, b}, the subsets are ∅, {a}, {b}, and {a, b}. Thus, P(A) = {∅, {a}, {b}, {a, b}}.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 44,
+            "text": "What is the union of A = {1, 2, 3} and B = {3, 4, 5}?",
+            "options": [
+                "A) {3}",
+                "B) {1, 2, 3, 3, 4, 5}",
+                "C) {1, 2, 3, 4, 5}",
+                "D) {1, 2, 4, 5}"
+            ],
+            "correct_answer": "C) {1, 2, 3, 4, 5}",
+            "explanation": "The module states: 'The union of two sets A and B, denoted by A ∪ B, is the set of all elements that are either in A or in B (or in both sets).' Thus, A ∪ B = {1, 2, 3, 4, 5}.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 45,
+            "text": "What is the intersection of A = {1, 2, 3} and B = {3, 4, 5}?",
+            "options": [
+                "A) {3}",
+                "B) {1, 2, 3, 4, 5}",
+                "C) {1, 2}",
+                "D) {4, 5}"
+            ],
+            "correct_answer": "A) {3}",
+            "explanation": "The module states: 'The intersection of two sets A and B, denoted by A ∩ B, is the set of all elements that are in A and B.' Thus, A ∩ B = {3}.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 46,
+            "text": "What is the complement of A = {2, 4, 6} given the universal set U = {1, 2, 3, 4, 5, 6, 7}?",
+            "options": [
+                "A) {2, 4, 6}",
+                "B) {1, 3, 5, 7}",
+                "C) {1, 2, 3, 4, 5, 6, 7}",
+                "D) ∅"
+            ],
+            "correct_answer": "B) {1, 3, 5, 7}",
+            "explanation": "The module states: 'The absolute complement of A, denoted by A', is defined to be the set of all elements of U that are not in A.' Thus, A' = {1, 3, 5, 7}.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 47,
+            "text": "What is the difference A - B if A = {1, 3, 5} and B = {1, 2}?",
+            "options": [
+                "A) {1}",
+                "B) {2}",
+                "C) {3, 5}",
+                "D) {1, 2, 3, 5}"
+            ],
+            "correct_answer": "C) {3, 5}",
+            "explanation": "The module states: 'The difference between two sets A and B, denoted by A - B, is the set of all elements in A and not in B.' Thus, A - B = {3, 5}.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 48,
+            "text": "What is the symmetric difference A Δ B if A = {1, 2, 3} and B = {3, 4, 5}?",
+            "options": [
+                "A) {3}",
+                "B) {1, 2, 4, 5}",
+                "C) {1, 2, 3, 4, 5}",
+                "D) {1, 2, 4, 5, 3}"
+            ],
+            "correct_answer": "B) {1, 2, 4, 5}",
+            "explanation": "The module states: 'The symmetric difference of two sets A and B, denoted by A Δ B, is the set A Δ B = (A - B) ∪ (B - A).' A - B = {1, 2}, B - A = {4, 5}. So, A Δ B = {1, 2, 4, 5}.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 49,
+            "text": "Which of the following is De Morgan's Law for sets?",
+            "options": [
+                "A) (A ∪ B)' = A' ∩ B'",
+                "B) (A ∩ B)' = A' ∪ B'",
+                "C) Both A and B are correct.",
+                "D) Neither A nor B is correct."
+            ],
+            "correct_answer": "C) Both A and B are correct.",
+            "explanation": "The module states: 'De Morgan's Laws: (A ∪ B)' = A' ∩ B' and (A ∩ B)' = A' ∪ B'.' Both are correct.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 50,
+            "text": "If a set A has 3 elements, how many elements does its power set P(A) contain?",
+            "options": [
+                "A) 3",
+                "B) 6",
+                "C) 8",
+                "D) 9"
+            ],
+            "correct_answer": "C) 8",
+            "explanation": "The power set of a set with n elements contains 2^n elements. For n = 3, 2^3 = 8 elements.",
+            "difficulty": "hard"
+        }
+    ]
+}

@@ -1,0 +1,287 @@
+{
+    "course_code": "Econ1011",
+    "week_number": 3,
+    "title": "VIP Month 1 Week 3: Theory of Consumer Behaviour",
+    "questions": [
+        {
+            "id": 1,
+            "text": "If MU of coffee = 30 and P<sub>coffee</sub> = 10, while MU of bread = 20 and P<sub>bread</sub> = 5, what should the consumer do?",
+            "diagram": null,
+            "options": [
+                "A) Buy more coffee, less bread",
+                "B) Buy more bread, less coffee",
+                "C) Buy equal amounts of both",
+                "D) Cannot determine"
+            ],
+            "correct_answer": "B) Buy more bread, less coffee",
+            "explanation": "Compare MU/P: Coffee = 30/10 = 3 utils/Birr. Bread = 20/5 = 4 utils/Birr. Bread gives MORE utility per Birr (4 > 3), so buy MORE bread.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "If TU = 10Q - Q², what is the MU when Q = 3?",
+            "diagram": null,
+            "options": [
+                "A) 1",
+                "B) 4",
+                "C) 7",
+                "D) 10"
+            ],
+            "correct_answer": "B) 4",
+            "explanation": "MU = dTU/dQ = 10 - 2Q. At Q = 3: MU = 10 - 2(3) = 4.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "At consumer equilibrium, which condition holds?",
+            "diagram": null,
+            "options": [
+                "A) MUx/Px > MUy/Py",
+                "B) MUx/Px = MUy/Py",
+                "C) MUx/Px < MUy/Py",
+                "D) MUx = MUy"
+            ],
+            "correct_answer": "B) MUx/Px = MUy/Py",
+            "explanation": "Consumer equilibrium requires equal MU per Birr for ALL goods.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "If consumer income doubles and prices also double, the budget line:",
+            "diagram": null,
+            "options": [
+                "A) Shifts outward",
+                "B) Shifts inward",
+                "C) Stays the same",
+                "D) Becomes vertical"
+            ],
+            "correct_answer": "C) Stays the same",
+            "explanation": "If income and prices BOTH double, purchasing power is unchanged (2M/2P = M/P).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "If MRS = 2, the consumer is willing to give up:",
+            "diagram": null,
+            "options": [
+                "A) 2 units of Y for 1 unit of X",
+                "B) 1 unit of Y for 2 units of X",
+                "C) 2 units of X for 1 unit of Y",
+                "D) Nothing"
+            ],
+            "correct_answer": "A) 2 units of Y for 1 unit of X",
+            "explanation": "MRS = 2 means give up 2 units of Y for 1 more unit of X.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "Which violates the assumptions of consumer preferences?",
+            "diagram": null,
+            "options": [
+                "A) A > B and B > C implies A > C",
+                "B) Consumer prefers A over B and B over A simultaneously",
+                "C) Consumer is indifferent between A and B",
+                "D) Consumer prefers more to less"
+            ],
+            "correct_answer": "B) Consumer prefers A over B and B over A simultaneously",
+            "explanation": "This violates COMPLETENESS — cannot prefer A over B AND B over A at same time.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "If MU is NEGATIVE, Total Utility is:",
+            "diagram": null,
+            "options": [
+                "A) Increasing",
+                "B) At maximum",
+                "C) Decreasing",
+                "D) Zero"
+            ],
+            "correct_answer": "C) Decreasing",
+            "explanation": "Negative MU means each additional unit REDUCES total satisfaction.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "An indifference curve is CONVEX to the origin because of:",
+            "diagram": null,
+            "options": [
+                "A) Constant MRS",
+                "B) Diminishing MRS",
+                "C) Increasing MRS",
+                "D) Zero MRS"
+            ],
+            "correct_answer": "B) Diminishing MRS",
+            "explanation": "Diminishing MRS creates convex shape — willing to give up less and less Y for each X.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "If Px = 5, Py = 10, and Income = 100, what is the slope of the budget line?",
+            "diagram": null,
+            "options": [
+                "A) -0.5",
+                "B) -1",
+                "C) -2",
+                "D) -5"
+            ],
+            "correct_answer": "A) -0.5",
+            "explanation": "Slope = -Px/Py = -5/10 = -0.5.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "The ordinal utility approach uses which tool for analysis?",
+            "diagram": null,
+            "options": [
+                "A) Utils measurement",
+                "B) Indifference curves and budget lines",
+                "C) Total utility only",
+                "D) Marginal utility only"
+            ],
+            "correct_answer": "B) Indifference curves and budget lines",
+            "explanation": "Ordinal utility uses IC + Budget lines for consumer equilibrium.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "If TU from 5 units = 100 and TU from 6 units = 105, what is MU of the 6th unit?",
+            "diagram": null,
+            "options": [
+                "A) 5",
+                "B) 10",
+                "C) 100",
+                "D) 105"
+            ],
+            "correct_answer": "A) 5",
+            "explanation": "MU = TU(6) - TU(5) = 105 - 100 = 5.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "A price increase of Good X causes the budget line to:",
+            "diagram": null,
+            "options": [
+                "A) Shift outward parallel",
+                "B) Shift inward parallel",
+                "C) Pivot inward on X-axis",
+                "D) Pivot outward on Y-axis"
+            ],
+            "correct_answer": "C) Pivot inward on X-axis",
+            "explanation": "Price increase reduces max X, pivoting line inward on X-axis.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "Which point is CONSUMER EQUILIBRIUM?",
+            "diagram": null,
+            "options": [
+                "A) Where IC is below budget line",
+                "B) Where IC is tangent to budget line",
+                "C) Where IC intersects budget line twice",
+                "D) At the origin"
+            ],
+            "correct_answer": "B) Where IC is tangent to budget line",
+            "explanation": "Equilibrium = highest IC tangent to budget line (MRS = Px/Py).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "If MUx = 40, Px = 8, MUy = 30, Py = 6, what should the consumer do?",
+            "diagram": null,
+            "options": [
+                "A) Buy more X",
+                "B) Buy more Y",
+                "C) Buy equal amounts",
+                "D) Stop consuming"
+            ],
+            "correct_answer": "C) Buy equal amounts",
+            "explanation": "MUx/Px = 40/8 = 5. MUy/Py = 30/6 = 5. Already at equilibrium!",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "A Giffen good violates the Law of Demand because:",
+            "diagram": null,
+            "options": [
+                "A) Demand increases when price increases",
+                "B) Demand decreases when price increases",
+                "C) Supply increases when price increases",
+                "D) It has no substitutes"
+            ],
+            "correct_answer": "A) Demand increases when price increases",
+            "explanation": "Giffen goods have upward-sloping demand due to income effect overwhelming substitution effect.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 16,
+            "text": "If Income = 200, Px = 20, Py = 10, what are the intercepts?",
+            "diagram": null,
+            "options": [
+                "A) X=10, Y=20",
+                "B) X=20, Y=10",
+                "C) X=200, Y=100",
+                "D) X=100, Y=200"
+            ],
+            "correct_answer": "A) X=10, Y=20",
+            "explanation": "X-intercept = 200/20 = 10. Y-intercept = 200/10 = 20.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "The assumption of transitivity is important because it ensures:",
+            "diagram": null,
+            "options": [
+                "A) Consumers have unlimited income",
+                "B) Preferences are consistent and logical",
+                "C) Utility can be measured",
+                "D) Prices are constant"
+            ],
+            "correct_answer": "B) Preferences are consistent and logical",
+            "explanation": "Transitivity ensures logical, consistent preferences.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "In cardinal utility, if MU > Price, the consumer should:",
+            "diagram": null,
+            "options": [
+                "A) Buy MORE of the good",
+                "B) Buy LESS of the good",
+                "C) Stop buying",
+                "D) Buy the same amount"
+            ],
+            "correct_answer": "A) Buy MORE of the good",
+            "explanation": "If MU > Price, satisfaction exceeds cost — buy more until MU = Price.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "Indifference curves for PERFECT SUBSTITUTES are:",
+            "diagram": null,
+            "options": [
+                "A) L-shaped (right angles)",
+                "B) Straight parallel lines",
+                "C) Bowed inward (convex)",
+                "D) Circles"
+            ],
+            "correct_answer": "B) Straight parallel lines",
+            "explanation": "Perfect substitutes have constant MRS → straight line ICs.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "If MU is constant (not diminishing), the TU curve is:",
+            "diagram": null,
+            "options": [
+                "A) Increasing at decreasing rate",
+                "B) A straight upward line",
+                "C) Decreasing",
+                "D) Horizontal"
+            ],
+            "correct_answer": "B) A straight upward line",
+            "explanation": "Constant MU means TU increases linearly (straight line).",
+            "difficulty": "hard"
+        }
+    ]
+}

@@ -1,0 +1,147 @@
+{
+    "course_code": "Econ1011",
+    "chapter": 3,
+    "title": "Part 1 Practice: Consumer Preferences & Utility",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Which of the following BEST defines consumer preferences?",
+            "diagram": null,
+            "options": [
+                "A) The amount of money a consumer has",
+                "B) The ranking of different bundles based on satisfaction",
+                "C) The prices of goods in the market",
+                "D) The government's choice of goods"
+            ],
+            "correct_answer": "B) The ranking of different bundles based on satisfaction",
+            "explanation": "Consumer preferences describe how a consumer RANKS or ORDERS different bundles of goods based on the satisfaction they provide. It's about CHOICE and PREFERENCE, not money (A), prices (C), or government decisions (D). Preferences are the foundation of consumer theory — they explain WHY you choose coffee over tea.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "The assumption of TRANSITIVITY in consumer preferences means:",
+            "diagram": null,
+            "options": [
+                "A) Consumer can compare any two bundles",
+                "B) If A > B and B > C, then A > C",
+                "C) More is always better",
+                "D) Consumer is always rational"
+            ],
+            "correct_answer": "B) If A > B and B > C, then A > C",
+            "explanation": "TRANSITIVITY means preferences are CONSISTENT. If you prefer coffee over tea (A > B) and prefer tea over milk (B > C), then you MUST prefer coffee over milk (A > C). Option A is COMPLETENESS (ability to compare). Option C is NON-SATIATION (more is better). Without transitivity, preferences would be contradictory.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 3,
+            "text": "Utility in economics refers to:",
+            "diagram": null,
+            "options": [
+                "A) The usefulness of a good",
+                "B) The satisfaction or pleasure from consumption",
+                "C) The price of a good",
+                "D) The durability of a product"
+            ],
+            "correct_answer": "B) The satisfaction or pleasure from consumption",
+            "explanation": "UTILITY is the SATISFACTION, pleasure, or happiness a consumer gets from consuming a good or service. It's NOT the same as 'usefulness' (A) — water is useful but gives different utility to a thirsty person vs someone who's not thirsty. Price (C) and durability (D) are not utility. Utility is SUBJECTIVE — it varies from person to person.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "Examine the TU and MU schedule below. What is the Marginal Utility of the 4th unit?",
+            "diagram": "<svg width='320' height='200' viewBox='0 0 320 200'><rect width='320' height='200' fill='#111827' rx='8'/><text x='160' y='25' text-anchor='middle' fill='#f59e0b' font-size='13' font-weight='bold'>Utility Schedule</text><rect x='40' y='40' width='240' height='130' fill='#1a2332' rx='4'/><text x='60' y='60' fill='#94a3b8' font-size='10'>Q</text><text x='130' y='60' fill='#94a3b8' font-size='10'>TU</text><text x='220' y='60' fill='#94a3b8' font-size='10'>MU</text><line x1='40' y1='70' x2='280' y2='70' stroke='#334155' stroke-width='1'/><text x='60' y='90' fill='#f8fafc' font-size='11'>1</text><text x='130' y='90' fill='#f8fafc' font-size='11'>20</text><text x='220' y='90' fill='#f8fafc' font-size='11'>20</text><text x='60' y='115' fill='#f8fafc' font-size='11'>2</text><text x='130' y='115' fill='#f8fafc' font-size='11'>35</text><text x='220' y='115' fill='#f8fafc' font-size='11'>15</text><text x='60' y='140' fill='#f8fafc' font-size='11'>3</text><text x='130' y='140' fill='#f8fafc' font-size='11'>45</text><text x='220' y='140' fill='#f8fafc' font-size='11'>10</text><text x='60' y='165' fill='#f8fafc' font-size='11'>4</text><text x='130' y='165' fill='#f8fafc' font-size='11'>50</text><text x='220' y='165' fill='#f8fafc' font-size='11'>?</text></svg>",
+            "options": [
+                "A) 10",
+                "B) 5",
+                "C) 15",
+                "D) 50"
+            ],
+            "correct_answer": "B) 5",
+            "explanation": "Marginal Utility = Change in TU / Change in Q = TU(4) - TU(3) = 50 - 45 = 5. The 4th unit adds only 5 utils because MU is DECREASING (Law of Diminishing Marginal Utility). The pattern shows: 20, 15, 10, 5 — each additional unit gives LESS extra satisfaction.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "The Law of Diminishing Marginal Utility states that:",
+            "diagram": null,
+            "options": [
+                "A) Total utility always increases",
+                "B) Marginal utility decreases as consumption increases",
+                "C) Marginal utility always stays constant",
+                "D) Total utility always decreases"
+            ],
+            "correct_answer": "B) Marginal utility decreases as consumption increases",
+            "explanation": "The LAW OF DIMINISHING MARGINAL UTILITY states that as you consume MORE units of a good, the ADDITIONAL satisfaction from each extra unit EVENTUALLY DECREASES. The first cup of coffee gives more satisfaction than the 5th cup. TU may still INCREASE (A is not always true) but at a DECREASING rate. This law explains why demand curves slope downward.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "When Marginal Utility (MU) equals ZERO, Total Utility (TU) is:",
+            "diagram": null,
+            "options": [
+                "A) Also zero",
+                "B) At its MAXIMUM",
+                "C) At its minimum",
+                "D) Decreasing"
+            ],
+            "correct_answer": "B) At its MAXIMUM",
+            "explanation": "When MU = 0, TU is at its MAXIMUM. This is the PEAK of the TU curve. The consumer has consumed so much that one more unit adds NOTHING to satisfaction. Beyond this point, MU becomes NEGATIVE and TU starts DECREASING. Think: the 5th slice of pizza gives zero extra satisfaction — you're full!",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "The assumption of NON-SATIATION (More is Better) means:",
+            "diagram": null,
+            "options": [
+                "A) Consumer always wants less of a good",
+                "B) Consumer always prefers MORE of a good",
+                "C) Consumer is indifferent between more and less",
+                "D) Consumer only wants one good"
+            ],
+            "correct_answer": "B) Consumer always prefers MORE of a good",
+            "explanation": "NON-SATIATION means consumers are NEVER fully satisfied — they ALWAYS prefer MORE of a good (assuming it's free). If offered 2 cups of coffee vs 1 cup, you'd prefer 2 cups. This assumption simplifies consumer theory and explains why we always want more income, more goods, more satisfaction.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Examine the TU curve. What is happening to MU when TU is at its peak?",
+            "diagram": "<svg width='350' height='180' viewBox='0 0 350 180'><rect width='350' height='180' fill='#111827' rx='8'/><line x1='40' y1='150' x2='330' y2='150' stroke='#38bdf8' stroke-width='2'/><line x1='40' y1='20' x2='40' y2='150' stroke='#38bdf8' stroke-width='2'/><path d='M 40 150 Q 120 20 180 25 Q 250 30 320 120' stroke='#facc15' stroke-width='3' fill='none'/><circle cx='180' cy='25' r='6' fill='#f59e0b'/><text x='190' y='30' fill='#f59e0b' font-size='11' font-weight='bold'>TU Maximum</text><text x='320' y='165' fill='#38bdf8' font-size='12' font-weight='bold'>Q</text></svg>",
+            "options": [
+                "A) MU is also at maximum",
+                "B) MU is ZERO",
+                "C) MU is negative",
+                "D) MU is increasing"
+            ],
+            "correct_answer": "B) MU is ZERO",
+            "explanation": "At the PEAK of the TU curve (maximum), the slope is ZERO. Since MU equals the SLOPE of the TU curve (MU = ΔTU/ΔQ), when TU is at maximum, MU = 0. This is the point where consuming one more unit adds NOTHING to total satisfaction. After this point, MU becomes negative.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "If a consumer's TU from 3 units is 45 and from 4 units is 50, what is the MU of the 4th unit?",
+            "diagram": null,
+            "options": [
+                "A) 5",
+                "B) 10",
+                "C) 45",
+                "D) 50"
+            ],
+            "correct_answer": "A) 5",
+            "explanation": "MU = ΔTU / ΔQ = (50 - 45) / (4 - 3) = 5/1 = 5 utils. The 4th unit adds only 5 utils to total satisfaction. This demonstrates DIMINISHING marginal utility — the extra satisfaction is getting smaller with each additional unit.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 10,
+            "text": "The assumption of COMPLETENESS in consumer preferences means the consumer CAN:",
+            "diagram": null,
+            "options": [
+                "A) Always afford all goods",
+                "B) Compare and rank ANY two bundles",
+                "C) Measure utility in exact numbers",
+                "D) Never change their preferences"
+            ],
+            "correct_answer": "B) Compare and rank ANY two bundles",
+            "explanation": "COMPLETENESS means the consumer CAN COMPARE any two bundles and decide: A > B, B > A, or A = B (indifferent). They are NEVER confused or unable to decide. This is the first assumption of consumer theory. Option C refers to cardinal utility (measurability), not completeness.",
+            "difficulty": "hard"
+        }
+    ]
+}

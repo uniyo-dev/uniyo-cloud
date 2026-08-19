@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 6,
+    "title": "Part 1 Practice: Technology, Ethics, and New Ethical Questions",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is one negative aspect of the Internet boom mentioned in the module?",
+            "options": [
+                "A) It has made communication slower.",
+                "B) It has created new concerns about privacy and is hampered by spam and viruses.",
+                "C) It has eliminated all forms of entertainment.",
+                "D) It has made it easier for governments to spy on citizens."
+            ],
+            "correct_answer": "B) It has created new concerns about privacy and is hampered by spam and viruses.",
+            "explanation": "The module states: 'As with many technological advances, however, the Internet has not been without negative aspects. For example, it has created new concerns about privacy, and it has been hampered by spam and viruses.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the best way to ensure technology is used ethically according to the module?",
+            "options": [
+                "A) Ban all new technology.",
+                "B) Establish proper legal or regulatory systems to prevent abuse and ensure benefits are shared.",
+                "C) Let companies self-regulate without oversight.",
+                "D) Ignore ethical concerns entirely."
+            ],
+            "correct_answer": "B) Establish proper legal or regulatory systems to prevent abuse and ensure benefits are shared.",
+            "explanation": "The module states: 'In many cases, this promotion may be less a matter of technological control than of oversight: establishing the proper legal or regulatory system to ensure that technology capable of abuse is not in fact abused and that the benefits of technology are shared among all.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is a significant risk when AI systems learn from real-world data?",
+            "options": [
+                "A) They become too fast.",
+                "B) They may recreate the past and build in errors or systemic biases, leading to discriminatory outcomes.",
+                "C) They become obsolete quickly.",
+                "D) They require too much electricity."
+            ],
+            "correct_answer": "B) They may recreate the past and build in errors or systemic biases, leading to discriminatory outcomes.",
+            "explanation": "The module states: 'Indeed, where systems learn from real-world data, there is a significant risk that those systems simply recreate the past and subsequently build in errors or systemic biases.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "Why must humans remain involved in AI decision-making according to the module?",
+            "options": [
+                "A) Because machines are too slow.",
+                "B) So that people can be held accountable and explain the reasons behind a decision.",
+                "C) Because humans are cheaper than machines.",
+                "D) Because AI cannot process data."
+            ],
+            "correct_answer": "B) So that people can be held accountable and explain the reasons behind a decision.",
+            "explanation": "The module states: 'Whatever the power of the machine, humans will still need to be involved, so that people can be held accountable, or explain the reasons behind a decision.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is a central problem with integrating ethics into technology design?",
+            "options": [
+                "A) Ethics is always perfect.",
+                "B) Ethics often arrives too late, only recognized after problems arise, and it struggles with future uncertainty.",
+                "C) Ethics is irrelevant to technology.",
+                "D) Ethics is too expensive to implement."
+            ],
+            "correct_answer": "B) Ethics often arrives too late, only recognized after problems arise, and it struggles with future uncertainty.",
+            "explanation": "The module states: 'A central problem of the ethics of technology is that it tends to arrive too late... Ethics has traditionally not been well equipped to deal with issues of uncertainty and, in particular, future uncertainty.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Which of the following is NOT one of the 7 general ethical principles listed in the module?",
+            "options": [
+                "A) Contribute to society and human well-being.",
+                "B) Avoid harm.",
+                "C) Maximize profit at any cost.",
+                "D) Be honest and trustworthy."
+            ],
+            "correct_answer": "C) Maximize profit at any cost.",
+            "explanation": "The module lists: Contribute to society, Avoid harm, Be honest and trustworthy, Be fair and not discriminate, Respect work, Respect privacy, Honor confidentiality. Maximizing profit at any cost is not an ethical principle.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is a key professional responsibility regarding security?",
+            "options": [
+                "A) Ignore security concerns.",
+                "B) Design and implement systems that are robustly and usuably secure.",
+                "C) Only secure systems after they are hacked.",
+                "D) Keep passwords public."
+            ],
+            "correct_answer": "B) Design and implement systems that are robustly and usuably secure.",
+            "explanation": "The module lists as a professional responsibility: 'Design and implement systems that are robustly and usuably secure.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What is the first principle of professional leadership listed in the module?",
+            "options": [
+                "A) Ensure that the public good is the central concern during all professional computing work.",
+                "B) Maximize shareholder wealth.",
+                "C) Ignore social responsibilities.",
+                "D) Minimize employee benefits."
+            ],
+            "correct_answer": "A) Ensure that the public good is the central concern during all professional computing work.",
+            "explanation": "The module lists as the first leadership principle: 'Ensure that the public good is the central concern during all professional computing work.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "According to the module, why should professionals use care when modifying or retiring systems?",
+            "options": [
+                "A) Because it is expensive.",
+                "B) Because interface changes, removal of features, and software updates impact user productivity and quality of work.",
+                "C) Because they are not allowed to.",
+                "D) Because it takes too much time."
+            ],
+            "correct_answer": "B) Because interface changes, removal of features, and software updates impact user productivity and quality of work.",
+            "explanation": "The module states: 'Use care when modifying or retiring systems. Interface changes, the removal of features, and even software updates have an impact on the productivity of users and the quality of their work.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is the 5th general ethical principle listed in the module?",
+            "options": [
+                "A) Avoid harm.",
+                "B) Respect the work required to produce new ideas, inventions, creative works, and computing artifacts.",
+                "C) Be honest and trustworthy.",
+                "D) Contribute to society."
+            ],
+            "correct_answer": "B) Respect the work required to produce new ideas, inventions, creative works, and computing artifacts.",
+            "explanation": "The module lists as principle #5: 'Respect the work required to produce new ideas, inventions, creative works, and computing artifacts.'",
+            "difficulty": "hard"
+        }
+    ]
+}

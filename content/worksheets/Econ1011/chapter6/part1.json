@@ -1,0 +1,147 @@
+{
+    "course_code": "Econ1011",
+    "chapter": 6,
+    "title": "Part 1 Practice: Goals of Macroeconomics & National Income",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Examine the diagram below. Which box represents the goal of PRICE STABILITY?",
+            "diagram": "<svg width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='#111827' rx='8'/><text x='200' y='25' text-anchor='middle' fill='#f59e0b' font-size='14' font-weight='bold'>Goals of Macroeconomics</text><rect x='30' y='50' width='160' height='50' rx='8' fill='#1a2332' stroke='#14b8a6' stroke-width='2'/><text x='110' y='70' text-anchor='middle' fill='#f8fafc' font-size='11' font-weight='bold'>Full Employment</text><text x='110' y='88' text-anchor='middle' fill='#94a3b8' font-size='9'>Jobs for everyone</text><rect x='210' y='50' width='160' height='50' rx='8' fill='#1a2332' stroke='#f43f5e' stroke-width='2'/><text x='290' y='70' text-anchor='middle' fill='#f8fafc' font-size='11' font-weight='bold'>Price Stability</text><text x='290' y='88' text-anchor='middle' fill='#94a3b8' font-size='9'>Low inflation</text><rect x='30' y='120' width='160' height='50' rx='8' fill='#1a2332' stroke='#facc15' stroke-width='2'/><text x='110' y='140' text-anchor='middle' fill='#f8fafc' font-size='11' font-weight='bold'>Economic Growth</text><text x='110' y='158' text-anchor='middle' fill='#94a3b8' font-size='9'>Rising GDP</text><rect x='210' y='120' width='160' height='50' rx='8' fill='#1a2332' stroke='#6d28d9' stroke-width='2'/><text x='290' y='140' text-anchor='middle' fill='#f8fafc' font-size='11' font-weight='bold'>BOP Stability</text><text x='290' y='158' text-anchor='middle' fill='#94a3b8' font-size='9'>Trade balance</text></svg>",
+            "options": [
+                "A) Top Left (green border)",
+                "B) Top Right (red border)",
+                "C) Bottom Left (yellow border)",
+                "D) Bottom Right (purple border)"
+            ],
+            "correct_answer": "B) Top Right (red border)",
+            "explanation": "The TOP RIGHT box (red border) represents PRICE STABILITY — one of the four main macroeconomic goals. The four goals are: Full Employment (top left, green), Price Stability (top right, red), Economic Growth (bottom left, yellow), and Balance of Payments Stability (bottom right, purple).",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Examine the circular flow of GDP expenditure below. What does the formula GDP = C + I + G + (X-M) represent?",
+            "diagram": "<svg width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='#111827' rx='8'/><text x='200' y='20' text-anchor='middle' fill='#f59e0b' font-size='13' font-weight='bold'>Expenditure Approach to GDP</text><rect x='20' y='40' width='80' height='50' rx='6' fill='#1a2332' stroke='#14b8a6' stroke-width='2'/><text x='60' y='60' text-anchor='middle' fill='#14b8a6' font-size='11' font-weight='bold'>C</text><text x='60' y='75' text-anchor='middle' fill='#94a3b8' font-size='9'>Consumption</text><rect x='115' y='40' width='80' height='50' rx='6' fill='#1a2332' stroke='#f43f5e' stroke-width='2'/><text x='155' y='60' text-anchor='middle' fill='#f43f5e' font-size='11' font-weight='bold'>I</text><text x='155' y='75' text-anchor='middle' fill='#94a3b8' font-size='9'>Investment</text><rect x='210' y='40' width='80' height='50' rx='6' fill='#1a2332' stroke='#facc15' stroke-width='2'/><text x='250' y='60' text-anchor='middle' fill='#facc15' font-size='11' font-weight='bold'>G</text><text x='250' y='75' text-anchor='middle' fill='#94a3b8' font-size='9'>Govt Spending</text><rect x='305' y='40' width='80' height='50' rx='6' fill='#1a2332' stroke='#6d28d9' stroke-width='2'/><text x='345' y='60' text-anchor='middle' fill='#6d28d9' font-size='11' font-weight='bold'>X-M</text><text x='345' y='75' text-anchor='middle' fill='#94a3b8' font-size='9'>Net Exports</text><text x='200' y='130' text-anchor='middle' fill='#f8fafc' font-size='12'>GDP = C + I + G + (X-M)</text><text x='200' y='165' text-anchor='middle' fill='#94a3b8' font-size='10'>Sum of all spending on final goods</text></svg>",
+            "options": [
+                "A) Income approach to GDP",
+                "B) Expenditure approach to GDP",
+                "C) Production approach to GDP",
+                "D) None of the above"
+            ],
+            "correct_answer": "B) Expenditure approach to GDP",
+            "explanation": "The diagram shows the EXPENDITURE approach: GDP = Consumption (C) + Investment (I) + Government Spending (G) + Net Exports (X-M). This sums ALL spending on final goods and services in the economy. The INCOME approach sums wages, rent, interest, and profit. The PRODUCTION approach sums value added.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 3,
+            "text": "Examine the GDP vs GNP diagram. Which circle includes an Ethiopian citizen working in Dubai?",
+            "diagram": "<svg width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='#111827' rx='8'/><text x='200' y='20' text-anchor='middle' fill='#f59e0b' font-size='13' font-weight='bold'>GDP vs GNP</text><circle cx='140' cy='110' r='60' fill='#1a2332' stroke='#14b8a6' stroke-width='2'/><text x='140' y='100' text-anchor='middle' fill='#14b8a6' font-size='13' font-weight='bold'>GDP</text><text x='140' y='120' text-anchor='middle' fill='#94a3b8' font-size='9'>Within borders</text><circle cx='260' cy='110' r='60' fill='#1a2332' stroke='#f43f5e' stroke-width='2'/><text x='260' y='100' text-anchor='middle' fill='#f43f5e' font-size='13' font-weight='bold'>GNP</text><text x='260' y='120' text-anchor='middle' fill='#94a3b8' font-size='9'>Citizens anywhere</text><text x='200' y='180' text-anchor='middle' fill='#94a3b8' font-size='10'>Overlap area = Citizens working domestically</text></svg>",
+            "options": [
+                "A) GDP circle (green) only",
+                "B) GNP circle (red) only",
+                "C) Both GDP and GNP circles",
+                "D) Neither circle"
+            ],
+            "correct_answer": "B) GNP circle (red) only",
+            "explanation": "An Ethiopian citizen in Dubai is OUTSIDE Ethiopia's borders (not in GDP) but IS an Ethiopian CITIZEN (in GNP). Therefore, they fall in the GNP circle ONLY. GNP includes citizens working ANYWHERE in the world.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "Which of the following is a MACROECONOMIC variable?",
+            "diagram": null,
+            "options": [
+                "A) Price of coffee in a specific shop",
+                "B) National unemployment rate",
+                "C) Output of one firm",
+                "D) Individual household income"
+            ],
+            "correct_answer": "B) National unemployment rate",
+            "explanation": "MACROECONOMIC variables are AGGREGATE (total) measures for the whole economy: national unemployment, GDP, national inflation. Microeconomic variables relate to INDIVIDUAL units: one shop's prices, one firm's output, one household's income.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "The Production (Value Added) approach sums:",
+            "diagram": null,
+            "options": [
+                "A) Total output at each stage",
+                "B) Value added at each stage of production",
+                "C) Only final goods",
+                "D) Only intermediate goods"
+            ],
+            "correct_answer": "B) Value added at each stage of production",
+            "explanation": "The PRODUCTION approach sums VALUE ADDED at each stage. Value Added = Output - Intermediate Inputs. Example: Farmer sells wheat for 50 (VA=50), Miller sells flour for 80 (VA=30), Baker sells bread for 120 (VA=40). Total GDP = 50+30+40 = 120.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "If C = 500, I = 200, G = 300, X = 100, M = 150, what is GDP?",
+            "diagram": null,
+            "options": [
+                "A) 950",
+                "B) 1000",
+                "C) 1150",
+                "D) 1250"
+            ],
+            "correct_answer": "A) 950",
+            "explanation": "GDP = C + I + G + (X-M) = 500 + 200 + 300 + (100-150) = 1000 + (-50) = 950. Net exports are NEGATIVE (-50) because imports exceed exports (trade deficit).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "Which item is EXCLUDED from GDP?",
+            "diagram": null,
+            "options": [
+                "A) New car produced this year",
+                "B) Government built road",
+                "C) Sale of a used house",
+                "D) Haircut service"
+            ],
+            "correct_answer": "C) Sale of a used house",
+            "explanation": "USED goods are EXCLUDED from GDP because they were counted when FIRST sold (as new). Including them would DOUBLE COUNT. GDP only counts NEW production. A new car, new road, and new haircut service are all current production.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Examine the production stages. What is the TOTAL value added?",
+            "diagram": "<svg width='400' height='150' viewBox='0 0 400 150'><rect width='400' height='150' fill='#111827' rx='8'/><text x='200' y='20' text-anchor='middle' fill='#f59e0b' font-size='12' font-weight='bold'>Value Added Chain: Bread Production</text><rect x='20' y='40' width='110' height='70' rx='6' fill='#1a2332' stroke='#14b8a6' stroke-width='2'/><text x='75' y='60' text-anchor='middle' fill='#f8fafc' font-size='10'>Farmer</text><text x='75' y='75' text-anchor='middle' fill='#14b8a6' font-size='9'>Wheat: 50</text><text x='75' y='90' text-anchor='middle' fill='#94a3b8' font-size='9'>VA = 50</text><rect x='145' y='40' width='110' height='70' rx='6' fill='#1a2332' stroke='#f59e0b' stroke-width='2'/><text x='200' y='60' text-anchor='middle' fill='#f8fafc' font-size='10'>Miller</text><text x='200' y='75' text-anchor='middle' fill='#f59e0b' font-size='9'>Flour: 80</text><text x='200' y='90' text-anchor='middle' fill='#94a3b8' font-size='9'>VA = 30</text><rect x='270' y='40' width='110' height='70' rx='6' fill='#1a2332' stroke='#f43f5e' stroke-width='2'/><text x='325' y='60' text-anchor='middle' fill='#f8fafc' font-size='10'>Baker</text><text x='325' y='75' text-anchor='middle' fill='#f43f5e' font-size='9'>Bread: 120</text><text x='325' y='90' text-anchor='middle' fill='#94a3b8' font-size='9'>VA = 40</text><text x='200' y='135' text-anchor='middle' fill='#f59e0b' font-size='11' font-weight='bold'>Total GDP = 50 + 30 + 40 = 120</text></svg>",
+            "options": [
+                "A) 50",
+                "B) 80",
+                "C) 120",
+                "D) 250"
+            ],
+            "correct_answer": "C) 120",
+            "explanation": "Total Value Added = VA(farmer) + VA(miller) + VA(baker) = 50 + 30 + 40 = 120. Note: We do NOT sum total outputs (50+80+120=250) because that would double count. Only the VALUE ADDED at each stage is counted, which equals the final good's price (120).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Which policy goal is INCOMPATIBLE with very low unemployment?",
+            "diagram": null,
+            "options": [
+                "A) Price stability",
+                "B) Economic growth",
+                "C) Income equality",
+                "D) Balance of payments"
+            ],
+            "correct_answer": "A) Price stability",
+            "explanation": "Very low unemployment and price stability can CONFLICT (Phillips Curve trade-off). When unemployment is very low, workers demand higher wages, pushing up costs and prices (inflation). Policymakers must balance these competing goals.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Government transfer payments (like pensions) are NOT included in GDP because:",
+            "diagram": null,
+            "options": [
+                "A) They are too small to matter",
+                "B) They don't represent production of goods/services",
+                "C) They are illegal",
+                "D) Only rich countries include them"
+            ],
+            "correct_answer": "B) They don't represent production of goods/services",
+            "explanation": "TRANSFER PAYMENTS (pensions, welfare, subsidies) are NOT counted in GDP because no NEW production occurs — money is just TRANSFERRED from government to households. GDP only measures PRODUCTION of new goods and services.",
+            "difficulty": "hard"
+        }
+    ]
+}

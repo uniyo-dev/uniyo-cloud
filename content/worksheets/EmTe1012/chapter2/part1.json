@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 2,
+    "title": "Part 1 Practice: An Overview of Data Science, Data vs. Information, and the Data Processing Cycle",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is data science defined as in the module?",
+            "options": [
+                "A) A single-disciplinary field focused only on programming.",
+                "B) A multi-disciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge from data.",
+                "C) The study of computer hardware only.",
+                "D) The process of manually recording data in notebooks."
+            ],
+            "correct_answer": "B) A multi-disciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge from data.",
+            "explanation": "The module defines data science as 'a multi-disciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from structured, semi-structured, and unstructured data.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "In the cereal box example, what is the first piece of data recorded?",
+            "options": [
+                "A) The barcode scan at checkout.",
+                "B) Writing 'cereal' in a notebook.",
+                "C) The cash register log.",
+                "D) The monthly sales pie chart."
+            ],
+            "correct_answer": "B) Writing 'cereal' in a notebook.",
+            "explanation": "The module states: 'Whatever your cereal preferences—teff, wheat, or barley—you prepare for the purchase by writing \"cereal\" in your notebook. This planned purchase is a piece of data.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "According to the module, what is the fundamental difference between data and information?",
+            "options": [
+                "A) Data is processed; information is raw.",
+                "B) Data is raw unprocessed facts; information is processed data that is meaningful for decision-making.",
+                "C) Data is always numerical; information is always textual.",
+                "D) There is no difference."
+            ],
+            "correct_answer": "B) Data is raw unprocessed facts; information is processed data that is meaningful for decision-making.",
+            "explanation": "The module clearly distinguishes: 'Data can be defined as a representation of facts... unprocessed facts and figures. Whereas information is the processed data on which decisions and actions are based.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "Which of the following is an example of raw data?",
+            "options": [
+                "A) 'The price of 1 kg of Teff is 25 Birr.'",
+                "B) '25', 'Teff', 'Birr'.",
+                "C) 'We should stock more Teff next month.'",
+                "D) 'Sales increased by 10%.'"
+            ],
+            "correct_answer": "B) '25', 'Teff', 'Birr'.",
+            "explanation": "Raw data consists of unprocessed facts and figures. '25', 'Teff', and 'Birr' are just characters with no context. Option A is processed information. Option C is a decision. Option D is an insight.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What are the three basic steps of the Data Processing Cycle?",
+            "options": [
+                "A) Input, Processing, Output",
+                "B) Collection, Analysis, Deletion",
+                "C) Start, Middle, End",
+                "D) Data, Information, Knowledge"
+            ],
+            "correct_answer": "A) Input, Processing, Output",
+            "explanation": "The module explicitly states: 'Data processing consists of the following basic steps - input, processing, and output. These three steps constitute the data processing cycle.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 6,
+            "text": "In the Data Processing Cycle, what happens during the 'Input' step?",
+            "options": [
+                "A) The result is collected and used.",
+                "B) The data is changed into a more useful form.",
+                "C) The input data is prepared in a convenient form for processing, such as on a hard disk or flash disk.",
+                "D) The data is deleted from the system."
+            ],
+            "correct_answer": "C) The input data is prepared in a convenient form for processing, such as on a hard disk or flash disk.",
+            "explanation": "The module states: 'Input – in this step, the input data is prepared in some convenient form for processing. The form will depend on the processing machine. For example, when electronic computers are used, the input data can be recorded on any one of the several types of storage medium, such as hard disk, CD, flash disk and so on.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "At the end of the week, what happens to the scanned coupon data in the cereal store example?",
+            "options": [
+                "A) It is thrown away.",
+                "B) It gets uploaded to the cereal company to issue a reimbursement to the grocery store.",
+                "C) It is used to calculate employee salaries.",
+                "D) It is printed out and pinned to a wall."
+            ],
+            "correct_answer": "B) It gets uploaded to the cereal company to issue a reimbursement to the grocery store.",
+            "explanation": "The module explains: 'At the end of the week, a report of all the scanned manufacturer coupons gets uploaded to the cereal company so they can issue a reimbursement to the grocery store for all of the coupon discounts they have handed out.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What is the role of hardware (like a barcode scanner) in data science?",
+            "options": [
+                "A) It replaces the need for software.",
+                "B) It is involved in collecting, manipulating, transmitting, and storing data.",
+                "C) It is only used for printing reports.",
+                "D) It makes decisions without human input."
+            ],
+            "correct_answer": "B) It is involved in collecting, manipulating, transmitting, and storing data.",
+            "explanation": "The module states: 'lots of other pieces of hardware—such as the barcode scanner—were involved in collecting, manipulating, transmitting, and storing the data.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "Which of the following is NOT listed as a key trait of a data scientist?",
+            "options": [
+                "A) Curious and result-oriented",
+                "B) Strong quantitative background in statistics and linear algebra",
+                "C) Exceptional industry-specific knowledge and communication skills",
+                "D) Ability to work without any computer programming knowledge"
+            ],
+            "correct_answer": "D) Ability to work without any computer programming knowledge",
+            "explanation": "The module explicitly states that data scientists must possess 'programming knowledge with focuses on data warehousing, mining, and modeling to build and analyze algorithms.' Programming is essential. All other options are listed as key traits.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "At the end of the month, what does the store manager in the example do with the sales data?",
+            "options": [
+                "A) Ignores it and stocks the same items.",
+                "B) Looks at pie charts and decides to offer more varieties of popular cereals (like Teff-based ones).",
+                "C) Throws it away to save storage space.",
+                "D) Gives it to the cashiers to study."
+            ],
+            "correct_answer": "B) Looks at pie charts and decides to offer more varieties of popular cereals (like Teff-based ones).",
+            "explanation": "The module states: 'at the end of the month, a store manager looks at a colorful collection of pie charts showing all the different kinds of cereal that were sold and, on the basis of strong sales of cereals, decides to offer more varieties of these on the store's limited shelf space next month.' This is the ultimate goal of data science: turning data into actionable decisions.",
+            "difficulty": "hard"
+        }
+    ]
+}

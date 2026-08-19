@@ -1,0 +1,222 @@
+<div class="lesson-section">
+    <h2>Chapter 2: Functions</h2>
+    <h3>Part 7: Exponential, Logarithmic & Trigonometric Functions</h3>
+    
+    <div class="highlight-box">
+        <strong>📖 MODULE OVERVIEW & LEARNING OBJECTIVES:</strong>
+        <p>In this final part of Chapter 2, we explore the <strong>exponential, logarithmic, and trigonometric functions</strong>. These functions are essential for modeling growth, decay, and periodic phenomena in the social, biological, and physical sciences.</p>
+        <p><strong>After completing this part, you will be able to:</strong></p>
+        <ul>
+            <li>Define exponential, logarithmic, and trigonometric functions.</li>
+            <li>Understand the relationship between exponential and logarithmic functions.</li>
+            <li>Sketch the graphs of exponential, logarithmic, and trigonometric functions.</li>
+            <li>Use basic properties of logarithmic, exponential, and trigonometric functions to solve problems.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4>2.7 Definition and basic properties of logarithmic, exponential, and trigonometric functions and their graphs</h4>
+
+    <hr>
+
+    <h4>Exponents and Radicals</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 2.16:</strong>
+        <p>For a natural number \(n\) and a real number \(x\), the power \(x^n\) is defined as \(x^n = \underbrace{x \cdot x \cdots x}_{n \text{ factors}}\).</p>
+        <p>In the symbol \(x^n\), \(x\) is called the <strong>base</strong> and \(n\) is called the <strong>exponent</strong>.</p>
+    </div>
+
+    <p>We extend the definition to include zero and negative exponents:</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Rule</th><th>Formula</th><th>Condition</th></tr>
+            <tr><td>Zero Exponent</td><td>\(x^0 = 1\)</td><td>\(x \neq 0\)</td></tr>
+            <tr><td>Negative Exponent</td><td>\(x^{-n} = \frac{1}{x^n}\)</td><td>\(x \neq 0\)</td></tr>
+            <tr><td>Rational Exponent</td><td>\(x^{\frac{m}{n}} = (\sqrt[n]{x})^m\)</td><td>\(x^{\frac{1}{n}}\) is real</td></tr>
+        </table>
+    </div>
+
+    <p><strong>Rules for Integer Exponents:</strong></p>
+    <ul>
+        <li>\(x^n \cdot x^m = x^{n+m}\)</li>
+        <li>\((x^n)^m = x^{nm}\)</li>
+        <li>\(\left(\frac{x}{y}\right)^n = \frac{x^n}{y^n}\) (\(y \neq 0\))</li>
+    </ul>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Rational Exponents</text>
+            
+            <rect x="20" y="60" width="160" height="40" fill="#14b8a6" rx="8"/>
+            <text x="100" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(9^{\frac{1}{2}} = \sqrt{9} = 3\)</text>
+
+            <rect x="220" y="60" width="160" height="40" fill="#f43f5e" rx="8"/>
+            <text x="300" y="84" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(27^{\frac{1}{3}} = \sqrt[3]{27} = 3\)</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 The \(n\)-th root of \(a\) is \(\sqrt[n]{a} = a^{\frac{1}{n}}\).</text>
+        </svg>
+    </div>
+
+    <hr>
+
+    <h4>Exponential Functions</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 2.21:</strong>
+        <p>A function of the form \(y = f(x) = b^x\), where \(b > 0\) and \(b \neq 1\), is called an <strong>exponential function</strong>.</p>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Property</th><th>Description</th></tr>
+            <tr><td>Domain</td><td>All real numbers (\(\mathbb{R}\))</td></tr>
+            <tr><td>Range</td><td>Positive real numbers \((0, \infty)\)</td></tr>
+            <tr><td>y-intercept</td><td>\(1\) (since \(b^0 = 1\))</td></tr>
+            <tr><td>Horizontal Asymptote</td><td>\(y = 0\) (the x-axis)</td></tr>
+            <tr><td>One-to-One</td><td>\(b^{x_1} = b^{x_2} \Rightarrow x_1 = x_2\)</td></tr>
+            <tr><td>Growth/Decay</td><td>Growth if \(b > 1\); Decay if \(0 < b < 1\)</td></tr>
+        </table>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Exponential Graphs: Growth vs. Decay</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">📈 \(y = 2^x\) (Growth)</text>
+            <text x="100" y="105" fill="#111827" font-size="8" text-anchor="middle">\(b > 1\), increasing</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">📉 \(y = (1/2)^x\) (Decay)</text>
+            <text x="300" y="105" fill="#111827" font-size="8" text-anchor="middle">\(0 < b < 1\), decreasing</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 Both have HA \(y = 0\) and y-intercept \((0,1)\).</text>
+        </svg>
+    </div>
+
+    <p><strong>Example 2.45:</strong> Sketch \(y = 2^x\). It passes through \((-3, 1/8), (-2, 1/4), (-1, 1/2), (0, 1), (1, 2), (2, 4), (3, 8)\).</p>
+
+    <hr>
+
+    <h4>Logarithmic Functions</h4>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Definition 2.22:</strong>
+        <p>For \(b > 0\) and \(b \neq 1\), \(y = \log_b x\) means <strong>\(y\) is the exponent to which \(b\) must be raised to yield \(x\)</strong>.</p>
+        <p>\[x = b^y \Leftrightarrow y = \log_b x\]</p>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Exponential Form</th><th>Logarithmic Form</th></tr>
+            <tr><td>\(4^2 = 16\)</td><td>\(\log_4 16 = 2\)</td></tr>
+            <tr><td>\(5^{-3} = 1/125\)</td><td>\(\log_5 (1/125) = -3\)</td></tr>
+            <tr><td>\(7^0 = 1\)</td><td>\(\log_7 1 = 0\)</td></tr>
+        </table>
+    </div>
+
+    <div class="highlight-box" style="background:#1e293b; border-left:5px solid #facc15;">
+        <strong>📌 Important Logarithmic Properties:</strong>
+        <p>For \(b, u, v > 0, b \neq 1\):</p>
+        <ul>
+            <li>\(\log_b(uv) = \log_b u + \log_b v\) (Product Rule)</li>
+            <li>\(\log_b\left(\frac{u}{v}\right) = \log_b u - \log_b v\) (Quotient Rule)</li>
+            <li>\(\log_b(u^r) = r \log_b u\) (Power Rule)</li>
+            <li>\(\log_b(b^x) = x\)</li>
+            <li>\(b^{\log_b x} = x\)</li>
+        </ul>
+    </div>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Logarithmic Function: Inverse of Exponential</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(y = 3^x\)</text>
+            <text x="100" y="105" fill="#111827" font-size="8" text-anchor="middle">Domain: ℝ, Range: \((0,∞)\)</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">\(y = \log_3 x\)</text>
+            <text x="300" y="105" fill="#111827" font-size="8" text-anchor="middle">Domain: \((0,∞)\), Range: ℝ</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 \(y = \log_b x\) is the inverse of \(y = b^x\).</text>
+        </svg>
+    </div>
+
+    <p><strong>Common and Natural Logarithms:</strong></p>
+    <ul>
+        <li><strong>Common Logarithm:</strong> \(\log_{10} x = \log x\)</li>
+        <li><strong>Natural Logarithm:</strong> \(\log_e x = \ln x\) (where \(e \approx 2.7182\dots\))</li>
+    </ul>
+
+    <hr>
+
+    <h4>Trigonometric Functions</h4>
+
+    <p><strong>Angle Measurement:</strong></p>
+    <p>An angle is formed by two rays with a common endpoint. The fixed side is the <strong>initial side</strong>, and the rotating side is the <strong>terminal side</strong>. Angles are measured in <strong>degrees</strong> or <strong>radians</strong>.</p>
+
+    <p><strong>Conversion Formula:</strong> \(\frac{\theta \text{ in degrees}}{180^\circ} = \frac{\theta \text{ in radians}}{\pi}\).</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Degrees</th><th>Radians</th></tr>
+            <tr><td>\(180^\circ\)</td><td>\(\pi\)</td></tr>
+            <tr><td>\(90^\circ\)</td><td>\(\frac{\pi}{2}\)</td></tr>
+            <tr><td>\(60^\circ\)</td><td>\(\frac{\pi}{3}\)</td></tr>
+            <tr><td>\(45^\circ\)</td><td>\(\frac{\pi}{4}\)</td></tr>
+            <tr><td>\(30^\circ\)</td><td>\(\frac{\pi}{6}\)</td></tr>
+        </table>
+    </div>
+
+    <p><strong>Trigonometric Functions Definitions:</strong> For an angle \(\theta\) in standard position with point \(P(x,y)\) on the terminal side and \(r = \sqrt{x^2 + y^2}\):</p>
+    <ul>
+        <li>\(\sin \theta = \frac{y}{r}\), \(\cos \theta = \frac{x}{r}\), \(\tan \theta = \frac{y}{x}\)</li>
+        <li>\(\csc \theta = \frac{r}{y}\), \(\sec \theta = \frac{r}{x}\), \(\cot \theta = \frac{x}{y}\)</li>
+    </ul>
+
+    <div class="diagram-container">
+        <svg width="400" height="220" viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#111827" rx="8"/>
+            <text x="200" y="25" fill="#f8fafc" font-size="12" text-anchor="middle" font-weight="bold">Graph of \(y = \sin x\) and \(y = \cos x\)</text>
+            
+            <rect x="20" y="60" width="160" height="60" fill="#14b8a6" rx="8"/>
+            <text x="100" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">🌊 \(y = \sin x\)</text>
+            <text x="100" y="105" fill="#111827" font-size="8" text-anchor="middle">Period \(2\pi\), Amplitude 1</text>
+
+            <rect x="220" y="60" width="160" height="60" fill="#f43f5e" rx="8"/>
+            <text x="300" y="85" fill="#111827" font-size="10" text-anchor="middle" font-weight="bold">🌊 \(y = \cos x\)</text>
+            <text x="300" y="105" fill="#111827" font-size="8" text-anchor="middle">Period \(2\pi\), Amplitude 1</text>
+
+            <text x="200" y="160" fill="#f8fafc" font-size="10" text-anchor="middle">📖 Both are periodic with period \(2\pi\).</text>
+        </svg>
+    </div>
+
+    <p><strong>Periodic Functions:</strong> A function \(f(x)\) is <strong>periodic</strong> if \(f(x+p) = f(x)\) for some \(p\). The smallest such \(p\) is the <strong>period</strong>. The <strong>amplitude</strong> is \(A = \frac{1}{2}(\max f - \min f)\).</p>
+
+    <div class="table-container">
+        <table>
+            <tr><th>Function</th><th>Domain</th><th>Period</th></tr>
+            <tr><td>\(\sin x, \cos x\)</td><td>All real numbers</td><td>\(2\pi\)</td></tr>
+            <tr><td>\(\tan x, \sec x\)</td><td>\(x \neq \frac{\pi}{2} + n\pi\)</td><td>\(\pi\)</td></tr>
+            <tr><td>\(\csc x, \cot x\)</td><td>\(x \neq n\pi\)</td><td>\(2\pi\)</td></tr>
+        </table>
+    </div>
+
+    <div class="cheat-notes">
+        <h4>📌 Cheat Notes: Key Points to Remember (Part 7)</h4>
+        <ul>
+            <li><strong>Exponential Functions:</strong> \(y = b^x\) (\(b > 0, b \neq 1\)). Domain: \(\mathbb{R}\), Range: \((0, \infty)\).</li>
+            <li><strong>Logarithmic Functions:</strong> \(y = \log_b x\) is the inverse of \(y = b^x\). Domain: \((0, \infty)\), Range: \(\mathbb{R}\).</li>
+            <li><strong>Logarithmic Properties:</strong> Product, Quotient, Power Rules.</li>
+            <li><strong>Trigonometric Functions:</strong> Defined on the unit circle. Periods: \(\sin, \cos = 2\pi\); \(\tan = \pi\).</li>
+            <li><strong>Identities:</strong> \(\sin^2 x + \cos^2 x = 1\), \(\tan^2 x + 1 = \sec^2 x\).</li>
+        </ul>
+    </div>
+</div>

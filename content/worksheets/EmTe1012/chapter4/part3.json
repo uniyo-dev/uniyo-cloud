@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 4,
+    "title": "Part 3 Practice: IoT Tools, Platforms, and Smart Applications",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Which of the following is NOT listed as an IoT platform in the module?",
+            "options": [
+                "A) KAA",
+                "B) SiteWhere",
+                "C) ThingSpeak",
+                "D) Microsoft Word"
+            ],
+            "correct_answer": "D) Microsoft Word",
+            "explanation": "The module lists KAA, SiteWhere, ThingSpeak, DeviceHive, Zetta, and ThingsBoard. Microsoft Word is a word processing software, not an IoT platform.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "Which IoT platform is known for integrating with Alexa and supporting big data solutions like Apache Spark and Cassandra?",
+            "options": [
+                "A) KAA",
+                "B) DeviceHive",
+                "C) ThingSpeak",
+                "D) Zetta"
+            ],
+            "correct_answer": "B) DeviceHive",
+            "explanation": "The module states: 'DeviceHive: Directly integrate with Alexa... It supports Big data solutions such as ElasticSearch, Apache Spark, Cassandra and Kafka for real-time and batch processing.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the primary benefit of IoT in Smart Homes regarding appliances?",
+            "options": [
+                "A) They can only be used manually.",
+                "B) Appliances can be remotely controlled, monitored, and can even detect expiry dates and create grocery lists via smartphone apps.",
+                "C) They consume more energy.",
+                "D) They require physical keys to operate."
+            ],
+            "correct_answer": "B) Appliances can be remotely controlled, monitored, and can even detect expiry dates and create grocery lists via smartphone apps.",
+            "explanation": "The module states: 'Smart Home Appliances: Refrigerators with LCD screen telling what's inside, food that's about to expire, ingredients you need to buy... Washing machines allowing you to monitor the laundry remotely...'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "How does IoT improve waste management in Smart Cities?",
+            "options": [
+                "A) By ignoring waste levels.",
+                "B) By detecting rubbish levels in containers using RFID tags to optimize trash collection routes.",
+                "C) By burning trash automatically.",
+                "D) By using manual inspection only."
+            ],
+            "correct_answer": "B) By detecting rubbish levels in containers using RFID tags to optimize trash collection routes.",
+            "explanation": "The module states: 'Waste Management: Detection of rubbish levels in containers to optimize the trash collection routes. Garbage cans and recycle bins with RFID tags allow the sanitation staff to see when garbage has been put out.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "In Smart Farming, what is the role of IoT in Green Houses?",
+            "options": [
+                "A) To ignore climate conditions.",
+                "B) To control micro-climate conditions to maximize the production of fruits and vegetables and their quality.",
+                "C) To increase water waste.",
+                "D) To remove all plants."
+            ],
+            "correct_answer": "B) To control micro-climate conditions to maximize the production of fruits and vegetables and their quality.",
+            "explanation": "The module states: 'Green Houses: Control micro-climate conditions to maximize the production of fruits and vegetables and their quality.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the application of IoT in the insurance industry?",
+            "options": [
+                "A) To replace all human employees.",
+                "B) To offer discounts for IoT wearables like Fitbit, encouraging healthier habits and customized policies.",
+                "C) To ignore customer health data.",
+                "D) To only process claims manually."
+            ],
+            "correct_answer": "B) To offer discounts for IoT wearables like Fitbit, encouraging healthier habits and customized policies.",
+            "explanation": "The module states: 'Insurance: Even the insurance industry can benefit from the IoT revolution. Insurance companies can offer their policyholders discounts for IoT wearables such as Fitbit. By employing fitness tracking, the insurer can offer customized policies and encourage healthier habits.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "Which of the following is an example of a Smart City feature described in the module?",
+            "options": [
+                "A) Structural Health monitoring of buildings and bridges.",
+                "B) Manual traffic control.",
+                "C) Paper-based waste collection.",
+                "D) Non-adaptive street lighting."
+            ],
+            "correct_answer": "A) Structural Health monitoring of buildings and bridges.",
+            "explanation": "The module states: 'Structural Health: Monitoring of vibrations and material conditions in buildings, bridges, and historical monuments.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What is the purpose of ThingSpeak as an IoT platform?",
+            "options": [
+                "A) To replace all other platforms.",
+                "B) To collect data in private channels, share data with public channels, and use MATLAB analytics and visualizations.",
+                "C) To only store data without analysis.",
+                "D) To disconnect devices from the internet."
+            ],
+            "correct_answer": "B) To collect data in private channels, share data with public channels, and use MATLAB analytics and visualizations.",
+            "explanation": "The module states: 'ThingSpeak: Collect data in private channels. Share data with public channels. MATLAB analytics and visualizations. Alerts. Event scheduling. App integrations. Worldwide community.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "How does IoT support predictive maintenance in manufacturing?",
+            "options": [
+                "A) By ignoring equipment health.",
+                "B) By using sensors on equipment to track performance and predict when maintenance is needed, preventing costly breakdowns.",
+                "C) By replacing all machines with manual labor.",
+                "D) By only using visual inspection."
+            ],
+            "correct_answer": "B) By using sensors on equipment to track performance and predict when maintenance is needed, preventing costly breakdowns.",
+            "explanation": "The module states: 'Other sensors mounted on those same machines can also track the performance of the machine, predicting when the unit will require maintenance, thereby preventing costly breakdowns.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is a key feature of the ThingsBoard IoT platform mentioned in the module?",
+            "options": [
+                "A) It only supports HTTP protocols.",
+                "B) It supports transport encryption for both MQTT and HTTP(s) protocols.",
+                "C) It does not support any data visualization.",
+                "D) It only works on a single device."
+            ],
+            "correct_answer": "B) It supports transport encryption for both MQTT and HTTP(s) protocols.",
+            "explanation": "The module states: 'ThingsBoard: ... Supports transport encryption for both MQTT and HTTP(s) protocols.'",
+            "difficulty": "hard"
+        }
+    ]
+}

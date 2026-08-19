@@ -1,0 +1,147 @@
+{
+    "course_code": "GeES1011",
+    "chapter": 2,
+    "title": "Part 1 Practice: Geology of Ethiopia",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Geology is the study of:",
+            "diagram": null,
+            "options": [
+                "A) Weather and climate",
+                "B) The Earth's structure, composition, and history",
+                "C) Population distribution",
+                "D) Political boundaries"
+            ],
+            "correct_answer": "B) The Earth's structure, composition, and history",
+            "explanation": "Geology studies the Earth's PHYSICAL structure (rocks, minerals), COMPOSITION (what it's made of), and HISTORY (how it changed over time). Weather/climate is Meteorology, population is Human Geography, political boundaries is Political Geography.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "ENDOGENIC forces originate from:",
+            "diagram": null,
+            "options": [
+                "A) The atmosphere",
+                "B) Inside the Earth",
+                "C) Ocean currents",
+                "D) Solar radiation"
+            ],
+            "correct_answer": "B) Inside the Earth",
+            "explanation": "ENDOGENIC (internal) forces come from INSIDE the Earth — from the mantle and core. They include folding, faulting, volcanism, and uplift. These forces BUILD UP the Earth's surface, creating mountains and plateaus.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "EXOGENIC forces include all EXCEPT:",
+            "diagram": null,
+            "options": [
+                "A) Weathering",
+                "B) Water erosion",
+                "C) Volcanism",
+                "D) Wind erosion"
+            ],
+            "correct_answer": "C) Volcanism",
+            "explanation": "VOLCANISM is an ENDOGENIC (internal) force — it comes from magma INSIDE the Earth. Weathering (A), water erosion (B), and wind erosion (D) are all EXOGENIC (external) forces that wear down the surface.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "Examine the diagram. What does the GREEN box represent?",
+            "diagram": "<svg width='350' height='150' viewBox='0 0 350 150'><rect width='350' height='150' fill='#111827' rx='8'/><rect x='15' y='30' width='150' height='90' rx='8' fill='#1a2332' stroke='#14b8a6' stroke-width='2'/><text x='90' y='55' text-anchor='middle' fill='#14b8a6' font-size='11' font-weight='bold'>???</text><text x='90' y='75' text-anchor='middle' fill='#94a3b8' font-size='8'>Folding, Faulting</text><text x='90' y='95' text-anchor='middle' fill='#94a3b8' font-size='8'>Volcanism</text><rect x='185' y='30' width='150' height='90' rx='8' fill='#1a2332' stroke='#f43f5e' stroke-width='2'/><text x='260' y='55' text-anchor='middle' fill='#f43f5e' font-size='11' font-weight='bold'>EXOGENIC</text><text x='260' y='75' text-anchor='middle' fill='#94a3b8' font-size='8'>Weathering</text><text x='260' y='95' text-anchor='middle' fill='#94a3b8' font-size='8'>Erosion</text></svg>",
+            "options": [
+                "A) Exogenic",
+                "B) Endogenic",
+                "C) Atmospheric",
+                "D) Oceanic"
+            ],
+            "correct_answer": "B) Endogenic",
+            "explanation": "The GREEN box (left) contains Folding, Faulting, and Volcanism — these are ENDOGENIC (internal) forces. The RED box (right) with Weathering and Erosion is EXOGENIC (external).",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "The Great Rift Valley in Ethiopia was formed by which ENDOGENIC process?",
+            "diagram": null,
+            "options": [
+                "A) Wind erosion",
+                "B) Faulting",
+                "C) Glaciation",
+                "D) River deposition"
+            ],
+            "correct_answer": "B) Faulting",
+            "explanation": "The Great Rift Valley was formed by FAULTING — the breaking and downward movement of rock blocks due to tectonic forces. This is an ENDOGENIC process. Wind erosion, glaciation, and river deposition are EXOGENIC.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "The Earth is approximately how old?",
+            "diagram": null,
+            "options": [
+                "A) 1 million years",
+                "B) 4.6 billion years",
+                "C) 100 million years",
+                "D) 10,000 years"
+            ],
+            "correct_answer": "B) 4.6 billion years",
+            "explanation": "The Earth formed approximately 4.6 BILLION years ago. This vast time is divided into Eons, Eras, Periods, and Epochs. Human civilization is only about 10,000 years old — a tiny fraction of geological time.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 7,
+            "text": "Examine the time scale. Which is the OLDEST era?",
+            "diagram": "<svg width='350' height='180' viewBox='0 0 350 180'><rect width='350' height='180' fill='#111827' rx='8'/><rect x='20' y='30' width='310' height='25' rx='4' fill='#1a2332' stroke='#6d28d9' stroke-width='2'/><text x='175' y='48' text-anchor='middle' fill='#6d28d9' font-size='9' font-weight='bold'>PRECAMBRIAN</text><rect x='20' y='65' width='310' height='25' rx='4' fill='#1a2332' stroke='#14b8a6' stroke-width='2'/><text x='175' y='83' text-anchor='middle' fill='#14b8a6' font-size='9' font-weight='bold'>PALEOZOIC</text><rect x='20' y='100' width='310' height='25' rx='4' fill='#1a2332' stroke='#f59e0b' stroke-width='2'/><text x='175' y='118' text-anchor='middle' fill='#f59e0b' font-size='9' font-weight='bold'>MESOZOIC</text><rect x='20' y='135' width='310' height='25' rx='4' fill='#1a2332' stroke='#f43f5e' stroke-width='2'/><text x='175' y='153' text-anchor='middle' fill='#f43f5e' font-size='9' font-weight='bold'>CENOZOIC</text></svg>",
+            "options": [
+                "A) Precambrian",
+                "B) Paleozoic",
+                "C) Mesozoic",
+                "D) Cenozoic"
+            ],
+            "correct_answer": "A) Precambrian",
+            "explanation": "PRECAMBRIAN (purple, top) is the OLDEST era (4.6 billion to 541 million years ago). The order from oldest to youngest: Precambrian → Paleozoic → Mesozoic → Cenozoic. Superposition principle: oldest at bottom, but in this diagram the oldest is shown at TOP for simplicity.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "RELATIVE dating of rocks:",
+            "diagram": null,
+            "options": [
+                "A) Gives exact age in years",
+                "B) Determines which rocks are OLDER or YOUNGER (no exact age)",
+                "C) Uses radioactive decay",
+                "D) Only works on living things"
+            ],
+            "correct_answer": "B) Determines which rocks are OLDER or YOUNGER (no exact age)",
+            "explanation": "RELATIVE dating only tells you the ORDER of events (which is older/younger) WITHOUT giving an exact age. ABSOLUTE dating gives the EXACT age in years. Carbon-14 and uranium dating are ABSOLUTE methods.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 9,
+            "text": "Carbon-14 dating is used for:",
+            "diagram": null,
+            "options": [
+                "A) Rocks billions of years old",
+                "B) Organic materials up to ~50,000 years old",
+                "C) Dinosaur fossils only",
+                "D) Measuring wind erosion"
+            ],
+            "correct_answer": "B) Organic materials up to ~50,000 years old",
+            "explanation": "Carbon-14 dating works on ORGANIC materials (once-living things) up to about 50,000 years old. For older rocks (millions/billions of years), geologists use Uranium-238, Potassium-Argon, or Rubidium-Strontium dating.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "The principle of SUPERPOSITION states:",
+            "diagram": null,
+            "options": [
+                "A) Older rocks are on TOP of younger rocks",
+                "B) Older rocks are at BOTTOM, younger on TOP",
+                "C) All rocks are the same age",
+                "D) Rocks cannot be dated"
+            ],
+            "correct_answer": "B) Older rocks are at BOTTOM, younger on TOP",
+            "explanation": "SUPERPOSITION: In undisturbed rock layers, the OLDEST rocks are at the BOTTOM and the YOUNGEST are at the TOP. This is because new sediments are deposited ON TOP of older ones. This is a key principle of RELATIVE dating.",
+            "difficulty": "medium"
+        }
+    ]
+}

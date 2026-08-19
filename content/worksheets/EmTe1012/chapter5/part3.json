@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 5,
+    "title": "Part 3 Practice: Applications of AR Systems",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is a major advantage of using AR in education regarding learning materials?",
+            "options": [
+                "A) It requires expensive physical models.",
+                "B) It allows avoiding investments in physical materials, as students can access AR models anytime.",
+                "C) It only works with textbooks.",
+                "D) It replaces teachers entirely."
+            ],
+            "correct_answer": "B) It allows avoiding investments in physical materials, as students can access AR models anytime.",
+            "explanation": "The module states: 'Using AR technology allows for avoiding investments in physical materials. Besides, students can get access to learning materials and interact with them anytime.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "How does AR contribute to 'Higher retention' in education?",
+            "options": [
+                "A) By using only text-based learning.",
+                "B) By allowing students to use different senses to interact with AR models, helping them retain knowledge for a longer time.",
+                "C) By making lessons longer.",
+                "D) By replacing all visual aids."
+            ],
+            "correct_answer": "B) By allowing students to use different senses to interact with AR models, helping them retain knowledge for a longer time.",
+            "explanation": "The module states: 'When learning with AR technology, students use different senses and retain more knowledge for a long time.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the purpose of the 'AyeDecide' medical app mentioned in the module?",
+            "options": [
+                "A) To perform surgery automatically.",
+                "B) To use AR to simulate the vision harmed by different diseases, helping patients understand and describe their symptoms correctly.",
+                "C) To find veins for IV injections.",
+                "D) To monitor blood sugar levels."
+            ],
+            "correct_answer": "B) To use AR to simulate the vision harmed by different diseases, helping patients understand and describe their symptoms correctly.",
+            "explanation": "The module states: 'To increase patients' education, medical app AyeDecide is using augmented reality to show the simulation of the vision, harmed by the different diseases. It helps patients to understand their conditions and describe correctly their symptoms.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 4,
+            "text": "How does the AccuVein device use AR to improve nursing care?",
+            "options": [
+                "A) By replacing nurses with robots.",
+                "B) By using a handheld scanner that projects on the skin to show patients' veins, increasing successful IV insertions by 3.5 times.",
+                "C) By monitoring heart rate only.",
+                "D) By performing surgeries."
+            ],
+            "correct_answer": "B) By using a handheld scanner that projects on the skin to show patients' veins, increasing successful IV insertions by 3.5 times.",
+            "explanation": "The module states: 'The AccuVein uses augmented reality to cope with this negative statistic. A handheld scanner projects on the skin and shows the patients' veins. It increases the successful finding of the vein from the first try in 3.5 times.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "In the context of AR in surgery, what does the Augmedics headset provide to spine surgeons?",
+            "options": [
+                "A) A 2D textbook diagram.",
+                "B) An AR overlay of a 3D model of the CT-scan on the spine, giving the surgeon 'X-ray' vision.",
+                "C) A voice assistant.",
+                "D) A virtual reality game."
+            ],
+            "correct_answer": "B) An AR overlay of a 3D model of the CT-scan on the spine, giving the surgeon 'X-ray' vision.",
+            "explanation": "The module states: 'The Israeli startup Augmedics has created an augmented reality headset for spine surgeons. This technology overlays a 3D model of the CT-scan on the spine, so the surgeon gets some kind of \"X-ray\" vision.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the purpose of Google's smart contact lens mentioned in the AR in Medicine section?",
+            "options": [
+                "A) To take photos.",
+                "B) To measure glucose levels in tears to help people with diabetes manage their condition.",
+                "C) To play games.",
+                "D) To navigate city streets."
+            ],
+            "correct_answer": "B) To measure glucose levels in tears to help people with diabetes manage their condition.",
+            "explanation": "The module states: 'In 2014, Google revealed the plans for creating a smart contact lens (Google Contact Lens), in which the main function will be to measure the glucose levels in the tears.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is a notable example of AR being used in entertainment and gaming?",
+            "options": [
+                "A) Microsoft Word",
+                "B) Pokémon GO",
+                "C) Google Maps",
+                "D) Adobe Photoshop"
+            ],
+            "correct_answer": "B) Pokémon GO",
+            "explanation": "The module states: 'The AR games were praised for increasing physical activity in people — you actually have to move around to find your target, for example, Pokémon GO.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "What is the EHBO app used for in the context of AR navigation?",
+            "options": [
+                "A) To find nearby restaurants.",
+                "B) To find the nearest automated external defibrillators (AEDs).",
+                "C) To navigate to museums.",
+                "D) To book hotels."
+            ],
+            "correct_answer": "B) To find the nearest automated external defibrillators (AEDs).",
+            "explanation": "The module states: 'The EHBO app helps to find the nearest to you AEDs (automated external defibrillators).'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "How can AR enhance live music performances?",
+            "options": [
+                "A) By replacing the band with holograms.",
+                "B) By illustrating the story told by a track or displaying the way it was created by the band.",
+                "C) By removing all instruments.",
+                "D) By making the music silent."
+            ],
+            "correct_answer": "B) By illustrating the story told by a track or displaying the way it was created by the band.",
+            "explanation": "The module states: 'Augmented reality can enhance live performances by illustrating the story told by a track or displaying the way it was created by the band.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is one way AR is used in theater for accessibility purposes?",
+            "options": [
+                "A) By replacing actors with robots.",
+                "B) By overlaying virtual objects over the real environment to provide subtitling for translation or hearing-impaired visitors.",
+                "C) By removing all visual effects.",
+                "D) By only using audio descriptions."
+            ],
+            "correct_answer": "B) By overlaying virtual objects over the real environment to provide subtitling for translation or hearing-impaired visitors.",
+            "explanation": "The module states: 'The possibility to overlay virtual objects over the real environment can be used, for example, for subtitling in various theater shows.'",
+            "difficulty": "hard"
+        }
+    ]
+}

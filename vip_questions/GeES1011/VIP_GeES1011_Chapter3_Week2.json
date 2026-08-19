@@ -1,0 +1,288 @@
+{
+    "course_code": "GeES1011",
+    "chapter_number": 3,
+    "week_number": 2,
+    "title": "VIP Chapter 3 Week 2: Southeastern Highlands and Lowlands",
+    "questions": [
+        {
+            "id": 1,
+            "text": "Mount Chilalo is found in which highland?",
+            "diagram": null,
+            "options": [
+                "A) Bale",
+                "B) Arsi",
+                "C) Sidama",
+                "D) Hararge"
+            ],
+            "correct_answer": "B) Arsi",
+            "explanation": "Mount Chilalo (4,036m) is in Arsi Highlands.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 2,
+            "text": "Bale Mountains National Park protects:",
+            "diagram": null,
+            "options": [
+                "A) Lions",
+                "B) Ethiopian wolf",
+                "C) Elephants",
+                "D) Gorillas"
+            ],
+            "correct_answer": "B) Ethiopian wolf",
+            "explanation": "Bale NP = home of rare Ethiopian wolf.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 3,
+            "text": "Which highland produces the MOST coffee?",
+            "diagram": null,
+            "options": [
+                "A) Arsi",
+                "B) Bale",
+                "C) Sidama",
+                "D) Hararge"
+            ],
+            "correct_answer": "C) Sidama",
+            "explanation": "Sidama = famous arabica coffee region.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 4,
+            "text": "Harar city is a UNESCO World Heritage site located in:",
+            "diagram": null,
+            "options": [
+                "A) Arsi",
+                "B) Bale",
+                "C) Sidama",
+                "D) Hararge"
+            ],
+            "correct_answer": "D) Hararge",
+            "explanation": "Harar is on Hararge Plateau.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 5,
+            "text": "Chat (khat) production is associated with:",
+            "diagram": null,
+            "options": [
+                "A) Arsi",
+                "B) Bale",
+                "C) Sidama",
+                "D) Hararge"
+            ],
+            "correct_answer": "D) Hararge",
+            "explanation": "Hararge is known for chat production.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 6,
+            "text": "The Wabishebelle River is important because:",
+            "diagram": null,
+            "options": [
+                "A) It flows into Egypt",
+                "B) It's the longest river entirely in Ethiopia",
+                "C) It's the shortest river",
+                "D) It never floods"
+            ],
+            "correct_answer": "B) It's the longest river entirely in Ethiopia",
+            "explanation": "Wabishebelle = longest river within Ethiopia.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 7,
+            "text": "The Ghenalle Plain is located in which region?",
+            "diagram": null,
+            "options": [
+                "A) Amhara",
+                "B) Somali",
+                "C) Oromia",
+                "D) Tigray"
+            ],
+            "correct_answer": "B) Somali",
+            "explanation": "Ghenalle Plain in Somali region (southeast).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Bale Massifs contain which peak?",
+            "diagram": null,
+            "options": [
+                "A) Ras Dashen",
+                "B) Mount Batu",
+                "C) Mount Chilalo",
+                "D) Mount Zuqualla"
+            ],
+            "correct_answer": "B) Mount Batu",
+            "explanation": "Mount Batu (4,307m) in Bale Massifs.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "The Southeastern Lowlands are characterized by:",
+            "diagram": null,
+            "options": [
+                "A) Dense forests",
+                "B) Semi-arid climate",
+                "C) Heavy snowfall",
+                "D) Permanent glaciers"
+            ],
+            "correct_answer": "B) Semi-arid climate",
+            "explanation": "Southeastern Lowlands = semi-arid.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "Arsi Highlands are known for:",
+            "diagram": null,
+            "options": [
+                "A) Coffee",
+                "B) Wheat and barley",
+                "C) Chat",
+                "D) Gold mining"
+            ],
+            "correct_answer": "B) Wheat and barley",
+            "explanation": "Arsi = wheat/barley production.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 11,
+            "text": "The Hararge Plateau is composed of:",
+            "diagram": null,
+            "options": [
+                "A) Volcanic basalt only",
+                "B) Sandstone and limestone",
+                "C) Granite only",
+                "D) Loose sand"
+            ],
+            "correct_answer": "B) Sandstone and limestone",
+            "explanation": "Hararge = sandstone/limestone (sedimentary).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 12,
+            "text": "Which highland is CLOSEST to Addis Ababa?",
+            "diagram": null,
+            "options": [
+                "A) Bale",
+                "B) Arsi",
+                "C) Hararge",
+                "D) Sidama"
+            ],
+            "correct_answer": "B) Arsi",
+            "explanation": "Arsi is closest to Addis Ababa among southeastern highlands.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 13,
+            "text": "The Wabishebelle Plain is used for:",
+            "diagram": null,
+            "options": [
+                "A) Dense forest logging",
+                "B) Irrigation agriculture and pastoralism",
+                "C) Rice paddies",
+                "D) Industrial zones"
+            ],
+            "correct_answer": "B) Irrigation agriculture and pastoralism",
+            "explanation": "Wabishebelle Plain = irrigation + pastoralism.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 14,
+            "text": "The Ghenalle River drains toward:",
+            "diagram": null,
+            "options": [
+                "A) Lake Tana",
+                "B) Indian Ocean (via Somalia)",
+                "C) Nile River",
+                "D) Lake Turkana"
+            ],
+            "correct_answer": "B) Indian Ocean (via Somalia)",
+            "explanation": "Ghenalle and Wabishebelle flow toward Somalia.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 15,
+            "text": "Bale Highlands elevation reaches up to:",
+            "diagram": null,
+            "options": [
+                "A) 2,000m",
+                "B) 3,000m",
+                "C) 4,300m",
+                "D) 5,000m"
+            ],
+            "correct_answer": "C) 4,300m",
+            "explanation": "Bale reaches 4,307m (Mount Batu).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 16,
+            "text": "Sidama Highlands are located in which region?",
+            "diagram": null,
+            "options": [
+                "A) Amhara",
+                "B) Sidama region",
+                "C) Tigray",
+                "D) Afar"
+            ],
+            "correct_answer": "B) Sidama region",
+            "explanation": "Sidama Highlands in Sidama regional state.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 17,
+            "text": "The Ethiopian wolf is:",
+            "diagram": null,
+            "options": [
+                "A) Found worldwide",
+                "B) Endemic to Ethiopia",
+                "C) Extinct",
+                "D) A domestic dog breed"
+            ],
+            "correct_answer": "B) Endemic to Ethiopia",
+            "explanation": "Ethiopian wolf = endemic (found only in Ethiopia).",
+            "difficulty": "hard"
+        },
+        {
+            "id": 18,
+            "text": "Hararge Plateau elevation ranges:",
+            "diagram": null,
+            "options": [
+                "A) 500-1000m",
+                "B) 1500-3000m",
+                "C) 3000-4500m",
+                "D) Below 500m"
+            ],
+            "correct_answer": "B) 1500-3000m",
+            "explanation": "Hararge Plateau = 1500-3000 meters.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 19,
+            "text": "Which river is NOT in southeastern Ethiopia?",
+            "diagram": null,
+            "options": [
+                "A) Ghenalle",
+                "B) Wabishebelle",
+                "C) Tekeze",
+                "D) None of these"
+            ],
+            "correct_answer": "C) Tekeze",
+            "explanation": "Tekeze is in NORTHERN Ethiopia.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 20,
+            "text": "The Southeastern Highlands are SEPARATED from Western Highlands by:",
+            "diagram": null,
+            "options": [
+                "A) Abay River",
+                "B) Rift Valley",
+                "C) Lake Tana",
+                "D) Simien Mountains"
+            ],
+            "correct_answer": "B) Rift Valley",
+            "explanation": "Rift Valley separates eastern and western highlands.",
+            "difficulty": "hard"
+        }
+    ]
+}

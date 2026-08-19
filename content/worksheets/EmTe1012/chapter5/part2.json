@@ -1,0 +1,137 @@
+{
+    "course_code": "EmTe1012",
+    "chapter": 5,
+    "title": "Part 2 Practice: Architecture of AR Systems",
+    "questions": [
+        {
+            "id": 1,
+            "text": "What are the three main blocks of the Augmented Reality Systems (ARS) architecture?",
+            "options": [
+                "A) CPU, GPU, RAM",
+                "B) Infrastructure Tracker Unit, Processing Unit, Visual Unit",
+                "C) Sensor, Actuator, Controller",
+                "D) Input, Output, Storage"
+            ],
+            "correct_answer": "B) Infrastructure Tracker Unit, Processing Unit, Visual Unit",
+            "explanation": "The module states: 'The first Augmented Reality Systems (ARS) were usually designed with a basis on three main blocks... (1) Infrastructure Tracker Unit, (2) Processing Unit, and (3) Visual Unit.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "What is the primary function of the Infrastructure Tracker Unit in an AR system?",
+            "options": [
+                "A) To display the mixed reality to the user.",
+                "B) To collect data from the real world and send it to the Processing Unit.",
+                "C) To mix the virtual content with the real content.",
+                "D) To generate virtual objects only."
+            ],
+            "correct_answer": "B) To collect data from the real world and send it to the Processing Unit.",
+            "explanation": "The module states: 'The Infrastructure Tracker Unit was responsible for collecting data from the real world, sending them to the Processing Unit.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What does the Processing Unit do in the AR system architecture?",
+            "options": [
+                "A) It only collects data.",
+                "B) It mixes the virtual content with the real content and sends the result to the Visual Unit.",
+                "C) It displays the final image to the user.",
+                "D) It captures video input only."
+            ],
+            "correct_answer": "B) It mixes the virtual content with the real content and sends the result to the Visual Unit.",
+            "explanation": "The module states: 'The Processing Unit, which mixed the virtual content with the real content and sent the result to the Video Out module of the Visual Unit.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "What are the two components of the Visual Unit in the AR architecture?",
+            "options": [
+                "A) CPU and GPU",
+                "B) Video In and Video Out",
+                "C) Camera and Microphone",
+                "D) Sensor and Actuator"
+            ],
+            "correct_answer": "B) Video In and Video Out",
+            "explanation": "The module states: 'Some designs used a Video In, to acquire required data for the Infrastructure Tracker Unit. The Visual Unit is classified into two types... Video In and Video Out.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "What is the difference between Video see-through and Optical see-through visualization technologies?",
+            "options": [
+                "A) Video see-through uses a closed-view HMD; Optical see-through uses an open-view HMD with optical combiners.",
+                "B) They are exactly the same.",
+                "C) Video see-through is only for VR.",
+                "D) Optical see-through is only for MR."
+            ],
+            "correct_answer": "A) Video see-through uses a closed-view HMD; Optical see-through uses an open-view HMD with optical combiners.",
+            "explanation": "The module states: 'Video see-through: It uses a Head-Mounted Display (HMD) that employs a video-mixing and displays the merged images on a closed-view HMD. Optical see-through: It uses an HMD that employs optical combiners to merge the images within an open-view HMD.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is a major limitation of Head-Mounted Displays (HMDs) in AR according to the module?",
+            "options": [
+                "A) They are too cheap and easy to produce.",
+                "B) They lack in ergonomics, have high prices, and low mobility due to size and connectivity.",
+                "C) They have perfect ergonomics and are very affordable.",
+                "D) They are highly mobile and easy to use."
+            ],
+            "correct_answer": "B) They lack in ergonomics, have high prices, and low mobility due to size and connectivity.",
+            "explanation": "The module states: 'HMDs are currently the dominant display technology in the AR field. However, they lack in several aspects, such as ergonomics, high prices, and relatively low mobility due to their sizes and connectivity features.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is an alternative approach to developing AR systems besides using HMDs?",
+            "options": [
+                "A) Using only VR headsets.",
+                "B) Using monitors for indirect view and tablets for direct view.",
+                "C) Using only audio devices.",
+                "D) Using paper-based displays."
+            ],
+            "correct_answer": "B) Using monitors for indirect view and tablets for direct view.",
+            "explanation": "The module states: 'Alternative approaches to developing ARS involve the use of monitors and tablets. Monitors are used as an option for indirect view... Tablets are used in direct view.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 8,
+            "text": "Why do HMDs have difficulty with 'collision' in AR environments?",
+            "options": [
+                "A) Because they are too lightweight.",
+                "B) Because they place virtual interactive zones to the user, making it hard to interact with multiple points at different depths.",
+                "C) Because they are too small.",
+                "D) Because they do not have screens."
+            ],
+            "correct_answer": "B) Because they place virtual interactive zones to the user, making it hard to interact with multiple points at different depths.",
+            "explanation": "The module states: 'An additional problem involving HMD is the interaction with the real environment, which places virtual interactive zones to the user, making the collision with these zones hard due to the difficulty to interact with multiple points in different depths.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "In the AR architecture, what is the role of the 'Video Out' module?",
+            "options": [
+                "A) To capture real-world video for tracking.",
+                "B) To display the mixed realities (virtual + real) to the user.",
+                "C) To delete video data.",
+                "D) To store video files only."
+            ],
+            "correct_answer": "B) To display the mixed realities (virtual + real) to the user.",
+            "explanation": "The module states: 'The Processing Unit... sent the result to the Video Out module of the Visual Unit.' The Video Out is responsible for presenting the final augmented view to the user.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is the function of the 'Video In' module in the AR architecture?",
+            "options": [
+                "A) To display the final mixed image.",
+                "B) To acquire required data for the Infrastructure Tracker Unit.",
+                "C) To mix the virtual and real worlds.",
+                "D) To send data to the cloud."
+            ],
+            "correct_answer": "B) To acquire required data for the Infrastructure Tracker Unit.",
+            "explanation": "The module states: 'Some designs used a Video In, to acquire required data for the Infrastructure Tracker Unit.'",
+            "difficulty": "hard"
+        }
+    ]
+}

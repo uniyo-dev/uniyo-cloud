@@ -1,0 +1,177 @@
+{
+  "course_code": "GeES1011",
+  "chapter": 7,
+  "title": "Part 5 Practice: Languages and Settlement Types in Ethiopia",
+  "questions": [
+    {
+      "id": 1,
+      "text": "The diagram below shows language families in Ethiopia. Which language family does Oromo belong to?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Language Families of Ethiopia</text>\n                    <rect x=\"15\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"1.5\"/>\n                    <text x=\"30\" y=\"48\" fill=\"#38bdf8\" font-size=\"7\" font-weight=\"bold\">Cushitic</text>\n                    <text x=\"25\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Oromo</text>\n                    <text x=\"25\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Somali</text>\n                    <text x=\"25\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Afar</text>\n                    <text x=\"25\" y=\"102\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Sidama</text>\n                    <rect x=\"110\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"125\" y=\"48\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Semitic</text>\n                    <text x=\"120\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Amharic</text>\n                    <text x=\"120\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Tigrinya</text>\n                    <text x=\"120\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Gurage</text>\n                    <rect x=\"205\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n                    <text x=\"220\" y=\"48\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">Omotic</text>\n                    <text x=\"215\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Wolaytta</text>\n                    <text x=\"215\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Gamo</text>\n                    <text x=\"215\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Kafa</text>\n                </svg>"
+      },
+      "options": [
+        "A) Semitic",
+        "B) Cushitic",
+        "C) Omotic",
+        "D) Nilo-Saharan"
+      ],
+      "correct_answer": "B) Cushitic",
+      "explanation": "Correct: Oromo belongs to the Cushitic branch of Afro-Asiatic. A is wrong\u2014Amharic and Tigrinya are Semitic. C is wrong\u2014Wolaytta and Kafa are Omotic. D is wrong\u2014Nuer and Anuak are Nilo-Saharan.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "text": "The diagram shows settlement types in Ethiopia. Which type is characterized by low population density and agricultural livelihoods?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Settlement Types in Ethiopia</text>\n                    <rect x=\"15\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"30\" y=\"48\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Rural</text>\n                    <text x=\"25\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Low density</text>\n                    <text x=\"25\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Agriculture</text>\n                    <text x=\"25\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Tukul houses</text>\n                    <text x=\"25\" y=\"102\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Dispersed</text>\n                    <rect x=\"110\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n                    <text x=\"125\" y=\"48\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">Temporary</text>\n                    <text x=\"120\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Mobile</text>\n                    <text x=\"120\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Pastoral</text>\n                    <text x=\"120\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Seasonal</text>\n                    <rect x=\"205\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f43f5e\" stroke-width=\"1.5\"/>\n                    <text x=\"220\" y=\"48\" fill=\"#f43f5e\" font-size=\"7\" font-weight=\"bold\">Permanent</text>\n                    <text x=\"215\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Year-round</text>\n                    <text x=\"215\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Infrastructure</text>\n                    <text x=\"215\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Services</text>\n                </svg>"
+      },
+      "options": [
+        "A) Permanent settlements",
+        "B) Rural settlements",
+        "C) Temporary settlements",
+        "D) Urban settlements"
+      ],
+      "correct_answer": "B) Rural settlements",
+      "explanation": "Correct: Rural settlements have low density and agricultural livelihoods. A is wrong\u2014permanent settlements are year-round with infrastructure. C is wrong\u2014temporary settlements are mobile. D is wrong\u2014urban settlements have high density.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "text": "The diagram shows language families. Which branch does Amharic belong to?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Language Families of Ethiopia</text>\n                    <rect x=\"15\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"1.5\"/>\n                    <text x=\"30\" y=\"48\" fill=\"#38bdf8\" font-size=\"7\" font-weight=\"bold\">Cushitic</text>\n                    <text x=\"25\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Oromo</text>\n                    <text x=\"25\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Somali</text>\n                    <text x=\"25\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Afar</text>\n                    <rect x=\"110\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"125\" y=\"48\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Semitic</text>\n                    <text x=\"120\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Amharic</text>\n                    <text x=\"120\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Tigrinya</text>\n                    <text x=\"120\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Gurage</text>\n                    <rect x=\"205\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n                    <text x=\"220\" y=\"48\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">Omotic</text>\n                    <text x=\"215\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Wolaytta</text>\n                    <text x=\"215\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Gamo</text>\n                    <text x=\"215\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Kafa</text>\n                </svg>"
+      },
+      "options": [
+        "A) Cushitic",
+        "B) Semitic",
+        "C) Omotic",
+        "D) Nilo-Saharan"
+      ],
+      "correct_answer": "B) Semitic",
+      "explanation": "Correct: Amharic belongs to the Semitic branch. A is wrong\u2014Cushitic includes Oromo, Somali, Afar. C is wrong\u2014Omotic includes Wolaytta, Gamo, Kafa. D is wrong\u2014Nilo-Saharan includes Nuer, Anuak.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 4,
+      "text": "The diagram below shows settlement patterns. What is the most common settlement pattern in the Ethiopian highlands?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Settlement Patterns</text>\n                    <rect x=\"15\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"30\" y=\"48\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Dispersed</text>\n                    <text x=\"25\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Isolated</text>\n                    <text x=\"25\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">farmsteads</text>\n                    <text x=\"25\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Highlands</text>\n                    <text x=\"25\" y=\"102\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Agriculture</text>\n                    <rect x=\"110\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n                    <text x=\"125\" y=\"48\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">Nucleated</text>\n                    <text x=\"120\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Clustered</text>\n                    <text x=\"120\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Lowlands</text>\n                    <text x=\"120\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Water sources</text>\n                    <rect x=\"205\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f43f5e\" stroke-width=\"1.5\"/>\n                    <text x=\"220\" y=\"48\" fill=\"#f43f5e\" font-size=\"7\" font-weight=\"bold\">Linear</text>\n                    <text x=\"215\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Along roads</text>\n                    <text x=\"215\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Along rivers</text>\n                </svg>"
+      },
+      "options": [
+        "A) Dispersed settlement",
+        "B) Nucleated settlement",
+        "C) Linear settlement",
+        "D) Urban settlement"
+      ],
+      "correct_answer": "A) Dispersed settlement",
+      "explanation": "Correct: Dispersed settlement is common in highlands. B is wrong\u2014nucleated is common in lowlands. C is wrong\u2014linear is along roads/rivers. D is wrong\u2014urban is not a pattern but a type.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 5,
+      "text": "The diagram shows language families. Which language belongs to the Nilo-Saharan family?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Language Families of Ethiopia</text>\n                    <rect x=\"15\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"1.5\"/>\n                    <text x=\"30\" y=\"48\" fill=\"#38bdf8\" font-size=\"7\" font-weight=\"bold\">Cushitic</text>\n                    <text x=\"25\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Oromo</text>\n                    <text x=\"25\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Somali</text>\n                    <rect x=\"110\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"125\" y=\"48\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Semitic</text>\n                    <text x=\"120\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Amharic</text>\n                    <text x=\"120\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Tigrinya</text>\n                    <rect x=\"205\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n                    <text x=\"220\" y=\"48\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">Omotic</text>\n                    <text x=\"215\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Wolaytta</text>\n                    <text x=\"215\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Gamo</text>\n                </svg>"
+      },
+      "options": [
+        "A) Oromo",
+        "B) Amharic",
+        "C) Nuer",
+        "D) Wolaytta"
+      ],
+      "correct_answer": "C) Nuer",
+      "explanation": "Correct: Nuer belongs to Nilo-Saharan family. A is wrong\u2014Oromo is Cushitic. B is wrong\u2014Amharic is Semitic. D is wrong\u2014Wolaytta is Omotic.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 6,
+      "text": "The diagram shows types of temporary settlements. Which group in Ethiopia is known for pastoral camps?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Temporary Settlements</text>\n                    <rect x=\"15\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"30\" y=\"48\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Pastoral</text>\n                    <text x=\"25\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Afar</text>\n                    <text x=\"25\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Somali</text>\n                    <text x=\"25\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Oromo</text>\n                    <text x=\"25\" y=\"102\" fill=\"#f8fafc\" font-size=\"6\">\u2022 pastoralists</text>\n                    <rect x=\"110\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n                    <text x=\"125\" y=\"48\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">Seasonal</text>\n                    <text x=\"120\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Agricultural</text>\n                    <text x=\"120\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Hunting</text>\n                    <text x=\"120\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Gathering</text>\n                    <rect x=\"205\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f43f5e\" stroke-width=\"1.5\"/>\n                    <text x=\"220\" y=\"48\" fill=\"#f43f5e\" font-size=\"7\" font-weight=\"bold\">Refugee</text>\n                    <text x=\"215\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Camps</text>\n                    <text x=\"215\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Displaced</text>\n                    <text x=\"215\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Temporary</text>\n                </svg>"
+      },
+      "options": [
+        "A) Highland farmers",
+        "B) Afar and Somali pastoralists",
+        "C) Urban residents",
+        "D) Government workers"
+      ],
+      "correct_answer": "B) Afar and Somali pastoralists",
+      "explanation": "Correct: Afar and Somali pastoralists have pastoral camps. A is wrong\u2014highland farmers have permanent settlements. C is wrong\u2014urban residents have permanent settlements. D is wrong\u2014government workers live in permanent settlements.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 7,
+      "text": "The diagram shows permanent settlements. Which is the largest permanent settlement in Ethiopia?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Permanent Settlements</text>\n                    <rect x=\"15\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f43f5e\" stroke-width=\"1.5\"/>\n                    <text x=\"30\" y=\"48\" fill=\"#f43f5e\" font-size=\"7\" font-weight=\"bold\">Addis</text>\n                    <text x=\"35\" y=\"63\" fill=\"#f43f5e\" font-size=\"7\" font-weight=\"bold\">Ababa</text>\n                    <text x=\"25\" y=\"78\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Capital</text>\n                    <text x=\"25\" y=\"91\" fill=\"#f8fafc\" font-size=\"6\">\u2022 5M+</text>\n                    <text x=\"25\" y=\"104\" fill=\"#8fafc\" font-size=\"6\">\u2022 Largest</text>\n                    <rect x=\"110\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"125\" y=\"48\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Regional</text>\n                    <text x=\"130\" y=\"63\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Capitals</text>\n                    <text x=\"120\" y=\"78\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Bahir Dar</text>\n                    <text x=\"120\" y=\"91\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Mekelle</text>\n                    <text x=\"120\" y=\"104\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Hawassa</text>\n                    <rect x=\"205\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n                    <text x=\"220\" y=\"48\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">Historic</text>\n                    <text x=\"225\" y=\"63\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">Towns</text>\n                    <text x=\"215\" y=\"78\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Axum</text>\n                    <text x=\"215\" y=\"91\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Lalibela</text>\n                    <text x=\"215\" y=\"104\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Gondar</text>\n                </svg>"
+      },
+      "options": [
+        "A) Bahir Dar",
+        "B) Mekelle",
+        "C) Addis Ababa",
+        "D) Hawassa"
+      ],
+      "correct_answer": "C) Addis Ababa",
+      "explanation": "Correct: Addis Ababa is the largest permanent settlement. A is wrong\u2014Bahir Dar is smaller. B is wrong\u2014Mekelle is smaller. D is wrong\u2014Hawassa is smaller.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "text": "The diagram shows language families. How many language families are found in Ethiopia?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Language Families of Ethiopia</text>\n                    <rect x=\"15\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"1.5\"/>\n                    <text x=\"30\" y=\"48\" fill=\"#38bdf8\" font-size=\"7\" font-weight=\"bold\">Afro-Asiatic</text>\n                    <text x=\"25\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Cushitic</text>\n                    <text x=\"25\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Semitic</text>\n                    <text x=\"25\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Omotic</text>\n                    <rect x=\"110\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"125\" y=\"48\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Nilo-Saharan</text>\n                    <text x=\"120\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Kunama</text>\n                    <text x=\"120\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Nuer</text>\n                    <text x=\"120\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Anuak</text>\n                    <rect x=\"205\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n                    <text x=\"220\" y=\"48\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">Total</text>\n                    <text x=\"225\" y=\"63\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">4 Families</text>\n                    <text x=\"220\" y=\"80\" fill=\"#f8fafc\" font-size=\"6\">\u2022 80+</text>\n                    <text x=\"220\" y=\"93\" fill=\"#f8fafc\" font-size=\"6\">languages</text>\n                </svg>"
+      },
+      "options": [
+        "A) 2",
+        "B) 3",
+        "C) 4",
+        "D) 5"
+      ],
+      "correct_answer": "C) 4",
+      "explanation": "Correct: Ethiopia has 4 language families. A is wrong\u2014too few. B is wrong\u2014too few. D is wrong\u2014too many.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 9,
+      "text": "The diagram shows language distribution. What is the most widely spoken language in Ethiopia?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Major Languages of Ethiopia</text>\n                    <rect x=\"15\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#14b8a6\" stroke-width=\"1.5\"/>\n                    <text x=\"30\" y=\"48\" fill=\"#14b8a6\" font-size=\"7\" font-weight=\"bold\">Oromo</text>\n                    <text x=\"25\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">30-35M</text>\n                    <text x=\"25\" y=\"78\" fill=\"#f8fafc\" font-size=\"6\">Cushitic</text>\n                    <text x=\"25\" y=\"91\" fill=\"#f8fafc\" font-size=\"6\">Widest</text>\n                    <text x=\"25\" y=\"104\" fill=\"#f8fafc\" font-size=\"6\">Spoken</text>\n                    <rect x=\"110\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"1.5\"/>\n                    <text x=\"125\" y=\"48\" fill=\"#38bdf8\" font-size=\"7\" font-weight=\"bold\">Amharic</text>\n                    <text x=\"120\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">25-30M</text>\n                    <text x=\"120\" y=\"78\" fill=\"#f8fafc\" font-size=\"6\">Semitic</text>\n                    <text x=\"120\" y=\"91\" fill=\"#f8fafc\" font-size=\"6\">Official</text>\n                    <text x=\"120\" y=\"104\" fill=\"#f8fafc\" font-size=\"6\">Language</text>\n                    <rect x=\"205\" y=\"30\" width=\"85\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n                    <text x=\"220\" y=\"48\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">Somali</text>\n                    <text x=\"215\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">~5-6M</text>\n                    <text x=\"215\" y=\"78\" fill=\"#f8fafc\" font-size=\"6\">Cushitic</text>\n                    <text x=\"215\" y=\"91\" fill=\"#f8fafc\" font-size=\"6\">Somali</text>\n                    <text x=\"215\" y=\"104\" fill=\"#f8fafc\" font-size=\"6\">Region</text>\n                </svg>"
+      },
+      "options": [
+        "A) Amharic",
+        "B) Oromo",
+        "C) Somali",
+        "D) Tigrinya"
+      ],
+      "correct_answer": "B) Oromo",
+      "explanation": "Correct: Oromo is the most widely spoken (30-35M). A is wrong\u2014Amharic has 25-30M speakers. C is wrong\u2014Somali has ~5-6M. D is wrong\u2014Tigrinya has fewer speakers.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 10,
+      "text": "The diagram shows settlement types. What is the difference between temporary and permanent settlements?",
+      "diagram": {
+        "type": "svg",
+        "content": "<svg width=\"300\" height=\"150\" viewBox=\"0 0 300 150\">\n                    <rect width=\"300\" height=\"150\" fill=\"#111827\" rx=\"8\"/>\n                    <text x=\"80\" y=\"20\" fill=\"#facc15\" font-size=\"8\">Settlement Comparison</text>\n                    <rect x=\"15\" y=\"30\" width=\"125\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n                    <text x=\"40\" y=\"48\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"bold\">Temporary</text>\n                    <text x=\"25\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Mobile/Movable</text>\n                    <text x=\"25\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Seasonal</text>\n                    <text x=\"25\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Low impact</text>\n                    <text x=\"25\" y=\"102\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Pastoral</text>\n                    <rect x=\"160\" y=\"30\" width=\"125\" height=\"90\" rx=\"4\" fill=\"#1e293b\" stroke=\"#f43f5e\" stroke-width=\"1.5\"/>\n                    <text x=\"185\" y=\"48\" fill=\"#f43f5e\" font-size=\"7\" font-weight=\"bold\">Permanent</text>\n                    <text x=\"170\" y=\"63\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Year-round</text>\n                    <text x=\"170\" y=\"76\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Fixed structures</text>\n                    <text x=\"170\" y=\"89\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Infrastructure</text>\n                    <text x=\"170\" y=\"102\" fill=\"#f8fafc\" font-size=\"6\">\u2022 Services</text>\n                    <text x=\"30\" y=\"135\" fill=\"#94a3b8\" font-size=\"7\">Temporary: Mobile, Seasonal</text>\n                    <text x=\"30\" y=\"148\" fill=\"#94a3b8\" font-size=\"7\">Permanent: Year-round, Fixed</text>\n                </svg>"
+      },
+      "options": [
+        "A) Temporary settlements are larger than permanent",
+        "B) Temporary settlements are mobile and seasonal while permanent are year-round with fixed structures",
+        "C) There is no difference",
+        "D) Permanent settlements are only found in cities"
+      ],
+      "correct_answer": "B) Temporary settlements are mobile and seasonal while permanent are year-round with fixed structures",
+      "explanation": "Correct: This is the key difference. A is wrong\u2014temporary are usually smaller. C is wrong\u2014there are clear differences. D is wrong\u2014permanent settlements are also in rural areas.",
+      "difficulty": "hard"
+    }
+  ]
+}

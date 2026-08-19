@@ -1,0 +1,134 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the domain of the exponential function $f(x) = b^x$ where $b > 0$ and $b \\neq 1$?",
+            "options": [
+                "A) $(0, \\infty)$",
+                "B) All real numbers",
+                "C) $(-\\infty, 0)$",
+                "D) All integers"
+            ],
+            "correct_answer": "B) All real numbers",
+            "explanation": "The module states: 'The exponential function $y = b^x$, where $b > 0$ and $b \\neq 1$, is defined for all real values of $x$.' (Domain is $\\mathbb{R}$). Option A is the range. Option C is incorrect. Option D is too restrictive.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "From the graph of $y = 2^x$ shown in the module, what is the horizontal asymptote?",
+            "options": [
+                "A) $y = 1$",
+                "B) $x = 0$",
+                "C) $y = 0$",
+                "D) $x = 1$"
+            ],
+            "correct_answer": "C) $y = 0$",
+            "explanation": "The module's graph of $y = 2^x$ shows that as $x \\to -\\infty$, the function values approach $0$. 'Thus, the $x$-axis is a horizontal asymptote.' The $x$-axis is $y = 0$. Option A is the $y$-intercept. Option B is the $y$-axis. Option D is incorrect.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What is the range of the logarithmic function $f(x) = \\log_b x$?",
+            "options": [
+                "A) All real numbers",
+                "B) $(0, \\infty)$",
+                "C) $(-\\infty, 0)$",
+                "D) $[0, \\infty)$"
+            ],
+            "correct_answer": "A) All real numbers",
+            "explanation": "The module states: 'The range of the logarithmic function is the set of real numbers.' Option B is the domain. Option C is incorrect. Option D is incorrect.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "Evaluate $\\log_3 81$.",
+            "options": [
+                "A) 3",
+                "B) 4",
+                "C) 5",
+                "D) 2"
+            ],
+            "correct_answer": "B) 4",
+            "explanation": "The module states: 'Let $t = \\log_3 81$. Rewrite in exponential form: $3^t = 81$. Express both sides in terms of the same base: $3^t = 3^4$. Since the exponential function is 1-1, $t = 4$. Therefore, $\\log_3 81 = 4$.'",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "According to the graph of $y = \\sin x$ (the basic sine curve), what is the period of the sine function?",
+            "options": [
+                "A) $\\pi$",
+                "B) $2\\pi$",
+                "C) $4\\pi$",
+                "D) $\\pi/2$"
+            ],
+            "correct_answer": "B) $2\\pi$",
+            "explanation": "The module explicitly states: 'The period of the basic sine curve $y = \\sin x$ and the basic cosine curve $y = \\cos x$ is $2\\pi$.' This is evident from the graph where the pattern repeats every $2\\pi$ units.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "Looking at the graph of $y = \\cos x$ in the module, what is the $y$-intercept?",
+            "options": [
+                "A) $0$",
+                "B) $1$",
+                "C) $-1$",
+                "D) $\\pi/2$"
+            ],
+            "correct_answer": "B) $1$",
+            "explanation": "The graph of $y = \\cos x$ clearly passes through the point $(0, 1)$ on the $y$-axis. Therefore, the $y$-intercept is 1. This matches the definition $\\cos 0 = 1$.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the amplitude of the function $y = 3 \\sin x$?",
+            "options": [
+                "A) 1",
+                "B) 3",
+                "C) 6",
+                "D) 2"
+            ],
+            "correct_answer": "B) 3",
+            "explanation": "The amplitude of a periodic function is the maximum value of the function. For $y = 3 \\sin x$, the maximum value is $3$, so the amplitude is 3. Option A is the amplitude of the basic sine curve.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "Solve the exponential equation $3^{2x} = 243$.",
+            "options": [
+                "A) $x = 3$",
+                "B) $x = 4$",
+                "C) $x = 5/2$",
+                "D) $x = 5$"
+            ],
+            "correct_answer": "C) $x = 5/2$",
+            "explanation": "The module states: '$3^{2x} = 243$. Express both sides with the same base: $3^{2x} = 3^5$. Since the exponential function is 1-1, $2x = 5$, so $x = 5/2$. Option A is incorrect. Option B would be $3^x = 81$. Option D would be $3^x = 243$.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "Based on the graph of $y = \\tan x$ (the tangent function), what is the domain of the tangent function?",
+            "options": [
+                "A) All real numbers",
+                "B) $\\{x \\mid x \\neq \\frac{\\pi}{2} + n\\pi\\}$",
+                "C) $\\{x \\mid x \\neq n\\pi\\}$",
+                "D) $[0, \\pi]$"
+            ],
+            "correct_answer": "B) $\\{x \\mid x \\neq \\frac{\\pi}{2} + n\\pi\\}$",
+            "explanation": "The module states: 'Since $\\tan \\theta = y/x$ is undefined whenever $x = 0$, $\\tan \\theta$ is undefined whenever the terminal side falls on the $y$-axis. This happens for $\\theta = \\frac{\\pi}{2} + n\\pi$. Thus, domain is $\\{x \\mid x \\neq \\frac{\\pi}{2} + n\\pi\\}$.' The vertical asymptotes on the graph confirm this.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "What is the inverse of $f(x) = e^{3x - 1}$?",
+            "options": [
+                "A) $f^{-1}(x) = (\\ln x + 1)/3$",
+                "B) $f^{-1}(x) = \\ln(3x - 1)$",
+                "C) $f^{-1}(x) = 3e^x - 1$",
+                "D) $f^{-1}(x) = 3 \\ln x - 1$"
+            ],
+            "correct_answer": "A) $f^{-1}(x) = (\\ln x + 1)/3$",
+            "explanation": "Interchange $x$ and $y$: $x = e^{3y - 1}$. Take the natural log of both sides: $\\ln x = 3y - 1$. Solve for $y$: $3y = \\ln x + 1 \\to y = (\\ln x + 1)/3$. Option B is incorrect. Option C is $3f(x) - 1$. Option D is incorrect.",
+            "difficulty": "hard"
+        }
+    ]
+}

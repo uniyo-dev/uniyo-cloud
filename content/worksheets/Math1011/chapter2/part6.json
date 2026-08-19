@@ -1,0 +1,134 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "text": "What is the degree of the polynomial function $p(x) = 2x^3 - 5x^2 + 3x - 1$?",
+            "options": [
+                "A) 1",
+                "B) 2",
+                "C) 3",
+                "D) 4"
+            ],
+            "correct_answer": "C) 3",
+            "explanation": "The module states: 'A polynomial of degree 3 is called a cubic function.' The highest power of $x$ is 3, so the degree is 3.",
+            "difficulty": "easy"
+        },
+        {
+            "id": 2,
+            "text": "According to the Remainder Theorem, what is the remainder when $p(x) = x^3 - x^2 + 3x - 1$ is divided by $x - 2$?",
+            "options": [
+                "A) 5",
+                "B) 9",
+                "C) 7",
+                "D) 3"
+            ],
+            "correct_answer": "B) 9",
+            "explanation": "The module states: 'The remainder when $P(x) = x^3 - x^2 + 3x - 1$ is divided by $x - 2$ is $p(2) = 9$.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 3,
+            "text": "What does the Factor Theorem state?",
+            "options": [
+                "A) $x - r$ is a factor of $p(x)$ if and only if $p(r) \\neq 0$.",
+                "B) $x - r$ is a factor of $p(x)$ if and only if $p(r) = 0$.",
+                "C) $x - r$ is a factor of $p(x)$ if and only if $p(0) = r$.",
+                "D) $x - r$ is never a factor of $p(x)$."
+            ],
+            "correct_answer": "B) $x - r$ is a factor of $p(x)$ if and only if $p(r) = 0$.",
+            "explanation": "The module states: '$x - r$ is a factor of $p(x)$ if and only if $p(r) = 0$.'",
+            "difficulty": "easy"
+        },
+        {
+            "id": 4,
+            "text": "If a polynomial of degree 5 is graphed, what is the maximum number of turning points it can have?",
+            "options": [
+                "A) 4",
+                "B) 5",
+                "C) 6",
+                "D) 3"
+            ],
+            "correct_answer": "A) 4",
+            "explanation": "The module states: 'The graph of a polynomial function of degree $n$ can have at most $n - 1$ turning points.' For $n = 5$, at most 4 turning points.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 5,
+            "text": "Using the Rational Root Theorem, which of the following is a possible rational root of $p(x) = 2x^3 + 3x^2 - 23x - 12$?",
+            "options": [
+                "A) $1/3$",
+                "B) $3/2$",
+                "C) $4/3$",
+                "D) $1/4$"
+            ],
+            "correct_answer": "B) $3/2$",
+            "explanation": "The module states: 'Possible rational roots $p/q$: $\\pm 1, \\pm 1/2, \\pm 2, \\pm 3, \\pm 3/2, \\pm 4, \\pm 6, \\pm 12$.' $3/2$ is in the list of possible rational roots.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 6,
+            "text": "What is the domain of the rational function $f(x) = \\frac{3}{x^2 - 25}$?",
+            "options": [
+                "A) All real numbers",
+                "B) All real numbers except $5$",
+                "C) All real numbers except $\\pm 5$",
+                "D) All real numbers except $-5$"
+            ],
+            "correct_answer": "C) All real numbers except $\\pm 5$",
+            "explanation": "The denominator $x^2 - 25 = 0$ when $x = 5$ or $x = -5$. Therefore, the domain is all real numbers except $\\pm 5$.",
+            "difficulty": "medium"
+        },
+        {
+            "id": 7,
+            "text": "What is the horizontal asymptote of $f(x) = \\frac{2x^2 + 1}{x^2 - 4}$?",
+            "options": [
+                "A) $y = 0$",
+                "B) $y = 2$",
+                "C) $y = 1/2$",
+                "D) No horizontal asymptote"
+            ],
+            "correct_answer": "B) $y = 2$",
+            "explanation": "The module states: 'If $deg(n) = deg(d) = n$, then $y = a_n / b_n$ is the HA.' The leading coefficient of the numerator is $2$, and the leading coefficient of the denominator is $1$. So HA is $y = 2/1 = 2$.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 8,
+            "text": "What is the vertical asymptote of the function $g(x) = \\frac{x - 3}{x^2 + 4x - 12}$?",
+            "options": [
+                "A) $x = 3$",
+                "B) $x = -6$",
+                "C) $x = 2$",
+                "D) $x = -6$ and $x = 2$"
+            ],
+            "correct_answer": "D) $x = -6$ and $x = 2$",
+            "explanation": "The denominator $x^2 + 4x - 12 = (x + 6)(x - 2)$. Setting the denominator to 0 gives $x = -6$ and $x = 2$. Both are vertical asymptotes because the numerator is not zero at these points.",
+            "difficulty": "hard"
+        },
+        {
+            "id": 9,
+            "text": "How many zeros does a polynomial of degree 4 have in the complex number system?",
+            "options": [
+                "A) At most 4",
+                "B) Exactly 4 (counting multiplicities)",
+                "C) At most 3",
+                "D) Exactly 3"
+            ],
+            "correct_answer": "B) Exactly 4 (counting multiplicities)",
+            "explanation": "The Linear Factorization Theorem states: 'Every polynomial of degree $n \\geq 1$ has exactly $n$ zeros in the complex number system, where a root of multiplicity $k$ counted $k$ times.'",
+            "difficulty": "hard"
+        },
+        {
+            "id": 10,
+            "text": "For the rational function $f(x) = \\frac{x^3 - 8x - 3}{x - 3}$, what is the behavior of $f(x)$ near $x = 3$?",
+            "options": [
+                "A) $f(x)$ approaches a finite number.",
+                "B) $f(x)$ approaches infinity.",
+                "C) $f(x)$ approaches negative infinity.",
+                "D) $f(x)$ is undefined and has a vertical asymptote."
+            ],
+            "correct_answer": "A) $f(x)$ approaches a finite number.",
+            "explanation": "The module asks: 'Determine the behavior of $f(x) = (x^3 - 8x - 3) / (x - 3)$ when $x$ is near 3.' Since $p(3) = 27 - 24 - 3 = 0$, $x = 3$ is not a vertical asymptote. Factoring gives a removable discontinuity, so $f(x)$ approaches a finite number.",
+            "difficulty": "hard"
+        }
+    ]
+}
