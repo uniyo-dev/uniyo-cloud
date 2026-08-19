@@ -1,0 +1,41 @@
+{
+    "courses": [
+        {
+            "code": "Econ1011",
+            "title": "Economics",
+            "chapters": 6,
+            "parts_per_chapter": [
+                4,
+                3,
+                2,
+                2,
+                3,
+                4
+            ]
+        },
+        {
+            "code": "GeES1011",
+            "title": "Geography of Ethiopia and the Horn",
+            "chapters": 7,
+            "parts_per_chapter": [
+                2,
+                3,
+                3,
+                2,
+                4,
+                5,
+                5
+            ]
+        },
+        {
+            "code": "LoCT1011",
+            "title": "Logic and Critical Thinking",
+            "chapters": 3,
+            "parts_per_chapter": [
+                2,
+                2,
+                1
+            ]
+        }
+    ]
+}
