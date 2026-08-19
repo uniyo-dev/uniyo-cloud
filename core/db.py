@@ -1,13 +1,20 @@
 """
-UNIYO LMS - Database Connection & Query Helpers
+UNIYO LMS - Database Connection (Supabase PostgreSQL)
 """
 
-import sqlite3
-import sys
-from pathlib import Path
+import psycopg2
+import psycopg2.extras
 from contextlib import contextmanager
+from core.paths import DB_PATH, IS_WINDOWS
 
-from core.paths import DB_PATH, IS_WINDOWS, get_database_uri
+# Supabase connection
+SUPABASE_HOST = "db.kuopbrowpikkepytlchy.supabase.co"
+SUPABASE_PORT = "5432"
+SUPABASE_DB = "postgres"
+SUPABASE_USER = "postgres"
+SUPABASE_PASSWORD = "@Chalie/2026"
+
+DATABASE_URL = f"postgresql://{SUPABASE_USER}:{SUPABASE_PASSWORD}@{SUPABASE_HOST}:{SUPABASE_PORT}/{SUPABASE_DB}"
 
 class Database:
     _instance = None
@@ -19,35 +26,20 @@ class Database:
         return cls._instance
     
     def connect(self):
-        if self._connection is None:
-            if IS_WINDOWS:
-                self._connection = sqlite3.connect(
-                    get_database_uri(), uri=True, check_same_thread=False,
-                    timeout=30, isolation_level=None
-                )
-            else:
-                self._connection = sqlite3.connect(
-                    str(DB_PATH), check_same_thread=False,
-                    timeout=30, isolation_level=None
-                )
-            
-            self._connection.execute("PRAGMA journal_mode=WAL")
-            self._connection.execute("PRAGMA foreign_keys=ON")
-            self._connection.execute("PRAGMA synchronous=NORMAL")
-            self._connection.execute("PRAGMA cache_size=-2000")
-            self._connection.execute("PRAGMA temp_store=MEMORY")
-            self._connection.row_factory = sqlite3.Row
-        
+        if self._connection is None or self._connection.closed:
+            self._connection = psycopg2.connect(DATABASE_URL)
+            self._connection.autocommit = True
+            psycopg2.extras.register_default_json(self._connection)
         return self._connection
     
     def close(self):
-        if self._connection:
+        if self._connection and not self._connection.closed:
             self._connection.close()
             self._connection = None
     
     def execute(self, query, params=None):
         conn = self.connect()
-        cursor = conn.cursor()
+        cursor = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
         if params:
             cursor.execute(query, params)
         else:
@@ -55,22 +47,16 @@ class Database:
         return cursor
     
     def query(self, query, params=None):
-        conn = self.connect()
-        cursor = conn.cursor()
-        if params:
-            cursor.execute(query, params)
-        else:
-            cursor.execute(query)
-        return cursor.fetchall()
+        cursor = self.execute(query, params)
+        rows = cursor.fetchall()
+        cursor.close()
+        return rows
     
     def query_one(self, query, params=None):
-        conn = self.connect()
-        cursor = conn.cursor()
-        if params:
-            cursor.execute(query, params)
-        else:
-            cursor.execute(query)
-        return cursor.fetchone()
+        cursor = self.execute(query, params)
+        row = cursor.fetchone()
+        cursor.close()
+        return row
     
     def query_value(self, query, params=None):
         row = self.query_one(query, params)
@@ -81,13 +67,13 @@ class Database:
         conn = self.connect()
         try:
             yield conn
-            conn.execute("COMMIT")
+            conn.commit()
         except Exception as e:
-            conn.execute("ROLLBACK")
+            conn.rollback()
             raise e
     
     def begin_transaction(self):
-        self.execute("BEGIN TRANSACTION")
+        self.execute("BEGIN")
     
     def commit(self):
         self.execute("COMMIT")
@@ -99,21 +85,13 @@ class Database:
             pass
     
     def checkpoint(self):
-        self.execute("PRAGMA wal_checkpoint(TRUNCATE)")
+        pass  # PostgreSQL doesn't need WAL checkpoint
     
     def vacuum(self):
-        self.execute("VACUUM")
+        pass  # PostgreSQL handles this automatically
     
     def backup(self, backup_path=None):
-        import shutil
-        from datetime import datetime
-        if backup_path is None:
-            from core.paths import BACKUP_DIR
-            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            backup_path = BACKUP_DIR / f"UNIYO_{timestamp}.db"
-        self.checkpoint()
-        shutil.copy2(str(DB_PATH), str(backup_path))
-        return backup_path
+        pass  # Supabase handles backups automatically
 
 db = Database()
 
