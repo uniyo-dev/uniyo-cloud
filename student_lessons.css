@@ -1,0 +1,848 @@
+/* ============================================
+   UNIYO LMS - Lesson Reader Styles
+   ============================================ */
+
+.lesson-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.lesson-header { margin-bottom: 24px; }
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #94A3B8;
+    font-size: 14px;
+}
+
+.back-btn:hover { color: #6D28D9; }
+
+.lesson-meta { margin-bottom: 16px; }
+
+.lesson-course {
+    font-family: 'JetBrains Mono', monospace;
+    color: #6D28D9;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.lesson-meta h1 { font-size: 28px; color: #F8FAFC; margin: 8px 0; }
+.lesson-meta p { color: #94A3B8; font-size: 14px; }
+
+.lesson-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.chapter-nav {
+    background: #111827;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.chapter-nav h4 { color: #94A3B8; font-size: 13px; margin-bottom: 12px; }
+
+.part-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.part-btn {
+    padding: 8px 16px;
+    background: #1A2332;
+    border-radius: 20px;
+    color: #94A3B8;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.part-btn:hover { background: #6D28D9; color: white; }
+.part-btn.active { background: #6D28D9; color: white; font-weight: 600; }
+
+.lesson-content {
+    position: relative;
+    background: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+    min-height: 400px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.lesson-watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    font-size: 48pt;
+    color: rgba(255, 255, 255, 0.03);
+    pointer-events: none;
+    z-index: 1000;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.lesson-body {
+    color: #E2E8F0;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.lesson-body h3 { color: #F8FAFC; margin: 24px 0 12px; font-size: 22px; }
+.lesson-body p { margin-bottom: 16px; }
+.lesson-body ul, .lesson-body ol { margin: 16px 0 16px 24px; }
+.lesson-body li { margin-bottom: 8px; }
+.lesson-body strong { color: #F59E0B; }
+.lesson-body em { color: #38BDF8; }
+
+.highlight-box {
+    background: rgba(109, 40, 217, 0.15);
+    border-left: 4px solid #6D28D9;
+    padding: 16px;
+    margin: 16px 0;
+    border-radius: 8px;
+}
+
+.cheat-notes {
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid #F59E0B;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 20px 0;
+}
+
+.cheat-notes h4 { color: #F59E0B; margin-bottom: 8px; }
+
+.progress-tracker {
+    background: #111827;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 32px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: #94A3B8;
+    font-size: 14px;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #1A2332;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #6D28D9;
+    transition: width 0.5s ease;
+}
+
+.btn-success { background: #14B8A6; color: white; width: 100%; }
+.btn-success.completed { background: #0D9488; }
+
+.self-check-section {
+    background: #111827;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.self-check-section h3 { margin-bottom: 16px; color: #F8FAFC; }
+
+.protection-toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #EC4899;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    z-index: 10001;
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .lesson-content { padding: 20px; }
+    .lesson-actions { flex-direction: column; }
+    .lesson-meta h1 { font-size: 22px; }
+}
+
+/* Worksheet Link Section */
+.worksheet-link-section {
+    background: #111827;
+    border: 2px solid #F59E0B;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.worksheet-link-section p {
+    color: #94A3B8;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+/* Part Worksheet vs Full Worksheet */
+.part-worksheet {
+    border: 2px solid #14B8A6;
+    background: rgba(20, 184, 166, 0.05);
+}
+
+.full-worksheet {
+    border: 2px solid #6D28D9;
+    background: rgba(109, 40, 217, 0.08);
+}
+
+.part-worksheet h3 {
+    color: #14B8A6;
+}
+
+.full-worksheet h3 {
+    color: #6D28D9;
+}
+
+/* Coming Soon Box */
+.coming-soon-box {
+    text-align: center;
+    padding: 24px;
+    background: rgba(245, 158, 11, 0.05);
+    border: 2px dashed #F59E0B;
+    border-radius: 12px;
+    margin: 16px 0;
+}
+
+.coming-soon-box h4 {
+    color: #F59E0B;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.coming-soon-box p {
+    color: #94A3B8;
+    font-size: 13px;
+}
+
+/* Coming Soon Worksheet Section */
+.worksheet-link-section.coming-soon {
+    border: 2px dashed #F59E0B;
+    background: rgba(245, 158, 11, 0.03);
+    text-align: center;
+}
+
+.worksheet-link-section.coming-soon h3 {
+    color: #F59E0B;
+}
+
+.worksheet-link-section.coming-soon p {
+    color: #94A3B8;
+    font-size: 13px;
+}
+
+/* Coming Soon Box */
+.coming-soon-box {
+    text-align: center;
+    padding: 24px;
+    background: rgba(245, 158, 11, 0.05);
+    border: 2px dashed #F59E0B;
+    border-radius: 12px;
+    margin: 16px 0;
+}
+
+.coming-soon-box h4 {
+    color: #F59E0B;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.coming-soon-box p {
+    color: #94A3B8;
+    font-size: 13px;
+}
+
+/* Coming Soon Worksheet Section */
+.worksheet-link-section.coming-soon {
+    border: 2px dashed #F59E0B;
+    background: rgba(245, 158, 11, 0.03);
+    text-align: center;
+}
+
+.worksheet-link-section.coming-soon h3 {
+    color: #F59E0B;
+}
+
+.worksheet-link-section.coming-soon p {
+    color: #94A3B8;
+    font-size: 13px;
+}
+
+/* Light Mode Overrides */
+body.light-mode .card,
+body.light-mode .course-card,
+body.light-mode .question-card,
+body.light-mode .payment-card,
+body.light-mode .admin-section {
+    background: #FFFFFF;
+    border-color: rgba(0, 0, 0, 0.08);
+    color: #0B0F19;
+}
+
+body.light-mode .course-title,
+body.light-mode .question-number,
+body.light-mode .admin-section h3 {
+    color: #0B0F19;
+}
+
+body.light-mode .course-details,
+body.light-mode .worksheet-meta,
+body.light-mode .payment-method-card p {
+    color: #475569;
+}
+
+/* COMPLETE LIGHT MODE OVERRIDES */
+body.light-mode .lesson-container {
+    background: #F8FAFC;
+}
+
+body.light-mode .lesson-content,
+body.light-mode .chapter-nav,
+body.light-mode .progress-tracker,
+body.light-mode .self-check-section,
+body.light-mode .worksheet-link-section {
+    background: #FFFFFF;
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .lesson-meta h1,
+body.light-mode .chapter-nav h4,
+body.light-mode .self-check-section h3,
+body.light-mode .worksheet-link-section h3,
+body.light-mode .progress-info {
+    color: #0B0F19;
+}
+
+body.light-mode .lesson-body {
+    color: #334155;
+}
+
+body.light-mode .lesson-body strong {
+    color: #D97706;
+}
+
+body.light-mode .part-btn {
+    background: #F1F5F9;
+    color: #475569;
+}
+
+body.light-mode .part-btn.active {
+    background: #6D28D9;
+    color: white;
+}
+
+body.light-mode .highlight-box {
+    background: rgba(109, 40, 217, 0.08);
+    color: #334155;
+}
+
+body.light-mode .cheat-notes {
+    background: rgba(245, 158, 11, 0.08);
+    color: #334155;
+}
+
+/* STRONGER LIGHT MODE FOR LESSONS */
+body.light-mode .lesson-body p,
+body.light-mode .lesson-body li,
+body.light-mode .lesson-body ul,
+body.light-mode .lesson-body ol {
+    color: #334155 !important;
+}
+
+body.light-mode .lesson-body h3 {
+    color: #0B0F19 !important;
+}
+
+body.light-mode .lesson-body strong {
+    color: #D97706 !important;
+}
+
+body.light-mode .lesson-body em {
+    color: #0284C7 !important;
+}
+
+body.light-mode .lesson-watermark {
+    color: rgba(0, 0, 0, 0.03) !important;
+}
+
+body.light-mode .progress-bar {
+    background: #E2E8F0 !important;
+}
+
+body.light-mode .progress-fill {
+    background: #6D28D9 !important;
+}
+
+body.light-mode .back-btn {
+    color: #475569 !important;
+}
+
+body.light-mode .lesson-course {
+    color: #6D28D9 !important;
+}
+
+/* Light Mode for Diagrams */
+body.light-mode .diagram-container {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+}
+
+body.light-mode .question-diagram {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+/* ============================================
+   FIX: HIGHLIGHT BOXES & SELF-CHECK IN LIGHT MODE
+   ============================================ */
+
+/* Highlight Box - Light Mode */
+body.light-mode .highlight-box {
+    background-color: rgba(109, 40, 217, 0.08) !important;
+    border-left: 4px solid #6D28D9 !important;
+    color: #334155 !important;
+    padding: 16px !important;
+    border-radius: 8px !important;
+}
+
+body.light-mode .highlight-box strong {
+    color: #6D28D9 !important;
+}
+
+/* Cheat Notes - Light Mode */
+body.light-mode .cheat-notes {
+    background-color: rgba(245, 158, 11, 0.08) !important;
+    border: 1px solid #F59E0B !important;
+    color: #334155 !important;
+}
+
+body.light-mode .cheat-notes h4 {
+    color: #D97706 !important;
+}
+
+body.light-mode .cheat-notes li {
+    color: #334155 !important;
+}
+
+/* Example Box - Light Mode */
+body.light-mode .example-box {
+    background-color: rgba(56, 189, 248, 0.05) !important;
+    border: 1px solid #38BDF8 !important;
+    color: #334155 !important;
+}
+
+body.light-mode .example-box h4 {
+    color: #0284C7 !important;
+}
+
+/* Self-Check Questions - Light Mode */
+body.light-mode .self-check-section {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+}
+
+body.light-mode .self-check-section h3 {
+    color: #0B0F19 !important;
+}
+
+body.light-mode .self-check-question {
+    background-color: #F8FAFC !important;
+    border: 1px solid #E2E8F0 !important;
+}
+
+body.light-mode .question-text {
+    color: #334155 !important;
+}
+
+body.light-mode .question-text strong {
+    color: #0B0F19 !important;
+}
+
+/* Self-check option buttons */
+body.light-mode .self-check-section .option-btn {
+    background-color: #F8FAFC !important;
+    border: 1px solid #CBD5E1 !important;
+    color: #0B0F19 !important;
+}
+
+body.light-mode .self-check-section .option-btn:hover {
+    background-color: #E2E8F0 !important;
+}
+
+/* Self-check explanation */
+body.light-mode .self-check-section .explanation {
+    background-color: #F1F5F9 !important;
+    color: #475569 !important;
+}
+
+body.light-mode .self-check-section .explanation strong {
+    color: #0B0F19 !important;
+}
+
+/* Definition boxes in lesson content */
+body.light-mode .definition-box {
+    background-color: rgba(109, 40, 217, 0.05) !important;
+    border-left: 4px solid #6D28D9 !important;
+    color: #334155 !important;
+}
+
+body.light-mode .definition-box strong {
+    color: #6D28D9 !important;
+}
+
+/* All content boxes in lessons */
+body.light-mode .lesson-body > div {
+    color: #334155 !important;
+}
+
+/* ============================================
+   PREVENT FLASH - IMMEDIATE LIGHT MODE STYLES
+   ============================================ */
+
+/* Apply light mode to highlight boxes BEFORE JavaScript runs */
+html.light-mode-active .highlight-box,
+html.light-mode-active .definition-box {
+    background-color: rgba(109, 40, 217, 0.08) !important;
+    border-left: 4px solid #6D28D9 !important;
+    color: #334155 !important;
+}
+
+html.light-mode-active .highlight-box strong,
+html.light-mode-active .definition-box strong {
+    color: #6D28D9 !important;
+}
+
+html.light-mode-active .cheat-notes {
+    background-color: rgba(245, 158, 11, 0.08) !important;
+    border-color: #F59E0B !important;
+    color: #334155 !important;
+}
+
+html.light-mode-active .cheat-notes h4 {
+    color: #D97706 !important;
+}
+
+html.light-mode-active .cheat-notes li {
+    color: #334155 !important;
+}
+
+html.light-mode-active .example-box {
+    background-color: rgba(56, 189, 248, 0.05) !important;
+    border-color: #38BDF8 !important;
+    color: #334155 !important;
+}
+
+html.light-mode-active .self-check-section {
+    background-color: #FFFFFF !important;
+    border-color: #E2E8F0 !important;
+}
+
+html.light-mode-active .self-check-section .option-btn {
+    background-color: #F8FAFC !important;
+    border-color: #CBD5E1 !important;
+    color: #0B0F19 !important;
+}
+
+/* Prevent transitions on highlight boxes to avoid flash */
+.highlight-box,
+.definition-box,
+.cheat-notes,
+.example-box,
+.self-check-section,
+.lesson-content,
+.chapter-nav,
+.progress-tracker {
+    transition: none !important;
+}
+
+/* Keep original highlight box colors in DARK mode */
+body:not(.light-mode) .highlight-box {
+    background: rgba(109, 40, 217, 0.15);
+    border-left: 4px solid #6D28D9;
+    color: #E2E8F0;
+}
+
+body:not(.light-mode) .highlight-box strong {
+    color: #F59E0B;
+}
+
+/* Keep original cheat notes colors in DARK mode */
+body:not(.light-mode) .cheat-notes {
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid #F59E0B;
+    color: #E2E8F0;
+}
+
+/* ============================================
+   INSTANT THEME FOR PART SWITCHING
+   ============================================ */
+
+/* When html has light-mode-active, apply ALL light styles immediately */
+html.light-mode-active .lesson-container {
+    background-color: #F8FAFC !important;
+}
+
+html.light-mode-active .lesson-content,
+html.light-mode-active .chapter-nav,
+html.light-mode-active .progress-tracker,
+html.light-mode-active .self-check-section,
+html.light-mode-active .worksheet-link-section {
+    background-color: #FFFFFF !important;
+    border-color: #E2E8F0 !important;
+}
+
+html.light-mode-active .lesson-body {
+    color: #334155 !important;
+}
+
+html.light-mode-active .lesson-body p,
+html.light-mode-active .lesson-body li {
+    color: #334155 !important;
+}
+
+html.light-mode-active .lesson-body h3,
+html.light-mode-active .lesson-body h4 {
+    color: #0B0F19 !important;
+}
+
+html.light-mode-active .lesson-body strong {
+    color: #D97706 !important;
+}
+
+html.light-mode-active .lesson-meta h1 {
+    color: #0B0F19 !important;
+}
+
+html.light-mode-active .lesson-meta p,
+html.light-mode-active .back-btn {
+    color: #475569 !important;
+}
+
+html.light-mode-active .part-btn {
+    background-color: #F1F5F9 !important;
+    color: #475569 !important;
+}
+
+html.light-mode-active .part-btn.active {
+    background-color: #6D28D9 !important;
+    color: #FFFFFF !important;
+}
+
+html.light-mode-active .highlight-box {
+    background-color: rgba(109, 40, 217, 0.08) !important;
+    color: #334155 !important;
+    border-left-color: #6D28D9 !important;
+}
+
+html.light-mode-active .highlight-box strong {
+    color: #6D28D9 !important;
+}
+
+html.light-mode-active .cheat-notes {
+    background-color: rgba(245, 158, 11, 0.08) !important;
+    color: #334155 !important;
+}
+
+html.light-mode-active .cheat-notes h4 {
+    color: #D97706 !important;
+}
+
+html.light-mode-active .watermark {
+    color: rgba(0, 0, 0, 0.03) !important;
+}
+
+/* ============================================
+   INSTANT RENDERING - NO LAG
+   ============================================ */
+
+/* Force hardware acceleration */
+.lesson-container,
+.lesson-content,
+.chapter-nav,
+.part-buttons,
+.part-btn {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Make part buttons respond instantly */
+.part-btn {
+    transition: background-color 0.1s ease, color 0.1s ease !important;
+}
+
+.part-btn:active {
+    transform: scale(0.95);
+}
+
+/* Lesson actions instant */
+.lesson-actions a {
+    transition: background-color 0.1s ease !important;
+}
+
+.lesson-actions a:active {
+    transform: scale(0.97);
+}
+
+/* Remove any animation delays */
+.lesson-content * {
+    animation-delay: 0s !important;
+    transition-delay: 0s !important;
+}
+
+/* ============================================
+   CHAPTER NAVIGATION
+   ============================================ */
+
+.chapters-nav {
+    background: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.chapters-nav h4 {
+    color: #94A3B8;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.chapter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chapter-btn {
+    padding: 10px 16px;
+    background: #1A2332;
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    color: #94A3B8;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+}
+
+.chapter-btn:hover {
+    background: rgba(109, 40, 217, 0.2);
+    border-color: #6D28D9;
+    color: #F8FAFC;
+}
+
+.chapter-btn.active {
+    background: #6D28D9;
+    border-color: #6D28D9;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.chapter-num {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.chapter-parts {
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+/* Light Mode */
+body.light-mode .chapters-nav {
+    background: #FFFFFF;
+    border-color: #E2E8F0;
+}
+
+body.light-mode .chapters-nav h4 {
+    color: #475569;
+}
+
+body.light-mode .chapter-btn {
+    background: #F8FAFC;
+    border-color: #E2E8F0;
+    color: #475569;
+}
+
+body.light-mode .chapter-btn:hover {
+    background: rgba(109, 40, 217, 0.05);
+    border-color: #6D28D9;
+    color: #0B0F19;
+}
+
+body.light-mode .chapter-btn.active {
+    background: #6D28D9;
+    border-color: #6D28D9;
+    color: #FFFFFF;
+}
+
+/* Download Section */
+.download-section {
+    text-align: center;
+    margin: 20px 0;
+    padding: 16px;
+    background: rgba(109, 40, 217, 0.1);
+    border: 2px dashed #6D28D9;
+    border-radius: 12px;
+}
+
+.download-status {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #94A3B8;
+}
+
+/* ============================================
+   MATHJAX & FORMULA OVERFLOW FIX
+   ============================================ */
+.mjx-chtml, .MathJax_Display, .MathJax {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding: 6px 0 !important;
+    color: inherit !important;
+}
+
+body.light-mode .mjx-chtml,
+body.light-mode .MathJax_Display {
+    color: #0B0F19 !important;
+}

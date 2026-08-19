@@ -12,6 +12,13 @@ DB_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 sys.path.insert(0, str(BASE_DIR))
 
+# Initialize database BEFORE starting server
+try:
+    from init_database import initialize_database
+    initialize_database()
+except Exception as e:
+    print(f"Database init warning: {e}")
+
 from server import app
 
 if __name__ == '__main__':

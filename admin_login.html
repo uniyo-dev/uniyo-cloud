@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Login - UNIYO{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="auth-header">
+            <h1>UNIYO Admin</h1>
+            <p>Administrator Portal</p>
+        </div>
+        
+        <form action="{{ url_for('admin.login') }}" method="POST" class="auth-form">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Enter username" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter password" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+    </div>
+</div>
+
+<!-- THEME TOGGLE - FLOATING BUTTON -->
+<div style="position: fixed; top: 15px; right: 15px; z-index: 10000;">
+    <button onclick="toggleAdminTheme()" id="adminThemeBtn" 
+            style="padding: 10px 20px; background: #6D28D9; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 700; box-shadow: 0 4px 12px rgba(109, 40, 217, 0.4);">
+        🌙 Dark
+    </button>
+</div>
+
+<script>
+function toggleAdminTheme() {
+    var body = document.body;
+    var btn = document.getElementById('adminThemeBtn');
+    
+    if (body.classList.contains('light-mode')) {
+        body.classList.remove('light-mode');
+        body.style.backgroundColor = '#0B0F19';
+        body.style.color = '#F8FAFC';
+        localStorage.setItem('uniyo_admin_dark_mode', 'true');
+        if (btn) btn.textContent = '🌙 Dark';
+    } else {
+        body.classList.add('light-mode');
+        body.style.backgroundColor = '#F8FAFC';
+        body.style.color = '#0B0F19';
+        localStorage.setItem('uniyo_admin_dark_mode', 'false');
+        if (btn) btn.textContent = '☀️ Light';
+    }
+}
+
+(function() {
+    var savedMode = localStorage.getItem('uniyo_admin_dark_mode');
+    var btn = document.getElementById('adminThemeBtn');
+    
+    if (savedMode === 'false') {
+        document.body.classList.add('light-mode');
+        if (btn) btn.textContent = '☀️ Light';
+    } else {
+        if (btn) btn.textContent = '🌙 Dark';
+    }
+})();
+</script>
+
+{% endblock %}

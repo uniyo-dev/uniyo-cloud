@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block title %}Register - UNIYO{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<script>
+(function() {
+    const savedDarkMode = localStorage.getItem('uniyo_dark_mode');
+    if (savedDarkMode === 'false') {
+        document.body.classList.add('light-mode');
+    }
+})();
+</script>
+
+<div class="auth-container register-container">
+    <div class="auth-card register-card">
+        <div class="auth-header">
+            
+        <div class="auth-logo">
+            <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="UNIYO Logo" class="auth-logo-img">
+        </div>
+            <h1>UNIYO</h1>
+            <p>Create Your Account</p>
+            <span class="auth-subtitle">University Made for YOU</span>
+        </div>
+        
+        <form action="{{ url_for('student.register') }}" method="POST" enctype="multipart/form-data" id="registerForm">
+            
+            <div class="form-group photo-upload-group">
+                <label>Profile Photo (Optional)</label>
+                <div class="photo-upload-container">
+                    <img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23111827%22 width=%22100%22 height=%22100%22/%3E%3Ctext x=%2250%22 y=%2260%22 text-anchor=%22middle%22 fill=%22%2394A3B8%22 font-size=%2240%22%3E👤%3C/text%3E%3C/svg%3E" id="photoPreview" class="photo-preview" alt="Profile Preview">
+                    <input type="file" name="photo" id="photoInput" accept="image/*" onchange="previewPhoto(this)">
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h4>Full Name</h4>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name *</label>
+                        <input type="text" name="first_name" required placeholder="e.g., Abebe" pattern="[A-Za-z ]+" title="Letters only">
+                    </div>
+                    <div class="form-group">
+                        <label>Father Name *</label>
+                        <input type="text" name="father_name" required placeholder="e.g., Kebede" pattern="[A-Za-z ]+" title="Letters only">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h4>Personal Information</h4>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Sex *</label>
+                        <select name="sex" required>
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" name="phone" required placeholder="09XXXXXXXX or 07XXXXXXXX" pattern="^(09|07)[0-9]{8}$" title="Phone must start with 09 or 07 followed by 8 digits">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h4>Academic Information</h4>
+                <div class="form-group">
+                    <label>University *</label>
+                    <select name="university" required>
+                        <option value="">Select Your University</option>
+                        {% for uni in universities %}
+                        <option value="{{ uni }}">{{ uni }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Stream *</label>
+                    <div class="stream-options">
+                        <label class="stream-option">
+                            <input type="radio" name="stream" value="Natural" required>
+                            <span class="stream-card">
+                                <strong>Natural Science</strong>
+                                <small>Engineering, Health, Natural Sciences</small>
+                            </span>
+                        </label>
+                        <label class="stream-option">
+                            <input type="radio" name="stream" value="Social" required>
+                            <span class="stream-card">
+                                <strong>Social Science</strong>
+                                <small>Business, Law, Social Sciences</small>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h4>Security</h4>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Password *</label>
+                        <input type="password" name="password" id="password" required minlength="8" placeholder="Minimum 8 characters">
+                        <small>At least 8 chars with letters and numbers</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password *</label>
+                        <input type="password" name="confirm_password" id="confirmPassword" required placeholder="Re-enter password">
+                    </div>
+                </div>
+                <div id="passwordMatch" class="validation-message"></div>
+            </div>
+            
+            <div class="form-section optional-section">
+                <h4>Optional Information</h4>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Telegram Username</label>
+                        <input type="text" name="telegram_username" placeholder="@username">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" placeholder="you@example.com">
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+            
+            <div class="auth-footer">
+                Already have an account? <a href="{{ url_for('student.login') }}">Login here</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+{% endblock %}

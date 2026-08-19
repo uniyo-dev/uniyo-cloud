@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block title %}Payments - UNIYO Admin
+
+
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin_home.css') }}">
+
+
+
+{% endblock %}
+
+{% block content %}
+<div class="admin-container">
+    
+    <header class="admin-header">
+        <div>
+            <h1>💳 Payment Verification</h1>
+            <p>Review and approve student payments</p>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center;">
+            <button onclick="toggleAdminTheme()" class="btn btn-outline" id="adminThemeBtn" title="Toggle Theme">🌙 Dark</button>
+            <a href="{{ url_for('admin.home') }}" class="btn btn-outline">← Dashboard</a>
+        </div>
+    </header>
+    
+    <div class="payments-list">
+        {% for payment in payments %}
+        <div class="payment-card status-{{ payment.payment_status }}">
+            <div class="payment-header">
+                <div class="payment-student-info">
+                    <strong>{{ payment.full_name }}</strong>
+                    <small>{{ payment.phone }} • {{ payment.university }}</small>
+                    {% if payment.telegram_username %}
+                    <a href="https://t.me/{{ payment.telegram_username }}" target="_blank" class="telegram-link">@{{ payment.telegram_username }}</a>
+                    {% endif %}
+                </div>
+                <span class="status-badge">{{ payment.payment_status|upper }}</span>
+            </div>
+            
+            <div class="payment-details">
+                <div class="detail-row">
+                    <span>Method:</span>
+                    <strong>{{ payment.payment_method|upper }}</strong>
+                </div>
+                <div class="detail-row">
+                    <span>Transaction:</span>
+                    <strong>{{ payment.transaction_number }}</strong>
+                </div>
+                <div class="detail-row">
+                    <span>Amount:</span>
+                    <strong>{{ payment.amount }} ETB</strong>
+                </div>
+                <div class="detail-row">
+                    <span>Submitted:</span>
+                    <strong>{{ payment.submitted_at|format_date }}</strong>
+                </div>
+                
+                {% if payment.screenshot_path %}
+                <div class="detail-row">
+                    <span>Screenshot:</span>
+                    <a href="{{ url_for('static', filename='uploads/payments/' + payment.screenshot_path) }}" target="_blank">View</a>
+                </div>
+                {% endif %}
+            </div>
+            
+            {% if payment.payment_status == 'pending' %}
+            <div class="payment-actions">
+                <form action="{{ url_for('admin.approve_payment', payment_id=payment.id) }}" method="POST">
+                    <button type="submit" class="btn-sm btn-success">✅ Approve</button>
+                </form>
+                <form action="{{ url_for('admin.reject_payment', payment_id=payment.id) }}" method="POST" class="reject-form">
+                    <input type="text" name="rejection_reason" placeholder="Rejection reason" required>
+                    <button type="submit" class="btn-sm btn-danger">❌ Reject</button>
+                </form>
+            </div>
+            {% elif payment.payment_status == 'rejected' %}
+            <div class="rejection-info">
+                <p><strong>Reason:</strong> {{ payment.rejection_reason }}</p>
+            </div>
+            {% elif payment.payment_status == 'approved' %}
+            <div class="approval-info">
+                <p>✅ Approved on {{ payment.reviewed_at|format_date }}</p>
+            </div>
+            {% endif %}
+        </div>
+        {% else %}
+        <div class="empty-state">
+            <p>No payments submitted yet.</p>
+        </div>
+        {% endfor %}
+    </div>
+    
+</div>
+
+
+
+{% endblock %}

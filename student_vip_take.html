@@ -1,0 +1,299 @@
+{% extends "base.html" %}
+
+{% block title %}{{ vip.title }} - VIP Exam - UNIYO{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/student_vip.css') }}">
+<style>
+    /* VIP EXAM ROOM - Premium Design */
+    .vip-exam-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .vip-exam-header {
+        background: linear-gradient(135deg, #6D28D9 0%, #EC4899 100%);
+        border-radius: 16px;
+        padding: 24px;
+        text-align: center;
+        margin-bottom: 24px;
+        position: sticky;
+        top: 10px;
+        z-index: 100;
+        box-shadow: 0 8px 24px rgba(109, 40, 217, 0.3);
+    }
+    
+    .vip-exam-header h1 {
+        color: white;
+        font-size: 22px;
+        margin-bottom: 4px;
+    }
+    
+    .vip-exam-header p {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 13px;
+    }
+    
+    .vip-timer-display {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 12px;
+        padding: 12px;
+        margin-top: 12px;
+        display: inline-block;
+    }
+    
+    .vip-timer-display span {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 32px;
+        font-weight: 700;
+        color: #F59E0B;
+    }
+    
+    .vip-timer-label {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .vip-question-card {
+        background: #111827;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+    }
+    
+    .vip-question-card:hover {
+        border-color: #6D28D9;
+        box-shadow: 0 4px 12px rgba(109, 40, 217, 0.2);
+    }
+    
+    .vip-question-number {
+        display: inline-block;
+        background: #6D28D9;
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+    
+    .vip-question-text {
+        color: #F8FAFC;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 16px;
+    }
+    
+    .vip-options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .vip-option-btn {
+        padding: 14px 16px;
+        background: #1A2332;
+        border: 2px solid rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        color: #E2E8F0;
+        cursor: pointer;
+        font-size: 14px;
+        text-align: left;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+    
+    .vip-option-btn:hover {
+        border-color: #6D28D9;
+        background: rgba(109, 40, 217, 0.1);
+    }
+    
+    .vip-option-btn.selected {
+        border-color: #F59E0B;
+        background: rgba(245, 158, 11, 0.15);
+        font-weight: 600;
+    }
+    
+    .vip-option-btn.selected::before {
+        content: '✓ ';
+        color: #F59E0B;
+        font-weight: 700;
+    }
+    
+    .vip-progress-section {
+        position: sticky;
+        bottom: 20px;
+        background: #111827;
+        border-radius: 16px;
+        padding: 20px;
+        border: 2px solid #6D28D9;
+    }
+    
+    .vip-progress-info {
+        display: flex;
+        justify-content: space-between;
+        color: #94A3B8;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    
+    .vip-progress-bar {
+        height: 8px;
+        background: #1A2332;
+        border-radius: 4px;
+        overflow: hidden;
+        margin-bottom: 12px;
+    }
+    
+    .vip-progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #6D28D9, #EC4899);
+        transition: width 0.3s ease;
+    }
+    
+    /* Light Mode Overrides */
+    body.light-mode .vip-question-card,
+    body.light-mode .vip-progress-section {
+        background: #FFFFFF;
+        border-color: rgba(0, 0, 0, 0.08);
+    }
+    
+    body.light-mode .vip-question-text {
+        color: #0B0F19;
+    }
+    
+    body.light-mode .vip-option-btn {
+        background: #F8FAFC;
+        border-color: rgba(0, 0, 0, 0.1);
+        color: #0B0F19;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<script>
+(function() {
+    const savedDarkMode = localStorage.getItem('uniyo_dark_mode');
+    if (savedDarkMode === 'false') {
+        document.body.classList.add('light-mode');
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelectorAll('.question-card, .worksheet-header, .vip-question-card, .vip-progress-section').forEach(el => {
+                    el.style.backgroundColor = '#FFFFFF';
+                    el.style.color = '#334155';
+                });
+                document.querySelectorAll('.question-text, .vip-question-text').forEach(el => {
+                    el.style.color = '#334155';
+                });
+                document.querySelectorAll('.option-btn, .vip-option-btn').forEach(el => {
+                    el.style.backgroundColor = '#F8FAFC';
+                    el.style.color = '#0B0F19';
+                });
+                console.log('Light mode applied');
+            }, 500);
+        });
+    }
+})();
+</script>
+
+
+<script>
+(function() {
+    const savedDarkMode = localStorage.getItem('uniyo_dark_mode');
+    if (savedDarkMode === 'false') {
+        document.body.classList.add('light-mode');
+    }
+})();
+</script>
+
+<div class="vip-exam-container">
+    
+    <!-- VIP EXAM HEADER -->
+    <header class="vip-exam-header">
+        <h1>🏆 {{ vip.title }}</h1>
+        <p>{{ vip.course_code }} | Week {{ vip.week_number }} | VIP Competition</p>
+        
+        <div class="vip-timer-display">
+            <div class="vip-timer-label">Time Remaining</div>
+            <span class="timer-display-large" data-end-time="{{ vip.end_time }}">--:--:--</span>
+        </div>
+    </header>
+    
+    <!-- VIP QUESTIONS -->
+    <div class="vip-questions">
+        {% for question in questions %}
+        <div class="vip-question-card" data-question-id="{{ question.id }}">
+            <span class="vip-question-number">Question {{ loop.index }} of {{ questions|length }}</span>
+            
+            <div class="vip-question-text">{{ question.text|safe }}</div>
+            
+            {% if question.diagram %}
+            <div class="question-diagram">{{ question.diagram|safe }}</div>
+            {% endif %}
+            
+            <div class="vip-options">
+                {% for option in question.options %}
+                <button class="vip-option-btn" 
+                        data-question-id="{{ question.id }}"
+                        data-option="{{ option }}"
+                        onclick="selectVipOption(this, {{ question.id }}, '{{ option }}')">
+                    {{ option }}
+                </button>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <!-- PROGRESS & SUBMIT -->
+    <div class="vip-progress-section">
+        <div class="vip-progress-info">
+            <span>Answered: <strong id="answeredCount">0</strong>/{{ questions|length }}</span>
+            <span id="progressPercent">0%</span>
+        </div>
+        <div class="vip-progress-bar">
+            <div class="vip-progress-fill" id="vipProgressFill" style="width: 0%"></div>
+        </div>
+        <button id="submitVipBtn" class="btn btn-gold btn-block" onclick="submitVip()">
+            🏆 Submit VIP Answers
+        </button>
+    </div>
+    
+</div>
+
+<!-- Custom Confirmation Modal -->
+<div id="customConfirmModal" class="modal hidden">
+    <div class="modal-content">
+        <div class="modal-icon">⚠️</div>
+        <h3 id="confirmTitle">Submit Answers?</h3>
+        <p id="confirmMessage">Are you sure you want to submit?</p>
+        <div class="modal-actions">
+            <button class="btn btn-outline" onclick="closeConfirmModal()">Cancel</button>
+            <button class="btn btn-gold" id="confirmSubmitBtn">Yes, Submit</button>
+        </div>
+    </div>
+</div>
+
+<!-- Results Modal -->
+<div id="vipResultsModal" class="modal hidden">
+    <div class="modal-content">
+        <h2>🏆 VIP Results</h2>
+        <div id="vipResultsContent"></div>
+        <a href="{{ url_for('vip.vip_dashboard') }}" class="btn btn-primary">View Leaderboard</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    const vipId = {{ vip.id }};
+    const totalQuestions = {{ questions|length }};
+</script>
+<script src="{{ url_for('static', filename='js/student_vip.js') }}"></script>
+{% endblock %}
