@@ -46,7 +46,7 @@
     <!-- SEARCH & SORT TOOLBAR -->
     <section class="admin-section" style="min-height: auto; padding: 12px 20px;">
         <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
-            <input type="text" id="contentSearch" placeholder="🔍 Search by course, chapter..." 
+            <input type="text" id="contentSearch" placeholder="Search by course, chapter..." style="flex: 1; min-width: 150px; padding: 8px 12px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; color: #F8FAFC; font-size: 12px;" onkeyup="filterContentRows()">
         
         <div style="display: flex; gap: 4px; flex-wrap: wrap; margin-top: 8px;">
             <button onclick="quickFilter('all')" class="filter-tab active" id="tab-all" style="padding: 4px 10px; border: 1px solid rgba(255,255,255,0.08); border-radius: 15px; background: #6D28D9; color: white; font-size: 10px; cursor: pointer;">All</button>
@@ -59,7 +59,7 @@
         </div>
                    style="flex: 1; min-width: 150px; padding: 8px 12px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; color: #F8FAFC; font-size: 12px;"
                    onkeyup="filterContentRows()">
-            <select id="sortSelect" onchange="filterContentRows()"
+            <select id="sortSelect" onchange="filterContentRows()" style="padding: 8px 12px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; color: #F8FAFC; font-size: 12px;">
                     style="padding: 8px 12px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; color: #F8FAFC; font-size: 12px;">
                 <option value="default">Sort: Default</option>
                 <option value="chapter">Sort: Chapter Number</option>
@@ -72,7 +72,7 @@
                 <option value="chapter">Sort: Chapter</option>
                 <option value="course">Sort: Course</option>
             </select>
-            <select id="statusFilter" onchange="filterContentRows()"
+            <select id="statusFilter" onchange="filterContentRows()" style="padding: 8px 12px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; color: #F8FAFC; font-size: 12px;">
                     style="padding: 8px 12px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; color: #F8FAFC; font-size: 12px;">
                 <option value="all">Status: All</option>
                 <option value="active">Published</option>
