@@ -163,7 +163,7 @@ def read_free_lesson(course_code):
     from pathlib import Path as P
     from flask import abort
     
-    free_file = P('/sdcard/UNIYO/content/free_samples') / f"{course_code}.html"
+    free_file = BASE_DIR / 'content' / 'free_samples' / f"{course_code}.html"
     
     if not free_file.exists():
         flash("Free lesson not found", "danger")
