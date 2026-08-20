@@ -1,13 +1,10 @@
 """
-UNIYO LMS - Database Connection (Neon PostgreSQL)
+UNIYO LMS - Database Connection (SQLite)
 """
 
-import psycopg2
-import psycopg2.extras
+import sqlite3
 from contextlib import contextmanager
-
-# Neon connection
-DATABASE_URL = "postgresql://neondb_owner:npg_zxS0EfrqO7Lg@ep-withered-grass-ay1zj3eu-pooler.c-5.us-east-2.aws.neon.tech/neondb?sslmode=require"
+from core.paths import DB_PATH
 
 class Database:
     _instance = None
@@ -19,19 +16,20 @@ class Database:
         return cls._instance
     
     def connect(self):
-        if self._connection is None or self._connection.closed:
-            self._connection = psycopg2.connect(DATABASE_URL)
-            self._connection.autocommit = True
+        if self._connection is None:
+            DB_PATH.parent.mkdir(parents=True, exist_ok=True)
+            self._connection = sqlite3.connect(str(DB_PATH), check_same_thread=False)
+            self._connection.row_factory = sqlite3.Row
         return self._connection
     
     def close(self):
-        if self._connection and not self._connection.closed:
+        if self._connection:
             self._connection.close()
             self._connection = None
     
     def execute(self, query, params=None):
         conn = self.connect()
-        cursor = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+        cursor = conn.cursor()
         if params:
             cursor.execute(query, params)
         else:
