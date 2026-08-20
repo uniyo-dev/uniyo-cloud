@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Free Sample - UNIYO{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/student_lessons.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="lesson-container">
+    
+    <header class="lesson-header">
+        <a href="{{ url_for('student.home') }}" class="back-btn">← Back to Dashboard</a>
+        
+        <div class="lesson-meta">
+            <span class="lesson-course">{{ course_code }}</span>
+            <h1>FREE SAMPLE LESSON</h1>
+            <p>Try before you buy!</p>
+        </div>
+    </header>
+    
+    <div class="lesson-content">
+        <div class="lesson-body">
+            {{ lesson_content|safe }}
+        </div>
+    </div>
+    
+    <div class="download-section">
+        <a href="{{ url_for('student.home') }}#paymentSection" class="btn btn-gold btn-block">
+            🎓 Upgrade to Premium - Get All 16 Courses
+        </a>
+    </div>
+    
+</div>
+{% endblock %}

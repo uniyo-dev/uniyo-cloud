@@ -155,3 +155,22 @@ def read_lesson(course_code, chap, part):
         })
     
     return render_template('student_lessons.html', lesson=lesson, lesson_content=lesson_content, progress=progress, all_parts=all_parts, next_lesson=next_lesson, prev_lesson=prev_lesson, student=student, watermark=watermark, part_worksheet=part_worksheet, full_worksheet=full_worksheet, is_last_part=is_last_part, chapter_info=chapter_info, current_chapter=chap)
+
+
+@lesson_bp.route('/student/free-lesson/<course_code>', methods=['GET'])
+def read_free_lesson(course_code):
+    """Free sample lesson - NO premium required"""
+    from pathlib import Path as P
+    from flask import abort
+    
+    free_file = P('/sdcard/UNIYO/content/free_samples') / f"{course_code}.html"
+    
+    if not free_file.exists():
+        flash("Free lesson not found", "danger")
+        return redirect(url_for('student.home'))
+    
+    lesson_content = free_file.read_text(encoding='utf-8')
+    
+    return render_template('student_free_lesson.html', 
+                          lesson_content=lesson_content,
+                          course_code=course_code)

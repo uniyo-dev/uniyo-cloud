@@ -93,7 +93,7 @@
     {% endif %}
     
 
-    < FREE SAMPLE LESSONS -->    {% if student.subscription_status != 'premium' %}
+    <!-- FREE SAMPLE LESSONS -->    {% if student.subscription_status != 'premium' %}
     <section class="free-samples-section">
         <h2>🎁 Free Sample Lessons</h2>
         <p class="text-muted">Try before you buy! These lessons are completely free.</p>
@@ -105,7 +105,7 @@
                     <div class="free-badge">FREE</div>
                     <h4>{{ course.title }}</h4>
                     <p>Chapter 1, Part 1</p>
-                    <a href="{{ url_for('lesson.read_lesson', course_code=course.code, chap=1, part=1) }}" class="btn btn-gold btn-block">
+                    <a href="{{ url_for('lesson.read_free_lesson', course_code=course.code) }}" class="btn btn-gold btn-block">
                         Start Free Lesson
                     </a>
                 </div>
@@ -131,7 +131,7 @@
                     <span>📅 Sem {{ course.semester }}</span>
                     <span>🎯 {{ course.credit_hours }} Credits</span>
                 </div>
-                <a href="{{ url_for('lesson.read_lesson', course_code=course.code, chap=1, part=1) }}" class="btn btn-primary btn-block">Start Learning</a>
+                <a href="{{ url_for('lesson.read_free_lesson', course_code=course.code) }}" class="btn btn-primary btn-block">Start Learning</a>
             </div>
             {% endfor %}
         </div>
