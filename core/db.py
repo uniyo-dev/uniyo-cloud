@@ -2,8 +2,8 @@
 UNIYO LMS - Database Connection (Supabase PostgreSQL)
 """
 
-import psycopg
-from psycopg.rows import dict_row
+import psycopg2
+import psycopg2.extras
 from contextlib import contextmanager
 
 # Supabase connection
@@ -26,7 +26,7 @@ class Database:
     
     def connect(self):
         if self._connection is None or self._connection.closed:
-            self._connection = psycopg.connect(DATABASE_URL, row_factory=dict_row)
+            self._connection = psycopg2.connect(DATABASE_URL)
             self._connection.autocommit = True
         return self._connection
     
@@ -37,7 +37,7 @@ class Database:
     
     def execute(self, query, params=None):
         conn = self.connect()
-        cursor = conn.cursor()
+        cursor = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
         if params:
             cursor.execute(query, params)
         else:
