@@ -1,19 +1,13 @@
 """
-UNIYO LMS - Database Connection (Supabase PostgreSQL)
+UNIYO LMS - Database Connection (Neon PostgreSQL)
 """
 
 import psycopg2
 import psycopg2.extras
 from contextlib import contextmanager
 
-# Supabase connection
-SUPABASE_HOST = "db.kuopbrowpikkepytlchy.supabase.co"
-SUPABASE_PORT = "5432"
-SUPABASE_DB = "postgres"
-SUPABASE_USER = "postgres"
-SUPABASE_PASSWORD = "@Chalie/2026"
-
-DATABASE_URL = f"postgresql://{SUPABASE_USER}:{SUPABASE_PASSWORD}@{SUPABASE_HOST}:{SUPABASE_PORT}/{SUPABASE_DB}"
+# Neon connection
+DATABASE_URL = "postgresql://neondb_owner:npg_zxS0EfrqO7Lg@ep-withered-grass-ay1zj3eu-pooler.c-5.us-east-2.aws.neon.tech/neondb?sslmode=require"
 
 class Database:
     _instance = None
