@@ -7,19 +7,20 @@ import os
 import sys
 
 BASE_DIR = Path(__file__).resolve().parent
-DB_PATH = BASE_DIR / "database" / "UNIYO.db"
-DB_PATH.parent.mkdir(parents=True, exist_ok=True)
 
-# Create necessary directories BEFORE anything else
 for folder in ['logs', 'uploads', 'backups', 'certificates', 'certificates/pdf', 'certificates/qr', 'database', 'flask_session']:
     (BASE_DIR / folder).mkdir(parents=True, exist_ok=True)
 
 sys.path.insert(0, str(BASE_DIR))
 
-# Initialize database
+# Create tables and seed data
 try:
-    from init_database import initialize_database
-    initialize_database()
+    from pg_schema import create_tables, seed_data
+    from core.db import db
+    db.connect()
+    create_tables(db)
+    seed_data(db)
+    print("✓ PostgreSQL ready")
 except Exception as e:
     print(f"Database init warning: {e}")
 
