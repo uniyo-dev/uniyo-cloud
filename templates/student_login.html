@@ -1,20 +1,39 @@
 {% extends "base.html" %}
 
 {% block title %}Login - UNIYO
+
+
+
+
+
 <script>
-    // Check if student has registered before
+(function() {
     const hasAccount = localStorage.getItem('uniyo_has_account');
+    const loginBtn = document.getElementById('loginBtn');
+    const createBtn = document.getElementById('createAccountBtn');
     
     if (hasAccount === 'true') {
-        // Student has account → Login glows
-        document.getElementById('loginBtn').style.animation = 'glowPulse 2s infinite';
-        document.getElementById('createAccountBtn').style.animation = 'none';
-        document.getElementById('createAccountBtn').style.boxShadow = '0 4px 20px rgba(109, 40, 217, 0.3)';
+        // Returning student → Login glows
+        if (loginBtn) {
+            loginBtn.style.animation = 'glowPulse 2s infinite';
+            loginBtn.style.boxShadow = '0 0 30px rgba(109, 40, 217, 0.8)';
+        }
+        if (createBtn) {
+            createBtn.style.animation = 'none';
+            createBtn.style.boxShadow = 'none';
+        }
     } else {
         // First time → Create Account glows
-        document.getElementById('createAccountBtn').style.animation = 'glowPulse 2s infinite';
-        document.getElementById('loginBtn').style.animation = 'none';
+        if (createBtn) {
+            createBtn.style.animation = 'glowPulse 2s infinite';
+            createBtn.style.boxShadow = '0 0 30px rgba(236, 72, 153, 0.8)';
+        }
+        if (loginBtn) {
+            loginBtn.style.animation = 'none';
+            loginBtn.style.boxShadow = 'none';
+        }
     }
+})();
 </script>
 
 <style>
@@ -32,14 +51,7 @@
 
 {% block content %}
 
-<script>
-(function() {
-    const savedDarkMode = localStorage.getItem('uniyo_dark_mode');
-    if (savedDarkMode === 'false') {
-        document.body.classList.add('light-mode');
-    }
-})();
-</script>
+
 
 <div class="auth-container">
     <div class="auth-card">
@@ -69,7 +81,7 @@
         
         <div class="auth-footer">
             <p style="margin-bottom: 14px; color: #94A3B8;">Don't have an account?</p>
-        <a href="{{ url_for('student.register') }}" 
+        <a href="{{ url_for('student.register') }}" id="createAccountBtn" 
            style="display: block; text-align: center; padding: 14px 24px; 
                   background: linear-gradient(135deg, #6D28D9, #EC4899); 
                   color: white !important; border-radius: 12px; font-weight: 700; 
