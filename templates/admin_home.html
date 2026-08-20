@@ -3,12 +3,70 @@
 {% block title %}Admin Dashboard - UNIYO
 
 
+
+
+<!-- PASSWORD CHANGE MODAL -->
+<div id="passwordModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 99999; align-items: center; justify-content: center; padding: 20px;">
+    <div style="background: #111827; border: 2px solid #6D28D9; border-radius: 16px; padding: 24px; max-width: 400px; width: 90%;">
+        <h3 style="color: #F8FAFC; margin-bottom: 16px;">🔒 Change Password</h3>
+        
+        <form action="{{ url_for('admin.change_password') }}" method="POST">
+            <div class="form-group">
+                <label>Current Password</label>
+                <input type="password" name="current_password" required placeholder="Enter current password">
+            </div>
+            <div class="form-group">
+                <label>New Password</label>
+                <input type="password" name="new_password" required minlength="8" placeholder="Minimum 8 characters">
+            </div>
+            <div class="form-group">
+                <label>Confirm New Password</label>
+                <input type="password" name="confirm_password" required placeholder="Re-enter new password">
+            </div>
+            <div style="display: flex; gap: 8px;">
+                <button type="button" onclick="document.getElementById('passwordModal').style.display='none'" 
+                        class="btn btn-outline" style="flex: 1;">Cancel</button>
+                <button type="submit" class="btn btn-primary" style="flex: 2;">Update Password</button>
+            </div>
+        </form>
+    </div>
+</div>
+
 {% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_home.css') }}">
 
 
+
+
+
+<!-- PASSWORD CHANGE MODAL -->
+<div id="passwordModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 99999; align-items: center; justify-content: center; padding: 20px;">
+    <div style="background: #111827; border: 2px solid #6D28D9; border-radius: 16px; padding: 24px; max-width: 400px; width: 90%;">
+        <h3 style="color: #F8FAFC; margin-bottom: 16px;">🔒 Change Password</h3>
+        
+        <form action="{{ url_for('admin.change_password') }}" method="POST">
+            <div class="form-group">
+                <label>Current Password</label>
+                <input type="password" name="current_password" required placeholder="Enter current password">
+            </div>
+            <div class="form-group">
+                <label>New Password</label>
+                <input type="password" name="new_password" required minlength="8" placeholder="Minimum 8 characters">
+            </div>
+            <div class="form-group">
+                <label>Confirm New Password</label>
+                <input type="password" name="confirm_password" required placeholder="Re-enter new password">
+            </div>
+            <div style="display: flex; gap: 8px;">
+                <button type="button" onclick="document.getElementById('passwordModal').style.display='none'" 
+                        class="btn btn-outline" style="flex: 1;">Cancel</button>
+                <button type="submit" class="btn btn-primary" style="flex: 2;">Update Password</button>
+            </div>
+        </form>
+    </div>
+</div>
 
 {% endblock %}
 
@@ -23,6 +81,9 @@
         <div style="display: flex; gap: 8px; align-items: center;">
             <button onclick="toggleAdminTheme()" class="btn btn-outline" id="adminThemeBtn" title="Toggle Theme">
                 🌙 Dark
+            </button>
+            <button onclick="document.getElementById('passwordModal').style.display='flex'" class="btn btn-outline" title="Change Password">
+                🔒 Password
             </button>
             <a href="{{ url_for('admin.logout') }}" class="btn btn-outline">Logout</a>
         </div>
@@ -66,30 +127,38 @@
 
     
     <section class="admin-section" style="margin-top: 20px;">
-        <h3>🔒 Change Password</h3>
-        
-        <form action="{{ url_for('admin.change_password') }}" method="POST" style="max-width: 400px; margin-top: 16px;">
-            <div class="form-group">
-                <label>Current Password</label>
-                <input type="password" name="current_password" required placeholder="Enter current password">
-            </div>
-            
-            <div class="form-group">
-                <label>New Password</label>
-                <input type="password" name="new_password" required minlength="8" placeholder="Minimum 8 characters">
-            </div>
-            
-            <div class="form-group">
-                <label>Confirm New Password</label>
-                <input type="password" name="confirm_password" required placeholder="Re-enter new password">
-            </div>
-            
-            <button type="submit" class="btn btn-primary">Update Password</button>
-        </form>
-    </section>
 
 </div>
 
 
+
+
+
+<!-- PASSWORD CHANGE MODAL -->
+<div id="passwordModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 99999; align-items: center; justify-content: center; padding: 20px;">
+    <div style="background: #111827; border: 2px solid #6D28D9; border-radius: 16px; padding: 24px; max-width: 400px; width: 90%;">
+        <h3 style="color: #F8FAFC; margin-bottom: 16px;">🔒 Change Password</h3>
+        
+        <form action="{{ url_for('admin.change_password') }}" method="POST">
+            <div class="form-group">
+                <label>Current Password</label>
+                <input type="password" name="current_password" required placeholder="Enter current password">
+            </div>
+            <div class="form-group">
+                <label>New Password</label>
+                <input type="password" name="new_password" required minlength="8" placeholder="Minimum 8 characters">
+            </div>
+            <div class="form-group">
+                <label>Confirm New Password</label>
+                <input type="password" name="confirm_password" required placeholder="Re-enter new password">
+            </div>
+            <div style="display: flex; gap: 8px;">
+                <button type="button" onclick="document.getElementById('passwordModal').style.display='none'" 
+                        class="btn btn-outline" style="flex: 1;">Cancel</button>
+                <button type="submit" class="btn btn-primary" style="flex: 2;">Update Password</button>
+            </div>
+        </form>
+    </div>
+</div>
 
 {% endblock %}
