@@ -16,7 +16,7 @@ sys.path.insert(0, str(BASE_DIR))
 try:
     from init_database import initialize_database
     initialize_database()
-    print("✓ SQLite database ready")
+    print("✓ Database ready")
 except Exception as e:
     print(f"Database init warning: {e}")
 
