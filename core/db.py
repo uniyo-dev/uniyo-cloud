@@ -10,10 +10,8 @@ TURSO_URL = "https://uniyo-uniyo-dev.aws-us-east-2.turso.io"
 TURSO_TOKEN = "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3ODcyNjE4MjYsImlkIjoiMDFhMDIxMWEtNDkwMS03ZDY2LTk5ODEtZDc5NTcxMDYyNTVhIiwia2lkIjoiT29jQW5QU0Fjc0xicXV2MGI4ekdyaUtfT2ZyS0UxY2FEc3BaU3VkQVFFOCIsInJpZCI6IjU2ZDU3NzkzLTFhZmMtNGNiMC04NDJkLTY4MjRlNGQ0YThmNiJ9.BkDZq1Vhl_vuZ1hmenaJIbkwfu-5Nglr09vgFNPKIorOWU_iwFflaECdWE1RhJsHeom3sw7bwnsSKpllyExSBQ"
 
 class TursoRow(dict):
-    """Row that supports both dict and index access"""
     def __getitem__(self, key):
         if isinstance(key, int):
-            # Index access - return value by position
             return list(self.values())[key]
         return super().__getitem__(key)
 
@@ -32,32 +30,30 @@ class Database:
         pass
     
     def _execute_raw(self, query, params=None):
-        """Execute SQL and return raw Turso response"""
         headers = {
             "Authorization": f"Bearer {TURSO_TOKEN}",
             "Content-Type": "application/json"
         }
         
-        # Build statement with params
         if params:
-            turso_params = []
-            for p in params:
-                if isinstance(p, int):
-                    turso_params.append({"type": "integer", "value": str(p)})
-                elif isinstance(p, float):
-                    turso_params.append({"type": "real", "value": str(p)})
-                elif p is None:
-                    turso_params.append({"type": "null", "value": "null"})
-                else:
-                    turso_params.append({"type": "text", "value": str(p)})
-            
-            # Replace ? with ?1, ?2, etc for Turso
-            import re
             sql = query
-            for i in range(len(params)):
-                sql = sql.replace('?', f'?{i+1}', 1)
+            args = []
+            for i, p in enumerate(params):
+                param_name = f"p{i+1}"
+                sql = sql.replace('?', f':{param_name}', 1)
+                
+                if isinstance(p, int):
+                    args.append({"name": param_name, "type": "integer", "value": str(p)})
+                elif isinstance(p, float):
+                    args.append({"name": param_name, "type": "real", "value": str(p)})
+                elif p is None:
+                    args.append({"name": param_name, "type": "text", "value": ""})
+                else:
+                    args.append({"name": param_name, "type": "text", "value": str(p)})
             
-            stmt = {"sql": sql, "args": turso_params}
+            stmt = {"sql": sql}
+            if args:
+                stmt["args"] = args
         else:
             stmt = {"sql": query}
         
@@ -76,7 +72,6 @@ class Database:
             return {"results": []}
     
     def execute(self, query, params=None):
-        """Execute and return cursor-like object"""
         result = self._execute_raw(query, params)
         return TursoCursor(result)
     
@@ -126,7 +121,7 @@ class TursoCursor:
         
         try:
             for result in response.get("results", []):
-                if result.get("type") == "ok" and result.get("response", {}).get("type") == "execute":
+                if result.get("type") == "ok":
                     exec_result = result["response"]["result"]
                     self.cols = [col["name"] for col in exec_result.get("cols", [])]
                     
@@ -135,11 +130,8 @@ class TursoCursor:
                         for i, col_name in enumerate(self.cols):
                             cell = row_data[i]
                             value = cell.get("value") if isinstance(cell, dict) else cell
-                            # Convert to proper type
-                            if cell.get("type") == "integer":
-                                value = int(value)
-                            elif cell.get("type") == "real":
-                                value = float(value)
+                            if isinstance(cell, dict) and cell.get("type") == "integer":
+                                value = int(value) if value else 0
                             row_dict[col_name] = value
                         
                         self.rows.append(TursoRow(row_dict))
