@@ -1,9 +1,7 @@
 services:
   - type: web
     name: uniyo-cloud
-    runtime: python
+    env: python
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn cloud_server:app
-    envVars:
-      - key: SECRET_KEY
-        generateValue: true
