@@ -13,7 +13,6 @@ for folder in ['logs', 'uploads', 'backups', 'certificates', 'certificates/pdf',
 
 sys.path.insert(0, str(BASE_DIR))
 
-# Use Neon PostgreSQL (persistent)
 try:
     from pg_schema import create_tables, seed_data
     from core.db import db
