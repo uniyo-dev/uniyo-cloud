@@ -1,6 +1,30 @@
 {% extends "base.html" %}
 
-{% block title %}Login - UNIYO{% endblock %}
+{% block title %}Login - UNIYO
+<script>
+    // Check if student has registered before
+    const hasAccount = localStorage.getItem('uniyo_has_account');
+    
+    if (hasAccount === 'true') {
+        // Student has account → Login glows
+        document.getElementById('loginBtn').style.animation = 'glowPulse 2s infinite';
+        document.getElementById('createAccountBtn').style.animation = 'none';
+        document.getElementById('createAccountBtn').style.boxShadow = '0 4px 20px rgba(109, 40, 217, 0.3)';
+    } else {
+        // First time → Create Account glows
+        document.getElementById('createAccountBtn').style.animation = 'glowPulse 2s infinite';
+        document.getElementById('loginBtn').style.animation = 'none';
+    }
+</script>
+
+<style>
+    @keyframes glowPulse {
+        0%, 100% { box-shadow: 0 0 25px rgba(109, 40, 217, 0.6); }
+        50% { box-shadow: 0 0 50px rgba(109, 40, 217, 1); }
+    }
+</style>
+
+{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
@@ -40,7 +64,7 @@
                 <input type="password" name="password" placeholder="Enter your password" required>
             </div>
             
-            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            <button type="submit" class="btn btn-primary btn-block" id="loginBtn">🔐 Login</button>
         </form>
         
         <div class="auth-footer">
@@ -56,12 +80,7 @@
             ✨ Create Account ✨
         </a>
 
-<style>
-    @keyframes createAccountPulse {
-        0%, 100% { box-shadow: 0 4px 20px rgba(109, 40, 217, 0.4); }
-        50% { box-shadow: 0 4px 35px rgba(236, 72, 153, 0.7); }
-    }
-</style>
+
             <p><a href="#" class="text-muted">Forgot password?</a></p>
         </div>
     </div>
