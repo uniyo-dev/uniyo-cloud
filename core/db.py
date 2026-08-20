@@ -2,10 +2,9 @@
 UNIYO LMS - Database Connection (Supabase PostgreSQL)
 """
 
-import psycopg2
-import psycopg2.extras
+import psycopg
+from psycopg.rows import dict_row
 from contextlib import contextmanager
-from core.paths import DB_PATH, IS_WINDOWS
 
 # Supabase connection
 SUPABASE_HOST = "db.kuopbrowpikkepytlchy.supabase.co"
@@ -27,9 +26,8 @@ class Database:
     
     def connect(self):
         if self._connection is None or self._connection.closed:
-            self._connection = psycopg2.connect(DATABASE_URL)
+            self._connection = psycopg.connect(DATABASE_URL, row_factory=dict_row)
             self._connection.autocommit = True
-            psycopg2.extras.register_default_json(self._connection)
         return self._connection
     
     def close(self):
@@ -39,7 +37,7 @@ class Database:
     
     def execute(self, query, params=None):
         conn = self.connect()
-        cursor = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+        cursor = conn.cursor()
         if params:
             cursor.execute(query, params)
         else:
@@ -85,13 +83,13 @@ class Database:
             pass
     
     def checkpoint(self):
-        pass  # PostgreSQL doesn't need WAL checkpoint
+        pass
     
     def vacuum(self):
-        pass  # PostgreSQL handles this automatically
+        pass
     
     def backup(self, backup_path=None):
-        pass  # Supabase handles backups automatically
+        pass
 
 db = Database()
 
