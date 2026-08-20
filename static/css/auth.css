@@ -208,3 +208,45 @@ body.light-mode .stream-card small {
 body.light-mode .auth-footer {
     color: #475569;
 }
+
+/* ============================================
+   SEX CARD GLOW EFFECTS
+   ============================================ */
+
+.stream-option input[type="radio"][name="sex"] + .stream-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Hover glow */
+.stream-option input[type="radio"][name="sex"] + .stream-card:hover {
+    border-color: #6D28D9;
+    box-shadow: 0 0 20px rgba(109, 40, 217, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Selected state - purple glow */
+.stream-option input[type="radio"][name="sex"]:checked + .stream-card {
+    border-color: #6D28D9;
+    background: rgba(109, 40, 217, 0.15);
+    box-shadow: 0 0 25px rgba(109, 40, 217, 0.5), inset 0 0 10px rgba(109, 40, 217, 0.1);
+    animation: sexPulse 2s infinite;
+}
+
+/* Selected state - icon animation */
+.stream-option input[type="radio"][name="sex"]:checked + .stream-card strong {
+    color: #A78BFA;
+    animation: bounce 0.5s ease;
+}
+
+@keyframes sexPulse {
+    0%, 100% { box-shadow: 0 0 25px rgba(109, 40, 217, 0.5); }
+    50% { box-shadow: 0 0 40px rgba(109, 40, 217, 0.8); }
+}
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
