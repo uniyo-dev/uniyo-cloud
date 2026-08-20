@@ -1,19 +1,10 @@
 """
-UNIYO LMS - Database Connection (Supabase PostgreSQL)
+UNIYO LMS - Database Connection (SQLite for Render)
 """
 
-import psycopg2
-import psycopg2.extras
+import sqlite3
 from contextlib import contextmanager
-
-# Supabase connection
-SUPABASE_HOST = "db.kuopbrowpikkepytlchy.supabase.co"
-SUPABASE_PORT = "5432"
-SUPABASE_DB = "postgres"
-SUPABASE_USER = "postgres"
-SUPABASE_PASSWORD = "@Chalie/2026"
-
-DATABASE_URL = f"postgresql://{SUPABASE_USER}:{SUPABASE_PASSWORD}@{SUPABASE_HOST}:{SUPABASE_PORT}/{SUPABASE_DB}"
+from core.paths import DB_PATH
 
 class Database:
     _instance = None
@@ -25,19 +16,20 @@ class Database:
         return cls._instance
     
     def connect(self):
-        if self._connection is None or self._connection.closed:
-            self._connection = psycopg2.connect(DATABASE_URL)
-            self._connection.autocommit = True
+        if self._connection is None:
+            DB_PATH.parent.mkdir(parents=True, exist_ok=True)
+            self._connection = sqlite3.connect(str(DB_PATH), check_same_thread=False)
+            self._connection.row_factory = sqlite3.Row
         return self._connection
     
     def close(self):
-        if self._connection and not self._connection.closed:
+        if self._connection:
             self._connection.close()
             self._connection = None
     
     def execute(self, query, params=None):
         conn = self.connect()
-        cursor = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+        cursor = conn.cursor()
         if params:
             cursor.execute(query, params)
         else:
@@ -99,15 +91,3 @@ def init_app(app):
 
 def get_db():
     return db
-
-def execute_query(query, params=None):
-    return db.execute(query, params)
-
-def fetch_all(query, params=None):
-    return db.query(query, params)
-
-def fetch_one(query, params=None):
-    return db.query_one(query, params)
-
-def fetch_value(query, params=None):
-    return db.query_value(query, params)
