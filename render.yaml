@@ -1,9 +1,10 @@
 services:
   - type: web
-    name: uniyo-lms
+    name: uniyo-cloud
     runtime: python
+    runtimeVersion: "3.11.0"
     buildCommand: pip install -r requirements.txt
-    startCommand: python3 init_database.py && gunicorn cloud_server:app
+    startCommand: gunicorn cloud_server:app
     envVars:
-      - key: SECRET_KEY
-        generateValue: true
+      - key: PYTHON_VERSION
+        value: "3.11.0"
