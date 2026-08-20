@@ -1,18 +1,21 @@
 """
 UNIYO LMS - Database Connection (Turso SQLite Cloud)
-Uses Turso HTTP API - works with any Python version
 """
 
 import requests
 import json
 from contextlib import contextmanager
 
-# Turso connection
-TURSO_URL = "libsql://uniyo-uniyo-dev.aws-us-east-2.turso.io"
+TURSO_URL = "https://uniyo-uniyo-dev.aws-us-east-2.turso.io"
 TURSO_TOKEN = "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3ODcyNjE4MjYsImlkIjoiMDFhMDIxMWEtNDkwMS03ZDY2LTk5ODEtZDc5NTcxMDYyNTVhIiwia2lkIjoiT29jQW5QU0Fjc0xicXV2MGI4ekdyaUtfT2ZyS0UxY2FEc3BaU3VkQVFFOCIsInJpZCI6IjU2ZDU3NzkzLTFhZmMtNGNiMC04NDJkLTY4MjRlNGQ0YThmNiJ9.BkDZq1Vhl_vuZ1hmenaJIbkwfu-5Nglr09vgFNPKIorOWU_iwFflaECdWE1RhJsHeom3sw7bwnsSKpllyExSBQ"
 
-# Convert libsql:// to https:// for HTTP API
-HTTP_URL = TURSO_URL.replace("libsql://", "https://")
+class TursoRow(dict):
+    """Row that supports both dict and index access"""
+    def __getitem__(self, key):
+        if isinstance(key, int):
+            # Index access - return value by position
+            return list(self.values())[key]
+        return super().__getitem__(key)
 
 class Database:
     _instance = None
@@ -23,53 +26,59 @@ class Database:
         return cls._instance
     
     def connect(self):
-        # Turso doesn't need persistent connection - it's HTTP
         return self
     
     def close(self):
         pass
     
-    def execute(self, query, params=None):
-        """Execute SQL via Turso HTTP API"""
+    def _execute_raw(self, query, params=None):
+        """Execute SQL and return raw Turso response"""
         headers = {
             "Authorization": f"Bearer {TURSO_TOKEN}",
             "Content-Type": "application/json"
         }
         
-        # Convert ? placeholders to Turso format
+        # Build statement with params
         if params:
-            # Turso uses named parameters
-            sql = query
-            args = []
+            turso_params = []
             for p in params:
-                if isinstance(p, str):
-                    args.append({"type": "text", "value": p})
-                elif isinstance(p, int):
-                    args.append({"type": "integer", "value": str(p)})
+                if isinstance(p, int):
+                    turso_params.append({"type": "integer", "value": str(p)})
                 elif isinstance(p, float):
-                    args.append({"type": "real", "value": str(p)})
+                    turso_params.append({"type": "real", "value": str(p)})
+                elif p is None:
+                    turso_params.append({"type": "null", "value": "null"})
                 else:
-                    args.append({"type": "text", "value": str(p)})
+                    turso_params.append({"type": "text", "value": str(p)})
             
-            body = {
-                "statements": [{"q": sql, "params": args}]
-            }
+            # Replace ? with ?1, ?2, etc for Turso
+            import re
+            sql = query
+            for i in range(len(params)):
+                sql = sql.replace('?', f'?{i+1}', 1)
+            
+            stmt = {"sql": sql, "args": turso_params}
         else:
-            body = {
-                "statements": [{"q": query}]
-            }
+            stmt = {"sql": query}
+        
+        body = {
+            "requests": [
+                {"type": "execute", "stmt": stmt},
+                {"type": "close"}
+            ]
+        }
         
         try:
-            response = requests.post(
-                f"{HTTP_URL}/v2/pipeline",
-                headers=headers,
-                json=body,
-                timeout=10
-            )
-            return TursoCursor(response.json())
+            response = requests.post(f"{TURSO_URL}/v2/pipeline", headers=headers, json=body, timeout=15)
+            return response.json()
         except Exception as e:
             print(f"Turso error: {e}")
-            return TursoCursor({"results": {"cols": [], "rows": []}})
+            return {"results": []}
+    
+    def execute(self, query, params=None):
+        """Execute and return cursor-like object"""
+        result = self._execute_raw(query, params)
+        return TursoCursor(result)
     
     def query(self, query, params=None):
         cursor = self.execute(query, params)
@@ -81,28 +90,25 @@ class Database:
     
     def query_value(self, query, params=None):
         row = self.query_one(query, params)
-        return row[0] if row else None
+        if row:
+            return list(row.values())[0] if isinstance(row, dict) else row[0]
+        return None
     
     @contextmanager
     def transaction(self):
         try:
             yield self
-            self.execute("COMMIT")
         except Exception as e:
-            self.execute("ROLLBACK")
             raise e
     
     def begin_transaction(self):
-        self.execute("BEGIN")
+        pass
     
     def commit(self):
-        self.execute("COMMIT")
+        pass
     
     def rollback(self):
-        try:
-            self.execute("ROLLBACK")
-        except:
-            pass
+        pass
     
     def checkpoint(self):
         pass
@@ -115,18 +121,30 @@ class Database:
 
 class TursoCursor:
     def __init__(self, response):
-        self.response = response
         self.rows = []
         self.cols = []
         
         try:
-            results = response.get("results", {})
-            self.cols = [col.get("name", "") for col in results.get("cols", [])]
-            raw_rows = results.get("rows", [])
-            for row in raw_rows:
-                self.rows.append(dict(zip(self.cols, row)))
-        except:
-            pass
+            for result in response.get("results", []):
+                if result.get("type") == "ok" and result.get("response", {}).get("type") == "execute":
+                    exec_result = result["response"]["result"]
+                    self.cols = [col["name"] for col in exec_result.get("cols", [])]
+                    
+                    for row_data in exec_result.get("rows", []):
+                        row_dict = {}
+                        for i, col_name in enumerate(self.cols):
+                            cell = row_data[i]
+                            value = cell.get("value") if isinstance(cell, dict) else cell
+                            # Convert to proper type
+                            if cell.get("type") == "integer":
+                                value = int(value)
+                            elif cell.get("type") == "real":
+                                value = float(value)
+                            row_dict[col_name] = value
+                        
+                        self.rows.append(TursoRow(row_dict))
+        except Exception as e:
+            print(f"Parse error: {e}")
     
     def fetchall(self):
         return self.rows
