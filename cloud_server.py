@@ -13,10 +13,14 @@ for folder in ['logs', 'uploads', 'backups', 'certificates', 'certificates/pdf',
 
 sys.path.insert(0, str(BASE_DIR))
 
+# Use Neon PostgreSQL (persistent)
 try:
-    from init_database import initialize_database
-    initialize_database()
-    print("✓ SQLite database ready")
+    from pg_schema import create_tables, seed_data
+    from core.db import db
+    db.connect()
+    create_tables(db)
+    seed_data(db)
+    print("✓ Neon PostgreSQL ready")
 except Exception as e:
     print(f"Database init warning: {e}")
 
