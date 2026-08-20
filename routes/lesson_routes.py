@@ -9,7 +9,7 @@ from pathlib import Path
 from core.db import get_db
 from core.auth import login_required
 from core.helpers import logger
-from core.paths import LESSONS_DIR
+from core.paths import LESSONS_DIR, BASE_DIR
 from core.constants import UNIVERSITY_SHORT_NAMES
 
 lesson_bp = Blueprint('lesson', __name__)
