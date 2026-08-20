@@ -1,19 +1,21 @@
 """
 UNIYO LMS - Database Connection (Turso SQLite Cloud)
+Uses Turso HTTP API - works with any Python version
 """
 
-import sqlite3
 import requests
+import json
 from contextlib import contextmanager
-from core.paths import DB_PATH
 
 # Turso connection
 TURSO_URL = "libsql://uniyo-uniyo-dev.aws-us-east-2.turso.io"
 TURSO_TOKEN = "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3ODcyNjE4MjYsImlkIjoiMDFhMDIxMWEtNDkwMS03ZDY2LTk5ODEtZDc5NTcxMDYyNTVhIiwia2lkIjoiT29jQW5QU0Fjc0xicXV2MGI4ekdyaUtfT2ZyS0UxY2FEc3BaU3VkQVFFOCIsInJpZCI6IjU2ZDU3NzkzLTFhZmMtNGNiMC04NDJkLTY4MjRlNGQ0YThmNiJ9.BkDZq1Vhl_vuZ1hmenaJIbkwfu-5Nglr09vgFNPKIorOWU_iwFflaECdWE1RhJsHeom3sw7bwnsSKpllyExSBQ"
 
+# Convert libsql:// to https:// for HTTP API
+HTTP_URL = TURSO_URL.replace("libsql://", "https://")
+
 class Database:
     _instance = None
-    _connection = None
     
     def __new__(cls):
         if cls._instance is None:
@@ -21,37 +23,61 @@ class Database:
         return cls._instance
     
     def connect(self):
-        if self._connection is None:
-            DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-            self._connection = sqlite3.connect(str(DB_PATH), check_same_thread=False)
-            self._connection.row_factory = sqlite3.Row
-        return self._connection
+        # Turso doesn't need persistent connection - it's HTTP
+        return self
     
     def close(self):
-        if self._connection:
-            self._connection.close()
-            self._connection = None
+        pass
     
     def execute(self, query, params=None):
-        conn = self.connect()
-        cursor = conn.cursor()
+        """Execute SQL via Turso HTTP API"""
+        headers = {
+            "Authorization": f"Bearer {TURSO_TOKEN}",
+            "Content-Type": "application/json"
+        }
+        
+        # Convert ? placeholders to Turso format
         if params:
-            cursor.execute(query, params)
+            # Turso uses named parameters
+            sql = query
+            args = []
+            for p in params:
+                if isinstance(p, str):
+                    args.append({"type": "text", "value": p})
+                elif isinstance(p, int):
+                    args.append({"type": "integer", "value": str(p)})
+                elif isinstance(p, float):
+                    args.append({"type": "real", "value": str(p)})
+                else:
+                    args.append({"type": "text", "value": str(p)})
+            
+            body = {
+                "statements": [{"q": sql, "params": args}]
+            }
         else:
-            cursor.execute(query)
-        return cursor
+            body = {
+                "statements": [{"q": query}]
+            }
+        
+        try:
+            response = requests.post(
+                f"{HTTP_URL}/v2/pipeline",
+                headers=headers,
+                json=body,
+                timeout=10
+            )
+            return TursoCursor(response.json())
+        except Exception as e:
+            print(f"Turso error: {e}")
+            return TursoCursor({"results": {"cols": [], "rows": []}})
     
     def query(self, query, params=None):
         cursor = self.execute(query, params)
-        rows = cursor.fetchall()
-        cursor.close()
-        return rows
+        return cursor.fetchall()
     
     def query_one(self, query, params=None):
         cursor = self.execute(query, params)
-        row = cursor.fetchone()
-        cursor.close()
-        return row
+        return cursor.fetchone()
     
     def query_value(self, query, params=None):
         row = self.query_one(query, params)
@@ -59,12 +85,11 @@ class Database:
     
     @contextmanager
     def transaction(self):
-        conn = self.connect()
         try:
-            yield conn
-            conn.commit()
+            yield self
+            self.execute("COMMIT")
         except Exception as e:
-            conn.rollback()
+            self.execute("ROLLBACK")
             raise e
     
     def begin_transaction(self):
@@ -86,6 +111,30 @@ class Database:
         pass
     
     def backup(self, backup_path=None):
+        pass
+
+class TursoCursor:
+    def __init__(self, response):
+        self.response = response
+        self.rows = []
+        self.cols = []
+        
+        try:
+            results = response.get("results", {})
+            self.cols = [col.get("name", "") for col in results.get("cols", [])]
+            raw_rows = results.get("rows", [])
+            for row in raw_rows:
+                self.rows.append(dict(zip(self.cols, row)))
+        except:
+            pass
+    
+    def fetchall(self):
+        return self.rows
+    
+    def fetchone(self):
+        return self.rows[0] if self.rows else None
+    
+    def close(self):
         pass
 
 db = Database()

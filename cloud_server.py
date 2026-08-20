@@ -13,13 +13,6 @@ for folder in ['logs', 'uploads', 'backups', 'certificates', 'certificates/pdf',
 
 sys.path.insert(0, str(BASE_DIR))
 
-try:
-    from init_database import initialize_database
-    initialize_database()
-    print("✓ Database ready")
-except Exception as e:
-    print(f"Database init warning: {e}")
-
 from server import app
 
 if __name__ == '__main__':
