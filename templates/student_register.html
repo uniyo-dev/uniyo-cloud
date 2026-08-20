@@ -58,20 +58,37 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label>Sex *</label>
-                        <div class="stream-options">
-                            <label class="stream-option">
-                                <input type="radio" name="sex" value="Male" required>
-                                <span class="stream-card">
-                                    <strong>👨 Male</strong>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <label style="cursor: pointer; display: block;">
+                                <input type="radio" name="sex" value="Male" required style="display: none;">
+                                <span class="sex-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 14px; background: #0B0F19; border: 2px solid rgba(255,255,255,0.08); border-radius: 10px; transition: all 0.3s ease; text-align: center;">
+                                    <span style="font-size: 24px; margin-bottom: 4px;">👨</span>
+                                    <span style="color: #F8FAFC; font-size: 13px; font-weight: 600;">Male</span>
                                 </span>
                             </label>
-                            <label class="stream-option">
-                                <input type="radio" name="sex" value="Female" required>
-                                <span class="stream-card">
-                                    <strong>👩 Female</strong>
+                            <label style="cursor: pointer; display: block;">
+                                <input type="radio" name="sex" value="Female" required style="display: none;">
+                                <span class="sex-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 14px; background: #0B0F19; border: 2px solid rgba(255,255,255,0.08); border-radius: 10px; transition: all 0.3s ease; text-align: center;">
+                                    <span style="font-size: 24px; margin-bottom: 4px;">👩</span>
+                                    <span style="color: #F8FAFC; font-size: 13px; font-weight: 600;">Female</span>
                                 </span>
                             </label>
                         </div>
+
+<style>
+    .sex-card:hover {
+        border-color: #6D28D9 !important;
+        background: rgba(109, 40, 217, 0.08) !important;
+    }
+    input[type="radio"][name="sex"]:checked + .sex-card {
+        border-color: #6D28D9 !important;
+        background: rgba(109, 40, 217, 0.15) !important;
+        box-shadow: 0 0 15px rgba(109, 40, 217, 0.3);
+    }
+    input[type="radio"][name="sex"]:checked + .sex-card span:last-child {
+        color: #A78BFA !important;
+    }
+</style>
                     </div>
                     <div class="form-group">
                         <label>Phone Number *</label>
