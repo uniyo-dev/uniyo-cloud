@@ -42,6 +42,45 @@
         </form>
     </section>
     
+    
+    <!-- SEARCH & SORT TOOLBAR -->
+    <section class="admin-section" style="min-height: auto; padding: 12px 20px;">
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+            <input type="text" id="contentSearch" placeholder="🔍 Search by course, chapter..." 
+        
+        <div style="display: flex; gap: 4px; flex-wrap: wrap; margin-top: 8px;">
+            <button onclick="quickFilter('all')" class="filter-tab active" id="tab-all" style="padding: 4px 10px; border: 1px solid rgba(255,255,255,0.08); border-radius: 15px; background: #6D28D9; color: white; font-size: 10px; cursor: pointer;">All</button>
+            <button onclick="quickFilter('Common')" class="filter-tab" id="tab-Common" style="padding: 4px 10px; border: 1px solid rgba(255,255,255,0.08); border-radius: 15px; background: transparent; color: #94A3B8; font-size: 10px; cursor: pointer;">Common</button>
+            <button onclick="quickFilter('Natural')" class="filter-tab" id="tab-Natural" style="padding: 4px 10px; border: 1px solid rgba(255,255,255,0.08); border-radius: 15px; background: transparent; color: #94A3B8; font-size: 10px; cursor: pointer;">Natural</button>
+            <button onclick="quickFilter('Social')" class="filter-tab" id="tab-Social" style="padding: 4px 10px; border: 1px solid rgba(255,255,255,0.08); border-radius: 15px; background: transparent; color: #94A3B8; font-size: 10px; cursor: pointer;">Social</button>
+            {% for course in lessons|map(attribute='course_code')|unique|list %}
+            <button onclick="quickFilter('{{ course }}')" class="filter-tab" id="tab-{{ course }}" style="padding: 4px 10px; border: 1px solid rgba(255,255,255,0.08); border-radius: 15px; background: transparent; color: #94A3B8; font-size: 10px; cursor: pointer;">{{ course }}</button>
+            {% endfor %}
+        </div>
+                   style="flex: 1; min-width: 150px; padding: 8px 12px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; color: #F8FAFC; font-size: 12px;"
+                   onkeyup="filterContentRows()">
+            <select id="sortSelect" onchange="filterContentRows()"
+                    style="padding: 8px 12px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; color: #F8FAFC; font-size: 12px;">
+                <option value="default">Sort: Default</option>
+                <option value="chapter">Sort: Chapter Number</option>
+                <option value="part">Sort: Part Number</option>
+                <option value="course">Sort: Course Code</option>
+                <option value="date">Sort: Date Added</option>
+            </select>
+                    style="padding: 8px 12px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; color: #F8FAFC; font-size: 12px;">
+                <option value="default">Sort: Default</option>
+                <option value="chapter">Sort: Chapter</option>
+                <option value="course">Sort: Course</option>
+            </select>
+            <select id="statusFilter" onchange="filterContentRows()"
+                    style="padding: 8px 12px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; color: #F8FAFC; font-size: 12px;">
+                <option value="all">Status: All</option>
+                <option value="active">Published</option>
+                <option value="inactive">Pending</option>
+            </select>
+        </div>
+    </section>
+    
     <!-- LESSONS -->
     <section class="admin-section" style="min-height: 100px;">
         <h3 style="margin: 0 0 12px 0;">📄 Lessons ({{ lessons|length }})</h3>
@@ -88,7 +127,7 @@
     
     <!-- WORKSHEETS -->
     <section class="admin-section" style="min-height: 100px;">
-        <h3 style="margin: 0 0 12px 0;">📝 Worksheets</h3>
+        <h3 style="margin: 0 0 12px 0;">📝 Worksheets ({{ worksheets|length }})</h3>
         <div id="worksheetsTable" style="overflow-x: auto;">
         <table style="width: 100%; border-collapse: collapse; min-width: 600px;">
             <thead>
@@ -220,6 +259,54 @@
     
 </div>
 
+
+
+
+<script>
+
+function quickFilter(course) {
+    // Update tab styles
+    document.querySelectorAll('.filter-tab').forEach(tab => {
+        tab.style.background = 'transparent';
+        tab.style.color = '#94A3B8';
+    });
+    const activeTab = document.getElementById('tab-' + course);
+    if (activeTab) {
+        activeTab.style.background = '#6D28D9';
+        activeTab.style.color = 'white';
+    }
+    
+    // Filter rows
+    const searchInput = document.getElementById('contentSearch');
+    if (course === 'all') {
+        searchInput.value = '';
+    } else {
+        searchInput.value = course;
+    }
+    filterContentRows();
+}
+
+function filterContentRows() {
+    const search = document.getElementById('contentSearch').value.toLowerCase();
+    const status = document.getElementById('statusFilter').value;
+    
+    const tables = document.querySelectorAll('.admin-section table');
+    tables.forEach(table => {
+        const rows = table.querySelectorAll('tbody tr');
+        rows.forEach(row => {
+            const text = row.textContent.toLowerCase();
+            const badge = row.querySelector('.status-badge');
+            const isActive = badge && (badge.textContent.includes('PUBLISHED') || badge.textContent.includes('ACTIVE'));
+            const rowStatus = isActive ? 'active' : 'inactive';
+            
+            const matchesSearch = text.includes(search);
+            const matchesStatus = status === 'all' || rowStatus === status;
+            
+            row.style.display = matchesSearch && matchesStatus ? '' : 'none';
+        });
+    });
+}
+</script>
 <!-- VIP EXIT GATE -->
 <div id="vipGateModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 99998; align-items: center; justify-content: center; overflow-y: auto; padding: 20px;">
     <div style="background: #111827; border: 3px solid #6D28D9; border-radius: 16px; padding: 24px; max-width: 450px; width: 90%; margin: 20px auto;">

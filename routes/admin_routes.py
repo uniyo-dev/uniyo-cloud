@@ -420,3 +420,46 @@ def unpublish_past_exam(exam_id):
     db.execute("UPDATE past_exams SET is_active = 0 WHERE id = ?", (exam_id,))
     flash("Past exam unpublished.", "warning")
     return redirect(url_for('admin.content_management'))
+
+
+# ============================================
+# ADMIN PASSWORD CHANGE
+# ============================================
+
+@admin_bp.route('/change-password', methods=['POST'])
+@admin_required
+def change_password():
+    """Change admin password"""
+    db = get_db()
+    
+    current_password = request.form.get('current_password', '')
+    new_password = request.form.get('new_password', '')
+    confirm_password = request.form.get('confirm_password', '')
+    
+    admin = db.query_one("SELECT * FROM admins WHERE id = ?", (session['admin_id'],))
+    
+    if not admin:
+        flash("Admin not found", "danger")
+        return redirect(url_for('admin.home'))
+    
+    if not verify_password(admin['password_hash'], current_password):
+        flash("Current password is incorrect", "danger")
+        return redirect(url_for('admin.home'))
+    
+    if len(new_password) < 8:
+        flash("New password must be at least 8 characters", "danger")
+        return redirect(url_for('admin.home'))
+    
+    if new_password != confirm_password:
+        flash("New passwords do not match", "danger")
+        return redirect(url_for('admin.home'))
+    
+    new_hash = hash_password(new_password)
+    db.execute("UPDATE admins SET password_hash = ?, must_change_password = 0 WHERE id = ?", 
+               (new_hash, session['admin_id']))
+    
+    audit_query = "INSERT INTO audit_logs (admin_id, action, target_table, target_id, details, created_at) VALUES (?, 'CHANGE_PASSWORD', 'admins', ?, 'Admin changed password', ?)"
+    db.execute(audit_query, (session['admin_id'], session['admin_id'], datetime.now().isoformat()))
+    
+    flash("Password changed successfully!", "success")
+    return redirect(url_for('admin.home'))

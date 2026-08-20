@@ -75,12 +75,9 @@
                 <h4>Academic Information</h4>
                 <div class="form-group">
                     <label>University *</label>
-                    <select name="university" required>
-                        <option value="">Select Your University</option>
-                        {% for uni in universities %}
-                        <option value="{{ uni }}">{{ uni }}</option>
-                        {% endfor %}
-                    </select>
+                    <input type="text" id="universitySearch" placeholder="🔍 Tap to search university..." 
+                           onclick="openUniversityModal()" readonly required>
+                    <input type="hidden" name="university" id="universityHidden" required>
                 </div>
                 
                 <div class="form-group">
@@ -146,4 +143,57 @@
 
 {% block extra_js %}
 <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+
+<!-- UNIVERSITY SEARCH MODAL -->
+<div id="universityModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 99999; align-items: center; justify-content: center; padding: 20px;">
+    <div style="background: #111827; border: 2px solid #6D28D9; border-radius: 16px; padding: 24px; max-width: 500px; width: 90%; max-height: 80vh; overflow-y: auto;">
+        <h3 style="color: #F8FAFC; margin-bottom: 16px;">🏛️ Select Your University</h3>
+        
+        <input type="text" id="uniSearchInput" placeholder="Type to search..." 
+               style="width: 100%; padding: 12px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; color: #F8FAFC; font-size: 14px; margin-bottom: 12px; box-sizing: border-box;"
+               onkeyup="filterUniversities()">
+        
+        <div id="universityList" style="max-height: 300px; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain;">
+            {% for uni in universities %}
+            <div class="uni-option" onclick="selectUniversity('{{ uni }}')" 
+                 style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); cursor: pointer; color: #94A3B8; font-size: 13px; transition: all 0.2s ease;"
+                 onmouseover="this.style.background='rgba(109,40,217,0.1)'; this.style.color='#F8FAFC';"
+                 onmouseout="this.style.background='transparent'; this.style.color='#94A3B8';">
+                {{ uni }}
+            </div>
+            {% endfor %}
+        </div>
+        
+        <button onclick="closeUniversityModal()" class="btn btn-outline btn-block" style="margin-top: 16px;">Cancel</button>
+    </div>
+</div>
+
+<script>
+function openUniversityModal() {
+    document.getElementById('universityModal').style.display = 'flex';
+    document.getElementById('uniSearchInput').value = '';
+    filterUniversities();
+}
+
+function closeUniversityModal() {
+    document.getElementById('universityModal').style.display = 'none';
+}
+
+function selectUniversity(uni) {
+    document.getElementById('universitySearch').value = uni;
+    document.getElementById('universityHidden').value = uni;
+    closeUniversityModal();
+}
+
+function filterUniversities() {
+    const search = document.getElementById('uniSearchInput').value.toLowerCase();
+    const options = document.querySelectorAll('.uni-option');
+    
+    options.forEach(option => {
+        const text = option.textContent.toLowerCase();
+        option.style.display = text.includes(search) ? '' : 'none';
+    });
+}
+</script>
+
 {% endblock %}
