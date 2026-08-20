@@ -58,11 +58,20 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label>Sex *</label>
-                        <select name="sex" required>
-                            <option value="">Select Gender</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                        </select>
+                        <div class="stream-options">
+                            <label class="stream-option">
+                                <input type="radio" name="sex" value="Male" required>
+                                <span class="stream-card">
+                                    <strong>👨 Male</strong>
+                                </span>
+                            </label>
+                            <label class="stream-option">
+                                <input type="radio" name="sex" value="Female" required>
+                                <span class="stream-card">
+                                    <strong>👩 Female</strong>
+                                </span>
+                            </label>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>Phone Number *</label>
