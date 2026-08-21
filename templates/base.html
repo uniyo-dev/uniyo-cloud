@@ -4,7 +4,8 @@
 <script>
     // IMMEDIATE THEME - Runs BEFORE anything renders
     (function() {
-        const savedDarkMode = localStorage.getItem('uniyo_dark_mode');
+        const isAdminPage = window.location.pathname.includes('/admin');
+        const savedDarkMode = localStorage.getItem(isAdminPage ? 'uniyo_admin_dark_mode' : 'uniyo_dark_mode');
         const isAdminPage = window.location.pathname.includes('/admin');
         const savedAdminMode = localStorage.getItem('uniyo_admin_dark_mode');
         
@@ -36,7 +37,8 @@
 <script>
     // Apply saved theme BEFORE page renders - NO forced default
     (function() {
-        const savedDarkMode = localStorage.getItem('uniyo_dark_mode');
+        const isAdminPage = window.location.pathname.includes('/admin');
+        const savedDarkMode = localStorage.getItem(isAdminPage ? 'uniyo_admin_dark_mode' : 'uniyo_dark_mode');
         
         if (savedDarkMode === 'false') {
             document.documentElement.classList.add('light-mode-active');
@@ -83,7 +85,8 @@
 <script>
     // Apply light-mode class IMMEDIATELY
     (function() {
-        const savedDarkMode = localStorage.getItem('uniyo_dark_mode');
+        const isAdminPage = window.location.pathname.includes('/admin');
+        const savedDarkMode = localStorage.getItem(isAdminPage ? 'uniyo_admin_dark_mode' : 'uniyo_dark_mode');
         const isAdminPage = window.location.pathname.includes('/admin');
         const savedAdminMode = localStorage.getItem('uniyo_admin_dark_mode');
         
