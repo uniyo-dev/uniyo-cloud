@@ -4,32 +4,38 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Theme toggle
+    // DARK MODE TOGGLE
     const darkModeToggle = document.getElementById('darkModeToggle');
     if (darkModeToggle) {
-        // Sync checkbox with current theme
-        const currentTheme = localStorage.getItem('uniyo_student_theme') || 'dark';
-        darkModeToggle.checked = currentTheme === 'dark';
+        const saved = localStorage.getItem('uniyo_student_theme') || 'dark';
+        darkModeToggle.checked = saved === 'dark';
         
-        // Listen for toggle change
+        if (saved === 'light') {
+            document.body.classList.add('light-mode');
+        } else {
+            document.body.classList.remove('light-mode');
+        }
+        
         darkModeToggle.addEventListener('change', function() {
             if (this.checked) {
-                ThemeManager.apply('dark');
+                document.body.classList.remove('light-mode');
+                localStorage.setItem('uniyo_student_theme', 'dark');
                 showToast('Dark mode enabled', 'success');
             } else {
-                ThemeManager.apply('light');
+                document.body.classList.add('light-mode');
+                localStorage.setItem('uniyo_student_theme', 'light');
                 showToast('Light mode enabled', 'success');
             }
         });
     }
     
-    // Font size
+    // FONT SIZE
     const savedFontSize = localStorage.getItem('uniyo_font_size');
     if (savedFontSize) {
         applyFontSize(parseInt(savedFontSize));
     }
     
-    // Language
+    // LANGUAGE
     const savedLanguage = localStorage.getItem('uniyo_language');
     if (savedLanguage) {
         const langSelect = document.getElementById('languageSelect');
@@ -56,13 +62,11 @@ function applyFontSize(size) {
 
 function changeLanguage(language) {
     localStorage.setItem('uniyo_language', language);
-    
     const messages = {
         'en': 'Language changed to English',
         'am': 'ቋንቋ ወደ አማርኛ ተቀይሯል',
         'om': 'Afaan Oromootti jijjiirame'
     };
-    
     showToast(messages[language] || 'Language changed', 'success');
 }
 
