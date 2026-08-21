@@ -30,8 +30,13 @@ def sync_all_content():
     """Sync all content from files to Turso"""
     BASE_DIR = Path(__file__).resolve().parent
     
+    # Delete old content first (prevent duplicates)
+    execute_sql("DELETE FROM lessons")
+    execute_sql("DELETE FROM worksheets")
+    execute_sql("DELETE FROM past_exams")
+    
     # Sync lessons
-    lessons_dir = BASE_DIR / 'content' / 'courses'
+    lessons_dir = BASE_DIR / 'content' / 'courses' 
     statements = []
     lesson_count = 0
     
