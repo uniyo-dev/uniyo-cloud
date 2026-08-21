@@ -4,30 +4,13 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    
-    if (darkModeToggle) {
-        darkModeToggle.addEventListener('change', function() {
-            toggleDarkMode(this.checked);
-        });
-    }
-    
+// Theme handled by ThemeManager
+// Theme handled by ThemeManager
     const savedDarkMode = localStorage.getItem('uniyo_student_theme');
     
     // Only apply saved preference - NO forced default
     if (savedDarkMode === 'false') {
-        if (darkModeToggle) darkModeToggle.checked = false;
-        document.body.classList.add('light-mode');
-        document.documentElement.style.colorScheme = 'light';
-    } else if (savedDarkMode === 'true') {
-        if (darkModeToggle) darkModeToggle.checked = true;
-        document.body.classList.remove('light-mode');
-        document.documentElement.style.colorScheme = 'dark';
-    } else {
-        // First visit - keep default CSS (dark styling)
-        if (darkModeToggle) darkModeToggle.checked = true;
-    }
-    
+// Theme handled by ThemeManager
     const savedFontSize = localStorage.getItem('uniyo_font_size');
     if (savedFontSize) {
         applyFontSize(parseInt(savedFontSize));
@@ -40,9 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-function toggleDarkMode(isDark) {
-    localStorage.setItem('uniyo_student_theme', isDark);
-    
+// Theme handled by ThemeManager
     // Apply INSTANTLY
     if (isDark) {
         document.body.classList.remove('light-mode');

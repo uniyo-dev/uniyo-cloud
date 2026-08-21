@@ -79,7 +79,7 @@
             <p>Welcome, {{ admin.full_name }} ({{ admin_roles[admin.role].label }})</p>
         </div>
         <div style="display: flex; gap: 8px; align-items: center;">
-            <button onclick="toggleAdminTheme()" class="btn btn-outline" id="adminThemeBtn" title="Toggle Theme">
+            <button data-theme-toggle class="btn btn-outline" id="adminThemeBtn" title="Toggle Theme">
                 🌙 Dark
             </button>
             <button onclick="document.getElementById('passwordModal').style.display='flex'" class="btn btn-outline" title="Change Password">
