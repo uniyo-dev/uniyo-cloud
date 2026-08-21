@@ -180,7 +180,7 @@
 <script>
 (function() {
     const savedDarkMode = localStorage.getItem('uniyo_dark_mode');
-    if (savedDarkMode === 'false') {
+    if (savedDarkMode === 'light') {
         document.body.classList.add('light-mode');
         window.addEventListener('load', function() {
             setTimeout(function() {
@@ -206,7 +206,7 @@
 <script>
 (function() {
     const savedDarkMode = localStorage.getItem('uniyo_dark_mode');
-    if (savedDarkMode === 'false') {
+    if (savedDarkMode === 'light') {
         document.body.classList.add('light-mode');
     }
 })();
