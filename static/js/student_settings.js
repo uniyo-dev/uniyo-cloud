@@ -7,15 +7,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Theme toggle
     const darkModeToggle = document.getElementById('darkModeToggle');
     if (darkModeToggle) {
-        // Set current theme state
-        const currentTheme = ThemeManager.getTheme();
+        // Sync checkbox with current theme
+        const currentTheme = localStorage.getItem('uniyo_student_theme') || 'dark';
         darkModeToggle.checked = currentTheme === 'dark';
         
         // Listen for toggle change
         darkModeToggle.addEventListener('change', function() {
-            const newTheme = this.checked ? 'dark' : 'light';
-            ThemeManager.apply(newTheme);
-            showToast(newTheme === 'dark' ? 'Dark mode enabled' : 'Light mode enabled', 'success');
+            if (this.checked) {
+                ThemeManager.apply('dark');
+                showToast('Dark mode enabled', 'success');
+            } else {
+                ThemeManager.apply('light');
+                showToast('Light mode enabled', 'success');
+            }
         });
     }
     
