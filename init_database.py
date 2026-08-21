@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS lessons (
     university_specific TEXT,
     estimated_minutes INTEGER DEFAULT 5,
     is_premium INTEGER DEFAULT 1,
-    is_active INTEGER DEFAULT 0,
+    is_active INTEGER DEFAULT 1,
     created_at TEXT NOT NULL,
     FOREIGN KEY(course_code) REFERENCES courses(code) ON DELETE CASCADE,
     UNIQUE(course_code, chapter_number, part_number, university_specific)
@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS worksheets (
     chapter_number INTEGER NOT NULL,
     title TEXT NOT NULL,
     question_file TEXT NOT NULL,
-    is_active INTEGER DEFAULT 0,
+    is_active INTEGER DEFAULT 1,
     created_at TEXT NOT NULL,
     FOREIGN KEY(course_code) REFERENCES courses(code) ON DELETE CASCADE
 );
@@ -130,7 +130,7 @@ CREATE TABLE IF NOT EXISTS vip_questions (
     start_time TEXT NOT NULL,
     end_time TEXT NOT NULL,
     duration_hours INTEGER NOT NULL,
-    is_active INTEGER DEFAULT 0,
+    is_active INTEGER DEFAULT 1,
     created_at TEXT NOT NULL,
     FOREIGN KEY(course_code) REFERENCES courses(code) ON DELETE CASCADE
 );
@@ -157,7 +157,7 @@ CREATE TABLE IF NOT EXISTS past_exams (
     year INTEGER NOT NULL,
     exam_type TEXT NOT NULL,
     file_path TEXT UNIQUE NOT NULL,
-    is_active INTEGER DEFAULT 0,
+    is_active INTEGER DEFAULT 1,
     created_at TEXT NOT NULL,
     FOREIGN KEY(course_code) REFERENCES courses(code) ON DELETE CASCADE
 );
@@ -467,7 +467,7 @@ def scan_content_folder(db):
                         title = f"Chapter {chapter_num} Worksheet"
                     
                     db.execute(
-                        "INSERT INTO worksheets (course_code, chapter_number, title, question_file, is_active, created_at) VALUES (?, ?, ?, ?, 0, ?)",
+                        "INSERT INTO worksheets (course_code, chapter_number, title, question_file, is_active, created_at) VALUES (?, ?, ?, ?, 1, ?)",
                         (course_code, chapter_num, title, file_path, datetime.now().isoformat())
                     )
                     
@@ -530,7 +530,7 @@ def scan_content_folder(db):
                     title = "Chapter {} Worksheet".format(chapter_number)
                 
                 db.execute(
-                    "INSERT INTO worksheets (course_code, chapter_number, title, question_file, is_active, created_at) VALUES (?, ?, ?, ?, 0, ?)",
+                    "INSERT INTO worksheets (course_code, chapter_number, title, question_file, is_active, created_at) VALUES (?, ?, ?, ?, 1, ?)",
                     (course_code, chapter_number, title, filename, datetime.now().isoformat())
                 )
                 added += 1
@@ -571,7 +571,7 @@ def scan_content_folder(db):
                     is_premium = 0 if is_free else 1
                     
                     db.execute(
-                        "INSERT INTO lessons (course_code, chapter_number, part_number, chapter_title, part_title, file_path, university_specific, estimated_minutes, is_premium, is_active, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, 5, ?, 0, ?)",
+                        "INSERT INTO lessons (course_code, chapter_number, part_number, chapter_title, part_title, file_path, university_specific, estimated_minutes, is_premium, is_active, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, 5, ?, 1, ?)",
                         (course_code, chapter_number, part_number, "Chapter {}".format(chapter_number), "Part {}".format(part_number), filename, university_specific, is_premium, datetime.now().isoformat())
                     )
                     added += 1
