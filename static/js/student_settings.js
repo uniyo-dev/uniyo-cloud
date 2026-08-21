@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // DARK MODE TOGGLE
     const darkModeToggle = document.getElementById('darkModeToggle');
     if (darkModeToggle) {
-        const saved = localStorage.getItem('uniyo_student_theme') || 'dark';
+        const saved = localStorage.getItem('uniyo_dark_mode') || 'dark';
         darkModeToggle.checked = saved === 'dark';
         
         if (saved === 'light') {
@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
         darkModeToggle.addEventListener('change', function() {
             if (this.checked) {
                 document.body.classList.remove('light-mode');
-                localStorage.setItem('uniyo_student_theme', 'dark');
+                localStorage.setItem('uniyo_dark_mode', 'dark');
                 showToast('Dark mode enabled', 'success');
             } else {
                 document.body.classList.add('light-mode');
-                localStorage.setItem('uniyo_student_theme', 'light');
+                localStorage.setItem('uniyo_dark_mode', 'light');
                 showToast('Light mode enabled', 'success');
             }
         });

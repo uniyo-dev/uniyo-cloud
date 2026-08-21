@@ -8,7 +8,7 @@ const ThemeManager = {
     getKey() {
         return window.location.pathname.includes('/admin') 
             ? 'uniyo_admin_theme' 
-            : 'uniyo_student_theme';
+            : 'uniyo_dark_mode';
     },
     
     // Get current theme
