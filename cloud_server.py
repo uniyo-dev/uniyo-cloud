@@ -20,6 +20,22 @@ try:
 except Exception as e:
     print(f"Warning: {e}")
 
+# Clear sessions on server start
+try:
+    from core.db import db
+    db.execute('UPDATE active_sessions SET is_active = 0')
+    print('Sessions cleared')
+except:
+    pass
+
+# Clear all sessions on server start (so students can login again)
+try:
+    from core.db import db
+    db.execute("UPDATE active_sessions SET is_active = 0")
+    print("✓ Sessions cleared")
+except Exception as e:
+    print(f"Session cleanup: {e}")
+
 from server import app
 
 if __name__ == '__main__':
