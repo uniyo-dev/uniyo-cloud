@@ -159,17 +159,14 @@ def read_lesson(course_code, chap, part):
 @lesson_bp.route('/student/free-lesson/<course_code>', methods=['GET'])
 def read_free_lesson(course_code):
     """Free sample lesson - NO premium required"""
-    from pathlib import Path as P
-    from flask import abort
     
-    free_file = BASE_DIR / 'content' / 'free_samples' / f"{course_code}.html"
-    
-    if not free_file.exists():
-        flash("Free lesson not found", "danger")
-        return redirect(url_for('student.home'))
-    
-    lesson_content = free_file.read_text(encoding='utf-8')
-    
-    return render_template('student_free_lesson.html', 
+    if course_code == 'Econ1011':
+        lesson_content = '<h2>FREE SAMPLE: Economics</h2><h3>Demand, Supply & Profit</h3><div class="highlight-box"><strong>Law of Demand:</strong> Price increases → Quantity demanded decreases</div><p><strong>Example:</strong> When coffee prices rise in Addis, people buy less coffee.</p><div class="highlight-box"><strong>Law of Supply:</strong> Price increases → Quantity supplied increases</div><p><strong>Example:</strong> When teff prices rise, farmers grow more teff.</p><div class="highlight-box"><strong>Profit Maximization:</strong> Profit = Revenue - Cost. Maximize when MR = MC</div><div class="cheat-notes"><h4>Key Points:</h4><ul><li>Demand: Price ↑ → Qty ↓</li><li>Supply: Price ↑ → Qty ↑</li><li>Profit Max: MR = MC</li></ul></div>'
+    elif course_code == 'LoCT1011':
+        lesson_content = '<h2>FREE SAMPLE: Logic</h2><h3>22 Fallacies</h3><div class="highlight-box"><strong>Fallacy:</strong> An error in reasoning that makes an argument invalid</div><p><strong>Top Fallacies:</strong></p><ul><li>Ad Hominem: Attack the person, not the argument</li><li>Straw Man: Misrepresent the opponent's view</li><li>False Dilemma: Only two options when more exist</li><li>Appeal to Popularity: Everyone believes it!</li><li>Slippery Slope: Small step leads to disaster</li></ul><div class="cheat-notes"><h4>Quick Tip:</h4><p>Fallacies look convincing but are logically flawed. Spot them to protect yourself!</p></div>'
+    else:
+        lesson_content = '<h2>Free lesson not found</h2>'
+
+    return render_template('student_free_lesson.html',
                           lesson_content=lesson_content,
                           course_code=course_code)
