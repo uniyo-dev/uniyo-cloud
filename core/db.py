@@ -1,22 +1,14 @@
 """
-UNIYO LMS - Database Connection (Turso SQLite Cloud)
+UNIYO LMS - Database Connection (SQLite for Fly.io)
 """
 
-import requests
-import json
+import sqlite3
 from contextlib import contextmanager
-
-TURSO_URL = "https://uniyo-uniyo-dev.aws-us-east-2.turso.io"
-TURSO_TOKEN = "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3ODcyNjE4MjYsImlkIjoiMDFhMDIxMWEtNDkwMS03ZDY2LTk5ODEtZDc5NTcxMDYyNTVhIiwia2lkIjoiT29jQW5QU0Fjc0xicXV2MGI4ekdyaUtfT2ZyS0UxY2FEc3BaU3VkQVFFOCIsInJpZCI6IjU2ZDU3NzkzLTFhZmMtNGNiMC04NDJkLTY4MjRlNGQ0YThmNiJ9.BkDZq1Vhl_vuZ1hmenaJIbkwfu-5Nglr09vgFNPKIorOWU_iwFflaECdWE1RhJsHeom3sw7bwnsSKpllyExSBQ"
-
-class TursoRow(dict):
-    def __getitem__(self, key):
-        if isinstance(key, int):
-            return list(self.values())[key]
-        return super().__getitem__(key)
+from core.paths import DB_PATH
 
 class Database:
     _instance = None
+    _connection = None
     
     def __new__(cls):
         if cls._instance is None:
@@ -24,86 +16,63 @@ class Database:
         return cls._instance
     
     def connect(self):
-        return self
+        if self._connection is None:
+            DB_PATH.parent.mkdir(parents=True, exist_ok=True)
+            self._connection = sqlite3.connect(str(DB_PATH), check_same_thread=False)
+            self._connection.row_factory = sqlite3.Row
+        return self._connection
     
     def close(self):
-        pass
-    
-    def _execute_raw(self, query, params=None):
-        headers = {
-            "Authorization": f"Bearer {TURSO_TOKEN}",
-            "Content-Type": "application/json"
-        }
-        
-        if params:
-            sql = query
-            args = []
-            for i, p in enumerate(params):
-                param_name = f"p{i+1}"
-                sql = sql.replace('?', f':{param_name}', 1)
-                
-                if isinstance(p, int):
-                    args.append({"name": param_name, "type": "integer", "value": str(p)})
-                elif isinstance(p, float):
-                    args.append({"name": param_name, "type": "real", "value": str(p)})
-                elif p is None:
-                    args.append({"name": param_name, "type": "text", "value": ""})
-                else:
-                    args.append({"name": param_name, "type": "text", "value": str(p)})
-            
-            stmt = {"sql": sql}
-            if args:
-                stmt["args"] = args
-        else:
-            stmt = {"sql": query}
-        
-        body = {
-            "requests": [
-                {"type": "execute", "stmt": stmt},
-                {"type": "close"}
-            ]
-        }
-        
-        try:
-            response = requests.post(f"{TURSO_URL}/v2/pipeline", headers=headers, json=body, timeout=15)
-            return response.json()
-        except Exception as e:
-            print(f"Turso error: {e}")
-            return {"results": []}
+        if self._connection:
+            self._connection.close()
+            self._connection = None
     
     def execute(self, query, params=None):
-        result = self._execute_raw(query, params)
-        return TursoCursor(result)
+        conn = self.connect()
+        cursor = conn.cursor()
+        if params:
+            cursor.execute(query, params)
+        else:
+            cursor.execute(query)
+        return cursor
     
     def query(self, query, params=None):
         cursor = self.execute(query, params)
-        return cursor.fetchall()
+        rows = cursor.fetchall()
+        cursor.close()
+        return rows
     
     def query_one(self, query, params=None):
         cursor = self.execute(query, params)
-        return cursor.fetchone()
+        row = cursor.fetchone()
+        cursor.close()
+        return row
     
     def query_value(self, query, params=None):
         row = self.query_one(query, params)
-        if row:
-            return list(row.values())[0] if isinstance(row, dict) else row[0]
-        return None
+        return row[0] if row else None
     
     @contextmanager
     def transaction(self):
+        conn = self.connect()
         try:
-            yield self
+            yield conn
+            conn.commit()
         except Exception as e:
+            conn.rollback()
             raise e
     
     def begin_transaction(self):
-        pass
+        self.execute("BEGIN")
     
     def commit(self):
-        pass
+        self.execute("COMMIT")
     
     def rollback(self):
-        pass
+        try:
+            self.execute("ROLLBACK")
+        except:
+            pass
     
     def checkpoint(self):
         pass
@@ -112,40 +81,6 @@ class Database:
         pass
     
     def backup(self, backup_path=None):
-        pass
-
-class TursoCursor:
-    def __init__(self, response):
-        self.rows = []
-        self.cols = []
-        
-        try:
-            for result in response.get("results", []):
-                if result.get("type") == "ok":
-                    resp = result.get("response", {})
-                    exec_result = resp.get("result", {})
-                    self.cols = [col["name"] for col in exec_result.get("cols", [])]
-                    
-                    for row_data in exec_result.get("rows", []):
-                        row_dict = {}
-                        for i, col_name in enumerate(self.cols):
-                            cell = row_data[i] if i < len(row_data) else {}
-                            value = cell.get("value") if isinstance(cell, dict) else cell
-                            if isinstance(cell, dict) and cell.get("type") == "integer":
-                                value = int(value) if value else 0
-                            row_dict[col_name] = value
-                        
-                        self.rows.append(TursoRow(row_dict))
-        except Exception as e:
-            print(f"Parse error: {e}")
-    
-    def fetchall(self):
-        return self.rows
-    
-    def fetchone(self):
-        return self.rows[0] if self.rows else None
-    
-    def close(self):
         pass
 
 db = Database()

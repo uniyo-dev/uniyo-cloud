@@ -1,0 +1,11 @@
+app = "uniyo-lms"
+primary_region = "iad"
+
+[build]
+
+[env]
+  PORT = "8080"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"
