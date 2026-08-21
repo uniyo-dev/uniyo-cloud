@@ -1,29 +1,70 @@
 {% extends "base.html" %}
 
-{% block title %}Login - UNIYO
+{% block title %}Login - UNIYO{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+{% endblock %}
 
+{% block content %}
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="auth-header">
+            <div class="auth-logo">
+                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="UNIYO Logo" class="auth-logo-img">
+            </div>
+            <h1>UNIYO</h1>
+            <p>University Made for YOU</p>
+            <span class="auth-subtitle">Your Freshman Year, Simplified.</span>
+        </div>
 
+        <form action="{{ url_for('student.login') }}" method="POST" class="auth-form">
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" name="identifier" placeholder="09XXXXXXXX or 07XXXXXXXX" required>
+            </div>
 
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="loginBtn">🔐 Login</button>
+        </form>
+
+        <div class="auth-footer">
+            <p style="margin-bottom: 14px; color: #94A3B8;">Don't have an account?</p>
+            <a href="{{ url_for('student.register') }}" id="createAccountBtn"
+               style="display: block; text-align: center; padding: 12px 20px; 
+                      background: #1A2332; color: #94A3B8; border-radius: 8px; 
+                      font-weight: 500; font-size: 14px; 
+                      border: 1px solid rgba(255,255,255,0.08); 
+                      font-family: Inter, sans-serif; transition: background 0.3s ease;">
+                Create Account
+            </a>
+        </div>
+    </div>
+</div>
 
 <script>
 (function() {
     const hasAccount = localStorage.getItem('uniyo_has_account');
     const loginBtn = document.getElementById('loginBtn');
-    const createBtn = document.getElementById('
+    const createBtn = document.getElementById('createAccountBtn');
+    
+    if (hasAccount === 'true') {
+        if (loginBtn) {
+            loginBtn.style.animation = 'glowPulse 2s infinite';
+        }
         if (createBtn) {
             createBtn.style.animation = 'none';
-            createBtn.style.boxShadow = 'none';
         }
     } else {
-        // First time → Create Account glows
         if (createBtn) {
-            createBtn.style.animation = 'glowPulse 2s infinite';
-            createBtn.style.boxShadow = '0 0 30px rgba(236, 72, 153, 0.8)';
+            createBtn.style.animation = 'none';
         }
         if (loginBtn) {
             loginBtn.style.animation = 'none';
-            loginBtn.style.boxShadow = 'none';
         }
     }
 })();
@@ -35,43 +76,4 @@
         50% { box-shadow: 0 0 50px rgba(109, 40, 217, 1); }
     }
 </style>
-
 {% endblock %}
-
-{% block extra_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
-{% endblock %}
-
-{% block content %}
-
-
-
-<div class="auth-container">
-    <div class="auth-card">
-        <div class="auth-header">
-            
-        <div class="auth-logo">
-            <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="UNIYO Logo" class="auth-logo-img">
-        </div>
-            <h1>UNIYO</h1>
-            <p>University Made for YOU</p>
-            <span class="auth-subtitle">Your Freshman Year, Simplified.</span>
-        </div>
-        
-        <form action="{{ url_for('student.login') }}" method="POST" class="auth-form">
-            <div class="form-group">
-                <label>Phone Number</label>
-                <input type="tel" name="identifier" placeholder="09XXXXXXXX or 07XXXXXXXX" required>
-            </div>
-            
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="password" placeholder="Enter your password" required>
-            </div>
-            
-            <button type="submit" class="btn btn-primary btn-block" id="loginBtn">🔐 Login</button>
-        </form>
-        
-        <div class="auth-footer">
-            <p style="margin-bottom: 14px; color: #94A3B8;">Don't have an account?</p>
-        <a href="{{ url_for('student.register') }}" id="
