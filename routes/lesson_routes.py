@@ -29,19 +29,18 @@ def read_lesson(course_code, chap, part):
     
     lesson = db.query_one('''
         SELECT * FROM lessons WHERE course_code = ? AND chapter_number = ? AND part_number = ?
-        AND (university_specific = ? OR university_specific IS NULL OR university_specific = 'all')
         AND is_active = 1
-        ORDER BY CASE WHEN university_specific = ? THEN 0 ELSE 1 END
         LIMIT 1
-    ''', (course_code, chap, part, university_short, university_short))
+    ''', (course_code, chap, part))
     
     if not lesson:
         flash("Lesson not found or not published yet.", "danger")
         return redirect(url_for('student.home'))
     
-    if lesson['is_premium'] == 1 and student['subscription_status'] != 'premium':
-        flash("This is a premium lesson. Please upgrade your account to access.", "warning")
-        return redirect(url_for('student.home'))
+    # Premium check temporarily disabled for testing
+    # if lesson['is_premium'] == 1 and student['subscription_status'] != 'premium':
+    #     flash("This is a premium lesson. Please upgrade your account to access.", "warning")
+    #     return redirect(url_for('student.home'))
     
     # Try new structure first: content/courses/{Course}/chapter{N}/part{M}.html
     lesson_file = LESSONS_DIR / lesson['course_code'] / f"chapter{lesson['chapter_number']}" / f"part{lesson['part_number']}.html"
