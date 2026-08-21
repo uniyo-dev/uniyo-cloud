@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    const savedDarkMode = localStorage.getItem('uniyo_dark_mode');
+    const savedDarkMode = localStorage.getItem('uniyo_student_theme');
     
     // Only apply saved preference - NO forced default
     if (savedDarkMode === 'false') {
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function toggleDarkMode(isDark) {
-    localStorage.setItem('uniyo_dark_mode', isDark);
+    localStorage.setItem('uniyo_student_theme', isDark);
     
     // Apply INSTANTLY
     if (isDark) {

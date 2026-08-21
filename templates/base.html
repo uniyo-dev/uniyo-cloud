@@ -1,53 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>
-    // IMMEDIATE THEME - Runs BEFORE anything renders
-    (function() {
-        const isAdminPage = window.location.pathname.includes('/admin');
-        const savedDarkMode = localStorage.getItem(isAdminPage ? 'uniyo_admin_dark_mode' : 'uniyo_dark_mode');
-        const savedAdminMode = localStorage.getItem('uniyo_admin_dark_mode');
-        
-        if (isAdminPage) {
-            if (savedAdminMode === 'false') {
-                document.documentElement.classList.add('light-mode-active');
-                document.documentElement.style.backgroundColor = '#F8FAFC';
-                document.documentElement.style.colorScheme = 'light';
-            }
-        } else {
-            if (savedDarkMode === 'false') {
-                document.documentElement.classList.add('light-mode-active');
-                document.documentElement.style.backgroundColor = '#F8FAFC';
-                document.documentElement.style.colorScheme = 'light';
-            }
-        }
-    })();
-</script>
-<style>
-    /* Prevent flash of dark mode */
-    html.light-mode-active body {
-        background-color: #F8FAFC !important;
-        color: #0B0F19 !important;
-    }
-</style>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0B0F19">
-<script>
-    // Apply saved theme BEFORE page renders - NO forced default
-    (function() {
-        const isAdminPage = window.location.pathname.includes('/admin');
-        const savedDarkMode = localStorage.getItem(isAdminPage ? 'uniyo_admin_dark_mode' : 'uniyo_dark_mode');
-        
-        if (savedDarkMode === 'false') {
-            document.documentElement.classList.add('light-mode-active');
-            document.documentElement.style.colorScheme = 'light';
-        } else if (savedDarkMode === 'true') {
-            document.documentElement.style.colorScheme = 'dark';
-        }
-        // If null, let CSS defaults apply
-    })();
-</script>
+
 
     <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
     <link rel="apple-touch-icon" href="{{ url_for('static', filename='logo.svg') }}">
@@ -81,24 +39,7 @@
 <script id="MathJax-script" async src="{{ url_for('static', filename='mathjax/tex-mml-chtml.js') }}"></script>
 </head>
 <body>
-<script>
-    // Apply light-mode class IMMEDIATELY
-    (function() {
-        const isAdminPage = window.location.pathname.includes('/admin');
-        const savedDarkMode = localStorage.getItem(isAdminPage ? 'uniyo_admin_dark_mode' : 'uniyo_dark_mode');
-        const savedAdminMode = localStorage.getItem('uniyo_admin_dark_mode');
-        
-        if (isAdminPage) {
-            if (savedAdminMode === 'false') {
-                document.body.classList.add('light-mode');
-            }
-        } else {
-            if (savedDarkMode === 'false') {
-                document.body.classList.add('light-mode');
-            }
-        }
-    })();
-</script>
+
     <div id="toast-container" class="toast-container"></div>
     
     {% with messages = get_flashed_messages(with_categories=true) %}
@@ -117,9 +58,9 @@
     </main>
     
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/master_theme.js') }}"></script>
+    
     <script src="{{ url_for('static', filename='js/offline-manager.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/admin_theme.js') }}"></script>
+    
     <script>
         // Ensure body background follows theme
         function updateBodyBackground() {
@@ -151,5 +92,17 @@
 </script>
 
 {% block extra_js %}{% endblock %}
+<script>
+(function() {
+    const isAdmin = window.location.pathname.includes('/admin');
+    const key = isAdmin ? 'uniyo_admin_theme' : 'uniyo_student_theme';
+    const saved = localStorage.getItem(key) || 'dark';
+    
+    if (saved === 'light') {
+        document.body.classList.add('light-mode');
+        document.documentElement.style.colorScheme = 'light';
+    }
+})();
+</script>
 </body>
 </html>
