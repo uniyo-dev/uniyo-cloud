@@ -122,13 +122,14 @@ class TursoCursor:
         try:
             for result in response.get("results", []):
                 if result.get("type") == "ok":
-                    exec_result = result["response"]["result"]
+                    resp = result.get("response", {})
+                    exec_result = resp.get("result", {})
                     self.cols = [col["name"] for col in exec_result.get("cols", [])]
                     
                     for row_data in exec_result.get("rows", []):
                         row_dict = {}
                         for i, col_name in enumerate(self.cols):
-                            cell = row_data[i]
+                            cell = row_data[i] if i < len(row_data) else {}
                             value = cell.get("value") if isinstance(cell, dict) else cell
                             if isinstance(cell, dict) and cell.get("type") == "integer":
                                 value = int(value) if value else 0
