@@ -4,44 +4,34 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
-// Theme handled by ThemeManager
-// Theme handled by ThemeManager
-    const savedDarkMode = localStorage.getItem('uniyo_student_theme');
+    // Theme toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    if (darkModeToggle) {
+        // Set current theme state
+        const currentTheme = ThemeManager.getTheme();
+        darkModeToggle.checked = currentTheme === 'dark';
+        
+        // Listen for toggle change
+        darkModeToggle.addEventListener('change', function() {
+            const newTheme = this.checked ? 'dark' : 'light';
+            ThemeManager.apply(newTheme);
+            showToast(newTheme === 'dark' ? 'Dark mode enabled' : 'Light mode enabled', 'success');
+        });
+    }
     
-    // Only apply saved preference - NO forced default
-    if (savedDarkMode === 'false') {
-// Theme handled by ThemeManager
+    // Font size
     const savedFontSize = localStorage.getItem('uniyo_font_size');
     if (savedFontSize) {
         applyFontSize(parseInt(savedFontSize));
     }
     
+    // Language
     const savedLanguage = localStorage.getItem('uniyo_language');
     if (savedLanguage) {
         const langSelect = document.getElementById('languageSelect');
         if (langSelect) langSelect.value = savedLanguage;
     }
 });
-
-// Theme handled by ThemeManager
-    // Apply INSTANTLY
-    if (isDark) {
-        document.body.classList.remove('light-mode');
-        document.documentElement.classList.remove('light-mode-active');
-        document.documentElement.style.backgroundColor = '';
-    } else {
-        document.body.classList.add('light-mode');
-        document.documentElement.classList.add('light-mode-active');
-        document.documentElement.style.backgroundColor = '#F8FAFC';
-    }
-    
-    // Also apply master theme for full coverage
-    if (typeof applyMasterTheme === 'function') {
-        applyMasterTheme(isDark ? 'dark' : 'light');
-    }
-    
-    showToast(isDark ? 'Dark mode enabled' : 'Light mode enabled', 'success');
-}
 
 let currentFontSize = 16;
 
