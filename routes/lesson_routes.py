@@ -14,6 +14,24 @@ from core.constants import UNIVERSITY_SHORT_NAMES
 
 lesson_bp = Blueprint('lesson', __name__)
 
+@lesson_bp.route('/test-lesson-path', methods=['GET'])
+def test_lesson_path():
+    """Debug route to check file paths"""
+    from core.paths import LESSONS_DIR, BASE_DIR
+    import os
+    
+    result = []
+    result.append(f"BASE_DIR: {BASE_DIR}")
+    result.append(f"LESSONS_DIR: {LESSONS_DIR}")
+    result.append(f"LESSONS_DIR exists: {LESSONS_DIR.exists()}")
+    
+    if LESSONS_DIR.exists():
+        courses = list(LESSONS_DIR.iterdir())[:5]
+        result.append(f"Courses: {[c.name for c in courses]}")
+    
+    return "<br>".join(result)
+
+
 @lesson_bp.route('/student/lessons/<course_code>/chapter/<int:chap>/part/<int:part>', methods=['GET'])
 @login_required
 def read_lesson(course_code, chap, part):
