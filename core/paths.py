@@ -1,28 +1,28 @@
 """
-UNIYO LMS - Path Management
+UNIYO LMS - Path Management (PythonAnywhere)
 """
 
 from pathlib import Path
 import os
 import sys
 
+# Base directory
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 # Platform detection
 IS_TERMUX = os.path.exists('/data/data/com.termux')
 IS_WINDOWS = sys.platform.startswith('win')
 IS_LINUX = sys.platform.startswith('linux') and not IS_TERMUX
-
-# Base directory
-BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Core paths
 DB_PATH = BASE_DIR / "database" / "UNIYO.db"
 BACKUP_DIR = BASE_DIR / "backups"
 LOG_DIR = BASE_DIR / "logs"
 
-# Content paths - all under content/
+# Content paths
 CONTENT_DIR = BASE_DIR / "content"
 LESSONS_DIR = CONTENT_DIR / "courses"
-WORKSHEETS_DIR = CONTENT_DIR / "worksheets"      # New structure: content/worksheets/{Course}/chapter{N}/part{M}.json
+WORKSHEETS_DIR = CONTENT_DIR / "worksheets"
 VIP_QUESTIONS_DIR = BASE_DIR / "vip_questions"
 PAST_EXAMS_DIR = CONTENT_DIR / "past_exams"
 QUESTIONS_DIR = BASE_DIR / "questions"
@@ -41,19 +41,12 @@ CERTIFICATES_DIR = BASE_DIR / "certificates"
 CERTIFICATE_PDF_DIR = CERTIFICATES_DIR / "pdf"
 CERTIFICATE_QR_DIR = CERTIFICATES_DIR / "qr"
 
-# Metadata
 METADATA_DIR = BASE_DIR / "metadata"
 
 def get_database_uri():
-    if IS_WINDOWS:
-        return f"file:{DB_PATH.as_posix()}?mode=rwc"
     return str(DB_PATH)
 
 def get_hotspot_ip():
-    if IS_TERMUX:
-        return "192.168.43.1"
-    elif IS_WINDOWS:
-        return "192.168.137.1"
     return "127.0.0.1"
 
 def ensure_directories():
