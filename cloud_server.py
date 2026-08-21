@@ -1,5 +1,5 @@
 """
-UNIYO LMS - Server Entry (Fly.io)
+UNIYO LMS - Cloud Server (Render Deployment)
 """
 
 from pathlib import Path
@@ -13,31 +13,24 @@ for folder in ['logs', 'uploads', 'backups', 'certificates', 'database', 'flask_
 
 sys.path.insert(0, str(BASE_DIR))
 
-try:
-    from init_database import initialize_database
-    initialize_database()
-    print("✓ Database ready")
-except Exception as e:
-    print(f"Warning: {e}")
-
 # Clear sessions on server start
-try:
-    from core.db import db
-    db.execute('UPDATE active_sessions SET is_active = 0')
-    print('Sessions cleared')
-except:
-    pass
-
-# Clear all sessions on server start (so students can login again)
 try:
     from core.db import db
     db.execute("UPDATE active_sessions SET is_active = 0")
     print("✓ Sessions cleared")
+except:
+    pass
+
+# Run scanner to auto-publish all content
+try:
+    from init_database import initialize_database
+    initialize_database()
+    print("✓ Content auto-published")
 except Exception as e:
-    print(f"Session cleanup: {e}")
+    print(f"Scanner warning: {e}")
 
 from server import app
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 8080))
+    port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=False)
