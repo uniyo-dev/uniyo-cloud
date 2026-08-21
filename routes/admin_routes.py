@@ -93,14 +93,7 @@ def content_management():
             "SELECT MAX(score) as best, MAX(total) as total FROM vip_attempts WHERE vip_question_id = ?",
             (vip['id'],)
         )
-        leaderboard = db.query('''
-            SELECT s.full_name, va.score, va.total
-            FROM vip_attempts va
-            JOIN students s ON va.student_id = s.id
-            WHERE va.vip_question_id = ?
-            ORDER BY va.score DESC
-            LIMIT 5
-        ''', (vip['id'],))
+        leaderboard = []
         
         vip_stats[vip['id']] = {
             'attempts': attempts or 0,
