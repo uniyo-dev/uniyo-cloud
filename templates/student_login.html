@@ -10,14 +10,7 @@
 (function() {
     const hasAccount = localStorage.getItem('uniyo_has_account');
     const loginBtn = document.getElementById('loginBtn');
-    const createBtn = document.getElementById('createAccountBtn');
-    
-    if (hasAccount === 'true') {
-        // Returning student → Login glows
-        if (loginBtn) {
-            loginBtn.style.animation = 'glowPulse 2s infinite';
-            loginBtn.style.boxShadow = '0 0 30px rgba(109, 40, 217, 0.8)';
-        }
+    const createBtn = document.getElementById('
         if (createBtn) {
             createBtn.style.animation = 'none';
             createBtn.style.boxShadow = 'none';
@@ -81,20 +74,4 @@
         
         <div class="auth-footer">
             <p style="margin-bottom: 14px; color: #94A3B8;">Don't have an account?</p>
-        <a href="{{ url_for('student.register') }}" id="createAccountBtn" 
-           style="display: block; text-align: center; padding: 14px 24px; 
-                  background: linear-gradient(135deg, #6D28D9, #EC4899); 
-                  color: white !important; border-radius: 12px; font-weight: 700; 
-                  font-size: 15px; letter-spacing: 1px; text-transform: uppercase;
-                  box-shadow: 0 4px 20px rgba(109, 40, 217, 0.4);
-                  animation: createAccountPulse 2s infinite;
-                  transition: all 0.3s ease;">
-            ✨ Create Account ✨
-        </a>
-
-
-            <p><a href="#" class="text-muted">Forgot password?</a></p>
-        </div>
-    </div>
-</div>
-{% endblock %}
+        <a href="{{ url_for('student.register') }}" id="
