@@ -1,11 +1,67 @@
 {% extends "base.html" %}
 
-{% block title %}{{ certificate.title }} - UNIYO{% endblock %}
+{% block title %}{{ certificate.title }} - UNIYO
+<script>
+function downloadCertificate(format) {
+    const certificate = document.querySelector('.certificate-full-a4');
+    
+    html2canvas(certificate, {
+        scale: 2,
+        backgroundColor: '#ffffff',
+        allowTaint: true,
+        useCORS: true
+    }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = `UNIYO_Certificate_${Date.now()}.${format}`;
+        
+        if (format === 'jpg') {
+            link.href = canvas.toDataURL('image/jpeg', 0.95);
+        } else {
+            link.href = canvas.toDataURL('image/png');
+        }
+        
+        link.click();
+        showToast('Certificate downloaded!', 'success');
+    }).catch(err => {
+        showToast('Download failed. Try Print instead.', 'danger');
+    });
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/student_certificate.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/certificate_premium.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/certificate_security.css') }}">
+
+<script>
+function downloadCertificate(format) {
+    const certificate = document.querySelector('.certificate-full-a4');
+    
+    html2canvas(certificate, {
+        scale: 2,
+        backgroundColor: '#ffffff',
+        allowTaint: true,
+        useCORS: true
+    }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = `UNIYO_Certificate_${Date.now()}.${format}`;
+        
+        if (format === 'jpg') {
+            link.href = canvas.toDataURL('image/jpeg', 0.95);
+        } else {
+            link.href = canvas.toDataURL('image/png');
+        }
+        
+        link.click();
+        showToast('Certificate downloaded!', 'success');
+    }).catch(err => {
+        showToast('Download failed. Try Print instead.', 'danger');
+    });
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -24,6 +80,8 @@
     <div class="print-actions no-print">
         <a href="{{ url_for('certificate.my_certificates') }}" class="btn btn-outline">← Back</a>
         <button onclick="window.print()" class="btn btn-gold">🖨️ Print / Save PDF</button>
+        <button onclick="downloadCertificate('jpg')" class="btn btn-primary">📥 Download JPG</button>
+        <button onclick="downloadCertificate('png')" class="btn btn-outline">📥 Download PNG</button>
     </div>
     
     <div class="corner-ornament tl"></div>
@@ -117,4 +175,32 @@
     </div>
     
 </div>
+
+<script>
+function downloadCertificate(format) {
+    const certificate = document.querySelector('.certificate-full-a4');
+    
+    html2canvas(certificate, {
+        scale: 2,
+        backgroundColor: '#ffffff',
+        allowTaint: true,
+        useCORS: true
+    }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = `UNIYO_Certificate_${Date.now()}.${format}`;
+        
+        if (format === 'jpg') {
+            link.href = canvas.toDataURL('image/jpeg', 0.95);
+        } else {
+            link.href = canvas.toDataURL('image/png');
+        }
+        
+        link.click();
+        showToast('Certificate downloaded!', 'success');
+    }).catch(err => {
+        showToast('Download failed. Try Print instead.', 'danger');
+    });
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 {% endblock %}
