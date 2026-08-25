@@ -76,6 +76,7 @@
                     <th>Type</th>
                     <th>Title</th>
                     <th>Date</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -86,6 +87,12 @@
                     <td>{{ cert.certificate_type|upper }}</td>
                     <td>{{ cert.title }}</td>
                     <td>{{ cert.issue_date|format_date }}</td>
+                    <td>
+                        <a href="{{ url_for('certificate.view_certificate', certificate_id=cert.id) }}" 
+                           target="_blank" class="btn-sm btn-success" style="padding: 4px 10px; border-radius: 4px; font-size: 10px;">
+                            👁️ View
+                        </a>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
