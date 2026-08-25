@@ -29,7 +29,7 @@
         <div class="certificate-watermark">UNIYO</div>
         
         <div class="cert-header">
-            <div class="cert-logo">UNIYO</div>
+            <img src="{{ url_for('static', filename='Authenticity/UNIYO_Titer.png') }}" alt="UNIYO" style="height: 50px; object-fit: contain;">
             <p class="cert-subtitle">Ethiopian Higher Education Freshman Hub</p>
             <div class="cert-badge-title">
                 {% if certificate.certificate_type == 'vip_leaderboard' %}
@@ -92,11 +92,13 @@
                 <span class="cert-qr-label">Scan to Verify</span>
             </div>
             <div class="cert-stamp">
-                <div class="cert-stamp-circle">UNIYO<br>OFFICIAL<br>STAMP</div>
+                <img src="{{ url_for('static', filename='Authenticity/UNIYO_Stamp.png') }}" alt="Stamp" style="width: 85px; height: 85px; object-fit: contain;">
             </div>
             <div class="cert-signature-block">
                 <div class="cert-signature-line">
-                    <span class="cert-signature-name">Academic Director</span>
+                    <img src="{{ url_for('static', filename='Authenticity/super_admin_signature.png') }}" alt="Signature" style="height: 40px; object-fit: contain;">
+                    <span class="cert-signature-name">Chalachew Agegn</span>
+                    <span style="font-size: 8pt; color: #64748b;">Super Admin</span>
                 </div>
                 <span class="cert-signature-title">Authorized Signature</span>
             </div>
