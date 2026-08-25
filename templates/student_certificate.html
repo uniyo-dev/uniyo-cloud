@@ -5,6 +5,7 @@
 {% block extra_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/student_certificate.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/certificate_premium.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/certificate_security.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -32,6 +33,7 @@
     <div class="certificate-full-a4 {% if certificate.certificate_type == 'vip_leaderboard' %}vip-certificate{% else %}completion-certificate{% endif %}" style="position: relative; background-image: url('{{ url_for('static', filename='certificates/designs/border_gold.png') }}'); background-size: 100% 100%; background-repeat: no-repeat; cert-rank-{{ certificate.rank or 0 }}">
         
         <div class="certificate-watermark">UNIYO</div>
+        <div class="holographic-effect"></div>
         
         <div class="cert-header">
             <img src="{{ url_for('static', filename='Authenticity/UNIYO_Titer.png') }}" alt="UNIYO" style="height: 50px; object-fit: contain;">
@@ -81,7 +83,7 @@
         <div class="cert-credentials">
             <div class="credential-row">
                 <span>Certificate Number:</span>
-                <code>{{ certificate.certificate_number }}</code>
+                <span class="serial-number-security">{{ certificate.certificate_number }}</span>
             </div>
             <div class="credential-row">
                 <span>Verification Token:</span>
@@ -93,6 +95,7 @@
             </div>
         </div>
         
+        <div class="microtext-security">UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE • SECURITY FEATURES INCLUDED • DO NOT COPY • UNIYO AUTHENTIC CERTIFICATE</div>
         <div class="cert-footer-grid">
             <div class="cert-qr-block">
                 <img src="{{ qr_data_uri }}" alt="QR Verification" class="cert-qr-image">
