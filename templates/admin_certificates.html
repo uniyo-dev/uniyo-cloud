@@ -43,10 +43,15 @@
             
             <div class="form-group">
                 <label>Certificate Type</label>
-                <select name="certificate_type">
+                <select name="certificate_type" id="certificateType">
                     <option value="completion">Course Completion</option>
                     <option value="vip_leaderboard">VIP Leaderboard</option>
                     <option value="excellence">Academic Excellence</option>
+                    <option value="content_creator">Content Creator</option>
+                    <option value="marketing_manager">Marketing Manager</option>
+                    <option value="advertiser">Advertiser</option>
+                    <option value="staff">Staff Appreciation</option>
+                    <option value="special_congratulations">Special Congratulations</option>
                 </select>
             </div>
             
@@ -56,12 +61,12 @@
             </div>
             
             <div class="form-group">
-                <label>Rank (optional)</label>
+                <label>Rank (optional for non-VIP; VIP rank is auto-validated)</label>
                 <input type="number" name="rank" min="1" placeholder="1">
             </div>
             
             <div class="form-group">
-                <label>Month/Year (optional)</label>
+                <label>Month/Year (Required for VIP certificates)</label>
                 <input type="month" name="month_year">
             </div>
             

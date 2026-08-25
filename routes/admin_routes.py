@@ -9,6 +9,7 @@ from core.db import get_db
 from core.auth import admin_required, role_required, authenticate_admin, create_admin_session, terminate_admin_session
 from core.helpers import logger, hash_password, verify_password, generate_certificate_number, generate_verification_token
 from core.constants import ADMIN_ROLES
+from routes.vip_routes import get_monthly_leaderboard
 
 admin_bp = Blueprint('admin', __name__, url_prefix='/admin')
 
@@ -474,6 +475,36 @@ def issue_certificate():
     if not student_id:
         flash("Please select a student", "danger")
         return redirect(url_for('admin.certificates'))
+    
+    # For VIP certificates, validate the rank against the actual monthly leaderboard
+    # For VIP certificates, validate the rank against the actual monthly leaderboard
+    vip_types = ['vip_leaderboard']
+    if certificate_type in vip_types:
+        if not month_year:
+            flash("Month/Year is required for VIP certificates", "danger")
+            return redirect(url_for('admin.certificates'))
+        
+        try:
+            leaderboard = get_monthly_leaderboard(month_year)
+            actual_rank = None
+            for entry in leaderboard:
+                if str(entry.get('student_id')) == str(student_id):
+                    actual_rank = entry.get('rank')
+                    break
+            
+            if actual_rank is None:
+                flash("This student is not in the VIP leaderboard for this month", "danger")
+                return redirect(url_for('admin.certificates'))
+            
+            rank = actual_rank
+            flash(f"Rank auto-validated: #{rank} from leaderboard", "info")
+        except Exception as e:
+            flash(f"Could not validate rank: {e}", "warning")
+    elif certificate_type in ['content_creator', 'marketing_manager', 'advertiser', 'staff', 'special_congratulations', 'excellence']:
+        # These types don't require rank or month - admin can issue freely
+        rank = request.form.get('rank', None) or None
+    else:
+        rank = None
     
     certificate_number = generate_certificate_number(month_year, rank)
     verification_token = generate_verification_token()

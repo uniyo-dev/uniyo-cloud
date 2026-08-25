@@ -100,6 +100,21 @@ function downloadCertificate(format) {
                 {% if certificate.certificate_type == 'vip_leaderboard' %}
                 🏆 OFFICIAL VIP MONTHLY LEADERSHIP AWARD 🏆
                 <br><span style="font-size: 10pt; color: #F59E0B; letter-spacing: 3px;">EXCELLENCE IN COMPETITION</span>
+                {% elif certificate.certificate_type == 'content_creator' %}
+                ✍️ OFFICIAL CONTENT CREATOR CERTIFICATE
+                <br><span style="font-size: 10pt; color: #6D28D9; letter-spacing: 3px;">EXCELLENCE IN EDUCATIONAL CONTENT</span>
+                {% elif certificate.certificate_type == 'marketing_manager' %}
+                📣 OFFICIAL MARKETING MANAGER CERTIFICATE
+                <br><span style="font-size: 10pt; color: #F59E0B; letter-spacing: 3px;">EXCELLENCE IN MARKETING</span>
+                {% elif certificate.certificate_type == 'advertiser' %}
+                📢 OFFICIAL ADVERTISER CERTIFICATE
+                <br><span style="font-size: 10pt; color: #14B8A6; letter-spacing: 3px;">EXCELLENCE IN PROMOTION</span>
+                {% elif certificate.certificate_type == 'staff' %}
+                🎖️ STAFF APPRECIATION CERTIFICATE
+                <br><span style="font-size: 10pt; color: #EC4899; letter-spacing: 3px;">IN RECOGNITION OF SERVICE</span>
+                {% elif certificate.certificate_type == 'special_congratulations' %}
+                🎉 SPECIAL CONGRATULATIONS
+                <br><span style="font-size: 10pt; color: #F59E0B; letter-spacing: 3px;">IN HONOR OF YOUR ACHIEVEMENT</span>
                 {% else %}
                 📜 OFFICIAL COURSE COMPLETION CERTIFICATE
                 <br><span style="font-size: 10pt; color: #6D28D9; letter-spacing: 3px;">DEDICATION TO LEARNING</span>
