@@ -4,6 +4,7 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/student_certificate.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/certificate_premium.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -24,7 +25,11 @@
         <button onclick="window.print()" class="btn btn-gold">🖨️ Print / Save PDF</button>
     </div>
     
-    <div class="certificate-full-a4 cert-rank-{{ certificate.rank or 0 }}">
+    <div class="corner-ornament tl"></div>
+    <div class="corner-ornament tr"></div>
+    <div class="corner-ornament bl"></div>
+    <div class="corner-ornament br"></div>
+    <div class="certificate-full-a4 {% if certificate.certificate_type == 'vip_leaderboard' %}vip-certificate{% else %}completion-certificate{% endif %}" style="position: relative; background-image: url('{{ url_for('static', filename='certificates/designs/border_gold.png') }}'); background-size: 100% 100%; background-repeat: no-repeat; cert-rank-{{ certificate.rank or 0 }}">
         
         <div class="certificate-watermark">UNIYO</div>
         
@@ -33,9 +38,11 @@
             <p class="cert-subtitle">Ethiopian Higher Education Freshman Hub</p>
             <div class="cert-badge-title">
                 {% if certificate.certificate_type == 'vip_leaderboard' %}
-                OFFICIAL MONTHLY ACADEMIC LEADERBOARD AWARD
+                🏆 OFFICIAL VIP MONTHLY LEADERSHIP AWARD 🏆
+                <br><span style="font-size: 10pt; color: #F59E0B; letter-spacing: 3px;">EXCELLENCE IN COMPETITION</span>
                 {% else %}
-                OFFICIAL COURSE COMPLETION CERTIFICATE
+                📜 OFFICIAL COURSE COMPLETION CERTIFICATE
+                <br><span style="font-size: 10pt; color: #6D28D9; letter-spacing: 3px;">DEDICATION TO LEARNING</span>
                 {% endif %}
             </div>
         </div>

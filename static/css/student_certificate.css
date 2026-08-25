@@ -251,3 +251,16 @@
 }
 
 .empty-state { text-align: center; padding: 40px; color: #94A3B8; }
+
+/* VIP CERTIFICATE - LANDSCAPE */
+.vip-certificate {
+    width: 297mm !important;
+    min-height: 210mm !important;
+    padding: 15mm 20mm !important;
+}
+
+/* Keep completion certificate as PORTRAIT */
+.completion-certificate {
+    width: 210mm !important;
+    min-height: 297mm !important;
+}
