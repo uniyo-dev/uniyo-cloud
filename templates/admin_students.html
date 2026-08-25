@@ -112,6 +112,7 @@
         <table class="students-table">
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Name</th>
                     <th>Phone</th>
                     <th>University</th>
@@ -123,6 +124,7 @@
             <tbody>
                 {% for student in students %}
                 <tr>
+                    <td>{{ student.id }}</td>
                     <td><span class="student-name">{{ student.full_name }}</span></td>
                     <td><span class="student-phone">{{ student.phone }}</span></td>
                     <td><span class="student-uni" title="{{ student.university }}">{{ student.university }}</span></td>

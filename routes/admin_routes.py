@@ -229,7 +229,8 @@ def certificates():
         SELECT c.*, s.full_name, s.university FROM certificates c
         JOIN students s ON c.student_id = s.id ORDER BY c.issue_date DESC
     ''')
-    return render_template('admin_certificates.html', certificates=certificates_list, current_month=datetime.now().strftime('%Y-%m'))
+    all_students = db.query("SELECT id, full_name, phone FROM students ORDER BY full_name")
+    return render_template('admin_certificates.html', certificates=certificates_list, all_students=all_students, current_month=datetime.now().strftime('%Y-%m'))
 
 @admin_bp.route('/announcements', methods=['GET'])
 @admin_required
