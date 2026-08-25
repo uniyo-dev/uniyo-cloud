@@ -20,16 +20,20 @@ def my_certificates():
 @login_required
 def view_certificate(certificate_id):
     db = get_db()
-    certificate = db.query_one('''
-        SELECT c.*, s.full_name, s.university, s.stream FROM certificates c
-        JOIN students s ON c.student_id = s.id WHERE c.id = ? AND c.student_id = ?
-    ''', (certificate_id, session['student_id']))
+    certificate = db.query_one("SELECT * FROM certificates WHERE id = ? AND student_id = ?", (certificate_id, session['student_id']))
+    if certificate:
+        student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (certificate['student_id'],))
+        if student:
+            certificate['full_name'] = student['full_name']
+            certificate['university'] = student['university']
+            certificate['stream'] = student['stream']
     
     if not certificate:
         flash("Certificate not found", "danger")
         return redirect(url_for('certificate.my_certificates'))
     
-    verify_url = f"http://192.168.43.1:5000/verify/{certificate['verification_token']}"
+    from flask import request
+    verify_url = f"{request.host_url}verify/{certificate['verification_token']}"
     qr_data_uri = generate_qr_data_uri(verify_url)
     
     return render_template('student_certificate.html', certificate=certificate, qr_data_uri=qr_data_uri)
@@ -37,10 +41,13 @@ def view_certificate(certificate_id):
 @certificate_bp.route('/verify/<token>', methods=['GET'])
 def verify_certificate(token):
     db = get_db()
-    certificate = db.query_one('''
-        SELECT c.*, s.full_name, s.university, s.stream FROM certificates c
-        JOIN students s ON c.student_id = s.id WHERE c.verification_token = ?
-    ''', (token,))
+    certificate = db.query_one("SELECT * FROM certificates WHERE verification_token = ?", (token,))
+    if certificate:
+        student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (certificate['student_id'],))
+        if student:
+            certificate['full_name'] = student['full_name']
+            certificate['university'] = student['university']
+            certificate['stream'] = student['stream']
     
     if not certificate:
         return render_template('verification_invalid.html'), 404

@@ -456,3 +456,32 @@ def change_password():
     
     flash("Password changed successfully!", "success")
     return redirect(url_for('admin.home'))
+
+
+@admin_bp.route('/certificates/issue', methods=['POST'])
+@admin_required
+def issue_certificate():
+    """Issue a new certificate to a student"""
+    db = get_db()
+    
+    student_id = request.form.get('student_id')
+    certificate_type = request.form.get('certificate_type', 'completion')
+    title = request.form.get('title', 'Course Completion Certificate')
+    rank = request.form.get('rank', None)
+    month_year = request.form.get('month_year', None)
+    
+    if not student_id:
+        flash("Please select a student", "danger")
+        return redirect(url_for('admin.certificates'))
+    
+    certificate_number = generate_certificate_number(month_year, rank)
+    verification_token = generate_verification_token()
+    
+    sql = "INSERT INTO certificates (student_id, certificate_type, rank, month_year, certificate_number, verification_token, title, issue_date, issued_by) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
+    db.execute(sql, (student_id, certificate_type, rank, month_year, certificate_number, verification_token, title, datetime.now().isoformat(), session['admin_id']))
+    
+    sql2 = "INSERT INTO notifications (student_id, message, type, created_at) VALUES (?, 'You have received a new certificate!', 'certificate', ?)"
+    db.execute(sql2, (student_id, datetime.now().isoformat()))
+    
+    flash("Certificate issued successfully!", "success")
+    return redirect(url_for('admin.certificates'))
