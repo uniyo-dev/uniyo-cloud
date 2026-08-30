@@ -112,6 +112,18 @@ function downloadCertificate(format) {
                 {% elif certificate.certificate_type == 'staff' %}
                 🎖️ STAFF APPRECIATION CERTIFICATE
                 <br><span style="font-size: 10pt; color: #EC4899; letter-spacing: 3px;">IN RECOGNITION OF SERVICE</span>
+                {% elif certificate.certificate_type == 'excellence' %}
+                🌟 OFFICIAL ACADEMIC EXCELLENCE AWARD 🌟
+                <br><span style="font-size: 10pt; color: #14B8A6; letter-spacing: 3px;">OUTSTANDING PERFORMANCE</span>
+                {% elif certificate.certificate_type == 'participation' %}
+                🎯 OFFICIAL PARTICIPATION CERTIFICATE
+                <br><span style="font-size: 10pt; color: #38BDF8; letter-spacing: 3px;">ACTIVE INVOLVEMENT</span>
+                {% elif certificate.certificate_type == 'appreciation' %}
+                💎 OFFICIAL APPRECIATION CERTIFICATE
+                <br><span style="font-size: 10pt; color: #EC4899; letter-spacing: 3px;">VALUED CONTRIBUTION</span>
+                {% elif certificate.certificate_type == 'congratulations' %}
+                🎉 OFFICIAL CONGRATULATIONS CERTIFICATE
+                <br><span style="font-size: 10pt; color: #22C55E; letter-spacing: 3px;">CELEBRATING SUCCESS</span>
                 {% elif certificate.certificate_type == 'special_congratulations' %}
                 🎉 SPECIAL CONGRATULATIONS
                 <br><span style="font-size: 10pt; color: #F59E0B; letter-spacing: 3px;">IN HONOR OF YOUR ACHIEVEMENT</span>
@@ -125,7 +137,18 @@ function downloadCertificate(format) {
         {% if certificate.rank %}
         <div class="rank-display">
             <div class="rank-medal-icon">
-                {% if certificate.rank == 1 %}🥇{% elif certificate.rank == 2 %}🥈{% elif certificate.rank == 3 %}🥉{% else %}🏆{% endif %}
+                {% if certificate.certificate_type == 'vip_leaderboard' %}
+                    {% if certificate.rank == 1 %}🥇{% elif certificate.rank == 2 %}🥈{% elif certificate.rank == 3 %}🥉{% else %}🏆{% endif %}
+                {% elif certificate.certificate_type == 'completion' %}📜
+                {% elif certificate.certificate_type == 'excellence' %}🌟
+                {% elif certificate.certificate_type == 'participation' %}🎯
+                {% elif certificate.certificate_type == 'appreciation' %}💎
+                {% elif certificate.certificate_type == 'congratulations' or certificate.certificate_type == 'special_congratulations' %}🎉
+                {% elif certificate.certificate_type == 'staff' %}👨‍💼
+                {% elif certificate.certificate_type == 'content_creator' %}✍️
+                {% elif certificate.certificate_type == 'marketing_manager' %}📣
+                {% elif certificate.certificate_type == 'advertiser' %}📢
+                {% else %}📜{% endif %}
             </div>
             <h2 class="rank-badge-title">{{ certificate.title }}</h2>
             {% if certificate.month_year %}
@@ -147,8 +170,26 @@ function downloadCertificate(format) {
             <p class="cert-achievement-text">
                 {% if certificate.certificate_type == 'vip_leaderboard' %}
                 For outstanding performance in the monthly VIP leaderboard competition, ranking in the Top 5 among all participating students.
-                {% else %}
+                {% elif certificate.certificate_type == 'completion' %}
                 For successfully completing all worksheet questions across all 16 national freshman courses.
+                {% elif certificate.certificate_type == 'excellence' %}
+                For demonstrating exceptional academic performance and dedication to excellence.
+                {% elif certificate.certificate_type == 'participation' %}
+                For active participation in the UNIYO VIP competition and dedication to learning.
+                {% elif certificate.certificate_type == 'appreciation' %}
+                In recognition of outstanding contribution and dedication to the UNIYO learning community.
+                {% elif certificate.certificate_type == 'congratulations' or certificate.certificate_type == 'special_congratulations' %}
+                In recognition of your hard work and dedication. Congratulations on your achievement!
+                {% elif certificate.certificate_type == 'staff' %}
+                In recognition of outstanding service and dedication to the UNIYO learning platform.
+                {% elif certificate.certificate_type == 'content_creator' %}
+                In recognition of exceptional contribution to creating high-quality educational content for UNIYO students.
+                {% elif certificate.certificate_type == 'marketing_manager' %}
+                In recognition of exceptional leadership in promoting UNIYO to Ethiopian students nationwide.
+                {% elif certificate.certificate_type == 'advertiser' %}
+                In recognition of exceptional contribution to advertising and promoting UNIYO across Ethiopia.
+                {% else %}
+                In recognition of your achievement with UNIYO.
                 {% endif %}
             </p>
         </div>
