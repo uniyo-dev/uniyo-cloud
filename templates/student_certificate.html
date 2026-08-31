@@ -34,6 +34,7 @@ function downloadCertificate(format) {
 <link rel="stylesheet" href="{{ url_for('static', filename='css/student_certificate.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/certificate_premium.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/certificate_security.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/certificate_unique_borders.css') }}">
 
 <script>
 function downloadCertificate(format) {
@@ -88,8 +89,27 @@ function downloadCertificate(format) {
     <div class="corner-ornament tr"></div>
     <div class="corner-ornament bl"></div>
     <div class="corner-ornament br"></div>
-    <div class="certificate-full-a4 {% if certificate.certificate_type == 'vip_leaderboard' %}vip-certificate{% else %}completion-certificate{% endif %}" style="position: relative; background-image: url('{{ url_for('static', filename='certificates/designs/border_gold.png') }}'); background-size: 100% 100%; background-repeat: no-repeat; cert-rank-{{ certificate.rank or 0 }}">
+    <div class="certificate-full-a4 
+            {% if certificate.certificate_type == 'vip_leaderboard' %}
+                {% if certificate.rank == 1 %}cert-vip-rank1
+                {% elif certificate.rank == 2 %}cert-vip-rank2
+                {% elif certificate.rank == 3 %}cert-vip-rank3
+                {% else %}cert-vip-rank45{% endif %}
+            {% elif certificate.certificate_type == 'completion' %}cert-completion
+            {% elif certificate.certificate_type == 'excellence' %}cert-excellence
+            {% elif certificate.certificate_type == 'participation' %}cert-participation
+            {% elif certificate.certificate_type == 'appreciation' %}cert-appreciation
+            {% elif certificate.certificate_type == 'congratulations' or certificate.certificate_type == 'special_congratulations' %}cert-congratulations
+            {% elif certificate.certificate_type == 'staff' %}cert-staff
+            {% elif certificate.certificate_type == 'content_creator' %}cert-content_creator
+            {% elif certificate.certificate_type == 'marketing_manager' %}cert-marketing
+            {% elif certificate.certificate_type == 'advertiser' %}cert-advertiser
+            {% else %}cert-completion{% endif %}" {% if certificate.certificate_type == 'vip_leaderboard' %}vip-certificate{% else %}completion-certificate{% endif %}" style="position: relative; background-image: url('{{ url_for('static', filename='certificates/designs/border_gold.png') }}'); background-size: 100% 100%; background-repeat: no-repeat; cert-rank-{{ certificate.rank or 0 }}">
         
+        <div class="corner-ornament tl"></div>
+        <div class="corner-ornament tr"></div>
+        <div class="corner-ornament bl"></div>
+        <div class="corner-ornament br"></div>
         <div class="certificate-watermark">UNIYO</div>
         <div class="holographic-effect"></div>
         
