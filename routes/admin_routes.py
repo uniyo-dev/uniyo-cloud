@@ -517,3 +517,32 @@ def issue_certificate():
     
     flash("Certificate issued successfully!", "success")
     return redirect(url_for('admin.certificates'))
+
+
+@admin_bp.route('/certificates/<int:certificate_id>/view', methods=['GET'])
+@admin_required
+def view_certificate(certificate_id):
+    """Admin view certificate"""
+    db = get_db()
+    try:
+        certificate = db.query_one("SELECT * FROM certificates WHERE id = ?", (certificate_id,))
+        if certificate:
+            student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (certificate.get('student_id'),))
+            if student:
+                certificate['full_name'] = student['full_name']
+                certificate['university'] = student['university']
+                certificate['stream'] = student['stream']
+    except Exception as e:
+        flash(f"Error: {e}", "danger")
+        return redirect(url_for('admin.certificates'))
+    
+    if not certificate:
+        flash("Certificate not found", "danger")
+        return redirect(url_for('admin.certificates'))
+    
+    from flask import request
+    from core.helpers import generate_qr_data_uri
+    verify_url = f"{request.host_url}verify/{certificate.get('verification_token', '')}"
+    qr_data_uri = generate_qr_data_uri(verify_url)
+    
+    return render_template('admin_certificate_view.html', certificate=certificate, qr_data_uri=qr_data_uri)

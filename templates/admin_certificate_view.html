@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}View Certificate - UNIYO Admin{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin_home.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/student_certificate.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="admin-container">
+    
+    <header class="admin-header">
+        <div>
+            <h1>🏆 Certificate Details</h1>
+            <p>Viewing certificate #{{ certificate.certificate_number }}</p>
+        </div>
+        <div style="display: flex; gap: 8px;">
+            <button onclick="toggleAdminTheme()" class="btn btn-outline" id="adminThemeBtn">🌙 Dark</button>
+            <a href="{{ url_for('admin.certificates') }}" class="btn btn-outline">← Back to Certificates</a>
+        </div>
+    </header>
+    
+    <section class="admin-section">
+        <div class="certificate-full-a4" style="margin: 0 auto;">
+            
+            <div class="certificate-watermark">UNIYO</div>
+            
+            <div class="cert-header">
+                <div class="cert-logo">UNIYO</div>
+                <p class="cert-subtitle">Ethiopian Higher Education Freshman Hub</p>
+                <div class="cert-badge-title">
+                    {{ certificate.title|default('Certificate') }}
+                </div>
+            </div>
+            
+            {% if certificate.rank %}
+            <div class="rank-display">
+                <div class="rank-medal-icon">
+                    {% if certificate.rank == 1 %}🥇{% elif certificate.rank == 2 %}🥈{% elif certificate.rank == 3 %}🥉{% else %}🏆{% endif %}
+                </div>
+                <h2 class="rank-badge-title">Rank #{{ certificate.rank }}</h2>
+                {% if certificate.month_year %}
+                <div class="rank-month">Month of {{ certificate.month_year }}</div>
+                {% endif %}
+            </div>
+            {% endif %}
+            
+            <div class="cert-recipient-block">
+                <p class="cert-presented-to">This certificate is proudly presented to</p>
+                <div class="cert-student-name">{{ certificate.full_name|default('Student Name') }}</div>
+                <p class="cert-student-details">{{ certificate.university|default('') }} • {{ certificate.stream|default('') }} Science</p>
+            </div>
+            
+            <div class="cert-credentials">
+                <div class="credential-row">
+                    <span>Certificate Number:</span>
+                    <code>{{ certificate.certificate_number }}</code>
+                </div>
+                <div class="credential-row">
+                    <span>Verification Token:</span>
+                    <code>{{ certificate.verification_token }}</code>
+                </div>
+                <div class="credential-row">
+                    <span>Issue Date:</span>
+                    <strong>{{ certificate.issue_date|format_date }}</strong>
+                </div>
+                <div class="credential-row">
+                    <span>Type:</span>
+                    <strong>{{ certificate.certificate_type|upper }}</strong>
+                </div>
+            </div>
+            
+            <div class="cert-footer-grid">
+                <div class="cert-qr-block">
+                    <img src="{{ qr_data_uri }}" alt="QR" class="cert-qr-image">
+                    <span class="cert-qr-label">Scan to Verify</span>
+                </div>
+                <div class="cert-stamp">
+                    <div class="cert-stamp-circle">UNIYO<br>OFFICIAL<br>STAMP</div>
+                </div>
+                <div class="cert-signature-block">
+                    <div class="cert-signature-line">
+                        <span class="cert-signature-name">Academic Director</span>
+                    </div>
+                    <span class="cert-signature-title">Authorized Signature</span>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+</div>
+{% endblock %}
