@@ -509,8 +509,12 @@ def issue_certificate():
     certificate_number = generate_certificate_number(month_year, rank)
     verification_token = generate_verification_token()
     
-    sql = "INSERT INTO certificates (student_id, certificate_type, rank, month_year, certificate_number, verification_token, title, issue_date, issued_by) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
-    db.execute(sql, (student_id, certificate_type, rank, month_year, certificate_number, verification_token, title, datetime.now().isoformat(), session['admin_id']))
+    # Get student details for the certificate
+    student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (student_id,))
+    student = dict(student) if student else {}
+    
+    sql = "INSERT INTO certificates (student_id, certificate_type, rank, month_year, certificate_number, verification_token, title, issue_date, issued_by, full_name, university, stream) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+    db.execute(sql, (student_id, certificate_type, rank, month_year, certificate_number, verification_token, title, datetime.now().isoformat(), session['admin_id'], student.get('full_name', ''), student.get('university', ''), student.get('stream', '')))
     
     sql2 = "INSERT INTO notifications (student_id, message, type, created_at) VALUES (?, 'You have received a new certificate!', 'certificate', ?)"
     db.execute(sql2, (student_id, datetime.now().isoformat()))
