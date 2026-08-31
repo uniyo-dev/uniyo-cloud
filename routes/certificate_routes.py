@@ -20,13 +20,19 @@ def my_certificates():
 @login_required
 def view_certificate(certificate_id):
     db = get_db()
-    certificate = db.query_one("SELECT * FROM certificates WHERE id = ? AND student_id = ?", (certificate_id, session['student_id']))
+    try:
+        certificate = db.query_one("SELECT * FROM certificates WHERE id = ? AND student_id = ?", (certificate_id, session['student_id']))
+    except Exception as e:
+        flash(f"Certificate error: {e}", "danger")
+        return redirect(url_for('certificate.my_certificates'))
     if certificate:
+        certificate = dict(certificate)
         student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (certificate['student_id'],))
         if student:
-            certificate['full_name'] = student['full_name']
-            certificate['university'] = student['university']
-            certificate['stream'] = student['stream']
+            student = dict(student)
+            certificate['full_name'] = student.get('full_name', '')
+            certificate['university'] = student.get('university', '')
+            certificate['stream'] = student.get('stream', '')
     
     if not certificate:
         flash("Certificate not found", "danger")
@@ -43,11 +49,13 @@ def verify_certificate(token):
     db = get_db()
     certificate = db.query_one("SELECT * FROM certificates WHERE verification_token = ?", (token,))
     if certificate:
+        certificate = dict(certificate)
         student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (certificate['student_id'],))
         if student:
-            certificate['full_name'] = student['full_name']
-            certificate['university'] = student['university']
-            certificate['stream'] = student['stream']
+            student = dict(student)
+            certificate['full_name'] = student.get('full_name', '')
+            certificate['university'] = student.get('university', '')
+            certificate['stream'] = student.get('stream', '')
     
     if not certificate:
         return render_template('verification_invalid.html'), 404

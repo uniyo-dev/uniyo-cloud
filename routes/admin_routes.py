@@ -527,11 +527,13 @@ def view_certificate(certificate_id):
     try:
         certificate = db.query_one("SELECT * FROM certificates WHERE id = ?", (certificate_id,))
         if certificate:
+            certificate = dict(certificate)
             student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (certificate.get('student_id'),))
             if student:
-                certificate['full_name'] = student['full_name']
-                certificate['university'] = student['university']
-                certificate['stream'] = student['stream']
+                student = dict(student)
+                certificate['full_name'] = student.get('full_name', '')
+                certificate['university'] = student.get('university', '')
+                certificate['stream'] = student.get('stream', '')
     except Exception as e:
         flash(f"Error: {e}", "danger")
         return redirect(url_for('admin.certificates'))
