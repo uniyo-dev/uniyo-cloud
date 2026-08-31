@@ -1,0 +1,155 @@
+/* ============================================
+   UNIYO POPUP SYSTEM
+   Beautiful modals for everything
+   ============================================ */
+
+/* Overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: popupFadeIn 0.3s ease;
+}
+
+/* Popup Card */
+.popup-card {
+    background: #111827;
+    border: 2px solid #6D28D9;
+    border-radius: 16px;
+    padding: 24px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: popupSlideUp 0.3s ease;
+    position: relative;
+}
+
+/* Popup Header */
+.popup-header {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.popup-icon {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.popup-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #F8FAFC;
+    margin-bottom: 4px;
+}
+
+.popup-message {
+    font-size: 13px;
+    color: #94A3B8;
+    line-height: 1.5;
+}
+
+/* Popup Buttons */
+.popup-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.popup-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.popup-btn-primary {
+    background: #6D28D9;
+    color: white;
+}
+
+.popup-btn-primary:hover {
+    background: #5B21B6;
+    transform: translateY(-1px);
+}
+
+.popup-btn-success {
+    background: #14B8A6;
+    color: white;
+}
+
+.popup-btn-danger {
+    background: #EC4899;
+    color: white;
+}
+
+.popup-btn-warning {
+    background: #F59E0B;
+    color: #0B0F19;
+}
+
+.popup-btn-outline {
+    background: transparent;
+    border: 2px solid #6D28D9;
+    color: #A78BFA;
+}
+
+/* Animations */
+@keyframes popupFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes popupSlideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Dropdown Popup */
+.popup-dropdown {
+    max-height: 300px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.popup-option {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    color: #94A3B8;
+    transition: all 0.2s ease;
+}
+
+.popup-option:hover {
+    background: rgba(109, 40, 217, 0.1);
+    color: #F8FAFC;
+}
+
+.popup-option.selected {
+    background: rgba(109, 40, 217, 0.2);
+    color: #A78BFA;
+    font-weight: 600;
+}
+
+/* Success Popup */
+.popup-success .popup-card { border-color: #14B8A6; }
+.popup-success .popup-icon { color: #14B8A6; }
+
+/* Error Popup */
+.popup-error .popup-card { border-color: #EC4899; }
+.popup-error .popup-icon { color: #EC4899; }
+
+/* Warning Popup */
+.popup-warning .popup-card { border-color: #F59E0B; }
+.popup-warning .popup-icon { color: #F59E0B; }

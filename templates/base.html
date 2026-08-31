@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/popups.css') }}">
     {% block extra_css %}{% endblock %}
 
 <!-- MathJax Configuration for LaTeX Formula Rendering -->
@@ -58,6 +59,7 @@
         {% block content %}{% endblock %}
     </main>
     
+    <script src="{{ url_for('static', filename='js/popups.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     
     <script src="{{ url_for('static', filename='js/offline-manager.js') }}"></script>
