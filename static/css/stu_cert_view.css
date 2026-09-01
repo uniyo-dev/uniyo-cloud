@@ -1,0 +1,97 @@
+/* ============================================
+   UNIYO STUDENT CERTIFICATE VIEW - CLEAN
+   ============================================ */
+
+.cert-view-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cert-view-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cert-view-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.certificate-display {
+    background: #fffdf9;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.cert-logo-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
+.cert-title-main {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 800;
+    color: #1e1b4b;
+    margin: 20px 0 10px;
+}
+
+.cert-student-name {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e1b4b;
+    border-bottom: 2px solid #6D28D9;
+    display: inline-block;
+    padding: 0 30px 8px;
+    margin: 15px 0;
+}
+
+.cert-details {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    background: rgba(109, 40, 217, 0.05);
+    border-radius: 10px;
+}
+
+.cert-detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.cert-footer-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.cert-stamp-img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+}
+
+.cert-signature-img {
+    height: 40px;
+    object-fit: contain;
+}
+
+.cert-qr-img {
+    width: 70px;
+    height: 70px;
+}

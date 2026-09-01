@@ -42,7 +42,7 @@ def view_certificate(certificate_id):
     verify_url = f"{request.host_url}verify/{certificate['verification_token']}"
     qr_data_uri = generate_qr_data_uri(verify_url)
     
-    return render_template('student_certificate.html', certificate=certificate, qr_data_uri=qr_data_uri)
+    return render_template('stu_cert_view.html', certificate=certificate, qr_data_uri=qr_data_uri)
 
 @certificate_bp.route('/verify/<token>', methods=['GET'])
 def verify_certificate(token):
