@@ -1,0 +1,8 @@
+/* Admin Certificate View - uses stu_cert_view.css as base */
+@import url('stu_cert_view.css');
+
+/* Admin-specific overrides */
+.admin-container .certificate-display {
+    max-width: 800px;
+    margin: 20px auto;
+}
