@@ -1,0 +1,289 @@
+/* ============================================
+   UNIYO STAMP CENTRAL — Professional Styling
+   ============================================ */
+
+:root {
+    --stamp-purple: #6D28D9;
+    --stamp-purple-dark: #5B21B6;
+    --stamp-gold: #F59E0B;
+    --stamp-gold-light: #FCD34D;
+    --stamp-gold-dark: #D97706;
+    --stamp-white: #FFFFFF;
+    --stamp-off-white: #FAFAFA;
+    
+    --stamp-size: 320px;
+    --stamp-font: 'Georgia', 'Times New Roman', serif;
+    --stamp-sans: 'Segoe UI', 'Inter', Arial, sans-serif;
+    
+    --stamp-shadow: 0 15px 50px rgba(109, 40, 217, 0.35);
+    --stamp-inner-glow: inset 0 0 30px rgba(109, 40, 217, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--stamp-sans);
+    background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 50%, #FEF3C7 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.uniyo-stamp-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* ============================================
+   STAMP CONTAINER
+   ============================================ */
+.uniyo-stamp-container {
+    position: relative;
+    width: var(--stamp-size);
+    height: var(--stamp-size);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    animation: stampEntrance 0.8s ease-out;
+}
+
+@keyframes stampEntrance {
+    from {
+        opacity: 0;
+        transform: scale(0.7) rotate(-15deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.uniyo-stamp-container:hover {
+    transform: scale(1.03);
+}
+
+.uniyo-stamp-container:active {
+    transform: scale(0.95);
+}
+
+/* Outer Ring */
+.stamp-outer-ring {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #7C3AED 0%, #6D28D9 50%, #5B21B6 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--stamp-shadow);
+    position: relative;
+}
+
+/* Inner Ring */
+.stamp-inner-ring {
+    width: 88%;
+    height: 88%;
+    border-radius: 50%;
+    background: var(--stamp-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: var(--stamp-inner-glow);
+    position: relative;
+    border: 3px solid var(--stamp-gold);
+}
+
+/* Circular Text */
+.stamp-circular-text {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 80%;
+    pointer-events: none;
+}
+
+.stamp-upper-text {
+    font-family: var(--stamp-sans);
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    fill: var(--stamp-purple);
+    text-transform: uppercase;
+}
+
+/* Emblem */
+.stamp-emblem {
+    width: 90px;
+    height: 90px;
+    margin-top: 1rem;
+}
+
+.stamp-svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 3px 10px rgba(109, 40, 217, 0.4));
+}
+
+/* Stamp Text */
+.stamp-text-section {
+    text-align: center;
+}
+
+.stamp-wordmark {
+    font-family: var(--stamp-sans);
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 0.4rem;
+    color: var(--stamp-purple);
+    text-transform: uppercase;
+}
+
+.stamp-label {
+    font-family: var(--stamp-sans);
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    color: var(--stamp-gold-dark);
+    text-transform: uppercase;
+}
+
+/* Verification Code */
+.stamp-verification {
+    padding: 0.3rem 1rem;
+    background: rgba(109, 40, 217, 0.05);
+    border: 1px dashed var(--stamp-purple);
+    border-radius: 4px;
+}
+
+.stamp-verify-code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: var(--stamp-purple-dark);
+}
+
+/* Bottom Text */
+.stamp-bottom-text {
+    font-family: var(--stamp-sans);
+    font-size: 0.55rem;
+    letter-spacing: 0.15rem;
+    color: #9E9E9E;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Decorative Stars */
+.stamp-star {
+    position: absolute;
+    color: var(--stamp-gold);
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
+    animation: starTwinkle 2s ease-in-out infinite;
+    pointer-events: none;
+    font-size: 0.8rem;
+}
+
+.star-1 { top: 5%; left: 20%; animation-delay: 0s; }
+.star-2 { top: 10%; right: 15%; animation-delay: 0.5s; }
+.star-3 { bottom: 10%; left: 15%; animation-delay: 1s; }
+.star-4 { bottom: 5%; right: 20%; animation-delay: 1.5s; }
+
+@keyframes starTwinkle {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Rotating Dashed Ring */
+.stamp-dashed-ring {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border-radius: 50%;
+    border: 2px dashed var(--stamp-gold);
+    opacity: 0.3;
+    pointer-events: none;
+    animation: dashedRingRotate 30s linear infinite;
+}
+
+@keyframes dashedRingRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Stamp Info */
+.stamp-info {
+    text-align: center;
+}
+
+.stamp-info-text {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--stamp-purple);
+}
+
+.stamp-info-sub {
+    font-size: 0.7rem;
+    color: #9E9E9E;
+    margin-top: 0.2rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    :root {
+        --stamp-size: 250px;
+    }
+    
+    .stamp-wordmark {
+        font-size: 1.2rem;
+    }
+    
+    .stamp-emblem {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --stamp-size: 200px;
+    }
+    
+    .stamp-wordmark {
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+    }
+    
+    .stamp-emblem {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .stamp-upper-text {
+        font-size: 0.4rem;
+        letter-spacing: 0.2rem;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

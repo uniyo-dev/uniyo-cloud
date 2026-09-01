@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0ebe3;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    padding: 2rem;
+}
+
+.certificate {
+    width: 100%;
+    max-width: 800px;
+    background: #ffffff;
+    padding: 2rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+.certificate-border {
+    border: 3px solid #d4af37;
+    padding: 2rem;
+    position: relative;
+}
+
+.certificate-border::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 1px solid #e6b422;
+    pointer-events: none;
+}
+
+.certificate-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.logo-small .emblem {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #0b3b5c, #1a5f7a);
+    border: 3px solid #e6b422;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(10, 40, 60, 0.2);
+}
+
+.logo-small .shield {
+    width: 38px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.15);
+    clip-path: polygon(50% 0%, 85% 12%, 92% 45%, 75% 80%, 50% 100%, 25% 80%, 8% 45%, 15% 12%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-small .book {
+    display: flex;
+    gap: 1.5px;
+}
+
+.logo-small .page {
+    width: 7px;
+    height: 14px;
+    background: #fef9e7;
+    border-radius: 1px 3px 3px 1px;
+}
+
+.logo-small .page.right {
+    border-radius: 3px 1px 1px 3px;
+}
+
+.logo-small .star {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    font-size: 18px;
+    color: #ffd966;
+}
+
+.title-group {
+    text-align: center;
+}
+
+.cert-title {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 12px;
+    color: #0b2e4a;
+    margin-bottom: 0.3rem;
+}
+
+.cert-subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: #6b5b3a;
+    text-transform: uppercase;
+}
+
+.certificate-body {
+    text-align: center;
+}
+
+.achievement-title {
+    font-size: 2rem;
+    letter-spacing: 6px;
+    color: #1a5f7a;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+}
+
+.achievement-subtitle {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #8b7a50;
+    margin-bottom: 2rem;
+}
+
+.recipient {
+    margin-bottom: 2rem;
+}
+
+.presented-to {
+    font-size: 0.9rem;
+    color: #6b5b3a;
+    margin-bottom: 0.5rem;
+}
+
+.student-name {
+    font-size: 1.8rem;
+    color: #0b2e4a;
+    border-bottom: 2px solid #d4af37;
+    display: inline-block;
+    min-width: 300px;
+    margin: 0.5rem 0;
+    padding: 0.5rem 2rem;
+    letter-spacing: 2px;
+}
+
+.achievement-text {
+    font-size: 1rem;
+    color: #4a5b6b;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.stamp-section {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.stamp-container {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffffff 0%, #faf8f5 60%, #f0ece5 100%);
+    box-shadow: 
+        0 0 0 2px #d4af37,
+        0 0 0 4px #ffffff,
+        0 0 0 6px #d4af37;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.85;
+}
+
+.stamp-ring {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    border: 1.5px dashed #b8962e;
+}
+
+.stamp-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.stamp-inner .emblem {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #0b3b5c, #1a5f7a);
+    border: 2px solid #e6b422;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stamp-inner .shield {
+    width: 38px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.15);
+    clip-path: polygon(50% 0%, 85% 12%, 92% 45%, 75% 80%, 50% 100%, 25% 80%, 8% 45%, 15% 12%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stamp-inner .book {
+    display: flex;
+    gap: 1.5px;
+}
+
+.stamp-inner .page {
+    width: 7px;
+    height: 14px;
+    background: #fef9e7;
+    border-radius: 1px 3px 3px 1px;
+}
+
+.stamp-inner .page.right {
+    border-radius: 3px 1px 1px 3px;
+}
+
+.stamp-inner .star {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 16px;
+    color: #ffd966;
+}
+
+.stamp-text {
+    text-align: center;
+}
+
+.stamp-title {
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: #0b2e4a;
+}
+
+.stamp-subtitle {
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+    color: #6b5b3a;
+    font-weight: 700;
+}
+
+.signature-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.signature {
+    text-align: center;
+    min-width: 150px;
+}
+
+.sign-line {
+    width: 150px;
+    height: 1px;
+    background: #4a5b6b;
+    margin: 0 auto 0.5rem;
+}
+
+.sign-name {
+    font-weight: 700;
+    color: #0b2e4a;
+    font-size: 0.9rem;
+}
+
+.sign-role {
+    font-size: 0.7rem;
+    color: #8b7a50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

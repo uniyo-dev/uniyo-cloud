@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="simpleBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b3b5c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a5f7a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Simple Circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#simpleBg)" stroke="#e6b422" stroke-width="6"/>
+  
+  <!-- Shield -->
+  <path d="M100 50 L130 65 L135 95 L120 130 L100 145 L80 130 L65 95 L70 65 Z" 
+        fill="rgba(255,255,255,0.2)" stroke="#e6b422" stroke-width="3"/>
+  
+  <!-- Book Mark -->
+  <path d="M85 85 Q78 82 75 88 Q72 94 75 100 Q78 106 85 108 Q88 104 88 96 Q88 88 85 85 Z" 
+        fill="#fef9e7" stroke="#d4af37" stroke-width="1.5"/>
+  <path d="M85 85 Q92 82 95 88 Q98 94 95 100 Q92 106 85 108 Q82 104 82 96 Q82 88 85 85 Z" 
+        fill="#fef9e7" stroke="#d4af37" stroke-width="1.5"/>
+  
+  <!-- Star -->
+  <polygon points="135,55 138,65 148,65 140,72 143,82 135,76 127,82 130,72 122,65 132,65" 
+           fill="#ffd966" stroke="#e6b422" stroke-width="1"/>
+</svg>

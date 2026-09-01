@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UNIYO App Icon - University Made for YOU">
+    <meta name="theme-color" content="#6D28D9">
+    <title>UNIYO — App Icon</title>
+    <link rel="stylesheet" href="app_icon.css">
+</head>
+<body>
+    <main class="uniyo-icon-main" role="main" aria-label="UNIYO App Icon Preview">
+        
+        <!-- App Icon Display -->
+        <div class="uniyo-icon-display">
+            
+            <!-- Main App Icon -->
+            <div class="uniyo-app-icon" id="appIcon" role="img" aria-label="UNIYO App Icon">
+                
+                <!-- Gradient Background Layer -->
+                <div class="icon-bg-layer"></div>
+                
+                <!-- Shine Effect -->
+                <div class="icon-shine" id="iconShine"></div>
+                
+                <!-- SVG Icon Symbol -->
+                <svg class="icon-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="iconPurpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#7C3AED"/>
+                            <stop offset="100%" style="stop-color:#5B21B6"/>
+                        </linearGradient>
+                        <linearGradient id="iconGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FCD34D"/>
+                            <stop offset="100%" style="stop-color:#F59E0B"/>
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Rounded Hexagon Shape -->
+                    <path d="M100 15 L165 52 L165 128 L100 185 L35 128 L35 52 Z" 
+                          fill="rgba(255,255,255,0.15)" stroke="#FCD34D" stroke-width="3"/>
+                    
+                    <!-- Bold U Monogram -->
+                    <path d="M70 70 L70 100 Q70 138 100 138 Q130 138 130 100 L130 70" 
+                          fill="none" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round"/>
+                    
+                    <!-- Gold Diamond -->
+                    <polygon points="100,35 112,47 100,59 88,47" 
+                             fill="url(#iconGoldGrad)"/>
+                    
+                </svg>
+                
+            </div>
+            
+            <!-- Icon Label -->
+            <div class="icon-label-group">
+                <span class="icon-app-name">UNIYO</span>
+                <span class="icon-app-sub">University Made for YOU</span>
+            </div>
+            
+            <!-- Size Previews -->
+            <div class="icon-sizes">
+                <span class="size-badge">192×192</span>
+                <span class="size-badge">512×512</span>
+                <span class="size-badge">1024×1024</span>
+            </div>
+            
+        </div>
+        
+    </main>
+    
+    <script src="app_icon.js"></script>
+</body>
+</html>

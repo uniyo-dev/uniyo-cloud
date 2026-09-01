@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UNIYO Loading Animation - University Made for YOU">
+    <meta name="theme-color" content="#6D28D9">
+    <title>UNIYO — Loading</title>
+    <link rel="stylesheet" href="loader.css">
+</head>
+<body>
+    <main class="uniyo-loader-main" role="main" aria-label="UNIYO Loading">
+        
+        <!-- Loader Container -->
+        <div class="uniyo-loader-container">
+            
+            <!-- Loader Stage -->
+            <div class="loader-stage" id="loaderStage">
+                
+                <!-- Outer Rotating Ring with Letter N -->
+                <div class="loader-ring ring-outer">
+                    <span class="ring-letter letter-n">N</span>
+                    <span class="ring-dot dot-1"></span>
+                </div>
+                
+                <!-- Middle Rotating Ring with Letter I -->
+                <div class="loader-ring ring-middle">
+                    <span class="ring-letter letter-i">I</span>
+                    <span class="ring-dot dot-2"></span>
+                </div>
+                
+                <!-- Inner Rotating Ring with Letter Y -->
+                <div class="loader-ring ring-inner">
+                    <span class="ring-letter letter-y">Y</span>
+                    <span class="ring-dot dot-3"></span>
+                </div>
+                
+                <!-- Center Emblem with U -->
+                <div class="loader-center" id="loaderCenter">
+                    <svg class="loader-svg" viewBox="0 0 200 200">
+                        <defs>
+                            <linearGradient id="loaderPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#7C3AED"/>
+                                <stop offset="100%" style="stop-color:#5B21B6"/>
+                            </linearGradient>
+                            <linearGradient id="loaderGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FCD34D"/>
+                                <stop offset="100%" style="stop-color:#F59E0B"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Hexagon -->
+                        <polygon points="100,15 165,52 165,128 100,185 35,128 35,52" 
+                                 fill="url(#loaderPurple)" stroke="#F59E0B" stroke-width="3"/>
+                        
+                        <!-- U Monogram (Center) -->
+                        <path d="M70 70 L70 100 Q70 135 100 135 Q130 135 130 100 L130 70" 
+                              fill="none" stroke="#FFFFFF" stroke-width="20" stroke-linecap="round"/>
+                        
+                        <!-- Diamond -->
+                        <polygon points="100,38 112,50 100,62 88,50" fill="url(#loaderGold)"/>
+                        
+                    </svg>
+                </div>
+                
+                <!-- Orbiting Letter O (Free Orbit) -->
+                <div class="loader-letter-o" id="letterO">
+                    <span class="letter-o-text">O</span>
+                </div>
+                
+                <!-- Orbiting Sparkles -->
+                <span class="loader-sparkle sparkle-1">✦</span>
+                <span class="loader-sparkle sparkle-2">✦</span>
+                <span class="loader-sparkle sparkle-3">✦</span>
+                <span class="loader-sparkle sparkle-4">✦</span>
+                
+            </div>
+            
+            <!-- Status Text -->
+            <div class="loader-status" id="loaderStatus">
+                <p class="loader-status-text" id="statusText">Loading</p>
+                <div class="loader-dots">
+                    <span class="status-dot">.</span>
+                    <span class="status-dot">.</span>
+                    <span class="status-dot">.</span>
+                </div>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="loader-progress-container">
+                <div class="loader-progress-bar">
+                    <div class="loader-progress-fill" id="progressFill"></div>
+                </div>
+                <span class="loader-percentage" id="progressPercentage">0%</span>
+            </div>
+            
+            <!-- Success State (Hidden) -->
+            <div class="loader-success" id="loaderSuccess" style="display: none;">
+                <div class="success-checkmark">
+                    <svg viewBox="0 0 52 52">
+                        <circle class="check-circle" cx="26" cy="26" r="25" fill="none"/>
+                        <path class="check-mark" fill="none" d="M14 27 L22 35 L38 18"/>
+                    </svg>
+                </div>
+                <p class="success-text">Successfully Loaded!</p>
+                <p class="success-sub">Welcome to UNIYO</p>
+            </div>
+            
+        </div>
+        
+    </main>
+    
+    <script src="loader.js"></script>
+</body>
+</html>

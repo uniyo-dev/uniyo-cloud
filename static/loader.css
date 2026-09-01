@@ -1,0 +1,465 @@
+/* ============================================
+   UNIYO LOADER — Professional Styling
+   With Letters N, I, Y, O on Rings
+   ============================================ */
+
+:root {
+    --loader-purple: #6D28D9;
+    --loader-purple-light: #7C3AED;
+    --loader-purple-dark: #5B21B6;
+    --loader-gold: #F59E0B;
+    --loader-gold-light: #FCD34D;
+    --loader-teal: #14B8A6;
+    --loader-teal-light: #2DD4BF;
+    --loader-white: #FFFFFF;
+    
+    --loader-size: 280px;
+    --loader-center-size: 80px;
+    --loader-ring-outer: 250px;
+    --loader-ring-middle: 200px;
+    --loader-ring-inner: 150px;
+    
+    --loader-font: 'Segoe UI', 'Inter', Arial, sans-serif;
+    --loader-shadow: 0 20px 60px rgba(109, 40, 217, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--loader-font);
+    background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 50%, #E0E7FF 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.uniyo-loader-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uniyo-loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 3rem;
+    background: #FFFFFF;
+    border-radius: 2rem;
+    box-shadow: var(--loader-shadow);
+    animation: loaderAppear 0.6s ease-out;
+}
+
+@keyframes loaderAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ============================================
+   LOADER STAGE
+   ============================================ */
+.loader-stage {
+    position: relative;
+    width: var(--loader-size);
+    height: var(--loader-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Rotating Rings */
+.loader-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    animation: ringRotate 3s linear infinite;
+}
+
+.ring-outer {
+    width: var(--loader-ring-outer);
+    height: var(--loader-ring-outer);
+    border-top-color: var(--loader-purple);
+    border-right-color: var(--loader-purple-light);
+    animation-duration: 4s;
+}
+
+.ring-middle {
+    width: var(--loader-ring-middle);
+    height: var(--loader-ring-middle);
+    border-bottom-color: var(--loader-gold);
+    border-left-color: var(--loader-gold-light);
+    animation-duration: 5s;
+    animation-direction: reverse;
+}
+
+.ring-inner {
+    width: var(--loader-ring-inner);
+    height: var(--loader-ring-inner);
+    border-top-color: var(--loader-teal);
+    border-right-color: var(--loader-teal-light);
+    animation-duration: 3.5s;
+}
+
+@keyframes ringRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   LETTERS ON RINGS
+   ============================================ */
+.ring-letter {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-shadow: 0 0 15px currentColor;
+    animation: letterGlow 2s ease-in-out infinite;
+    z-index: 15;
+}
+
+/* Letter N on Outer Ring */
+.ring-outer .letter-n {
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--loader-purple);
+    animation-delay: 0s;
+}
+
+/* Letter I on Middle Ring */
+.ring-middle .letter-i {
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--loader-gold);
+    animation-delay: 0.5s;
+}
+
+/* Letter Y on Inner Ring */
+.ring-inner .letter-y {
+    top: 50%;
+    right: -14px;
+    transform: translateY(-50%);
+    color: var(--loader-teal);
+    animation-delay: 1s;
+}
+
+@keyframes letterGlow {
+    0%, 100% { opacity: 0.5; text-shadow: 0 0 10px currentColor; }
+    50% { opacity: 1; text-shadow: 0 0 25px currentColor, 0 0 40px currentColor; }
+}
+
+/* Ring Dots */
+.ring-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: dotGlow 2s ease-in-out infinite;
+}
+
+.ring-outer .dot-1 {
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--loader-purple);
+    box-shadow: 0 0 15px var(--loader-purple);
+}
+
+.ring-middle .dot-2 {
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--loader-gold);
+    box-shadow: 0 0 15px var(--loader-gold);
+}
+
+.ring-inner .dot-3 {
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+    background: var(--loader-teal);
+    box-shadow: 0 0 15px var(--loader-teal);
+}
+
+@keyframes dotGlow {
+    0%, 100% { opacity: 0.5; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* ============================================
+   LETTER O — FREE ORBIT
+   ============================================ */
+.loader-letter-o {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    animation: letterOOrbit 6s linear infinite;
+    pointer-events: none;
+    z-index: 8;
+}
+
+@keyframes letterOOrbit {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.letter-o-text {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--loader-gold-light);
+    text-shadow: 0 0 20px var(--loader-gold);
+    animation: letterOGlow 2s ease-in-out infinite;
+}
+
+@keyframes letterOGlow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; text-shadow: 0 0 30px var(--loader-gold), 0 0 50px var(--loader-gold-light); }
+}
+
+/* Center Emblem */
+.loader-center {
+    position: relative;
+    z-index: 10;
+    width: var(--loader-center-size);
+    height: var(--loader-center-size);
+    animation: centerPulse 2s ease-in-out infinite;
+}
+
+@keyframes centerPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.loader-svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 5px 20px rgba(109, 40, 217, 0.5));
+}
+
+/* Orbiting Sparkles */
+.loader-sparkle {
+    position: absolute;
+    color: var(--loader-gold-light);
+    text-shadow: 0 0 15px rgba(245, 158, 11, 0.6);
+    animation: sparkleOrbit 3s linear infinite;
+    pointer-events: none;
+    z-index: 6;
+}
+
+.sparkle-1 { top: 15%; left: 15%; font-size: 0.7rem; animation-delay: 0s; }
+.sparkle-2 { top: 15%; right: 15%; font-size: 0.6rem; animation-delay: 0.75s; }
+.sparkle-3 { bottom: 15%; left: 15%; font-size: 0.6rem; animation-delay: 1.5s; }
+.sparkle-4 { bottom: 15%; right: 15%; font-size: 0.7rem; animation-delay: 2.25s; }
+
+@keyframes sparkleOrbit {
+    0%, 100% { opacity: 0.3; transform: scale(0.7); }
+    50% { opacity: 1; transform: scale(1.3); }
+}
+
+/* Status Text */
+.loader-status {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.loader-status-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--loader-purple);
+    letter-spacing: 0.1rem;
+}
+
+.loader-dots {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.status-dot {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--loader-purple);
+    animation: dotBounce 1.2s ease-in-out infinite;
+}
+
+.status-dot:nth-child(1) { animation-delay: 0s; }
+.status-dot:nth-child(2) { animation-delay: 0.2s; }
+.status-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes dotBounce {
+    0%, 100% { transform: translateY(0); opacity: 0.4; }
+    50% { transform: translateY(-10px); opacity: 1; }
+}
+
+/* Progress Bar */
+.loader-progress-container {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+    max-width: 250px;
+}
+
+.loader-progress-bar {
+    flex: 1;
+    height: 4px;
+    background: #E0E0E0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.loader-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--loader-purple), var(--loader-gold), var(--loader-teal));
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.loader-percentage {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--loader-purple);
+    min-width: 35px;
+    text-align: right;
+}
+
+/* Success State */
+.loader-success {
+    text-align: center;
+    animation: successAppear 0.5s ease-out;
+}
+
+@keyframes successAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.success-checkmark {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 0.5rem;
+}
+
+.check-circle {
+    stroke: #10B981;
+    stroke-width: 2;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    animation: checkCircle 0.6s ease-out forwards;
+}
+
+.check-mark {
+    stroke: #10B981;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: checkMark 0.3s ease-out 0.6s forwards;
+}
+
+@keyframes checkCircle {
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes checkMark {
+    to { stroke-dashoffset: 0; }
+}
+
+.success-text {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #10B981;
+}
+
+.success-sub {
+    font-size: 0.85rem;
+    color: #616161;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    :root {
+        --loader-size: 220px;
+        --loader-center-size: 65px;
+        --loader-ring-outer: 200px;
+        --loader-ring-middle: 160px;
+        --loader-ring-inner: 120px;
+    }
+    
+    .uniyo-loader-container {
+        padding: 2rem;
+        border-radius: 1.5rem;
+    }
+    
+    .ring-letter {
+        font-size: 1rem;
+    }
+    
+    .letter-o-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --loader-size: 170px;
+        --loader-center-size: 50px;
+        --loader-ring-outer: 150px;
+        --loader-ring-middle: 120px;
+        --loader-ring-inner: 90px;
+    }
+    
+    .uniyo-loader-container {
+        padding: 1.5rem;
+        border-radius: 1rem;
+        gap: 1rem;
+    }
+    
+    .ring-letter {
+        font-size: 0.8rem;
+    }
+    
+    .letter-o-text {
+        font-size: 1rem;
+        top: -12px;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,209 @@
+/* ============================================
+   UNIYO LOGO — Complete Professional Styling
+   ============================================ */
+
+:root {
+    /* Brand Colors */
+    --uniyo-purple: #6D28D9;
+    --uniyo-purple-light: #7C3AED;
+    --uniyo-purple-dark: #5B21B6;
+    --uniyo-gold: #F59E0B;
+    --uniyo-gold-light: #FCD34D;
+    --uniyo-teal: #14B8A6;
+    --uniyo-teal-light: #2DD4BF;
+    --uniyo-white: #FFFFFF;
+    --uniyo-off-white: #FAFAFA;
+    --uniyo-dark-bg: #0F0A1E;
+    --uniyo-dark-surface: #1A1033;
+    
+    /* Typography */
+    --uniyo-font: 'Segoe UI', 'Inter', Arial, Helvetica, sans-serif;
+    
+    /* Sizes */
+    --uniyo-logo-icon-size: 120px;
+    --uniyo-title-size: 2.5rem;
+    --uniyo-tagline-size: 0.7rem;
+    
+    /* Transitions */
+    --uniyo-transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Effects */
+    --uniyo-glow: 0 0 30px rgba(109, 40, 217, 0.4);
+    --uniyo-shadow: 0 10px 40px rgba(109, 40, 217, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--uniyo-font);
+    background: var(--uniyo-off-white);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background var(--uniyo-transition);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: var(--uniyo-dark-bg);
+}
+
+.uniyo-logo-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.uniyo-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 3rem;
+    background: var(--uniyo-white);
+    border-radius: 1.5rem;
+    box-shadow: var(--uniyo-shadow);
+    animation: logoEntrance 0.8s ease-out;
+    cursor: pointer;
+    transition: all var(--uniyo-transition);
+}
+
+body.dark-mode .uniyo-logo-container {
+    background: var(--uniyo-dark-surface);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes logoEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* SVG Icon */
+.uniyo-logo-icon {
+    width: var(--uniyo-logo-icon-size);
+    height: var(--uniyo-logo-icon-size);
+    transition: transform var(--uniyo-transition);
+}
+
+.uniyo-svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 5px 15px rgba(109, 40, 217, 0.4));
+}
+
+/* Hover Effects */
+.uniyo-logo-container:hover .uniyo-logo-icon {
+    transform: scale(1.05) rotate(-3deg);
+}
+
+.uniyo-logo-container:hover .uniyo-svg {
+    filter: drop-shadow(0 8px 25px rgba(109, 40, 217, 0.6));
+}
+
+/* Wordmark */
+.uniyo-wordmark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.uniyo-title {
+    font-size: var(--uniyo-title-size);
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.uniyo-letter {
+    display: inline-block;
+    color: var(--uniyo-purple);
+    transition: all var(--uniyo-transition);
+    cursor: default;
+}
+
+body.dark-mode .uniyo-letter {
+    color: var(--uniyo-white);
+}
+
+.uniyo-letter:hover {
+    color: var(--uniyo-gold);
+    transform: translateY(-5px);
+}
+
+.uniyo-tagline {
+    font-size: var(--uniyo-tagline-size);
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: #9E9E9E;
+    font-weight: 600;
+}
+
+body.dark-mode .uniyo-tagline {
+    color: #BDBDBD;
+}
+
+/* Mode Toggle */
+.uniyo-mode-toggle {
+    padding: 0.5rem 1rem;
+    background: var(--uniyo-purple);
+    color: var(--uniyo-white);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: var(--uniyo-font);
+    font-size: 1rem;
+    transition: all var(--uniyo-transition);
+}
+
+.uniyo-mode-toggle:hover {
+    background: var(--uniyo-purple-dark);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    :root {
+        --uniyo-logo-icon-size: 80px;
+        --uniyo-title-size: 1.8rem;
+        --uniyo-tagline-size: 0.6rem;
+    }
+    
+    .uniyo-logo-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --uniyo-logo-icon-size: 60px;
+        --uniyo-title-size: 1.4rem;
+    }
+    
+    .uniyo-logo-container {
+        padding: 1rem 1.5rem;
+        border-radius: 1rem;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
