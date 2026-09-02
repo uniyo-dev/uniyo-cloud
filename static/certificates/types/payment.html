@@ -1,31 +1,45 @@
 <div class="payment-cert-full">
-    <div style="text-align:center;">
-        <img src="/static/Authenticity/default_stamp.png" style="height:40px;">
-        <h3>💰 PAYMENT RECEIPT</h3>
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+    <div class="watermark">UNIYO</div>
+    
+    <div style="text-align:center;position:relative;z-index:1;">
+        <img src="/static/Authenticity/default_stamp.png" style="height:35px;object-fit:contain;">
+        <h3 style="color:#14B8A6;font-size:13px;margin:5px 0;">💰 PAYMENT RECEIPT</h3>
     </div>
     
-    <div style="text-align:center; margin:15px 0;">
-        <p>This confirms payment from</p>
-        <div style="font-size:20px; font-weight:700;" id="paymentStudentName">Student Name</div>
+    <div style="text-align:center;margin:10px 0;position:relative;z-index:1;">
+        <p style="font-size:9px;">This confirms payment from</p>
+        <div style="font-size:16px;font-weight:700;color:#1e1b4b;" id="paymentStudentName">Student Name</div>
+        <p style="font-size:9px;color:#64748b;" id="paymentStudentDetails">University • Stream</p>
     </div>
     
-    <div style="display:flex; justify-content:space-between; align-items:center; margin:15px 0;">
-        <img src="/static/Authenticity/paid.png" style="width:70px; height:70px; border-radius:50%;">
-        <img src="/static/Authenticity/super_admin_stamp.png" style="width:60px; height:60px; border-radius:50%;">
+    <div class="stamps-row">
+        <img src="/static/Authenticity/paid.png" alt="Paid Stamp">
+        <img src="/static/Authenticity/super_admin_stamp.png" alt="Super Admin Stamp">
     </div>
     
-    <div style="display:flex; justify-content:space-around;">
+    <div style="display:flex;justify-content:space-around;margin:8px 0;position:relative;z-index:1;">
         <div style="text-align:center;">
-            <img src="/static/Authenticity/super_admin_signature.png" style="height:25px;">
-            <p>Chalachew Agegn</p>
+            <img src="/static/Authenticity/super_admin_signature.png" style="height:22px;">
+            <p style="font-size:7px;font-weight:600;">Chalachew Agegn</p>
         </div>
         <div style="text-align:center;">
-            <img src="/static/Authenticity/signature_(content_manager).png" style="height:25px;">
-            <p>Banch Destaw</p>
+            <img src="/static/Authenticity/signature_(content_manager).png" style="height:22px;">
+            <p style="font-size:7px;font-weight:600;">Banch Destaw</p>
         </div>
     </div>
     
-    <div style="text-align:center; margin-top:10px;">
-        <div id="paymentQR" style="width:50px;height:50px;background:#0B0F19;margin:0 auto;"></div>
+    <div style="max-width:250px;margin:8px auto;padding:5px;background:rgba(20,184,166,0.05);border-radius:6px;font-size:7px;position:relative;z-index:1;">
+        <div style="display:flex;justify-content:space-between;"><span>Receipt #:</span><strong id="paymentNumber">-</strong></div>
+        <div style="display:flex;justify-content:space-between;"><span>Date:</span><strong id="paymentDate">-</strong></div>
     </div>
+    
+    <div style="text-align:center;margin-top:8px;position:relative;z-index:1;">
+        <div id="paymentQR" style="width:45px;height:45px;background:#0B0F19;margin:0 auto;border-radius:3px;"></div>
+    </div>
+    
+    <div class="microtext">UNIYO AUTHENTIC RECEIPT • VERIFY ONLINE</div>
 </div>

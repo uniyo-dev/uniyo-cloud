@@ -553,7 +553,7 @@ def view_certificate(certificate_id):
     verify_url = f"{request.host_url}verify/{certificate.get('verification_token', '')}"
     qr_data_uri = generate_qr_data_uri(verify_url)
     
-    return render_template('admin_cert_view.html', certificate=certificate, qr_data_uri=qr_data_uri)
+    return render_template('student_certificate.html', certificate=certificate, qr_data_uri=qr_data_uri)
 
 
 @admin_bp.route('/api/certificates/<int:certificate_id>', methods=['GET'])
@@ -570,7 +570,14 @@ def api_certificate(certificate_id):
             certificate['full_name'] = student.get('full_name', '')
             certificate['university'] = student.get('university', '')
             certificate['stream'] = student.get('stream', '')
-        return {"success": True, "certificate": certificate}
+        
+        from flask import request
+        from core.helpers import generate_qr_data_uri
+        verify_url = f"{request.host_url}verify/{certificate.get('verification_token', '')}"
+        qr_data_uri = generate_qr_data_uri(verify_url)
+        
+        html = render_template('student_certificate.html', certificate=certificate, qr_data_uri=qr_data_uri)
+        return html
     return {"success": False, "error": "Certificate not found"}
 
 
