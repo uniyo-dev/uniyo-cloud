@@ -57,7 +57,10 @@ def validate_student_session():
         session.clear()
         return False, "Session terminated"
     
-    last_activity = datetime.fromisoformat(active_session['last_activity'])
+    try:
+        last_activity = datetime.fromisoformat(active_session['last_activity'])
+    except:
+        last_activity = datetime.now()
     current_time = datetime.now()
     
     if (current_time - last_activity) > timedelta(hours=SESSION_TIMEOUT_HOURS):
