@@ -1,0 +1,10 @@
+/* Completion Certificate Styles */
+.complete-cert-full {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 18mm 22mm;
+    background: linear-gradient(135deg, #fffdf9, #f5f3ff, #fffdf9);
+    border: 5px double #6D28D9;
+    position: relative;
+    box-shadow: 0 0 50px rgba(109,40,217,0.5);
+}

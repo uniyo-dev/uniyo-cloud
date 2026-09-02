@@ -1,0 +1,9 @@
+/* Payment Receipt Certificate - Small Size */
+.payment-cert-full {
+    width: 148mm;
+    min-height: 105mm;
+    padding: 10mm 12mm;
+    background: linear-gradient(135deg, #fffdf9, #f0fdf4, #fffdf9);
+    border: 4px double #14B8A6;
+    position: relative;
+}

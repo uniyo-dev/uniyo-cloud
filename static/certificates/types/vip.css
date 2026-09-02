@@ -1,0 +1,27 @@
+/* VIP Certificate Styles */
+.vip-cert-full {
+    width: 297mm;
+    min-height: 210mm;
+    padding: 15mm 20mm;
+    background: linear-gradient(135deg, #fffdf9, #fffbeb, #fffdf9);
+    border: 5px double #F59E0B;
+    position: relative;
+    box-shadow: 0 0 50px rgba(245,158,11,0.5);
+}
+.vip-cert-stamps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.vip-primary-stamp img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+.vip-secondary-stamp img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 50%;
+}
