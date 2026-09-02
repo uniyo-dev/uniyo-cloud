@@ -6,6 +6,67 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_home.css') }}">
+<style>
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-top: 12px;
+        border-radius: 8px;
+    }
+    .certificates-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 700px;
+    }
+    .certificates-table th {
+        background: #1A2332;
+        padding: 10px 8px;
+        text-align: left;
+        color: #94A3B8;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        white-space: nowrap;
+    }
+    .certificates-table td {
+        padding: 10px 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        color: #E2E8F0;
+        font-size: 12px;
+        vertical-align: middle;
+    }
+    .cert-number {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        white-space: nowrap;
+        color: #6D28D9;
+    }
+    .cert-title {
+        font-weight: 600;
+        color: #F8FAFC;
+        white-space: nowrap;
+    }
+    .btn-sm {
+        padding: 6px 10px;
+        border: none;
+        border-radius: 4px;
+        font-size: 11px;
+        cursor: pointer;
+        font-weight: 600;
+        white-space: nowrap;
+        display: inline-block;
+        text-decoration: none;
+    }
+    .btn-success { background: #14B8A6; color: white; }
+    .status-badge {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: 6px;
+        font-size: 10px;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+</style>
 
 
 
@@ -80,7 +141,7 @@
         <h3>Issued Certificates</h3>
         
         {% if certificates %}
-        <table class="admin-table">
+        <table class="certificates-table">
             <thead>
                 <tr>
                     <th>Number</th>
@@ -94,8 +155,8 @@
             <tbody>
                 {% for cert in certificates %}
                 <tr>
-                    <td><code>{{ cert.certificate_number }}</code></td>
-                    <td>{{ cert.full_name }}</td>
+                    <td><span class="cert-number">{{ cert.certificate_number }}</span></td>
+                    <td><span class="cert-title">{{ cert.full_name }}</span></td>
                     <td>{{ cert.certificate_type|upper }}</td>
                     <td>{{ cert.title }}</td>
                     <td>{{ cert.issue_date|format_date }}</td>
