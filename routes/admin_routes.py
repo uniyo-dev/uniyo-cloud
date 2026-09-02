@@ -554,3 +554,21 @@ def view_certificate(certificate_id):
     qr_data_uri = generate_qr_data_uri(verify_url)
     
     return render_template('admin_cert_view.html', certificate=certificate, qr_data_uri=qr_data_uri)
+
+
+@admin_bp.route('/api/certificates/<int:certificate_id>', methods=['GET'])
+@admin_required
+def api_certificate(certificate_id):
+    """API endpoint for certificate popup"""
+    db = get_db()
+    certificate = db.query_one("SELECT * FROM certificates WHERE id = ?", (certificate_id,))
+    if certificate:
+        certificate = dict(certificate)
+        student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (certificate.get('student_id'),))
+        if student:
+            student = dict(student)
+            certificate['full_name'] = student.get('full_name', '')
+            certificate['university'] = student.get('university', '')
+            certificate['stream'] = student.get('stream', '')
+        return {"success": True, "certificate": certificate}
+    return {"success": False, "error": "Certificate not found"}
