@@ -251,6 +251,7 @@ function printCertificate() {
         <h3>Issued Certificates</h3>
         
         {% if certificates %}
+        <div class="table-wrapper" style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
         <table class="certificates-table">
             <thead>
                 <tr>
@@ -279,6 +280,7 @@ function printCertificate() {
                 {% endfor %}
             </tbody>
         </table>
+        </div>
         {% else %}
         <p>No certificates issued yet.</p>
         {% endif %}
