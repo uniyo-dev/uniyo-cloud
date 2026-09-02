@@ -53,6 +53,28 @@ function renderCertificateByType(cert, content) {
     var certNumber = cert.certificate_number || '';
     var issueDate = cert.issue_date || '';
     
+    // Map "Other" types with their unique titles and colors
+    var otherTypeInfo = {
+        'excellence': {title: '🌟 ACADEMIC EXCELLENCE AWARD 🌟', color: '#14B8A6', icon: '🌟'},
+        'participation': {title: '🎯 PARTICIPATION CERTIFICATE', color: '#38BDF8', icon: '🎯'},
+        'appreciation': {title: '💎 APPRECIATION CERTIFICATE', color: '#EC4899', icon: '💎'},
+        'congratulations': {title: '🎉 CONGRATULATIONS CERTIFICATE', color: '#22C55E', icon: '🎉'},
+        'special_congratulations': {title: '🎉 SPECIAL CONGRATULATIONS', color: '#F59E0B', icon: '🎉'},
+        'staff': {title: '👨‍💼 STAFF APPRECIATION CERTIFICATE', color: '#F97316', icon: '👨‍💼'},
+        'content_creator': {title: '✍️ CONTENT CREATOR CERTIFICATE', color: '#F59E0B', icon: '✍️'},
+        'marketing_manager': {title: '📣 MARKETING MANAGER CERTIFICATE', color: '#EC4899', icon: '📣'},
+        'advertiser': {title: '📢 ADVERTISER CERTIFICATE', color: '#38BDF8', icon: '📢'}
+    };
+    
+    if (otherTypeInfo[certType]) {
+        var info = otherTypeInfo[certType];
+        title = info.title;
+        // Store for use in render
+        cert._icon = info.icon;
+        cert._color = info.color;
+        certType = 'other';
+    }
+    
     var html = '';
     
     // Determine primary stamp
