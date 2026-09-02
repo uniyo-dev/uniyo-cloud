@@ -1,9 +1,139 @@
 {% extends "base.html" %}
 
-{% block title %}Dashboard - UNIYO{% endblock %}
+{% block title %}Dashboard - UNIYO
+
+<script>
+// Swipe to dismiss notifications
+document.addEventListener('DOMContentLoaded', function() {
+    var items = document.querySelectorAll('.notification-item');
+    
+    items.forEach(function(item) {
+        var startX = 0;
+        var isDragging = false;
+        
+        function handleStart(x) {
+            startX = x;
+            isDragging = true;
+            item.style.transition = 'none';
+        }
+        
+        function handleMove(x) {
+            if (!isDragging) return;
+            var diff = x - startX;
+            item.style.transform = 'translateX(' + diff + 'px)';
+            item.style.opacity = 1 - Math.min(Math.abs(diff) / 200, 0.8);
+        }
+        
+        function handleEnd(x) {
+            isDragging = false;
+            var diff = x - startX;
+            var notifId = item.dataset.notifId;
+            
+            if (Math.abs(diff) > 80) {
+                item.style.transition = 'all 0.3s ease';
+                item.style.transform = diff > 0 ? 'translateX(400px)' : 'translateX(-400px)';
+                item.style.opacity = '0';
+                
+                setTimeout(function() {
+                    item.remove();
+                    var panel = document.querySelector('.notifications-panel');
+                    if (panel && panel.querySelectorAll('.notification-item').length === 0) {
+                        panel.style.display = 'none';
+                    }
+                }, 300);
+                
+                fetch('/api/notifications/' + notifId + '/read', { method: 'POST' });
+            } else {
+                item.style.transition = 'all 0.3s ease';
+                item.style.transform = 'translateX(0)';
+                item.style.opacity = '1';
+            }
+        }
+        
+        // Touch events
+        item.addEventListener('touchstart', function(e) { handleStart(e.touches[0].clientX); });
+        item.addEventListener('touchmove', function(e) { handleMove(e.touches[0].clientX); });
+        item.addEventListener('touchend', function(e) { handleEnd(e.changedTouches[0].clientX); });
+        
+        // Mouse events
+        item.addEventListener('mousedown', function(e) { handleStart(e.clientX); });
+        item.addEventListener('mousemove', function(e) { handleMove(e.clientX); });
+        item.addEventListener('mouseup', function(e) { handleEnd(e.clientX); });
+        item.addEventListener('mouseleave', function(e) {
+            if (isDragging) handleEnd(e.clientX);
+        });
+    });
+});
+</script>
+{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/student_home.css') }}">
+
+
+<script>
+// Swipe to dismiss notifications
+document.addEventListener('DOMContentLoaded', function() {
+    var items = document.querySelectorAll('.notification-item');
+    
+    items.forEach(function(item) {
+        var startX = 0;
+        var isDragging = false;
+        
+        function handleStart(x) {
+            startX = x;
+            isDragging = true;
+            item.style.transition = 'none';
+        }
+        
+        function handleMove(x) {
+            if (!isDragging) return;
+            var diff = x - startX;
+            item.style.transform = 'translateX(' + diff + 'px)';
+            item.style.opacity = 1 - Math.min(Math.abs(diff) / 200, 0.8);
+        }
+        
+        function handleEnd(x) {
+            isDragging = false;
+            var diff = x - startX;
+            var notifId = item.dataset.notifId;
+            
+            if (Math.abs(diff) > 80) {
+                item.style.transition = 'all 0.3s ease';
+                item.style.transform = diff > 0 ? 'translateX(400px)' : 'translateX(-400px)';
+                item.style.opacity = '0';
+                
+                setTimeout(function() {
+                    item.remove();
+                    var panel = document.querySelector('.notifications-panel');
+                    if (panel && panel.querySelectorAll('.notification-item').length === 0) {
+                        panel.style.display = 'none';
+                    }
+                }, 300);
+                
+                fetch('/api/notifications/' + notifId + '/read', { method: 'POST' });
+            } else {
+                item.style.transition = 'all 0.3s ease';
+                item.style.transform = 'translateX(0)';
+                item.style.opacity = '1';
+            }
+        }
+        
+        // Touch events
+        item.addEventListener('touchstart', function(e) { handleStart(e.touches[0].clientX); });
+        item.addEventListener('touchmove', function(e) { handleMove(e.touches[0].clientX); });
+        item.addEventListener('touchend', function(e) { handleEnd(e.changedTouches[0].clientX); });
+        
+        // Mouse events
+        item.addEventListener('mousedown', function(e) { handleStart(e.clientX); });
+        item.addEventListener('mousemove', function(e) { handleMove(e.clientX); });
+        item.addEventListener('mouseup', function(e) { handleEnd(e.clientX); });
+        item.addEventListener('mouseleave', function(e) {
+            if (isDragging) handleEnd(e.clientX);
+        });
+    });
+});
+</script>
 {% endblock %}
 
 {% block content %}
@@ -85,9 +215,10 @@
     {% if notifications %}
     <div class="notifications-panel">
         {% for notification in notifications %}
-        <div class="notification-item notification-{{ notification.type }}">
+        <div class="notification-item notification-{{ notification.type }}" data-notif-id="{{ notification.id }}">
             <span>🔔</span>
-            <span>{{ notification.message }}</span>
+            <span style="flex:1;">{{ notification.message }}</span>
+            <small style="color:#64748B; font-size:9px;">← swipe →</small>
         </div>
         {% endfor %}
     </div>
@@ -227,8 +358,138 @@
     {% endif %}
     
 </div>
+
+
+<script>
+// Swipe to dismiss notifications
+document.addEventListener('DOMContentLoaded', function() {
+    var items = document.querySelectorAll('.notification-item');
+    
+    items.forEach(function(item) {
+        var startX = 0;
+        var isDragging = false;
+        
+        function handleStart(x) {
+            startX = x;
+            isDragging = true;
+            item.style.transition = 'none';
+        }
+        
+        function handleMove(x) {
+            if (!isDragging) return;
+            var diff = x - startX;
+            item.style.transform = 'translateX(' + diff + 'px)';
+            item.style.opacity = 1 - Math.min(Math.abs(diff) / 200, 0.8);
+        }
+        
+        function handleEnd(x) {
+            isDragging = false;
+            var diff = x - startX;
+            var notifId = item.dataset.notifId;
+            
+            if (Math.abs(diff) > 80) {
+                item.style.transition = 'all 0.3s ease';
+                item.style.transform = diff > 0 ? 'translateX(400px)' : 'translateX(-400px)';
+                item.style.opacity = '0';
+                
+                setTimeout(function() {
+                    item.remove();
+                    var panel = document.querySelector('.notifications-panel');
+                    if (panel && panel.querySelectorAll('.notification-item').length === 0) {
+                        panel.style.display = 'none';
+                    }
+                }, 300);
+                
+                fetch('/api/notifications/' + notifId + '/read', { method: 'POST' });
+            } else {
+                item.style.transition = 'all 0.3s ease';
+                item.style.transform = 'translateX(0)';
+                item.style.opacity = '1';
+            }
+        }
+        
+        // Touch events
+        item.addEventListener('touchstart', function(e) { handleStart(e.touches[0].clientX); });
+        item.addEventListener('touchmove', function(e) { handleMove(e.touches[0].clientX); });
+        item.addEventListener('touchend', function(e) { handleEnd(e.changedTouches[0].clientX); });
+        
+        // Mouse events
+        item.addEventListener('mousedown', function(e) { handleStart(e.clientX); });
+        item.addEventListener('mousemove', function(e) { handleMove(e.clientX); });
+        item.addEventListener('mouseup', function(e) { handleEnd(e.clientX); });
+        item.addEventListener('mouseleave', function(e) {
+            if (isDragging) handleEnd(e.clientX);
+        });
+    });
+});
+</script>
 {% endblock %}
 
 {% block extra_js %}
 <script src="{{ url_for('static', filename='js/student_home.js') }}"></script>
+
+
+<script>
+// Swipe to dismiss notifications
+document.addEventListener('DOMContentLoaded', function() {
+    var items = document.querySelectorAll('.notification-item');
+    
+    items.forEach(function(item) {
+        var startX = 0;
+        var isDragging = false;
+        
+        function handleStart(x) {
+            startX = x;
+            isDragging = true;
+            item.style.transition = 'none';
+        }
+        
+        function handleMove(x) {
+            if (!isDragging) return;
+            var diff = x - startX;
+            item.style.transform = 'translateX(' + diff + 'px)';
+            item.style.opacity = 1 - Math.min(Math.abs(diff) / 200, 0.8);
+        }
+        
+        function handleEnd(x) {
+            isDragging = false;
+            var diff = x - startX;
+            var notifId = item.dataset.notifId;
+            
+            if (Math.abs(diff) > 80) {
+                item.style.transition = 'all 0.3s ease';
+                item.style.transform = diff > 0 ? 'translateX(400px)' : 'translateX(-400px)';
+                item.style.opacity = '0';
+                
+                setTimeout(function() {
+                    item.remove();
+                    var panel = document.querySelector('.notifications-panel');
+                    if (panel && panel.querySelectorAll('.notification-item').length === 0) {
+                        panel.style.display = 'none';
+                    }
+                }, 300);
+                
+                fetch('/api/notifications/' + notifId + '/read', { method: 'POST' });
+            } else {
+                item.style.transition = 'all 0.3s ease';
+                item.style.transform = 'translateX(0)';
+                item.style.opacity = '1';
+            }
+        }
+        
+        // Touch events
+        item.addEventListener('touchstart', function(e) { handleStart(e.touches[0].clientX); });
+        item.addEventListener('touchmove', function(e) { handleMove(e.touches[0].clientX); });
+        item.addEventListener('touchend', function(e) { handleEnd(e.changedTouches[0].clientX); });
+        
+        // Mouse events
+        item.addEventListener('mousedown', function(e) { handleStart(e.clientX); });
+        item.addEventListener('mousemove', function(e) { handleMove(e.clientX); });
+        item.addEventListener('mouseup', function(e) { handleEnd(e.clientX); });
+        item.addEventListener('mouseleave', function(e) {
+            if (isDragging) handleEnd(e.clientX);
+        });
+    });
+});
+</script>
 {% endblock %}
