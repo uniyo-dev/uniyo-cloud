@@ -160,6 +160,28 @@ function renderCertificateByType(cert, content) {
     
     // Generate barcode from certificate number
     setTimeout(function() {
+        if (typeof addBarcode === 'function' && certNumber) {
+            addBarcode('vipBarcode', certNumber);
+            addBarcode('completeBarcode', certNumber);
+            addBarcode('paymentBarcode', certNumber);
+            addBarcode('promoBarcode', certNumber);
+            addBarcode('otherBarcode', certNumber);
+        }
+        
+        // Set QR code if available
+        if (cert.qr_data_uri) {
+            var qrIds = ['vipQR', 'completeQR', 'paymentQR', 'promoQR', 'otherQR'];
+            qrIds.forEach(function(qrId) {
+                var qrEl = document.getElementById(qrId);
+                if (qrEl) {
+                    qrEl.innerHTML = '<img src="' + cert.qr_data_uri + '" style="width:60px;height:60px;border-radius:3px;">';
+                }
+            });
+        }
+    }, 200);
+    
+    // Generate barcode from certificate number
+    setTimeout(function() {
         addBarcode('vipBarcode', certNumber);
         addBarcode('completeBarcode', certNumber);
         addBarcode('paymentBarcode', certNumber);
