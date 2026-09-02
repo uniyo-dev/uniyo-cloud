@@ -22,7 +22,7 @@ def view_certificate(certificate_id):
     db = get_db()
     try:
         student_id = session.get('student_id', 0)
-    certificate = db.query_one("SELECT * FROM certificates WHERE id = ? AND student_id = ?", (certificate_id, student_id))
+        certificate = db.query_one("SELECT * FROM certificates WHERE id = ? AND student_id = ?", (certificate_id, student_id))
     except Exception as e:
         flash(f"Certificate error: {e}", "danger")
         return redirect(url_for('certificate.my_certificates'))
