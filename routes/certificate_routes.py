@@ -21,7 +21,8 @@ def my_certificates():
 def view_certificate(certificate_id):
     db = get_db()
     try:
-        certificate = db.query_one("SELECT * FROM certificates WHERE id = ? AND student_id = ?", (certificate_id, session['student_id']))
+        student_id = session.get('student_id', 0)
+    certificate = db.query_one("SELECT * FROM certificates WHERE id = ? AND student_id = ?", (certificate_id, student_id))
     except Exception as e:
         flash(f"Certificate error: {e}", "danger")
         return redirect(url_for('certificate.my_certificates'))
@@ -68,7 +69,8 @@ def verify_certificate(token):
 def api_student_certificate(certificate_id):
     """Student API endpoint for certificate popup"""
     db = get_db()
-    certificate = db.query_one("SELECT * FROM certificates WHERE id = ? AND student_id = ?", (certificate_id, session['student_id']))
+    student_id = session.get('student_id', 0)
+    certificate = db.query_one("SELECT * FROM certificates WHERE id = ? AND student_id = ?", (certificate_id, student_id))
     if certificate:
         certificate = dict(certificate)
         student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (certificate.get('student_id'),))
