@@ -12,7 +12,7 @@
     <header class="admin-header">
         <div>
             <h1>Admin Dashboard</h1>
-            <p>Welcome, {{ admin.full_name }} ({{ admin_roles[admin.role].label }})</p>
+            <p>Welcome, {{ admin.full_name }} ({{ admin_roles[admin['role']]['label'] if admin['role'] in admin_roles else 'Admin' }})</p>
         </div>
         <div style="display: flex; gap: 8px; align-items: center;">
             <button onclick="toggleAdminTheme()" class="btn btn-outline" id="adminThemeBtn" title="Toggle Theme">🌙 Dark</button>
