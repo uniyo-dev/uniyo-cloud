@@ -1,103 +1,75 @@
 /* ============================================
-   UNIYO COMPLETION CERTIFICATE - FULL PROFESSIONAL
+   UNIYO COMPLETION CERTIFICATE - PURPLE ROYAL
    ============================================ */
 
 .complete-cert-full {
     width: 210mm;
     min-height: 297mm;
-    padding: 15mm 18mm;
+    padding: 20mm 22mm;
     background: linear-gradient(135deg, #fffdf9 0%, #f5f3ff 30%, #fffdf9 50%, #f5f3ff 70%, #fffdf9 100%);
-    border: 6px double #6D28D9;
-    outline: 3px solid #4C1D95;
-    outline-offset: -8px;
+    border: 8px solid #6D28D9;
     position: relative;
-    box-shadow: 0 0 60px rgba(109,40,217,0.5), inset 0 0 100px rgba(109,40,217,0.08);
     box-sizing: border-box;
     font-family: 'Poppins', 'Georgia', serif;
     color: #0b0f19;
+    box-shadow: 
+        0 0 0 3px #4C1D95,
+        0 0 0 6px #6D28D9,
+        0 0 60px rgba(109,40,217,0.5),
+        inset 0 0 100px rgba(109,40,217,0.08);
+}
+
+.complete-cert-full::before {
+    content: '';
+    position: absolute;
+    top: 7mm;
+    left: 7mm;
+    right: 7mm;
+    bottom: 7mm;
+    border: 2px solid #A78BFA;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.complete-cert-full::after {
+    content: '';
+    position: absolute;
+    top: 3.5mm;
+    left: 3.5mm;
+    right: 3.5mm;
+    bottom: 3.5mm;
+    border: 1px solid #4C1D95;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .complete-cert-full .corner {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+.complete-cert-full .corner::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
     border-color: #6D28D9;
     border-style: solid;
     border-width: 0;
 }
-.complete-cert-full .corner.tl { top: 5mm; left: 5mm; border-top-width: 4px; border-left-width: 4px; border-radius: 4px 0 0 0; }
-.complete-cert-full .corner.tr { top: 5mm; right: 5mm; border-top-width: 4px; border-right-width: 4px; border-radius: 0 4px 0 0; }
-.complete-cert-full .corner.bl { bottom: 5mm; left: 5mm; border-bottom-width: 4px; border-left-width: 4px; border-radius: 0 0 0 4px; }
-.complete-cert-full .corner.br { bottom: 5mm; right: 5mm; border-bottom-width: 4px; border-right-width: 4px; border-radius: 0 0 4px 0; }
+.complete-cert-full .corner.tl::before { top: 2mm; left: 2mm; border-top-width: 5px; border-left-width: 5px; }
+.complete-cert-full .corner.tr::before { top: 2mm; right: 2mm; border-top-width: 5px; border-right-width: 5px; }
+.complete-cert-full .corner.bl::before { bottom: 2mm; left: 2mm; border-bottom-width: 5px; border-left-width: 5px; }
+.complete-cert-full .corner.br::before { bottom: 2mm; right: 2mm; border-bottom-width: 5px; border-right-width: 5px; }
 
-.complete-cert-full .watermark {
+.complete-cert-full .corner::after {
+    content: '◆';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-30deg);
-    font-size: 75pt;
-    font-weight: 800;
-    color: rgba(109, 40, 217, 0.05);
-    letter-spacing: 12px;
-    pointer-events: none;
-    z-index: 0;
+    font-size: 12px;
+    color: #6D28D9;
 }
-
-.complete-cert-full .holographic {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(135deg,
-        rgba(109,40,217,0.04) 0%,
-        rgba(20,184,166,0.03) 25%,
-        rgba(109,40,217,0.04) 50%,
-        rgba(236,72,153,0.03) 75%,
-        rgba(109,40,217,0.04) 100%);
-    pointer-events: none;
-    z-index: 0;
-}
-
-.complete-cert-full .microtext {
-    position: absolute;
-    bottom: 7mm;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 3.5pt;
-    letter-spacing: 2px;
-    color: rgba(109, 40, 217, 0.35);
-    font-family: 'JetBrains Mono', monospace;
-    white-space: nowrap;
-    z-index: 1;
-}
-
-.complete-cert-full .serial-security {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 7pt;
-    color: #4C1D95;
-    letter-spacing: 2px;
-    border: 1px dashed #6D28D9;
-    padding: 4px 8px;
-    background: rgba(109, 40, 217, 0.05);
-    display: inline-block;
-}
-
-.complete-cert-full .stamp-section {
-    text-align: center;
-    margin: 15px 0;
-    position: relative;
-    z-index: 1;
-}
-.complete-cert-full .stamp-section img {
-    width: 85px;
-    height: 85px;
-    object-fit: contain;
-    border-radius: 50%;
-    filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));
-}
-
-.complete-cert-full .signatures-row {
-    display: flex;
-    justify-content: space-around;
-    margin: 15px 0;
-    position: relative;
-    z-index: 1;
-}
+.complete-cert-full .corner.tl::after { top: 1mm; left: 1mm; }
+.complete-cert-full .corner.tr::after { top: 1mm; right: 1mm; }
+.complete-cert-full .corner.bl::after { bottom: 1mm; left: 1mm; }
+.complete-cert-full .corner.br::after { bottom: 1mm; right: 1mm; }

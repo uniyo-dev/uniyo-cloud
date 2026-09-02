@@ -1,73 +1,62 @@
 /* ============================================
-   UNIYO PAYMENT RECEIPT - PROFESSIONAL A6
+   UNIYO PAYMENT RECEIPT - TEAL COMPACT
    ============================================ */
 
 .payment-cert-full {
     width: 148mm;
     min-height: 105mm;
-    padding: 10mm 12mm;
+    padding: 12mm 14mm;
     background: linear-gradient(135deg, #fffdf9 0%, #f0fdf4 30%, #fffdf9 50%, #f0fdf4 70%, #fffdf9 100%);
-    border: 5px double #14B8A6;
-    outline: 2px solid #0D9488;
-    outline-offset: -5px;
+    border: 6px solid #14B8A6;
     position: relative;
-    box-shadow: 0 0 40px rgba(20,184,166,0.4);
     box-sizing: border-box;
     font-family: 'Poppins', 'Georgia', serif;
     color: #0b0f19;
+    box-shadow: 
+        0 0 0 2px #0D9488,
+        0 0 0 5px #14B8A6,
+        0 0 40px rgba(20,184,166,0.4);
 }
 
-.payment-cert-full .corner {
+.payment-cert-full::before {
+    content: '';
     position: absolute;
-    width: 30px;
-    height: 30px;
-    border-color: #14B8A6;
-    border-style: solid;
-    border-width: 0;
-}
-.payment-cert-full .corner.tl { top: 4mm; left: 4mm; border-top-width: 3px; border-left-width: 3px; }
-.payment-cert-full .corner.tr { top: 4mm; right: 4mm; border-top-width: 3px; border-right-width: 3px; }
-.payment-cert-full .corner.bl { bottom: 4mm; left: 4mm; border-bottom-width: 3px; border-left-width: 3px; }
-.payment-cert-full .corner.br { bottom: 4mm; right: 4mm; border-bottom-width: 3px; border-right-width: 3px; }
-
-.payment-cert-full .watermark {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-25deg);
-    font-size: 35pt;
-    font-weight: 800;
-    color: rgba(20, 184, 166, 0.05);
-    letter-spacing: 6px;
+    top: 4mm;
+    left: 4mm;
+    right: 4mm;
+    bottom: 4mm;
+    border: 1.5px solid #5EEAD4;
     pointer-events: none;
     z-index: 0;
 }
 
-.payment-cert-full .microtext {
+.payment-cert-full .corner {
     position: absolute;
-    bottom: 5mm;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2.5pt;
-    letter-spacing: 1.5px;
-    color: rgba(20, 184, 166, 0.3);
-    font-family: 'JetBrains Mono', monospace;
-    white-space: nowrap;
-    z-index: 1;
+    width: 35px;
+    height: 35px;
+    z-index: 2;
 }
+.payment-cert-full .corner::before {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-color: #14B8A6;
+    border-style: solid;
+    border-width: 0;
+}
+.payment-cert-full .corner.tl::before { top: 1.5mm; left: 1.5mm; border-top-width: 4px; border-left-width: 4px; }
+.payment-cert-full .corner.tr::before { top: 1.5mm; right: 1.5mm; border-top-width: 4px; border-right-width: 4px; }
+.payment-cert-full .corner.bl::before { bottom: 1.5mm; left: 1.5mm; border-bottom-width: 4px; border-left-width: 4px; }
+.payment-cert-full .corner.br::before { bottom: 1.5mm; right: 1.5mm; border-bottom-width: 4px; border-right-width: 4px; }
 
-.payment-cert-full .stamps-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0;
-    position: relative;
-    z-index: 1;
+.payment-cert-full .corner::after {
+    content: '◆';
+    position: absolute;
+    font-size: 9px;
+    color: #14B8A6;
 }
-.payment-cert-full .stamps-row img {
-    width: 55px;
-    height: 55px;
-    object-fit: contain;
-    border-radius: 50%;
-    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.15));
-}
+.payment-cert-full .corner.tl::after { top: 0.5mm; left: 0.5mm; }
+.payment-cert-full .corner.tr::after { top: 0.5mm; right: 0.5mm; }
+.payment-cert-full .corner.bl::after { bottom: 0.5mm; left: 0.5mm; }
+.payment-cert-full .corner.br::after { bottom: 0.5mm; right: 0.5mm; }

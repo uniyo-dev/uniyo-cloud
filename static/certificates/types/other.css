@@ -1,81 +1,75 @@
 /* ============================================
-   UNIYO OTHER CERTIFICATE - FULL PROFESSIONAL
+   UNIYO OTHER - BLUE CLASSIC
    ============================================ */
 
 .other-cert-full {
     width: 297mm;
     min-height: 210mm;
-    padding: 12mm 15mm;
+    padding: 18mm 20mm;
     background: linear-gradient(135deg, #fffdf9 0%, #eff6ff 30%, #fffdf9 50%, #eff6ff 70%, #fffdf9 100%);
-    border: 6px double #38BDF8;
-    outline: 3px solid #0284C7;
-    outline-offset: -8px;
+    border: 8px solid #38BDF8;
     position: relative;
-    box-shadow: 0 0 60px rgba(56,189,248,0.5), inset 0 0 100px rgba(56,189,248,0.08);
     box-sizing: border-box;
     font-family: 'Poppins', 'Georgia', serif;
     color: #0b0f19;
+    box-shadow: 
+        0 0 0 3px #0284C7,
+        0 0 0 6px #38BDF8,
+        0 0 60px rgba(56,189,248,0.5),
+        inset 0 0 100px rgba(56,189,248,0.08);
+}
+
+.other-cert-full::before {
+    content: '';
+    position: absolute;
+    top: 6mm;
+    left: 6mm;
+    right: 6mm;
+    bottom: 6mm;
+    border: 2px solid #7DD3FC;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.other-cert-full::after {
+    content: '';
+    position: absolute;
+    top: 3mm;
+    left: 3mm;
+    right: 3mm;
+    bottom: 3mm;
+    border: 1px solid #0284C7;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .other-cert-full .corner {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+.other-cert-full .corner::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
     border-color: #38BDF8;
     border-style: solid;
     border-width: 0;
 }
-.other-cert-full .corner.tl { top: 5mm; left: 5mm; border-top-width: 4px; border-left-width: 4px; border-radius: 4px 0 0 0; }
-.other-cert-full .corner.tr { top: 5mm; right: 5mm; border-top-width: 4px; border-right-width: 4px; border-radius: 0 4px 0 0; }
-.other-cert-full .corner.bl { bottom: 5mm; left: 5mm; border-bottom-width: 4px; border-left-width: 4px; border-radius: 0 0 0 4px; }
-.other-cert-full .corner.br { bottom: 5mm; right: 5mm; border-bottom-width: 4px; border-right-width: 4px; border-radius: 0 0 4px 0; }
+.other-cert-full .corner.tl::before { top: 2mm; left: 2mm; border-top-width: 5px; border-left-width: 5px; }
+.other-cert-full .corner.tr::before { top: 2mm; right: 2mm; border-top-width: 5px; border-right-width: 5px; }
+.other-cert-full .corner.bl::before { bottom: 2mm; left: 2mm; border-bottom-width: 5px; border-left-width: 5px; }
+.other-cert-full .corner.br::before { bottom: 2mm; right: 2mm; border-bottom-width: 5px; border-right-width: 5px; }
 
-.other-cert-full .watermark {
+.other-cert-full .corner::after {
+    content: '◆';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-30deg);
-    font-size: 70pt;
-    font-weight: 800;
-    color: rgba(56, 189, 248, 0.05);
-    letter-spacing: 12px;
-    pointer-events: none;
-    z-index: 0;
+    font-size: 12px;
+    color: #38BDF8;
 }
-
-.other-cert-full .holographic {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(135deg,
-        rgba(56,189,248,0.04) 0%,
-        rgba(245,158,11,0.03) 25%,
-        rgba(56,189,248,0.04) 50%,
-        rgba(236,72,153,0.03) 75%,
-        rgba(56,189,248,0.04) 100%);
-    pointer-events: none;
-    z-index: 0;
-}
-
-.other-cert-full .microtext {
-    position: absolute;
-    bottom: 7mm;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 3.5pt;
-    letter-spacing: 2px;
-    color: rgba(56, 189, 248, 0.35);
-    font-family: 'JetBrains Mono', monospace;
-    white-space: nowrap;
-    z-index: 1;
-}
-
-.other-cert-full .serial-security {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 7pt;
-    color: #0284C7;
-    letter-spacing: 2px;
-    border: 1px dashed #38BDF8;
-    padding: 4px 8px;
-    background: rgba(56, 189, 248, 0.05);
-    display: inline-block;
-}
+.other-cert-full .corner.tl::after { top: 1mm; left: 1mm; }
+.other-cert-full .corner.tr::after { top: 1mm; right: 1mm; }
+.other-cert-full .corner.bl::after { bottom: 1mm; left: 1mm; }
+.other-cert-full .corner.br::after { bottom: 1mm; right: 1mm; }

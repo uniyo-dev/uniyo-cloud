@@ -135,4 +135,13 @@ function renderCertificateByType(cert, content) {
     html += '</div>';
     
     content.innerHTML = html;
+    
+    // Generate barcode from certificate number
+    setTimeout(function() {
+        addBarcode('vipBarcode', certNumber);
+        addBarcode('completeBarcode', certNumber);
+        addBarcode('paymentBarcode', certNumber);
+        addBarcode('promoBarcode', certNumber);
+        addBarcode('otherBarcode', certNumber);
+    }, 100);
 }

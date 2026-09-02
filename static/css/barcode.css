@@ -1,0 +1,14 @@
+/* Barcode Styling */
+.barcode-container {
+    text-align: center;
+    margin: 8px auto;
+    position: relative;
+    z-index: 1;
+}
+.barcode {
+    display: inline-block;
+    background: #ffffff;
+    padding: 5px 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 3px;
+}
