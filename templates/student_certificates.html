@@ -65,20 +65,14 @@ function viewStudentCertPopup(certId) {
     content.innerHTML = '<p style="color: #94A3B8;">Loading...</p>';
 
     fetch('/student/api/certificate/' + certId)
-        .then(function(response) { return response.json(); })
+        .then(function(response) { return response.text(); })
         .then(function(data) {
-            if (data.success && data.certificate) {
-                var cert = data.certificate;
-                var html = '<div class="certificate-display" style="padding:20px;">';
-                html += '<img src="/static/Authenticity/UNIYO_Titer.png" style="height:50px;">';
-                html += '<h3 style="color:#6D28D9;">' + (cert.title || 'Certificate') + '</h3>';
-                html += '<p>Presented to</p>';
-                html += '<strong style="font-size:20px;">' + (cert.full_name || '') + '</strong>';
-                html += '<p>' + (cert.university || '') + ' • ' + (cert.stream || '') + '</p>';
-                html += '<p>Number: ' + (cert.certificate_number || '') + '</p>';
-                html += '<p>Date: ' + (cert.issue_date || '') + '</p>';
-                html += '</div>';
-                content.innerHTML = html;
+            var parser = new DOMParser();
+            var doc = parser.parseFromString(data, 'text/html');
+            var certFull = doc.querySelector('.certificate-full-a4') || doc.querySelector('.certificate-display');
+            
+            if (certFull) {
+                content.innerHTML = certFull.outerHTML;
             } else {
                 content.innerHTML = '<p>Certificate not found</p>';
             }

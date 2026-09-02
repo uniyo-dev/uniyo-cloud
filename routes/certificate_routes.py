@@ -79,5 +79,12 @@ def api_student_certificate(certificate_id):
             certificate['full_name'] = student.get('full_name', '')
             certificate['university'] = student.get('university', '')
             certificate['stream'] = student.get('stream', '')
-        return {"success": True, "certificate": certificate}
+        
+        from flask import request
+        from core.helpers import generate_qr_data_uri
+        verify_url = f"{request.host_url}verify/{certificate.get('verification_token', '')}"
+        qr_data_uri = generate_qr_data_uri(verify_url)
+        
+        html = render_template('student_certificate.html', certificate=certificate, qr_data_uri=qr_data_uri)
+        return html
     return {"success": False, "error": "Certificate not found"}
