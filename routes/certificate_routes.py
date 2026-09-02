@@ -61,3 +61,21 @@ def verify_certificate(token):
         return render_template('verification_invalid.html'), 404
     
     return render_template('verification_valid.html', certificate=certificate)
+
+
+@certificate_bp.route('/student/api/certificate/<int:certificate_id>', methods=['GET'])
+@login_required
+def api_student_certificate(certificate_id):
+    """Student API endpoint for certificate popup"""
+    db = get_db()
+    certificate = db.query_one("SELECT * FROM certificates WHERE id = ? AND student_id = ?", (certificate_id, session['student_id']))
+    if certificate:
+        certificate = dict(certificate)
+        student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (certificate.get('student_id'),))
+        if student:
+            student = dict(student)
+            certificate['full_name'] = student.get('full_name', '')
+            certificate['university'] = student.get('university', '')
+            certificate['stream'] = student.get('stream', '')
+        return {"success": True, "certificate": certificate}
+    return {"success": False, "error": "Certificate not found"}
