@@ -437,6 +437,7 @@ def change_password():
         flash("Admin not found", "danger")
         return redirect(url_for('admin.home'))
     
+    admin = dict(admin)
     if not verify_password(admin['password_hash'], current_password):
         flash("Current password is incorrect", "danger")
         return redirect(url_for('admin.home'))
@@ -450,8 +451,8 @@ def change_password():
         return redirect(url_for('admin.home'))
     
     new_hash = hash_password(new_password)
-    db.execute("UPDATE admins SET password_hash = ?, must_change_password = 0 WHERE id = ?", 
-               (new_hash, session['admin_id']))
+    update_sql = "UPDATE admins SET password_hash = '" + new_hash + "', must_change_password = 0 WHERE id = " + str(session['admin_id'])
+    db.execute(update_sql)
     
     audit_query = "INSERT INTO audit_logs (admin_id, action, target_table, target_id, details, created_at) VALUES (?, 'CHANGE_PASSWORD', 'admins', ?, 'Admin changed password', ?)"
     db.execute(audit_query, (session['admin_id'], session['admin_id'], datetime.now().isoformat()))
