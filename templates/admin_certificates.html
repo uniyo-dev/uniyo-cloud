@@ -1,78 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Certificates - UNIYO Admin
-<!-- CERTIFICATE VIEW POPUP -->
-<div id="certPopup" class="popup-overlay" style="display: none;">
-    <div class="popup-card" style="max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto;">
-        <div class="popup-header">
-            <div class="popup-icon">🏆</div>
-            <div class="popup-title">Certificate Details</div>
-        </div>
-        <div id="certPopupContent" style="margin-top: 15px;">
-            <p style="color: #94A3B8;">Loading...</p>
-        </div>
-        <div class="popup-actions">
-            <button class="popup-btn popup-btn-outline" onclick="closeCertPopup()">Close</button>
-            <button class="popup-btn popup-btn-primary" onclick="printCertificate()">🖨️ Print</button>
-        </div>
-    </div>
-</div>
-
-<script>
-function viewCertificatePopup(certId) {
-    const popup = document.getElementById('certPopup');
-    const content = document.getElementById('certPopupContent');
-    
-    popup.style.display = 'flex';
-    content.innerHTML = '<p style="color: #94A3B8; text-align: center; padding: 20px;">Loading...</p>';
-    
-    // Fetch the certificate data directly from the API
-    fetch(`/admin/certificates/${certId}/view`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(html => {
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            const certDisplay = doc.querySelector('.certificate-display');
-            
-            if (certDisplay) {
-                content.innerHTML = certDisplay.outerHTML;
-            } else {
-                // If no certificate-display, try to extract from the body
-                const mainContent = doc.querySelector('.admin-container');
-                if (mainContent) {
-                    content.innerHTML = mainContent.innerHTML;
-                } else {
-                    content.innerHTML = '<p style="text-align: center; padding: 20px; color: #F59E0B;">Certificate data not found</p>';
-                }
-            }
-        })
-        .catch(error => {
-            content.innerHTML = '<p style="text-align: center; padding: 20px; color: #EC4899;">Error loading certificate. Please try again.</p>';
-        });
-}
-
-function closeCertPopup() {
-    document.getElementById('certPopup').style.display = 'none';
-}
-
-function printCertificate() {
-    const content = document.getElementById('certPopupContent').innerHTML;
-    const printWindow = window.open('', '_blank');
-    printWindow.document.write('<html><head><title>Certificate</title></head><body>');
-    printWindow.document.write(content);
-    printWindow.document.write('</body></html>');
-    printWindow.document.close();
-    printWindow.print();
-}
-</script>
-{% endblock %}
-
-
+{% block title %}Certificates - UNIYO Admin{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_home.css') }}">
@@ -128,93 +56,12 @@ function printCertificate() {
         text-decoration: none;
     }
     .btn-success { background: #14B8A6; color: white; }
-    .status-badge {
-        display: inline-block;
-        padding: 3px 8px;
-        border-radius: 6px;
-        font-size: 10px;
-        font-weight: 700;
-        white-space: nowrap;
-    }
 </style>
-
-
-
-
-<!-- CERTIFICATE VIEW POPUP -->
-<div id="certPopup" class="popup-overlay" style="display: none;">
-    <div class="popup-card" style="max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto;">
-        <div class="popup-header">
-            <div class="popup-icon">🏆</div>
-            <div class="popup-title">Certificate Details</div>
-        </div>
-        <div id="certPopupContent" style="margin-top: 15px;">
-            <p style="color: #94A3B8;">Loading...</p>
-        </div>
-        <div class="popup-actions">
-            <button class="popup-btn popup-btn-outline" onclick="closeCertPopup()">Close</button>
-            <button class="popup-btn popup-btn-primary" onclick="printCertificate()">🖨️ Print</button>
-        </div>
-    </div>
-</div>
-
-<script>
-function viewCertificatePopup(certId) {
-    const popup = document.getElementById('certPopup');
-    const content = document.getElementById('certPopupContent');
-    
-    popup.style.display = 'flex';
-    content.innerHTML = '<p style="color: #94A3B8; text-align: center; padding: 20px;">Loading...</p>';
-    
-    // Fetch the certificate data directly from the API
-    fetch(`/admin/certificates/${certId}/view`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(html => {
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            const certDisplay = doc.querySelector('.certificate-display');
-            
-            if (certDisplay) {
-                content.innerHTML = certDisplay.outerHTML;
-            } else {
-                // If no certificate-display, try to extract from the body
-                const mainContent = doc.querySelector('.admin-container');
-                if (mainContent) {
-                    content.innerHTML = mainContent.innerHTML;
-                } else {
-                    content.innerHTML = '<p style="text-align: center; padding: 20px; color: #F59E0B;">Certificate data not found</p>';
-                }
-            }
-        })
-        .catch(error => {
-            content.innerHTML = '<p style="text-align: center; padding: 20px; color: #EC4899;">Error loading certificate. Please try again.</p>';
-        });
-}
-
-function closeCertPopup() {
-    document.getElementById('certPopup').style.display = 'none';
-}
-
-function printCertificate() {
-    const content = document.getElementById('certPopupContent').innerHTML;
-    const printWindow = window.open('', '_blank');
-    printWindow.document.write('<html><head><title>Certificate</title></head><body>');
-    printWindow.document.write(content);
-    printWindow.document.write('</body></html>');
-    printWindow.document.close();
-    printWindow.print();
-}
-</script>
 {% endblock %}
 
 {% block content %}
 <div class="admin-container">
-    
+
     <header class="admin-header">
         <div>
             <h1>🏆 Certificate Management</h1>
@@ -225,11 +72,9 @@ function printCertificate() {
             <a href="{{ url_for('admin.home') }}" class="btn btn-outline">← Dashboard</a>
         </div>
     </header>
-    
-    
+
     <section class="admin-section">
         <h3>📝 Issue New Certificate</h3>
-        
         <form action="{{ url_for('admin.issue_certificate') }}" method="POST">
             <div class="form-group">
                 <label>Student *</label>
@@ -240,7 +85,6 @@ function printCertificate() {
                     {% endfor %}
                 </select>
             </div>
-            
             <div class="form-group">
                 <label>Certificate Type</label>
                 <select name="certificate_type" id="certificateType">
@@ -257,31 +101,26 @@ function printCertificate() {
                     <option value="congratulations">🎉 Congratulations</option>
                 </select>
             </div>
-            
             <div class="form-group">
                 <label>Title</label>
                 <input type="text" name="title" placeholder="e.g., Top Performer - August 2026">
             </div>
-            
             <div class="form-group">
                 <label>Rank (optional for non-VIP; VIP rank is auto-validated)</label>
                 <input type="number" name="rank" min="1" placeholder="1">
             </div>
-            
             <div class="form-group">
                 <label>Month/Year (Required for VIP certificates)</label>
                 <input type="month" name="month_year">
             </div>
-            
             <button type="submit" class="btn btn-primary">Issue Certificate</button>
         </form>
     </section>
 
-<section class="admin-section">
+    <section class="admin-section">
         <h3>Issued Certificates</h3>
-        
         {% if certificates %}
-        <div class="table-wrapper" style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+        <div class="table-wrapper">
         <table class="certificates-table">
             <thead>
                 <tr>
@@ -302,7 +141,7 @@ function printCertificate() {
                     <td>{{ cert.title }}</td>
                     <td>{{ cert.issue_date|format_date }}</td>
                     <td>
-<button onclick="viewCertificatePopup({{ cert.id }})" class="btn-sm btn-success" style="padding: 4px 10px; border-radius: 4px; font-size: 10px; cursor: pointer; border: none; background: #14B8A6; color: white;">
+                        <button onclick="viewCertificatePopup({{ cert.id }})" class="btn-sm btn-success" style="cursor: pointer; border: none;">
                             👁️ View
                         </button>
                     </td>
@@ -315,9 +154,8 @@ function printCertificate() {
         <p>No certificates issued yet.</p>
         {% endif %}
     </section>
-    
-</div>
 
+</div>
 
 <!-- CERTIFICATE VIEW POPUP -->
 <div id="certPopup" class="popup-overlay" style="display: none;">
@@ -326,66 +164,52 @@ function printCertificate() {
             <div class="popup-icon">🏆</div>
             <div class="popup-title">Certificate Details</div>
         </div>
-        <div id="certPopupContent" style="margin-top: 15px;">
+        <div id="certPopupContent" style="margin-top: 15px; text-align: center;">
             <p style="color: #94A3B8;">Loading...</p>
         </div>
         <div class="popup-actions">
             <button class="popup-btn popup-btn-outline" onclick="closeCertPopup()">Close</button>
-            <button class="popup-btn popup-btn-primary" onclick="printCertificate()">🖨️ Print</button>
         </div>
     </div>
 </div>
 
 <script>
 function viewCertificatePopup(certId) {
-    const popup = document.getElementById('certPopup');
-    const content = document.getElementById('certPopupContent');
-    
+    var popup = document.getElementById('certPopup');
+    var content = document.getElementById('certPopupContent');
     popup.style.display = 'flex';
-    content.innerHTML = '<p style="color: #94A3B8; text-align: center; padding: 20px;">Loading...</p>';
+    content.innerHTML = '<p style="color: #94A3B8;">Loading...</p>';
     
-    // Fetch the certificate data directly from the API
-    fetch(`/admin/certificates/${certId}/view`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(html => {
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            const certDisplay = doc.querySelector('.certificate-display');
-            
-            if (certDisplay) {
-                content.innerHTML = certDisplay.outerHTML;
+    fetch('/admin/api/certificates/' + certId)
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+            if (data.success && data.certificate) {
+                var cert = data.certificate;
+                var html = '<div class="certificate-display">';
+                html += '<img src="/static/Authenticity/UNIYO_Titer.png" style="height:50px;object-fit:contain;">';
+                html += '<div class="cert-title-main">' + (cert.title || 'Certificate') + '</div>';
+                html += '<div style="text-align:center;">';
+                html += '<span class="cert-student-name">' + (cert.full_name || '') + '</span><br>';
+                html += '<span>' + (cert.university || '') + ' • ' + (cert.stream || '') + '</span>';
+                html += '</div>';
+                html += '<div class="cert-details">';
+                html += '<div class="cert-detail-row"><span>Number:</span><strong>' + (cert.certificate_number || '') + '</strong></div>';
+                html += '<div class="cert-detail-row"><span>Type:</span><strong>' + (cert.certificate_type || '').toUpperCase() + '</strong></div>';
+                html += '<div class="cert-detail-row"><span>Date:</span><strong>' + (cert.issue_date || '') + '</strong></div>';
+                html += '</div>';
+                html += '</div>';
+                content.innerHTML = html;
             } else {
-                // If no certificate-display, try to extract from the body
-                const mainContent = doc.querySelector('.admin-container');
-                if (mainContent) {
-                    content.innerHTML = mainContent.innerHTML;
-                } else {
-                    content.innerHTML = '<p style="text-align: center; padding: 20px; color: #F59E0B;">Certificate data not found</p>';
-                }
+                content.innerHTML = '<p>Certificate not found</p>';
             }
         })
-        .catch(error => {
-            content.innerHTML = '<p style="text-align: center; padding: 20px; color: #EC4899;">Error loading certificate. Please try again.</p>';
+        .catch(function() {
+            content.innerHTML = '<p>Error loading certificate</p>';
         });
 }
 
 function closeCertPopup() {
     document.getElementById('certPopup').style.display = 'none';
-}
-
-function printCertificate() {
-    const content = document.getElementById('certPopupContent').innerHTML;
-    const printWindow = window.open('', '_blank');
-    printWindow.document.write('<html><head><title>Certificate</title></head><body>');
-    printWindow.document.write(content);
-    printWindow.document.write('</body></html>');
-    printWindow.document.close();
-    printWindow.print();
 }
 </script>
 {% endblock %}
