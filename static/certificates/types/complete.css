@@ -1,100 +1,144 @@
 /* ============================================
-   UNIYO COMPLETION CERTIFICATE - PURPLE ROYAL
+   UNIYO COMPLETION CERTIFICATE - ROYAL PURPLE GOLD ACCENT
+   Portrait A4 | Double Frame | Ornate Corners
    ============================================ */
 
 .complete-cert-full {
     width: 210mm;
     min-height: 297mm;
-    padding: 20mm 22mm;
-    background: linear-gradient(135deg, #fffdf9 0%, #f5f3ff 30%, #fffdf9 50%, #f5f3ff 70%, #fffdf9 100%);
-    border: 8px solid #6D28D9;
+    padding: 22mm 24mm;
+    background: linear-gradient(160deg, 
+        #fffdf9 0%, 
+        #f8f5ff 20%, 
+        #fffdf9 40%, 
+        #f5f0ff 60%, 
+        #fffdf9 80%, 
+        #f8f5ff 100%);
+    border: 10px solid #6D28D9;
     position: relative;
     box-sizing: border-box;
     font-family: 'Poppins', 'Georgia', serif;
     color: #0b0f19;
     box-shadow: 
-        0 0 0 3px #4C1D95,
-        0 0 0 6px #6D28D9,
-        0 0 60px rgba(109,40,217,0.5),
-        inset 0 0 100px rgba(109,40,217,0.08);
+        0 0 0 4px #4C1D95,
+        0 0 0 8px #6D28D9,
+        0 0 0 10px #D8B4FE,
+        0 0 80px rgba(109,40,217,0.6),
+        inset 0 0 120px rgba(109,40,217,0.06);
 }
 
+/* INNER GOLD FRAME */
 .complete-cert-full::before {
     content: '';
     position: absolute;
-    top: 7mm;
-    left: 7mm;
-    right: 7mm;
-    bottom: 7mm;
-    border: 2px solid #A78BFA;
+    top: 8mm;
+    left: 8mm;
+    right: 8mm;
+    bottom: 8mm;
+    border: 2px solid #F59E0B;
     pointer-events: none;
     z-index: 0;
 }
 
+/* INNER PURPLE THIN FRAME */
 .complete-cert-full::after {
     content: '';
     position: absolute;
-    top: 3.5mm;
-    left: 3.5mm;
-    right: 3.5mm;
-    bottom: 3.5mm;
-    border: 1px solid #4C1D95;
+    top: 10mm;
+    left: 10mm;
+    right: 10mm;
+    bottom: 10mm;
+    border: 1px solid #A78BFA;
     pointer-events: none;
     z-index: 0;
 }
 
+/* ORNATE CORNERS - DOUBLE L + DIAMOND + DOT */
 .complete-cert-full .corner {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     z-index: 2;
 }
+
+/* Outer L-shape */
 .complete-cert-full .corner::before {
     content: '';
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-color: #6D28D9;
     border-style: solid;
     border-width: 0;
 }
-.complete-cert-full .corner.tl::before { top: 2mm; left: 2mm; border-top-width: 5px; border-left-width: 5px; }
-.complete-cert-full .corner.tr::before { top: 2mm; right: 2mm; border-top-width: 5px; border-right-width: 5px; }
-.complete-cert-full .corner.bl::before { bottom: 2mm; left: 2mm; border-bottom-width: 5px; border-left-width: 5px; }
-.complete-cert-full .corner.br::before { bottom: 2mm; right: 2mm; border-bottom-width: 5px; border-right-width: 5px; }
+.complete-cert-full .corner.tl::before { top: 2mm; left: 2mm; border-top-width: 6px; border-left-width: 6px; }
+.complete-cert-full .corner.tr::before { top: 2mm; right: 2mm; border-top-width: 6px; border-right-width: 6px; }
+.complete-cert-full .corner.bl::before { bottom: 2mm; left: 2mm; border-bottom-width: 6px; border-left-width: 6px; }
+.complete-cert-full .corner.br::before { bottom: 2mm; right: 2mm; border-bottom-width: 6px; border-right-width: 6px; }
 
+/* Inner L-shape (gold) */
 .complete-cert-full .corner::after {
-    content: '◆';
+    content: '';
     position: absolute;
-    font-size: 12px;
-    color: #6D28D9;
+    width: 40px;
+    height: 40px;
+    border-color: #F59E0B;
+    border-style: solid;
+    border-width: 0;
 }
-.complete-cert-full .corner.tl::after { top: 1mm; left: 1mm; }
-.complete-cert-full .corner.tr::after { top: 1mm; right: 1mm; }
-.complete-cert-full .corner.bl::after { bottom: 1mm; left: 1mm; }
-.complete-cert-full .corner.br::after { bottom: 1mm; right: 1mm; }
+.complete-cert-full .corner.tl::after { top: 5mm; left: 5mm; border-top-width: 3px; border-left-width: 3px; }
+.complete-cert-full .corner.tr::after { top: 5mm; right: 5mm; border-top-width: 3px; border-right-width: 3px; }
+.complete-cert-full .corner.bl::after { bottom: 5mm; left: 5mm; border-bottom-width: 3px; border-left-width: 3px; }
+.complete-cert-full .corner.br::after { bottom: 5mm; right: 5mm; border-bottom-width: 3px; border-right-width: 3px; }
 
-
-.complete-cert-full .holographic {
+/* Diamond marker at corners */
+.complete-cert-full .corner-diamond {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(135deg,
-        rgba(109,40,217,0.04) 0%,
-        rgba(20,184,166,0.03) 25%,
-        rgba(109,40,217,0.04) 50%,
-        rgba(236,72,153,0.03) 75%,
-        rgba(109,40,217,0.04) 100%);
+    font-size: 14px;
+    z-index: 3;
+}
+.complete-cert-full .corner-diamond.tl { top: 1mm; left: 1mm; }
+.complete-cert-full .corner-diamond.tr { top: 1mm; right: 1mm; }
+.complete-cert-full .corner-diamond.bl { bottom: 1mm; left: 1mm; }
+.complete-cert-full .corner-diamond.br { bottom: 1mm; right: 1mm; }
+
+/* Watermark */
+.complete-cert-full .watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    font-size: 80pt;
+    font-weight: 800;
+    color: rgba(109, 40, 217, 0.04);
+    letter-spacing: 15px;
     pointer-events: none;
     z-index: 0;
 }
 
+/* Holographic */
+.complete-cert-full .holographic {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(160deg,
+        rgba(109,40,217,0.05) 0%,
+        rgba(245,158,11,0.03) 20%,
+        rgba(109,40,217,0.05) 40%,
+        rgba(20,184,166,0.03) 60%,
+        rgba(109,40,217,0.05) 80%,
+        rgba(236,72,153,0.03) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Microtext */
 .complete-cert-full .microtext {
     position: absolute;
-    bottom: 7mm;
+    bottom: 8mm;
     left: 50%;
     transform: translateX(-50%);
     font-size: 3.5pt;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
     color: rgba(109, 40, 217, 0.35);
     font-family: 'JetBrains Mono', monospace;
     white-space: nowrap;
