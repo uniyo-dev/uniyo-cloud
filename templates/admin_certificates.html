@@ -20,24 +20,39 @@
 
 <script>
 function viewCertificatePopup(certId) {
-    document.getElementById('certPopup').style.display = 'flex';
-    document.getElementById('certPopupContent').innerHTML = '<p style="color: #94A3B8;">Loading...</p>';
+    const popup = document.getElementById('certPopup');
+    const content = document.getElementById('certPopupContent');
     
+    popup.style.display = 'flex';
+    content.innerHTML = '<p style="color: #94A3B8; text-align: center; padding: 20px;">Loading...</p>';
+    
+    // Fetch the certificate data directly from the API
     fetch(`/admin/certificates/${certId}/view`)
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
         .then(html => {
-            // Extract the certificate-display div
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, 'text/html');
             const certDisplay = doc.querySelector('.certificate-display');
+            
             if (certDisplay) {
-                document.getElementById('certPopupContent').innerHTML = certDisplay.outerHTML;
+                content.innerHTML = certDisplay.outerHTML;
             } else {
-                document.getElementById('certPopupContent').innerHTML = '<p>Certificate not found</p>';
+                // If no certificate-display, try to extract from the body
+                const mainContent = doc.querySelector('.admin-container');
+                if (mainContent) {
+                    content.innerHTML = mainContent.innerHTML;
+                } else {
+                    content.innerHTML = '<p style="text-align: center; padding: 20px; color: #F59E0B;">Certificate data not found</p>';
+                }
             }
         })
-        .catch(() => {
-            document.getElementById('certPopupContent').innerHTML = '<p>Error loading certificate</p>';
+        .catch(error => {
+            content.innerHTML = '<p style="text-align: center; padding: 20px; color: #EC4899;">Error loading certificate. Please try again.</p>';
         });
 }
 
@@ -145,24 +160,39 @@ function printCertificate() {
 
 <script>
 function viewCertificatePopup(certId) {
-    document.getElementById('certPopup').style.display = 'flex';
-    document.getElementById('certPopupContent').innerHTML = '<p style="color: #94A3B8;">Loading...</p>';
+    const popup = document.getElementById('certPopup');
+    const content = document.getElementById('certPopupContent');
     
+    popup.style.display = 'flex';
+    content.innerHTML = '<p style="color: #94A3B8; text-align: center; padding: 20px;">Loading...</p>';
+    
+    // Fetch the certificate data directly from the API
     fetch(`/admin/certificates/${certId}/view`)
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
         .then(html => {
-            // Extract the certificate-display div
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, 'text/html');
             const certDisplay = doc.querySelector('.certificate-display');
+            
             if (certDisplay) {
-                document.getElementById('certPopupContent').innerHTML = certDisplay.outerHTML;
+                content.innerHTML = certDisplay.outerHTML;
             } else {
-                document.getElementById('certPopupContent').innerHTML = '<p>Certificate not found</p>';
+                // If no certificate-display, try to extract from the body
+                const mainContent = doc.querySelector('.admin-container');
+                if (mainContent) {
+                    content.innerHTML = mainContent.innerHTML;
+                } else {
+                    content.innerHTML = '<p style="text-align: center; padding: 20px; color: #F59E0B;">Certificate data not found</p>';
+                }
             }
         })
-        .catch(() => {
-            document.getElementById('certPopupContent').innerHTML = '<p>Error loading certificate</p>';
+        .catch(error => {
+            content.innerHTML = '<p style="text-align: center; padding: 20px; color: #EC4899;">Error loading certificate. Please try again.</p>';
         });
 }
 
@@ -308,24 +338,39 @@ function printCertificate() {
 
 <script>
 function viewCertificatePopup(certId) {
-    document.getElementById('certPopup').style.display = 'flex';
-    document.getElementById('certPopupContent').innerHTML = '<p style="color: #94A3B8;">Loading...</p>';
+    const popup = document.getElementById('certPopup');
+    const content = document.getElementById('certPopupContent');
     
+    popup.style.display = 'flex';
+    content.innerHTML = '<p style="color: #94A3B8; text-align: center; padding: 20px;">Loading...</p>';
+    
+    // Fetch the certificate data directly from the API
     fetch(`/admin/certificates/${certId}/view`)
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
         .then(html => {
-            // Extract the certificate-display div
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, 'text/html');
             const certDisplay = doc.querySelector('.certificate-display');
+            
             if (certDisplay) {
-                document.getElementById('certPopupContent').innerHTML = certDisplay.outerHTML;
+                content.innerHTML = certDisplay.outerHTML;
             } else {
-                document.getElementById('certPopupContent').innerHTML = '<p>Certificate not found</p>';
+                // If no certificate-display, try to extract from the body
+                const mainContent = doc.querySelector('.admin-container');
+                if (mainContent) {
+                    content.innerHTML = mainContent.innerHTML;
+                } else {
+                    content.innerHTML = '<p style="text-align: center; padding: 20px; color: #F59E0B;">Certificate data not found</p>';
+                }
             }
         })
-        .catch(() => {
-            document.getElementById('certPopupContent').innerHTML = '<p>Error loading certificate</p>';
+        .catch(error => {
+            content.innerHTML = '<p style="text-align: center; padding: 20px; color: #EC4899;">Error loading certificate. Please try again.</p>';
         });
 }
 
