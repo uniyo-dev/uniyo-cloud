@@ -53,6 +53,7 @@ def logout():
 def home():
     db = get_db()
     admin = db.query_one("SELECT * FROM admins WHERE id = ?", (session['admin_id'],))
+    admin = dict(admin) if admin else None
     
     stats = {
         'total_students': db.query_value("SELECT COUNT(*) FROM students"),
