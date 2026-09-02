@@ -185,7 +185,36 @@ def approve_payment(payment_id):
     except:
         pass
     
-    flash("Payment approved!", "success")
+    # Check if receipt should be skipped
+    skip_receipt = request.form.get('skip_receipt', '0')
+    
+    if skip_receipt == '1':
+        flash("Payment approved (receipt skipped)", "success")
+        return redirect(url_for('admin.payments'))
+    
+
+    # Check if receipt should be skipped
+    
+
+    # Check if receipt should be skipped
+    
+
+    # Auto-generate payment receipt certificate
+    try:
+        from core.helpers import generate_certificate_number, generate_verification_token
+        cert_number = generate_certificate_number()
+        token = generate_verification_token()
+        
+        student_info = db.query_one("SELECT full_name, university, phone FROM students WHERE id = ?", (payment['student_id'],))
+        if student_info:
+            student_info = dict(student_info)
+        
+        db.execute(f"INSERT INTO certificates (student_id, certificate_type, certificate_number, verification_token, title, issue_date, full_name, university, phone, amount, payment_method, transaction_number) VALUES ({payment['student_id']}, 'payment', '{cert_number}', '{token}', 'Payment Receipt', '{datetime.now().isoformat()}', '{student_info.get('full_name', '')}', '{student_info.get('university', '')}', '{student_info.get('phone', '')}', 200, '{payment['payment_method']}', '{payment['transaction_number']}')")
+        
+        flash("Payment approved and receipt issued!", "success")
+    except Exception as e:
+        flash("Payment approved but receipt failed: " + str(e), "warning")
+    
     return redirect(url_for('admin.payments'))
 
 @admin_bp.route('/payments/<int:payment_id>/reject', methods=['POST'])
@@ -594,3 +623,38 @@ def delete_certificate(certificate_id):
     else:
         flash("Certificate not found", "danger")
     return redirect(url_for('admin.certificates'))
+
+
+@admin_bp.route('/payments/<int:payment_id>/issue-receipt', methods=['POST'])
+@admin_required
+def issue_receipt(payment_id):
+    """Issue receipt for an already-approved payment"""
+    db = get_db()
+    payment = db.query_one("SELECT * FROM payments WHERE id = ?", (payment_id,))
+    if not payment:
+        flash("Payment not found", "danger")
+        return redirect(url_for('admin.payments'))
+    
+    try:
+        from core.helpers import generate_certificate_number, generate_verification_token
+        cert_number = generate_certificate_number()
+        token = generate_verification_token()
+        
+        student_info = db.query_one("SELECT full_name, university, phone FROM students WHERE id = ?", (payment['student_id'],))
+        if student_info:
+            student_info = dict(student_info)
+        else:
+            student_info = {}
+        
+        amount = request.form.get('amount', payment.get('amount', 200))
+        receipt_method = request.form.get('payment_method', payment['payment_method'])
+        receipt_transaction = request.form.get('transaction_number', payment['transaction_number'])
+        receipt_title = request.form.get('title', 'Payment Receipt')
+        
+        db.execute(f"INSERT INTO certificates (student_id, certificate_type, certificate_number, verification_token, title, issue_date, full_name, university, phone) VALUES ({payment['student_id']}, 'payment', '{cert_number}', '{token}', '{receipt_title}', '{datetime.now().isoformat()}', '{student_info.get('full_name', '')}', '{student_info.get('university', '')}', '{student_info.get('phone', '')}')")
+        
+        flash("Receipt issued successfully!", "success")
+    except Exception as e:
+        flash(f"Failed to issue receipt: {e}", "danger")
+    
+    return redirect(url_for('admin.payments'))

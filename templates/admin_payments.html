@@ -1,6 +1,86 @@
 {% extends "base.html" %}
 
-{% block title %}Payments - UNIYO Admin{% endblock %}
+{% block title %}Payments - UNIYO Admin
+<!-- RECEIPT MODAL -->
+<div id="receiptModal" class="popup-overlay" style="display: none;">
+    <div class="popup-card" style="max-width: 500px; width: 90%;">
+        <div class="popup-header">
+            <div class="popup-icon">🧾</div>
+            <div class="popup-title">Issue Payment Receipt</div>
+            <div class="popup-message">Verify payment details and issue receipt</div>
+        </div>
+        
+        <form id="receiptForm" method="POST" style="margin-top: 15px;">
+            <input type="hidden" name="payment_id" id="receiptPaymentId">
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">Student Name</label>
+                <input type="text" id="receiptStudentName" readonly style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">Phone</label>
+                <input type="text" id="receiptPhone" readonly style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">University</label>
+                <input type="text" id="receiptUniversity" readonly style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">Amount (ETB)</label>
+                <input type="number" name="amount" id="receiptAmount" value="200" required style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">Payment Method</label>
+                <select name="payment_method" id="receiptMethod" style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+                    <option value="telebirr">Telebirr</option>
+                    <option value="cbe">CBE</option>
+                    <option value="abyssinia">Abyssinia Bank</option>
+                    <option value="abay">Abay Bank</option>
+                    <option value="awash">Awash Bank</option>
+                </select>
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">Transaction Number</label>
+                <input type="text" name="transaction_number" id="receiptTransaction" required style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">Receipt Title</label>
+                <input type="text" name="title" value="Payment Receipt" style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+            </div>
+            
+            <div class="popup-actions" style="margin-top: 15px;">
+                <button type="button" class="popup-btn popup-btn-outline" onclick="closeReceiptModal()">Cancel</button>
+                <button type="submit" class="popup-btn popup-btn-success" style="background: #14B8A6; color: white;">✅ Approve & Issue Receipt</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+function openReceiptModal(paymentId, fullName, phone, university, amount, method, transaction) {
+    document.getElementById('receiptPaymentId').value = paymentId;
+    document.getElementById('receiptStudentName').value = fullName;
+    document.getElementById('receiptPhone').value = phone;
+    document.getElementById('receiptUniversity').value = university;
+    document.getElementById('receiptAmount').value = amount;
+    document.getElementById('receiptMethod').value = method;
+    document.getElementById('receiptTransaction').value = transaction;
+    
+    document.getElementById('receiptForm').action = '/admin/payments/' + paymentId + '/approve';
+    document.getElementById('receiptModal').style.display = 'flex';
+}
+
+function closeReceiptModal() {
+    document.getElementById('receiptModal').style.display = 'none';
+}
+</script>
+{% endblock %}
 
 
 
@@ -9,6 +89,86 @@
 
 
 
+
+<!-- RECEIPT MODAL -->
+<div id="receiptModal" class="popup-overlay" style="display: none;">
+    <div class="popup-card" style="max-width: 500px; width: 90%;">
+        <div class="popup-header">
+            <div class="popup-icon">🧾</div>
+            <div class="popup-title">Issue Payment Receipt</div>
+            <div class="popup-message">Verify payment details and issue receipt</div>
+        </div>
+        
+        <form id="receiptForm" method="POST" style="margin-top: 15px;">
+            <input type="hidden" name="payment_id" id="receiptPaymentId">
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">Student Name</label>
+                <input type="text" id="receiptStudentName" readonly style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">Phone</label>
+                <input type="text" id="receiptPhone" readonly style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">University</label>
+                <input type="text" id="receiptUniversity" readonly style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">Amount (ETB)</label>
+                <input type="number" name="amount" id="receiptAmount" value="200" required style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">Payment Method</label>
+                <select name="payment_method" id="receiptMethod" style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+                    <option value="telebirr">Telebirr</option>
+                    <option value="cbe">CBE</option>
+                    <option value="abyssinia">Abyssinia Bank</option>
+                    <option value="abay">Abay Bank</option>
+                    <option value="awash">Awash Bank</option>
+                </select>
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">Transaction Number</label>
+                <input type="text" name="transaction_number" id="receiptTransaction" required style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">Receipt Title</label>
+                <input type="text" name="title" value="Payment Receipt" style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+            </div>
+            
+            <div class="popup-actions" style="margin-top: 15px;">
+                <button type="button" class="popup-btn popup-btn-outline" onclick="closeReceiptModal()">Cancel</button>
+                <button type="submit" class="popup-btn popup-btn-success" style="background: #14B8A6; color: white;">✅ Approve & Issue Receipt</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+function openReceiptModal(paymentId, fullName, phone, university, amount, method, transaction) {
+    document.getElementById('receiptPaymentId').value = paymentId;
+    document.getElementById('receiptStudentName').value = fullName;
+    document.getElementById('receiptPhone').value = phone;
+    document.getElementById('receiptUniversity').value = university;
+    document.getElementById('receiptAmount').value = amount;
+    document.getElementById('receiptMethod').value = method;
+    document.getElementById('receiptTransaction').value = transaction;
+    
+    document.getElementById('receiptForm').action = '/admin/payments/' + paymentId + '/approve';
+    document.getElementById('receiptModal').style.display = 'flex';
+}
+
+function closeReceiptModal() {
+    document.getElementById('receiptModal').style.display = 'none';
+}
+</script>
 {% endblock %}
 
 {% block content %}
@@ -67,9 +227,14 @@
             
             {% if payment.payment_status == 'pending' %}
             <div class="payment-actions">
-                <form action="{{ url_for('admin.approve_payment', payment_id=payment.id) }}" method="POST">
-                    <button type="submit" class="btn-sm btn-success">✅ Approve</button>
-                </form>
+                <div style="display: flex; gap: 5px;">
+                        <form action="{{ url_for('admin.approve_payment', payment_id=payment.id) }}" method="POST" style="display: inline;">
+                            <input type="hidden" name="skip_receipt" value="1">
+                            <button type="submit" class="btn-sm btn-success" style="border: none; cursor: pointer;">✅ Approve</button>
+                        </form>
+                        <button onclick="openReceiptModal({{ payment.id }}, '{{ payment.full_name }}', '{{ payment.phone }}', '{{ payment.university }}', {{ payment.amount }}, '{{ payment.payment_method }}', '{{ payment.transaction_number }}')" 
+                                class="btn-sm btn-primary" style="border: none; cursor: pointer; background: #6D28D9; color: white;">🧾 Receipt</button>
+                    </div>
                 <form action="{{ url_for('admin.reject_payment', payment_id=payment.id) }}" method="POST" class="reject-form">
                     <input type="text" name="rejection_reason" placeholder="Rejection reason" required>
                     <button type="submit" class="btn-sm btn-danger">❌ Reject</button>
@@ -82,6 +247,8 @@
             {% elif payment.payment_status == 'approved' %}
             <div class="approval-info">
                 <p>✅ Approved on {{ payment.reviewed_at|format_date }}</p>
+                    <button onclick="openReceiptModal({{ payment.id }}, '{{ payment.full_name }}', '{{ payment.phone }}', '{{ payment.university }}', {{ payment.amount }}, '{{ payment.payment_method }}', '{{ payment.transaction_number }}')" 
+                            class="btn-sm btn-primary" style="border: none; cursor: pointer; background: #6D28D9; color: white; margin-top: 5px;">🧾 Issue Receipt</button>
             </div>
             {% endif %}
         </div>
@@ -94,4 +261,84 @@
     
 </div>
 
+
+<!-- RECEIPT MODAL -->
+<div id="receiptModal" class="popup-overlay" style="display: none;">
+    <div class="popup-card" style="max-width: 500px; width: 90%;">
+        <div class="popup-header">
+            <div class="popup-icon">🧾</div>
+            <div class="popup-title">Issue Payment Receipt</div>
+            <div class="popup-message">Verify payment details and issue receipt</div>
+        </div>
+        
+        <form id="receiptForm" method="POST" style="margin-top: 15px;">
+            <input type="hidden" name="payment_id" id="receiptPaymentId">
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">Student Name</label>
+                <input type="text" id="receiptStudentName" readonly style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">Phone</label>
+                <input type="text" id="receiptPhone" readonly style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">University</label>
+                <input type="text" id="receiptUniversity" readonly style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">Amount (ETB)</label>
+                <input type="number" name="amount" id="receiptAmount" value="200" required style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">Payment Method</label>
+                <select name="payment_method" id="receiptMethod" style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+                    <option value="telebirr">Telebirr</option>
+                    <option value="cbe">CBE</option>
+                    <option value="abyssinia">Abyssinia Bank</option>
+                    <option value="abay">Abay Bank</option>
+                    <option value="awash">Awash Bank</option>
+                </select>
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">Transaction Number</label>
+                <input type="text" name="transaction_number" id="receiptTransaction" required style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #94A3B8;">Receipt Title</label>
+                <input type="text" name="title" value="Payment Receipt" style="width: 100%; padding: 8px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC;">
+            </div>
+            
+            <div class="popup-actions" style="margin-top: 15px;">
+                <button type="button" class="popup-btn popup-btn-outline" onclick="closeReceiptModal()">Cancel</button>
+                <button type="submit" class="popup-btn popup-btn-success" style="background: #14B8A6; color: white;">✅ Approve & Issue Receipt</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+function openReceiptModal(paymentId, fullName, phone, university, amount, method, transaction) {
+    document.getElementById('receiptPaymentId').value = paymentId;
+    document.getElementById('receiptStudentName').value = fullName;
+    document.getElementById('receiptPhone').value = phone;
+    document.getElementById('receiptUniversity').value = university;
+    document.getElementById('receiptAmount').value = amount;
+    document.getElementById('receiptMethod').value = method;
+    document.getElementById('receiptTransaction').value = transaction;
+    
+    document.getElementById('receiptForm').action = '/admin/payments/' + paymentId + '/approve';
+    document.getElementById('receiptModal').style.display = 'flex';
+}
+
+function closeReceiptModal() {
+    document.getElementById('receiptModal').style.display = 'none';
+}
+</script>
 {% endblock %}
