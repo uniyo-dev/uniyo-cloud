@@ -64,39 +64,16 @@ function viewStudentCertPopup(certId) {
     popup.style.display = 'flex';
     content.innerHTML = '<p style="color: #94A3B8;">Loading...</p>';
 
-    fetch('/student/api/certificate/' + certId)
-        .then(function(response) { return response.json(); })
-        .then(function(data) {
-            if (data.success && data.certificate) {
-                var cert = data.certificate;
-                var rank = cert.rank || 0;
-                var medal = rank == 1 ? '🥇' : rank == 2 ? '🥈' : rank == 3 ? '🥉' : rank > 0 ? '🏆' : '📜';
-
-                var stampImg = '/static/Authenticity/UNIYO_Stamp.png';
-                if (rank == 1) stampImg = '/static/Authenticity/vip1golden.png';
-                else if (rank == 2) stampImg = '/static/Authenticity/vip2silver.png';
-                else if (rank == 3) stampImg = '/static/Authenticity/vip3bronze.png';
-                else if (cert.certificate_type == 'completion') stampImg = '/static/Authenticity/completion.png';
-
-                var html = '<div class="certificate-display" style="background:#fffdf9; padding:25px; border:4px solid #6D28D9; border-radius:12px;">';
-                html += '<img src="/static/Authenticity/UNIYO_Titer.png" style="height:45px;object-fit:contain;">';
-                html += '<div style="text-align:center;margin:15px 0;">';
-                html += '<div style="font-size:35px;">' + medal + '</div>';
-                html += '<h3 style="color:#6D28D9;margin:8px 0;">' + (cert.title || 'Certificate') + '</h3>';
-                html += '<p style="color:#475569;font-size:12px;">This certificate is proudly presented to</p>';
-                html += '<div style="font-size:22px;font-weight:700;color:#1e1b4b;border-bottom:2px solid #6D28D9;display:inline-block;padding:0 25px 6px;">' + (cert.full_name || '') + '</div>';
-                html += '<p style="color:#64748b;font-size:12px;">' + (cert.university || '') + ' • ' + (cert.stream || '') + '</p>';
-                html += '</div>';
-                html += '<div style="max-width:320px;margin:12px auto;padding:10px;background:rgba(109,40,217,0.05);border-radius:8px;font-size:11px;">';
-                html += '<div style="display:flex;justify-content:space-between;"><span>Number:</span><strong>' + (cert.certificate_number || '') + '</strong></div>';
-                html += '<div style="display:flex;justify-content:space-between;"><span>Date:</span><strong>' + (cert.issue_date || '') + '</strong></div>';
-                html += '</div>';
-                html += '<div style="display:flex;justify-content:space-around;align-items:center;margin-top:15px;">';
-                html += '<img src="' + stampImg + '" style="width:65px;height:65px;object-fit:contain;">';
-                html += '<img src="/static/Authenticity/super_admin_signature.png" style="height:30px;object-fit:contain;">';
-                html += '</div>';
-                html += '</div>';
-                content.innerHTML = html;
+    // Load the FULL certificate page and extract the certificate div
+    fetch('/student/certificate/' + certId)
+        .then(function(response) { return response.text(); })
+        .then(function(html) {
+            var parser = new DOMParser();
+            var doc = parser.parseFromString(html, 'text/html');
+            var certDisplay = doc.querySelector('.certificate-full-a4') || doc.querySelector('.certificate-display');
+            
+            if (certDisplay) {
+                content.innerHTML = certDisplay.outerHTML;
             } else {
                 content.innerHTML = '<p>Certificate not found</p>';
             }
