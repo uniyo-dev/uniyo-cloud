@@ -144,6 +144,9 @@
                         <button onclick="viewCertificatePopup({{ cert.id }})" class="btn-sm btn-success" style="cursor: pointer; border: none;">
                             👁️ View
                         </button>
+                        <form action="{{ url_for('admin.delete_certificate', certificate_id=cert.id) }}" method="POST" style="display: inline;" onsubmit="return confirm('Delete this certificate?');">
+                            <button type="submit" class="btn-sm" style="background: #EC4899; color: white; border: none; cursor: pointer;">🗑️ Delete</button>
+                        </form>
                     </td>
                 </tr>
                 {% endfor %}
@@ -185,17 +188,44 @@ function viewCertificatePopup(certId) {
         .then(function(data) {
             if (data.success && data.certificate) {
                 var cert = data.certificate;
-                var html = '<div class="certificate-display">';
-                html += '<img src="/static/Authenticity/UNIYO_Titer.png" style="height:50px;object-fit:contain;">';
-                html += '<div class="cert-title-main">' + (cert.title || 'Certificate') + '</div>';
+                // Build complete certificate HTML
+                var rank = cert.rank || 0;
+                var medal = '';
+                if (rank == 1) medal = '🥇';
+                else if (rank == 2) medal = '🥈';
+                else if (rank == 3) medal = '🥉';
+                else if (rank > 0) medal = '🏆';
+                else medal = '📜';
+                
+                var stampImg = '/static/Authenticity/UNIYO_Stamp.png';
+                if (rank == 1) stampImg = '/static/Authenticity/vip1golden.png';
+                else if (rank == 2) stampImg = '/static/Authenticity/vip2silver.png';
+                else if (rank == 3) stampImg = '/static/Authenticity/vip3bronze.png';
+                else if (rank == 4) stampImg = '/static/Authenticity/vip4green.png';
+                else if (rank == 5) stampImg = '/static/Authenticity/vip5blue.png';
+                else if (cert.certificate_type == 'completion') stampImg = '/static/Authenticity/completion.png';
+                
+                var html = '<div class="certificate-full-a4" style="margin:0 auto; position:relative; background:#fffdf9; padding:30px; border:4px solid #6D28D9; border-radius:12px;">';
+                html += '<div class="certificate-watermark">UNIYO</div>';
                 html += '<div style="text-align:center;">';
-                html += '<span class="cert-student-name">' + (cert.full_name || '') + '</span><br>';
-                html += '<span>' + (cert.university || '') + ' • ' + (cert.stream || '') + '</span>';
+                html += '<img src="/static/Authenticity/UNIYO_Titer.png" alt="UNIYO" style="height:50px;object-fit:contain;">';
+                html += '<p style="color:#64748b;font-size:10px;letter-spacing:2px;">ETHIOPIAN HIGHER EDUCATION FRESHMAN HUB</p>';
+                html += '<div style="font-size:16px;font-weight:800;color:#6D28D9;margin:10px 0;">' + (cert.title || 'Certificate') + '</div>';
                 html += '</div>';
-                html += '<div class="cert-details">';
-                html += '<div class="cert-detail-row"><span>Number:</span><strong>' + (cert.certificate_number || '') + '</strong></div>';
-                html += '<div class="cert-detail-row"><span>Type:</span><strong>' + (cert.certificate_type || '').toUpperCase() + '</strong></div>';
-                html += '<div class="cert-detail-row"><span>Date:</span><strong>' + (cert.issue_date || '') + '</strong></div>';
+                html += '<div style="text-align:center;margin:20px 0;">';
+                html += '<div style="font-size:40px;">' + medal + '</div>';
+                html += '<p style="color:#475569;">This certificate is proudly presented to</p>';
+                html += '<div style="font-size:24px;font-weight:700;color:#1e1b4b;border-bottom:2px solid #6D28D9;display:inline-block;padding:0 30px 8px;">' + (cert.full_name || '') + '</div>';
+                html += '<p style="color:#64748b;">' + (cert.university || '') + ' • ' + (cert.stream || '') + '</p>';
+                html += '</div>';
+                html += '<div style="max-width:350px;margin:15px auto;padding:10px;background:rgba(109,40,217,0.05);border-radius:8px;">';
+                html += '<div style="display:flex;justify-content:space-between;font-size:11px;"><span>Number:</span><strong>' + (cert.certificate_number || '') + '</strong></div>';
+                html += '<div style="display:flex;justify-content:space-between;font-size:11px;"><span>Type:</span><strong>' + (cert.certificate_type || '').toUpperCase() + '</strong></div>';
+                html += '<div style="display:flex;justify-content:space-between;font-size:11px;"><span>Date:</span><strong>' + (cert.issue_date || '') + '</strong></div>';
+                html += '</div>';
+                html += '<div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:25px;padding-top:15px;border-top:1px solid #6D28D9;">';
+                html += '<div style="text-align:center;"><img src="' + stampImg + '" style="width:70px;height:70px;object-fit:contain;"><br><small>Official Stamp</small></div>';
+                html += '<div style="text-align:center;"><img src="/static/Authenticity/super_admin_signature.png" style="height:35px;object-fit:contain;"><br><strong style="font-size:10px;">Chalachew Agegn</strong><br><small>Super Admin</small></div>';
                 html += '</div>';
                 html += '</div>';
                 content.innerHTML = html;

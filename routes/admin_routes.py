@@ -572,3 +572,18 @@ def api_certificate(certificate_id):
             certificate['stream'] = student.get('stream', '')
         return {"success": True, "certificate": certificate}
     return {"success": False, "error": "Certificate not found"}
+
+
+@admin_bp.route('/certificates/<int:certificate_id>/delete', methods=['POST'])
+@admin_required
+def delete_certificate(certificate_id):
+    """Delete a certificate"""
+    db = get_db()
+    cert = db.query_one("SELECT * FROM certificates WHERE id = ?", (certificate_id,))
+    if cert:
+        cert = dict(cert)
+        db.execute(f"DELETE FROM certificates WHERE id = {certificate_id}")
+        flash("Certificate deleted", "success")
+    else:
+        flash("Certificate not found", "danger")
+    return redirect(url_for('admin.certificates'))
