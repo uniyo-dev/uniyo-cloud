@@ -1,10 +1,103 @@
-/* Completion Certificate Styles */
+/* ============================================
+   UNIYO COMPLETION CERTIFICATE - FULL PROFESSIONAL
+   ============================================ */
+
 .complete-cert-full {
     width: 210mm;
     min-height: 297mm;
-    padding: 18mm 22mm;
-    background: linear-gradient(135deg, #fffdf9, #f5f3ff, #fffdf9);
-    border: 5px double #6D28D9;
+    padding: 15mm 18mm;
+    background: linear-gradient(135deg, #fffdf9 0%, #f5f3ff 30%, #fffdf9 50%, #f5f3ff 70%, #fffdf9 100%);
+    border: 6px double #6D28D9;
+    outline: 3px solid #4C1D95;
+    outline-offset: -8px;
     position: relative;
-    box-shadow: 0 0 50px rgba(109,40,217,0.5);
+    box-shadow: 0 0 60px rgba(109,40,217,0.5), inset 0 0 100px rgba(109,40,217,0.08);
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Georgia', serif;
+    color: #0b0f19;
+}
+
+.complete-cert-full .corner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-color: #6D28D9;
+    border-style: solid;
+    border-width: 0;
+}
+.complete-cert-full .corner.tl { top: 5mm; left: 5mm; border-top-width: 4px; border-left-width: 4px; border-radius: 4px 0 0 0; }
+.complete-cert-full .corner.tr { top: 5mm; right: 5mm; border-top-width: 4px; border-right-width: 4px; border-radius: 0 4px 0 0; }
+.complete-cert-full .corner.bl { bottom: 5mm; left: 5mm; border-bottom-width: 4px; border-left-width: 4px; border-radius: 0 0 0 4px; }
+.complete-cert-full .corner.br { bottom: 5mm; right: 5mm; border-bottom-width: 4px; border-right-width: 4px; border-radius: 0 0 4px 0; }
+
+.complete-cert-full .watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    font-size: 75pt;
+    font-weight: 800;
+    color: rgba(109, 40, 217, 0.05);
+    letter-spacing: 12px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.complete-cert-full .holographic {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg,
+        rgba(109,40,217,0.04) 0%,
+        rgba(20,184,166,0.03) 25%,
+        rgba(109,40,217,0.04) 50%,
+        rgba(236,72,153,0.03) 75%,
+        rgba(109,40,217,0.04) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.complete-cert-full .microtext {
+    position: absolute;
+    bottom: 7mm;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3.5pt;
+    letter-spacing: 2px;
+    color: rgba(109, 40, 217, 0.35);
+    font-family: 'JetBrains Mono', monospace;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.complete-cert-full .serial-security {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 7pt;
+    color: #4C1D95;
+    letter-spacing: 2px;
+    border: 1px dashed #6D28D9;
+    padding: 4px 8px;
+    background: rgba(109, 40, 217, 0.05);
+    display: inline-block;
+}
+
+.complete-cert-full .stamp-section {
+    text-align: center;
+    margin: 15px 0;
+    position: relative;
+    z-index: 1;
+}
+.complete-cert-full .stamp-section img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    border-radius: 50%;
+    filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));
+}
+
+.complete-cert-full .signatures-row {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+    position: relative;
+    z-index: 1;
 }

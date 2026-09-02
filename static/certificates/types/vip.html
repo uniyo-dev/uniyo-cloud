@@ -1,48 +1,68 @@
 <div class="vip-cert-full">
-    <div class="certificate-watermark">UNIYO</div>
-    <div class="holographic-effect"></div>
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+    <div class="watermark">UNIYO</div>
+    <div class="holographic"></div>
     
-    <div class="cert-header" style="text-align:center;">
-        <img src="/static/Authenticity/default_stamp.png" style="height:50px;">
-        <p>ETHIOPIAN HIGHER EDUCATION FRESHMAN HUB</p>
-        <h2>🏆 OFFICIAL VIP MONTHLY LEADERSHIP AWARD 🏆</h2>
+    <div style="text-align:center; position:relative; z-index:1;">
+        <img src="/static/Authenticity/default_stamp.png" style="height:45px;object-fit:contain;">
+        <p style="color:#64748b;font-size:9px;letter-spacing:2px;">ETHIOPIAN HIGHER EDUCATION FRESHMAN HUB</p>
+        <h2 style="color:#F59E0B;font-size:16px;margin:8px 0;">🏆 OFFICIAL VIP MONTHLY LEADERSHIP AWARD 🏆</h2>
     </div>
     
-    <div style="text-align:center; margin:20px 0;">
-        <div style="font-size:40px;" id="vipMedal">🥇</div>
-        <h3 id="vipTitle">VIP Certificate</h3>
+    <div style="text-align:center;margin:12px 0;position:relative;z-index:1;">
+        <div style="font-size:35px;" id="vipMedal">🥇</div>
     </div>
     
-    <div style="text-align:center;">
-        <p>This certificate is proudly presented to</p>
-        <div style="font-size:24px; font-weight:700;" id="vipStudentName">Student Name</div>
-        <p id="vipStudentDetails">University • Stream</p>
+    <div style="text-align:center;position:relative;z-index:1;">
+        <p style="font-size:10px;">This certificate is proudly presented to</p>
+        <div style="font-size:22px;font-weight:700;color:#1e1b4b;border-bottom:2px solid #F59E0B;display:inline-block;padding:0 25px 6px;" id="vipStudentName">Student Name</div>
+        <p style="color:#64748b;font-size:11px;" id="vipStudentDetails">University • Stream</p>
     </div>
     
-    <div class="vip-cert-stamps" style="margin:25px 0;">
-        <div class="vip-primary-stamp">
-            <img src="/static/Authenticity/vip1.png" id="vipPrimaryStamp">
+    <div class="stamps-row">
+        <div class="primary-stamp">
+            <img src="/static/Authenticity/vip1.png" id="vipPrimaryStamp" alt="VIP Stamp">
         </div>
-        <div class="vip-secondary-stamp">
-            <img src="/static/Authenticity/super_admin_stamp.png">
-        </div>
-    </div>
-    
-    <div style="display:flex; justify-content:space-around;">
-        <div style="text-align:center;">
-            <img src="/static/Authenticity/super_admin_signature.png" style="height:35px;">
-            <p>Chalachew Agegn</p>
-            <small>Super Admin</small>
-        </div>
-        <div style="text-align:center;">
-            <img src="/static/Authenticity/signature_(content_manager).png" style="height:35px;">
-            <p>Banch Destaw</p>
-            <small>Content Manager</small>
+        <div class="secondary-stamp">
+            <img src="/static/Authenticity/super_admin_stamp.png" alt="Super Admin Stamp">
         </div>
     </div>
     
-    <div style="text-align:center; margin-top:15px;">
-        <div id="vipQR" style="width:70px;height:70px;background:#0B0F19;margin:0 auto;"></div>
-        <small>Scan to Verify</small>
+    <div class="signatures-row">
+        <div class="signature-block">
+            <img src="/static/Authenticity/super_admin_signature.png" alt="Super Admin Signature">
+            <p style="font-size:9px;font-weight:600;margin:2px 0;">Chalachew Agegn</p>
+            <small style="font-size:7px;color:#64748b;">Super Admin</small>
+        </div>
+        <div class="signature-block">
+            <img src="/static/Authenticity/signature_(content_manager).png" alt="Content Manager Signature">
+            <p style="font-size:9px;font-weight:600;margin:2px 0;">Banch Destaw</p>
+            <small style="font-size:7px;color:#64748b;">Content Manager</small>
+        </div>
     </div>
+    
+    <div style="max-width:350px;margin:10px auto;padding:8px;background:rgba(245,158,11,0.05);border-radius:8px;font-size:9px;position:relative;z-index:1;">
+        <div style="display:flex;justify-content:space-between;margin-bottom:3px;">
+            <span>Certificate Number:</span>
+            <span class="serial-security" id="vipCertNumber">UNIYO-XXX</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:3px;">
+            <span>Verification Token:</span>
+            <strong id="vipToken" style="font-size:8px;">-</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;">
+            <span>Issue Date:</span>
+            <strong id="vipIssueDate">-</strong>
+        </div>
+    </div>
+    
+    <div class="qr-section">
+        <div id="vipQR" style="width:65px;height:65px;background:#0B0F19;margin:0 auto;border-radius:4px;"></div>
+        <small style="font-size:7px;color:#94a3b8;">Scan to Verify</small>
+    </div>
+    
+    <div class="microtext">UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE • SECURITY FEATURES INCLUDED • DO NOT COPY • UNIYO AUTHENTIC CERTIFICATE</div>
 </div>
