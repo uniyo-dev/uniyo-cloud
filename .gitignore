@@ -13,3 +13,4 @@ certificates/qr/*
 backups/
 logs/
 .env
+flask_session/
