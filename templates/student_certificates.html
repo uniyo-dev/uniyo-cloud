@@ -1,9 +1,145 @@
 {% extends "base.html" %}
 
-{% block title %}My Certificates - UNIYO{% endblock %}
+{% block title %}My Certificates - UNIYO
+
+<!-- STUDENT CERTIFICATE POPUP -->
+<div id="studentCertPopup" class="popup-overlay" style="display: none;">
+    <div class="popup-card" style="max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto;">
+        <div class="popup-header">
+            <div class="popup-icon">🏆</div>
+            <div class="popup-title">My Certificate</div>
+        </div>
+        <div id="studentCertPopupContent" style="margin-top: 15px; text-align: center;">
+            <p style="color: #94A3B8;">Loading...</p>
+        </div>
+        <div class="popup-actions">
+            <button class="popup-btn popup-btn-outline" onclick="closeStudentCertPopup()">Close</button>
+            <button class="popup-btn popup-btn-primary" onclick="downloadStudentCert()">📥 Download</button>
+        </div>
+    </div>
+</div>
+
+<script>
+function viewStudentCertPopup(certId) {
+    var popup = document.getElementById('studentCertPopup');
+    var content = document.getElementById('studentCertPopupContent');
+    popup.style.display = 'flex';
+    content.innerHTML = '<p style="color: #94A3B8;">Loading...</p>';
+    
+    fetch('/student/api/certificate/' + certId)
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+            if (data.success && data.certificate) {
+                var cert = data.certificate;
+                var html = '<div class="certificate-display">';
+                html += '<img src="/static/Authenticity/UNIYO_Titer.png" style="height:50px;object-fit:contain;">';
+                html += '<div class="cert-title-main">' + (cert.title || 'Certificate') + '</div>';
+                html += '<div style="text-align:center;">';
+                html += '<span class="cert-student-name">' + (cert.full_name || '') + '</span><br>';
+                html += '<span>' + (cert.university || '') + ' • ' + (cert.stream || '') + '</span>';
+                html += '</div>';
+                html += '<div class="cert-details">';
+                html += '<div class="cert-detail-row"><span>Number:</span><strong>' + (cert.certificate_number || '') + '</strong></div>';
+                html += '<div class="cert-detail-row"><span>Type:</span><strong>' + (cert.certificate_type || '').toUpperCase() + '</strong></div>';
+                html += '<div class="cert-detail-row"><span>Date:</span><strong>' + (cert.issue_date || '') + '</strong></div>';
+                html += '</div>';
+                html += '</div>';
+                content.innerHTML = html;
+            } else {
+                content.innerHTML = '<p>Certificate not found</p>';
+            }
+        })
+        .catch(function() {
+            content.innerHTML = '<p>Error loading certificate</p>';
+        });
+}
+
+function closeStudentCertPopup() {
+    document.getElementById('studentCertPopup').style.display = 'none';
+}
+
+function downloadStudentCert() {
+    var content = document.getElementById('studentCertPopupContent').innerHTML;
+    var printWindow = window.open('', '_blank');
+    printWindow.document.write('<html><head><title>Certificate</title></head><body>');
+    printWindow.document.write(content);
+    printWindow.document.write('</body></html>');
+    printWindow.document.close();
+    printWindow.print();
+}
+</script>
+{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/student_certificate.css') }}">
+
+
+<!-- STUDENT CERTIFICATE POPUP -->
+<div id="studentCertPopup" class="popup-overlay" style="display: none;">
+    <div class="popup-card" style="max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto;">
+        <div class="popup-header">
+            <div class="popup-icon">🏆</div>
+            <div class="popup-title">My Certificate</div>
+        </div>
+        <div id="studentCertPopupContent" style="margin-top: 15px; text-align: center;">
+            <p style="color: #94A3B8;">Loading...</p>
+        </div>
+        <div class="popup-actions">
+            <button class="popup-btn popup-btn-outline" onclick="closeStudentCertPopup()">Close</button>
+            <button class="popup-btn popup-btn-primary" onclick="downloadStudentCert()">📥 Download</button>
+        </div>
+    </div>
+</div>
+
+<script>
+function viewStudentCertPopup(certId) {
+    var popup = document.getElementById('studentCertPopup');
+    var content = document.getElementById('studentCertPopupContent');
+    popup.style.display = 'flex';
+    content.innerHTML = '<p style="color: #94A3B8;">Loading...</p>';
+    
+    fetch('/student/api/certificate/' + certId)
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+            if (data.success && data.certificate) {
+                var cert = data.certificate;
+                var html = '<div class="certificate-display">';
+                html += '<img src="/static/Authenticity/UNIYO_Titer.png" style="height:50px;object-fit:contain;">';
+                html += '<div class="cert-title-main">' + (cert.title || 'Certificate') + '</div>';
+                html += '<div style="text-align:center;">';
+                html += '<span class="cert-student-name">' + (cert.full_name || '') + '</span><br>';
+                html += '<span>' + (cert.university || '') + ' • ' + (cert.stream || '') + '</span>';
+                html += '</div>';
+                html += '<div class="cert-details">';
+                html += '<div class="cert-detail-row"><span>Number:</span><strong>' + (cert.certificate_number || '') + '</strong></div>';
+                html += '<div class="cert-detail-row"><span>Type:</span><strong>' + (cert.certificate_type || '').toUpperCase() + '</strong></div>';
+                html += '<div class="cert-detail-row"><span>Date:</span><strong>' + (cert.issue_date || '') + '</strong></div>';
+                html += '</div>';
+                html += '</div>';
+                content.innerHTML = html;
+            } else {
+                content.innerHTML = '<p>Certificate not found</p>';
+            }
+        })
+        .catch(function() {
+            content.innerHTML = '<p>Error loading certificate</p>';
+        });
+}
+
+function closeStudentCertPopup() {
+    document.getElementById('studentCertPopup').style.display = 'none';
+}
+
+function downloadStudentCert() {
+    var content = document.getElementById('studentCertPopupContent').innerHTML;
+    var printWindow = window.open('', '_blank');
+    printWindow.document.write('<html><head><title>Certificate</title></head><body>');
+    printWindow.document.write(content);
+    printWindow.document.write('</body></html>');
+    printWindow.document.close();
+    printWindow.print();
+}
+</script>
 {% endblock %}
 
 {% block content %}
@@ -39,7 +175,7 @@
                 <p>Certificate #: <code>{{ cert.certificate_number }}</code></p>
                 <p>Issued: {{ cert.issue_date|format_date }}</p>
             </div>
-            <a href="{{ url_for('certificate.view_certificate', certificate_id=cert.id) }}" class="btn btn-primary">View</a>
+            <button onclick="viewStudentCertPopup({{ cert.id }})" class="btn btn-primary" style="cursor: pointer; border: none;">👁️ View</button>
         </div>
         {% endfor %}
     </div>
@@ -50,4 +186,72 @@
     {% endif %}
     
 </div>
+
+
+<!-- STUDENT CERTIFICATE POPUP -->
+<div id="studentCertPopup" class="popup-overlay" style="display: none;">
+    <div class="popup-card" style="max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto;">
+        <div class="popup-header">
+            <div class="popup-icon">🏆</div>
+            <div class="popup-title">My Certificate</div>
+        </div>
+        <div id="studentCertPopupContent" style="margin-top: 15px; text-align: center;">
+            <p style="color: #94A3B8;">Loading...</p>
+        </div>
+        <div class="popup-actions">
+            <button class="popup-btn popup-btn-outline" onclick="closeStudentCertPopup()">Close</button>
+            <button class="popup-btn popup-btn-primary" onclick="downloadStudentCert()">📥 Download</button>
+        </div>
+    </div>
+</div>
+
+<script>
+function viewStudentCertPopup(certId) {
+    var popup = document.getElementById('studentCertPopup');
+    var content = document.getElementById('studentCertPopupContent');
+    popup.style.display = 'flex';
+    content.innerHTML = '<p style="color: #94A3B8;">Loading...</p>';
+    
+    fetch('/student/api/certificate/' + certId)
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+            if (data.success && data.certificate) {
+                var cert = data.certificate;
+                var html = '<div class="certificate-display">';
+                html += '<img src="/static/Authenticity/UNIYO_Titer.png" style="height:50px;object-fit:contain;">';
+                html += '<div class="cert-title-main">' + (cert.title || 'Certificate') + '</div>';
+                html += '<div style="text-align:center;">';
+                html += '<span class="cert-student-name">' + (cert.full_name || '') + '</span><br>';
+                html += '<span>' + (cert.university || '') + ' • ' + (cert.stream || '') + '</span>';
+                html += '</div>';
+                html += '<div class="cert-details">';
+                html += '<div class="cert-detail-row"><span>Number:</span><strong>' + (cert.certificate_number || '') + '</strong></div>';
+                html += '<div class="cert-detail-row"><span>Type:</span><strong>' + (cert.certificate_type || '').toUpperCase() + '</strong></div>';
+                html += '<div class="cert-detail-row"><span>Date:</span><strong>' + (cert.issue_date || '') + '</strong></div>';
+                html += '</div>';
+                html += '</div>';
+                content.innerHTML = html;
+            } else {
+                content.innerHTML = '<p>Certificate not found</p>';
+            }
+        })
+        .catch(function() {
+            content.innerHTML = '<p>Error loading certificate</p>';
+        });
+}
+
+function closeStudentCertPopup() {
+    document.getElementById('studentCertPopup').style.display = 'none';
+}
+
+function downloadStudentCert() {
+    var content = document.getElementById('studentCertPopupContent').innerHTML;
+    var printWindow = window.open('', '_blank');
+    printWindow.document.write('<html><head><title>Certificate</title></head><body>');
+    printWindow.document.write(content);
+    printWindow.document.write('</body></html>');
+    printWindow.document.close();
+    printWindow.print();
+}
+</script>
 {% endblock %}
