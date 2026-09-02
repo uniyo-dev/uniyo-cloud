@@ -134,11 +134,11 @@ function renderCertificateByType(cert, content) {
     html += '<div style="display:flex;justify-content:space-around;margin:15px 0;">';
     html += '<div style="text-align:center;">';
     html += '<img src="/static/Authenticity/super_admin_signature.png" style="height:30px;">';
-    html += '<p style="font-size:9px;font-weight:600;">Chalachew Agegn</p><small>Super Admin</small>';
+    html += '<img src="/static/Authenticity/chalalchew_agegn_(super_admin_name).png" style="height:22px;"><small>Super Admin</small>';
     html += '</div>';
     html += '<div style="text-align:center;">';
     html += '<img src="/static/Authenticity/signature_(content_manager).png" style="height:30px;">';
-    html += '<p style="font-size:9px;font-weight:600;">Banch Destaw</p><small>Content Manager</small>';
+    html += '<img src="/static/Authenticity/banch_destaw_(content_manager_name).png" style="height:22px;"><small>Content Manager</small>';
     html += '</div>';
     html += '</div>';
     
