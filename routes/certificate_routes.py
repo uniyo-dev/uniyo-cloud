@@ -88,7 +88,55 @@ def view_certificate_image(certificate_id):
     if image_path and Path(image_path).exists():
         return send_file(str(image_path), mimetype='image/png')
     
-    # Fallback to HTML view if image generation fails
+    # Fallback: Generate simple PNG with Pillow if Playwright fails
+    try:
+        from PIL import Image, ImageDraw, ImageFont
+        from core.paths import CERTIFICATES_DIR
+        
+        cert_number = certificate.get('certificate_number', 'UNKNOWN')
+        cert_id = cert_number.replace('/', '_').replace('\\', '_')
+        fallback_path = CERTIFICATES_DIR / f"{cert_id}_fallback.png"
+        
+        # Create simple certificate with Pillow
+        img = Image.new('RGB', (1240, 1748), '#fffdf9')
+        draw = ImageDraw.Draw(img)
+        
+        # Border
+        draw.rectangle([20, 20, 1220, 1728], outline='#6D28D9', width=5)
+        draw.rectangle([30, 30, 1210, 1718], outline='#F59E0B', width=2)
+        
+        # Title
+        title = certificate.get('title', 'Certificate')
+        name = certificate.get('full_name', 'Student')
+        university = certificate.get('university', '')
+        cert_num = certificate.get('certificate_number', '')
+        
+        # Use default font
+        try:
+            font_large = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 60)
+            font_medium = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 40)
+            font_small = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 30)
+        except:
+            font_large = ImageFont.load_default()
+            font_medium = ImageFont.load_default()
+            font_small = ImageFont.load_default()
+        
+        # Draw text
+        draw.text((620, 100), title, fill='#6D28D9', font=font_large, anchor='mm')
+        draw.text((620, 300), 'This certificate is presented to', fill='#64748b', font=font_small, anchor='mm')
+        draw.text((620, 400), name, fill='#1e1b4b', font=font_large, anchor='mm')
+        draw.text((620, 500), university, fill='#64748b', font=font_medium, anchor='mm')
+        draw.text((620, 700), f'Certificate Number: {cert_num}', fill='#334155', font=font_small, anchor='mm')
+        draw.text((620, 750), f'Issue Date: {certificate.get("issue_date", "")}', fill='#334155', font=font_small, anchor='mm')
+        
+        img.save(str(fallback_path))
+        
+        if fallback_path.exists():
+            return send_file(str(fallback_path), mimetype='image/png')
+    except Exception as e:
+        print(f"Fallback generation failed: {e}")
+    
+    # Final fallback: redirect to HTML view
     return redirect(url_for('certificate.view_certificate', certificate_id=certificate_id))
 
 
