@@ -87,23 +87,8 @@ def view_certificate_image(certificate_id):
     
     # Generate certificate image
     # Use Pillow as PRIMARY (works on all Python versions)
-    # Try Playwright FIRST (full quality)
-    try:
-        print(f"[DEBUG] Generating with Playwright...")
-        image_path = generate_certificate_image_sync(certificate, qr_data_uri)
-        print(f"[DEBUG] Playwright result: {image_path}")
-    except Exception as e:
-        print(f"[DEBUG] Playwright error: {e}")
-        traceback.print_exc()
-        image_path = None
-    
-    # Fallback to Pillow
-    if not image_path or not Path(image_path).exists():
-        try:
-            image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
-        except Exception as e:
-            print(f"Pillow error: {e}")
-            image_path = None
+    # Use Playwright ONLY (full quality)
+    image_path = generate_certificate_image_sync(certificate, qr_data_uri)
     
     if image_path and Path(image_path).exists():
         return send_file(str(image_path), mimetype='image/png')
@@ -238,23 +223,8 @@ def download_certificate_image(certificate_id):
     qr_data_uri = generate_qr_data_uri(verify_url)
     
     # Use Pillow as PRIMARY (works on all Python versions)
-    # Try Playwright FIRST (full quality)
-    try:
-        print(f"[DEBUG] Generating with Playwright...")
-        image_path = generate_certificate_image_sync(certificate, qr_data_uri)
-        print(f"[DEBUG] Playwright result: {image_path}")
-    except Exception as e:
-        print(f"[DEBUG] Playwright error: {e}")
-        traceback.print_exc()
-        image_path = None
-    
-    # Fallback to Pillow
-    if not image_path or not Path(image_path).exists():
-        try:
-            image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
-        except Exception as e:
-            print(f"Pillow error: {e}")
-            image_path = None
+    # Use Playwright ONLY (full quality)
+    image_path = generate_certificate_image_sync(certificate, qr_data_uri)
     
     if image_path and Path(image_path).exists():
         download_name = f"UNIYO_Certificate_{cert_id}.{format_type}"
