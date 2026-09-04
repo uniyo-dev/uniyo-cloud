@@ -89,8 +89,18 @@ def view_certificate_image(certificate_id):
     # Generate certificate image
     # Use Pillow as PRIMARY (works on all Python versions)
     # Use Playwright (confirmed installed on Render)
-    image_path = generate_certificate_image_sync(certificate, qr_data_uri)
+    import traceback
+    try:
+        print("[DEBUG] Trying Playwright...")
+        image_path = generate_certificate_image_sync(certificate, qr_data_uri)
+        print(f"[DEBUG] Playwright result: {image_path}")
+    except Exception as e:
+        print(f"[DEBUG] Playwright EXCEPTION: {e}")
+        traceback.print_exc()
+        image_path = None
+    
     if not image_path or not Path(image_path).exists():
+        print("[DEBUG] Playwright failed, using Pillow")
         image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
     
     if image_path and Path(image_path).exists():
@@ -227,8 +237,18 @@ def download_certificate_image(certificate_id):
     
     # Use Pillow as PRIMARY (works on all Python versions)
     # Use Playwright (confirmed installed on Render)
-    image_path = generate_certificate_image_sync(certificate, qr_data_uri)
+    import traceback
+    try:
+        print("[DEBUG] Trying Playwright...")
+        image_path = generate_certificate_image_sync(certificate, qr_data_uri)
+        print(f"[DEBUG] Playwright result: {image_path}")
+    except Exception as e:
+        print(f"[DEBUG] Playwright EXCEPTION: {e}")
+        traceback.print_exc()
+        image_path = None
+    
     if not image_path or not Path(image_path).exists():
+        print("[DEBUG] Playwright failed, using Pillow")
         image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
     
     if image_path and Path(image_path).exists():
