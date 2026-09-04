@@ -259,7 +259,23 @@ def build_certificate_html(certificate_data, qr_data_uri, logo_path=None, verifi
         
         /* Guilloché Pattern */
         .guilloche {{
-        .gold-foil {
+            position: absolute;
+            top: 60px;
+            left: 60px;
+            right: 60px;
+            bottom: 60px;
+            background-image: repeating-radial-gradient(
+                circle at 50% 50%,
+                transparent 0,
+                rgba(0,0,0,0.02) 1px,
+                transparent 2px,
+                transparent 20px
+            );
+            pointer-events: none;
+            z-index: 0;
+        }}
+        
+        .gold-foil {{
             position: absolute;
             top: 0;
             left: 0;
@@ -268,9 +284,9 @@ def build_certificate_html(certificate_data, qr_data_uri, logo_path=None, verifi
             background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(252,211,77,0.15));
             pointer-events: none;
             z-index: 1;
-        }
+        }}
         
-        .sparkle {
+        .sparkle {{
             position: absolute;
             width: 6px;
             height: 6px;
@@ -279,9 +295,9 @@ def build_certificate_html(certificate_data, qr_data_uri, logo_path=None, verifi
             pointer-events: none;
             z-index: 1;
             box-shadow: 0 0 10px #F59E0B;
-        }
+        }}
         
-        .holographic {
+        .holographic {{
             position: absolute;
             top: 0;
             left: 0;
@@ -290,7 +306,7 @@ def build_certificate_html(certificate_data, qr_data_uri, logo_path=None, verifi
             background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(109,40,217,0.05));
             pointer-events: none;
             z-index: 1;
-        }
+        }}
 
             position: absolute;
             top: 60px;
