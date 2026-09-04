@@ -91,7 +91,8 @@ def view_certificate_image(certificate_id):
     # Try html2image FIRST (full CSS support with Chromium)
     try:
         print("[DEBUG] Trying html2image...")
-        image_path = generate_certificate_image_with_html2image(certificate, qr_data_uri)
+        from core.certificate_reportlab import generate_certificate_reportlab
+        image_path = generate_certificate_reportlab(certificate, qr_data_uri)
         print(f"[DEBUG] html2image result: {image_path}")
     except Exception as e:
         print(f"[DEBUG] html2image EXCEPTION: {e}")
@@ -237,7 +238,8 @@ def download_certificate_image(certificate_id):
     # Try html2image FIRST (full CSS support with Chromium)
     try:
         print("[DEBUG] Trying html2image...")
-        image_path = generate_certificate_image_with_html2image(certificate, qr_data_uri)
+        from core.certificate_reportlab import generate_certificate_reportlab
+        image_path = generate_certificate_reportlab(certificate, qr_data_uri)
         print(f"[DEBUG] html2image result: {image_path}")
     except Exception as e:
         print(f"[DEBUG] html2image EXCEPTION: {e}")
