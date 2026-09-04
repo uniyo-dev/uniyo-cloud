@@ -25,7 +25,7 @@ from core.constants import PAYMENT_CONFIG, SUPPORTED_LANGUAGES
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'uniyo-dev-secret-key-2024')
-app.config['SESSION_TYPE'] = 'filesystem'
+app.config['SESSION_TYPE'] = 'cookies'
 app.config['SESSION_FILE_DIR'] = str(BASE_DIR / 'flask_session')
 app.config['SESSION_PERMANENT'] = True
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=12)
