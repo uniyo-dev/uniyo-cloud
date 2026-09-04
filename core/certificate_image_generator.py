@@ -754,7 +754,11 @@ def generate_certificate_image_with_html2image(certificate_data, qr_data_uri):
             with sync_playwright() as p:
                 chrome_path = p.chromium.executable_path
         
-        hti = Html2Image(output_path=str(CERTIFICATES_DIR), custom_flags=['--no-sandbox'])
+        hti = Html2Image(
+            output_path=str(CERTIFICATES_DIR),
+            browser_executable=chrome_path,
+            custom_flags=['--no-sandbox', '--headless', '--disable-gpu']
+        )
         
         # Set size based on certificate type
         if certificate_data.get('certificate_type') == 'payment':
