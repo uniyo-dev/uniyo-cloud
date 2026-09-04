@@ -592,9 +592,10 @@ def build_certificate_html(certificate_data, qr_data_uri, logo_path=None, verifi
 
 
 def generate_certificate_image_with_pillow(certificate_data, qr_data_uri):
-    """Generate certificate image using Pillow (always works on any Python)"""
+    """Generate COMPLETE certificate image using Pillow with stamps, QR, barcode"""
     from PIL import Image, ImageDraw, ImageFont
-    from core.paths import CERTIFICATES_DIR
+    from core.paths import CERTIFICATES_DIR, BASE_DIR
+    import os
     
     cert_type = certificate_data.get('certificate_type', 'completion')
     full_name = certificate_data.get('full_name', 'Student')
@@ -604,64 +605,125 @@ def generate_certificate_image_with_pillow(certificate_data, qr_data_uri):
     cert_number = certificate_data.get('certificate_number', 'UNKNOWN')
     title = certificate_data.get('title', 'Certificate')
     issue_date = certificate_data.get('issue_date', '')
+    rank = certificate_data.get('rank')
     
     cert_id = cert_number.replace('/', '_').replace('\\', '_')
     output_path = CERTIFICATES_DIR / f"{cert_id}.png"
     
-    # Set dimensions based on type
+    # Dimensions
     if cert_type == 'payment':
         width, height = 1240, 1748
     else:
         width, height = 2480, 3508
     
+    # Colors
+    colors = {
+        'vip_leaderboard': ('#F59E0B', '#B45309'),
+        'payment': ('#14B8A6', '#0D9488'),
+        'promotion': ('#F97316', '#C2410C'),
+        'other': ('#38BDF8', '#0284C7'),
+    }
+    primary, secondary = colors.get(cert_type, ('#6D28D9', '#4C1D95'))
+    
     # Create image
     img = Image.new('RGB', (width, height), '#fffdf9')
     draw = ImageDraw.Draw(img)
     
-    # Colors
-    if cert_type == 'vip_leaderboard':
-        primary = '#F59E0B'
-    elif cert_type == 'payment':
-        primary = '#14B8A6'
-    elif cert_type == 'promotion':
-        primary = '#F97316'
-    else:
-        primary = '#6D28D9'
-    
-    # Double border
-    draw.rectangle([30, 30, width-30, height-30], outline=primary, width=8)
-    draw.rectangle([50, 50, width-50, height-50], outline='#F59E0B', width=3)
-    
-    # Try to load fonts
+    # Load fonts
     try:
-        font_large = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 80)
-        font_medium = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 40)
-        font_small = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 30)
+        font_title = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 80)
+        font_name = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 100)
+        font_medium = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 45)
+        font_small = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 35)
+        font_micro = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 25)
     except:
-        font_large = ImageFont.load_default()
+        font_title = ImageFont.load_default()
+        font_name = ImageFont.load_default()
         font_medium = ImageFont.load_default()
         font_small = ImageFont.load_default()
+        font_micro = ImageFont.load_default()
+    
+    # Double border
+    draw.rectangle([40, 40, width-40, height-40], outline=primary, width=10)
+    draw.rectangle([55, 55, width-55, height-55], outline='#F59E0B', width=4)
+    
+    # Corner ornaments
+    corner_size = 60
+    draw.line([(40, 40+corner_size), (40, 40), (40+corner_size, 40)], fill=primary, width=8)
+    draw.line([(width-40, 40+corner_size), (width-40, 40), (width-40-corner_size, 40)], fill=primary, width=8)
+    draw.line([(40, height-40-corner_size), (40, height-40), (40+corner_size, height-40)], fill=primary, width=8)
+    draw.line([(width-40, height-40-corner_size), (width-40, height-40), (width-40-corner_size, height-40)], fill=primary, width=8)
+    
+    # Watermark (diagonal UNIYO)
+    watermark = Image.new('RGBA', (width, height), (0,0,0,0))
+    watermark_draw = ImageDraw.Draw(watermark)
+    watermark_draw.text((width//2, height//2), "UNIYO", fill=(109,40,217,15), font=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 300) if os.path.exists('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf') else ImageFont.load_default(), anchor='mm')
+    watermark = watermark.rotate(-30, center=(width//2, height//2))
+    img.paste(watermark, (0,0), watermark)
+    draw = ImageDraw.Draw(img)
     
     # Title
-    draw.text((width//2, 150), title, fill=primary, font=font_large, anchor='mm')
+    draw.text((width//2, 200), title.upper(), fill=primary, font=font_title, anchor='mm')
+    draw.text((width//2, 300), "Ethiopian Higher Education Freshman Hub", fill='#64748b', font=font_small, anchor='mm')
     
     # Student name
-    draw.text((width//2, height//2 - 100), full_name, fill='#1e1b4b', font=font_large, anchor='mm')
+    draw.text((width//2, height//2 - 200), "This certificate is proudly presented to", fill='#64748b', font=font_medium, anchor='mm')
+    draw.text((width//2, height//2 - 50), full_name, fill='#1e1b4b', font=font_name, anchor='mm')
     
-    # University
+    # Reason text
+    reason = "For successfully completing lessons and worksheets with dedication."
+    draw.text((width//2, height//2 + 100), reason, fill='#334155', font=font_medium, anchor='mm')
+    
+    # University details
     details = university
     if stream:
         details += f" • {stream} Science"
     if sex:
         details += f" • {sex}"
-    draw.text((width//2, height//2 + 50), details, fill='#64748b', font=font_medium, anchor='mm')
+    draw.text((width//2, height//2 + 200), details, fill='#64748b', font=font_small, anchor='mm')
     
-    # Certificate number
-    draw.text((width//2, height - 300), f"Certificate Number: {cert_number}", fill='#334155', font=font_small, anchor='mm')
-    draw.text((width//2, height - 250), f"Date: {issue_date}", fill='#334155', font=font_small, anchor='mm')
+    # Credentials
+    y = height//2 + 350
+    draw.text((width//2 - 400, y), "Certificate Number:", fill='#334155', font=font_small)
+    draw.text((width//2 + 400, y), cert_number, fill='#1e1b4b', font=font_small, anchor='ra')
+    y += 60
+    draw.text((width//2 - 400, y), "Issue Date:", fill='#334155', font=font_small)
+    draw.text((width//2 + 400, y), issue_date[:10], fill='#1e1b4b', font=font_small, anchor='ra')
+    y += 60
+    draw.text((width//2 - 400, y), "Type:", fill='#334155', font=font_small)
+    draw.text((width//2 + 400, y), cert_type.upper(), fill=primary, font=font_small, anchor='ra')
+    y += 60
+    draw.text((width//2, y), f"Verify at: https://uniyo-cloud.onrender.com/verify/{certificate_data.get('verification_token','')}", fill=primary, font=font_micro, anchor='mm')
+    
+    # QR Code
+    try:
+        qr_img = Image.open(BASE_DIR / 'certificates' / 'qr' / f"{cert_id}.png") if (BASE_DIR / 'certificates' / 'qr' / f"{cert_id}.png").exists() else None
+    except:
+        qr_img = None
+    
+    # Stamps
+    auth_dir = BASE_DIR / 'static' / 'Authenticity'
+    if cert_type == 'vip_leaderboard' and rank:
+        stamp_file = auth_dir / f'vip{min(rank,5)}.png'
+    elif cert_type == 'payment':
+        stamp_file = auth_dir / 'paid.png'
+    elif cert_type == 'promotion':
+        stamp_file = auth_dir / 'promotion.png'
+    else:
+        stamp_file = auth_dir / 'general.png'
+    
+    if stamp_file.exists():
+        stamp = Image.open(stamp_file).resize((150, 150), Image.LANCZOS)
+        img.paste(stamp, (width//2 - 75, height - 400), stamp)
+    
+    # Signatures
+    sig_file = auth_dir / 'super_admin_signature.png'
+    if sig_file.exists():
+        sig = Image.open(sig_file).resize((150, 60), Image.LANCZOS)
+        img.paste(sig, (width//2 - 350, height - 250), sig)
     
     # Microtext
-    draw.text((width//2, height - 100), "UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE", fill='#94a3b8', font=font_small, anchor='mm')
+    draw.text((width//2, height - 80), "UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE • SECURITY FEATURES INCLUDED", fill='#94a3b8', font=font_micro, anchor='mm')
     
     img.save(str(output_path))
     return output_path
