@@ -744,7 +744,17 @@ def generate_certificate_image_with_html2image(certificate_data, qr_data_uri):
     
     try:
         from html2image import Html2Image
-        hti = Html2Image(output_path=str(CERTIFICATES_DIR))
+        import subprocess
+        # Find Chrome from Playwright
+        chrome_path = subprocess.run(['which', 'chromium', 'google-chrome', 'chrome'], 
+                                     capture_output=True, text=True).stdout.strip()
+        if not chrome_path:
+            # Try Playwright's chromium
+            from playwright.sync_api import sync_playwright
+            with sync_playwright() as p:
+                chrome_path = p.chromium.executable_path
+        
+        hti = Html2Image(output_path=str(CERTIFICATES_DIR), custom_flags=['--no-sandbox'])
         
         # Set size based on certificate type
         if certificate_data.get('certificate_type') == 'payment':

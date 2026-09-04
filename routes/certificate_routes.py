@@ -88,12 +88,8 @@ def view_certificate_image(certificate_id):
     
     # Generate certificate image
     # Use Pillow as PRIMARY (works on all Python versions)
-    # Try html2image FIRST (full CSS support)
-    try:
-        image_path = generate_certificate_image_with_html2image(certificate, qr_data_uri)
-    except:
-        image_path = None
-    
+    # Use Playwright (confirmed installed on Render)
+    image_path = generate_certificate_image_sync(certificate, qr_data_uri)
     if not image_path or not Path(image_path).exists():
         image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
     
@@ -230,12 +226,8 @@ def download_certificate_image(certificate_id):
     qr_data_uri = generate_qr_data_uri(verify_url)
     
     # Use Pillow as PRIMARY (works on all Python versions)
-    # Try html2image FIRST (full CSS support)
-    try:
-        image_path = generate_certificate_image_with_html2image(certificate, qr_data_uri)
-    except:
-        image_path = None
-    
+    # Use Playwright (confirmed installed on Render)
+    image_path = generate_certificate_image_sync(certificate, qr_data_uri)
     if not image_path or not Path(image_path).exists():
         image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
     
