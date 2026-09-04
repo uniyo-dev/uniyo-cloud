@@ -3,6 +3,7 @@ UNIYO LMS - Certificate Viewing Routes
 """
 
 from flask import Blueprint, render_template, redirect, url_for, session, flash
+from pathlib import Path
 from core.db import get_db
 from core.auth import login_required
 from core.helpers import generate_qr_data_uri
