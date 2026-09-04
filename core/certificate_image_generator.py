@@ -70,6 +70,7 @@ def build_certificate_html(certificate_data, qr_data_uri, logo_path=None, verifi
         verification_url = certificate_data.get('verification_url', 'https://uniyo-cloud.onrender.com/verify')
     
     full_name = certificate_data.get('full_name', '')
+    sex = certificate_data.get('sex', '')
     university = certificate_data.get('university', '')
     stream = certificate_data.get('stream', '')
     cert_number = certificate_data.get('certificate_number', '')
@@ -112,7 +113,7 @@ def build_certificate_html(certificate_data, qr_data_uri, logo_path=None, verifi
         primary_stamp = str(auth_dir / 'promotion.png')
         secondary_stamp = str(auth_dir / 'super_admin_stamp.png')
         has_secondary_stamp = True
-    elif cert_type == 'other':
+    elif cert_type in ['other', 'excellence', 'content_creator', 'marketing_manager', 'advertiser', 'staff', 'special_congratulations', 'participation', 'appreciation', 'congratulations']:
         # Other: Primary = super_admin_stamp only
         primary_stamp = str(auth_dir / 'super_admin_stamp.png')
         secondary_stamp = None
@@ -243,6 +244,38 @@ def build_certificate_html(certificate_data, qr_data_uri, logo_path=None, verifi
             z-index: 1;
         }}
         
+        /* Corner Ornaments */
+        .corner-ornament {{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            z-index: 2;
+            pointer-events: none;
+        }}
+        .corner-ornament::before {{
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-color: {primary_color};
+            border-style: solid;
+            border-width: 0;
+        }}
+        .corner-ornament.tl::before {{ top: 15px; left: 15px; border-top-width: 5px; border-left-width: 5px; }}
+        .corner-ornament.tr::before {{ top: 15px; right: 15px; border-top-width: 5px; border-right-width: 5px; }}
+        .corner-ornament.bl::before {{ bottom: 15px; left: 15px; border-bottom-width: 5px; border-left-width: 5px; }}
+        .corner-ornament.br::before {{ bottom: 15px; right: 15px; border-bottom-width: 5px; border-right-width: 5px; }}
+        .corner-ornament::after {{
+            content: '◆';
+            position: absolute;
+            font-size: 14px;
+            color: {accent_color};
+        }}
+        .corner-ornament.tl::after {{ top: 5px; left: 5px; }}
+        .corner-ornament.tr::after {{ top: 5px; right: 5px; }}
+        .corner-ornament.bl::after {{ bottom: 5px; left: 5px; }}
+        .corner-ornament.br::after {{ bottom: 5px; right: 5px; }}
+
         /* Watermark */
         .watermark {{
             position: absolute;
@@ -449,6 +482,10 @@ def build_certificate_html(certificate_data, qr_data_uri, logo_path=None, verifi
 </head>
 <body>
     <div class="certificate">
+        <div class="corner-ornament tl"></div>
+        <div class="corner-ornament tr"></div>
+        <div class="corner-ornament bl"></div>
+        <div class="corner-ornament br"></div>
         <div class="watermark">{'UNIYO PAID' if cert_type == 'payment' else 'UNIYO'}</div>
         <div class="guilloche"></div>
         {'<div class="gold-foil"></div>' if has_gold_foil else ''}
@@ -458,14 +495,13 @@ def build_certificate_html(certificate_data, qr_data_uri, logo_path=None, verifi
         
         <div class="header">
             <img src="file://{logo_path}" alt="UNIYO" style="height: 80px; object-fit: contain; margin-bottom: 20px;">
-            <div class="title">{{ title_text }}</div>
+            <div class="title">{title_text}</div>
             <div class="subtitle">Ethiopian Higher Education Freshman Hub</div>
         </div>
         
         <div class="recipient">
             <div style="font-size: {'20px' if cert_type == 'payment' else '30px'}; color: #64748b;">{'PAYMENT RECEIVED FROM' if cert_type == 'payment' else 'This certificate is proudly presented to'}</div>
-            <div class="student-name">{{ full_name }}</div>
-            <div class="student-details">{{ university }}</div>
+            <div class="student-name">{full_name}</div>
             {'''
             <div style="max-width: 1400px; margin: 25px auto; padding: 15px 30px; background: rgba(0,0,0,0.03); border-radius: 10px; font-size: ''' + ('16px' if cert_type == 'payment' else '22px') + '''; color: #334155; text-align: center; line-height: 1.6;">
                 ''' + ('For payment of 200 ETB for UNIYO Premium Subscription (1 Year Access).' if cert_type == 'payment' else
@@ -482,29 +518,30 @@ def build_certificate_html(certificate_data, qr_data_uri, logo_path=None, verifi
                 'For successfully completing lessons and worksheets with dedication and academic excellence.') + '''
             </div>
             '''}
+            <div class="student-details">{university} • {stream} Science • {sex}</div>
             {'<div style="margin: 15px auto; display: inline-block; padding: 10px 30px; border: 3px solid #22C55E; border-radius: 50%; font-size: 30px; font-weight: 800; color: #22C55E; transform: rotate(-15deg);">✓ PAID</div>' if cert_type == 'payment' else ''}
         </div>
         
         <div class="credentials">
             <div class="credential-row">
                 <span>{'Receipt Number' if cert_type == 'payment' else 'Certificate Number'}:</span>
-                <strong style="font-family: 'Courier Prime', 'Courier New', monospace;">{{ cert_number }}</strong>
+                <strong style="font-family: 'Courier Prime', 'Courier New', monospace;">{cert_number}</strong>
             </div>
             <div class="credential-row">
                 <span>Verification Token:</span>
-                <strong style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 18px;">{{ certificate_data.get('verification_token', '')[:30] }}...</strong>
+                <strong style="font-family: 'Courier Prime', 'Courier New', monospace; font-size: 18px;">{certificate_data.get('verification_token', '')[:30]}...</strong>
             </div>
             {'<div class="credential-row"><span>Transaction Hash:</span><strong style="font-family: Courier New, monospace; font-size: 14px;">' + certificate_data.get('verification_token', '')[:40] + '...</strong></div>' if cert_type == 'payment' else ''}
             <div class="credential-row">
                 <span>{'Date' if cert_type == 'payment' else 'Issue Date'}:</span>
-                <strong>{{ issue_date }}</strong>
+                <strong>{issue_date}</strong>
             </div>
             {'<div class="credential-row"><span>Amount:</span><strong style="color: #14B8A6;">200 ETB</strong></div>' if cert_type == 'payment' else ''}
             {'<div class="credential-row"><span>Payment Method:</span><strong>' + certificate_data.get('payment_method', 'N/A') + '</strong></div>' if cert_type == 'payment' else ''}
             {'<div class="credential-row"><span>Transaction Number:</span><strong>' + certificate_data.get('transaction_number', 'N/A') + '</strong></div>' if cert_type == 'payment' else ''}
             <div class="credential-row">
                 <span>Certificate Type:</span>
-                <strong style="color: {primary_color};">{{ cert_type.upper() }}</strong>
+                <strong style="color: {primary_color};">{cert_type.upper()}</strong>
             </div>
             <div style="text-align: center; margin-top: 15px; font-size: 14px; color: #64748b;">
                 🔍 Verify at: <strong style="color: {primary_color};">{verification_url}</strong>
@@ -521,7 +558,7 @@ def build_certificate_html(certificate_data, qr_data_uri, logo_path=None, verifi
         
         <div class="footer">
             <div class="qr-section">
-                <img src="{{ qr_data_uri }}" alt="QR Code">
+                <img src="{qr_data_uri}" alt="QR Code">
                 <div style="font-size: 20px; color: #64748b; margin-top: 8px;">Scan to Verify</div>
                 <div class="barcode" style="margin-top: 10px; display: flex; align-items: center; justify-content: center; height: 40px;">
                     <div style="width: 2px; height: 35px; background: #000; margin-right: 1px;"></div>
@@ -532,7 +569,7 @@ def build_certificate_html(certificate_data, qr_data_uri, logo_path=None, verifi
                     <div style="width: 1px; height: 35px; background: #fff; margin-right: 1px;"></div>
                     <div style="width: 2px; height: 35px; background: #000; margin-right: 1px;"></div>
                 </div>
-                <small style="font-size: 10px; font-family: 'Courier New', monospace; color: #334155;">{{ cert_number }}</small>
+                <small style="font-size: 10px; font-family: 'Courier New', monospace; color: #334155;">{cert_number}</small>
                 {'<div class="barcode" style="margin-top: 10px;"><div style="width: 2px; height: 40px; background: #000; margin-right: 1px;"></div><div style="width: 1px; height: 40px; background: #fff; margin-right: 1px;"></div><div style="width: 2px; height: 40px; background: #000; margin-right: 1px;"></div><div style="width: 1px; height: 40px; background: #fff; margin-right: 1px;"></div><div style="width: 3px; height: 40px; background: #000; margin-right: 1px;"></div><div style="width: 1px; height: 40px; background: #fff; margin-right: 1px;"></div><div style="width: 2px; height: 40px; background: #000; margin-right: 1px;"></div><small style="font-size: 8px; font-family: Courier New, monospace;">' + cert_number + '</small></div>' if cert_type == 'payment' else ''}
             </div>
             
@@ -541,7 +578,7 @@ def build_certificate_html(certificate_data, qr_data_uri, logo_path=None, verifi
                 <img src="file://{super_admin_name}" alt="Name" style="height: 22px; object-fit: contain; margin-top: 2px;">
                 <div style="font-size: 14px; color: #64748b; margin-top: 4px;">Super Admin</div>
             </div>
-            {'<div style="text-align: center; font-size: 20px;"><img src="file://' + content_manager_signature + '" alt="Signature" style="height: 30px; object-fit: contain;"><img src="file://' + content_manager_name + '" alt="Name" style="height: 22px; object-fit: contain; margin-top: 2px;"><div style="font-size: 14px; color: #64748b; margin-top: 4px;">Content Manager</div></div>' if cert_type not in ['other'] else ''}
+            {'<div style="text-align: center; font-size: 20px;"><img src="file://' + content_manager_signature + '" alt="Signature" style="height: 30px; object-fit: contain;"><img src="file://' + content_manager_name + '" alt="Name" style="height: 22px; object-fit: contain; margin-top: 2px;"><div style="font-size: 14px; color: #64748b; margin-top: 4px;">Content Manager</div></div>' if cert_type not in ['other', 'excellence', 'content_creator', 'marketing_manager', 'advertiser', 'staff', 'special_congratulations', 'participation', 'appreciation', 'congratulations'] else ''}
         </div>
         
         <div class="microtext">{'UNIYO AUTHENTIC PAYMENT RECEIPT • VERIFY ONLINE • ANTI-FRAUD PROTECTED' if cert_type == 'payment' else 'UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE • SECURITY FEATURES INCLUDED'}</div>

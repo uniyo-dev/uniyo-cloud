@@ -563,7 +563,7 @@ def issue_certificate():
     verification_token = generate_verification_token()
     
     # Get student details for the certificate
-    student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (student_id,))
+    student = db.query_one("SELECT full_name, university, stream, sex FROM students WHERE id = ?", (student_id,))
     student = dict(student) if student else {}
     
     sql = "INSERT INTO certificates (student_id, certificate_type, rank, month_year, certificate_number, verification_token, title, issue_date, issued_by, full_name, university, stream) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
@@ -588,7 +588,7 @@ def preview_certificate(certificate_id):
         return redirect(url_for('admin.certificates'))
     
     certificate = dict(certificate)
-    student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (certificate.get('student_id'),))
+    student = db.query_one("SELECT full_name, university, stream, sex FROM students WHERE id = ?", (certificate.get('student_id'),))
     if student:
         student = dict(student)
         certificate['full_name'] = student.get('full_name', '')
@@ -612,7 +612,7 @@ def view_certificate(certificate_id):
         certificate = db.query_one("SELECT * FROM certificates WHERE id = ?", (certificate_id,))
         if certificate:
             certificate = dict(certificate)
-            student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (certificate.get('student_id'),))
+            student = db.query_one("SELECT full_name, university, stream, sex FROM students WHERE id = ?", (certificate.get('student_id'),))
             if student:
                 student = dict(student)
                 certificate['full_name'] = student.get('full_name', '')
@@ -659,7 +659,7 @@ def api_certificate_image(certificate_id):
         return send_file(str(image_path), mimetype='image/png')
     
     # Generate if not exists
-    student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (certificate.get('student_id'),))
+    student = db.query_one("SELECT full_name, university, stream, sex FROM students WHERE id = ?", (certificate.get('student_id'),))
     if student:
         student = dict(student)
         certificate['full_name'] = student.get('full_name', '')
@@ -731,7 +731,7 @@ def api_certificate(certificate_id):
     certificate = db.query_one("SELECT * FROM certificates WHERE id = ?", (certificate_id,))
     if certificate:
         certificate = dict(certificate)
-        student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (certificate.get('student_id'),))
+        student = db.query_one("SELECT full_name, university, stream, sex FROM students WHERE id = ?", (certificate.get('student_id'),))
         if student:
             student = dict(student)
             certificate['full_name'] = student.get('full_name', '')

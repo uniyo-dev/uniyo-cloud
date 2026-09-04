@@ -29,7 +29,7 @@ def view_certificate(certificate_id):
         return redirect(url_for('certificate.my_certificates'))
     if certificate:
         certificate = dict(certificate)
-        student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (certificate['student_id'],))
+        student = db.query_one("SELECT full_name, university, stream, sex FROM students WHERE id = ?", (certificate['student_id'],))
         if student:
             student = dict(student)
             certificate['full_name'] = student.get('full_name', '')
@@ -68,7 +68,7 @@ def view_certificate_image(certificate_id):
     
     # Get student details
     student = db.query_one(
-        "SELECT full_name, university, stream FROM students WHERE id = ?",
+        "SELECT full_name, university, stream, sex FROM students WHERE id = ?",
         (certificate['student_id'],)
     )
     if student:
@@ -204,7 +204,7 @@ def download_certificate_image(certificate_id):
     
     # Generate if not exists
     student = db.query_one(
-        "SELECT full_name, university, stream FROM students WHERE id = ?",
+        "SELECT full_name, university, stream, sex FROM students WHERE id = ?",
         (certificate['student_id'],)
     )
     if student:
@@ -245,7 +245,7 @@ def verify_certificate(token):
     certificate = db.query_one("SELECT * FROM certificates WHERE verification_token = ?", (token,))
     if certificate:
         certificate = dict(certificate)
-        student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (certificate['student_id'],))
+        student = db.query_one("SELECT full_name, university, stream, sex FROM students WHERE id = ?", (certificate['student_id'],))
         if student:
             student = dict(student)
             certificate['full_name'] = student.get('full_name', '')
@@ -267,7 +267,7 @@ def api_student_certificate(certificate_id):
     certificate = db.query_one("SELECT * FROM certificates WHERE id = ? AND student_id = ?", (certificate_id, student_id))
     if certificate:
         certificate = dict(certificate)
-        student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (certificate.get('student_id'),))
+        student = db.query_one("SELECT full_name, university, stream, sex FROM students WHERE id = ?", (certificate.get('student_id'),))
         if student:
             student = dict(student)
             certificate['full_name'] = student.get('full_name', '')
