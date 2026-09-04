@@ -673,8 +673,9 @@ def api_certificate_image(certificate_id):
     verify_url = f"{request.host_url}verify/{certificate.get('verification_token', '')}"
     qr_data_uri = generate_qr_data_uri(verify_url)
     
-    # Use Playwright ONLY (full quality)
-    image_path = generate_certificate_image_sync(certificate, qr_data_uri)
+    # Use Pillow FIRST (works everywhere)
+    from core.certificate_image_generator import generate_certificate_image_with_pillow
+    image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
     
     if image_path and Path(image_path).exists():
         return send_file(str(image_path), mimetype='image/png')

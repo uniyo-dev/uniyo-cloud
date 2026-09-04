@@ -87,8 +87,8 @@ def view_certificate_image(certificate_id):
     
     # Generate certificate image
     # Use Pillow as PRIMARY (works on all Python versions)
-    # Use Playwright ONLY (full quality)
-    image_path = generate_certificate_image_sync(certificate, qr_data_uri)
+    # Use Pillow FIRST (works everywhere)
+    image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
     
     if image_path and Path(image_path).exists():
         return send_file(str(image_path), mimetype='image/png')
@@ -223,8 +223,8 @@ def download_certificate_image(certificate_id):
     qr_data_uri = generate_qr_data_uri(verify_url)
     
     # Use Pillow as PRIMARY (works on all Python versions)
-    # Use Playwright ONLY (full quality)
-    image_path = generate_certificate_image_sync(certificate, qr_data_uri)
+    # Use Pillow FIRST (works everywhere)
+    image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
     
     if image_path and Path(image_path).exists():
         download_name = f"UNIYO_Certificate_{cert_id}.{format_type}"
