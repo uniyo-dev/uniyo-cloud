@@ -84,10 +84,10 @@ def view_certificate_image(certificate_id):
     qr_data_uri = generate_qr_data_uri(verify_url)
     
     # Generate certificate image
-    # Try Pillow first (always works)
+    # Use Pillow as PRIMARY (works on all Python versions)
     image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
     if not image_path or not Path(image_path).exists():
-        # Fallback to Playwright
+        # Fallback to Playwright (if available)
         image_path = generate_certificate_image_sync(certificate, qr_data_uri)
     
     if image_path and Path(image_path).exists():
@@ -222,10 +222,10 @@ def download_certificate_image(certificate_id):
     verify_url = f"{request.host_url}verify/{certificate['verification_token']}"
     qr_data_uri = generate_qr_data_uri(verify_url)
     
-    # Try Pillow first (always works)
+    # Use Pillow as PRIMARY (works on all Python versions)
     image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
     if not image_path or not Path(image_path).exists():
-        # Fallback to Playwright
+        # Fallback to Playwright (if available)
         image_path = generate_certificate_image_sync(certificate, qr_data_uri)
     
     if image_path and Path(image_path).exists():
