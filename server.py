@@ -114,7 +114,9 @@ def debug_html2image():
 def debug_playwright():
     try:
         from playwright.sync_api import sync_playwright
-        return {"playwright_installed": True, "message": "Playwright is available"}
+        with sync_playwright() as p:
+            chrome_path = p.chromium.executable_path
+            return {"playwright_installed": True, "chrome_path": chrome_path, "message": "Playwright is available"}
     except ImportError:
         return {"playwright_installed": False, "message": "Playwright NOT installed"}
     except Exception as e:
