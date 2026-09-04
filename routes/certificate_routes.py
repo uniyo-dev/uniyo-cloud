@@ -52,7 +52,9 @@ def view_certificate(certificate_id):
 def view_certificate_image(certificate_id):
     """Serve certificate as PNG image (no HTML exposed)"""
     from flask import send_file
+    import traceback
     db = get_db()
+    print(f"[DEBUG] Viewing certificate image ID={certificate_id}")
     
     # Verify student owns this certificate
     certificate = db.query_one(
@@ -86,9 +88,12 @@ def view_certificate_image(certificate_id):
     # Generate certificate image
     # Use Pillow as PRIMARY (works on all Python versions)
     try:
+        print(f"[DEBUG] Generating with Pillow...")
         image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
+        print(f"[DEBUG] Pillow result: {image_path}")
     except Exception as e:
-        print(f"Pillow error: {e}")
+        print(f"[DEBUG] Pillow error: {e}")
+        traceback.print_exc()
         image_path = None
     
     if not image_path or not Path(image_path).exists():
@@ -232,9 +237,12 @@ def download_certificate_image(certificate_id):
     
     # Use Pillow as PRIMARY (works on all Python versions)
     try:
+        print(f"[DEBUG] Generating with Pillow...")
         image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
+        print(f"[DEBUG] Pillow result: {image_path}")
     except Exception as e:
-        print(f"Pillow error: {e}")
+        print(f"[DEBUG] Pillow error: {e}")
+        traceback.print_exc()
         image_path = None
     
     if not image_path or not Path(image_path).exists():
