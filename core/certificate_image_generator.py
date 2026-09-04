@@ -16,10 +16,10 @@ from core.helpers import logger
 # CERTIFICATE IMAGE GENERATION
 # ============================================
 
-async def generate_certificate_image(certificate_data, qr_data_uri):
-    """Generate certificate as PNG with all security features"""
+def generate_certificate_image(certificate_data, qr_data_uri):
+    """Generate certificate as PNG with all security features (SYNC version)"""
     try:
-        from playwright.async_api import async_playwright
+        from playwright.sync_api import sync_playwright
     except ImportError:
         logger.error("Playwright not installed")
         return None
@@ -672,7 +672,7 @@ def generate_certificate_image_sync(certificate_data, qr_data_uri):
     """Synchronous wrapper"""
     import traceback
     try:
-        return asyncio.run(generate_certificate_image(certificate_data, qr_data_uri))
+        return generate_certificate_image(certificate_data, qr_data_uri)
     except Exception as e:
         print(f"[PLAYWRIGHT ERROR]: {e}")
         traceback.print_exc()
