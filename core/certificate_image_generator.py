@@ -5,7 +5,6 @@ Features: Museum Quality + Banknote Security + NFT Digital Feel
 """
 
 import os
-import asyncio
 from pathlib import Path
 from datetime import datetime
 
@@ -43,13 +42,13 @@ def generate_certificate_image(certificate_data, qr_data_uri):
             viewport_width = 2480   # A4 at 300 DPI
             viewport_height = 3508  # A4 at 300 DPI
         
-        async with async_playwright() as p:
-            browser = await p.chromium.launch(headless=True)
-            page = await browser.new_page(viewport={'width': viewport_width, 'height': viewport_height})
-            await page.goto(f'file://{temp_html}')
-            await page.wait_for_timeout(2000)
-            await page.screenshot(path=str(output_path), full_page=True, type='png')
-            await browser.close()
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page(viewport={'width': viewport_width, 'height': viewport_height})
+            page.goto(f'file://{temp_html}')
+            page.wait_for_timeout(2000)
+            page.screenshot(path=str(output_path), full_page=True, type='png')
+            browser.close()
         
         temp_html.unlink(missing_ok=True)
         return output_path
