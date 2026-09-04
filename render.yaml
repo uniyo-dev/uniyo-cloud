@@ -5,5 +5,8 @@ services:
     plan: free
     buildCommand: |
       pip install -r requirements.txt
-      playwright install --with-deps chromium
+      playwright install chromium
     startCommand: gunicorn cloud_server:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
