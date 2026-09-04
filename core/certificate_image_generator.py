@@ -60,8 +60,14 @@ async def generate_certificate_image(certificate_data, qr_data_uri):
         return None
 
 
-def build_certificate_html(certificate_data, qr_data_uri):
+def build_certificate_html(certificate_data, qr_data_uri, logo_path=None, verification_url=None):
     """Build enhanced HTML with all security features"""
+    
+    from core.paths import BASE_DIR
+    if logo_path is None:
+        logo_path = str(BASE_DIR / 'static' / 'images' / 'logo.svg')
+    if verification_url is None:
+        verification_url = certificate_data.get('verification_url', 'https://uniyo-cloud.onrender.com/verify')
     
     full_name = certificate_data.get('full_name', '')
     university = certificate_data.get('university', '')
@@ -86,7 +92,44 @@ def build_certificate_html(certificate_data, qr_data_uri):
         has_sparkles = True
         has_color_shift = True
         border_style = 'double'
+    # Stamp configuration (based on certificate type)
+    from core.paths import BASE_DIR
+    auth_dir = BASE_DIR / 'static' / 'Authenticity'
+    
+    if cert_type == 'vip_leaderboard':
+        # VIP: Primary = rank-specific, Secondary = super_admin_stamp
+        vip_rank = rank if rank and rank <= 5 else 1
+        primary_stamp = str(auth_dir / f'vip{vip_rank}.png')
+        secondary_stamp = str(auth_dir / 'super_admin_stamp.png')
+        has_secondary_stamp = True
     elif cert_type == 'payment':
+        # Payment: Primary = paid.png (ecliptical), Secondary = super_admin_stamp
+        primary_stamp = str(auth_dir / 'paid.png')
+        secondary_stamp = str(auth_dir / 'super_admin_stamp.png')
+        has_secondary_stamp = True
+    elif cert_type == 'promotion':
+        # Promotion: Primary = promotion.png, Secondary = super_admin_stamp
+        primary_stamp = str(auth_dir / 'promotion.png')
+        secondary_stamp = str(auth_dir / 'super_admin_stamp.png')
+        has_secondary_stamp = True
+    elif cert_type == 'other':
+        # Other: Primary = super_admin_stamp only
+        primary_stamp = str(auth_dir / 'super_admin_stamp.png')
+        secondary_stamp = None
+        has_secondary_stamp = False
+    else:
+        # Completion (lessons/worksheets): Primary = general.png
+        primary_stamp = str(auth_dir / 'general.png')
+        secondary_stamp = None
+        has_secondary_stamp = False
+    
+    # Signature files
+    super_admin_signature = str(auth_dir / 'super_admin_signature.png')
+    super_admin_name = str(auth_dir / 'chalalchew_agegn_(super_admin_name).png')
+    content_manager_signature = str(auth_dir / 'signature_(content_manager).png')
+    content_manager_name = str(auth_dir / 'banch_destaw_(content_manager_name).png')
+    
+    if cert_type == 'payment':
         primary_color = '#14B8A6'
         secondary_color = '#0D9488'
         accent_color = '#5EEAD4'
@@ -216,6 +259,39 @@ def build_certificate_html(certificate_data, qr_data_uri):
         
         /* Guilloché Pattern */
         .guilloche {{
+        .gold-foil {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(252,211,77,0.15));
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #FCD34D;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+            box-shadow: 0 0 10px #F59E0B;
+        }
+        
+        .holographic {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(109,40,217,0.05));
+            pointer-events: none;
+            z-index: 1;
+        }
+
             position: absolute;
             top: 60px;
             left: 60px;
@@ -359,9 +435,13 @@ def build_certificate_html(certificate_data, qr_data_uri):
     <div class="certificate">
         <div class="watermark">{'UNIYO PAID' if cert_type == 'payment' else 'UNIYO'}</div>
         <div class="guilloche"></div>
+        {'<div class="gold-foil"></div>' if has_gold_foil else ''}
+        {'<div class="holographic"></div>' if has_color_shift else ''}
+        {'<div class="sparkle" style="top: 15%; left: 10%;"></div><div class="sparkle" style="top: 25%; right: 15%;"></div><div class="sparkle" style="top: 45%; left: 20%;"></div><div class="sparkle" style="top: 65%; right: 10%;"></div><div class="sparkle" style="top: 75%; left: 15%;"></div>' if has_sparkles else ''}
         {'<div class="anti-copy"></div>' if cert_type == 'payment' else ''}
         
         <div class="header">
+            <img src="file://{logo_path}" alt="UNIYO" style="height: 80px; object-fit: contain; margin-bottom: 20px;">
             <div class="title">{{ title_text }}</div>
             <div class="subtitle">Ethiopian Higher Education Freshman Hub</div>
         </div>
@@ -370,6 +450,22 @@ def build_certificate_html(certificate_data, qr_data_uri):
             <div style="font-size: {'20px' if cert_type == 'payment' else '30px'}; color: #64748b;">{'PAYMENT RECEIVED FROM' if cert_type == 'payment' else 'This certificate is proudly presented to'}</div>
             <div class="student-name">{{ full_name }}</div>
             <div class="student-details">{{ university }}</div>
+            {'''
+            <div style="max-width: 1400px; margin: 25px auto; padding: 15px 30px; background: rgba(0,0,0,0.03); border-radius: 10px; font-size: ''' + ('16px' if cert_type == 'payment' else '22px') + '''; color: #334155; text-align: center; line-height: 1.6;">
+                ''' + ('For payment of 200 ETB for UNIYO Premium Subscription (1 Year Access).' if cert_type == 'payment' else
+                'For outstanding performance in the UNIYO VIP Monthly Competition, ranking #' + str(rank or 1) + ' among students nationwide.' if cert_type == 'vip_leaderboard' else
+                'In recognition of outstanding contribution to promoting UNIYO across Ethiopian universities.' if cert_type == 'promotion' else
+                'For outstanding academic excellence and exceptional performance in your studies.' if cert_type == 'excellence' else
+                'In recognition of exceptional contribution to creating high-quality educational content for UNIYO students.' if cert_type == 'content_creator' else
+                'In recognition of exceptional leadership in promoting UNIYO to Ethiopian students nationwide.' if cert_type == 'marketing_manager' else
+                'In recognition of exceptional contribution to advertising and promoting UNIYO across Ethiopia.' if cert_type == 'advertiser' else
+                'In recognition of outstanding service and dedication to the UNIYO learning platform.' if cert_type == 'staff' else
+                'In recognition of your hard work and dedication. Congratulations on your achievement!' if cert_type in ['congratulations', 'special_congratulations'] else
+                'For active participation in the UNIYO community and dedication to learning.' if cert_type == 'participation' else
+                'In recognition of outstanding contribution and dedication to the UNIYO learning community.' if cert_type == 'appreciation' else
+                'For successfully completing lessons and worksheets with dedication and academic excellence.') + '''
+            </div>
+            '''}
             {'<div style="margin: 15px auto; display: inline-block; padding: 10px 30px; border: 3px solid #22C55E; border-radius: 50%; font-size: 30px; font-weight: 800; color: #22C55E; transform: rotate(-15deg);">✓ PAID</div>' if cert_type == 'payment' else ''}
         </div>
         
@@ -394,21 +490,42 @@ def build_certificate_html(certificate_data, qr_data_uri):
                 <span>Certificate Type:</span>
                 <strong style="color: {primary_color};">{{ cert_type.upper() }}</strong>
             </div>
+            <div style="text-align: center; margin-top: 15px; font-size: 14px; color: #64748b;">
+                🔍 Verify at: <strong style="color: {primary_color};">{verification_url}</strong>
+            </div>
         </div>
+        
+        <!-- PRIMARY STAMP: Center at Bottom -->
+        <div style="display: flex; justify-content: center; margin: 20px 0 10px 0; position: relative; z-index: 3;">
+            <img src="file://{primary_stamp}" alt="Primary Stamp" style="width: 90px; height: 90px; object-fit: contain; border-radius: 50%;">
+        </div>
+        
+        <!-- SECONDARY STAMP: Right side, 35% from bottom, in FRONT -->
+        {'<div style="position: absolute; bottom: 35%; right: 150px; z-index: 5; opacity: 0.85;"><img src="file://' + secondary_stamp + '" alt="Secondary Stamp" style="width: 70px; height: 70px; object-fit: contain; border-radius: 50%;"></div>' if has_secondary_stamp else ''}
         
         <div class="footer">
             <div class="qr-section">
                 <img src="{{ qr_data_uri }}" alt="QR Code">
                 <div style="font-size: 20px; color: #64748b; margin-top: 8px;">Scan to Verify</div>
+                <div class="barcode" style="margin-top: 10px; display: flex; align-items: center; justify-content: center; height: 40px;">
+                    <div style="width: 2px; height: 35px; background: #000; margin-right: 1px;"></div>
+                    <div style="width: 1px; height: 35px; background: #fff; margin-right: 1px;"></div>
+                    <div style="width: 2px; height: 35px; background: #000; margin-right: 1px;"></div>
+                    <div style="width: 1px; height: 35px; background: #fff; margin-right: 1px;"></div>
+                    <div style="width: 3px; height: 35px; background: #000; margin-right: 1px;"></div>
+                    <div style="width: 1px; height: 35px; background: #fff; margin-right: 1px;"></div>
+                    <div style="width: 2px; height: 35px; background: #000; margin-right: 1px;"></div>
+                </div>
+                <small style="font-size: 10px; font-family: 'Courier New', monospace; color: #334155;">{{ cert_number }}</small>
                 {'<div class="barcode" style="margin-top: 10px;"><div style="width: 2px; height: 40px; background: #000; margin-right: 1px;"></div><div style="width: 1px; height: 40px; background: #fff; margin-right: 1px;"></div><div style="width: 2px; height: 40px; background: #000; margin-right: 1px;"></div><div style="width: 1px; height: 40px; background: #fff; margin-right: 1px;"></div><div style="width: 3px; height: 40px; background: #000; margin-right: 1px;"></div><div style="width: 1px; height: 40px; background: #fff; margin-right: 1px;"></div><div style="width: 2px; height: 40px; background: #000; margin-right: 1px;"></div><small style="font-size: 8px; font-family: Courier New, monospace;">' + cert_number + '</small></div>' if cert_type == 'payment' else ''}
             </div>
             
-            <div style="text-align: center; font-size: 26px;">
-                <div style="border-bottom: 3px solid {primary_color}; padding-bottom: 15px; margin-bottom: 8px;">
-                    Chalachew Agegn
-                </div>
-                <span style="font-size: 20px; color: #64748b;">Super Admin</span>
+            <div style="text-align: center; font-size: 20px;">
+                <img src="file://{super_admin_signature}" alt="Signature" style="height: 30px; object-fit: contain;">
+                <img src="file://{super_admin_name}" alt="Name" style="height: 22px; object-fit: contain; margin-top: 2px;">
+                <div style="font-size: 14px; color: #64748b; margin-top: 4px;">Super Admin</div>
             </div>
+            {'<div style="text-align: center; font-size: 20px;"><img src="file://' + content_manager_signature + '" alt="Signature" style="height: 30px; object-fit: contain;"><img src="file://' + content_manager_name + '" alt="Name" style="height: 22px; object-fit: contain; margin-top: 2px;"><div style="font-size: 14px; color: #64748b; margin-top: 4px;">Content Manager</div></div>' if cert_type not in ['other'] else ''}
         </div>
         
         <div class="microtext">{'UNIYO AUTHENTIC PAYMENT RECEIPT • VERIFY ONLINE • ANTI-FRAUD PROTECTED' if cert_type == 'payment' else 'UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE • SECURITY FEATURES INCLUDED'}</div>

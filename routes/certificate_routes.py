@@ -44,7 +44,8 @@ def view_certificate(certificate_id):
     verify_url = f"{request.host_url}verify/{certificate['verification_token']}"
     qr_data_uri = generate_qr_data_uri(verify_url)
     
-    return render_template('student_certificate.html', certificate=certificate, qr_data_uri=qr_data_uri)
+    # Redirect to image view (no HTML exposed to students)
+    return redirect(url_for('certificate.view_certificate_image', certificate_id=certificate_id))
 
 @certificate_bp.route('/student/certificate/<int:certificate_id>/image', methods=['GET'])
 @login_required
@@ -112,11 +113,31 @@ def view_certificate_image(certificate_id):
         cert_num = certificate.get('certificate_number', '')
         
         # Use default font
-        try:
-            font_large = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 60)
-            font_medium = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 40)
-            font_small = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 30)
-        except:
+        # Try multiple font paths for cross-platform compatibility
+        font_large = None
+        font_medium = None
+        font_small = None
+        
+        font_paths = [
+            '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf',
+            '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',
+            '/usr/share/fonts/TTF/DejaVuSans-Bold.ttf',
+            '/usr/share/fonts/TTF/DejaVuSans.ttf',
+            '/System/Library/Fonts/Helvetica.ttc',
+            '/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf',
+        ]
+        
+        for font_path in font_paths:
+            if Path(font_path).exists():
+                try:
+                    font_large = ImageFont.truetype(font_path, 60)
+                    font_medium = ImageFont.truetype(font_path.replace('Bold', ''), 40)
+                    font_small = ImageFont.truetype(font_path.replace('Bold', ''), 30)
+                    break
+                except:
+                    continue
+        
+        if font_large is None:
             font_large = ImageFont.load_default()
             font_medium = ImageFont.load_default()
             font_small = ImageFont.load_default()
@@ -136,8 +157,8 @@ def view_certificate_image(certificate_id):
     except Exception as e:
         print(f"Fallback generation failed: {e}")
     
-    # Final fallback: redirect to HTML view
-    return redirect(url_for('certificate.view_certificate', certificate_id=certificate_id))
+    # No HTML fallback - return error if image generation completely fails
+    return {"success": False, "error": "Certificate image generation failed"}, 500
 
 
 @certificate_bp.route('/student/certificate/<int:certificate_id>/download', methods=['GET'])
@@ -215,7 +236,7 @@ def download_certificate_image(certificate_id):
         return send_file(str(image_path), as_attachment=True, download_name=download_name, mimetype=mimetype)
     
     flash("Could not generate certificate image", "danger")
-    return redirect(url_for('certificate.view_certificate', certificate_id=certificate_id))
+    return redirect(url_for('certificate.my_certificates'))
 
 
 @certificate_bp.route('/verify/<token>', methods=['GET'])
@@ -259,6 +280,5 @@ def api_student_certificate(certificate_id):
         verify_url = f"{request.host_url}verify/{certificate.get('verification_token', '')}"
         qr_data_uri = generate_qr_data_uri(verify_url)
         
-        html = render_template('student_certificate.html', certificate=certificate, qr_data_uri=qr_data_uri)
-        return html
+        return {"success": True, "redirect": f"/student/certificate/{certificate_id}/image"}
     return {"success": False, "error": "Certificate not found"}

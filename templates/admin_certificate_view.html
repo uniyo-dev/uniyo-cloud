@@ -79,29 +79,29 @@
                 <div class="cert-stamp">
                     {% if certificate.certificate_type == 'vip_leaderboard' %}
                         {% if certificate.rank == 1 %}
-                        <img src="{{ url_for('static', filename='Authenticity/vip1golden.png') }}" alt="VIP Gold" style="width: 90px; height: 90px; object-fit: contain;">
+                        <img src="{{ url_for('static', filename='Authenticity/vip1.png') }}" alt="VIP Gold" style="width: 90px; height: 90px; object-fit: contain;">
                         {% elif certificate.rank == 2 %}
-                        <img src="{{ url_for('static', filename='Authenticity/vip2silver.png') }}" alt="VIP Silver" style="width: 90px; height: 90px; object-fit: contain;">
+                        <img src="{{ url_for('static', filename='Authenticity/vip2.png') }}" alt="VIP Silver" style="width: 90px; height: 90px; object-fit: contain;">
                         {% elif certificate.rank == 3 %}
-                        <img src="{{ url_for('static', filename='Authenticity/vip3bronze.png') }}" alt="VIP Bronze" style="width: 90px; height: 90px; object-fit: contain;">
+                        <img src="{{ url_for('static', filename='Authenticity/vip3.png') }}" alt="VIP Bronze" style="width: 90px; height: 90px; object-fit: contain;">
                         {% elif certificate.rank == 4 %}
-                        <img src="{{ url_for('static', filename='Authenticity/vip4green.png') }}" alt="VIP Green" style="width: 90px; height: 90px; object-fit: contain;">
+                        <img src="{{ url_for('static', filename='Authenticity/vip4.png') }}" alt="VIP Green" style="width: 90px; height: 90px; object-fit: contain;">
                         {% elif certificate.rank == 5 %}
-                        <img src="{{ url_for('static', filename='Authenticity/vip5blue.png') }}" alt="VIP Blue" style="width: 90px; height: 90px; object-fit: contain;">
+                        <img src="{{ url_for('static', filename='Authenticity/vip5.png') }}" alt="VIP Blue" style="width: 90px; height: 90px; object-fit: contain;">
                         {% else %}
-                        <img src="{{ url_for('static', filename='Authenticity/vip1golden.png') }}" alt="VIP" style="width: 90px; height: 90px; object-fit: contain;">
+                        <img src="{{ url_for('static', filename='Authenticity/vip1.png') }}" alt="VIP" style="width: 90px; height: 90px; object-fit: contain;">
                         {% endif %}
                     {% elif certificate.certificate_type == 'completion' %}
-                    <img src="{{ url_for('static', filename='Authenticity/completion.png') }}" alt="Completion" style="width: 85px; height: 85px; object-fit: contain;">
+                    <img src="{{ url_for('static', filename='Authenticity/general.png') }}" alt="Completion" style="width: 85px; height: 85px; object-fit: contain;">
                     {% elif certificate.certificate_type == 'staff' %}
-                    <img src="{{ url_for('static', filename='Authenticity/Super_admin_stamp.png') }}" alt="Admin Stamp" style="width: 85px; height: 85px; object-fit: contain;">
+                    <img src="{{ url_for('static', filename='Authenticity/super_admin_stamp.png') }}" alt="Admin Stamp" style="width: 85px; height: 85px; object-fit: contain;">
                     {% else %}
-                    <img src="{{ url_for('static', filename='Authenticity/UNIYO_Stamp.png') }}" alt="Official" style="width: 85px; height: 85px; object-fit: contain;">
+                    <img src="{{ url_for('static', filename='Authenticity/default_stamp.png') }}" alt="Official" style="width: 85px; height: 85px; object-fit: contain;">
                     {% endif %}
                 </div>
                 <div class="cert-signature-block">
                     <div class="cert-signature-line">
-                        <span class="cert-signature-name">Academic Director</span>
+                        <span class="cert-signature-name">Chalachew Agegn</span>
                     </div>
                     <span class="cert-signature-title">Authorized Signature</span>
                 </div>

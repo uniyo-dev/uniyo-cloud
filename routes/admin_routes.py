@@ -631,7 +631,8 @@ def view_certificate(certificate_id):
     verify_url = f"{request.host_url}verify/{certificate.get('verification_token', '')}"
     qr_data_uri = generate_qr_data_uri(verify_url)
     
-    return render_template('student_certificate.html', certificate=certificate, qr_data_uri=qr_data_uri)
+    # Redirect to PNG image view (no HTML exposed)
+    return redirect(url_for('admin.api_certificate_image', certificate_id=certificate_id))
 
 
 @admin_bp.route('/api/certificates/<int:certificate_id>/image', methods=['GET'])
@@ -742,8 +743,7 @@ def api_certificate(certificate_id):
         verify_url = f"{request.host_url}verify/{certificate.get('verification_token', '')}"
         qr_data_uri = generate_qr_data_uri(verify_url)
         
-        html = render_template('student_certificate.html', certificate=certificate, qr_data_uri=qr_data_uri)
-        return html
+        return {"success": True, "redirect": f"/admin/api/certificates/{certificate_id}/image"}
     return {"success": False, "error": "Certificate not found"}
 
 
