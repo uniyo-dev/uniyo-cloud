@@ -729,6 +729,44 @@ def generate_certificate_image_with_pillow(certificate_data, qr_data_uri):
     return output_path
 
 
+
+
+def generate_certificate_image_with_html2image(certificate_data, qr_data_uri):
+    """Generate certificate using html2image (Chrome-based, full CSS support)"""
+    from core.paths import CERTIFICATES_DIR
+    
+    cert_number = certificate_data.get('certificate_number', 'UNKNOWN')
+    cert_id = cert_number.replace('/', '_').replace('\\', '_')
+    output_path = CERTIFICATES_DIR / f"{cert_id}.png"
+    
+    # Build HTML (reuse existing function)
+    html_content = build_certificate_html(certificate_data, qr_data_uri)
+    
+    try:
+        from html2image import Html2Image
+        hti = Html2Image(output_path=str(CERTIFICATES_DIR))
+        
+        # Set size based on certificate type
+        if certificate_data.get('certificate_type') == 'payment':
+            size = (1240, 1748)
+        else:
+            size = (2480, 3508)
+        
+        hti.screenshot(
+            html_str=html_content,
+            save_as=f"{cert_id}.png",
+            size=size
+        )
+        
+        if output_path.exists():
+            return output_path
+        else:
+            return None
+    except Exception as e:
+        print(f"html2image error: {e}")
+        return None
+
+
 def generate_certificate_image_sync(certificate_data, qr_data_uri):
     """Synchronous wrapper"""
     import traceback

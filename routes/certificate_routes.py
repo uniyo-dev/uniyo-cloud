@@ -7,7 +7,7 @@ from pathlib import Path
 from core.db import get_db
 from core.auth import login_required
 from core.helpers import generate_qr_data_uri
-from core.certificate_image_generator import generate_certificate_image_sync, generate_certificate_image_with_pillow
+from core.certificate_image_generator import generate_certificate_image_sync, generate_certificate_image_with_pillow, generate_certificate_image_with_html2image
 
 certificate_bp = Blueprint('certificate', __name__)
 
@@ -88,8 +88,14 @@ def view_certificate_image(certificate_id):
     
     # Generate certificate image
     # Use Pillow as PRIMARY (works on all Python versions)
-    # Use Pillow FIRST (works everywhere)
-    image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
+    # Try html2image FIRST (full CSS support)
+    try:
+        image_path = generate_certificate_image_with_html2image(certificate, qr_data_uri)
+    except:
+        image_path = None
+    
+    if not image_path or not Path(image_path).exists():
+        image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
     
     if image_path and Path(image_path).exists():
         return send_file(str(image_path), mimetype='image/png')
@@ -224,8 +230,14 @@ def download_certificate_image(certificate_id):
     qr_data_uri = generate_qr_data_uri(verify_url)
     
     # Use Pillow as PRIMARY (works on all Python versions)
-    # Use Pillow FIRST (works everywhere)
-    image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
+    # Try html2image FIRST (full CSS support)
+    try:
+        image_path = generate_certificate_image_with_html2image(certificate, qr_data_uri)
+    except:
+        image_path = None
+    
+    if not image_path or not Path(image_path).exists():
+        image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
     
     if image_path and Path(image_path).exists():
         download_name = f"UNIYO_Certificate_{cert_id}.{format_type}"
@@ -283,7 +295,7 @@ def api_student_certificate(certificate_id):
         
         from flask import request
         from core.helpers import generate_qr_data_uri
-        from core.certificate_image_generator import generate_certificate_image_sync, generate_certificate_image_with_pillow
+        from core.certificate_image_generator import generate_certificate_image_sync, generate_certificate_image_with_pillow, generate_certificate_image_with_html2image
         verify_url = f"{request.host_url}verify/{certificate.get('verification_token', '')}"
         qr_data_uri = generate_qr_data_uri(verify_url)
         
