@@ -670,8 +670,11 @@ def generate_certificate_image_with_pillow(certificate_data, qr_data_uri):
 
 def generate_certificate_image_sync(certificate_data, qr_data_uri):
     """Synchronous wrapper"""
+    import traceback
     try:
         return asyncio.run(generate_certificate_image(certificate_data, qr_data_uri))
     except Exception as e:
+        print(f"[PLAYWRIGHT ERROR]: {e}")
+        traceback.print_exc()
         logger.error(f"Error in sync wrapper: {e}")
         return None
