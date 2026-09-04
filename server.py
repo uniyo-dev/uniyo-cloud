@@ -99,6 +99,17 @@ def internal_error(error):
         return jsonify({"success": False, "error": str(error)}), 500
     return f"<h1>500 Error</h1><pre>{error}</pre><pre>{traceback.format_exc()}</pre>", 500
 
+@app.route('/debug/html2image')
+def debug_html2image():
+    try:
+        from html2image import Html2Image
+        return {"html2image_installed": True, "message": "html2image is available"}
+    except ImportError:
+        return {"html2image_installed": False, "message": "html2image NOT installed"}
+    except Exception as e:
+        return {"html2image_installed": False, "message": str(e)}
+
+
 @app.route('/debug/playwright')
 def debug_playwright():
     try:
