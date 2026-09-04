@@ -8,14 +8,7 @@
 
 {% block content %}
 
-<script>
-(function() {
-    const savedDarkMode = localStorage.getItem('uniyo_dark_mode');
-    if (savedDarkMode === 'light') {
-        document.body.classList.add('light-mode');
-    }
-})();
-</script>
+
 
 <div class="vip-container">
     
@@ -35,7 +28,13 @@
             <div class="vip-timer" data-end-time="{{ vip.end_time }}">
                 Time Remaining: <span class="timer-display">--:--:--</span>
             </div>
+            {% if vip.get('attempted') %}
+            <div style="background: #14B8A6; color: white; padding: 10px; border-radius: 6px; text-align: center; margin: 10px 0;">
+                ✅ Already Attempted
+            </div>
+            {% else %}
             <a href="{{ url_for('vip.take_vip', vip_id=vip.id) }}" class="btn btn-gold btn-block">Take Now</a>
+            {% endif %}
         </div>
         {% endfor %}
     </section>

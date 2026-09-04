@@ -60,12 +60,24 @@
             
             <div class="exam-stats">
                 <span class="views-counter animated-views">
-                    <span class="eye-emoji">👁️</span> 
+                    <span class="eye-emoji">👁️</span>
                     <span class="views-number">{{ exam.views }}</span>
                     <span class="views-label">views</span>
                 </span>
+                <span style="margin-left: 10px; color: #94A3B8; font-size: 11px;">
+                    📝 {{ exam.get('total_attempts', 0) }} attempts
+                </span>
+                {% if exam.get('average_score') is not none %}
+                <span style="margin-left: 10px; color: #F59E0B; font-size: 11px;">
+                    📊 Avg: {{ exam.get('average_score', 0)|round(1) }}%
+                </span>
+                {% endif %}
+                {% if exam.get('attempt_count', 0) > 0 %}
+                <span style="margin-left: 10px; color: #14B8A6; font-size: 11px;">
+                    ✅ Your best: {{ exam.get('best_percentage', 0)|round(1) }}%
+                </span>
+                {% endif %}
             </div>
-            
             <!-- Like/Dislike Buttons -->
             <div class="rating-buttons">
                 <button class="like-btn animated-like {% if student_ratings.get(exam.id) == 'like' %}active{% endif %}" 
@@ -82,6 +94,22 @@
                 </button>
             </div>
             
+            <!-- Share Buttons -->
+            <div class="share-buttons" style="display: flex; gap: 8px; margin: 10px 0; flex-wrap: wrap;">
+                <button onclick="shareExam('telegram', {{ exam.id }}, '{{ exam.course_title }} {{ exam.exam_type }} {{ exam.year }}', {{ exam.views }}, {{ exam.get('total_attempts', 0) }}, {{ exam.get('average_score', 0)|round(1) if exam.get('average_score') else 0 }})" 
+                        style="flex: 1; padding: 8px 12px; background: #0088cc; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 11px; font-weight: 600;">
+                    📱 Telegram
+                </button>
+                <button onclick="shareExam('whatsapp', {{ exam.id }}, '{{ exam.course_title }} {{ exam.exam_type }} {{ exam.year }}', {{ exam.views }}, {{ exam.get('total_attempts', 0) }}, {{ exam.get('average_score', 0)|round(1) if exam.get('average_score') else 0 }})" 
+                        style="flex: 1; padding: 8px 12px; background: #25D366; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 11px; font-weight: 600;">
+                    💬 WhatsApp
+                </button>
+                <button onclick="shareExam('copy', {{ exam.id }}, '{{ exam.course_title }} {{ exam.exam_type }} {{ exam.year }}', {{ exam.views }}, {{ exam.get('total_attempts', 0) }}, {{ exam.get('average_score', 0)|round(1) if exam.get('average_score') else 0 }})" 
+                        style="flex: 1; padding: 8px 12px; background: #6D28D9; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 11px; font-weight: 600;">
+                    🔗 Copy Link
+                </button>
+            </div>
+
             <!-- Start Exam Button -->
             {% if session.get('student_id') %}
             <a href="{{ url_for('past_exam.take_exam', exam_id=exam.id) }}" class="btn btn-primary btn-block">Start Exam</a>
@@ -122,6 +150,33 @@ function rateExam(examId, rating, buttonElement) {
         }
     })
     .catch(() => showToast('Error rating exam', 'danger'));
+}
+
+function shareExam(platform, examId, examTitle, views, attempts, avgScore) {
+    var baseUrl = window.location.origin;
+    var examLink = baseUrl + '/student/past-exam/' + examId + '/take';
+    
+    var message = '📚 UNIYO Past Exam Challenge!\n\n' +
+                  '📝 ' + examTitle + '\n' +
+                  '👁️ ' + views + ' views\n' +
+                  '📊 ' + attempts + ' attempts | Avg: ' + avgScore + '%\n\n' +
+                  '🏆 Can you beat the average?\n\n' +
+                  'Join UNIYO Premium to take this exam!\n' + examLink;
+    
+    var encodedMessage = encodeURIComponent(message);
+    var encodedLink = encodeURIComponent(examLink);
+    
+    if (platform === 'telegram') {
+        window.open('https://t.me/share/url?url=' + encodedLink + '&text=' + encodeURIComponent('📚 UNIYO Past Exam! 📊 ' + attempts + ' attempts | Avg: ' + avgScore + '%\n🏆 Can you beat it?\n\n'), '_blank');
+    } else if (platform === 'whatsapp') {
+        window.open('https://wa.me/?text=' + encodedMessage, '_blank');
+    } else if (platform === 'copy') {
+        navigator.clipboard.writeText(message).then(function() {
+            showToast('Link copied to clipboard!', 'success');
+        }).catch(function() {
+            showToast('Failed to copy', 'danger');
+        });
+    }
 }
 </script>
 {% endblock %}

@@ -23,11 +23,14 @@ def library():
     """Past Exam Library - Browse all exams"""
     db = get_db()
     
-    # Get all active exams
+    # Get all active exams with stats
     exams = db.query('''
-        SELECT * FROM past_exams
-        WHERE is_active = 1
-        ORDER BY views DESC
+        SELECT pe.*,
+               (SELECT COUNT(*) FROM past_exam_attempts pea WHERE pea.past_exam_id = pe.id) as total_attempts,
+               (SELECT AVG(pea.percentage) FROM past_exam_attempts pea WHERE pea.past_exam_id = pe.id) as average_score
+        FROM past_exams pe
+        WHERE pe.is_active = 1
+        ORDER BY pe.views DESC
     ''')
     
     # Determine TOP 3 by views
@@ -71,7 +74,7 @@ def take_exam(exam_id):
     
     # Load exam content
     from core.paths import BASE_DIR
-    exam_file = BASE_DIR / "content" / "past_exams" / exam['university'] / exam['file_path']
+    exam_file = BASE_DIR / "content" / "past_exams" / exam['file_path']
     
     if not exam_file.exists():
         flash("Exam file not found", "danger")
@@ -99,7 +102,7 @@ def submit_exam(exam_id):
         return jsonify({"success": False, "error": "Exam not found"}), 404
     
     # Load exam file for grading
-    exam_file = BASE_DIR / "content" / "past_exams" / exam['university'] / exam['file_path']
+    exam_file = BASE_DIR / "content" / "past_exams" / exam['file_path']
     exam_content = exam_file.read_text(encoding='utf-8')
     
     # Simple grading - extract correct answers from HTML data attributes
@@ -133,18 +136,19 @@ def submit_exam(exam_id):
     
     percentage = (score / total_points * 100) if total_points > 0 else 0
     
-    # Save attempt
+    # Save attempt (single insert)
     db.execute('''
         INSERT INTO past_exam_attempts (past_exam_id, student_id, score, total_points, percentage, answers_json, time_spent_seconds, completed_at)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     ''', (exam_id, session['student_id'], score, total_points, percentage, json.dumps(answers), time_spent, datetime.now().isoformat()))
-    
+
     return jsonify({
         "success": True,
         "score": score,
         "total_points": total_points,
         "percentage": round(percentage, 2),
-        "answer_details": answer_details
+        "answer_details": answer_details,
+        "message": "Your answers have been reviewed. Check below for explanations!"
     })
 
 # ============================================

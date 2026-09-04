@@ -4,6 +4,7 @@ Handles student support, payments, and notifications
 """
 
 import telebot
+import os
 import sys
 from datetime import datetime
 
@@ -16,10 +17,10 @@ from core.db import Database
 # ============================================
 
 # ⚠️ REPLACE WITH YOUR BOT TOKEN FROM BOTFATHER
-BOT_TOKEN = "8932869877:AAHpV-C8MukI3CPo93nSYzYq4www5xMkw-0"
+BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 
 # Your admin Telegram user ID (get from @userinfobot)
-ADMIN_TELEGRAM_ID = "7339699527"
+ADMIN_TELEGRAM_ID = os.environ.get("TELEGRAM_ADMIN_ID", "")
 
 # Payment information
 PAYMENT_INFO = """
@@ -43,7 +44,12 @@ You'll be approved within 24 hours!
 # BOT INITIALIZATION
 # ============================================
 
-bot = telebot.TeleBot(BOT_TOKEN)
+# Only initialize if token is valid
+if BOT_TOKEN and ':' in BOT_TOKEN:
+    bot = telebot.TeleBot(BOT_TOKEN)
+else:
+    bot = None
+    print("⚠ Telegram bot not initialized - invalid token")
 db = Database()
 db.connect()
 

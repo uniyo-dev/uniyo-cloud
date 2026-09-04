@@ -29,7 +29,7 @@
                 <p>Certificate #: <code>{{ cert.certificate_number }}</code></p>
                 <p>Issued: {{ cert.issue_date|format_date }}</p>
             </div>
-            <button onclick="viewStudentCertPopup({{ cert.id }})" class="btn btn-primary" style="cursor: pointer; border: none;">👁️ View</button>
+            <button onclick="viewStudentCertImage({{ cert.id }})" class="btn btn-primary" style="cursor: pointer; border: none;">👁️ View</button>
         </div>
         {% endfor %}
     </div>
@@ -53,10 +53,8 @@
         </div>
         <div class="popup-actions">
             <button class="popup-btn popup-btn-outline" onclick="closeStudentCertPopup()">Close</button>
-            <button class="popup-btn popup-btn-primary" onclick="downloadCertAsPNG()" style="background:#14B8A6; color:white;">📥 PNG</button>
-            <button class="popup-btn popup-btn-primary" onclick="downloadCertAsJPG()" style="background:#F59E0B; color:#0B0F19;">📥 JPG</button>
-            <button class="popup-btn popup-btn-primary" onclick="downloadCertAsPNG()">📥 PNG</button>
-            <button class="popup-btn popup-btn-primary" onclick="downloadCertAsJPG()">📥 JPG</button>
+            <button class="popup-btn popup-btn-primary" onclick="downloadCertificateImage('png')" style="background:#14B8A6; color:white;">📥 PNG</button>
+            <button class="popup-btn popup-btn-primary" onclick="downloadCertificateImage('jpg')" style="background:#F59E0B; color:#0B0F19;">📥 JPG</button>
         </div>
     </div>
 </div>
@@ -85,9 +83,39 @@ function viewStudentCertPopup(certId) {
             content.innerHTML = '<p>Error loading certificate</p>';
         });
 }
-        .catch(function() {
-            content.innerHTML = '<p>Error loading certificate</p>';
-        });
+
+function viewStudentCertImage(certId) {
+    currentCertId = certId;
+    var popup = document.getElementById('studentCertPopup');
+    var content = document.getElementById('studentCertPopupContent');
+    popup.style.display = 'flex';
+    content.innerHTML = '<p style="color: #94A3B8;">Loading certificate...</p>';
+
+    // Show certificate as image (no HTML editing possible)
+    var img = document.createElement('img');
+    img.src = '/student/certificate/' + certId + '/image';
+    img.style.maxWidth = '100%';
+    img.style.height = 'auto';
+    img.style.borderRadius = '8px';
+    img.alt = 'Certificate';
+    
+    img.onload = function() {
+        content.innerHTML = '';
+        content.appendChild(img);
+    };
+    
+    img.onerror = function() {
+        content.innerHTML = '<p>Error loading certificate image</p>';
+    };
+}
+
+let currentCertId = null;
+
+function downloadCertificateImage(format) {
+    if (!currentCertId) return;
+    
+    // Route to download the certificate image
+    window.location.href = '/student/certificate/' + currentCertId + '/download?format=' + format;
 }
 
 function closeStudentCertPopup() {

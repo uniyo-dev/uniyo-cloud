@@ -51,19 +51,19 @@ function toggleAdminTheme() {
         body.classList.remove('light-mode');
         body.style.backgroundColor = '#0B0F19';
         body.style.color = '#F8FAFC';
-        localStorage.setItem('uniyo_admin_dark_mode', 'true');
+        localStorage.setItem('uniyo_admin_theme', 'true');
         if (btn) btn.textContent = '🌙 Dark';
     } else {
         body.classList.add('light-mode');
         body.style.backgroundColor = '#F8FAFC';
         body.style.color = '#0B0F19';
-        localStorage.setItem('uniyo_admin_dark_mode', 'false');
+        localStorage.setItem('uniyo_admin_theme', 'false');
         if (btn) btn.textContent = '☀️ Light';
     }
 }
 
 (function() {
-    var savedMode = localStorage.getItem('uniyo_admin_dark_mode');
+    var savedMode = localStorage.getItem('uniyo_admin_theme');
     var btn = document.getElementById('adminThemeBtn');
     
     if (savedMode === 'false') {

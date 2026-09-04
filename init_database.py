@@ -77,6 +77,8 @@ CREATE TABLE IF NOT EXISTS lessons (
     estimated_minutes INTEGER DEFAULT 5,
     is_premium INTEGER DEFAULT 1,
     is_active INTEGER DEFAULT 1,
+    content_version INTEGER DEFAULT 1,
+    file_hash TEXT,
     created_at TEXT NOT NULL,
     FOREIGN KEY(course_code) REFERENCES courses(code) ON DELETE CASCADE,
     UNIQUE(course_code, chapter_number, part_number, university_specific)
@@ -102,6 +104,8 @@ CREATE TABLE IF NOT EXISTS worksheets (
     title TEXT NOT NULL,
     question_file TEXT NOT NULL,
     is_active INTEGER DEFAULT 1,
+    content_version INTEGER DEFAULT 1,
+    file_hash TEXT,
     created_at TEXT NOT NULL,
     FOREIGN KEY(course_code) REFERENCES courses(code) ON DELETE CASCADE
 );
@@ -158,6 +162,8 @@ CREATE TABLE IF NOT EXISTS past_exams (
     exam_type TEXT NOT NULL,
     file_path TEXT UNIQUE NOT NULL,
     is_active INTEGER DEFAULT 1,
+    content_version INTEGER DEFAULT 1,
+    file_hash TEXT,
     created_at TEXT NOT NULL,
     FOREIGN KEY(course_code) REFERENCES courses(code) ON DELETE CASCADE
 );
@@ -212,8 +218,29 @@ CREATE TABLE IF NOT EXISTS certificates (
     title TEXT NOT NULL,
     issue_date TEXT NOT NULL,
     issued_by INTEGER,
+    full_name TEXT,
+    university TEXT,
+    stream TEXT,
+    phone TEXT,
+    amount REAL,
+    payment_method TEXT,
+    transaction_number TEXT,
     FOREIGN KEY(student_id) REFERENCES students(id) ON DELETE CASCADE,
     FOREIGN KEY(issued_by) REFERENCES admins(id) ON DELETE SET NULL
+);
+
+CREATE TABLE IF NOT EXISTS content_archive (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    content_type TEXT NOT NULL,
+    original_id INTEGER,
+    course_code TEXT,
+    chapter_number INTEGER,
+    part_number INTEGER,
+    title TEXT,
+    file_path TEXT,
+    file_hash TEXT,
+    archived_at TEXT NOT NULL,
+    reason TEXT DEFAULT 'replaced'
 );
 
 CREATE TABLE IF NOT EXISTS notifications (
@@ -290,6 +317,27 @@ def seed_default_admin(db):
             VALUES ('admin', ?, 'System Administrator', 'super_admin', 1)
         ''', (password_hash,))
         logger.info("  Created admin (username: admin, password: Admin@123)")
+
+import hashlib
+
+def get_file_hash(file_path):
+    """Calculate MD5 hash of file content"""
+    try:
+        hash_md5 = hashlib.md5()
+        with open(file_path, 'rb') as f:
+            for chunk in iter(lambda: f.read(4096), b""):
+                hash_md5.update(chunk)
+        return hash_md5.hexdigest()
+    except:
+        return None
+
+def archive_content(db, content_type, entry, reason='replaced'):
+    """Archive old content before replacing"""
+    from datetime import datetime
+    db.execute('''
+        INSERT INTO content_archive (content_type, original_id, course_code, chapter_number, part_number, title, file_path, file_hash, archived_at, reason)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ''', (content_type, entry.get('id'), entry.get('course_code'), entry.get('chapter_number'), entry.get('part_number'), entry.get('title'), entry.get('file_path'), entry.get('file_hash'), datetime.now().isoformat(), reason))
 
 def scan_content_folder(db):
     """Scan lessons folder - HTML files to lessons, JSON files to worksheets"""

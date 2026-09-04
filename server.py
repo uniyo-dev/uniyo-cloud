@@ -5,7 +5,10 @@ UNIYO LMS - Main Server Entry Point
 
 import sys
 import os
+from dotenv import load_dotenv
 from pathlib import Path
+
+load_dotenv()
 from datetime import timedelta
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -43,6 +46,7 @@ from routes.worksheet_routes import worksheet_bp
 from routes.vip_routes import vip_bp
 from routes.certificate_routes import certificate_bp
 from routes.past_exam_routes import past_exam_bp
+from routes.admin_certificates import admin_certificates_bp
 
 app.register_blueprint(student_bp)
 app.register_blueprint(admin_bp)
@@ -52,6 +56,7 @@ app.register_blueprint(worksheet_bp)
 app.register_blueprint(vip_bp)
 app.register_blueprint(certificate_bp)
 app.register_blueprint(past_exam_bp)
+app.register_blueprint(admin_certificates_bp)
 
 @app.template_filter('format_date')
 def format_date(date_string, format='%d %b %Y, %I:%M %p'):

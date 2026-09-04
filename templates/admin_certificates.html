@@ -119,9 +119,15 @@
 
     <section class="admin-section">
         <h3>Issued Certificates</h3>
+        
+        <div style="margin-bottom: 15px;">
+            <input type="text" id="certSearch" placeholder="🔍 Search by name, number, or type..." 
+                   style="width: 100%; padding: 10px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC; font-size: 13px;"
+                   onkeyup="filterCertificates()">
+        </div>
         {% if certificates %}
         <div class="table-wrapper">
-        <table class="certificates-table">
+        <table class="certificates-table" id="certificatesTable">
             <thead>
                 <tr>
                     <th>Number</th>
@@ -177,37 +183,72 @@
 </div>
 
 <script>
+function filterCertificates() {
+    var search = document.getElementById('certSearch').value.toLowerCase();
+    var rows = document.querySelectorAll('.certificates-table tbody tr');
+    
+    rows.forEach(function(row) {
+        var text = row.textContent.toLowerCase();
+        row.style.display = text.includes(search) ? '' : 'none';
+    });
+}
+
+function previewCertificate() {
+    var studentId = document.querySelector('select[name="student_id"]').value;
+    var certType = document.querySelector('select[name="certificate_type"]').value;
+    var title = document.querySelector('input[name="title"]').value || 'Certificate';
+    
+    if (!studentId) {
+        showToast('Please select a student first', 'warning');
+        return;
+    }
+    
+    showToast('Certificate will be issued to selected student', 'info');
+}
+</script>
+
+<script>
 
 
 function viewCertificatePopup(certId) {
     var popup = document.getElementById('certPopup');
     var content = document.getElementById('certPopupContent');
     popup.style.display = 'flex';
-    content.innerHTML = '<p style="color: #94A3B8;">Loading...</p>';
+    content.innerHTML = '<p style="color: #94A3B8;">Loading full certificate...</p>';
 
-    fetch('/admin/api/certificates/' + certId)
-        .then(function(response) { return response.text(); })
-        .then(function(data) {
-            if (data.success && data.certificate) {
-                var cert = data.certificate;
-                var html = '<div class="certificate-display" style="padding:20px; background:#fffdf9; border:4px solid #6D28D9; border-radius:12px;">';
-                html += '<img src="/static/Authenticity/UNIYO_Titer.png" style="height:50px;">';
-                html += '<h3 style="color:#6D28D9;">' + (cert.title || 'Certificate') + '</h3>';
-                html += '<p>Presented to</p>';
-                html += '<strong style="font-size:20px;">' + (cert.full_name || '') + '</strong>';
-                html += '<p>' + (cert.university || '') + ' • ' + (cert.stream || '') + '</p>';
-                html += '<p>Number: ' + (cert.certificate_number || '') + '</p>';
-                html += '<p>Date: ' + (cert.issue_date || '') + '</p>';
-                html += '<p>Type: ' + (cert.certificate_type || '').toUpperCase() + '</p>';
-                html += '</div>';
-                content.innerHTML = html;
-            } else {
-                content.innerHTML = '<p>Certificate not found</p>';
-            }
-        })
-        .catch(function() {
-            content.innerHTML = '<p>Error loading certificate</p>';
-        });
+    // Show the full certificate as PNG image
+    var img = document.createElement('img');
+    img.src = '/admin/api/certificates/' + certId + '/image';
+    img.style.maxWidth = '100%';
+    img.style.height = 'auto';
+    img.style.borderRadius = '8px';
+    img.style.boxShadow = '0 20px 40px rgba(0,0,0,0.3)';
+    img.alt = 'Certificate';
+    
+    img.onload = function() {
+        content.innerHTML = '';
+        content.appendChild(img);
+    };
+    
+    img.onerror = function() {
+        // Fallback to old API if image generation fails
+        fetch('/admin/api/certificates/' + certId)
+            .then(function(response) { return response.text(); })
+            .then(function(data) {
+                var parser = new DOMParser();
+                var doc = parser.parseFromString(data, 'text/html');
+                var certFull = doc.querySelector('.certificate-full-a4') || doc.querySelector('.certificate-display');
+                
+                if (certFull) {
+                    content.innerHTML = certFull.outerHTML;
+                } else {
+                    content.innerHTML = '<p>Certificate not found</p>';
+                }
+            })
+            .catch(function() {
+                content.innerHTML = '<p>Error loading certificate</p>';
+            });
+    };
 }
 
 function closeCertPopup() {

@@ -209,7 +209,10 @@ def approve_payment(payment_id):
         if student_info:
             student_info = dict(student_info)
         
-        db.execute(f"INSERT INTO certificates (student_id, certificate_type, certificate_number, verification_token, title, issue_date, full_name, university, phone, amount, payment_method, transaction_number) VALUES ({payment['student_id']}, 'payment', '{cert_number}', '{token}', 'Payment Receipt', '{datetime.now().isoformat()}', '{student_info.get('full_name', '')}', '{student_info.get('university', '')}', '{student_info.get('phone', '')}', 200, '{payment['payment_method']}', '{payment['transaction_number']}')")
+        db.execute('''
+            INSERT INTO certificates (student_id, certificate_type, certificate_number, verification_token, title, issue_date, full_name, university, phone, amount, payment_method, transaction_number)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ''', (payment['student_id'], 'payment', cert_number, token, 'Payment Receipt', datetime.now().isoformat(), student_info.get('full_name', ''), student_info.get('university', ''), student_info.get('phone', ''), 200, payment['payment_method'], payment['transaction_number']))
         
         flash("Payment approved and receipt issued!", "success")
     except Exception as e:
@@ -412,29 +415,47 @@ def unschedule_vip(vip_id):
 @admin_required
 def publish_past_exam(exam_id):
     db = get_db()
-    
-    # Get form data from exit gate
+
+    exam = db.query_one("SELECT id FROM past_exams WHERE id = ?", (exam_id,))
+    if not exam:
+        flash("Exam not found!", "danger")
+        return redirect(url_for('admin.content_management'))
+
     description = request.form.get('description', '')
+    about = request.form.get('about', '')
     topics_covered = request.form.get('topics_covered', '')
     difficulty_level = request.form.get('difficulty_level', 'Medium')
-    time_limit_minutes = request.form.get('time_limit_minutes', 120)
-    total_questions = request.form.get('total_questions', 0)
-    semester = request.form.get('semester', 1)
     marks_description = request.form.get('marks_description', '')
-    
+
+    try:
+        time_limit_minutes = int(request.form.get('time_limit_minutes', 120))
+    except:
+        time_limit_minutes = 120
+
+    try:
+        total_questions = int(request.form.get('total_questions', 0))
+    except:
+        total_questions = 0
+
+    try:
+        semester = int(request.form.get('semester', 1))
+    except:
+        semester = 1
+
     db.execute('''
-        UPDATE past_exams 
-        SET is_active = 1, 
-            description = ?, 
-            topics_covered = ?, 
-            difficulty_level = ?, 
+        UPDATE past_exams
+        SET is_active = 1,
+            description = ?,
+            about = ?,
+            topics_covered = ?,
+            difficulty_level = ?,
             time_limit_minutes = ?,
             total_questions = ?,
             semester = ?,
             marks_description = ?
         WHERE id = ?
-    ''', (description, topics_covered, difficulty_level, time_limit_minutes, total_questions, semester, marks_description, exam_id))
-    
+    ''', (description, about, topics_covered, difficulty_level, time_limit_minutes, total_questions, semester, marks_description, exam_id))
+
     flash("Past exam published successfully!", "success")
     return redirect(url_for('admin.content_management'))
 
@@ -554,6 +575,33 @@ def issue_certificate():
     return redirect(url_for('admin.certificates'))
 
 
+@admin_bp.route('/certificates/<int:certificate_id>/preview', methods=['GET'])
+@admin_required
+def preview_certificate(certificate_id):
+    """Admin certificate preview with 3D tilt"""
+    db = get_db()
+    certificate = db.query_one("SELECT * FROM certificates WHERE id = ?", (certificate_id,))
+    
+    if not certificate:
+        flash("Certificate not found", "danger")
+        return redirect(url_for('admin.certificates'))
+    
+    certificate = dict(certificate)
+    student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (certificate.get('student_id'),))
+    if student:
+        student = dict(student)
+        certificate['full_name'] = student.get('full_name', '')
+        certificate['university'] = student.get('university', '')
+        certificate['stream'] = student.get('stream', '')
+    
+    from flask import request
+    from core.helpers import generate_qr_data_uri
+    verify_url = f"{request.host_url}verify/{certificate.get('verification_token', '')}"
+    qr_data_uri = generate_qr_data_uri(verify_url)
+    
+    return render_template('admin_certificate_preview.html', certificate=certificate, qr_data_uri=qr_data_uri)
+
+
 @admin_bp.route('/certificates/<int:certificate_id>/view', methods=['GET'])
 @admin_required
 def view_certificate(certificate_id):
@@ -583,6 +631,52 @@ def view_certificate(certificate_id):
     qr_data_uri = generate_qr_data_uri(verify_url)
     
     return render_template('student_certificate.html', certificate=certificate, qr_data_uri=qr_data_uri)
+
+
+@admin_bp.route('/api/certificates/<int:certificate_id>/image', methods=['GET'])
+@admin_required
+def api_certificate_image(certificate_id):
+    """Serve full certificate as PNG image for admin viewing"""
+    from flask import send_file
+    from core.paths import CERTIFICATES_DIR
+    
+    db = get_db()
+    certificate = db.query_one("SELECT * FROM certificates WHERE id = ?", (certificate_id,))
+    
+    if not certificate:
+        return {"success": False, "error": "Certificate not found"}
+    
+    certificate = dict(certificate)
+    
+    # Check if PNG already exists
+    cert_number = certificate.get('certificate_number', 'UNKNOWN')
+    cert_id = cert_number.replace('/', '_').replace('\\', '_')
+    image_path = CERTIFICATES_DIR / f"{cert_id}.png"
+    
+    if image_path.exists():
+        return send_file(str(image_path), mimetype='image/png')
+    
+    # Generate if not exists
+    student = db.query_one("SELECT full_name, university, stream FROM students WHERE id = ?", (certificate.get('student_id'),))
+    if student:
+        student = dict(student)
+        certificate['full_name'] = student.get('full_name', '')
+        certificate['university'] = student.get('university', '')
+        certificate['stream'] = student.get('stream', '')
+    
+    from flask import request
+    from core.helpers import generate_qr_data_uri
+    from core.certificate_image_generator import generate_certificate_image_sync
+    
+    verify_url = f"{request.host_url}verify/{certificate.get('verification_token', '')}"
+    qr_data_uri = generate_qr_data_uri(verify_url)
+    
+    image_path = generate_certificate_image_sync(certificate, qr_data_uri)
+    
+    if image_path and Path(image_path).exists():
+        return send_file(str(image_path), mimetype='image/png')
+    
+    return {"success": False, "error": "Could not generate certificate image"}
 
 
 @admin_bp.route('/api/certificates/<int:certificate_id>', methods=['GET'])
@@ -618,7 +712,7 @@ def delete_certificate(certificate_id):
     cert = db.query_one("SELECT * FROM certificates WHERE id = ?", (certificate_id,))
     if cert:
         cert = dict(cert)
-        db.execute(f"DELETE FROM certificates WHERE id = {certificate_id}")
+        db.execute("DELETE FROM certificates WHERE id = ?", (certificate_id,))
         flash("Certificate deleted", "success")
     else:
         flash("Certificate not found", "danger")
@@ -651,7 +745,10 @@ def issue_receipt(payment_id):
         receipt_transaction = request.form.get('transaction_number', payment['transaction_number'])
         receipt_title = request.form.get('title', 'Payment Receipt')
         
-        db.execute(f"INSERT INTO certificates (student_id, certificate_type, certificate_number, verification_token, title, issue_date, full_name, university, phone) VALUES ({payment['student_id']}, 'payment', '{cert_number}', '{token}', '{receipt_title}', '{datetime.now().isoformat()}', '{student_info.get('full_name', '')}', '{student_info.get('university', '')}', '{student_info.get('phone', '')}')")
+        db.execute('''
+            INSERT INTO certificates (student_id, certificate_type, certificate_number, verification_token, title, issue_date, full_name, university, phone)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ''', (payment['student_id'], 'payment', cert_number, token, receipt_title, datetime.now().isoformat(), student_info.get('full_name', ''), student_info.get('university', ''), student_info.get('phone', '')))
         
         flash("Receipt issued successfully!", "success")
     except Exception as e:

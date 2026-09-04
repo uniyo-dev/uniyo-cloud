@@ -7,7 +7,8 @@
     <meta name="theme-color" content="#0B0F19">
 
 
-    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
     <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/logo.svg') }}">
     <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='images/logo.svg') }}">
     <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
@@ -100,7 +101,7 @@
 <script>
 (function() {
     const isAdmin = window.location.pathname.includes('/admin');
-    const key = isAdmin ? 'uniyo_admin_theme' : 'uniyo_student_theme';
+    const key = isAdmin ? 'uniyo_admin_theme' : 'uniyo_dark_mode';
     const saved = localStorage.getItem(key) || 'dark';
     
     if (saved === 'light') {

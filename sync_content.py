@@ -2,12 +2,13 @@
 Auto-sync content from files to Turso on every server start
 """
 
+import os
 import requests
 import json
 from pathlib import Path
 
-TURSO_URL = "https://uniyo-uniyo-dev.aws-us-east-2.turso.io"
-TURSO_TOKEN = "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3ODcyNjE4MjYsImlkIjoiMDFhMDIxMWEtNDkwMS03ZDY2LTk5ODEtZDc5NTcxMDYyNTVhIiwia2lkIjoiT29jQW5QU0Fjc0xicXV2MGI4ekdyaUtfT2ZyS0UxY2FEc3BaU3VkQVFFOCIsInJpZCI6IjU2ZDU3NzkzLTFhZmMtNGNiMC04NDJkLTY4MjRlNGQ0YThmNiJ9.BkDZq1Vhl_vuZ1hmenaJIbkwfu-5Nglr09vgFNPKIorOWU_iwFflaECdWE1RhJsHeom3sw7bwnsSKpllyExSBQ"
+TURSO_URL = os.environ.get("TURSO_URL", "https://uniyo-uniyo-dev.aws-us-east-2.turso.io")
+TURSO_TOKEN = os.environ.get("TURSO_TOKEN", "")
 
 headers = {
     "Authorization": f"Bearer {TURSO_TOKEN}",
