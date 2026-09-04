@@ -86,24 +86,19 @@ def view_certificate_image(certificate_id):
     verify_url = f"{request.host_url}verify/{certificate['verification_token']}"
     qr_data_uri = generate_qr_data_uri(verify_url)
     
-    # Generate certificate image
-    # Use Pillow as PRIMARY (works on all Python versions)
-    # Try html2image FIRST (full CSS support with Chromium)
-    try:
-        print("[DEBUG] Trying html2image...")
-        from core.certificate_reportlab import generate_certificate_reportlab
-        image_path = generate_certificate_reportlab(certificate, qr_data_uri)
-        print(f"[DEBUG] html2image result: {image_path}")
-    except Exception as e:
-        print(f"[DEBUG] html2image EXCEPTION: {e}")
-        image_path = None
+    # Generate certificate using ReportLab (Professional PDF)
+    from core.certificate_reportlab import generate_certificate_reportlab
+    pdf_path = generate_certificate_reportlab(certificate, qr_data_uri)
     
-    if not image_path or not Path(image_path).exists():
-        print("[DEBUG] html2image failed, using Pillow")
-        image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
+    if pdf_path and Path(pdf_path).exists():
+        return send_file(str(pdf_path), mimetype='application/pdf')
     
+    # Fallback to Pillow
+    image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
     if image_path and Path(image_path).exists():
         return send_file(str(image_path), mimetype='image/png')
+    
+    return {'success': False, 'error': 'Certificate image generation failed'}, 500
     
     # Fallback: Generate simple PNG with Pillow if Playwright fails
     try:
