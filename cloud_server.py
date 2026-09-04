@@ -9,7 +9,10 @@ import sys
 BASE_DIR = Path(__file__).resolve().parent
 
 for folder in ['logs', 'uploads', 'backups', 'certificates', 'database', 'flask_session']:
-    (BASE_DIR / folder).mkdir(parents=True, exist_ok=True)
+    folder_path = BASE_DIR / folder
+    folder_path.mkdir(parents=True, exist_ok=True)
+    # Ensure writable on Render
+    os.chmod(str(folder_path), 0o777)
 
 sys.path.insert(0, str(BASE_DIR))
 
