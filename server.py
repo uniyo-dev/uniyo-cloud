@@ -28,7 +28,7 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'uniyo-dev-secret-key-20
 app.config['SESSION_TYPE'] = 'filesystem'
 app.config['SESSION_FILE_DIR'] = str(BASE_DIR / 'flask_session')
 app.config['SESSION_PERMANENT'] = True
-app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=12)
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=72)
 app.config['SESSION_COOKIE_HTTPONLY'] = True
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024

@@ -101,7 +101,6 @@ def sync_all_content():
         requests.post(f"{TURSO_URL}/v2/pipeline", headers=headers, json=body, timeout=120)
     
     # Clear old sessions
-    execute_sql("UPDATE active_sessions SET is_active = 0")
     
     print(f"✓ {lesson_count} lessons, {ws_count} worksheets, {pe_count} past exams synced")
     return True
