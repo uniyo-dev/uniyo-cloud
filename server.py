@@ -99,6 +99,17 @@ def internal_error(error):
         return jsonify({"success": False, "error": str(error)}), 500
     return f"<h1>500 Error</h1><pre>{error}</pre><pre>{traceback.format_exc()}</pre>", 500
 
+@app.route('/debug/playwright')
+def debug_playwright():
+    try:
+        from playwright.sync_api import sync_playwright
+        return {"playwright_installed": True, "message": "Playwright is available"}
+    except ImportError:
+        return {"playwright_installed": False, "message": "Playwright NOT installed"}
+    except Exception as e:
+        return {"playwright_installed": False, "message": str(e)}
+
+
 @app.route('/health')
 def health_check():
     try:
