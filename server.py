@@ -91,11 +91,13 @@ def not_found_error(error):
 
 @app.errorhandler(500)
 def internal_error(error):
+    import traceback
     db.rollback()
     logger.error(f"Internal server error: {error}")
+    traceback.print_exc()
     if request.path.startswith('/api/'):
-        return jsonify({"success": False, "error": "Internal server error"}), 500
-    return render_template('error.html', error_code=500, error_message="Internal server error"), 500
+        return jsonify({"success": False, "error": str(error)}), 500
+    return f"<h1>500 Error</h1><pre>{error}</pre><pre>{traceback.format_exc()}</pre>", 500
 
 @app.route('/health')
 def health_check():
