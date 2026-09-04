@@ -6,7 +6,7 @@ from flask import Blueprint, render_template, redirect, url_for, session, flash
 from core.db import get_db
 from core.auth import login_required
 from core.helpers import generate_qr_data_uri
-from core.certificate_image_generator import generate_certificate_image_sync
+from core.certificate_image_generator import generate_certificate_image_sync, generate_certificate_image_with_pillow
 
 certificate_bp = Blueprint('certificate', __name__)
 
@@ -84,7 +84,11 @@ def view_certificate_image(certificate_id):
     qr_data_uri = generate_qr_data_uri(verify_url)
     
     # Generate certificate image
-    image_path = generate_certificate_image_sync(certificate, qr_data_uri)
+    # Try Pillow first (always works)
+    image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
+    if not image_path or not Path(image_path).exists():
+        # Fallback to Playwright
+        image_path = generate_certificate_image_sync(certificate, qr_data_uri)
     
     if image_path and Path(image_path).exists():
         return send_file(str(image_path), mimetype='image/png')
@@ -218,7 +222,11 @@ def download_certificate_image(certificate_id):
     verify_url = f"{request.host_url}verify/{certificate['verification_token']}"
     qr_data_uri = generate_qr_data_uri(verify_url)
     
-    image_path = generate_certificate_image_sync(certificate, qr_data_uri)
+    # Try Pillow first (always works)
+    image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
+    if not image_path or not Path(image_path).exists():
+        # Fallback to Playwright
+        image_path = generate_certificate_image_sync(certificate, qr_data_uri)
     
     if image_path and Path(image_path).exists():
         download_name = f"UNIYO_Certificate_{cert_id}.{format_type}"
@@ -276,7 +284,7 @@ def api_student_certificate(certificate_id):
         
         from flask import request
         from core.helpers import generate_qr_data_uri
-        from core.certificate_image_generator import generate_certificate_image_sync
+        from core.certificate_image_generator import generate_certificate_image_sync, generate_certificate_image_with_pillow
         verify_url = f"{request.host_url}verify/{certificate.get('verification_token', '')}"
         qr_data_uri = generate_qr_data_uri(verify_url)
         

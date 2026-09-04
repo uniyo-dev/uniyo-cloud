@@ -590,6 +590,84 @@ def build_certificate_html(certificate_data, qr_data_uri, logo_path=None, verifi
     return html
 
 
+
+
+def generate_certificate_image_with_pillow(certificate_data, qr_data_uri):
+    """Generate certificate image using Pillow (always works on any Python)"""
+    from PIL import Image, ImageDraw, ImageFont
+    from core.paths import CERTIFICATES_DIR
+    
+    cert_type = certificate_data.get('certificate_type', 'completion')
+    full_name = certificate_data.get('full_name', 'Student')
+    university = certificate_data.get('university', '')
+    stream = certificate_data.get('stream', '')
+    sex = certificate_data.get('sex', '')
+    cert_number = certificate_data.get('certificate_number', 'UNKNOWN')
+    title = certificate_data.get('title', 'Certificate')
+    issue_date = certificate_data.get('issue_date', '')
+    
+    cert_id = cert_number.replace('/', '_').replace('\\', '_')
+    output_path = CERTIFICATES_DIR / f"{cert_id}.png"
+    
+    # Set dimensions based on type
+    if cert_type == 'payment':
+        width, height = 1240, 1748
+    else:
+        width, height = 2480, 3508
+    
+    # Create image
+    img = Image.new('RGB', (width, height), '#fffdf9')
+    draw = ImageDraw.Draw(img)
+    
+    # Colors
+    if cert_type == 'vip_leaderboard':
+        primary = '#F59E0B'
+    elif cert_type == 'payment':
+        primary = '#14B8A6'
+    elif cert_type == 'promotion':
+        primary = '#F97316'
+    else:
+        primary = '#6D28D9'
+    
+    # Double border
+    draw.rectangle([30, 30, width-30, height-30], outline=primary, width=8)
+    draw.rectangle([50, 50, width-50, height-50], outline='#F59E0B', width=3)
+    
+    # Try to load fonts
+    try:
+        font_large = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 80)
+        font_medium = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 40)
+        font_small = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 30)
+    except:
+        font_large = ImageFont.load_default()
+        font_medium = ImageFont.load_default()
+        font_small = ImageFont.load_default()
+    
+    # Title
+    draw.text((width//2, 150), title, fill=primary, font=font_large, anchor='mm')
+    
+    # Student name
+    draw.text((width//2, height//2 - 100), full_name, fill='#1e1b4b', font=font_large, anchor='mm')
+    
+    # University
+    details = university
+    if stream:
+        details += f" • {stream} Science"
+    if sex:
+        details += f" • {sex}"
+    draw.text((width//2, height//2 + 50), details, fill='#64748b', font=font_medium, anchor='mm')
+    
+    # Certificate number
+    draw.text((width//2, height - 300), f"Certificate Number: {cert_number}", fill='#334155', font=font_small, anchor='mm')
+    draw.text((width//2, height - 250), f"Date: {issue_date}", fill='#334155', font=font_small, anchor='mm')
+    
+    # Microtext
+    draw.text((width//2, height - 100), "UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE", fill='#94a3b8', font=font_small, anchor='mm')
+    
+    img.save(str(output_path))
+    return output_path
+
+
 def generate_certificate_image_sync(certificate_data, qr_data_uri):
     """Synchronous wrapper"""
     try:
