@@ -55,11 +55,12 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     output_png = CERTIFICATES_DIR / f"{cert_id}.png"
     
     # Colors
+    # Premium color palette (rich, deep colors)
     colors = {
-        'vip_leaderboard': HexColor('#F59E0B'),
-        'payment': HexColor('#14B8A6'),
-        'promotion': HexColor('#F97316'),
-        'other': HexColor('#38BDF8'),
+        'vip_leaderboard': HexColor('#D97706'),  # Deep gold
+        'payment': HexColor('#0D9488'),          # Deep teal
+        'promotion': HexColor('#EA580C'),        # Deep orange
+        'other': HexColor('#0284C7'),            # Deep blue
     }
     primary = colors.get(cert_type, HexColor('#6D28D9'))
     
@@ -73,7 +74,12 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     # Double border
     c.setStrokeColor(primary)
     c.setLineWidth(5)
-    c.rect(10*mm, 10*mm, w-20*mm, h-20*mm, fill=False, stroke=True)
+    # Multi-layer premium border
+    c.rect(8*mm, 8*mm, w-16*mm, h-16*mm, fill=False, stroke=True)  # Outer
+    c.rect(10*mm, 10*mm, w-20*mm, h-20*mm, fill=False, stroke=True)  # Main
+    c.setLineWidth(1)
+    c.setStrokeColor(HexColor('#D4AF37'))  # Gold accent
+    c.rect(9*mm, 9*mm, w-18*mm, h-18*mm, fill=False, stroke=True)  # Inner gold
     
     c.setStrokeColor(HexColor('#F59E0B'))
     c.setLineWidth(2)
@@ -341,6 +347,16 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     c.setFillColor(HexColor('#94a3b8'))
     c.setFont('DejaVuSans', 5)
     c.drawCentredString(w/2, 8*mm, 'UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE • SECURITY FEATURES INCLUDED')
+    
+    # PDF METADATA (Professional)
+    c.setTitle(f"UNIYO Certificate - {full_name}")
+    c.setAuthor("UNIYO - University Made for YOU")
+    c.setSubject(f"{title} - {cert_type.upper()}")
+    c.setKeywords(["UNIYO", "Certificate", cert_type, full_name])
+    
+    # EXCLUSIVE QUALITY SETTINGS
+    c.setPageCompression(1)  # Best compression
+    c.setPageRotation(0)  # Correct orientation
     
     c.save()
 
