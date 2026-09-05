@@ -87,6 +87,12 @@ def view_certificate_image(certificate_id):
     qr_data_uri = generate_qr_data_uri(verify_url)
     
     # Generate certificate using ReportLab (Professional PDF)
+    from core.certificate_image_generator import generate_certificate_image_sync
+    image_path = generate_certificate_image_sync(certificate, qr_data_uri)
+    if image_path and Path(image_path).exists():
+        return send_file(str(image_path), mimetype='image/png')
+
+    # ReportLab fallback
     from core.certificate_reportlab import generate_certificate_reportlab
     pdf_path = generate_certificate_reportlab(certificate, qr_data_uri)
     
