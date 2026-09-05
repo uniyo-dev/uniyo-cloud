@@ -80,93 +80,109 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     c.drawCentredString(0, 0, 'UNIYO')
     c.restoreState()
     
-    # Title
+    # LOGO (top center)
+    logo_file = BASE_DIR / 'static' / 'images' / 'logo.svg'
+    # Note: ReportLab doesn't support SVG directly, skip logo or use PNG version
+    
+    # Title (compact)
     c.setFillColor(primary)
-    c.setFont('Helvetica-Bold', 28)
-    c.drawCentredString(w/2, h-60*mm, title.upper())
+    c.setFont('Helvetica-Bold', 24)
+    c.drawCentredString(w/2, h-25*mm, title.upper())
     
     c.setFillColor(HexColor('#64748b'))
-    c.setFont('Helvetica', 14)
-    c.drawCentredString(w/2, h-70*mm, 'Ethiopian Higher Education Freshman Hub')
+    c.setFont('Helvetica', 12)
+    c.drawCentredString(w/2, h-32*mm, 'Ethiopian Higher Education Freshman Hub')
+    
+    # Divider line
+    c.setStrokeColor(primary)
+    c.setLineWidth(2)
+    c.line(40*mm, h-38*mm, w-40*mm, h-38*mm)
     
     # Presented to
-    c.setFont('Helvetica', 16)
-    c.drawCentredString(w/2, h-100*mm, 'This certificate is proudly presented to')
+    c.setFillColor(HexColor('#64748b'))
+    c.setFont('Helvetica', 14)
+    c.drawCentredString(w/2, h-48*mm, 'This certificate is proudly presented to')
     
     # Student name
     c.setFillColor(HexColor('#1e1b4b'))
-    c.setFont('Helvetica-Bold', 36)
-    c.drawCentredString(w/2, h-115*mm, full_name)
+    c.setFont('Helvetica-Bold', 32)
+    c.drawCentredString(w/2, h-58*mm, full_name)
     
-    # Reason
-    c.setFillColor(HexColor('#334155'))
-    c.setFont('Helvetica', 16)
+    # Reason text (boxed)
     reason = 'For successfully completing lessons and worksheets with dedication.'
-    c.drawCentredString(w/2, h-130*mm, reason)
+    c.setFillColor(HexColor('#334155'))
+    c.setFont('Helvetica', 12)
+    c.roundRect(40*mm, h-68*mm, w-80*mm, 10*mm, 3*mm, fill=False, stroke=True)
+    c.drawCentredString(w/2, h-64*mm, reason)
     
     # University details
     c.setFillColor(HexColor('#64748b'))
-    c.setFont('Helvetica', 14)
+    c.setFont('Helvetica', 12)
     details = university
     if stream:
         details += f' • {stream} Science'
     if sex:
         details += f' • {sex}'
-    c.drawCentredString(w/2, h-140*mm, details)
+    c.drawCentredString(w/2, h-75*mm, details)
     
-    # Credentials
-    y = h - 160*mm
-    c.setFont('Helvetica', 12)
+    # Credentials (in box)
+    y = h - 90*mm
+    c.setFont('Helvetica', 10)
     c.setFillColor(HexColor('#334155'))
+    c.roundRect(30*mm, y-15*mm, w-60*mm, 25*mm, 3*mm, fill=False, stroke=True)
+    
     c.drawString(40*mm, y, 'Certificate Number:')
     c.setFillColor(HexColor('#1e1b4b'))
     c.drawRightString(w-40*mm, y, cert_number)
     
-    y -= 10*mm
+    y -= 8*mm
     c.setFillColor(HexColor('#334155'))
     c.drawString(40*mm, y, 'Issue Date:')
     c.setFillColor(HexColor('#1e1b4b'))
     c.drawRightString(w-40*mm, y, issue_date[:10])
     
-    y -= 10*mm
+    y -= 8*mm
     c.setFillColor(HexColor('#334155'))
     c.drawString(40*mm, y, 'Type:')
     c.setFillColor(primary)
     c.drawRightString(w-40*mm, y, cert_type.upper())
     
-    # QR Code
+    # QR Code (bottom left)
     try:
         import qrcode
         from io import BytesIO
         qr = qrcode.QRCode(version=1, error_correction=qrcode.constants.ERROR_CORRECT_H, box_size=10, border=2)
-        qr.add_data(f"{certificate_data.get('verification_token', '')}")
+        verify_url = f"https://uniyo-cloud.onrender.com/verify/{certificate_data.get('verification_token', '')}"
+        qr.add_data(verify_url)
         qr.make(fit=True)
         qr_img = qr.make_image(fill_color='black', back_color='white')
         qr_buffer = BytesIO()
         qr_img.save(qr_buffer, format='PNG')
         qr_buffer.seek(0)
         qr_image = ImageReader(qr_buffer)
-        c.drawImage(qr_image, w-50*mm, 15*mm, 30*mm, 30*mm, preserveAspectRatio=True)
+        c.drawImage(qr_image, 25*mm, 25*mm, 25*mm, 25*mm, preserveAspectRatio=True)
+        c.setFont('Helvetica', 8)
+        c.setFillColor(HexColor('#64748b'))
+        c.drawCentredString(37*mm, 22*mm, 'Scan to Verify')
     except Exception as e:
         print(f"QR error: {e}")
-
-    # Barcode (using simple lines)
+    
+    # Barcode (bottom center)
     c.setLineWidth(1)
     c.setStrokeColor(HexColor('#000000'))
-    barcode_x = w/2 + 10*mm
-    barcode_y = 15*mm
+    barcode_x = w/2 - 15*mm
+    barcode_y = 30*mm
     import random
-    random.seed(certificate_data.get('certificate_number', 'UNKNOWN'))
-    for i in range(50):
-        bar_width = random.choice([1, 2, 3]) * 0.5*mm
-        c.line(barcode_x, barcode_y, barcode_x, barcode_y + 20*mm)
-        barcode_x += bar_width + 0.5*mm
-    # Barcode text
-    c.setFont('Courier', 8)
+    random.seed(cert_number)
+    for i in range(40):
+        bar_width = random.choice([1, 2]) * 0.5*mm
+        c.line(barcode_x, barcode_y, barcode_x, barcode_y + 15*mm)
+        barcode_x += bar_width + 0.3*mm
+    c.setFont('Courier', 7)
     c.setFillColor(HexColor('#334155'))
-    c.drawCentredString(w/2 + 40*mm, 12*mm, cert_number)
+    c.drawCentredString(w/2, 26*mm, cert_number)
     
-    # Stamps
+    # Primary Stamp (bottom right of center)
     auth_dir = BASE_DIR / 'static' / 'Authenticity'
     if cert_type == 'vip_leaderboard' and rank:
         stamp_file = auth_dir / f'vip{min(rank,5)}.png'
@@ -179,52 +195,47 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     
     if stamp_file.exists():
         stamp_img = ImageReader(str(stamp_file))
-    c.drawImage(stamp_img, w/2-20*mm, 25*mm, 40*mm, 40*mm, preserveAspectRatio=True, mask='auto')
+        c.drawImage(stamp_img, w/2+10*mm, 25*mm, 30*mm, 30*mm, preserveAspectRatio=True, mask='auto')
     
-    # Secondary stamp for VIP/Payment/Promo
+    # Secondary stamp (right side)
     if cert_type in ['vip_leaderboard', 'payment', 'promotion']:
         secondary_stamp = auth_dir / 'super_admin_stamp.png'
         if secondary_stamp.exists():
             sec_img = ImageReader(str(secondary_stamp))
-            c.drawImage(sec_img, w-60*mm, 35*mm, 30*mm, 30*mm, preserveAspectRatio=True, mask='auto')
+            c.drawImage(sec_img, w-45*mm, 30*mm, 22*mm, 22*mm, preserveAspectRatio=True, mask='auto')
     
-    # Signatures (Super Admin + Content Manager)
+    # Super Admin signature (bottom left)
     sig_file = auth_dir / 'super_admin_signature.png'
     if sig_file.exists():
         sig_img = ImageReader(str(sig_file))
-        c.drawImage(sig_img, w/2-60*mm, 15*mm, 35*mm, 12*mm, preserveAspectRatio=True, mask='auto')
-        # Super Admin name
-        c.setFont('Helvetica-Bold', 10)
+        c.drawImage(sig_img, 25*mm, 10*mm, 30*mm, 10*mm, preserveAspectRatio=True, mask='auto')
+        c.setFont('Helvetica-Bold', 8)
         c.setFillColor(HexColor('#1e1b4b'))
-        c.drawCentredString(w/2-42*mm, 12*mm, 'Chalachew Agegn')
-        c.setFont('Helvetica', 8)
+        c.drawCentredString(40*mm, 8*mm, 'Chalachew Agegn')
+        c.setFont('Helvetica', 7)
         c.setFillColor(HexColor('#64748b'))
-        c.drawCentredString(w/2-42*mm, 9*mm, 'Super Admin')
+        c.drawCentredString(40*mm, 6*mm, 'Super Admin')
     
-    # Content Manager signature
-    cm_sig = auth_dir / 'signature_(content_manager).png'
-    if cm_sig.exists() and cert_type not in ['other', 'excellence', 'content_creator', 'marketing_manager', 'advertiser', 'staff', 'special_congratulations', 'participation', 'appreciation', 'congratulations']:
-        cm_img = ImageReader(str(cm_sig))
-            c.drawImage(cm_img, w/2+25*mm, 15*mm, 35*mm, 12*mm, preserveAspectRatio=True, mask='auto')
-        c.setFont('Helvetica-Bold', 10)
-        c.setFillColor(HexColor('#1e1b4b'))
-        c.drawCentredString(w/2+42*mm, 12*mm, 'Banch Destaw')
-        c.setFont('Helvetica', 8)
-        c.setFillColor(HexColor('#64748b'))
-        c.drawCentredString(w/2+42*mm, 9*mm, 'Content Manager')
+    # Content Manager signature (bottom right)
+    if cert_type not in ['other', 'excellence', 'content_creator', 'marketing_manager', 'advertiser', 'staff', 'special_congratulations', 'participation', 'appreciation', 'congratulations']:
+        cm_sig = auth_dir / 'signature_(content_manager).png'
+        if cm_sig.exists():
+            cm_img = ImageReader(str(cm_sig))
+            c.drawImage(cm_img, w-55*mm, 10*mm, 30*mm, 10*mm, preserveAspectRatio=True, mask='auto')
+            c.setFont('Helvetica-Bold', 8)
+            c.setFillColor(HexColor('#1e1b4b'))
+            c.drawCentredString(w-40*mm, 8*mm, 'Banch Destaw')
+            c.setFont('Helvetica', 7)
+            c.setFillColor(HexColor('#64748b'))
+            c.drawCentredString(w-40*mm, 6*mm, 'Content Manager')
     
-    # Microtext
+    # Microtext (bottom center)
     c.setFillColor(HexColor('#94a3b8'))
-    c.setFont('Helvetica', 8)
-    # Enhanced microtext with multiple security layers
-    c.setFillColor(HexColor('#94a3b8'))
-    c.setFont('Helvetica', 6)
-    c.drawCentredString(w/2, 6*mm, 'UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE • SECURITY FEATURES INCLUDED • DO NOT COPY')
-    c.setFont('Courier', 5)
-    c.setFillColor(HexColor('#cbd5e1'))
-    c.drawCentredString(w/2, 4*mm, 'UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE • SECURITY FEATURES INCLUDED • DO NOT COPY • UNIYO AUTHENTIC CERTIFICATE')
+    c.setFont('Helvetica', 5)
+    c.drawCentredString(w/2, 5*mm, 'UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE • SECURITY FEATURES INCLUDED • DO NOT COPY • UNIYO AUTHENTIC CERTIFICATE')
     
     c.save()
+
     
     # Convert PDF to PNG (requires pdf2image on Render)
     return output_pdf
