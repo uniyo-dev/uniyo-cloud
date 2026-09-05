@@ -90,7 +90,7 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     c.setStrokeAlpha(1)
     
     # HOLOGRAPHIC EFFECT (subtle gradient bars)
-    c.setFillAlpha(0.03)
+    c.setFillAlpha(0.008)
     colors_holographic = ['#6D28D9', '#F59E0B', '#14B8A6', '#EC4899']
     for i, color in enumerate(colors_holographic):
         c.setFillColor(HexColor(color))
@@ -271,13 +271,13 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     if sig_file.exists():
         sig_img = ImageReader(str(sig_file))
         # Signature at: left 25mm, bottom 12mm
-        c.drawImage(sig_img, 25*mm, 12*mm, 32*mm, 10*mm, preserveAspectRatio=True, mask='auto')
+        c.drawImage(sig_img, 20*mm, 15*mm, 28*mm, 9*mm, preserveAspectRatio=True, mask='auto')
         c.setFont('Helvetica-Bold', 8)
         c.setFillColor(HexColor('#1e1b4b'))
-        c.drawCentredString(41*mm, 10*mm, 'Chalachew Agegn')
+        c.drawCentredString(34*mm, 13*mm, 'Chalachew Agegn')
         c.setFont('Helvetica', 7)
         c.setFillColor(HexColor('#64748b'))
-        c.drawCentredString(41*mm, 7*mm, 'Super Admin')
+        c.drawCentredString(34*mm, 11*mm, 'Super Admin')
     
     # CONTENT MANAGER SIGNATURE (bottom right, at 15mm from bottom)
     if cert_type not in ['other', 'excellence', 'content_creator', 'marketing_manager', 'advertiser', 'staff', 'special_congratulations', 'participation', 'appreciation', 'congratulations']:
@@ -285,19 +285,19 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
         if cm_sig.exists():
             cm_img = ImageReader(str(cm_sig))
             # CM at: right 25mm, bottom 12mm
-            c.drawImage(cm_img, w-57*mm, 12*mm, 32*mm, 10*mm, preserveAspectRatio=True, mask='auto')
+            c.drawImage(cm_img, w-48*mm, 15*mm, 28*mm, 9*mm, preserveAspectRatio=True, mask='auto')
             c.setFont('Helvetica-Bold', 8)
             c.setFillColor(HexColor('#1e1b4b'))
-            c.drawCentredString(w-41*mm, 10*mm, 'Banch Destaw')
+            c.drawCentredString(w-34*mm, 13*mm, 'Banch Destaw')
             c.setFont('Helvetica', 7)
             c.setFillColor(HexColor('#64748b'))
-            c.drawCentredString(w-41*mm, 7*mm, 'Content Manager')
+            c.drawCentredString(w-34*mm, 11*mm, 'Content Manager')
     
     # BARCODE (bottom center, at 15mm from bottom)
     c.setLineWidth(1)
     c.setStrokeColor(HexColor('#000000'))
-    barcode_x = w/2 + 20*mm
-    barcode_y = 12*mm
+    barcode_x = w/2 + 10*mm
+    barcode_y = 15*mm
     import random
     random.seed(cert_number)
     for i in range(30):
@@ -306,12 +306,12 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
         barcode_x += bar_width + 0.3*mm
     c.setFont('Courier', 6)
     c.setFillColor(HexColor('#334155'))
-    c.drawCentredString(w/2 + 40*mm, 9*mm, cert_number[:30])
+    c.drawCentredString(w/2 + 20*mm, 12*mm, cert_number[:25])
     
     # MICROTEXT (very bottom, at 3mm from bottom)
     c.setFillColor(HexColor('#94a3b8'))
     c.setFont('Helvetica', 5)
-    c.drawCentredString(w/2, 4*mm, 'UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE • SECURITY FEATURES INCLUDED • DO NOT COPY • UNIYO AUTHENTIC CERTIFICATE')
+    c.drawCentredString(w/2, 8*mm, 'UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE • SECURITY FEATURES INCLUDED')
     
     c.save()
 
