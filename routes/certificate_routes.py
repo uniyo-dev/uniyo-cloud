@@ -86,25 +86,25 @@ def view_certificate_image(certificate_id):
     verify_url = f"{request.host_url}verify/{certificate['verification_token']}"
     qr_data_uri = generate_qr_data_uri(verify_url)
     
-    # Generate certificate using ReportLab (Professional PDF)
-    from core.certificate_image_generator import generate_certificate_image_sync
-    image_path = generate_certificate_image_sync(certificate, qr_data_uri)
-    if image_path and Path(image_path).exists():
-        return send_file(str(image_path), mimetype='image/png')
-
-    # ReportLab fallback
+        # Generate certificate using ReportLab (Professional)
     from core.certificate_reportlab import generate_certificate_reportlab
     pdf_path = generate_certificate_reportlab(certificate, qr_data_uri)
     
     if pdf_path and Path(pdf_path).exists():
-        return send_file(str(pdf_path), mimetype='application/pdf')
+        # Convert PDF to PNG for display
+        try:
+            from pdf2image import convert_from_path
+            images = convert_from_path(str(pdf_path), dpi=300)
+            if images:
+                png_path = pdf_path.with_suffix('.png')
+                images[0].save(str(png_path), 'PNG')
+                return send_file(str(png_path), mimetype='image/png')
+        except Exception as e:
+            print(f"PDF to PNG conversion failed: {e}")
+            # Serve PDF directly
+            return send_file(str(pdf_path), mimetype='application/pdf')
     
-    # Fallback to Pillow
-    image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
-    if image_path and Path(image_path).exists():
-        return send_file(str(image_path), mimetype='image/png')
-    
-    return {'success': False, 'error': 'Certificate image generation failed'}, 500
+    return {'success': False, 'error': 'Certificate generation failed'}, 500
     
     # Fallback: Generate simple PNG with Pillow if Playwright fails
     try:
