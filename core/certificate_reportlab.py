@@ -70,15 +70,62 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     c.line(w-10*mm, h-10*mm-corner, w-10*mm, h-10*mm)
     c.line(w-10*mm, h-10*mm, w-10*mm-corner, h-10*mm)
     
-    # Watermark
+    # Watermark (diagonal UNIYO)
     c.saveState()
     c.translate(w/2, h/2)
     c.rotate(30)
     c.setFillColor(HexColor('#6D28D9'))
     c.setFont('Helvetica-Bold', 100)
-    c.setFillAlpha(0.05)
+    c.setFillAlpha(0.04)
     c.drawCentredString(0, 0, 'UNIYO')
     c.restoreState()
+    
+    # GUILLOCHÉ PATTERN (fine lines around border)
+    c.setStrokeColor(HexColor('#6D28D9'))
+    c.setLineWidth(0.3)
+    c.setStrokeAlpha(0.15)
+    for i in range(20):
+        offset = i * 0.5*mm
+        c.rect(15*mm + offset, 15*mm + offset, w - 30*mm - 2*offset, h - 30*mm - 2*offset, fill=False, stroke=True)
+    c.setStrokeAlpha(1)
+    
+    # HOLOGRAPHIC EFFECT (subtle gradient bars)
+    c.setFillAlpha(0.03)
+    colors_holographic = ['#6D28D9', '#F59E0B', '#14B8A6', '#EC4899']
+    for i, color in enumerate(colors_holographic):
+        c.setFillColor(HexColor(color))
+        y_start = h/2 - 60*mm + i * 30*mm
+        c.rect(20*mm, y_start, w-40*mm, 3*mm, fill=True, stroke=False)
+    c.setFillAlpha(1)
+    
+    # GOLD FOIL (for VIP - subtle gold overlay)
+    if cert_type == 'vip_leaderboard':
+        c.setFillColor(HexColor('#F59E0B'))
+        c.setFillAlpha(0.02)
+        c.rect(0, 0, w, h, fill=True, stroke=False)
+        c.setFillAlpha(1)
+    
+    # SPARKLES (for VIP/Promo - tiny dots)
+    if cert_type in ['vip_leaderboard', 'promotion']:
+        import random as sparkle_random
+        sparkle_random.seed(42)
+        c.setFillColor(HexColor('#FCD34D'))
+        c.setFillAlpha(0.3)
+        for _ in range(30):
+            sx = sparkle_random.uniform(30*mm, w-30*mm)
+            sy = sparkle_random.uniform(60*mm, h-60*mm)
+            c.circle(sx, sy, 0.5*mm, fill=True, stroke=False)
+        c.setFillAlpha(1)
+    
+    # ANTI-COPY PATTERN (fine lines - payment only)
+    if cert_type == 'payment':
+        c.setStrokeColor(HexColor('#14B8A6'))
+        c.setLineWidth(0.2)
+        c.setStrokeAlpha(0.1)
+        for i in range(40):
+            y_line = 20*mm + i * 5*mm
+            c.line(20*mm, y_line, w-20*mm, y_line)
+        c.setStrokeAlpha(1)
     
     # LOGO (top center)
     logo_file = BASE_DIR / 'static' / 'images' / 'logo.svg'
