@@ -11,6 +11,27 @@ from reportlab.lib.utils import ImageReader
 from core.paths import CERTIFICATES_DIR, BASE_DIR
 
 def generate_certificate_reportlab(certificate_data, qr_data_uri):
+    """Generate PROFESSIONAL certificate using ReportLab with HIGH QUALITY"""
+    from reportlab.lib.pagesizes import A4, landscape
+    from reportlab.lib.units import mm
+    from reportlab.lib.colors import HexColor
+    from reportlab.pdfgen import canvas
+    from reportlab.lib.utils import ImageReader
+    from reportlab.pdfbase import pdfmetrics
+    from reportlab.pdfbase.ttfonts import TTFont
+    from core.paths import CERTIFICATES_DIR, BASE_DIR
+    
+    # Register high-quality TrueType fonts
+    font_paths = [
+        ('DejaVuSans', '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'),
+        ('DejaVuSans-Bold', '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'),
+    ]
+    for font_name, font_path in font_paths:
+        try:
+            if Path(font_path).exists():
+                pdfmetrics.registerFont(TTFont(font_name, font_path))
+        except:
+            pass
     """Generate professional certificate using ReportLab"""
     cert_type = certificate_data.get('certificate_type', 'completion')
     full_name = certificate_data.get('full_name', 'Student')
@@ -75,7 +96,7 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     c.translate(w/2, h/2)
     c.rotate(30)
     c.setFillColor(HexColor('#6D28D9'))
-    c.setFont('Helvetica-Bold', 100)
+    c.setFont('DejaVuSans-Bold', 100)
     c.setFillAlpha(0.04)
     c.drawCentredString(0, 0, 'UNIYO')
     c.restoreState()
@@ -101,7 +122,15 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     # GOLD FOIL (for VIP - subtle gold overlay)
     if cert_type == 'vip_leaderboard':
         c.setFillColor(HexColor('#F59E0B'))
-        c.setFillAlpha(0.02)
+        # Smooth gold gradient overlay
+        c.saveState()
+        c.setFillAlpha(0.015)
+        for i in range(50):
+            alpha = 0.015 * (1 - i/50)
+            c.setFillAlpha(alpha)
+            c.setFillColor(HexColor('#F59E0B'))
+            c.rect(0, i*2*mm, w, 2*mm, fill=True, stroke=False)
+        c.restoreState()
         c.rect(0, 0, w, h, fill=True, stroke=False)
         c.setFillAlpha(1)
     
@@ -150,12 +179,12 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     
     # TITLE (at 40mm from top, centered)
     c.setFillColor(primary)
-    c.setFont('Helvetica-Bold', 26)
+    c.setFont('DejaVuSans-Bold', 26)
     c.drawCentredString(w/2, h-40*mm, title.upper())
     
     # SUBTITLE (at 48mm from top)
     c.setFillColor(HexColor('#64748b'))
-    c.setFont('Helvetica', 12)
+    c.setFont('DejaVuSans', 12)
     c.drawCentredString(w/2, h-48*mm, 'Ethiopian Higher Education Freshman Hub')
     
     # DIVIDER LINE (at 54mm from top)
@@ -165,24 +194,24 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     
     # "PRESENTED TO" (at 62mm from top)
     c.setFillColor(HexColor('#64748b'))
-    c.setFont('Helvetica', 13)
+    c.setFont('DejaVuSans', 13)
     c.drawCentredString(w/2, h-62*mm, 'This certificate is proudly presented to')
     
     # STUDENT NAME (at 72mm from top)
     c.setFillColor(HexColor('#1e1b4b'))
-    c.setFont('Helvetica-Bold', 34)
+    c.setFont('DejaVuSans-Bold', 34)
     c.drawCentredString(w/2, h-72*mm, full_name)
     
     # REASON TEXT BOX (at 80mm from top, boxed)
     reason = 'For successfully completing lessons and worksheets with dedication.'
     c.setFillColor(HexColor('#334155'))
-    c.setFont('Helvetica', 11)
+    c.setFont('DejaVuSans', 11)
     c.roundRect(35*mm, h-86*mm, w-70*mm, 10*mm, 3*mm, fill=False, stroke=True)
     c.drawCentredString(w/2, h-81*mm, reason)
     
     # UNIVERSITY DETAILS (at 94mm from top)
     c.setFillColor(HexColor('#64748b'))
-    c.setFont('Helvetica', 11)
+    c.setFont('DejaVuSans', 11)
     details = university
     if stream:
         details += f' • {stream} Science'
@@ -194,7 +223,7 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     cred_y = h - 108*mm
     c.roundRect(30*mm, cred_y-20*mm, w-60*mm, 28*mm, 3*mm, fill=False, stroke=True)
     
-    c.setFont('Helvetica', 10)
+    c.setFont('DejaVuSans', 10)
     c.setFillColor(HexColor('#334155'))
     c.drawString(40*mm, cred_y, 'Certificate Number:')
     c.setFillColor(HexColor('#1e1b4b'))
@@ -214,7 +243,7 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     
     # VERIFY URL (at 140mm from top)
     c.setFillColor(primary)
-    c.setFont('Helvetica', 9)
+    c.setFont('DejaVuSans', 9)
     verify_url = f"https://uniyo-cloud.onrender.com/verify/{certificate_data.get('verification_token', '')}"
     c.drawCentredString(w/2, h-140*mm, f'Verify at: {verify_url}')
     
@@ -236,7 +265,7 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
         qr_image = ImageReader(qr_buffer)
         # QR at: left 25mm, bottom 35mm
         c.drawImage(qr_image, 25*mm, 30*mm, 28*mm, 28*mm, preserveAspectRatio=True)
-        c.setFont('Helvetica', 8)
+        c.setFont('DejaVuSans', 8)
         c.setFillColor(HexColor('#64748b'))
         c.drawCentredString(39*mm, 27*mm, 'Scan to Verify')
     except Exception as e:
@@ -256,7 +285,7 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     if stamp_file.exists():
         stamp_img = ImageReader(str(stamp_file))
         # Stamp at: center, bottom 30mm
-        c.drawImage(stamp_img, w/2-17*mm, 28*mm, 34*mm, 34*mm, preserveAspectRatio=True, mask='auto')
+        c.drawImage(stamp_img, w/2-17*mm, 28*mm, 34*mm, 34*mm, preserveAspectRatio=True, mask='auto', anchor='c')
     
     # SECONDARY STAMP (right side, at 40mm from bottom)
     if cert_type in ['vip_leaderboard', 'payment', 'promotion']:
@@ -272,10 +301,10 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
         sig_img = ImageReader(str(sig_file))
         # Signature at: left 25mm, bottom 12mm
         c.drawImage(sig_img, 20*mm, 15*mm, 28*mm, 9*mm, preserveAspectRatio=True, mask='auto')
-        c.setFont('Helvetica-Bold', 8)
+        c.setFont('DejaVuSans-Bold', 8)
         c.setFillColor(HexColor('#1e1b4b'))
         c.drawCentredString(34*mm, 13*mm, 'Chalachew Agegn')
-        c.setFont('Helvetica', 7)
+        c.setFont('DejaVuSans', 7)
         c.setFillColor(HexColor('#64748b'))
         c.drawCentredString(34*mm, 11*mm, 'Super Admin')
     
@@ -286,10 +315,10 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
             cm_img = ImageReader(str(cm_sig))
             # CM at: right 25mm, bottom 12mm
             c.drawImage(cm_img, w-48*mm, 15*mm, 28*mm, 9*mm, preserveAspectRatio=True, mask='auto')
-            c.setFont('Helvetica-Bold', 8)
+            c.setFont('DejaVuSans-Bold', 8)
             c.setFillColor(HexColor('#1e1b4b'))
             c.drawCentredString(w-34*mm, 13*mm, 'Banch Destaw')
-            c.setFont('Helvetica', 7)
+            c.setFont('DejaVuSans', 7)
             c.setFillColor(HexColor('#64748b'))
             c.drawCentredString(w-34*mm, 11*mm, 'Content Manager')
     
@@ -310,7 +339,7 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     
     # MICROTEXT (very bottom, at 3mm from bottom)
     c.setFillColor(HexColor('#94a3b8'))
-    c.setFont('Helvetica', 5)
+    c.setFont('DejaVuSans', 5)
     c.drawCentredString(w/2, 8*mm, 'UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE • SECURITY FEATURES INCLUDED')
     
     c.save()
