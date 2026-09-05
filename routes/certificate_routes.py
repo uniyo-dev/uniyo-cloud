@@ -86,23 +86,12 @@ def view_certificate_image(certificate_id):
     verify_url = f"{request.host_url}verify/{certificate['verification_token']}"
     qr_data_uri = generate_qr_data_uri(verify_url)
     
-        # Generate certificate using ReportLab (Professional)
+        # Generate certificate using ReportLab (Professional PDF)
     from core.certificate_reportlab import generate_certificate_reportlab
     pdf_path = generate_certificate_reportlab(certificate, qr_data_uri)
     
     if pdf_path and Path(pdf_path).exists():
-        # Convert PDF to PNG for display
-        try:
-            from pdf2image import convert_from_path
-            images = convert_from_path(str(pdf_path), dpi=300)
-            if images:
-                png_path = pdf_path.with_suffix('.png')
-                images[0].save(str(png_path), 'PNG')
-                return send_file(str(png_path), mimetype='image/png')
-        except Exception as e:
-            print(f"PDF to PNG conversion failed: {e}")
-            # Serve PDF directly
-            return send_file(str(pdf_path), mimetype='application/pdf')
+        return send_file(str(pdf_path), mimetype='application/pdf')
     
     return {'success': False, 'error': 'Certificate generation failed'}, 500
     

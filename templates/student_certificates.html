@@ -53,8 +53,7 @@
         </div>
         <div class="popup-actions">
             <button class="popup-btn popup-btn-outline" onclick="closeStudentCertPopup()">Close</button>
-            <button class="popup-btn popup-btn-primary" onclick="downloadCertificateImage('png')" style="background:#14B8A6; color:white;">📥 PNG</button>
-            <button class="popup-btn popup-btn-primary" onclick="downloadCertificateImage('jpg')" style="background:#F59E0B; color:#0B0F19;">📥 JPG</button>
+            <button class="popup-btn popup-btn-primary" onclick="downloadCertificatePDF()" style="background:#6D28D9; color:white;">📥 Download PDF</button>
         </div>
     </div>
 </div>
@@ -110,6 +109,11 @@ function viewStudentCertImage(certId) {
 }
 
 let currentCertId = null;
+
+function downloadCertificatePDF() {
+    if (!currentCertId) return;
+    window.open('/student/certificate/' + currentCertId + '/download?format=pdf', '_blank');
+}
 
 function downloadCertificateImage(format) {
     if (!currentCertId) return;
