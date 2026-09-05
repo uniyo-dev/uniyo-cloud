@@ -27,7 +27,184 @@ import qrcode
 # LMS Path Imports
 from core.paths import CERTIFICATES_DIR, BASE_DIR
 
+# ==============================================================================
+# HELPER FUNCTIONS
+# ==============================================================================
 
+def draw_transparent_image(c, image_path, x, y, width, height):
+    try:
+        if Path(image_path).exists():
+            img = ImageReader(str(image_path))
+            c.drawImage(img, x, y, width, height, preserveAspectRatio=True, mask='auto')
+    except:
+        pass
+
+def draw_watermark(c, w, h, text="UNIYO"):
+    try:
+        c.saveState()
+        c.translate(w/2, h/2)
+        c.rotate(35)
+        c.setFillColor(HexColor('#4B0082'))
+        c.setFillAlpha(0.04)
+        c.setFont('Helvetica-Bold', 60)
+        c.drawCentredString(0, 0, text)
+        c.restoreState()
+    except:
+        pass
+
+def draw_anti_copy_pattern(c, w, h, margin_mm=10):
+    try:
+        c.saveState()
+        c.setStrokeColor(HexColor('#064E3B'))
+        c.setStrokeAlpha(0.05)
+        c.setLineWidth(0.2)
+        m = margin_mm * mm
+        for i in range(30):
+            y_line = m + i * 4*mm
+            c.line(m, y_line, w - m, y_line)
+        c.restoreState()
+    except:
+        pass
+
+def draw_barcode(c, data, x, y, width=36*mm, height=8*mm):
+    try:
+        c.saveState()
+        c.setFillColor(HexColor('#000000'))
+        import random
+        random.seed(data)
+        bar_x = x
+        for char in data[:20]:
+            bar_width = random.choice([1, 2, 3]) * 0.5*mm
+            c.rect(bar_x, y, bar_width, height, fill=True, stroke=False)
+            bar_x += bar_width + 0.5*mm
+        c.restoreState()
+    except:
+        pass
+
+def draw_guilloche_pattern(c, w, h, primary_color, gold_color, margin_mm=15):
+    try:
+        c.saveState()
+        c.setStrokeColor(primary_color)
+        c.setStrokeAlpha(0.05)
+        c.setLineWidth(0.25)
+        m = margin_mm * mm
+        for i in range(12):
+            offset = i * 1.2*mm
+            c.rect(m + offset, m + offset, w - 2*m - 2*offset, h - 2*m - 2*offset, fill=False, stroke=True)
+        c.restoreState()
+    except:
+        pass
+
+def draw_smooth_gradient(c, x, y, width, height, color1, color2):
+    try:
+        steps = 100
+        for i in range(steps):
+            ratio = i / steps
+            r = color1.red * (1-ratio) + color2.red * ratio
+            g = color1.green * (1-ratio) + color2.green * ratio
+            b = color1.blue * (1-ratio) + color2.blue * ratio
+            c.setFillColor(Color(r, g, b, alpha=0.02))
+            c.rect(x, y + i * height/steps, width, height/steps + 0.5, fill=True, stroke=False)
+    except:
+        pass
+
+
+
+
+
+
+
+# ==============================================================================
+# HELPER FUNCTIONS (Security & Drawing Utilities)
+# ==============================================================================
+
+def draw_transparent_image(c, image_path, x, y, width, height):
+    """Draw image with transparency support (mask='auto')"""
+    try:
+        if Path(image_path).exists():
+            img = ImageReader(str(image_path))
+            c.drawImage(img, x, y, width, height, preserveAspectRatio=True, mask='auto')
+    except:
+        pass
+
+
+def draw_watermark(c, w, h, text="UNIYO"):
+    """Draw diagonal watermark"""
+    try:
+        c.saveState()
+        c.translate(w/2, h/2)
+        c.rotate(35)
+        c.setFillColor(HexColor('#4B0082'))
+        c.setFillAlpha(0.04)
+        c.setFont('Helvetica-Bold', 60)
+        c.drawCentredString(0, 0, text)
+        c.restoreState()
+    except:
+        pass
+
+
+def draw_anti_copy_pattern(c, w, h, margin_mm=10):
+    """Draw anti-copy fine lines"""
+    try:
+        c.saveState()
+        c.setStrokeColor(HexColor('#064E3B'))
+        c.setStrokeAlpha(0.05)
+        c.setLineWidth(0.2)
+        m = margin_mm * mm
+        for i in range(30):
+            y_line = m + i * 4*mm
+            c.line(m, y_line, w - m, y_line)
+        c.restoreState()
+    except:
+        pass
+
+
+def draw_guilloche_pattern(c, w, h, primary_color, gold_color, margin_mm=15):
+    """Draw guilloché concentric rectangles"""
+    try:
+        c.saveState()
+        c.setStrokeColor(primary_color)
+        c.setStrokeAlpha(0.05)
+        c.setLineWidth(0.25)
+        m = margin_mm * mm
+        for i in range(12):
+            offset = i * 1.2*mm
+            c.rect(m + offset, m + offset, w - 2*m - 2*offset, h - 2*m - 2*offset, fill=False, stroke=True)
+        c.restoreState()
+    except:
+        pass
+
+
+def draw_barcode(c, data, x, y, width=36*mm, height=8*mm):
+    """Draw simple Code-128 style barcode"""
+    try:
+        c.saveState()
+        c.setFillColor(HexColor('#000000'))
+        import random
+        random.seed(data)
+        bar_x = x
+        for char in data[:20]:
+            bar_width = random.choice([1, 2, 3]) * 0.5*mm
+            c.rect(bar_x, y, bar_width, height, fill=True, stroke=False)
+            bar_x += bar_width + 0.5*mm
+        c.restoreState()
+    except:
+        pass
+
+
+def draw_smooth_gradient(c, x, y, width, height, color1, color2):
+    """Draw smooth gradient"""
+    try:
+        steps = 100
+        for i in range(steps):
+            ratio = i / steps
+            r = color1.red * (1-ratio) + color2.red * ratio
+            g = color1.green * (1-ratio) + color2.green * ratio
+            b = color1.blue * (1-ratio) + color2.blue * ratio
+            c.setFillColor(Color(r, g, b, alpha=0.02))
+            c.rect(x, y + i * height/steps, width, height/steps + 0.5, fill=True, stroke=False)
+    except:
+        pass
 
 # ==============================================================================
 # 1. FIXED PAYMENT RECEIPT GENERATOR (A6 PORTRAIT: 105mm × 148mm)
