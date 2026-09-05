@@ -82,7 +82,7 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     
     # Title
     c.setFillColor(primary)
-    c.setFont('Helvetica-Bold', 36)
+    c.setFont('Helvetica-Bold', 28)
     c.drawCentredString(w/2, h-60*mm, title.upper())
     
     c.setFillColor(HexColor('#64748b'))
@@ -95,7 +95,7 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     
     # Student name
     c.setFillColor(HexColor('#1e1b4b'))
-    c.setFont('Helvetica-Bold', 48)
+    c.setFont('Helvetica-Bold', 36)
     c.drawCentredString(w/2, h-115*mm, full_name)
     
     # Reason
@@ -178,18 +178,21 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
         stamp_file = auth_dir / 'general.png'
     
     if stamp_file.exists():
-        c.drawImage(ImageReader(str(stamp_file)), w/2-20*mm, 25*mm, 40*mm, 40*mm, preserveAspectRatio=True)
+        stamp_img = ImageReader(str(stamp_file))
+    c.drawImage(stamp_img, w/2-20*mm, 25*mm, 40*mm, 40*mm, preserveAspectRatio=True, mask='auto')
     
     # Secondary stamp for VIP/Payment/Promo
     if cert_type in ['vip_leaderboard', 'payment', 'promotion']:
         secondary_stamp = auth_dir / 'super_admin_stamp.png'
         if secondary_stamp.exists():
-            c.drawImage(ImageReader(str(secondary_stamp)), w-60*mm, 35*mm, 30*mm, 30*mm, preserveAspectRatio=True)
+            sec_img = ImageReader(str(secondary_stamp))
+            c.drawImage(sec_img, w-60*mm, 35*mm, 30*mm, 30*mm, preserveAspectRatio=True, mask='auto')
     
     # Signatures (Super Admin + Content Manager)
     sig_file = auth_dir / 'super_admin_signature.png'
     if sig_file.exists():
-        c.drawImage(ImageReader(str(sig_file)), w/2-60*mm, 15*mm, 35*mm, 12*mm, preserveAspectRatio=True)
+        sig_img = ImageReader(str(sig_file))
+        c.drawImage(sig_img, w/2-60*mm, 15*mm, 35*mm, 12*mm, preserveAspectRatio=True, mask='auto')
         # Super Admin name
         c.setFont('Helvetica-Bold', 10)
         c.setFillColor(HexColor('#1e1b4b'))
@@ -201,7 +204,8 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     # Content Manager signature
     cm_sig = auth_dir / 'signature_(content_manager).png'
     if cm_sig.exists() and cert_type not in ['other', 'excellence', 'content_creator', 'marketing_manager', 'advertiser', 'staff', 'special_congratulations', 'participation', 'appreciation', 'congratulations']:
-        c.drawImage(ImageReader(str(cm_sig)), w/2+25*mm, 15*mm, 35*mm, 12*mm, preserveAspectRatio=True)
+        cm_img = ImageReader(str(cm_sig))
+            c.drawImage(cm_img, w/2+25*mm, 15*mm, 35*mm, 12*mm, preserveAspectRatio=True, mask='auto')
         c.setFont('Helvetica-Bold', 10)
         c.setFillColor(HexColor('#1e1b4b'))
         c.drawCentredString(w/2+42*mm, 12*mm, 'Banch Destaw')
