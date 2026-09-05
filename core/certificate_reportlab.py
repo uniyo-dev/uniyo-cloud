@@ -160,7 +160,7 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     c.translate(w/2, h/2)
     c.rotate(30)
     c.setFillColor(primary)
-    c.setFont('UniyoSans-Bold' if 'UniyoSans-Bold' in pdfmetrics.getRegisteredFontNames() else 'Helvetica-Bold', 80)
+    c.setFont('Helvetica-Bold' if 'UniyoSans-Bold' in pdfmetrics.getRegisteredFontNames() else 'Helvetica-Bold', 80)
     c.setFillAlpha(0.04)
     c.drawCentredString(0, 0, 'UNIYO')
     c.restoreState()
@@ -188,7 +188,7 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     # TITLE (centered, 28mm from top)
     # ============================================
     c.setFillColor(primary)
-    c.setFont('UniyoSans-Bold' if 'UniyoSans-Bold' in pdfmetrics.getRegisteredFontNames() else 'Helvetica-Bold', 24)
+    c.setFont('Helvetica-Bold' if 'UniyoSans-Bold' in pdfmetrics.getRegisteredFontNames() else 'Helvetica-Bold', 24)
     c.drawCentredString(w/2, h-32*mm, title.upper())
     
     # SUBTITLE
@@ -205,7 +205,7 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     
     # STUDENT NAME
     c.setFillColor(HexColor('#1a1a2e'))
-    c.setFont('UniyoSans-Bold' if 'UniyoSans-Bold' in pdfmetrics.getRegisteredFontNames() else 'Helvetica-Bold', 32)
+    c.setFont('Helvetica-Bold' if 'UniyoSans-Bold' in pdfmetrics.getRegisteredFontNames() else 'Helvetica-Bold', 32)
     c.drawCentredString(w/2, h-62*mm, full_name)
     
     # ============================================
