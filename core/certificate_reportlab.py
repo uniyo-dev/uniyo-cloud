@@ -134,6 +134,38 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     c.setFillColor(primary)
     c.drawRightString(w-40*mm, y, cert_type.upper())
     
+    # QR Code
+    try:
+        import qrcode
+        from io import BytesIO
+        qr = qrcode.QRCode(version=1, error_correction=qrcode.constants.ERROR_CORRECT_H, box_size=10, border=2)
+        qr.add_data(f"{certificate_data.get('verification_token', '')}")
+        qr.make(fit=True)
+        qr_img = qr.make_image(fill_color='black', back_color='white')
+        qr_buffer = BytesIO()
+        qr_img.save(qr_buffer, format='PNG')
+        qr_buffer.seek(0)
+        qr_image = ImageReader(qr_buffer)
+        c.drawImage(qr_image, w-50*mm, 15*mm, 30*mm, 30*mm, preserveAspectRatio=True)
+    except Exception as e:
+        print(f"QR error: {e}")
+
+    # Barcode (using simple lines)
+    c.setLineWidth(1)
+    c.setStrokeColor(HexColor('#000000'))
+    barcode_x = w/2 + 10*mm
+    barcode_y = 15*mm
+    import random
+    random.seed(certificate_data.get('certificate_number', 'UNKNOWN'))
+    for i in range(50):
+        bar_width = random.choice([1, 2, 3]) * 0.5*mm
+        c.line(barcode_x, barcode_y, barcode_x, barcode_y + 20*mm)
+        barcode_x += bar_width + 0.5*mm
+    # Barcode text
+    c.setFont('Courier', 8)
+    c.setFillColor(HexColor('#334155'))
+    c.drawCentredString(w/2 + 40*mm, 12*mm, cert_number)
+    
     # Stamps
     auth_dir = BASE_DIR / 'static' / 'Authenticity'
     if cert_type == 'vip_leaderboard' and rank:
@@ -148,15 +180,45 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     if stamp_file.exists():
         c.drawImage(ImageReader(str(stamp_file)), w/2-20*mm, 25*mm, 40*mm, 40*mm, preserveAspectRatio=True)
     
-    # Signature
+    # Secondary stamp for VIP/Payment/Promo
+    if cert_type in ['vip_leaderboard', 'payment', 'promotion']:
+        secondary_stamp = auth_dir / 'super_admin_stamp.png'
+        if secondary_stamp.exists():
+            c.drawImage(ImageReader(str(secondary_stamp)), w-60*mm, 35*mm, 30*mm, 30*mm, preserveAspectRatio=True)
+    
+    # Signatures (Super Admin + Content Manager)
     sig_file = auth_dir / 'super_admin_signature.png'
     if sig_file.exists():
-        c.drawImage(ImageReader(str(sig_file)), w/2-50*mm, 15*mm, 40*mm, 15*mm, preserveAspectRatio=True)
+        c.drawImage(ImageReader(str(sig_file)), w/2-60*mm, 15*mm, 35*mm, 12*mm, preserveAspectRatio=True)
+        # Super Admin name
+        c.setFont('Helvetica-Bold', 10)
+        c.setFillColor(HexColor('#1e1b4b'))
+        c.drawCentredString(w/2-42*mm, 12*mm, 'Chalachew Agegn')
+        c.setFont('Helvetica', 8)
+        c.setFillColor(HexColor('#64748b'))
+        c.drawCentredString(w/2-42*mm, 9*mm, 'Super Admin')
+    
+    # Content Manager signature
+    cm_sig = auth_dir / 'signature_(content_manager).png'
+    if cm_sig.exists() and cert_type not in ['other', 'excellence', 'content_creator', 'marketing_manager', 'advertiser', 'staff', 'special_congratulations', 'participation', 'appreciation', 'congratulations']:
+        c.drawImage(ImageReader(str(cm_sig)), w/2+25*mm, 15*mm, 35*mm, 12*mm, preserveAspectRatio=True)
+        c.setFont('Helvetica-Bold', 10)
+        c.setFillColor(HexColor('#1e1b4b'))
+        c.drawCentredString(w/2+42*mm, 12*mm, 'Banch Destaw')
+        c.setFont('Helvetica', 8)
+        c.setFillColor(HexColor('#64748b'))
+        c.drawCentredString(w/2+42*mm, 9*mm, 'Content Manager')
     
     # Microtext
     c.setFillColor(HexColor('#94a3b8'))
     c.setFont('Helvetica', 8)
-    c.drawCentredString(w/2, 8*mm, 'UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE • SECURITY FEATURES INCLUDED')
+    # Enhanced microtext with multiple security layers
+    c.setFillColor(HexColor('#94a3b8'))
+    c.setFont('Helvetica', 6)
+    c.drawCentredString(w/2, 6*mm, 'UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE • SECURITY FEATURES INCLUDED • DO NOT COPY')
+    c.setFont('Courier', 5)
+    c.setFillColor(HexColor('#cbd5e1'))
+    c.drawCentredString(w/2, 4*mm, 'UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE • SECURITY FEATURES INCLUDED • DO NOT COPY • UNIYO AUTHENTIC CERTIFICATE')
     
     c.save()
     
