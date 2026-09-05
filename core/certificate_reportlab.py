@@ -7,12 +7,35 @@ Exact A4: 210mm x 297mm
 from pathlib import Path
 from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib.units import mm
-from reportlab.lib.colors import HexColor, Color
+from reportlab.lib.colors import HexColor, Color, CMYKColor
+from reportlab.lib.utils import ImageReader
+from reportlab.pdfgen import canvas
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+import qrcode
+from io import BytesIO
+import random
 from reportlab.pdfgen import canvas
 from reportlab.lib.utils import ImageReader
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from core.paths import CERTIFICATES_DIR, BASE_DIR
+
+
+
+def draw_gradient(c, x, y, width, height, color1, color2, vertical=True):
+    """Draw smooth gradient for premium effect"""
+    steps = 100
+    for i in range(steps):
+        ratio = i / steps
+        r = color1.red * (1-ratio) + color2.red * ratio
+        g = color1.green * (1-ratio) + color2.green * ratio
+        b = color1.blue * (1-ratio) + color2.blue * ratio
+        c.setFillColor(Color(r, g, b, alpha=0.01))
+        if vertical:
+            c.rect(x, y + i * height/steps, width, height/steps + 0.5, fill=True, stroke=False)
+        else:
+            c.rect(x + i * width/steps, y, width/steps + 0.5, height, fill=True, stroke=False)
 
 def generate_certificate_reportlab(certificate_data, qr_data_uri):
     """Generate PERFECT A4 PDF certificate"""
@@ -89,7 +112,34 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     # ============================================
     c.setStrokeColor(primary)
     c.setLineWidth(5)
-    corner_len = 20*mm
+    # BEZIER CORNER ORNAMENTS (smooth curves)
+    corner_len = 22*mm
+    c.setStrokeColor(primary)
+    c.setLineWidth(4)
+    
+    # Top-left: smooth curve instead of sharp line
+    p = c.beginPath()
+    p.moveTo(15*mm, 15*mm + corner_len)
+    p.curveTo(15*mm, 15*mm + corner_len/2, 15*mm + corner_len/2, 15*mm, 15*mm + corner_len, 15*mm)
+    c.drawPath(p, fill=False, stroke=True)
+    
+    # Top-right
+    p = c.beginPath()
+    p.moveTo(w-15*mm-corner_len, 15*mm)
+    p.curveTo(w-15*mm-corner_len/2, 15*mm, w-15*mm, 15*mm + corner_len/2, w-15*mm, 15*mm + corner_len)
+    c.drawPath(p, fill=False, stroke=True)
+    
+    # Bottom-left
+    p = c.beginPath()
+    p.moveTo(15*mm, h-15*mm-corner_len)
+    p.curveTo(15*mm, h-15*mm-corner_len/2, 15*mm + corner_len/2, h-15*mm, 15*mm + corner_len, h-15*mm)
+    c.drawPath(p, fill=False, stroke=True)
+    
+    # Bottom-right
+    p = c.beginPath()
+    p.moveTo(w-15*mm-corner_len, h-15*mm)
+    p.curveTo(w-15*mm-corner_len/2, h-15*mm, w-15*mm, h-15*mm-corner_len/2, w-15*mm, h-15*mm-corner_len)
+    c.drawPath(p, fill=False, stroke=True)
     # Top-left
     c.line(15*mm, 15*mm+corner_len, 15*mm, 15*mm)
     c.line(15*mm, 15*mm, 15*mm+corner_len, 15*mm)
@@ -288,6 +338,10 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     c.setTitle(f"UNIYO Certificate - {full_name}")
     c.setAuthor("UNIYO - University Made for YOU")
     c.setSubject(f"{title} - {cert_type.upper()}")
+    
+    # SMOOTH GOLD GRADIENT (VIP certificates)
+    if cert_type == 'vip_leaderboard':
+        draw_gradient(c, 0, 0, w, h, Color(1, 0.84, 0, alpha=0.015), Color(0.85, 0.65, 0.13, alpha=0.015))
     
     c.save()
     
