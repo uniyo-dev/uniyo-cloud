@@ -275,10 +275,10 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
         qr_img.save(qr_buffer, format='PNG')
         qr_buffer.seek(0)
         qr_image = ImageReader(qr_buffer)
-        c.drawImage(qr_image, 20*mm, 20*mm, 25*mm, 25*mm, preserveAspectRatio=True)
+        c.drawImage(qr_image, 22*mm, 25*mm, 22*mm, 22*mm, preserveAspectRatio=True)
         c.setFont('Helvetica', 7)
         c.setFillColor(HexColor('#666666'))
-        c.drawCentredString(32*mm, 18*mm, 'Scan')
+        c.drawCentredString(33*mm, 23*mm, 'Scan')
     except:
         pass
     
@@ -297,7 +297,7 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     
     if stamp_file.exists():
         stamp_img = ImageReader(str(stamp_file))
-        c.drawImage(stamp_img, w/2-16*mm, 22*mm, 32*mm, 32*mm, preserveAspectRatio=True, mask='auto')
+        c.drawImage(stamp_img, w/2-15*mm, 28*mm, 30*mm, 30*mm, preserveAspectRatio=True, mask='auto')
     
     # ============================================
     # SIGNATURES (bottom)
@@ -305,32 +305,32 @@ def generate_certificate_reportlab(certificate_data, qr_data_uri):
     sig_file = auth_dir / 'super_admin_signature.png'
     if sig_file.exists():
         sig_img = ImageReader(str(sig_file))
-        c.drawImage(sig_img, 20*mm, 12*mm, 28*mm, 8*mm, preserveAspectRatio=True, mask='auto')
+        c.drawImage(sig_img, 22*mm, 20*mm, 25*mm, 8*mm, preserveAspectRatio=True, mask='auto')
         c.setFont('Helvetica-Bold', 8)
         c.setFillColor(HexColor('#1a1a2e'))
-        c.drawCentredString(34*mm, 10*mm, 'Chalachew Agegn')
+        c.drawCentredString(34*mm, 18*mm, 'Chalachew Agegn')
         c.setFont('Helvetica', 7)
         c.setFillColor(HexColor('#666666'))
-        c.drawCentredString(34*mm, 8*mm, 'Super Admin')
+        c.drawCentredString(34*mm, 16*mm, 'Super Admin')
     
     if cert_type not in ['other', 'excellence', 'content_creator', 'marketing_manager', 'advertiser', 'staff', 'special_congratulations', 'participation', 'appreciation', 'congratulations']:
         cm_sig = auth_dir / 'signature_(content_manager).png'
         if cm_sig.exists():
             cm_img = ImageReader(str(cm_sig))
-            c.drawImage(cm_img, w-48*mm, 12*mm, 28*mm, 8*mm, preserveAspectRatio=True, mask='auto')
+            c.drawImage(cm_img, w-47*mm, 20*mm, 25*mm, 8*mm, preserveAspectRatio=True, mask='auto')
             c.setFont('Helvetica-Bold', 8)
             c.setFillColor(HexColor('#1a1a2e'))
-            c.drawCentredString(w-34*mm, 10*mm, 'Banch Destaw')
+            c.drawCentredString(w-34*mm, 18*mm, 'Banch Destaw')
             c.setFont('Helvetica', 7)
             c.setFillColor(HexColor('#666666'))
-            c.drawCentredString(w-34*mm, 8*mm, 'Content Manager')
+            c.drawCentredString(w-34*mm, 16*mm, 'Content Manager')
     
     # ============================================
     # MICROTEXT (bottom, within margins)
     # ============================================
     c.setFillColor(HexColor('#999999'))
     c.setFont('Helvetica', 6)
-    c.drawCentredString(w/2, 6*mm, 'UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE • SECURITY FEATURES INCLUDED')
+    c.drawCentredString(w/2, 16*mm, 'UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE • SECURITY FEATURES INCLUDED')
     
     # ============================================
     # PDF METADATA
