@@ -1,33 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 400 140" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="brP" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Brand Purple Gradient -->
+    <linearGradient id="brP" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#8B5CF6"/>
       <stop offset="100%" style="stop-color:#4C1D95"/>
     </linearGradient>
+
+    <!-- Brand Gold Gradient -->
     <linearGradient id="brG" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#FCD34D"/>
       <stop offset="100%" style="stop-color:#D97706"/>
     </linearGradient>
   </defs>
 
-  <!-- Icon (left) -->
-  <rect x="20" y="20" width="110" height="110" rx="25" fill="url(#brP)"/>
-  
-  <!-- Cap in icon -->
-  <g transform="translate(75, 75) scale(3.8) translate(-12, -12)">
+  <!-- Left Icon Container (100x100, centered vertically at Y=70) -->
+  <rect x="25" y="20" width="100" height="100" rx="22" fill="url(#brP)"/>
+
+  <!-- Graduation Cap Icon -->
+  <g transform="translate(75, 70) scale(3.5) translate(-12, -12)">
     <path d="M22 10v6M2 10l10-5 10 5-10 5z" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M6 12v5c3 3 9 3 12 0v-5" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-  
-  <circle cx="75" cy="35" r="4" fill="#FCD34D"/>
 
-  <!-- UNIYO text -->
-  <text x="200" y="80" font-family="Arial Black, sans-serif" font-size="42" font-weight="900" fill="#4C1D95" text-anchor="middle" letter-spacing="6">UNIYO</text>
+  <!-- Gold Star/Dot Accent on Icon -->
+  <circle cx="75" cy="33" r="4" fill="#FCD34D"/>
 
-  <!-- Gold underline -->
-  <rect x="145" y="95" width="110" height="4" rx="2" fill="url(#brG)"/>
+  <!-- Brand Wordmark Group (Centered at X=262 in the right content zone) -->
+  <!-- 1. UNIYO Main Title -->
+  <text x="262" y="72" font-family="Arial Black, Impact, sans-serif" font-size="42" font-weight="900" fill="#4C1D95" text-anchor="middle" letter-spacing="6">UNIYO</text>
 
-  <!-- Tagline -->
-  <text x="200" y="120" font-family="Arial, sans-serif" font-size="10" fill="#7C3AED" text-anchor="middle" letter-spacing="4">LEARN • GROW • SUCCEED</text>
+  <!-- 2. Gold Accent Underline -->
+  <rect x="192" y="86" width="140" height="4" rx="2" fill="url(#brG)"/>
+
+  <!-- 3. Sub-Tagline -->
+  <text x="262" y="110" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#7C3AED"
+
+text-anchor="middle" letter-spacing="3.5">LEARN • GROW • SUCCEED</text>
 </svg>
