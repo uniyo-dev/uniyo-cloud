@@ -83,7 +83,7 @@ def generate_custom_certificate(certificate_data, qr_data_uri=None):
     c.restoreState()
     
     # Border - use theme_nature_organic
-    border_file = BASE_DIR / 'static' / 'Certificates' / 'other' / 'png_converted' / 'theme_nature_organic.png'
+    border_file = BASE_DIR / 'static' / 'certificates' / 'other' / 'gold_singline.png'
     if border_file.exists():
         c.drawImage(ImageReader(str(border_file)), 0, 0, w, h, preserveAspectRatio=True, mask='auto')
     
@@ -193,12 +193,12 @@ def generate_custom_certificate(certificate_data, qr_data_uri=None):
     c.drawCentredString(55*mm, 14*mm, cert_number[:15])
     
     # Stamp (super_admin for custom)
-    stamp_file = BASE_DIR / 'static' / 'Authenticity' / 'super_admin_stamp.png'
+    stamp_file = BASE_DIR / 'static' / 'Authenticity' / 'admin_stamp.png'
     if stamp_file.exists():
         c.drawImage(ImageReader(str(stamp_file)), w/2-22*mm, 18*mm, 44*mm, 44*mm, preserveAspectRatio=True, mask='auto')
     
     # Signature (Super Admin only for custom)
-    sig_file = BASE_DIR / 'static' / 'Authenticity' / 'super_admin_signature.png'
+    sig_file = BASE_DIR / 'static' / 'Authenticity' / 'admin_signature.png'
     if sig_file.exists():
         c.drawImage(ImageReader(str(sig_file)), w-52*mm, 15*mm, 22*mm, 7*mm, preserveAspectRatio=True, mask='auto')
     c.setFont('Helvetica-Bold', 6)

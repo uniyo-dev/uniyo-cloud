@@ -189,7 +189,7 @@ def generate_completion_certificate(certificate_data, qr_data_uri=None):
         pass
     
     # Stamp
-    stamp_file = BASE_DIR / 'static' / 'Authenticity' / 'general.png'
+    stamp_file = BASE_DIR / 'static' / 'certificates' / 'completion' / 'stamp.png'
     if stamp_file.exists():
         c.drawImage(ImageReader(str(stamp_file)), w/2-27*mm, 28*mm, 54*mm, 54*mm, preserveAspectRatio=True, mask='auto')
     
@@ -200,7 +200,7 @@ def generate_completion_certificate(certificate_data, qr_data_uri=None):
     c.restoreState()
     
     # Signature
-    sig_file = BASE_DIR / 'static' / 'Authenticity' / 'super_admin_signature.png'
+    sig_file = BASE_DIR / 'static' / 'Authenticity' / 'admin_signature.png'
     if sig_file.exists():
         c.drawImage(ImageReader(str(sig_file)), w-60*mm, footer_y+8*mm, 25*mm, 8*mm, preserveAspectRatio=True, mask='auto')
     c.setFont('AlexBrush' if 'AlexBrush' in pdfmetrics.getRegisteredFontNames() else 'Helvetica-Bold', 14)

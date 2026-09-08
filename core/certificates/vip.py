@@ -168,8 +168,8 @@ def generate_a4_landscape_certificate_reportlab(certificate_data, qr_data_uri=No
     draw_transparent_image(c, sec_stamp_path, secondary_stamp_x, secondary_stamp_y, stamp_size, stamp_size)
 
     # 7. Signatures System (Bottom Right Area)
-    sig_sa_file = find_signature_file('super_admin_signature.png')
-    sig_cm_file = find_signature_file('signature_(content_manager).png')
+    sig_sa_file = find_signature_file('admin_signature.png')
+    sig_cm_file = find_signature_file('manager_signature.png')
 
     sig1_x = w - m - 68 * mm
     sig2_x = w - m - 34 * mm
