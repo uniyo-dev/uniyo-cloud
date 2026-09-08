@@ -5,6 +5,7 @@ UNIYO LMS - Path Management (PythonAnywhere)
 from pathlib import Path
 import os
 import sys
+import socket
 
 # Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -47,7 +48,17 @@ def get_database_uri():
     return str(DB_PATH)
 
 def get_hotspot_ip():
-    return "127.0.0.1"
+    """Get the local IP address for hotspot access"""
+    try:
+        # Try to get the IP address of the device
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(("8.8.8.8", 80))
+        ip = s.getsockname()[0]
+        s.close()
+        return ip
+    except:
+        # Fallback to localhost
+        return "127.0.0.1"
 
 def ensure_directories():
     directories = [

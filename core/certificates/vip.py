@@ -1,16 +1,33 @@
 """VIP & Promotion Certificate Generator - A4 Landscape (297mm x 210mm)"""
 
-# ==============================================================================
-# 2. A4 LANDSCAPE CERTIFICATE GENERATOR (297mm × 210mm — VIP & PROMOTION)
-# ==============================================================================
+from pathlib import Path
+from io import BytesIO
+from datetime import datetime
+import qrcode
+from reportlab.lib.pagesizes import A4, landscape
+from reportlab.lib.units import mm
+from reportlab.lib.colors import HexColor, Color
+from reportlab.pdfgen import canvas
+from reportlab.lib.utils import ImageReader
+
+from core.paths import CERTIFICATES_DIR, BASE_DIR
+from core.certificates.common import (
+    SANS_FONT, SANS_BOLD, SERIF_FONT, SERIF_BOLD, SERIF_ITALIC,
+    resolve_certificate_meta,
+    find_stamp_file, find_signature_file,
+    draw_transparent_image, draw_parchment_background,
+    draw_watermark, draw_anti_copy_pattern, draw_guilloche_pattern,
+    draw_bezier_corners, draw_sparkle_particles,
+    draw_holographic_shimmer, draw_smooth_gradient, draw_barcode
+)
 
 def generate_a4_landscape_certificate_reportlab(certificate_data, qr_data_uri=None):
     """
     Generates a 100% compliant A4 LANDSCAPE Certificate (297mm x 210mm).
-    DOUBLED STAMP SIZES (56mm), EQUAL SIZES, 35% HEIGHT SECONDARY STAMP PLACEMENT.
+    DOUBLED STAMP SIZES (54mm), EQUAL SIZES, 35% HEIGHT SECONDARY STAMP PLACEMENT.
     """
     meta = resolve_certificate_meta(certificate_data)
-    
+
     full_name = certificate_data.get('full_name', 'Student Name').title()
     university = certificate_data.get('university', 'Ethiopian University')
     stream = certificate_data.get('stream', 'Natural')
@@ -18,7 +35,7 @@ def generate_a4_landscape_certificate_reportlab(certificate_data, qr_data_uri=No
     cert_number = certificate_data.get('certificate_number', 'UNY-VIP-2026-0001')
     issue_date = certificate_data.get('issue_date', datetime.now().strftime('%B %d, %Y'))
     verification_token = certificate_data.get('verification_token', '')
-    
+
     cert_id = cert_number.replace('/', '_').replace('\\', '_')
     output_pdf = CERTIFICATES_DIR / f"{cert_id}.pdf"
 
@@ -28,14 +45,14 @@ def generate_a4_landscape_certificate_reportlab(certificate_data, qr_data_uri=No
         pageCompression=0,
         invariant=1
     )
-    
+
     c.setTitle(f"UNIYO Certificate - {full_name}")
     c.setAuthor("UNIYO - Ethiopian Higher Education Freshman Hub")
     c.setSubject(f"{meta['title']} - {meta['category'].upper()}")
-    
-    w, h = landscape(A4) # 297mm x 210mm
+
+    w, h = landscape(A4)  # 297mm x 210mm
     m = 15 * mm  # Strict 15mm margin
-    
+
     primary_color = meta['primary_color']
     gold_color = meta['gold_color']
 
@@ -54,7 +71,7 @@ def generate_a4_landscape_certificate_reportlab(certificate_data, qr_data_uri=No
     c.setStrokeColor(primary_color)
     c.setLineWidth(2.5)
     c.rect(m, m, w - (2 * m), h - (2 * m), fill=False, stroke=True)
-    
+
     c.setStrokeColor(gold_color)
     c.setLineWidth(1.2)
     c.rect(m + 3 * mm, m + 3 * mm, w - (2 * m) - 6 * mm, h - (2 * m) - 6 * mm, fill=False, stroke=True)
@@ -63,7 +80,7 @@ def generate_a4_landscape_certificate_reportlab(certificate_data, qr_data_uri=No
 
     # 3. Top Section
     logo_file = BASE_DIR / 'static' / 'icons' / 'app_icon-192.png'
-    draw_transparent_image(c, logo_file, m + 12 * mm, h - m - 24 * mm, 18 * mm, 18 * mm)
+    draw_transparent_image(c, str(logo_file), m + 12 * mm, h - m - 24 * mm, 18 * mm, 18 * mm)
 
     serial_x = w - m - 62 * mm
     serial_y = h - m - 22 * mm
@@ -71,7 +88,7 @@ def generate_a4_landscape_certificate_reportlab(certificate_data, qr_data_uri=No
     c.setStrokeColor(HexColor("#FCD34D"))
     c.setLineWidth(1)
     c.roundRect(serial_x, serial_y, 50 * mm, 12 * mm, 2 * mm, fill=True, stroke=True)
-    
+
     c.setFont(SANS_BOLD, 6)
     c.setFillColor(gold_color)
     c.drawString(serial_x + 3 * mm, serial_y + 8 * mm, "OFFICIAL SERIAL NUMBER")
@@ -85,7 +102,7 @@ def generate_a4_landscape_certificate_reportlab(certificate_data, qr_data_uri=No
     c.setFillColor(primary_color)
     c.setFont(SERIF_BOLD, 22)
     c.drawCentredString(w / 2.0, h - m - 28 * mm, meta['title'])
-    
+
     c.setFillColor(HexColor('#555555'))
     c.setFont(SERIF_ITALIC, 10)
     c.drawCentredString(w / 2.0, h - m - 34 * mm, meta['subtitle'])
@@ -148,48 +165,49 @@ def generate_a4_landscape_certificate_reportlab(certificate_data, qr_data_uri=No
     c.setFillColor(primary_color)
     c.drawString(cred_x + 8 * mm, cred_y + 5 * mm, f"VERIFY ONLINE: {verify_url}")
 
-    # ==========================================================================
-    # 6. STAMPS SYSTEM (EQUAL SIZE, DOUBLED TO 54mm, 35% HEIGHT SECONDARY PLACEMENT)
-    # ==========================================================================
-    stamp_size = 54 * mm  # Doubled Stamp Size for A4 Landscape
-    
+    # 6. STAMPS SYSTEM (EQUAL SIZE, 54mm, 35% HEIGHT SECONDARY PLACEMENT)
+    stamp_size = 54 * mm
+
     primary_stamp_path = find_stamp_file(meta['primary_stamp'])
     sec_stamp_path = find_stamp_file(meta['secondary_stamp'])
-    
+
     # Primary Stamp: Horizontally Centered at Bottom
     primary_stamp_x = (w / 2.0) - (stamp_size / 2.0)
     primary_stamp_y = m + 4 * mm
     draw_transparent_image(c, primary_stamp_path, primary_stamp_x, primary_stamp_y, stamp_size, stamp_size)
-    
+
     # Secondary Stamp: Positioned at 35% Height from Bottom on the Right Side
-    secondary_stamp_x = w - m - stamp_size - 12 * mm
-    secondary_stamp_y = h * 0.35  # Exactly 35% from bottom
-    draw_transparent_image(c, sec_stamp_path, secondary_stamp_x, secondary_stamp_y, stamp_size, stamp_size)
+    if sec_stamp_path:
+        secondary_stamp_x = w - m - stamp_size - 12 * mm
+        secondary_stamp_y = h * 0.35
+        draw_transparent_image(c, sec_stamp_path, secondary_stamp_x, secondary_stamp_y, stamp_size, stamp_size)
 
     # 7. Signatures System (Bottom Right Area)
-    sig_sa_file = find_signature_file('admin_signature.png')
     sig_cm_file = find_signature_file('manager_signature.png')
+    sig_sa_file = find_signature_file('admin_signature.png')
 
     sig1_x = w - m - 68 * mm
     sig2_x = w - m - 34 * mm
     sig_y = m + 8 * mm
 
-    draw_transparent_image(c, sig_cm_file, sig1_x, sig_y + 8 * mm, 28 * mm, 14 * mm)
+    if sig_cm_file:
+        draw_transparent_image(c, sig_cm_file, sig1_x, sig_y + 8 * mm, 28 * mm, 14 * mm)
     c.setLineWidth(0.8)
     c.setStrokeColor(HexColor("#94A3B8"))
     c.line(sig1_x, sig_y + 8 * mm, sig1_x + 28 * mm, sig_y + 8 * mm)
     c.setFont(SANS_BOLD, 6.5)
     c.setFillColor(HexColor("#0F172A"))
-    c.drawString(sig1_x, sig_y + 3.5 * mm, "Prof. Tigist Hailu")
+    c.drawString(sig1_x, sig_y + 3.5 * mm, "Banch Destaw")
     c.setFont(SANS_FONT, 5.5)
     c.setFillColor(HexColor("#64748B"))
     c.drawString(sig1_x, sig_y - 0.5 * mm, "Content Manager")
 
-    draw_transparent_image(c, sig_sa_file, sig2_x, sig_y + 8 * mm, 28 * mm, 14 * mm)
+    if sig_sa_file:
+        draw_transparent_image(c, sig_sa_file, sig2_x, sig_y + 8 * mm, 28 * mm, 14 * mm)
     c.line(sig2_x, sig_y + 8 * mm, sig2_x + 28 * mm, sig_y + 8 * mm)
     c.setFont(SANS_BOLD, 6.5)
     c.setFillColor(HexColor("#0F172A"))
-    c.drawString(sig2_x, sig_y + 3.5 * mm, "Dr. Solomon Tadesse")
+    c.drawString(sig2_x, sig_y + 3.5 * mm, "Chalachew Agegn")
     c.setFont(SANS_FONT, 5.5)
     c.setFillColor(HexColor("#64748B"))
     c.drawString(sig2_x, sig_y - 0.5 * mm, "Super Admin Director")
@@ -204,7 +222,7 @@ def generate_a4_landscape_certificate_reportlab(certificate_data, qr_data_uri=No
         qr_buffer = BytesIO()
         qr_img.save(qr_buffer, format='PNG')
         qr_buffer.seek(0)
-        
+
         qr_image = ImageReader(qr_buffer)
         c.drawImage(qr_image, m + 12 * mm, bottom_y + 4 * mm, 22 * mm, 22 * mm, preserveAspectRatio=True)
         c.setFont(SANS_FONT, 6.5)
@@ -223,4 +241,3 @@ def generate_a4_landscape_certificate_reportlab(certificate_data, qr_data_uri=No
     c.showPage()
     c.save()
     return output_pdf
-

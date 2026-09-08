@@ -109,7 +109,6 @@ def debug_html2image():
     except Exception as e:
         return {"html2image_installed": False, "message": str(e)}
 
-
 @app.route('/debug/playwright')
 def debug_playwright():
     try:
@@ -121,7 +120,6 @@ def debug_playwright():
         return {"playwright_installed": False, "message": "Playwright NOT installed"}
     except Exception as e:
         return {"playwright_installed": False, "message": str(e)}
-
 
 @app.route('/health')
 def health_check():
@@ -135,7 +133,7 @@ def health_check():
 if __name__ == '__main__':
     ensure_directories()
     hotspot_ip = get_hotspot_ip()
-    
+
     print("\n" + "=" * 50)
     print("       UNIYO LMS - Server Starting")
     print("=" * 50)
@@ -145,5 +143,5 @@ if __name__ == '__main__':
     print("=" * 50)
     print(f"  Admin: admin / Admin@123")
     print("=" * 50 + "\n")
-    
+
     app.run(host='0.0.0.0', port=5000, debug=False, use_reloader=False, threaded=True)

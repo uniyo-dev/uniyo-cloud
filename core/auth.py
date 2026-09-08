@@ -17,57 +17,57 @@ def create_student_session(student_id, request):
     existing_sessions = db.query('''
         SELECT * FROM active_sessions WHERE student_id = ? AND is_active = 1
     ''', (student_id,))
-    
+
     current_time = datetime.now()
     valid_sessions = []
-    
+
     for existing_session in existing_sessions:
         last_activity = datetime.fromisoformat(existing_session['last_activity'])
         if (current_time - last_activity) < timedelta(hours=SESSION_TIMEOUT_HOURS):
             valid_sessions.append(existing_session)
         else:
             db.execute("UPDATE active_sessions SET is_active = 0 WHERE id = ?", (existing_session['id'],))
-    
+
     if valid_sessions:
         return False, "This account is already logged in on another device. Please logout from that device first."
-    
+
     session_token = generate_session_token()
     db.execute('''
         INSERT INTO active_sessions (student_id, session_token, device_info, ip_address, created_at, last_activity)
         VALUES (?, ?, ?, ?, ?, ?)
     ''', (student_id, session_token, request.user_agent.string, request.remote_addr, current_time.isoformat(), current_time.isoformat()))
-    
+
     session['student_id'] = student_id
     session['session_token'] = session_token
     session['login_time'] = current_time.isoformat()
     session.permanent = True
-    
+
     return True, "Session created"
 
 def validate_student_session():
     if 'student_id' not in session or 'session_token' not in session:
         return False, "No session found"
-    
+
     db = get_db()
     active_session = db.query_one('''
         SELECT * FROM active_sessions WHERE student_id = ? AND session_token = ? AND is_active = 1
     ''', (session['student_id'], session['session_token']))
-    
+
     if not active_session:
         session.clear()
         return False, "Session terminated"
-    
+
     try:
         last_activity = datetime.fromisoformat(active_session['last_activity'])
     except:
         last_activity = datetime.now()
     current_time = datetime.now()
-    
+
     if (current_time - last_activity) > timedelta(hours=SESSION_TIMEOUT_HOURS):
         db.execute("UPDATE active_sessions SET is_active = 0 WHERE id = ?", (active_session['id'],))
         session.clear()
         return False, "Session expired"
-    
+
     db.execute("UPDATE active_sessions SET last_activity = ? WHERE id = ?", (current_time.isoformat(), active_session['id']))
     return True, "Session valid"
 

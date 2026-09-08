@@ -33,7 +33,7 @@ def index():
         JOIN students s ON c.student_id = s.id
         ORDER BY c.issue_date DESC
     ''')
-    
+
     return render_template('admin/certificates.html', certificates=certificates)
 
 # ============================================
@@ -45,14 +45,14 @@ def index():
 def issue():
     """Issue a certificate to a student"""
     db = get_db()
-    
+
     if request.method == 'POST':
         student_id = request.form.get('student_id')
         certificate_type = request.form.get('certificate_type', 'completion')
         title = request.form.get('title', 'Certificate')
         rank = request.form.get('rank') or None
         month_year = request.form.get('month_year') or None
-        
+
         try:
             cert_data = generate_certificate(
                 int(student_id),
@@ -66,10 +66,10 @@ def issue():
             return redirect(url_for('admin_certificates.index'))
         except Exception as e:
             flash(f"Error issuing certificate: {str(e)}", 'danger')
-    
+
     # GET: Show form
     students = db.query("SELECT id, full_name, phone FROM students ORDER BY full_name")
-    
+
     return render_template('admin/issue_certificate.html', students=students)
 
 # ============================================
@@ -81,11 +81,11 @@ def issue():
 def bulk_issue():
     """Issue certificates to multiple students"""
     db = get_db()
-    
+
     student_ids = request.form.getlist('student_ids')
     certificate_type = request.form.get('certificate_type', 'completion')
     title = request.form.get('title', 'Certificate')
-    
+
     try:
         certificates = issue_bulk_certificates(
             [int(sid) for sid in student_ids],
@@ -95,7 +95,7 @@ def bulk_issue():
         flash(f"Issued {len(certificates)} certificates", 'success')
     except Exception as e:
         flash(f"Error issuing certificates: {str(e)}", 'danger')
-    
+
     return redirect(url_for('admin_certificates.index'))
 
 # ============================================
@@ -107,24 +107,24 @@ def bulk_issue():
 def view(certificate_id):
     """View certificate details"""
     db = get_db()
-    
+
     cert = db.query_one('''
         SELECT c.*, s.full_name as student_name, s.university, s.stream
         FROM certificates c
         JOIN students s ON c.student_id = s.id
         WHERE c.certificate_number = ? OR c.id = ?
     ''', (certificate_id, certificate_id))
-    
+
     if not cert:
         flash('Certificate not found', 'danger')
         return redirect(url_for('admin_certificates.index'))
-    
+
     from core.helpers import generate_qr_data_uri
-    
+
     cert = dict(cert)
     verify_url = f"{request.host_url}verify/{cert.get('verification_token', '')}"
     qr_data_uri = generate_qr_data_uri(verify_url)
-    
+
     return render_template('admin_certificate_view.html', certificate=cert, qr_data_uri=qr_data_uri)
 
 # ============================================
@@ -140,7 +140,7 @@ def revoke(certificate_id):
         flash('Certificate revoked successfully', 'success')
     except Exception as e:
         flash(f'Error revoking certificate: {str(e)}', 'danger')
-    
+
     return redirect(url_for('admin_certificates.index'))
 
 # ============================================
@@ -152,11 +152,11 @@ def revoke(certificate_id):
 def download(certificate_id):
     """Download certificate image"""
     from core.paths import CERTIFICATE_QR_DIR
-    
+
     qr_path = CERTIFICATE_QR_DIR / f"{certificate_id}.png"
-    
+
     if qr_path.exists():
         return send_file(str(qr_path), as_attachment=True)
-    
+
     flash('Certificate file not found', 'danger')
     return redirect(url_for('admin_certificates.index'))

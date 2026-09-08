@@ -16,16 +16,16 @@ def cleanup_expired_sessions():
         current_time = datetime.now()
         cutoff_24h = (current_time - timedelta(hours=24)).isoformat()
         db.execute('''
-            UPDATE active_sessions SET is_active = 0 
+            UPDATE active_sessions SET is_active = 0
             WHERE last_activity < ? AND is_active = 1
         ''', (cutoff_24h,))
-        
+
         cutoff_7d = (current_time - timedelta(days=7)).isoformat()
         db.execute('''
-            DELETE FROM active_sessions 
+            DELETE FROM active_sessions
             WHERE created_at < ? AND is_active = 0
         ''', (cutoff_7d,))
-        
+
         db.checkpoint()
         logger.info("Session cleanup completed")
     except Exception as e:

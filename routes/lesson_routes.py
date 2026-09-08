@@ -17,18 +17,15 @@ lesson_bp = Blueprint('lesson', __name__)
 @lesson_bp.route('/test-lesson-path', methods=['GET'])
 def test_lesson_path():
     """Debug route to check file paths"""
-    from core.paths import LESSONS_DIR, BASE_DIR
-    import os
-    
     result = []
     result.append(f"BASE_DIR: {BASE_DIR}")
     result.append(f"LESSONS_DIR: {LESSONS_DIR}")
     result.append(f"LESSONS_DIR exists: {LESSONS_DIR.exists()}")
-    
+
     if LESSONS_DIR.exists():
         courses = list(LESSONS_DIR.iterdir())[:5]
         result.append(f"Courses: {[c.name for c in courses]}")
-    
+
     return "<br>".join(result)
 
 
@@ -37,89 +34,89 @@ def test_lesson_path():
 def read_lesson(course_code, chap, part):
     db = get_db()
     student = db.query_one("SELECT * FROM students WHERE id = ?", (session['student_id'],))
-    
+
     if not student:
         from core.auth import terminate_student_session
         terminate_student_session()
         return redirect(url_for('student.login'))
-    
+
     university_short = UNIVERSITY_SHORT_NAMES.get(student['university'], 'all')
-    
+
     lesson = db.query_one('''
         SELECT * FROM lessons WHERE course_code = ? AND chapter_number = ? AND part_number = ?
         AND is_active = 1
         LIMIT 1
     ''', (course_code, chap, part))
-    
+
     if not lesson:
         flash("Lesson not found or not published yet.", "danger")
         return redirect(url_for('student.home'))
-    
+
     # Premium check temporarily disabled for testing
     # if lesson['is_premium'] == 1 and student['subscription_status'] != 'premium':
     #     flash("This is a premium lesson. Please upgrade your account to access.", "warning")
     #     return redirect(url_for('student.home'))
-    
+
     # Try new structure first: content/courses/{Course}/chapter{N}/part{M}.html
     lesson_file = LESSONS_DIR / lesson['course_code'] / f"chapter{lesson['chapter_number']}" / f"part{lesson['part_number']}.html"
     if not lesson_file.exists():
         # Fallback to old structure
         lesson_file = LESSONS_DIR / lesson['file_path']
-    
+
     if not lesson_file.exists():
         flash("Lesson content file not found.", "danger")
         return redirect(url_for('student.home'))
-    
+
     lesson_content = lesson_file.read_text(encoding='utf-8')
-    
+
     progress = db.query_one('''
         SELECT * FROM lesson_progress WHERE student_id = ? AND lesson_id = ?
     ''', (session['student_id'], lesson['id']))
-    
+
     all_parts = db.query('''
-        SELECT * FROM lessons 
+        SELECT * FROM lessons
         WHERE course_code = ? AND chapter_number = ? AND is_active = 1
         AND (university_specific IS NULL OR university_specific = ? OR university_specific = 'all')
         GROUP BY part_number
         ORDER BY part_number
     ''', (course_code, chap, university_short))
-    
+
     next_lesson = db.query_one('''
         SELECT * FROM lessons WHERE course_code = ? AND is_active = 1
         AND (chapter_number > ? OR (chapter_number = ? AND part_number > ?))
         ORDER BY chapter_number, part_number LIMIT 1
     ''', (course_code, chap, chap, part))
-    
+
     prev_lesson = db.query_one('''
         SELECT * FROM lessons WHERE course_code = ? AND is_active = 1
         AND (chapter_number < ? OR (chapter_number = ? AND part_number < ?))
         ORDER BY chapter_number DESC, part_number DESC LIMIT 1
     ''', (course_code, chap, chap, part))
-    
+
     watermark = {
         'student_name': student['full_name'],
         'student_phone': student['phone'],
     }
-    
+
     # Find PART-SPECIFIC worksheet first
     part_worksheet = db.query_one('''
-        SELECT * FROM worksheets 
+        SELECT * FROM worksheets
         WHERE course_code = ? AND chapter_number = ?
         AND question_file LIKE ?
         AND is_active = 1
         LIMIT 1
     ''', (course_code, chap, f'{course_code}/chapter{chap}/part{part}%'))
-    
+
     # If no part-specific, look for university-specific part worksheet
     if not part_worksheet:
         part_worksheet = db.query_one('''
-            SELECT * FROM worksheets 
+            SELECT * FROM worksheets
             WHERE course_code = ? AND chapter_number = ?
             AND question_file LIKE ?
             AND is_active = 1
             LIMIT 1
         ''', (course_code, chap, f'{course_code}/chapter{chap}/part{part}%'))
-    
+
     # Find FULL chapter worksheet (only for last part)
     full_worksheet = None
     is_last_part = True
@@ -127,25 +124,25 @@ def read_lesson(course_code, chap, part):
         if p['part_number'] > lesson['part_number']:
             is_last_part = False
             break
-    
+
     if is_last_part:
         full_worksheet = db.query_one('''
-            SELECT * FROM worksheets 
+            SELECT * FROM worksheets
             WHERE course_code = ? AND chapter_number = ?
             AND question_file LIKE ?
             AND is_active = 1
             LIMIT 1
         ''', (course_code, chap, f'{course_code}/chapter{chap}/full%'))
-        
+
         if not full_worksheet:
             full_worksheet = db.query_one('''
-                SELECT * FROM worksheets 
+                SELECT * FROM worksheets
                 WHERE course_code = ? AND chapter_number = ?
                 AND question_file LIKE ?
                 AND is_active = 1
                 LIMIT 1
             ''', (course_code, chap, f'{course_code}/chapter{chap}/full%'))
-    
+
     # Get all UNIQUE chapters (GROUP BY chapter_number - each chapter only ONCE)
     all_chapters = db.query('''
         SELECT chapter_number, MIN(chapter_title) as chapter_title
@@ -155,7 +152,7 @@ def read_lesson(course_code, chap, part):
         GROUP BY chapter_number
         ORDER BY chapter_number
     ''', (course_code, university_short))
-    
+
     # Get total parts per chapter for display
     chapter_info = []
     for chapter in all_chapters:
@@ -164,27 +161,31 @@ def read_lesson(course_code, chap, part):
             WHERE course_code = ? AND chapter_number = ? AND is_active = 1
             AND (university_specific IS NULL OR university_specific = ? OR university_specific = 'all')
         ''', (course_code, chapter['chapter_number'], university_short))
-        
+
         chapter_info.append({
             'chapter_number': chapter['chapter_number'],
             'chapter_title': chapter['chapter_title'],
             'parts_count': parts_count or 0
         })
-    
+
     return render_template('student_lessons.html', lesson=lesson, lesson_content=lesson_content, progress=progress, all_parts=all_parts, next_lesson=next_lesson, prev_lesson=prev_lesson, student=student, watermark=watermark, part_worksheet=part_worksheet, full_worksheet=full_worksheet, is_last_part=is_last_part, chapter_info=chapter_info, current_chapter=chap)
 
 
 @lesson_bp.route('/student/free-lesson/<course_code>', methods=['GET'])
 def read_free_lesson(course_code):
     """Free sample lesson - NO premium required"""
-    
+
     if course_code == 'Econ1011':
         lesson_content = '<h2>FREE SAMPLE: Economics</h2><h3>Demand, Supply & Profit</h3><div class="highlight-box"><strong>Law of Demand:</strong> Price increases → Quantity demanded decreases</div><p><strong>Example:</strong> When coffee prices rise in Addis, people buy less coffee.</p><div class="highlight-box"><strong>Law of Supply:</strong> Price increases → Quantity supplied increases</div><p><strong>Example:</strong> When teff prices rise, farmers grow more teff.</p><div class="highlight-box"><strong>Profit Maximization:</strong> Profit = Revenue - Cost. Maximize when MR = MC</div><div class="cheat-notes"><h4>Key Points:</h4><ul><li>Demand: Price ↑ → Qty ↓</li><li>Supply: Price ↑ → Qty ↑</li><li>Profit Max: MR = MC</li></ul></div>'
+        course_title = 'Economics'
     elif course_code == 'LoCT1011':
-        lesson_content = '<h2>FREE SAMPLE: Logic</h2><h3>22 Fallacies</h3><div class="highlight-box"><strong>Fallacy:</strong> An error in reasoning that makes an argument invalid</div><p><strong>Top Fallacies:</strong></p><ul><li>Ad Hominem: Attack the person, not the argument</li><li>Straw Man: Misrepresent the opponent''s view</li><li>False Dilemma: Only two options when more exist</li><li>Appeal to Popularity: Everyone believes it</li><li>Slippery Slope: Small step leads to disaster</li></ul><div class="cheat-notes"><h4>Quick Tip:</h4><p>Fallacies look convincing but are logically flawed. Spot them to protect yourself!</p></div>'
+        lesson_content = '<h2>FREE SAMPLE: Logic</h2><h3>22 Fallacies</h3><div class="highlight-box"><strong>Fallacy:</strong> An error in reasoning that makes an argument invalid</div><p><strong>Top Fallacies:</strong></p><ul><li>Ad Hominem: Attack the person, not the argument</li><li>Straw Man: Misrepresent the opponent\'s view</li><li>False Dilemma: Only two options when more exist</li><li>Appeal to Popularity: Everyone believes it</li><li>Slippery Slope: Small step leads to disaster</li></ul><div class="cheat-notes"><h4>Quick Tip:</h4><p>Fallacies look convincing but are logically flawed. Spot them to protect yourself!</p></div>'
+        course_title = 'Logic and Critical Thinking'
     else:
         lesson_content = '<h2>Free lesson not found</h2>'
+        course_title = 'Unknown Course'
 
     return render_template('student_free_lesson.html',
                           lesson_content=lesson_content,
-                          course_code=course_code)
+                          course_code=course_code,
+                          course_title=course_title)
