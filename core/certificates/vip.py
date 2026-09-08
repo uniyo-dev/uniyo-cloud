@@ -1,5 +1,4 @@
 """VIP & Promotion Certificate Generator - A4 Landscape (297mm x 210mm)"""
-from .common import *
 
 # ==============================================================================
 # 2. A4 LANDSCAPE CERTIFICATE GENERATOR (297mm × 210mm — VIP & PROMOTION)
