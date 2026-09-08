@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
-  <!-- Center watermark emblem -->
-  <g transform="translate(148.5,105)" opacity="0.05">
-    <circle cx="0" cy="0" r="50" fill="none" stroke="#1A1A1A" stroke-width="3"/>
-    <circle cx="0" cy="0" r="40" fill="none" stroke="#1A1A1A" stroke-width="2"/>
-    <circle cx="0" cy="0" r="30" fill="none" stroke="#1A1A1A" stroke-width="1"/>
-    <polygon points="0,-20 14,-6 9,14 -9,14 -14,-6" fill="#1A1A1A"/>
-  </g>
-</svg>

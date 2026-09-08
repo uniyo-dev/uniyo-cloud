@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="f32P" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6"/>
+      <stop offset="100%" style="stop-color:#4C1D95"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="30" height="30" rx="8" fill="url(#f32P)"/>
+
+  <!-- Simplified cap for small size -->
+  <g transform="translate(16, 16) scale(1.1) translate(-12, -12)">
+    <path d="M22 10v6M2 10l10-5 10 5-10 5z" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M6 12v5c3 3 9 3 12 0v-5" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <circle cx="16" cy="5" r="1.5" fill="#FCD34D"/>
+</svg>

@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="80mm" height="15mm" viewBox="0 0 80 15">
-  <!-- Signature line -->
-  <line x1="5" y1="12" x2="75" y2="12" stroke="#1A1A1A" stroke-width="0.8"/>
-  
-  <!-- Label line above -->
-  <line x1="5" y1="5" x2="75" y2="5" stroke="#D4AF37" stroke-width="0.3" stroke-dasharray="3,3"/>
-</svg>

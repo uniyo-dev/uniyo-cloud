@@ -7,10 +7,11 @@
     <meta name="theme-color" content="#0B0F19">
 
 
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
-    <link rel="apple-touch-icon" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
-    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/logo.svg') }}">
-    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='images/logo.svg') }}">
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="{{ url_for('static', filename='icons/uniyo_favicon_16.svg') }}">
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="{{ url_for('static', filename='icons/uniyo_favicon_32.svg') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='icons/uniyo_splash_512.svg') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='icons/uniyo_branding_logo.svg') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='icons/uniyo_branding_logo.svg') }}">
     <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
     <title>{% block title %}UNIYO - University Made for YOU{% endblock %}</title>
     
