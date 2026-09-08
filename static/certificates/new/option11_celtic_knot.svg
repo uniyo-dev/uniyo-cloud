@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <linearGradient id="celticGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B8860B"/>
+      <stop offset="30%" style="stop-color:#FFD700"/>
+      <stop offset="50%" style="stop-color:#FFF8DC"/>
+      <stop offset="70%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+  </defs>
+  <rect x="5" y="5" width="287" height="200" fill="#FFF8E7" stroke="#8B6914" stroke-width="4"/>
+  <rect x="12" y="12" width="273" height="186" fill="none" stroke="url(#celticGold)" stroke-width="3"/>
+  <rect x="18" y="18" width="261" height="174" fill="none" stroke="#8B6914" stroke-width="1"/>
+  <g transform="translate(20,20)">
+    <circle cx="35" cy="35" r="25" fill="none" stroke="url(#celticGold)" stroke-width="4"/>
+    <circle cx="35" cy="35" r="20" fill="none" stroke="#8B6914" stroke-width="2"/>
+    <circle cx="35" cy="35" r="15" fill="none" stroke="url(#celticGold)" stroke-width="3"/>
+    <path d="M10,35 Q20,20 35,10 Q50,20 60,35 Q50,50 35,60 Q20,50 10,35 Z" fill="none" stroke="#8B6914" stroke-width="1.5"/>
+    <path d="M15,35 Q25,25 35,15 Q45,25 55,35 Q45,45 35,55 Q25,45 15,35 Z" fill="none" stroke="url(#celticGold)" stroke-width="1"/>
+    <path d="M35,20 Q40,25 35,30 Q30,25 35,20" fill="none" stroke="#FFD700" stroke-width="1.5"/>
+    <path d="M35,40 Q40,45 35,50 Q30,45 35,40" fill="none" stroke="#FFD700" stroke-width="1.5"/>
+    <circle cx="35" cy="10" r="2" fill="#FFD700"/>
+    <circle cx="35" cy="60" r="2" fill="#FFD700"/>
+    <circle cx="10" cy="35" r="2" fill="#FFD700"/>
+    <circle cx="60" cy="35" r="2" fill="#FFD700"/>
+  </g>
+  <g transform="translate(277,20) scale(-1,1)">
+    <circle cx="35" cy="35" r="25" fill="none" stroke="url(#celticGold)" stroke-width="4"/>
+    <circle cx="35" cy="35" r="20" fill="none" stroke="#8B6914" stroke-width="2"/>
+    <circle cx="35" cy="35" r="15" fill="none" stroke="url(#celticGold)" stroke-width="3"/>
+    <path d="M10,35 Q20,20 35,10 Q50,20 60,35 Q50,50 35,60 Q20,50 10,35 Z" fill="none" stroke="#8B6914" stroke-width="1.5"/>
+    <path d="M15,35 Q25,25 35,15 Q45,25 55,35 Q45,45 35,55 Q25,45 15,35 Z" fill="none" stroke="url(#celticGold)" stroke-width="1"/>
+    <path d="M35,20 Q40,25 35,30 Q30,25 35,20" fill="none" stroke="#FFD700" stroke-width="1.5"/>
+    <path d="M35,40 Q40,45 35,50 Q30,45 35,40" fill="none" stroke="#FFD700" stroke-width="1.5"/>
+    <circle cx="35" cy="10" r="2" fill="#FFD700"/>
+    <circle cx="35" cy="60" r="2" fill="#FFD700"/>
+    <circle cx="10" cy="35" r="2" fill="#FFD700"/>
+    <circle cx="60" cy="35" r="2" fill="#FFD700"/>
+  </g>
+  <g transform="translate(20,190) scale(1,-1)">
+    <circle cx="35" cy="35" r="25" fill="none" stroke="url(#celticGold)" stroke-width="4"/>
+    <circle cx="35" cy="35" r="20" fill="none" stroke="#8B6914" stroke-width="2"/>
+    <circle cx="35" cy="35" r="15" fill="none" stroke="url(#celticGold)" stroke-width="3"/>
+    <path d="M10,35 Q20,20 35,10 Q50,20 60,35 Q50,50 35,60 Q20,50 10,35 Z" fill="none" stroke="#8B6914" stroke-width="1.5"/>
+    <path d="M15,35 Q25,25 35,15 Q45,25 55,35 Q45,45 35,55 Q25,45 15,35 Z" fill="none" stroke="url(#celticGold)" stroke-width="1"/>
+    <path d="M35,20 Q40,25 35,30 Q30,25 35,20" fill="none" stroke="#FFD700" stroke-width="1.5"/>
+    <path d="M35,40 Q40,45 35,50 Q30,45 35,40" fill="none" stroke="#FFD700" stroke-width="1.5"/>
+    <circle cx="35" cy="10" r="2" fill="#FFD700"/>
+    <circle cx="35" cy="60" r="2" fill="#FFD700"/>
+    <circle cx="10" cy="35" r="2" fill="#FFD700"/>
+    <circle cx="60" cy="35" r="2" fill="#FFD700"/>
+  </g>
+  <g transform="translate(277,190) scale(-1,-1)">
+    <circle cx="35" cy="35" r="25" fill="none" stroke="url(#celticGold)" stroke-width="4"/>
+    <circle cx="35" cy="35" r="20" fill="none" stroke="#8B6914" stroke-width="2"/>
+    <circle cx="35" cy="35" r="15" fill="none" stroke="url(#celticGold)" stroke-width="3"/>
+    <path d="M10,35 Q20,20 35,10 Q50,20 60,35 Q50,50 35,60 Q20,50 10,35 Z" fill="none" stroke="#8B6914" stroke-width="1.5"/>
+    <path d="M15,35 Q25,25 35,15 Q45,25 55,35 Q45,45 35,55 Q25,45 15,35 Z" fill="none" stroke="url(#celticGold)" stroke-width="1"/>
+    <path d="M35,20 Q40,25 35,30 Q30,25 35,20" fill="none" stroke="#FFD700" stroke-width="1.5"/>
+    <path d="M35,40 Q40,45 35,50 Q30,45 35,40" fill="none" stroke="#FFD700" stroke-width="1.5"/>
+    <circle cx="35" cy="10" r="2" fill="#FFD700"/>
+    <circle cx="35" cy="60" r="2" fill="#FFD700"/>
+    <circle cx="10" cy="35" r="2" fill="#FFD700"/>
+    <circle cx="60" cy="35" r="2" fill="#FFD700"/>
+  </g>
+  <g stroke="#B8860B" stroke-width="0.8" fill="none" opacity="0.5">
+    <path d="M70,18 Q75,15 80,18 Q85,21 90,18 Q95,15 100,18 Q105,21 110,18 Q115,15 120,18 Q125,21 130,18 Q135,15 140,18 Q145,21 150,18 Q155,15 160,18 Q165,21 170,18 Q175,15 180,18 Q185,21 190,18 Q195,15 200,18 Q205,21 210,18 Q215,15 220,18 Q225,21 230,18"/>
+    <path d="M70,192 Q75,189 80,192 Q85,195 90,192 Q95,189 100,192 Q105,195 110,192 Q115,189 120,192 Q125,195 130,192 Q135,189 140,192 Q145,195 150,192 Q155,189 160,192 Q165,195 170,192 Q175,189 180,192 Q185,195 190,192 Q195,189 200,192 Q205,195 210,192 Q215,189 220,192 Q225,195 230,192"/>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 30" width="200" height="30">
+  <defs>
+    <linearGradient id="celticDivGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F5D97F"/>
+      <stop offset="100%" stop-color="#9A7C36"/>
+    </linearGradient>
+  </defs>
+  <line x1="10" y1="15" x2="75" y2="15" stroke="url(#celticDivGold)" stroke-width="1.5"/>
+  <line x1="125" y1="15" x2="190" y2="15" stroke="url(#celticDivGold)" stroke-width="1.5"/>
+  <path d="M80,10 L85,10 L85,20 L80,20 M90,10 L95,10 L95,20 L90,20 M100,10 L105,10 L105,20 L100,20 M110,10 L115,10 L115,20 L110,20 M120,10 L125,10 L125,20 L120,20" stroke="url(#celticDivGold)" stroke-width="1.5"/>
+</svg>

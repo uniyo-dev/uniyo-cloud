@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="15mm" viewBox="0 0 297 15">
+  <defs>
+    <linearGradient id="crownDiv" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D4AF37"/>
+      <stop offset="50%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#D4AF37"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Center crown -->
+  <g transform="translate(148.5,7.5)">
+    <path d="M-8,4 L-6,-3 L-3,0 L0,-6 L3,0 L6,-3 L8,4 Z" fill="none" stroke="url(#crownDiv)" stroke-width="1.5"/>
+    <line x1="-8" y1="4" x2="8" y2="4" stroke="#FFD700" stroke-width="1"/>
+    <circle cx="0" cy="-4" r="1.5" fill="#FFD700"/>
+    <circle cx="-4" cy="-2" r="1" fill="#FFD700" opacity="0.7"/>
+    <circle cx="4" cy="-2" r="1" fill="#FFD700" opacity="0.7"/>
+  </g>
+  
+  <!-- Royal lines -->
+  <line x1="10" y1="7.5" x2="125" y2="7.5" stroke="url(#crownDiv)" stroke-width="2"/>
+  <line x1="172" y1="7.5" x2="287" y2="7.5" stroke="url(#crownDiv)" stroke-width="2"/>
+  
+  <!-- Royal dots -->
+  <circle cx="100" cy="7.5" r="2" fill="#FFD700"/>
+  <circle cx="197" cy="7.5" r="2" fill="#FFD700"/>
+  
+  <!-- Small diamonds -->
+  <polygon points="125,7.5 127,5.5 129,7.5 127,9.5" fill="#D4AF37"/>
+  <polygon points="168,7.5 170,5.5 172,7.5 170,9.5" fill="#D4AF37"/>
+</svg>

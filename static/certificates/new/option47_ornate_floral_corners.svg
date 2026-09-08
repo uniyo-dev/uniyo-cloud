@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <linearGradient id="floralGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37"/>
+      <stop offset="50%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+  </defs>
+  
+  <rect x="5" y="5" width="287" height="200" fill="#FFFFFF"/>
+  
+  <!-- Main border -->
+  <rect x="10" y="10" width="277" height="190" fill="none" stroke="#1A1A1A" stroke-width="2.5"/>
+  <rect x="14" y="14" width="269" height="182" fill="none" stroke="url(#floralGold)" stroke-width="1.5"/>
+  
+  <!-- Top Left Corner - Floral Ornament -->
+  <g transform="translate(14,14)">
+    <path d="M0,30 Q0,0 30,0" fill="none" stroke="url(#floralGold)" stroke-width="2.5"/>
+    <path d="M5,25 Q5,5 25,5" fill="none" stroke="#1A1A1A" stroke-width="1"/>
+    <!-- Flower petals -->
+    <ellipse cx="15" cy="15" rx="8" ry="5" fill="#FFD700" opacity="0.4" transform="rotate(0 15 15)"/>
+    <ellipse cx="15" cy="15" rx="8" ry="5" fill="#FFD700" opacity="0.4" transform="rotate(45 15 15)"/>
+    <ellipse cx="15" cy="15" rx="8" ry="5" fill="#FFD700" opacity="0.4" transform="rotate(90 15 15)"/>
+    <ellipse cx="15" cy="15" rx="8" ry="5" fill="#FFD700" opacity="0.4" transform="rotate(135 15 15)"/>
+    <circle cx="15" cy="15" r="4" fill="#FFD700"/>
+    <circle cx="15" cy="15" r="2" fill="#FFFFFF"/>
+    <!-- Vine curls -->
+    <path d="M25,8 Q30,12 28,15 Q32,18 30,22" fill="none" stroke="#8B6914" stroke-width="1"/>
+    <path d="M8,25 Q12,30 15,28 Q18,32 22,30" fill="none" stroke="#8B6914" stroke-width="1"/>
+    <!-- Small leaves -->
+    <path d="M26,10 Q29,8 28,5 Q25,7 26,10 Z" fill="#4A7C2E" opacity="0.7"/>
+    <path d="M10,26 Q8,29 5,28 Q7,25 10,26 Z" fill="#4A7C2E" opacity="0.7"/>
+  </g>
+  
+  <!-- Top Right Corner - Floral Ornament -->
+  <g transform="translate(283,14) scale(-1,1)">
+    <path d="M0,30 Q0,0 30,0" fill="none" stroke="url(#floralGold)" stroke-width="2.5"/>
+    <path d="M5,25 Q5,5 25,5" fill="none" stroke="#1A1A1A" stroke-width="1"/>
+    <ellipse cx="15" cy="15" rx="8" ry="5" fill="#FFD700" opacity="0.4" transform="rotate(0 15 15)"/>
+    <ellipse cx="15" cy="15" rx="8" ry="5" fill="#FFD700" opacity="0.4" transform="rotate(45 15 15)"/>
+    <ellipse cx="15" cy="15" rx="8" ry="5" fill="#FFD700" opacity="0.4" transform="rotate(90 15 15)"/>
+    <ellipse cx="15" cy="15" rx="8" ry="5" fill="#FFD700" opacity="0.4" transform="rotate(135 15 15)"/>
+    <circle cx="15" cy="15" r="4" fill="#FFD700"/>
+    <circle cx="15" cy="15" r="2" fill="#FFFFFF"/>
+    <path d="M25,8 Q30,12 28,15 Q32,18 30,22" fill="none" stroke="#8B6914" stroke-width="1"/>
+    <path d="M8,25 Q12,30 15,28 Q18,32 22,30" fill="none" stroke="#8B6914" stroke-width="1"/>
+    <path d="M26,10 Q29,8 28,5 Q25,7 26,10 Z" fill="#4A7C2E" opacity="0.7"/>
+    <path d="M10,26 Q8,29 5,28 Q7,25 10,26 Z" fill="#4A7C2E" opacity="0.7"/>
+  </g>
+  
+  <!-- Bottom Left Corner - Floral Ornament -->
+  <g transform="translate(14,196) scale(1,-1)">
+    <path d="M0,30 Q0,0 30,0" fill="none" stroke="url(#floralGold)" stroke-width="2.5"/>
+    <path d="M5,25 Q5,5 25,5" fill="none" stroke="#1A1A1A" stroke-width="1"/>
+    <ellipse cx="15" cy="15" rx="8" ry="5" fill="#FFD700" opacity="0.4" transform="rotate(0 15 15)"/>
+    <ellipse cx="15" cy="15" rx="8" ry="5" fill="#FFD700" opacity="0.4" transform="rotate(45 15 15)"/>
+    <ellipse cx="15" cy="15" rx="8" ry="5" fill="#FFD700" opacity="0.4" transform="rotate(90 15 15)"/>
+    <ellipse cx="15" cy="15" rx="8" ry="5" fill="#FFD700" opacity="0.4" transform="rotate(135 15 15)"/>
+    <circle cx="15" cy="15" r="4" fill="#FFD700"/>
+    <circle cx="15" cy="15" r="2" fill="#FFFFFF"/>
+    <path d="M25,8 Q30,12 28,15 Q32,18 30,22" fill="none" stroke="#8B6914" stroke-width="1"/>
+    <path d="M8,25 Q12,30 15,28 Q18,32 22,30" fill="none" stroke="#8B6914" stroke-width="1"/>
+    <path d="M26,10 Q29,8 28,5 Q25,7 26,10 Z" fill="#4A7C2E" opacity="0.7"/>
+    <path d="M10,26 Q8,29 5,28 Q7,25 10,26 Z" fill="#4A7C2E" opacity="0.7"/>
+  </g>
+  
+  <!-- Bottom Right Corner - Floral Ornament -->
+  <g transform="translate(283,196) scale(-1,-1)">
+    <path d="M0,30 Q0,0 30,0" fill="none" stroke="url(#floralGold)" stroke-width="2.5"/>
+    <path d="M5,25 Q5,5 25,5" fill="none" stroke="#1A1A1A" stroke-width="1"/>
+    <ellipse cx="15" cy="15" rx="8" ry="5" fill="#FFD700" opacity="0.4" transform="rotate(0 15 15)"/>
+    <ellipse cx="15" cy="15" rx="8" ry="5" fill="#FFD700" opacity="0.4" transform="rotate(45 15 15)"/>
+    <ellipse cx="15" cy="15" rx="8" ry="5" fill="#FFD700" opacity="0.4" transform="rotate(90 15 15)"/>
+    <ellipse cx="15" cy="15" rx="8" ry="5" fill="#FFD700" opacity="0.4" transform="rotate(135 15 15)"/>
+    <circle cx="15" cy="15" r="4" fill="#FFD700"/>
+    <circle cx="15" cy="15" r="2" fill="#FFFFFF"/>
+    <path d="M25,8 Q30,12 28,15 Q32,18 30,22" fill="none" stroke="#8B6914" stroke-width="1"/>
+    <path d="M8,25 Q12,30 15,28 Q18,32 22,30" fill="none" stroke="#8B6914" stroke-width="1"/>
+    <path d="M26,10 Q29,8 28,5 Q25,7 26,10 Z" fill="#4A7C2E" opacity="0.7"/>
+    <path d="M10,26 Q8,29 5,28 Q7,25 10,26 Z" fill="#4A7C2E" opacity="0.7"/>
+  </g>
+  
+  <!-- Inner border -->
+  <rect x="50" y="50" width="197" height="110" fill="none" stroke="#1A1A1A" stroke-width="1.5"/>
+</svg>

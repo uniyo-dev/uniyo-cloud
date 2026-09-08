@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <pattern id="wmStar" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <polygon points="15,2 18,10 26,11 19,17 21,25 15,20 9,25 11,17 4,11 12,10" fill="none" stroke="#D4AF37" stroke-width="0.3" opacity="0.08"/>
+      <circle cx="15" cy="15" r="2" fill="#D4AF37" opacity="0.05"/>
+    </pattern>
+  </defs>
+  
+  <rect width="297" height="210" fill="#FFFFFF"/>
+  <rect width="297" height="210" fill="url(#wmStar)"/>
+</svg>

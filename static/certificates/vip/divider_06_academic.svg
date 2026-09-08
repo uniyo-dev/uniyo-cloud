@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="15mm" viewBox="0 0 297 15">
+  <defs>
+    <linearGradient id="acaDiv" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1B3A5C"/>
+      <stop offset="100%" style="stop-color:#2C5F8A"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Center book emblem -->
+  <g transform="translate(148.5,7.5)">
+    <path d="M-8,-5 Q0,-7 8,-5 L8,5 Q0,3 -8,5 Z" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+    <line x1="0" y1="-7" x2="0" y2="3" stroke="#D4AF37" stroke-width="1"/>
+  </g>
+  
+  <!-- Academic lines -->
+  <line x1="10" y1="7.5" x2="125" y2="7.5" stroke="url(#acaDiv)" stroke-width="2"/>
+  <line x1="172" y1="7.5" x2="287" y2="7.5" stroke="url(#acaDiv)" stroke-width="2"/>
+  
+  <!-- Gold accents -->
+  <rect x="128" y="5" width="3" height="5" fill="#D4AF37"/>
+  <rect x="166" y="5" width="3" height="5" fill="#D4AF37"/>
+  
+  <!-- Small diamonds -->
+  <polygon points="115,7.5 117,6 119,7.5 117,9" fill="#D4AF37"/>
+  <polygon points="178,7.5 180,6 182,7.5 180,9" fill="#D4AF37"/>
+</svg>

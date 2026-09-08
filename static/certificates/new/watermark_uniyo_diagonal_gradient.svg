@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <linearGradient id="uniyoGradDiag" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37"/>
+      <stop offset="50%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#D4AF37"/>
+    </linearGradient>
+    <pattern id="uniyoDiagGrad" x="0" y="0" width="180" height="120" patternUnits="userSpaceOnUse">
+      <text x="90" y="60" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="url(#uniyoGradDiag)" opacity="0.05" text-anchor="middle" transform="rotate(-35 90 60)">UNIYO</text>
+    </pattern>
+  </defs>
+  
+  <rect width="297" height="210" fill="#FFFFFF"/>
+  <rect width="297" height="210" fill="url(#uniyoDiagGrad)"/>
+</svg>

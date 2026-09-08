@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="15mm" viewBox="0 0 297 15">
+  <defs>
+    <linearGradient id="diaGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D4AF37"/>
+      <stop offset="50%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#D4AF37"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Center diamond -->
+  <g transform="translate(148.5,7.5)">
+    <polygon points="0,-6 6,0 0,6 -6,0" fill="url(#diaGold)"/>
+    <polygon points="0,-3 3,0 0,3 -3,0" fill="#FFFFFF" opacity="0.5"/>
+  </g>
+  
+  <!-- Decorative lines -->
+  <line x1="10" y1="7.5" x2="110" y2="7.5" stroke="url(#diaGold)" stroke-width="2"/>
+  <line x1="115" y1="7.5" x2="135" y2="7.5" stroke="url(#diaGold)" stroke-width="1"/>
+  
+  <line x1="187" y1="7.5" x2="287" y2="7.5" stroke="url(#diaGold)" stroke-width="2"/>
+  <line x1="162" y1="7.5" x2="182" y2="7.5" stroke="url(#diaGold)" stroke-width="1"/>
+  
+  <!-- Small diamonds on sides -->
+  <polygon points="110,7.5 112,5.5 114,7.5 112,9.5" fill="#FFD700"/>
+  <polygon points="183,7.5 185,5.5 187,7.5 185,9.5" fill="#FFD700"/>
+</svg>

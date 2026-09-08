@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <pattern id="wmDots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.5" fill="#2C3E50" opacity="0.08"/>
+      <circle cx="5" cy="5" r="0.5" fill="#2C3E50" opacity="0.06"/>
+      <circle cx="8" cy="8" r="0.5" fill="#2C3E50" opacity="0.08"/>
+      <circle cx="2" cy="8" r="0.5" fill="#2C3E50" opacity="0.06"/>
+      <circle cx="8" cy="2" r="0.5" fill="#2C3E50" opacity="0.06"/>
+    </pattern>
+  </defs>
+  
+  <rect width="297" height="210" fill="#FFFFFF"/>
+  <rect width="297" height="210" fill="url(#wmDots)"/>
+</svg>

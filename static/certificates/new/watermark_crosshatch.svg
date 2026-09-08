@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <pattern id="wmCross" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="12" y2="12" stroke="#2C3E50" stroke-width="0.3" opacity="0.04"/>
+      <line x1="12" y1="0" x2="0" y2="12" stroke="#2C3E50" stroke-width="0.3" opacity="0.04"/>
+      <line x1="0" y1="6" x2="6" y2="0" stroke="#2C3E50" stroke-width="0.2" opacity="0.03"/>
+      <line x1="6" y1="12" x2="12" y2="6" stroke="#2C3E50" stroke-width="0.2" opacity="0.03"/>
+    </pattern>
+  </defs>
+  
+  <rect width="297" height="210" fill="#FFFFFF"/>
+  <rect width="297" height="210" fill="url(#wmCross)"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="15mm" viewBox="0 0 297 15">
+  <defs>
+    <linearGradient id="ribDiv" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D4AF37"/>
+      <stop offset="50%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#D4AF37"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Center ribbon banner -->
+  <g transform="translate(148.5,7.5)">
+    <path d="M-12,-5 L12,-5 L12,5 L-12,5 Z" fill="none" stroke="url(#ribDiv)" stroke-width="1.5"/>
+    <path d="M-12,-5 L-15,-2 L-12,1 L-12,5" fill="#D4AF37" opacity="0.3"/>
+    <path d="M12,-5 L15,-2 L12,1 L12,5" fill="#D4AF37" opacity="0.3"/>
+    <line x1="-8" y1="0" x2="8" y2="0" stroke="#FFD700" stroke-width="0.8"/>
+  </g>
+  
+  <!-- Ribbon tails -->
+  <path d="M10,7.5 L80,5 Q90,4.5 100,5 L130,7.5" fill="none" stroke="url(#ribDiv)" stroke-width="1.5"/>
+  <path d="M167,7.5 L197,5 Q207,4.5 217,5 L287,7.5" fill="none" stroke="url(#ribDiv)" stroke-width="1.5"/>
+  
+  <!-- Ribbon folds -->
+  <path d="M130,7.5 L135,4 L140,7.5" fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.5"/>
+  <path d="M157,7.5 L162,4 L167,7.5" fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.5"/>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <linearGradient id="waveBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B4F72"/>
+      <stop offset="100%" style="stop-color:#2E86C1"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="281" height="194" fill="#FFFFFF" stroke="#1B4F72" stroke-width="4"/>
+  <rect x="14" y="14" width="269" height="182" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <rect x="18" y="18" width="261" height="174" fill="none" stroke="#1B4F72" stroke-width="0.5"/>
+  
+  <!-- Wave pattern in corners -->
+  <g transform="translate(20,20)">
+    <!-- Concentric wave circles -->
+    <path d="M0,20 Q10,10 20,20 Q30,30 40,20 Q50,10 60,20" fill="none" stroke="url(#waveBlue)" stroke-width="3"/>
+    <path d="M5,25 Q15,15 25,25 Q35,35 45,25 Q55,15 65,25" fill="none" stroke="#D4AF37" stroke-width="2"/>
+    <path d="M10,30 Q20,20 30,30 Q40,40 50,30 Q60,20 70,30" fill="none" stroke="url(#waveBlue)" stroke-width="1.5"/>
+    <path d="M15,35 Q25,25 35,35 Q45,45 55,35 Q65,25 75,35" fill="none" stroke="#D4AF37" stroke-width="1"/>
+    <!-- Rising sun circle -->
+    <circle cx="40" cy="40" r="12" fill="#E74C3C" opacity="0.8"/>
+    <circle cx="40" cy="40" r="8" fill="#C0392B" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(277,20) scale(-1,1)">
+    <path d="M0,20 Q10,10 20,20 Q30,30 40,20 Q50,10 60,20" fill="none" stroke="url(#waveBlue)" stroke-width="3"/>
+    <path d="M5,25 Q15,15 25,25 Q35,35 45,25 Q55,15 65,25" fill="none" stroke="#D4AF37" stroke-width="2"/>
+    <path d="M10,30 Q20,20 30,30 Q40,40 50,30 Q60,20 70,30" fill="none" stroke="url(#waveBlue)" stroke-width="1.5"/>
+    <path d="M15,35 Q25,25 35,35 Q45,45 55,35 Q65,25 75,35" fill="none" stroke="#D4AF37" stroke-width="1"/>
+    <circle cx="40" cy="40" r="12" fill="#E74C3C" opacity="0.8"/>
+    <circle cx="40" cy="40" r="8" fill="#C0392B" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(20,190) scale(1,-1)">
+    <path d="M0,20 Q10,10 20,20 Q30,30 40,20 Q50,10 60,20" fill="none" stroke="url(#waveBlue)" stroke-width="3"/>
+    <path d="M5,25 Q15,15 25,25 Q35,35 45,25 Q55,15 65,25" fill="none" stroke="#D4AF37" stroke-width="2"/>
+    <path d="M10,30 Q20,20 30,30 Q40,40 50,30 Q60,20 70,30" fill="none" stroke="url(#waveBlue)" stroke-width="1.5"/>
+    <path d="M15,35 Q25,25 35,35 Q45,45 55,35 Q65,25 75,35" fill="none" stroke="#D4AF37" stroke-width="1"/>
+    <circle cx="40" cy="40" r="12" fill="#E74C3C" opacity="0.8"/>
+    <circle cx="40" cy="40" r="8" fill="#C0392B" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(277,190) scale(-1,-1)">
+    <path d="M0,20 Q10,10 20,20 Q30,30 40,20 Q50,10 60,20" fill="none" stroke="url(#waveBlue)" stroke-width="3"/>
+    <path d="M5,25 Q15,15 25,25 Q35,35 45,25 Q55,15 65,25" fill="none" stroke="#D4AF37" stroke-width="2"/>
+    <path d="M10,30 Q20,20 30,30 Q40,40 50,30 Q60,20 70,30" fill="none" stroke="url(#waveBlue)" stroke-width="1.5"/>
+    <path d="M15,35 Q25,25 35,35 Q45,45 55,35 Q65,25 75,35" fill="none" stroke="#D4AF37" stroke-width="1"/>
+    <circle cx="40" cy="40" r="12" fill="#E74C3C" opacity="0.8"/>
+    <circle cx="40" cy="40" r="8" fill="#C0392B" opacity="0.6"/>
+  </g>
+  
+  <!-- Horizontal wave bands -->
+  <g fill="none" stroke="#2E86C1" stroke-width="1" opacity="0.4">
+    <path d="M80,20 Q85,15 90,20 Q95,25 100,20 Q105,15 110,20 Q115,25 120,20 Q125,15 130,20 Q135,25 140,20 Q145,15 150,20 Q155,25 160,20 Q165,15 170,20 Q175,25 180,20 Q185,15 190,20 Q195,25 200,20 Q205,15 210,20 Q215,25 220,20"/>
+    <path d="M80,190 Q85,185 90,190 Q95,195 100,190 Q105,185 110,190 Q115,195 120,190 Q125,185 130,190 Q135,195 140,190 Q145,185 150,190 Q155,195 160,190 Q165,185 170,190 Q175,195 180,190 Q185,185 190,190 Q195,195 200,190 Q205,185 210,190 Q215,195 220,190"/>
+  </g>
+</svg>

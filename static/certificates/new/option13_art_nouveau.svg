@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <linearGradient id="nouveauGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C9A84C"/>
+      <stop offset="50%" style="stop-color:#E8D5A3"/>
+      <stop offset="100%" style="stop-color:#B8942E"/>
+    </linearGradient>
+    <linearGradient id="nouveauGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2D5016"/>
+      <stop offset="50%" style="stop-color:#4A7C2E"/>
+      <stop offset="100%" style="stop-color:#2D5016"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Cream background -->
+  <rect x="6" y="6" width="285" height="198" fill="#FFFEF5" stroke="url(#nouveauGold)" stroke-width="3"/>
+  <rect x="12" y="12" width="273" height="186" fill="none" stroke="#2D5016" stroke-width="1.5"/>
+  
+  <!-- Art Nouveau flowing corners -->
+  <g transform="translate(18,18)">
+    <!-- Main flowing vine -->
+    <path d="M0,50 Q10,40 20,35 Q30,30 35,20 Q40,10 50,0" fill="none" stroke="url(#nouveauGreen)" stroke-width="3"/>
+    <!-- Whiplash curve -->
+    <path d="M15,45 Q25,35 30,25 Q35,15 45,10 Q55,5 60,15 Q65,25 55,30 Q45,35 40,25" fill="none" stroke="url(#nouveauGold)" stroke-width="2.5"/>
+    <!-- Flowing tendrils -->
+    <path d="M25,38 Q35,28 40,20 Q45,12 55,8" fill="none" stroke="#4A7C2E" stroke-width="1.5"/>
+    <path d="M20,42 Q30,32 35,24 Q40,16 50,12" fill="none" stroke="#4A7C2E" stroke-width="1"/>
+    <!-- Decorative leaves -->
+    <path d="M40,20 Q45,15 50,18 Q48,22 43,24 Q38,25 40,20 Z" fill="#4A7C2E" opacity="0.7"/>
+    <path d="M30,30 Q35,25 40,28 Q38,32 33,34 Q28,35 30,30 Z" fill="#4A7C2E" opacity="0.5"/>
+    <!-- Small flowers -->
+    <circle cx="55" cy="10" r="4" fill="#E8D5A3" stroke="#C9A84C" stroke-width="1"/>
+    <circle cx="55" cy="10" r="2" fill="#FFD700"/>
+    <!-- Curved line accents -->
+    <path d="M10,50 Q20,45 25,38" fill="none" stroke="#C9A84C" stroke-width="1"/>
+  </g>
+  
+  <g transform="translate(279,18) scale(-1,1)">
+    <path d="M0,50 Q10,40 20,35 Q30,30 35,20 Q40,10 50,0" fill="none" stroke="url(#nouveauGreen)" stroke-width="3"/>
+    <path d="M15,45 Q25,35 30,25 Q35,15 45,10 Q55,5 60,15 Q65,25 55,30 Q45,35 40,25" fill="none" stroke="url(#nouveauGold)" stroke-width="2.5"/>
+    <path d="M25,38 Q35,28 40,20 Q45,12 55,8" fill="none" stroke="#4A7C2E" stroke-width="1.5"/>
+    <path d="M20,42 Q30,32 35,24 Q40,16 50,12" fill="none" stroke="#4A7C2E" stroke-width="1"/>
+    <path d="M40,20 Q45,15 50,18 Q48,22 43,24 Q38,25 40,20 Z" fill="#4A7C2E" opacity="0.7"/>
+    <path d="M30,30 Q35,25 40,28 Q38,32 33,34 Q28,35 30,30 Z" fill="#4A7C2E" opacity="0.5"/>
+    <circle cx="55" cy="10" r="4" fill="#E8D5A3" stroke="#C9A84C" stroke-width="1"/>
+    <circle cx="55" cy="10" r="2" fill="#FFD700"/>
+    <path d="M10,50 Q20,45 25,38" fill="none" stroke="#C9A84C" stroke-width="1"/>
+  </g>
+  
+  <g transform="translate(18,192) scale(1,-1)">
+    <path d="M0,50 Q10,40 20,35 Q30,30 35,20 Q40,10 50,0" fill="none" stroke="url(#nouveauGreen)" stroke-width="3"/>
+    <path d="M15,45 Q25,35 30,25 Q35,15 45,10 Q55,5 60,15 Q65,25 55,30 Q45,35 40,25" fill="none" stroke="url(#nouveauGold)" stroke-width="2.5"/>
+    <path d="M25,38 Q35,28 40,20 Q45,12 55,8" fill="none" stroke="#4A7C2E" stroke-width="1.5"/>
+    <path d="M20,42 Q30,32 35,24 Q40,16 50,12" fill="none" stroke="#4A7C2E" stroke-width="1"/>
+    <path d="M40,20 Q45,15 50,18 Q48,22 43,24 Q38,25 40,20 Z" fill="#4A7C2E" opacity="0.7"/>
+    <path d="M30,30 Q35,25 40,28 Q38,32 33,34 Q28,35 30,30 Z" fill="#4A7C2E" opacity="0.5"/>
+    <circle cx="55" cy="10" r="4" fill="#E8D5A3" stroke="#C9A84C" stroke-width="1"/>
+    <circle cx="55" cy="10" r="2" fill="#FFD700"/>
+    <path d="M10,50 Q20,45 25,38" fill="none" stroke="#C9A84C" stroke-width="1"/>
+  </g>
+  
+  <g transform="translate(279,192) scale(-1,-1)">
+    <path d="M0,50 Q10,40 20,35 Q30,30 35,20 Q40,10 50,0" fill="none" stroke="url(#nouveauGreen)" stroke-width="3"/>
+    <path d="M15,45 Q25,35 30,25 Q35,15 45,10 Q55,5 60,15 Q65,25 55,30 Q45,35 40,25" fill="none" stroke="url(#nouveauGold)" stroke-width="2.5"/>
+    <path d="M25,38 Q35,28 40,20 Q45,12 55,8" fill="none" stroke="#4A7C2E" stroke-width="1.5"/>
+    <path d="M20,42 Q30,32 35,24 Q40,16 50,12" fill="none" stroke="#4A7C2E" stroke-width="1"/>
+    <path d="M40,20 Q45,15 50,18 Q48,22 43,24 Q38,25 40,20 Z" fill="#4A7C2E" opacity="0.7"/>
+    <path d="M30,30 Q35,25 40,28 Q38,32 33,34 Q28,35 30,30 Z" fill="#4A7C2E" opacity="0.5"/>
+    <circle cx="55" cy="10" r="4" fill="#E8D5A3" stroke="#C9A84C" stroke-width="1"/>
+    <circle cx="55" cy="10" r="2" fill="#FFD700"/>
+    <path d="M10,50 Q20,45 25,38" fill="none" stroke="#C9A84C" stroke-width="1"/>
+  </g>
+  
+  <!-- Delicate border pattern -->
+  <g stroke="#C9A84C" stroke-width="0.6" fill="none" opacity="0.6">
+    <path d="M75,14 Q80,12 85,14 Q90,16 95,14 Q100,12 105,14 Q110,16 115,14 Q120,12 125,14 Q130,16 135,14 Q140,12 145,14 Q150,16 155,14 Q160,12 165,14 Q170,16 175,14 Q180,12 185,14 Q190,16 195,14 Q200,12 205,14 Q210,16 215,14 Q220,12 225,14"/>
+    <path d="M75,196 Q80,194 85,196 Q90,198 95,196 Q100,194 105,196 Q110,198 115,196 Q120,194 125,196 Q130,198 135,196 Q140,194 145,196 Q150,198 155,196 Q160,194 165,196 Q170,198 175,196 Q180,194 185,196 Q190,198 195,196 Q200,194 205,196 Q210,198 215,196 Q220,194 225,196"/>
+  </g>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <linearGradient id="scrollGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B8860B"/>
+      <stop offset="50%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+  </defs>
+  
+  <rect x="5" y="5" width="287" height="200" fill="#FFFFFF"/>
+  
+  <!-- Main border -->
+  <rect x="10" y="10" width="277" height="190" fill="none" stroke="#1A1A1A" stroke-width="2"/>
+  <rect x="14" y="14" width="269" height="182" fill="none" stroke="url(#scrollGold)" stroke-width="1"/>
+  
+  <!-- Top Left Corner - Scroll -->
+  <g transform="translate(14,14)">
+    <!-- Main scroll curve -->
+    <path d="M0,30 Q0,0 30,0" fill="none" stroke="url(#scrollGold)" stroke-width="3"/>
+    <path d="M5,25 Q5,5 25,5" fill="none" stroke="#1A1A1A" stroke-width="1.5"/>
+    <!-- Curl detail -->
+    <path d="M25,8 Q28,10 26,12 Q30,14 28,16" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+    <path d="M8,25 Q10,28 12,26 Q14,30 16,28" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+    <!-- Inner curl -->
+    <path d="M20,10 Q22,12 20,13 Q23,14 21,16" fill="none" stroke="#B8860B" stroke-width="1"/>
+    <path d="M10,20 Q12,22 13,20 Q14,23 16,21" fill="none" stroke="#B8860B" stroke-width="1"/>
+    <!-- Small dot -->
+    <circle cx="18" cy="18" r="2" fill="#FFD700"/>
+  </g>
+  
+  <!-- Top Right Corner - Scroll -->
+  <g transform="translate(283,14) scale(-1,1)">
+    <path d="M0,30 Q0,0 30,0" fill="none" stroke="url(#scrollGold)" stroke-width="3"/>
+    <path d="M5,25 Q5,5 25,5" fill="none" stroke="#1A1A1A" stroke-width="1.5"/>
+    <path d="M25,8 Q28,10 26,12 Q30,14 28,16" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+    <path d="M8,25 Q10,28 12,26 Q14,30 16,28" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+    <path d="M20,10 Q22,12 20,13 Q23,14 21,16" fill="none" stroke="#B8860B" stroke-width="1"/>
+    <path d="M10,20 Q12,22 13,20 Q14,23 16,21" fill="none" stroke="#B8860B" stroke-width="1"/>
+    <circle cx="18" cy="18" r="2" fill="#FFD700"/>
+  </g>
+  
+  <!-- Bottom Left Corner - Scroll -->
+  <g transform="translate(14,196) scale(1,-1)">
+    <path d="M0,30 Q0,0 30,0" fill="none" stroke="url(#scrollGold)" stroke-width="3"/>
+    <path d="M5,25 Q5,5 25,5" fill="none" stroke="#1A1A1A" stroke-width="1.5"/>
+    <path d="M25,8 Q28,10 26,12 Q30,14 28,16" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+    <path d="M8,25 Q10,28 12,26 Q14,30 16,28" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+    <path d="M20,10 Q22,12 20,13 Q23,14 21,16" fill="none" stroke="#B8860B" stroke-width="1"/>
+    <path d="M10,20 Q12,22 13,20 Q14,23 16,21" fill="none" stroke="#B8860B" stroke-width="1"/>
+    <circle cx="18" cy="18" r="2" fill="#FFD700"/>
+  </g>
+  
+  <!-- Bottom Right Corner - Scroll -->
+  <g transform="translate(283,196) scale(-1,-1)">
+    <path d="M0,30 Q0,0 30,0" fill="none" stroke="url(#scrollGold)" stroke-width="3"/>
+    <path d="M5,25 Q5,5 25,5" fill="none" stroke="#1A1A1A" stroke-width="1.5"/>
+    <path d="M25,8 Q28,10 26,12 Q30,14 28,16" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+    <path d="M8,25 Q10,28 12,26 Q14,30 16,28" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+    <path d="M20,10 Q22,12 20,13 Q23,14 21,16" fill="none" stroke="#B8860B" stroke-width="1"/>
+    <path d="M10,20 Q12,22 13,20 Q14,23 16,21" fill="none" stroke="#B8860B" stroke-width="1"/>
+    <circle cx="18" cy="18" r="2" fill="#FFD700"/>
+  </g>
+  
+  <!-- Inner border -->
+  <rect x="50" y="50" width="197" height="110" fill="none" stroke="#1A1A1A" stroke-width="1.5"/>
+</svg>

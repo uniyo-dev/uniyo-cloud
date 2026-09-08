@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <pattern id="trellisPattern" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M4,0 L8,4 L4,8 L0,4 Z" fill="none" stroke="#667EEA" stroke-width="0.8"/>
+      <circle cx="4" cy="4" r="0.8" fill="#764BA2" opacity="0.5"/>
+    </pattern>
+    <linearGradient id="trellisGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667EEA"/>
+      <stop offset="100%" style="stop-color:#764BA2"/>
+    </linearGradient>
+  </defs>
+  
+  <rect x="5" y="5" width="287" height="200" fill="#FFFFFF"/>
+  
+  <!-- Outer border -->
+  <rect x="10" y="10" width="277" height="190" fill="none" stroke="url(#trellisGrad)" stroke-width="2.5"/>
+  
+  <!-- Trellis pattern top - ultra thin -->
+  <rect x="14" y="14" width="269" height="8" fill="url(#trellisPattern)"/>
+  
+  <!-- Trellis pattern bottom - ultra thin -->
+  <rect x="14" y="188" width="269" height="8" fill="url(#trellisPattern)"/>
+  
+  <!-- Trellis pattern left - ultra thin -->
+  <rect x="14" y="14" width="8" height="182" fill="url(#trellisPattern)"/>
+  
+  <!-- Trellis pattern right - ultra thin -->
+  <rect x="275" y="14" width="8" height="182" fill="url(#trellisPattern)"/>
+  
+  <!-- Inner border -->
+  <rect x="28" y="28" width="241" height="154" fill="none" stroke="#764BA2" stroke-width="1.5"/>
+  
+  <!-- Fine inner line -->
+  <rect x="32" y="32" width="233" height="146" fill="none" stroke="#667EEA" stroke-width="0.5"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <pattern id="uniyoDiagLines" x="0" y="0" width="160" height="100" patternUnits="userSpaceOnUse">
+      <text x="80" y="50" font-family="Georgia, serif" font-size="18" fill="#2C5F8A" opacity="0.04" text-anchor="middle" transform="rotate(-30 80 50)">UNIYO</text>
+      <line x1="0" y1="80" x2="160" y2="80" stroke="#2C5F8A" stroke-width="0.3" opacity="0.03"/>
+    </pattern>
+  </defs>
+  
+  <rect width="297" height="210" fill="#FFFFFF"/>
+  <rect width="297" height="210" fill="url(#uniyoDiagLines)"/>
+</svg>

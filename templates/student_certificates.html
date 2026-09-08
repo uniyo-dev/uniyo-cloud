@@ -43,7 +43,7 @@
 
 <!-- STUDENT CERTIFICATE POPUP -->
 <div id="studentCertPopup" class="popup-overlay" style="display: none;">
-    <div class="popup-card" style="max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto;">
+    <div class="popup-card" style="max-width: 900px; width: 95%; height: 85vh; overflow: hidden;">
         <div class="popup-header">
             <div class="popup-icon">🏆</div>
             <div class="popup-title">My Certificate</div>
@@ -53,7 +53,8 @@
         </div>
         <div class="popup-actions">
             <button class="popup-btn popup-btn-outline" onclick="closeStudentCertPopup()">Close</button>
-            <button class="popup-btn popup-btn-primary" onclick="downloadCertificatePDF()" style="background:#6D28D9; color:white;">📥 Download PDF</button>
+            <button class="popup-btn popup-btn-primary" onclick="downloadCertificatePDF()" style="background:#6D28D9; color:white;">📥 PDF</button>
+            <button class="popup-btn popup-btn-primary" onclick="downloadCertificateJPG()" style="background:#F59E0B; color:#0B0F19;">📥 JPG</button>
         </div>
     </div>
 </div>
@@ -88,31 +89,11 @@ function viewStudentCertImage(certId) {
     var popup = document.getElementById('studentCertPopup');
     var content = document.getElementById('studentCertPopupContent');
     popup.style.display = 'flex';
-    content.innerHTML = '<p style="color: #94A3B8;">Loading certificate...</p>';
-
-    // Show certificate as image (no HTML editing possible)
-    var img = document.createElement('img');
-    img.src = '/student/certificate/' + certId + '/image';
-    img.style.maxWidth = '100%';
-    img.style.height = 'auto';
-    img.style.borderRadius = '8px';
-    img.alt = 'Certificate';
     
-    img.onload = function() {
-        content.innerHTML = '';
-        content.appendChild(img);
-    };
-    
-    img.onerror = function() {
-        content.innerHTML = '<p>Error loading certificate image</p>';
-    };
-}
-
-let currentCertId = null;
-
-function downloadCertificatePDF() {
-    if (!currentCertId) return;
-    window.open('/student/certificate/' + currentCertId + '/download?format=pdf', '_blank');
+    // Use iframe to embed PDF inside popup
+    content.innerHTML = '<iframe src="/student/certificate/' + certId + '/image" ' +
+                        'style="width: 100%; height: 70vh; border: none; border-radius: 8px;" ' +
+                        'title="Certificate PDF"></iframe>';
 }
 
 function downloadCertificateImage(format) {

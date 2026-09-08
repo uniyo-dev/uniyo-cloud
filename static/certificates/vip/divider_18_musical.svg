@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="15mm" viewBox="0 0 297 15">
+  <defs>
+    <linearGradient id="musDiv" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2C3E50"/>
+      <stop offset="100%" style="stop-color:#34495E"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Center music note -->
+  <g transform="translate(148.5,7.5)">
+    <ellipse cx="-3" cy="4" rx="3" ry="2" fill="#2C3E50" transform="rotate(-20 -3 4)"/>
+    <ellipse cx="3" cy="4" rx="3" ry="2" fill="#2C3E50" transform="rotate(20 3 4)"/>
+    <line x1="0" y1="-5" x2="0" y2="4" stroke="#2C3E50" stroke-width="1.2"/>
+    <line x1="0" y1="-5" x2="6" y2="-3" stroke="#2C3E50" stroke-width="1"/>
+    <path d="M0,-5 Q-3,-7 0,-9 Q3,-7 0,-5" fill="#34495E" opacity="0.5"/>
+  </g>
+  
+  <!-- Musical staff lines -->
+  <line x1="10" y1="5" x2="130" y2="5" stroke="url(#musDiv)" stroke-width="0.5"/>
+  <line x1="10" y1="7.5" x2="130" y2="7.5" stroke="url(#musDiv)" stroke-width="0.5"/>
+  <line x1="10" y1="10" x2="130" y2="10" stroke="url(#musDiv)" stroke-width="0.5"/>
+  
+  <line x1="167" y1="5" x2="287" y2="5" stroke="url(#musDiv)" stroke-width="0.5"/>
+  <line x1="167" y1="7.5" x2="287" y2="7.5" stroke="url(#musDiv)" stroke-width="0.5"/>
+  <line x1="167" y1="10" x2="287" y2="10" stroke="url(#musDiv)" stroke-width="0.5"/>
+  
+  <!-- Small notes on staff -->
+  <ellipse cx="60" cy="6.5" rx="2" ry="1.5" fill="#34495E" transform="rotate(-15 60 6.5)"/>
+  <line x1="62" y1="6.5" x2="62" y2="2" stroke="#34495E" stroke-width="0.8"/>
+  
+  <ellipse cx="237" cy="8.5" rx="2" ry="1.5" fill="#34495E" transform="rotate(-15 237 8.5)"/>
+  <line x1="239" y1="8.5" x2="239" y2="4" stroke="#34495E" stroke-width="0.8"/>
+</svg>

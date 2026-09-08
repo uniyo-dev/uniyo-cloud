@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <pattern id="wmSpiral" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M12.5,12.5 Q15,10 15,12.5 Q15,15 12.5,15 Q10,15 10,12.5 Q10,8 12.5,8 Q17,8 17,12.5 Q17,17 12.5,17 Q8,17 8,12.5 Q8,7 12.5,7" fill="none" stroke="#D4AF37" stroke-width="0.3" opacity="0.05"/>
+    </pattern>
+  </defs>
+  
+  <rect width="297" height="210" fill="#FFFFFF"/>
+  <rect width="297" height="210" fill="url(#wmSpiral)"/>
+</svg>

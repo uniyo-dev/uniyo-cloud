@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <linearGradient id="ivyGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1B3A1B"/>
+      <stop offset="50%" style="stop-color:#2E7D32"/>
+      <stop offset="100%" style="stop-color:#1B3A1B"/>
+    </linearGradient>
+    <linearGradient id="ivyGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D4AF37"/>
+      <stop offset="50%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#D4AF37"/>
+    </linearGradient>
+  </defs>
+  
+  <rect x="5" y="5" width="287" height="200" fill="#FFFEF8"/>
+  
+  <!-- Outer green border -->
+  <rect x="10" y="10" width="277" height="190" fill="none" stroke="url(#ivyGreen)" stroke-width="4"/>
+  
+  <!-- Gold inner border -->
+  <rect x="17" y="17" width="263" height="176" fill="none" stroke="url(#ivyGold)" stroke-width="2"/>
+  
+  <!-- Inner green border -->
+  <rect x="22" y="22" width="253" height="166" fill="none" stroke="url(#ivyGreen)" stroke-width="1"/>
+  
+  <!-- Fine gold line -->
+  <rect x="26" y="26" width="245" height="158" fill="none" stroke="#D4AF37" stroke-width="0.5"/>
+  
+  <!-- Seal area -->
+  <circle cx="148.5" cy="155" r="28" fill="none" stroke="#2E7D32" stroke-width="1.5"/>
+  <circle cx="148.5" cy="155" r="23" fill="none" stroke="#D4AF37" stroke-width="0.5" stroke-dasharray="4,4"/>
+  
+  <!-- Ivy leaf accent top center -->
+  <g transform="translate(148.5,30)">
+    <path d="M0,0 Q-10,-10 -15,-5 Q-10,0 0,0" fill="#2E7D32" opacity="0.5"/>
+    <path d="M0,0 Q10,-10 15,-5 Q10,0 0,0" fill="#2E7D32" opacity="0.5"/>
+    <path d="M0,0 Q-8,-8 -10,-3 Q-6,1 0,0" fill="#4A7C2E" opacity="0.3"/>
+    <path d="M0,0 Q8,-8 10,-3 Q6,1 0,0" fill="#4A7C2E" opacity="0.3"/>
+  </g>
+</svg>

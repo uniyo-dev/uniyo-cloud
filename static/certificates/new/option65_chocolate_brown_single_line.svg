@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <linearGradient id="singleBrown" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3E2723"/>
+      <stop offset="50%" style="stop-color:#795548"/>
+      <stop offset="100%" style="stop-color:#3E2723"/>
+    </linearGradient>
+  </defs>
+  
+  <rect x="5" y="5" width="287" height="200" fill="#FFFFFF"/>
+  
+  <!-- Single brown line border -->
+  <rect x="15" y="15" width="267" height="180" fill="none" stroke="url(#singleBrown)" stroke-width="2.5"/>
+  
+  <!-- Center guide -->
+  <line x1="148.5" y1="15" x2="148.5" y2="195" stroke="#E0E0E0" stroke-width="0.3" stroke-dasharray="4,4"/>
+</svg>

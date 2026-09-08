@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <pattern id="uniyoDiagBold" x="0" y="0" width="180" height="120" patternUnits="userSpaceOnUse">
+      <text x="90" y="60" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1B3A5C" opacity="0.06" text-anchor="middle" transform="rotate(-45 90 60)">UNIYO</text>
+    </pattern>
+  </defs>
+  
+  <rect width="297" height="210" fill="#FFFFFF"/>
+  <rect width="297" height="210" fill="url(#uniyoDiagBold)"/>
+</svg>

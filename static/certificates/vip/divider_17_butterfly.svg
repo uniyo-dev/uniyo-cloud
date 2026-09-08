@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="15mm" viewBox="0 0 297 15">
+  <defs>
+    <linearGradient id="butDiv" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E8A0BF"/>
+      <stop offset="50%" style="stop-color:#FFB6C1"/>
+      <stop offset="100%" style="stop-color:#E8A0BF"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Center butterfly -->
+  <g transform="translate(148.5,7.5)">
+    <!-- Upper wings -->
+    <path d="M-2,-2 Q-8,-8 -12,-4 Q-8,-1 -2,-2" fill="#FFB6C1" opacity="0.6"/>
+    <path d="M2,-2 Q8,-8 12,-4 Q8,-1 2,-2" fill="#FFB6C1" opacity="0.6"/>
+    <!-- Lower wings -->
+    <path d="M-2,-1 Q-7,2 -9,5 Q-5,4 -2,-1" fill="#FFC0CB" opacity="0.5"/>
+    <path d="M2,-1 Q7,2 9,5 Q5,4 2,-1" fill="#FFC0CB" opacity="0.5"/>
+    <!-- Body -->
+    <line x1="0" y1="-3" x2="0" y2="5" stroke="#D4749C" stroke-width="1"/>
+    <circle cx="0" cy="-3" r="1" fill="#D4749C"/>
+    <!-- Antennae -->
+    <path d="M0,-3 Q-3,-6 -4,-7" fill="none" stroke="#D4749C" stroke-width="0.5"/>
+    <path d="M0,-3 Q3,-6 4,-7" fill="none" stroke="#D4749C" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Flowing lines -->
+  <path d="M10,7.5 Q40,4 70,7.5 Q100,11 130,7.5" fill="none" stroke="url(#butDiv)" stroke-width="1.2"/>
+  <path d="M167,7.5 Q197,11 227,7.5 Q257,4 287,7.5" fill="none" stroke="url(#butDiv)" stroke-width="1.2"/>
+  
+  <!-- Small flowers on lines -->
+  <circle cx="70" cy="7.5" r="2" fill="#FFB6C1" opacity="0.7"/>
+  <circle cx="227" cy="7.5" r="2" fill="#FFB6C1" opacity="0.7"/>
+  
+  <!-- Tiny dots -->
+  <circle cx="40" cy="5" r="0.8" fill="#D4749C"/>
+  <circle cx="257" cy="10" r="0.8" fill="#D4749C"/>
+</svg>

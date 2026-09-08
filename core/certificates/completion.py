@@ -1,229 +1,222 @@
-"""Completion & Other Certificate Generator - A4 Portrait (210mm x 297mm)"""
-from .common import *
+"""
+UNIYO LMS - Course Completion Certificate (A4 Landscape)
+"""
 
-# ==============================================================================
-# 3. A4 PORTRAIT CERTIFICATE GENERATOR (210mm × 297mm — COMPLETION & OTHER)
-# ==============================================================================
+from pathlib import Path
+from io import BytesIO
+from datetime import datetime
+import qrcode
+import random
+from reportlab.lib.pagesizes import A4, landscape
+from reportlab.lib.units import mm
+from reportlab.lib.colors import HexColor
+from reportlab.pdfgen import canvas
+from reportlab.lib.utils import ImageReader
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+from core.paths import CERTIFICATES_DIR, BASE_DIR
 
-def generate_a4_portrait_certificate_reportlab(certificate_data, qr_data_uri=None):
-    """
-    Generates a 100% compliant A4 PORTRAIT Certificate (210mm x 297mm).
-    Used for Completion and Other Certificate Types.
-    DOUBLED STAMP SIZES (54mm).
-    """
-    meta = resolve_certificate_meta(certificate_data)
-    
-    full_name = certificate_data.get('full_name', 'Student Name').title()
-    university = certificate_data.get('university', 'Ethiopian University')
-    stream = certificate_data.get('stream', 'Natural')
-    sex = certificate_data.get('sex', 'N/A')
-    cert_number = certificate_data.get('certificate_number', 'UNY-COMP-2026-0001')
-    issue_date = certificate_data.get('issue_date', datetime.now().strftime('%B %d, %Y'))
+FONTS_DIR = BASE_DIR / 'assets' / 'fonts'
+if FONTS_DIR.exists():
+    try:
+        pdfmetrics.registerFont(TTFont('AlexBrush', str(FONTS_DIR / 'AlexBrush-Regular.ttf')))
+        pdfmetrics.registerFont(TTFont('Cinzel', str(FONTS_DIR / 'Cinzel-Bold.ttf')))
+        pdfmetrics.registerFont(TTFont('Montserrat', str(FONTS_DIR / 'Montserrat-Regular.ttf')))
+        pdfmetrics.registerFont(TTFont('Playfair', str(FONTS_DIR / 'PlayfairDisplay-Bold.ttf')))
+    except:
+        pass
+
+def generate_completion_certificate(certificate_data, qr_data_uri=None):
+    full_name = certificate_data.get('full_name', 'Student Name')
+    university = certificate_data.get('university', 'University')
+    stream = certificate_data.get('stream', '')
+    sex = certificate_data.get('sex', '')
+    cert_number = certificate_data.get('certificate_number', 'UNIYO-COMP-001')
     verification_token = certificate_data.get('verification_token', '')
+    issue_date = certificate_data.get('issue_date', datetime.now().strftime('%B %d, %Y'))
+    title = certificate_data.get('title', 'Certificate of Completion')
+    reason = certificate_data.get('reason', 'For successfully completing all lessons and worksheets.')
     
     cert_id = cert_number.replace('/', '_').replace('\\', '_')
     output_pdf = CERTIFICATES_DIR / f"{cert_id}.pdf"
-
-    c = canvas.Canvas(
-        str(output_pdf),
-        pagesize=A4,
-        pageCompression=0,
-        invariant=1
-    )
     
-    c.setTitle(f"UNIYO Certificate - {full_name}")
-    c.setAuthor("UNIYO - Ethiopian Higher Education Freshman Hub")
-    c.setSubject(f"{meta['title']} - {meta['category'].upper()}")
+    c = canvas.Canvas(str(output_pdf), pagesize=landscape(A4), pageCompression=0)
+    w, h = landscape(A4)
     
-    w, h = A4  # 210mm x 297mm
-    m = 15 * mm  # Strict 15mm margin
+    gold_light = HexColor('#D4AF37')
+    gold_mid = HexColor('#C5A059')
+    gold_dark = HexColor('#9A7C36')
+    text_dark = HexColor('#1A1A1A')
+    text_mid = HexColor('#3A3A3A')
+    text_muted = HexColor('#555B62')
     
-    primary_color = meta['primary_color']
-    gold_color = meta['gold_color']
-
-    # 1. Background & Security Layers
-    draw_parchment_background(c, w, h, bg_hex='#FAF7F0')
-    draw_watermark(c, w, h, "UNIYO")
-    draw_guilloche_pattern(c, w, h, primary_color, margin_mm=15, count=14)
-
-    # 2. Double Borders
-    c.setStrokeColor(primary_color)
-    c.setLineWidth(2.5)
-    c.rect(m, m, w - (2 * m), h - (2 * m), fill=False, stroke=True)
+    # Background
+    c.setFillColor(HexColor('#FDFBF7'))
+    c.rect(0, 0, w, h, fill=True, stroke=False)
     
-    c.setStrokeColor(gold_color)
-    c.setLineWidth(1.2)
-    c.rect(m + 3 * mm, m + 3 * mm, w - (2 * m) - 6 * mm, h - (2 * m) - 6 * mm, fill=False, stroke=True)
-
-    draw_bezier_corners(c, w, h, gold_color, margin_mm=15, corner_size_mm=22)
-
-    # 3. Top Section
+    # Watermark (from organized assets)
+    c.saveState()
+    c.translate(w/2, h/2)
+    c.rotate(35)
+    c.setFillColor(HexColor('#4B0082'))
+    c.setFillAlpha(0.04)
+    c.setFont('Cinzel' if 'Cinzel' in pdfmetrics.getRegisteredFontNames() else 'Helvetica-Bold', 60)
+    c.drawCentredString(0, 0, 'UNIYO')
+    c.restoreState()
+    
+    # Border
+    borders_dir = BASE_DIR / 'static' / 'Certificates' / 'completion'
+    ornate_border = borders_dir / 'divider_floral_flourish.png'
+    if ornate_border.exists():
+        c.drawImage(ImageReader(str(ornate_border)), 15*mm, 13*mm, w-30*mm, h-26*mm, preserveAspectRatio=False, mask='auto')
+    
+    # Inner Indigo border
+    c.setStrokeColor(HexColor('#4B0082'))
+    c.setLineWidth(2)
+    c.rect(25*mm, 22*mm, w-50*mm, h-44*mm, fill=False, stroke=True)
+    
+    # Logo
     logo_file = BASE_DIR / 'static' / 'icons' / 'app_icon-192.png'
-    draw_transparent_image(c, logo_file, (w / 2.0) - (9 * mm), h - m - 23 * mm, 18 * mm, 18 * mm)
-
-    draw_smooth_gradient(c, (w / 2.0) - 75 * mm, h - m - 39 * mm, 150 * mm, 12 * mm,
-                         Color(0.98, 0.88, 0.5, alpha=0.03), Color(0.7, 0.5, 0.1, alpha=0.03))
-
-    c.setFillColor(primary_color)
-    c.setFont(SERIF_BOLD, 22)
-    c.drawCentredString(w / 2.0, h - m - 36 * mm, meta['title'])
+    if logo_file.exists():
+        c.drawImage(ImageReader(str(logo_file)), w/2-10*mm, h-30*mm, 20*mm, 20*mm, preserveAspectRatio=True, mask='auto')
     
-    c.setFillColor(HexColor('#555555'))
-    c.setFont(SERIF_ITALIC, 10.5)
-    c.drawCentredString(w / 2.0, h - m - 42 * mm, meta['subtitle'])
-
-    c.setStrokeColor(gold_color)
-    c.setLineWidth(1)
-    c.line((w / 2.0) - 45 * mm, h - m - 46 * mm, (w / 2.0) + 45 * mm, h - m - 46 * mm)
-    c.setFillColor(gold_color)
-    c.circle(w / 2.0, h - m - 46 * mm, 1.5 * mm, fill=True, stroke=False)
-
-    # 4. Middle Section
-    c.setFillColor(HexColor('#666666'))
-    c.setFont(SERIF_ITALIC, 11)
-    c.drawCentredString(w / 2.0, h - m - 58 * mm, "This certificate is proudly presented to")
-
-    c.setFillColor(primary_color)
-    c.setFont(SERIF_BOLD, 28)
-    c.drawCentredString(w / 2.0, h - m - 71 * mm, full_name)
-
-    c.setStrokeColor(gold_color)
-    c.setLineWidth(1.8)
-    name_w = max(c.stringWidth(full_name, SERIF_BOLD, 28) * 0.75, 95 * mm)
-    c.line((w / 2.0) - (name_w / 2.0), h - m - 74 * mm, (w / 2.0) + (name_w / 2.0), h - m - 74 * mm)
-
-    reason_box_y = h - m - 94 * mm
-    reason_box_h = 16 * mm
-    reason_box_w = w - (2 * m) - 18 * mm
-    reason_box_x = (w - reason_box_w) / 2.0
-
-    c.setFillColor(HexColor('#F8F6F0'))
-    c.setStrokeColor(HexColor('#E2D9C8'))
+    # Title
+    c.setFillColor(text_dark)
+    c.setFont('Cinzel' if 'Cinzel' in pdfmetrics.getRegisteredFontNames() else 'Helvetica-Bold', 28)
+    c.drawCentredString(w/2, h-42*mm, 'CERTIFICATE')
+    
+    c.setFont('Playfair' if 'Playfair' in pdfmetrics.getRegisteredFontNames() else 'Helvetica', 15)
+    c.setFillColor(text_muted)
+    c.drawCentredString(w/2, h-50*mm, 'of ' + title)
+    
+    # Divider - Chinese cloud
+    divider_file = BASE_DIR / 'static' / 'Certificates' / 'completion' / 'divider_floral_flourish.png'
+    if divider_file.exists():
+        c.drawImage(ImageReader(str(divider_file)), w/2-40*mm, h-58*mm, 80*mm, 10*mm, preserveAspectRatio=True, mask='auto')
+    
+    # Presented to
+    c.setFont('Montserrat' if 'Montserrat' in pdfmetrics.getRegisteredFontNames() else 'Helvetica', 10)
+    c.setFillColor(text_mid)
+    c.drawCentredString(w/2, h-70*mm, 'THIS CERTIFICATE IS PROUDLY PRESENTED TO')
+    
+    # Student name
+    c.setFont('AlexBrush' if 'AlexBrush' in pdfmetrics.getRegisteredFontNames() else 'Helvetica-Bold', 36)
+    c.setFillColor(text_dark)
+    c.drawCentredString(w/2, h-84*mm, full_name)
+    
+    c.setStrokeColor(gold_mid)
     c.setLineWidth(0.8)
-    c.roundRect(reason_box_x, reason_box_y, reason_box_w, reason_box_h, 3 * mm, fill=True, stroke=True)
-
-    c.setFillColor(HexColor('#333333'))
-    c.setFont(SERIF_FONT, 10)
-    reason_str = certificate_data.get('title', meta['reason'])
-    c.drawCentredString(w / 2.0, reason_box_y + 9.5 * mm, reason_str[:85])
-    c.drawCentredString(w / 2.0, reason_box_y + 4.5 * mm, "demonstrating academic distinction in the Ethiopian Freshman Curriculum.")
-
-    stream_str = f"{stream} Science" if not str(stream).endswith('Science') else stream
-    meta_str = f"{university}   •   {stream_str}   •   Sex: {sex}"
-    c.setFont(SERIF_ITALIC, 9.5)
-    c.setFillColor(gold_color)
-    c.drawCentredString(w / 2.0, h - m - 102 * mm, meta_str)
-
-    # 5. Credentials Box
-    cred_y = h - m - 132 * mm
-    cred_h = 26 * mm
-    cred_w = w - (2 * m) - 18 * mm
-    cred_x = (w - cred_w) / 2.0
-
-    c.setFillColor(HexColor('#FFFFFF'))
-    c.setStrokeColor(primary_color)
-    c.setLineWidth(1)
-    c.roundRect(cred_x, cred_y, cred_w, cred_h, 3 * mm, fill=True, stroke=True)
-
-    c.setFont(SANS_FONT, 8.5)
-    c.setFillColor(HexColor('#555555'))
-    c.drawString(cred_x + 6 * mm, cred_y + 18 * mm, "Certificate Number:")
-    c.setFont(SANS_BOLD, 8.5)
-    c.setFillColor(HexColor('#111111'))
-    c.drawRightString(cred_x + cred_w - 6 * mm, cred_y + 18 * mm, cert_number)
-
-    c.setFont(SANS_FONT, 8.5)
-    c.setFillColor(HexColor('#555555'))
-    c.drawString(cred_x + 6 * mm, cred_y + 11.5 * mm, "Issue Date:")
-    c.setFont(SANS_BOLD, 8.5)
-    c.setFillColor(HexColor('#111111'))
-    c.drawRightString(cred_x + cred_w - 6 * mm, cred_y + 11.5 * mm, str(issue_date)[:12])
-
-    c.setFont(SANS_FONT, 8.5)
-    c.setFillColor(HexColor('#555555'))
-    c.drawString(cred_x + 6 * mm, cred_y + 5 * mm, "Type:")
-    c.setFont(SANS_BOLD, 8.5)
-    c.setFillColor(primary_color)
-    c.drawRightString(cred_x + cred_w - 6 * mm, cred_y + 5 * mm, meta['category'].upper())
-
-    verify_url = f"https://uniyo-cloud.onrender.com/verify/{verification_token}"
-    c.setFont(SANS_BOLD, 8)
-    c.setFillColor(primary_color)
-    c.drawCentredString(w / 2.0, cred_y - 6 * mm, f"Verify Online at: {verify_url}")
-
-    # ==========================================================================
-    # 6. STAMPS SYSTEM (EQUAL SIZE, DOUBLED TO 52mm, CENTERED AT BOTTOM)
-    # ==========================================================================
-    stamp_size = 52 * mm  # Doubled Stamp Size for A4 Portrait
+    c.line(w/2-50*mm, h-88*mm, w/2+50*mm, h-88*mm)
     
-    primary_stamp_path = find_stamp_file(meta['primary_stamp'])
-    draw_transparent_image(c, primary_stamp_path, (w / 2.0) - (stamp_size / 2.0), 38 * mm, stamp_size, stamp_size)
-
-    # 7. Signatures System
-    sig_y = 88 * mm
-    sig_sa_file = find_signature_file('super_admin_signature.png')
-
-    if meta['dual_signatures']:
-        sig_cm_file = find_signature_file('signature_(content_manager).png')
-        
-        draw_transparent_image(c, sig_sa_file, m + 8 * mm, sig_y + 5 * mm, 30 * mm, 12 * mm)
-        c.setStrokeColor(HexColor('#94A3B8'))
-        c.setLineWidth(0.8)
-        c.line(m + 8 * mm, sig_y + 5 * mm, m + 44 * mm, sig_y + 5 * mm)
-        c.setFont(SANS_BOLD, 8)
-        c.setFillColor(HexColor('#111111'))
-        c.drawString(m + 8 * mm, sig_y + 0.5 * mm, "Chalachew Agegn")
-        c.setFont(SANS_FONT, 7)
-        c.setFillColor(HexColor('#666666'))
-        c.drawString(m + 8 * mm, sig_y - 3.5 * mm, "Super Admin Director")
-
-        draw_transparent_image(c, sig_cm_file, w - m - 44 * mm, sig_y + 5 * mm, 30 * mm, 12 * mm)
-        c.line(w - m - 44 * mm, sig_y + 5 * mm, w - m - 8 * mm, sig_y + 5 * mm)
-        c.setFont(SANS_BOLD, 8)
-        c.setFillColor(HexColor('#111111'))
-        c.drawString(w - m - 44 * mm, sig_y + 0.5 * mm, "Banch Destaw")
-        c.setFont(SANS_FONT, 7)
-        c.setFillColor(HexColor('#666666'))
-        c.drawString(w - m - 44 * mm, sig_y - 3.5 * mm, "Content Manager")
-    else:
-        sig_x = (w / 2.0) - 18 * mm
-        draw_transparent_image(c, sig_sa_file, sig_x, sig_y + 5 * mm, 36 * mm, 14 * mm)
-        c.setStrokeColor(HexColor('#94A3B8'))
-        c.setLineWidth(0.8)
-        c.line((w / 2.0) - 22 * mm, sig_y + 5 * mm, (w / 2.0) + 22 * mm, sig_y + 5 * mm)
-        c.setFont(SANS_BOLD, 8.5)
-        c.setFillColor(HexColor('#111111'))
-        c.drawCentredString(w / 2.0, sig_y + 0.5 * mm, "Chalachew Agegn")
-        c.setFont(SANS_FONT, 7)
-        c.setFillColor(HexColor('#666666'))
-        c.drawCentredString(w / 2.0, sig_y - 3.5 * mm, "Super Admin Director")
-
-    # 8. QR Code & Barcode
+    # Reason
+    c.setFont('Montserrat' if 'Montserrat' in pdfmetrics.getRegisteredFontNames() else 'Helvetica', 9)
+    c.setFillColor(text_mid)
+    words = reason.split()
+    lines = []
+    current = []
+    current_w = 0
+    max_w = 110*mm
+    for word in words:
+        ww = len(word) * 2*mm
+        if current_w + ww < max_w:
+            current.append(word)
+            current_w += ww + 2*mm
+        else:
+            lines.append(' '.join(current))
+            current = [word]
+            current_w = ww
+    if current:
+        lines.append(' '.join(current))
+    
+    y_reason = h - 97*mm
+    for line in lines[:2]:
+        c.drawCentredString(w/2, y_reason, line)
+        y_reason -= 6*mm
+    
+    # University details
+    details = university
+    if stream:
+        details += f' • {stream} Science'
+    if sex:
+        details += f' • {sex}'
+    c.setFont('Montserrat' if 'Montserrat' in pdfmetrics.getRegisteredFontNames() else 'Helvetica', 8)
+    c.setFillColor(HexColor('#667788'))
+    c.drawCentredString(w/2, y_reason - 3*mm, details)
+    
+    # Credentials
+    y_cred = y_reason - 12*mm
+    c.setFont('Courier', 7)
+    c.setFillColor(text_mid)
+    c.drawCentredString(w/2, y_cred, f'Certificate No: {cert_number}')
+    y_cred -= 5*mm
+    c.drawCentredString(w/2, y_cred, f'Date: {issue_date[:20]}')
+    y_cred -= 5*mm
+    c.drawCentredString(w/2, y_cred, f'Type: {certificate_data.get("certificate_type", "completion").upper()}')
+    
+    # Verify URL
+    verify_url = f"https://uniyo-cloud.onrender.com/verify/{verification_token}"
+    c.setFont('Helvetica', 6)
+    c.setFillColor(HexColor('#4B0082'))
+    c.drawRightString(w-30*mm, h-33*mm, f'Verify: {verify_url[:45]}')
+    
+    # Footer
+    footer_y = 28*mm
+    
+    # Barcode
+    c.setFillColor(HexColor('#000000'))
+    random.seed(cert_number)
+    bar_x = 55*mm
+    bar_y = footer_y + 5*mm
+    for i in range(30):
+        bar_w = random.choice([1, 2]) * 0.4*mm
+        c.rect(bar_x, bar_y, bar_w, 10*mm, fill=True, stroke=False)
+        bar_x += bar_w + 0.3*mm
+    c.setFont('Courier', 5)
+    c.setFillColor(HexColor('#333333'))
+    c.drawCentredString(70*mm, footer_y + 2*mm, cert_number[:20])
+    
+    # QR code
     try:
-        qr = qrcode.QRCode(version=1, error_correction=qrcode.constants.ERROR_CORRECT_H, box_size=10, border=1)
+        qr = qrcode.QRCode(version=1, error_correction=qrcode.constants.ERROR_CORRECT_H, box_size=10, border=2)
         qr.add_data(verify_url)
         qr.make(fit=True)
         qr_img = qr.make_image(fill_color='black', back_color='white')
         qr_buffer = BytesIO()
         qr_img.save(qr_buffer, format='PNG')
         qr_buffer.seek(0)
-        
-        qr_image = ImageReader(qr_buffer)
-        c.drawImage(qr_image, m + 8 * mm, 22 * mm, 20 * mm, 20 * mm, preserveAspectRatio=True)
-        c.setFont(SANS_FONT, 6.5)
-        c.setFillColor(HexColor('#666666'))
-        c.drawString(m + 8 * mm, 18.5 * mm, "Scan to Verify")
-    except Exception as e:
-        print(f"Warning: QR Code Generation Failed: {e}")
-
-    draw_barcode(c, cert_number, (w / 2.0) - (20 * mm), 22 * mm, width=40 * mm, height=12 * mm)
-
-    c.setFillColor(HexColor('#888888'))
-    c.setFont(SANS_FONT, 5.5)
-    c.drawCentredString(w / 2.0, m + 1.5 * mm,
-                        "UNIYO AUTHENTIC CERTIFICATE • ETHIOPIAN HIGHER EDUCATION FRESHMAN HUB • VERIFY ONLINE • TAMPER EVIDENT")
-
-    c.showPage()
+        c.drawImage(ImageReader(qr_buffer), 30*mm, footer_y, 20*mm, 20*mm, preserveAspectRatio=True)
+    except:
+        pass
+    
+    # Stamp
+    stamp_file = BASE_DIR / 'static' / 'Authenticity' / 'general.png'
+    if stamp_file.exists():
+        c.drawImage(ImageReader(str(stamp_file)), w/2-27*mm, 28*mm, 54*mm, 54*mm, preserveAspectRatio=True, mask='auto')
+    
+    # Replica stamp
+    c.saveState()
+    c.setFillAlpha(0.08)
+    c.drawImage(ImageReader(str(stamp_file)), 50*mm, h/2-50*mm, 100*mm, 100*mm, preserveAspectRatio=True, mask='auto')
+    c.restoreState()
+    
+    # Signature
+    sig_file = BASE_DIR / 'static' / 'Authenticity' / 'super_admin_signature.png'
+    if sig_file.exists():
+        c.drawImage(ImageReader(str(sig_file)), w-60*mm, footer_y+8*mm, 25*mm, 8*mm, preserveAspectRatio=True, mask='auto')
+    c.setFont('AlexBrush' if 'AlexBrush' in pdfmetrics.getRegisteredFontNames() else 'Helvetica-Bold', 14)
+    c.setFillColor(text_dark)
+    c.drawCentredString(w-47*mm, footer_y+5*mm, 'Chalachew Agegn')
+    c.setFont('Montserrat' if 'Montserrat' in pdfmetrics.getRegisteredFontNames() else 'Helvetica', 6)
+    c.drawCentredString(w-47*mm, footer_y+2*mm, 'SUPER ADMIN')
+    
+    # Microtext
+    c.setFont('Helvetica', 5)
+    c.setFillColor(HexColor('#999999'))
+    c.drawCentredString(w/2, 8*mm, 'UNIYO AUTHENTIC CERTIFICATE • VERIFY ONLINE • SECURITY FEATURES INCLUDED • DO NOT COPY • UNIYO AUTHENTIC CERTIFICATE')
+    
+    c.setTitle(f"UNIYO Certificate - {full_name}")
+    c.setAuthor("UNIYO - University Made for YOU")
+    c.setSubject(title)
+    
     c.save()
     return output_pdf
-

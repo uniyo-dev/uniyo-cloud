@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="15mm" viewBox="0 0 297 15">
+  <defs>
+    <linearGradient id="wavDiv" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1B4F72"/>
+      <stop offset="50%" style="stop-color:#2E86C1"/>
+      <stop offset="100%" style="stop-color:#1B4F72"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Center wave circle -->
+  <g transform="translate(148.5,7.5)">
+    <circle cx="0" cy="0" r="4" fill="none" stroke="url(#wavDiv)" stroke-width="1.5"/>
+    <path d="M-3,0 Q0,-3 3,0 Q0,3 -3,0" fill="none" stroke="#2E86C1" stroke-width="1"/>
+    <circle cx="0" cy="0" r="1" fill="#2E86C1"/>
+  </g>
+  
+  <!-- Wavy lines -->
+  <path d="M10,7.5 Q20,4 30,7.5 Q40,11 50,7.5 Q60,4 70,7.5 Q80,11 90,7.5 Q100,4 110,7.5 Q120,11 130,7.5" fill="none" stroke="url(#wavDiv)" stroke-width="1.5"/>
+  
+  <path d="M167,7.5 Q177,11 187,7.5 Q197,4 207,7.5 Q217,11 227,7.5 Q237,4 247,7.5 Q257,11 267,7.5 Q277,4 287,7.5" fill="none" stroke="url(#wavDiv)" stroke-width="1.5"/>
+  
+  <!-- Small wave accents -->
+  <path d="M15,5 Q18,3 21,5" fill="none" stroke="#2E86C1" stroke-width="0.8"/>
+  <path d="M276,10 Q279,8 282,10" fill="none" stroke="#2E86C1" stroke-width="0.8"/>
+</svg>

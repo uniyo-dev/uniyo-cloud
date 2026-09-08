@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="15mm" viewBox="0 0 297 15">
+  <defs>
+    <linearGradient id="celDiv" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B6914"/>
+      <stop offset="50%" style="stop-color:#D4AF37"/>
+      <stop offset="100%" style="stop-color:#8B6914"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Center Celtic knot -->
+  <g transform="translate(148.5,7.5)">
+    <circle cx="0" cy="0" r="5" fill="none" stroke="url(#celDiv)" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="3" fill="none" stroke="#8B6914" stroke-width="1"/>
+    <path d="M-4,0 Q0,-4 4,0 Q0,4 -4,0" fill="none" stroke="url(#celDiv)" stroke-width="1"/>
+    <circle cx="0" cy="0" r="1.5" fill="#D4AF37"/>
+  </g>
+  
+  <!-- Woven lines -->
+  <path d="M10,7.5 Q30,5 50,7.5 Q70,10 90,7.5 Q110,5 130,7.5" fill="none" stroke="url(#celDiv)" stroke-width="1.5"/>
+  <path d="M167,7.5 Q187,10 207,7.5 Q227,5 247,7.5 Q267,10 287,7.5" fill="none" stroke="url(#celDiv)" stroke-width="1.5"/>
+  
+  <!-- Knot accents -->
+  <circle cx="90" cy="7.5" r="2" fill="none" stroke="#8B6914" stroke-width="1"/>
+  <circle cx="207" cy="7.5" r="2" fill="none" stroke="#8B6914" stroke-width="1"/>
+</svg>

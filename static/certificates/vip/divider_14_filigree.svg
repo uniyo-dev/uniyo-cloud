@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="15mm" viewBox="0 0 297 15">
+  <defs>
+    <linearGradient id="filDiv" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B6914"/>
+      <stop offset="50%" style="stop-color:#D4AF37"/>
+      <stop offset="100%" style="stop-color:#8B6914"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Center filigree ornament -->
+  <g transform="translate(148.5,7.5)">
+    <path d="M0,-6 Q6,-3 4,0 Q6,3 0,6 Q-6,3 -4,0 Q-6,-3 0,-6 Z" fill="none" stroke="url(#filDiv)" stroke-width="1.2"/>
+    <path d="M0,-4 Q4,-2 3,0 Q4,2 0,4 Q-4,2 -3,0 Q-4,-2 0,-4 Z" fill="none" stroke="#8B6914" stroke-width="0.8"/>
+    <circle cx="0" cy="0" r="1.5" fill="#D4AF37"/>
+  </g>
+  
+  <!-- Swirling lines -->
+  <path d="M10,7.5 Q30,3 50,7.5 Q70,12 90,7.5 Q110,3 130,7.5" fill="none" stroke="url(#filDiv)" stroke-width="1.2"/>
+  <path d="M167,7.5 Q187,12 207,7.5 Q227,3 247,7.5 Q267,12 287,7.5" fill="none" stroke="url(#filDiv)" stroke-width="1.2"/>
+  
+  <!-- Small curls -->
+  <path d="M130,7.5 Q133,5 131,3.5 Q129,5 131,7.5" fill="none" stroke="#8B6914" stroke-width="0.8"/>
+  <path d="M167,7.5 Q164,5 166,3.5 Q168,5 166,7.5" fill="none" stroke="#8B6914" stroke-width="0.8"/>
+  
+  <!-- Filigree dots -->
+  <circle cx="50" cy="7.5" r="1.5" fill="none" stroke="#D4AF37" stroke-width="0.8"/>
+  <circle cx="247" cy="7.5" r="1.5" fill="none" stroke="#D4AF37" stroke-width="0.8"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="15mm" viewBox="0 0 297 15">
+  <defs>
+    <linearGradient id="floGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#B8860B"/>
+      <stop offset="50%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Center flower -->
+  <g transform="translate(148.5,7.5)">
+    <ellipse cx="0" cy="-4" rx="3" ry="4" fill="#FFD700" opacity="0.6"/>
+    <ellipse cx="0" cy="4" rx="3" ry="4" fill="#FFD700" opacity="0.6"/>
+    <ellipse cx="-4" cy="0" rx="4" ry="3" fill="#FFD700" opacity="0.6"/>
+    <ellipse cx="4" cy="0" rx="4" ry="3" fill="#FFD700" opacity="0.6"/>
+    <circle cx="0" cy="0" r="2.5" fill="#D4AF37"/>
+    <circle cx="0" cy="0" r="1" fill="#FFFFFF"/>
+  </g>
+  
+  <!-- Vine lines -->
+  <path d="M10,7.5 Q40,3 70,7.5 Q100,12 130,7.5" fill="none" stroke="#8B6914" stroke-width="1.5"/>
+  <path d="M167,7.5 Q197,3 227,7.5 Q257,12 287,7.5" fill="none" stroke="#8B6914" stroke-width="1.5"/>
+  
+  <!-- Small leaves on vine -->
+  <ellipse cx="40" cy="5" rx="5" ry="2" fill="#4A7C2E" opacity="0.4" transform="rotate(-20 40 5)"/>
+  <ellipse cx="100" cy="10" rx="5" ry="2" fill="#4A7C2E" opacity="0.4" transform="rotate(20 100 10)"/>
+  <ellipse cx="197" cy="5" rx="5" ry="2" fill="#4A7C2E" opacity="0.4" transform="rotate(20 197 5)"/>
+  <ellipse cx="257" cy="10" rx="5" ry="2" fill="#4A7C2E" opacity="0.4" transform="rotate(-20 257 10)"/>
+</svg>

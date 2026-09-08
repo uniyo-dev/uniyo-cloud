@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <linearGradient id="royalGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="25%" style="stop-color:#FFF8DC"/>
+      <stop offset="50%" style="stop-color:#DAA520"/>
+      <stop offset="75%" style="stop-color:#FFF8DC"/>
+      <stop offset="100%" style="stop-color:#FFD700"/>
+    </linearGradient>
+  </defs>
+  
+  <rect x="8" y="8" width="281" height="194" fill="#F8F4FF" stroke="#4A0E4E" stroke-width="4"/>
+  <rect x="14" y="14" width="269" height="182" fill="none" stroke="url(#royalGold)" stroke-width="3"/>
+  <rect x="18" y="18" width="261" height="174" fill="none" stroke="#4A0E4E" stroke-width="1"/>
+  
+  <g transform="translate(18,18)">
+    <path d="M0,45 Q0,0 45,0" fill="none" stroke="url(#royalGold)" stroke-width="3.5"/>
+    <path d="M5,38 Q5,5 38,5" fill="none" stroke="#4A0E4E" stroke-width="1.5"/>
+    <path d="M10,32 Q10,10 32,10" fill="none" stroke="url(#royalGold)" stroke-width="1"/>
+    <path d="M15,20 L18,10 L22,18 L25,8 L28,18 L32,10 L35,20" fill="none" stroke="#DAA520" stroke-width="2"/>
+    <circle cx="25" cy="8" r="2" fill="#FFD700"/>
+    <circle cx="8" cy="8" r="3" fill="#FFD700"/>
+    <circle cx="15" cy="28" r="1.5" fill="#DAA520"/>
+    <circle cx="28" cy="28" r="1.5" fill="#DAA520"/>
+  </g>
+  
+  <g transform="translate(279,18) scale(-1,1)">
+    <path d="M0,45 Q0,0 45,0" fill="none" stroke="url(#royalGold)" stroke-width="3.5"/>
+    <path d="M5,38 Q5,5 38,5" fill="none" stroke="#4A0E4E" stroke-width="1.5"/>
+    <path d="M10,32 Q10,10 32,10" fill="none" stroke="url(#royalGold)" stroke-width="1"/>
+    <path d="M15,20 L18,10 L22,18 L25,8 L28,18 L32,10 L35,20" fill="none" stroke="#DAA520" stroke-width="2"/>
+    <circle cx="25" cy="8" r="2" fill="#FFD700"/>
+    <circle cx="8" cy="8" r="3" fill="#FFD700"/>
+    <circle cx="15" cy="28" r="1.5" fill="#DAA520"/>
+    <circle cx="28" cy="28" r="1.5" fill="#DAA520"/>
+  </g>
+  
+  <g transform="translate(18,192) scale(1,-1)">
+    <path d="M0,45 Q0,0 45,0" fill="none" stroke="url(#royalGold)" stroke-width="3.5"/>
+    <path d="M5,38 Q5,5 38,5" fill="none" stroke="#4A0E4E" stroke-width="1.5"/>
+    <path d="M10,32 Q10,10 32,10" fill="none" stroke="url(#royalGold)" stroke-width="1"/>
+    <path d="M15,20 L18,10 L22,18 L25,8 L28,18 L32,10 L35,20" fill="none" stroke="#DAA520" stroke-width="2"/>
+    <circle cx="25" cy="8" r="2" fill="#FFD700"/>
+    <circle cx="8" cy="8" r="3" fill="#FFD700"/>
+    <circle cx="15" cy="28" r="1.5" fill="#DAA520"/>
+    <circle cx="28" cy="28" r="1.5" fill="#DAA520"/>
+  </g>
+  
+  <g transform="translate(279,192) scale(-1,-1)">
+    <path d="M0,45 Q0,0 45,0" fill="none" stroke="url(#royalGold)" stroke-width="3.5"/>
+    <path d="M5,38 Q5,5 38,5" fill="none" stroke="#4A0E4E" stroke-width="1.5"/>
+    <path d="M10,32 Q10,10 32,10" fill="none" stroke="url(#royalGold)" stroke-width="1"/>
+    <path d="M15,20 L18,10 L22,18 L25,8 L28,18 L32,10 L35,20" fill="none" stroke="#DAA520" stroke-width="2"/>
+    <circle cx="25" cy="8" r="2" fill="#FFD700"/>
+    <circle cx="8" cy="8" r="3" fill="#FFD700"/>
+    <circle cx="15" cy="28" r="1.5" fill="#DAA520"/>
+    <circle cx="28" cy="28" r="1.5" fill="#DAA520"/>
+  </g>
+</svg>

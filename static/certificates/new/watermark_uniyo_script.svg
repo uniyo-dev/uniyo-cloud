@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <rect width="297" height="210" fill="#FFFFFF"/>
+  
+  <!-- Elegant center watermark -->
+  <g transform="translate(148.5,105)" opacity="0.04">
+    <!-- Decorative lines -->
+    <line x1="-70" y1="-25" x2="70" y2="-25" stroke="#D4AF37" stroke-width="0.5"/>
+    <line x1="-70" y1="25" x2="70" y2="25" stroke="#D4AF37" stroke-width="0.5"/>
+    
+    <!-- Main text -->
+    <text x="0" y="-10" font-family="serif" font-size="45" font-weight="bold" fill="#D4AF37" text-anchor="middle" font-style="italic">UNIYO</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="10" font-family="serif" font-size="16" fill="#D4AF37" text-anchor="middle" letter-spacing="8">OFFICIAL</text>
+  </g>
+</svg>

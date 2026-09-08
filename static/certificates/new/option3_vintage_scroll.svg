@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <pattern id="scrollPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M0,10 Q5,5 10,10 Q15,15 20,10" fill="none" stroke="#8B4513" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect x="8" y="8" width="281" height="194" fill="#FFF8DC" stroke="#8B4513" stroke-width="3"/>
+  <rect x="13" y="13" width="271" height="184" fill="none" stroke="#8B4513" stroke-width="1.5"/>
+  <rect x="16" y="16" width="265" height="178" fill="none" stroke="url(#scrollPattern)" stroke-width="2"/>
+  <g transform="translate(20,20)">
+    <path d="M0,35 Q0,0 35,0" fill="none" stroke="#8B4513" stroke-width="2.5"/>
+    <path d="M5,30 Q5,5 30,5" fill="none" stroke="#A0522D" stroke-width="1.5"/>
+    <path d="M10,25 Q10,10 25,10" fill="none" stroke="#8B4513" stroke-width="1"/>
+    <path d="M28,10 C35,15 30,20 25,18 C30,22 35,20 32,15" fill="none" stroke="#8B4513" stroke-width="1.5"/>
+    <path d="M10,28 C15,35 20,30 18,25 C22,30 20,35 15,32" fill="none" stroke="#8B4513" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(277,20) scale(-1,1)">
+    <path d="M0,35 Q0,0 35,0" fill="none" stroke="#8B4513" stroke-width="2.5"/>
+    <path d="M5,30 Q5,5 30,5" fill="none" stroke="#A0522D" stroke-width="1.5"/>
+    <path d="M10,25 Q10,10 25,10" fill="none" stroke="#8B4513" stroke-width="1"/>
+    <path d="M28,10 C35,15 30,20 25,18 C30,22 35,20 32,15" fill="none" stroke="#8B4513" stroke-width="1.5"/>
+    <path d="M10,28 C15,35 20,30 18,25 C22,30 20,35 15,32" fill="none" stroke="#8B4513" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(20,190) scale(1,-1)">
+    <path d="M0,35 Q0,0 35,0" fill="none" stroke="#8B4513" stroke-width="2.5"/>
+    <path d="M5,30 Q5,5 30,5" fill="none" stroke="#A0522D" stroke-width="1.5"/>
+    <path d="M10,25 Q10,10 25,10" fill="none" stroke="#8B4513" stroke-width="1"/>
+    <path d="M28,10 C35,15 30,20 25,18 C30,22 35,20 32,15" fill="none" stroke="#8B4513" stroke-width="1.5"/>
+    <path d="M10,28 C15,35 20,30 18,25 C22,30 20,35 15,32" fill="none" stroke="#8B4513" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(277,190) scale(-1,-1)">
+    <path d="M0,35 Q0,0 35,0" fill="none" stroke="#8B4513" stroke-width="2.5"/>
+    <path d="M5,30 Q5,5 30,5" fill="none" stroke="#A0522D" stroke-width="1.5"/>
+    <path d="M10,25 Q10,10 25,10" fill="none" stroke="#8B4513" stroke-width="1"/>
+    <path d="M28,10 C35,15 30,20 25,18 C30,22 35,20 32,15" fill="none" stroke="#8B4513" stroke-width="1.5"/>
+    <path d="M10,28 C15,35 20,30 18,25 C22,30 20,35 15,32" fill="none" stroke="#8B4513" stroke-width="1.5"/>
+  </g>
+</svg>

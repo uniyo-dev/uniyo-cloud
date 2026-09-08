@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <pattern id="uniyoDenseBorder" x="0" y="0" width="75" height="45" patternUnits="userSpaceOnUse">
+      <text x="37.5" y="22" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2C5F8A" opacity="0.03" text-anchor="middle" transform="rotate(-35 37.5 22)">UNIYO</text>
+      <line x1="0" y1="40" x2="75" y2="40" stroke="#2C5F8A" stroke-width="0.2" opacity="0.02"/>
+    </pattern>
+  </defs>
+  
+  <rect width="297" height="210" fill="#FFFFFF"/>
+  <rect width="297" height="210" fill="url(#uniyoDenseBorder)"/>
+</svg>

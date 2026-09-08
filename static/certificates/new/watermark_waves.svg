@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <pattern id="wmWave" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M0,10 Q5,5 10,10 Q15,15 20,10" fill="none" stroke="#1B4F72" stroke-width="0.4" opacity="0.05"/>
+      <path d="M0,15 Q5,10 10,15 Q15,20 20,15" fill="none" stroke="#1B4F72" stroke-width="0.3" opacity="0.04"/>
+      <path d="M0,5 Q5,0 10,5 Q15,10 20,5" fill="none" stroke="#1B4F72" stroke-width="0.3" opacity="0.04"/>
+    </pattern>
+  </defs>
+  
+  <rect width="297" height="210" fill="#FFFFFF"/>
+  <rect width="297" height="210" fill="url(#wmWave)"/>
+</svg>

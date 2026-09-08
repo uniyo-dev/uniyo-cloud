@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50mm" height="50mm" viewBox="0 0 50 50">
+  <defs>
+    <linearGradient id="ribTL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E74C3C"/>
+      <stop offset="100%" style="stop-color:#C0392B"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Main ribbon band -->
+  <rect x="0" y="0" width="50" height="12" fill="url(#ribTL)" stroke="#8B0000" stroke-width="0.5"/>
+  
+  <!-- Ribbon tail left -->
+  <path d="M0,12 L8,30 L0,45" fill="#C0392B" stroke="#8B0000" stroke-width="0.5" opacity="0.8"/>
+  
+  <!-- Ribbon tail right -->
+  <path d="M50,12 L42,30 L50,45" fill="#C0392B" stroke="#8B0000" stroke-width="0.5" opacity="0.8"/>
+  
+  <!-- Gold edge line -->
+  <line x1="0" y1="12" x2="50" y2="12" stroke="#D4AF37" stroke-width="1"/>
+  
+  <!-- Shadow effect -->
+  <rect x="0" y="10" width="50" height="2" fill="#000000" opacity="0.1"/>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60mm" height="50mm" viewBox="0 0 60 50">
+  <defs>
+    <linearGradient id="eagleGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Eagle wings spread -->
+  <path d="M30,25 Q15,15 5,5 Q15,25 20,35 Q25,40 30,35 Z" fill="url(#eagleGold)" stroke="#8B6914" stroke-width="1"/>
+  <path d="M30,25 Q45,15 55,5 Q45,25 40,35 Q35,40 30,35 Z" fill="url(#eagleGold)" stroke="#8B6914" stroke-width="1"/>
+  
+  <!-- Eagle body -->
+  <ellipse cx="30" cy="30" rx="8" ry="12" fill="url(#eagleGold)" stroke="#8B6914" stroke-width="1"/>
+  
+  <!-- Eagle head -->
+  <circle cx="30" cy="20" r="5" fill="#D4AF37" stroke="#8B6914" stroke-width="0.8"/>
+  
+  <!-- Beak -->
+  <polygon points="30,18 33,20 30,22" fill="#FFD700" stroke="#8B6914" stroke-width="0.5"/>
+  
+  <!-- Eye -->
+  <circle cx="28" cy="19" r="0.8" fill="#1A1A1A"/>
+  
+  <!-- Talons -->
+  <path d="M26,42 L24,45 M26,42 L28,45" stroke="#8B6914" stroke-width="1"/>
+  <path d="M34,42 L32,45 M34,42 L36,45" stroke="#8B6914" stroke-width="1"/>
+  
+  <!-- Wing details -->
+  <path d="M20,20 Q12,10 10,5" fill="none" stroke="#8B6914" stroke-width="0.5" opacity="0.5"/>
+  <path d="M40,20 Q48,10 50,5" fill="none" stroke="#8B6914" stroke-width="0.5" opacity="0.5"/>
+</svg>

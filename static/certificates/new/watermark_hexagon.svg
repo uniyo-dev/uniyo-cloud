@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <pattern id="wmHex" x="0" y="0" width="25" height="22" patternUnits="userSpaceOnUse">
+      <polygon points="12.5,0 25,6 25,16 12.5,22 0,16 0,6" fill="none" stroke="#D4AF37" stroke-width="0.3" opacity="0.1"/>
+      <polygon points="12.5,4 21,8 21,14 12.5,18 4,14 4,8" fill="none" stroke="#D4AF37" stroke-width="0.2" opacity="0.06"/>
+    </pattern>
+  </defs>
+  
+  <rect width="297" height="210" fill="#FFFFFF"/>
+  <rect width="297" height="210" fill="url(#wmHex)"/>
+</svg>

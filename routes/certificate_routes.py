@@ -86,7 +86,7 @@ def view_certificate_image(certificate_id):
     verify_url = f"{request.host_url}verify/{certificate['verification_token']}"
     qr_data_uri = generate_qr_data_uri(verify_url)
     
-        # Generate certificate using ReportLab (Professional PDF)
+    # Generate certificate using ReportLab (Professional PDF)
     from core.certificate_reportlab import generate_certificate_reportlab
     pdf_path = generate_certificate_reportlab(certificate, qr_data_uri)
     
@@ -94,86 +94,14 @@ def view_certificate_image(certificate_id):
         return send_file(str(pdf_path), mimetype='application/pdf')
     
     return {'success': False, 'error': 'Certificate generation failed'}, 500
-    
-    # Fallback: Generate simple PNG with Pillow if Playwright fails
-    try:
-        from PIL import Image, ImageDraw, ImageFont
-        from core.paths import CERTIFICATES_DIR
-        
-        cert_number = certificate.get('certificate_number', 'UNKNOWN')
-        cert_id = cert_number.replace('/', '_').replace('\\', '_')
-        fallback_path = CERTIFICATES_DIR / f"{cert_id}_fallback.png"
-        
-        # Create simple certificate with Pillow
-        img = Image.new('RGB', (1240, 1748), '#fffdf9')
-        draw = ImageDraw.Draw(img)
-        
-        # Border
-        draw.rectangle([20, 20, 1220, 1728], outline='#6D28D9', width=5)
-        draw.rectangle([30, 30, 1210, 1718], outline='#F59E0B', width=2)
-        
-        # Title
-        title = certificate.get('title', 'Certificate')
-        name = certificate.get('full_name', 'Student')
-        university = certificate.get('university', '')
-        cert_num = certificate.get('certificate_number', '')
-        
-        # Use default font
-        # Try multiple font paths for cross-platform compatibility
-        font_large = None
-        font_medium = None
-        font_small = None
-        
-        font_paths = [
-            '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf',
-            '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',
-            '/usr/share/fonts/TTF/DejaVuSans-Bold.ttf',
-            '/usr/share/fonts/TTF/DejaVuSans.ttf',
-            '/System/Library/Fonts/Helvetica.ttc',
-            '/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf',
-        ]
-        
-        for font_path in font_paths:
-            if Path(font_path).exists():
-                try:
-                    font_large = ImageFont.truetype(font_path, 60)
-                    font_medium = ImageFont.truetype(font_path.replace('Bold', ''), 40)
-                    font_small = ImageFont.truetype(font_path.replace('Bold', ''), 30)
-                    break
-                except:
-                    continue
-        
-        if font_large is None:
-            font_large = ImageFont.load_default()
-            font_medium = ImageFont.load_default()
-            font_small = ImageFont.load_default()
-        
-        # Draw text
-        draw.text((620, 100), title, fill='#6D28D9', font=font_large, anchor='mm')
-        draw.text((620, 300), 'This certificate is presented to', fill='#64748b', font=font_small, anchor='mm')
-        draw.text((620, 400), name, fill='#1e1b4b', font=font_large, anchor='mm')
-        draw.text((620, 500), university, fill='#64748b', font=font_medium, anchor='mm')
-        draw.text((620, 700), f'Certificate Number: {cert_num}', fill='#334155', font=font_small, anchor='mm')
-        draw.text((620, 750), f'Issue Date: {certificate.get("issue_date", "")}', fill='#334155', font=font_small, anchor='mm')
-        
-        img.save(str(fallback_path))
-        
-        if fallback_path.exists():
-            return send_file(str(fallback_path), mimetype='image/png')
-    except Exception as e:
-        print(f"Fallback generation failed: {e}")
-    
-    # No HTML fallback - return error if image generation completely fails
-    return {"success": False, "error": "Certificate image generation failed"}, 500
 
 
 @certificate_bp.route('/student/certificate/<int:certificate_id>/download', methods=['GET'])
 @login_required
 def download_certificate_image(certificate_id):
-    """Download certificate as PNG or JPG"""
-    from flask import send_file, request
+    """Download certificate as PDF"""
+    from flask import send_file
     db = get_db()
-    format_type = request.args.get('format', 'png')
     
     certificate = db.query_one(
         "SELECT * FROM certificates WHERE id = ? AND student_id = ?",
@@ -186,77 +114,41 @@ def download_certificate_image(certificate_id):
     
     certificate = dict(certificate)
     
-    # Check if image already exists
-    cert_number = certificate.get('certificate_number', 'UNKNOWN')
-    cert_id = cert_number.replace('/', '_').replace('\\', '_')
-    from core.paths import CERTIFICATES_DIR
-    image_path = CERTIFICATES_DIR / f"{cert_id}.png"
+    # Get requested format
+    format_type = request.args.get('format', 'pdf')
     
-    if image_path.exists():
-        download_name = f"UNIYO_Certificate_{cert_id}.{format_type}"
-        mimetype = 'image/jpeg' if format_type == 'jpg' else 'image/png'
-        
-        # For JPG, convert PNG to JPG
-        if format_type == 'jpg':
-            from PIL import Image as PILImage
-            jpg_path = CERTIFICATES_DIR / f"{cert_id}.jpg"
-            if not jpg_path.exists() or jpg_path.stat().st_size == 0:
-                img = PILImage.open(str(image_path))
-                img = img.convert('RGB')
-                img.save(str(jpg_path), 'JPEG', quality=95)
-            return send_file(str(jpg_path), as_attachment=True, download_name=download_name, mimetype=mimetype)
-        
-        return send_file(str(image_path), as_attachment=True, download_name=download_name, mimetype=mimetype)
+    # Generate PDF
+    from core.certificate_reportlab import generate_certificate_reportlab
+    pdf_path = generate_certificate_reportlab(certificate, None)
     
-    # Generate if not exists
-    student = db.query_one(
-        "SELECT full_name, university, stream, sex FROM students WHERE id = ?",
-        (certificate['student_id'],)
-    )
-    if student:
-        student = dict(student)
-        certificate['full_name'] = student.get('full_name', '')
-        certificate['university'] = student.get('university', '')
-        certificate['stream'] = student.get('stream', '')
+    if pdf_path and Path(pdf_path).exists():
+        if format_type == 'pdf':
+            return send_file(
+                str(pdf_path),
+                as_attachment=True,
+                download_name=f"UNIYO_Certificate_{certificate_id}.pdf",
+                mimetype='application/pdf'
+            )
+        elif format_type in ['jpg', 'jpeg', 'png']:
+            # Convert PDF to image
+            try:
+                from pdf2image import convert_from_path
+                images = convert_from_path(str(pdf_path), dpi=300)
+                if images:
+                    img_path = CERTIFICATES_DIR / f"{certificate_id}.{format_type}"
+                    images[0].save(str(img_path), format_type.upper() if format_type == 'png' else 'JPEG', quality=95)
+                    mimetype = 'image/jpeg' if format_type in ['jpg', 'jpeg'] else 'image/png'
+                    return send_file(
+                        str(img_path),
+                        as_attachment=True,
+                        download_name=f"UNIYO_Certificate_{certificate_id}.{format_type}",
+                        mimetype=mimetype
+                    )
+            except Exception as e:
+                print(f"PDF to image conversion failed: {e}")
     
-    from flask import request
-    from core.helpers import generate_qr_data_uri
-    verify_url = f"{request.host_url}verify/{certificate['verification_token']}"
-    qr_data_uri = generate_qr_data_uri(verify_url)
-    
-    # Use Pillow as PRIMARY (works on all Python versions)
-    # Try html2image FIRST (full CSS support with Chromium)
-    try:
-        print("[DEBUG] Trying html2image...")
-        from core.certificate_reportlab import generate_certificate_reportlab
-        image_path = generate_certificate_reportlab(certificate, qr_data_uri)
-        print(f"[DEBUG] html2image result: {image_path}")
-    except Exception as e:
-        print(f"[DEBUG] html2image EXCEPTION: {e}")
-        image_path = None
-    
-    if not image_path or not Path(image_path).exists():
-        print("[DEBUG] html2image failed, using Pillow")
-        image_path = generate_certificate_image_with_pillow(certificate, qr_data_uri)
-    
-    if image_path and Path(image_path).exists():
-        download_name = f"UNIYO_Certificate_{cert_id}.{format_type}"
-        mimetype = 'image/jpeg' if format_type == 'jpg' else 'image/png'
-        
-        if format_type == 'jpg':
-            from PIL import Image as PILImage
-            jpg_path = CERTIFICATES_DIR / f"{cert_id}.jpg"
-            if not jpg_path.exists() or jpg_path.stat().st_size == 0:
-                img = PILImage.open(str(image_path))
-                img = img.convert('RGB')
-                img.save(str(jpg_path), 'JPEG', quality=95)
-            return send_file(str(jpg_path), as_attachment=True, download_name=download_name, mimetype=mimetype)
-        
-        return send_file(str(image_path), as_attachment=True, download_name=download_name, mimetype=mimetype)
-    
-    flash("Could not generate certificate image", "danger")
+    flash("Could not generate certificate", "danger")
     return redirect(url_for('certificate.my_certificates'))
-
 
 @certificate_bp.route('/verify/<token>', methods=['GET'])
 def verify_certificate(token):

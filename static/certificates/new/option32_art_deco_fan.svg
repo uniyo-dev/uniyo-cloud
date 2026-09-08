@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <pattern id="fanPattern" x="0" y="0" width="15" height="10" patternUnits="userSpaceOnUse">
+      <path d="M2,10 L7.5,1 L13,10" fill="none" stroke="#D4AF37" stroke-width="0.8"/>
+      <path d="M5,10 L7.5,4 L10,10" fill="none" stroke="#B8860B" stroke-width="0.4"/>
+      <line x1="0" y1="10" x2="15" y2="10" stroke="#B8860B" stroke-width="0.8"/>
+    </pattern>
+    <linearGradient id="decoGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#B8860B"/>
+      <stop offset="50%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+  </defs>
+  
+  <rect x="5" y="5" width="287" height="200" fill="#1C1C1C"/>
+  
+  <!-- Outer gold border -->
+  <rect x="10" y="10" width="277" height="190" fill="none" stroke="url(#decoGold)" stroke-width="2.5"/>
+  
+  <!-- Fan pattern top - ultra thin -->
+  <rect x="14" y="14" width="269" height="8" fill="url(#fanPattern)"/>
+  
+  <!-- Fan pattern bottom - ultra thin -->
+  <rect x="14" y="188" width="269" height="8" fill="url(#fanPattern)"/>
+  
+  <!-- Fan pattern left - ultra thin -->
+  <rect x="14" y="14" width="8" height="182" fill="url(#fanPattern)" transform="rotate(90 18 105)"/>
+  
+  <!-- Fan pattern right - ultra thin -->
+  <rect x="275" y="14" width="8" height="182" fill="url(#fanPattern)" transform="rotate(90 279 105)"/>
+  
+  <!-- Inner border -->
+  <rect x="28" y="28" width="241" height="154" fill="none" stroke="url(#decoGold)" stroke-width="1.5"/>
+  
+  <!-- Fine inner line -->
+  <rect x="32" y="32" width="233" height="146" fill="none" stroke="#D4AF37" stroke-width="0.5"/>
+</svg>

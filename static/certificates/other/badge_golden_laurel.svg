@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60mm" height="60mm" viewBox="0 0 60 60">
+  <defs>
+    <linearGradient id="glBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="50%" style="stop-color:#FFF8DC"/>
+      <stop offset="100%" style="stop-color:#D4AF37"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Golden laurel branches -->
+  <g fill="none" stroke="#D4AF37" stroke-width="2">
+    <path d="M30,8 Q15,15 10,30 Q15,45 30,52"/>
+    <path d="M30,8 Q45,15 50,30 Q45,45 30,52"/>
+  </g>
+  
+  <!-- Golden leaves -->
+  <g fill="#FFD700" opacity="0.6">
+    <ellipse cx="20" cy="14" rx="5" ry="2.5" transform="rotate(-35 20 14)"/>
+    <ellipse cx="14" cy="22" rx="5" ry="2.5" transform="rotate(-50 14 22)"/>
+    <ellipse cx="12" cy="32" rx="5" ry="2.5" transform="rotate(-35 12 32)"/>
+    <ellipse cx="16" cy="42" rx="5" ry="2.5" transform="rotate(-20 16 42)"/>
+    <ellipse cx="40" cy="14" rx="5" ry="2.5" transform="rotate(35 40 14)"/>
+    <ellipse cx="46" cy="22" rx="5" ry="2.5" transform="rotate(50 46 22)"/>
+    <ellipse cx="48" cy="32" rx="5" ry="2.5" transform="rotate(35 48 32)"/>
+    <ellipse cx="44" cy="42" rx="5" ry="2.5" transform="rotate(20 44 42)"/>
+  </g>
+  
+  <!-- Center medallion -->
+  <circle cx="30" cy="30" r="13" fill="url(#glBadge)" stroke="#B8860B" stroke-width="2"/>
+  <circle cx="30" cy="30" r="9" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+  
+  <!-- Trophy icon -->
+  <path d="M25,25 L27,20 L33,20 L35,25" fill="none" stroke="#B8860B" stroke-width="1.5"/>
+  <path d="M26,25 L26,28 Q26,30 30,30 Q34,30 34,28 L34,25" fill="none" stroke="#B8860B" stroke-width="1.5"/>
+  <line x1="25" y1="32" x2="35" y2="32" stroke="#B8860B" stroke-width="1"/>
+  <line x1="28" y1="32" x2="28" y2="34" stroke="#B8860B" stroke-width="1"/>
+  <line x1="32" y1="32" x2="32" y2="34" stroke="#B8860B" stroke-width="1"/>
+</svg>

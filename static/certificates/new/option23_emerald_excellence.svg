@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0B3D0B"/>
+      <stop offset="25%" style="stop-color:#1B5E20"/>
+      <stop offset="50%" style="stop-color:#2E7D32"/>
+      <stop offset="75%" style="stop-color:#1B5E20"/>
+      <stop offset="100%" style="stop-color:#0B3D0B"/>
+    </linearGradient>
+    <linearGradient id="emeraldGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D4AF37"/>
+      <stop offset="50%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#D4AF37"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- White background -->
+  <rect x="6" y="6" width="285" height="198" fill="#FFFFFF"/>
+  
+  <!-- Outer emerald border -->
+  <rect x="10" y="10" width="277" height="190" fill="none" stroke="url(#emeraldGrad)" stroke-width="4"/>
+  
+  <!-- Gold middle border -->
+  <rect x="16" y="16" width="265" height="178" fill="none" stroke="url(#emeraldGold)" stroke-width="2"/>
+  
+  <!-- Inner emerald border -->
+  <rect x="21" y="21" width="255" height="168" fill="none" stroke="url(#emeraldGrad)" stroke-width="1"/>
+  
+  <!-- Ultra fine gold line -->
+  <rect x="25" y="25" width="247" height="160" fill="none" stroke="url(#emeraldGold)" stroke-width="0.5"/>
+  
+  <!-- Top emerald band -->
+  <rect x="10" y="10" width="277" height="8" fill="url(#emeraldGrad)"/>
+  <!-- Gold line on top band -->
+  <line x1="10" y1="14" x2="287" y2="14" stroke="url(#emeraldGold)" stroke-width="1.5"/>
+  
+  <!-- Bottom emerald band -->
+  <rect x="10" y="192" width="277" height="8" fill="url(#emeraldGrad)"/>
+  <!-- Gold line on bottom band -->
+  <line x1="10" y1="196" x2="287" y2="196" stroke="url(#emeraldGold)" stroke-width="1.5"/>
+  
+  <!-- Left emerald band -->
+  <rect x="10" y="10" width="8" height="190" fill="url(#emeraldGrad)"/>
+  <!-- Gold line on left band -->
+  <line x1="14" y1="10" x2="14" y2="200" stroke="url(#emeraldGold)" stroke-width="1.5"/>
+  
+  <!-- Right emerald band -->
+  <rect x="279" y="10" width="8" height="190" fill="url(#emeraldGrad)"/>
+  <!-- Gold line on right band -->
+  <line x1="283" y1="10" x2="283" y2="200" stroke="url(#emeraldGold)" stroke-width="1.5"/>
+  
+  <!-- Subtle watermark lines -->
+  <g stroke="#1B5E20" stroke-width="0.3" opacity="0.2">
+    <line x1="148.5" y1="26" x2="148.5" y2="184"/>
+    <line x1="26" y1="105" x2="271" y2="105"/>
+  </g>
+</svg>

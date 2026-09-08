@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <linearGradient id="corpGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#B8860B"/>
+      <stop offset="50%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- White background -->
+  <rect x="6" y="6" width="285" height="198" fill="#FFFFFF"/>
+  
+  <!-- Main outer border -->
+  <rect x="10" y="10" width="277" height="190" fill="none" stroke="#1A1A1A" stroke-width="3"/>
+  
+  <!-- Gold accent border -->
+  <rect x="14" y="14" width="269" height="182" fill="none" stroke="url(#corpGold)" stroke-width="1.5"/>
+  
+  <!-- Inner black border -->
+  <rect x="18" y="18" width="261" height="174" fill="none" stroke="#1A1A1A" stroke-width="1"/>
+  
+  <!-- Ultra-fine gold line -->
+  <rect x="21" y="21" width="255" height="168" fill="none" stroke="url(#corpGold)" stroke-width="0.5"/>
+  
+  <!-- Top accent bar -->
+  <rect x="10" y="10" width="277" height="8" fill="url(#corpGold)"/>
+  
+  <!-- Bottom accent bar -->
+  <rect x="10" y="192" width="277" height="8" fill="url(#corpGold)"/>
+  
+  <!-- Left accent bar -->
+  <rect x="10" y="10" width="8" height="190" fill="url(#corpGold)"/>
+  
+  <!-- Right accent bar -->
+  <rect x="279" y="10" width="8" height="190" fill="url(#corpGold)"/>
+  
+  <!-- Fine grid pattern inside -->
+  <g stroke="#ECF0F1" stroke-width="0.3" opacity="0.5">
+    <line x1="148.5" y1="22" x2="148.5" y2="188"/>
+    <line x1="22" y1="105" x2="275" y2="105"/>
+  </g>
+  
+  <!-- Subtle corner marks (just small lines) -->
+  <g stroke="#1A1A1A" stroke-width="2">
+    <line x1="22" y1="26" x2="26" y2="26"/>
+    <line x1="22" y1="26" x2="22" y2="30"/>
+    
+    <line x1="271" y1="26" x2="275" y2="26"/>
+    <line x1="275" y1="26" x2="275" y2="30"/>
+    
+    <line x1="22" y1="184" x2="26" y2="184"/>
+    <line x1="22" y1="180" x2="22" y2="184"/>
+    
+    <line x1="271" y1="184" x2="275" y2="184"/>
+    <line x1="275" y1="180" x2="275" y2="184"/>
+  </g>
+</svg>

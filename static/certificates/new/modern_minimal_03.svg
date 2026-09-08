@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <rect x="5" y="5" width="287" height="200" fill="#FFFFFF"/>
+  
+  <!-- Thin elegant border -->
+  <rect x="30" y="30" width="237" height="150" fill="none" stroke="#2C3E50" stroke-width="0.8"/>
+  
+  <!-- Bold top bar -->
+  <rect x="30" y="30" width="237" height="4" fill="#2C3E50"/>
+  
+  <!-- Bold bottom bar -->
+  <rect x="30" y="176" width="237" height="4" fill="#2C3E50"/>
+  
+  <!-- Thin accent lines -->
+  <line x1="30" y1="40" x2="267" y2="40" stroke="#BDC3C7" stroke-width="0.5"/>
+  <line x1="30" y1="170" x2="267" y2="170" stroke="#BDC3C7" stroke-width="0.5"/>
+  
+  <!-- Subtle side marks -->
+  <line x1="30" y1="105" x2="38" y2="105" stroke="#2C3E50" stroke-width="1.5"/>
+  <line x1="259" y1="105" x2="267" y2="105" stroke="#2C3E50" stroke-width="1.5"/>
+</svg>

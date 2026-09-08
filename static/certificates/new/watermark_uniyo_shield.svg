@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <rect width="297" height="210" fill="#FFFFFF"/>
+  
+  <!-- Shield watermark -->
+  <g transform="translate(148.5,105)" opacity="0.04">
+    <!-- Shield shape -->
+    <path d="M0,-50 L40,-35 L40,10 Q40,40 0,55 Q-40,40 -40,10 L-40,-35 Z" fill="none" stroke="#1B3A5C" stroke-width="2"/>
+    <path d="M0,-43 L33,-30 L33,10 Q33,35 0,48 Q-33,35 -33,10 L-33,-30 Z" fill="none" stroke="#1B3A5C" stroke-width="1"/>
+    
+    <!-- Text in shield -->
+    <text x="0" y="-10" font-family="serif" font-size="18" font-weight="bold" fill="#1B3A5C" text-anchor="middle">UNIYO</text>
+    <text x="0" y="10" font-family="serif" font-size="8" fill="#1B3A5C" text-anchor="middle" letter-spacing="3">OFFICIAL</text>
+  </g>
+</svg>

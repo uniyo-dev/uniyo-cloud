@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <rect width="297" height="210" fill="#FFFFFF"/>
+  
+  <!-- Very large background text -->
+  <g transform="translate(148.5,105)" opacity="0.03">
+    <text x="0" y="0" font-family="sans-serif" font-size="80" font-weight="bold" fill="#1B3A5C" text-anchor="middle" letter-spacing="10">UNIYO</text>
+  </g>
+  
+  <!-- Smaller text below -->
+  <g transform="translate(148.5,130)" opacity="0.02">
+    <text x="0" y="0" font-family="serif" font-size="20" fill="#1B3A5C" text-anchor="middle" letter-spacing="5">OFFICIAL CERTIFICATE</text>
+  </g>
+</svg>

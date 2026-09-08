@@ -1,0 +1,32 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+  <defs>
+    <linearGradient id="decoGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#B8860B"/>
+      <stop offset="50%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+  </defs>
+  <rect x="5" y="5" width="287" height="200" fill="#1C1C1C" stroke="url(#decoGold)" stroke-width="4"/>
+  <rect x="10" y="10" width="277" height="190" fill="none" stroke="url(#decoGold)" stroke-width="1.5"/>
+  <g fill="none" stroke="url(#decoGold)" stroke-width="2">
+    <path d="M10,45 L10,10 L45,10"/>
+    <path d="M252,10 L287,10 L287,45"/>
+    <path d="M287,165 L287,200 L252,200"/>
+    <path d="M45,200 L10,200 L10,165"/>
+  </g>
+  <g stroke="url(#decoGold)" stroke-width="1" fill="none">
+    <path d="M12,35 L12,12 L35,12"/>
+    <path d="M15,30 L15,15 L30,15"/>
+    <path d="M18,25 L18,18 L25,18"/>
+    <path d="M262,12 L285,12 L285,35"/>
+    <path d="M267,15 L282,15 L282,30"/>
+    <path d="M272,18 L279,18 L279,25"/>
+    <path d="M285,175 L285,198 L262,198"/>
+    <path d="M282,180 L282,195 L267,195"/>
+    <path d="M279,185 L279,192 L272,192"/>
+    <path d="M35,198 L12,198 L12,175"/>
+    <path d="M30,195 L15,195 L15,180"/>
+    <path d="M25,192 L18,192 L18,185"/>
+  </g>
+</svg>

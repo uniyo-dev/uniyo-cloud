@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 30" width="200" height="30">
+  <defs>
+    <linearGradient id="chineseDivGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F5D97F"/>
+      <stop offset="100%" stop-color="#B88323"/>
+    </linearGradient>
+  </defs>
+  <path d="M10,15 Q25,5 40,15 Q55,25 70,15" fill="none" stroke="url(#chineseDivGold)" stroke-width="1.5"/>
+  <path d="M130,15 Q145,5 160,15 Q175,25 190,15" fill="none" stroke="url(#chineseDivGold)" stroke-width="1.5"/>
+  <path d="M85,15 C90,10 95,10 100,15 C105,20 110,20 115,15" fill="none" stroke="url(#chineseDivGold)" stroke-width="1.8"/>
+</svg>
