@@ -86,253 +86,44 @@
                 </select>
             </div>
             <div class="form-group">
-                <label>Certificate Type</label>
-                <select name="certificate_type" id="certificateType">
-                    <option value="completion">Course Completion</option>
-                    <option value="vip_leaderboard">VIP Leaderboard</option>
-                    <option value="excellence">Academic Excellence</option>
-                    <option value="content_creator">Content Creator</option>
-                    <option value="marketing_manager">Marketing Manager</option>
-                    <option value="advertiser">Advertiser</option>
-                    <option value="staff">Staff Appreciation</option>
-                    <option value="special_congratulations">Special Congratulations</option>
-                    <option value="participation">🎯 Participation</option>
-                    <option value="appreciation">💎 Appreciation</option>
-                    <option value="congratulations">🎉 Congratulations</option>
+                <label>Certificate Type *</label>
+                <select name="certificate_type" id="certificateType" required>
+                    <option value="">-- Select Type --</option>
+                    <option value="vip_leaderboard">🏆 VIP Certificate</option>
+                    <option value="completion">📜 Completion Certificate</option>
+                    <option value="customized">✨ Customized Certificate</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label>Title</label>
-                <input type="text" name="title" placeholder="e.g., Top Performer - August 2026">
+            <div id="customFields" style="display: none;">
+                <div class="form-group">
+                    <label>Certificate Name *</label>
+                    <input type="text" name="title" id="certTitle" placeholder="e.g., Certificate of Excellence">
+                </div>
+                
+                <div class="form-group">
+                    <label>Type (custom) *</label>
+                    <input type="text" name="custom_type" id="customType" placeholder="e.g., excellence, appreciation, special_award">
+                </div>
+                
+                <div class="form-group">
+                    <label>Reason Text *</label>
+                    <textarea name="reason" id="certReason" rows="3" placeholder="e.g., For outstanding academic achievement..."></textarea>
+                </div>
             </div>
+            
             <div class="form-group">
-                <label>Rank (optional for non-VIP; VIP rank is auto-validated)</label>
-                <input type="number" name="rank" min="1" placeholder="1">
+                <label>Presented To (Student Name) *</label>
+                <input type="text" id="certToWhom" readonly placeholder="Auto-filled from selected student">
             </div>
-            <div class="form-group">
-                <label>Month/Year (Required for VIP certificates)</label>
-                <input type="month" name="month_year">
-            </div>
-            <button type="submit" class="btn btn-primary">Issue Certificate</button>
-        </form>
-    </section>
-
-    <section class="admin-section">
-        <h3>Issued Certificates</h3>
-        
-        <div style="margin-bottom: 15px;">
-            <input type="text" id="certSearch" placeholder="🔍 Search by name, number, or type..." 
-                   style="width: 100%; padding: 10px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC; font-size: 13px;"
-                   onkeyup="filterCertificates()">
-        </div>
-        {% if certificates %}
-        <div class="table-wrapper">
-        <table class="certificates-table" id="certificatesTable">
-            <thead>
-                <tr>
-                    <th>Number</th>
-                    <th>Student</th>
-                    <th>Type</th>
-                    <th>Title</th>
-                    <th>Date</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for cert in certificates %}
-                <tr>
-                    <td><span class="cert-number">{{ cert.certificate_number }}</span></td>
-                    <td><span class="cert-title">{{ cert.full_name }}</span></td>
-                    <td>{{ cert.certificate_type|upper }}</td>
-                    <td>{{ cert.title }}</td>
-                    <td>{{ cert.issue_date|format_date }}</td>
-                    <td>
-                        <button onclick="viewCertificatePopup({{ cert.id }})" class="btn-sm btn-success" style="cursor: pointer; border: none;">
-                            👁️ View
-                        </button>
-                        <form action="{{ url_for('admin.delete_certificate', certificate_id=cert.id) }}" method="POST" style="display: inline;" onsubmit="return confirm('Delete this certificate?');">
-                            <button type="submit" class="btn-sm" style="background: #EC4899; color: white; border: none; cursor: pointer;">🗑️ Delete</button>
-                        </form>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        </div>
-        {% else %}
-        <p>No certificates issued yet.</p>
-        {% endif %}
-    </section>
-
-</div>
-
-<!-- CERTIFICATE VIEW POPUP -->
-<div id="certPopup" class="popup-overlay" style="display: none;">
-    <div class="popup-card" style="max-width: 900px; width: 95%; height: 85vh; overflow: hidden;">
-        <div class="popup-header">
-            <div class="popup-icon">🏆</div>
-            <div class="popup-title">Certificate Details</div>
-        </div>
-        <div id="certPopupContent" style="margin-top: 15px; text-align: center;">
-            <p style="color: #94A3B8;">Loading...</p>
-        </div>
-        <div class="popup-actions">
-            <button class="popup-btn popup-btn-outline" onclick="closeCertPopup()">Close</button>
-        </div>
-    </div>
-</div>
-
-<script>
-function filterCertificates() {
-    var search = document.getElementById('certSearch').value.toLowerCase();
-    var rows = document.querySelectorAll('.certificates-table tbody tr');
-    
-    rows.forEach(function(row) {
-        var text = row.textContent.toLowerCase();
-        row.style.display = text.includes(search) ? '' : 'none';
-    });
-}
-
-function previewCertificate() {
-    var studentId = document.querySelector('select[name="student_id"]').value;
-    var certType = document.querySelector('select[name="certificate_type"]').value;
-    var title = document.querySelector('input[name="title"]').value || 'Certificate';
-    
-    if (!studentId) {
-        showToast('Please select a student first', 'warning');
-        return;
-    }
-    
-    showToast('Certificate will be issued to selected student', 'info');
-}
-</script>
-
-<script>
-
-
-function viewCertificatePopup(certId) {
-    var popup = document.getElementById('certPopup');
-    var content = document.getElementById('certPopupContent');
-    popup.style.display = 'flex';
-    
-    // Use iframe to embed PDF inside popup
-    content.innerHTML = '<iframe src="/admin/api/certificates/' + certId + '/image" ' +
-                        'style="width: 100%; height: 70vh; border: none; border-radius: 8px;" ' +
-                        'title="Certificate PDF"></iframe>';
-}{% extends "base.html" %}
-
-{% block title %}Certificates - UNIYO Admin{% endblock %}
-
-{% block extra_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/admin_home.css') }}">
-<style>
-    .table-wrapper {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        margin-top: 12px;
-        border-radius: 8px;
-    }
-    .certificates-table {
-        width: 100%;
-        border-collapse: collapse;
-        min-width: 700px;
-    }
-    .certificates-table th {
-        background: #1A2332;
-        padding: 10px 8px;
-        text-align: left;
-        color: #94A3B8;
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        white-space: nowrap;
-    }
-    .certificates-table td {
-        padding: 10px 8px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        color: #E2E8F0;
-        font-size: 12px;
-        vertical-align: middle;
-    }
-    .cert-number {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 10px;
-        white-space: nowrap;
-        color: #6D28D9;
-    }
-    .cert-title {
-        font-weight: 600;
-        color: #F8FAFC;
-        white-space: nowrap;
-    }
-    .btn-sm {
-        padding: 6px 10px;
-        border: none;
-        border-radius: 4px;
-        font-size: 11px;
-        cursor: pointer;
-        font-weight: 600;
-        white-space: nowrap;
-        display: inline-block;
-        text-decoration: none;
-    }
-    .btn-success { background: #14B8A6; color: white; }
-</style>
-{% endblock %}
-
-{% block content %}
-<div class="admin-container">
-
-    <header class="admin-header">
-        <div>
-            <h1>🏆 Certificate Management</h1>
-            <p>Issue and manage certificates</p>
-        </div>
-        <div style="display: flex; gap: 8px; align-items: center;">
-            <button onclick="toggleAdminTheme()" class="btn btn-outline" id="adminThemeBtn" title="Toggle Theme">🌙 Dark</button>
-            <a href="{{ url_for('admin.home') }}" class="btn btn-outline">← Dashboard</a>
-        </div>
-    </header>
-
-    <section class="admin-section">
-        <h3>📝 Issue New Certificate</h3>
-        <form action="{{ url_for('admin.issue_certificate') }}" method="POST">
-            <div class="form-group">
-                <label>Student *</label>
-                <select name="student_id" required>
-                    <option value="">-- Select Student --</option>
-                    {% for s in all_students %}
-                    <option value="{{ s.id }}">{{ s.full_name }} ({{ s.phone }})</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Certificate Type</label>
-                <select name="certificate_type" id="certificateType">
-                    <option value="completion">Course Completion</option>
-                    <option value="vip_leaderboard">VIP Leaderboard</option>
-                    <option value="excellence">Academic Excellence</option>
-                    <option value="content_creator">Content Creator</option>
-                    <option value="marketing_manager">Marketing Manager</option>
-                    <option value="advertiser">Advertiser</option>
-                    <option value="staff">Staff Appreciation</option>
-                    <option value="special_congratulations">Special Congratulations</option>
-                    <option value="participation">🎯 Participation</option>
-                    <option value="appreciation">💎 Appreciation</option>
-                    <option value="congratulations">🎉 Congratulations</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Title</label>
-                <input type="text" name="title" placeholder="e.g., Top Performer - August 2026">
-            </div>
-            <div class="form-group">
-                <label>Rank (optional for non-VIP; VIP rank is auto-validated)</label>
-                <input type="number" name="rank" min="1" placeholder="1">
-            </div>
-            <div class="form-group">
-                <label>Month/Year (Required for VIP certificates)</label>
-                <input type="month" name="month_year">
+            <div id="vipFields" style="display: none;">
+                <div class="form-group">
+                    <label>Rank (1-5) *</label>
+                    <input type="number" name="rank" min="1" max="5" placeholder="1">
+                </div>
+                <div class="form-group">
+                    <label>Month/Year *</label>
+                    <input type="month" name="month_year">
+                </div>
             </div>
             <button type="submit" class="btn btn-primary">Issue Certificate</button>
         </form>

@@ -211,7 +211,7 @@ def approve_payment(payment_id):
             student_info = dict(student_info)
         
         db.execute('''
-            INSERT INTO certificates (student_id, certificate_type, certificate_number, verification_token, title, issue_date, full_name, university, phone, amount, payment_method, transaction_number)
+            INSERT INTO certificates (student_id, certificate_type, certificate_number, verification_token, title, reason, issue_date, full_name, university, phone, amount, payment_method, transaction_number)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ''', (payment['student_id'], 'payment', cert_number, token, 'Payment Receipt', datetime.now().isoformat(), student_info.get('full_name', ''), student_info.get('university', ''), student_info.get('phone', ''), 200, payment['payment_method'], payment['transaction_number']))
         
@@ -522,6 +522,10 @@ def issue_certificate():
     student_id = request.form.get('student_id')
     certificate_type = request.form.get('certificate_type', 'completion')
     title = request.form.get('title', 'Course Completion Certificate')
+    reason = request.form.get('reason', '')
+    custom_type = request.form.get('custom_type', '')
+    if certificate_type == 'customized' and custom_type:
+        certificate_type = custom_type
     rank = request.form.get('rank', None)
     month_year = request.form.get('month_year', None)
     
@@ -566,8 +570,8 @@ def issue_certificate():
     student = db.query_one("SELECT full_name, university, stream, sex FROM students WHERE id = ?", (student_id,))
     student = dict(student) if student else {}
     
-    sql = "INSERT INTO certificates (student_id, certificate_type, rank, month_year, certificate_number, verification_token, title, issue_date, issued_by, full_name, university, stream) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
-    db.execute(sql, (student_id, certificate_type, rank, month_year, certificate_number, verification_token, title, datetime.now().isoformat(), session['admin_id'], student.get('full_name', ''), student.get('university', ''), student.get('stream', '')))
+    sql = "INSERT INTO certificates (student_id, certificate_type, rank, month_year, certificate_number, verification_token, title, reason, issue_date, issued_by, full_name, university, stream, sex) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+    db.execute(sql, (student_id, certificate_type, rank, month_year, certificate_number, verification_token, title, reason, datetime.now().isoformat(), session['admin_id'], student.get('full_name', ''), student.get('university', ''), student.get('stream', ''), student.get('sex', '')))
     
     sql2 = "INSERT INTO notifications (student_id, message, type, created_at) VALUES (?, 'You have received a new certificate!', 'certificate', ?)"
     db.execute(sql2, (student_id, datetime.now().isoformat()))
@@ -798,7 +802,7 @@ def issue_receipt(payment_id):
         receipt_title = request.form.get('title', 'Payment Receipt')
         
         db.execute('''
-            INSERT INTO certificates (student_id, certificate_type, certificate_number, verification_token, title, issue_date, full_name, university, phone)
+            INSERT INTO certificates (student_id, certificate_type, certificate_number, verification_token, title, reason, issue_date, full_name, university, phone)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
         ''', (payment['student_id'], 'payment', cert_number, token, receipt_title, datetime.now().isoformat(), student_info.get('full_name', ''), student_info.get('university', ''), student_info.get('phone', '')))
         
