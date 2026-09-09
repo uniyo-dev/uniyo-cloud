@@ -53,7 +53,7 @@ def generate_custom_certificate(certificate_data, qr_data_uri=None):
     
     # CUSTOM FIELDS (admin provides these)
     title = certificate_data.get('title', 'Certificate of Recognition')
-    reason = certificate_data.get('reason', 'In recognition of your achievement.')
+    reason = certificate_data.get('reason', '') or 'In recognition of your achievement.'
     cert_type = certificate_data.get('certificate_type', 'other')
     
     cert_id = cert_number.replace('/', '_').replace('\\', '_')

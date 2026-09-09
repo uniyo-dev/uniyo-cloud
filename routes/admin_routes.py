@@ -509,11 +509,9 @@ def issue_certificate():
 
     student_id = request.form.get('student_id')
     certificate_type = request.form.get('certificate_type', 'completion')
-    title = request.form.get('title', 'Course Completion Certificate')
-    reason = request.form.get('reason', '')
-    custom_type = request.form.get('custom_type', '')
-    if certificate_type == 'customized' and custom_type:
-        certificate_type = custom_type
+    title = request.form.get('title', '').strip()
+    reason = request.form.get('reason', '').strip()
+    custom_type = request.form.get('custom_type', '').strip()
     rank = request.form.get('rank', None)
     month_year = request.form.get('month_year', None)
 
@@ -521,9 +519,19 @@ def issue_certificate():
         flash("Please select a student", "danger")
         return redirect(url_for('admin.certificates'))
 
-    # For VIP certificates, validate the rank against the actual monthly leaderboard
-    vip_types = ['vip_leaderboard']
-    if certificate_type in vip_types:
+    # Handle certificate type and defaults
+    if certificate_type == 'customized':
+        # Admin chose customized - use the custom_type they provided
+        if not custom_type:
+            flash("Please enter the custom certificate type", "danger")
+            return redirect(url_for('admin.certificates'))
+        certificate_type = custom_type
+        if not title:
+            title = custom_type.replace('_', ' ').title() + ' Certificate'
+        if not reason:
+            reason = 'In recognition of outstanding achievement and dedication.'
+    elif certificate_type == 'vip_leaderboard':
+        # VIP Certificate - validate against leaderboard
         if not month_year:
             flash("Month/Year is required for VIP certificates", "danger")
             return redirect(url_for('admin.certificates'))
@@ -541,14 +549,25 @@ def issue_certificate():
                 return redirect(url_for('admin.certificates'))
 
             rank = actual_rank
+            if not title:
+                title = 'VIP Monthly Leadership Award'
+            if not reason:
+                reason = f'For outstanding performance in the UNIYO VIP Monthly Competition, ranking #{rank} among students nationwide.'
             flash(f"Rank auto-validated: #{rank} from leaderboard", "info")
         except Exception as e:
             flash(f"Could not validate rank: {e}", "warning")
-    elif certificate_type in ['content_creator', 'marketing_manager', 'advertiser', 'staff', 'special_congratulations', 'excellence']:
-        # These types don't require rank or month - admin can issue freely
-        rank = request.form.get('rank', None) or None
+    elif certificate_type == 'completion':
+        # Completion Certificate
+        if not title:
+            title = 'Course Completion Certificate'
+        if not reason:
+            reason = 'For successfully completing all lessons and worksheets with dedication and academic excellence.'
     else:
-        rank = None
+        # Unknown type - use as-is
+        if not title:
+            title = certificate_type.replace('_', ' ').title() + ' Certificate'
+        if not reason:
+            reason = 'In recognition of your achievement.'
 
     certificate_number = generate_certificate_number(month_year, rank)
     verification_token = generate_verification_token()
