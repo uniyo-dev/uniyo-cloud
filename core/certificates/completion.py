@@ -35,7 +35,7 @@ def generate_completion_certificate(certificate_data, qr_data_uri=None):
     verification_token = certificate_data.get('verification_token', '')
     issue_date = certificate_data.get('issue_date', datetime.now().strftime('%B %d, %Y'))
     title = certificate_data.get('title', 'Certificate of Completion')
-    reason = certificate_data.get('reason', 'For successfully completing all lessons and worksheets.')
+    reason = certificate_data.get('reason', '') or 'For successfully completing all lessons and worksheets with dedication and academic excellence.'
     
     cert_id = cert_number.replace('/', '_').replace('\\', '_')
     output_pdf = CERTIFICATES_DIR / f"{cert_id}.pdf"
