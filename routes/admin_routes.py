@@ -8,7 +8,7 @@ from pathlib import Path
 
 from core.db import get_db
 from core.auth import admin_required, role_required, authenticate_admin, create_admin_session, terminate_admin_session
-from core.helpers import logger, hash_password, verify_password, generate_certificate_number, generate_verification_token
+from core.helpers import logger, hash_password, verify_password, generate_certificate_number, generate_verification_token, generate_qr_data_uri
 from core.constants import ADMIN_ROLES
 from routes.vip_routes import get_monthly_leaderboard
 
