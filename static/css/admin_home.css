@@ -149,9 +149,38 @@
 
 .detail-row strong { color: #E2E8F0; }
 
-.payment-actions { display: flex; gap: 12px; margin-top: 12px; }
+.payment-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
 
-.reject-form { display: flex; gap: 8px; flex: 1; }
+.payment-actions::-webkit-scrollbar {
+    height: 4px;
+}
+
+.payment-actions::-webkit-scrollbar-thumb {
+    background: #6D28D9;
+    border-radius: 2px;
+}
+
+.payment-actions > div {
+    display: flex;
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.reject-form {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
 
 .reject-form input {
     flex: 1;
@@ -826,4 +855,33 @@ body.light-mode .vip-badge-total {
 body.light-mode .vip-badge-pending {
     background: #EC4899;
     color: white;
+}
+
+
+/* ============================================
+   MOBILE RESPONSIVE - PAYMENTS
+   ============================================ */
+@media (max-width: 768px) {
+    .payment-actions {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+    
+    .payment-actions .btn-sm {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    
+    .reject-form {
+        flex-shrink: 0;
+    }
+    
+    .reject-form input {
+        min-width: 120px;
+    }
+    
+    .payment-card {
+        padding: 15px;
+    }
 }
