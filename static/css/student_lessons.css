@@ -14,7 +14,7 @@
     display: inline-block;
     margin-bottom: 16px;
     color: #94A3B8;
-    font-size: 14px;
+    font-size: 17px;
 }
 
 .back-btn:hover { color: #6D28D9; }
@@ -25,13 +25,13 @@
     font-family: 'JetBrains Mono', monospace;
     color: #6D28D9;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 17px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.lesson-meta h1 { font-size: 28px; color: #F8FAFC; margin: 8px 0; }
-.lesson-meta p { color: #94A3B8; font-size: 14px; }
+.lesson-meta h1 { font-size: 26px; color: #F8FAFC; margin: 8px 0; }
+.lesson-meta p { color: #94A3B8; font-size: 17px; }
 
 .lesson-actions {
     display: flex;
@@ -101,7 +101,7 @@
     font-size: 16px;
 }
 
-.lesson-body h3 { color: #F8FAFC; margin: 24px 0 12px; font-size: 22px; }
+.lesson-body h3 { color: #F8FAFC; margin: 24px 0 12px; font-size: 18px; }
 .lesson-body p { margin-bottom: 16px; }
 .lesson-body ul, .lesson-body ol { margin: 16px 0 16px 24px; }
 .lesson-body li { margin-bottom: 8px; }
@@ -138,7 +138,7 @@
     justify-content: space-between;
     margin-bottom: 8px;
     color: #94A3B8;
-    font-size: 14px;
+    font-size: 17px;
 }
 
 .progress-bar {
@@ -778,7 +778,7 @@ html.light-mode-active .watermark {
 
 .chapter-num {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 17px;
 }
 
 .chapter-parts {

@@ -46,7 +46,7 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     min-height: 100vh;
-    font-size: 1rem; /* 16px base - scales with settings */
+    font-size: 1rem; /* 16px base (recommended) - scales with settings */
 }
 
 h1, h2, h3, h4, h5, h6 {
