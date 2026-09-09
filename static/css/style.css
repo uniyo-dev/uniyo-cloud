@@ -46,6 +46,7 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     min-height: 100vh;
+    font-size: 1rem; /* 16px base - scales with settings */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -829,6 +830,7 @@ body:not(.light-mode) {
 html {
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
+    font-size: 16px; /* Base font size - changed by settings JS */
 }
 
 /* Prevent any transition delays on page load */
@@ -854,4 +856,35 @@ body.loaded .chapter-nav,
 body.loaded .progress-tracker,
 body.loaded .self-check-section {
     transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+
+/* ============================================
+   FONT SIZE SCALING
+   Makes all text scale when settings changes
+   ============================================ */
+@media (min-width: 1px) {
+    body {
+        font-size: 1rem !important;
+    }
+    
+    /* Lesson content scales with body */
+    .lesson-body,
+    .lesson-content {
+        font-size: 1.1rem !important;
+    }
+    
+    /* Headers scale proportionally */
+    h1 { font-size: 1.5rem !important; }
+    h2 { font-size: 1.35rem !important; }
+    h3 { font-size: 1.2rem !important; }
+    h4 { font-size: 1.05rem !important; }
+    
+    /* Small text scales */
+    small, .small-text { font-size: 0.85rem !important; }
+    
+    /* Form elements scale */
+    input, select, textarea, button {
+        font-size: 1rem !important;
+    }
 }

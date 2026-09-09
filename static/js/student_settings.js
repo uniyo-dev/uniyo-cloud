@@ -54,10 +54,14 @@ function changeFontSize(direction) {
 
 function applyFontSize(size) {
     currentFontSize = size;
+    // Set the root font size - all rem-based sizes will scale
     document.documentElement.style.fontSize = size + 'px';
     const fontSizeValue = document.getElementById('fontSizeValue');
     if (fontSizeValue) fontSizeValue.textContent = size + 'px';
     localStorage.setItem('uniyo_font_size', size);
+    
+    // Also update body font-size directly for any px-based styles
+    document.body.style.fontSize = size + 'px';
 }
 
 function changeLanguage(language) {
