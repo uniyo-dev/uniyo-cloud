@@ -874,11 +874,7 @@ body.loaded .self-check-section {
         font-size: 1.1rem !important;
     }
     
-    /* Headers scale proportionally */
-    h1 { font-size: 1.5rem !important; }
-    h2 { font-size: 1.35rem !important; }
-    h3 { font-size: 1.2rem !important; }
-    h4 { font-size: 1.05rem !important; }
+    /* Headers scale proportionally - but don't override specific class styles */
     
     /* Small text scales */
     small, .small-text { font-size: 0.85rem !important; }
