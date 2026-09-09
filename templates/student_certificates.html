@@ -60,51 +60,53 @@
 </div>
 
 <script>
-function viewStudentCertPopup(certId) {
-    var popup = document.getElementById('studentCertPopup');
-    var content = document.getElementById('studentCertPopupContent');
-    popup.style.display = 'flex';
-    content.innerHTML = '<p style="color: #94A3B8;">Loading...</p>';
-
-    fetch('/student/api/certificate/' + certId)
-        .then(function(response) { return response.text(); })
-        .then(function(data) {
-            var parser = new DOMParser();
-            var doc = parser.parseFromString(data, 'text/html');
-            var certFull = doc.querySelector('.certificate-full-a4') || doc.querySelector('.certificate-display');
-            
-            if (certFull) {
-                content.innerHTML = certFull.outerHTML;
-            } else {
-                content.innerHTML = '<p>Certificate not found</p>';
-            }
-        })
-        .catch(function() {
-            content.innerHTML = '<p>Error loading certificate</p>';
-        });
-}
+var currentCertId = null;
 
 function viewStudentCertImage(certId) {
     currentCertId = certId;
     var popup = document.getElementById('studentCertPopup');
     var content = document.getElementById('studentCertPopupContent');
     popup.style.display = 'flex';
-    
+
+    // Show loading
+    content.innerHTML = '<p style="color: #94A3B8;">Loading certificate...</p>';
+
     // Use iframe to embed PDF inside popup
-    content.innerHTML = '<iframe src="/student/certificate/' + certId + '/image" ' +
+    var iframeSrc = '/student/certificate/' + certId + '/image';
+    content.innerHTML = '<iframe src="' + iframeSrc + '" ' +
                         'style="width: 100%; height: 70vh; border: none; border-radius: 8px;" ' +
                         'title="Certificate PDF"></iframe>';
 }
 
-function downloadCertificateImage(format) {
+function downloadCertificatePDF() {
     if (!currentCertId) return;
-    
-    // Route to download the certificate image
-    window.location.href = '/student/certificate/' + currentCertId + '/download?format=' + format;
+    window.location.href = '/student/certificate/' + currentCertId + '/download?format=pdf';
+}
+
+function downloadCertificateJPG() {
+    if (!currentCertId) return;
+    window.location.href = '/student/certificate/' + currentCertId + '/download?format=jpg';
 }
 
 function closeStudentCertPopup() {
-    document.getElementById('studentCertPopup').style.display = 'none';
+    var popup = document.getElementById('studentCertPopup');
+    popup.style.display = 'none';
+    document.getElementById('studentCertPopupContent').innerHTML = '<p style="color: #94A3B8;">Loading...</p>';
 }
+
+// Close popup when clicking outside
+document.addEventListener('click', function(e) {
+    var popup = document.getElementById('studentCertPopup');
+    if (e.target === popup) {
+        closeStudentCertPopup();
+    }
+});
+
+// Close popup with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeStudentCertPopup();
+    }
+});
 </script>
 {% endblock %}
