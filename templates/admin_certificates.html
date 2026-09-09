@@ -99,18 +99,15 @@
                     <label>Certificate Name *</label>
                     <input type="text" name="title" id="certTitle" placeholder="e.g., Certificate of Excellence">
                 </div>
-                
                 <div class="form-group">
                     <label>Type (custom) *</label>
                     <input type="text" name="custom_type" id="customType" placeholder="e.g., excellence, appreciation, special_award">
                 </div>
-                
                 <div class="form-group">
                     <label>Reason Text *</label>
                     <textarea name="reason" id="certReason" rows="3" placeholder="e.g., For outstanding academic achievement..."></textarea>
                 </div>
             </div>
-            
             <div class="form-group">
                 <label>Presented To (Student Name) *</label>
                 <input type="text" id="certToWhom" readonly placeholder="Auto-filled from selected student">
@@ -131,9 +128,8 @@
 
     <section class="admin-section">
         <h3>Issued Certificates</h3>
-        
         <div style="margin-bottom: 15px;">
-            <input type="text" id="certSearch" placeholder="🔍 Search by name, number, or type..." 
+            <input type="text" id="certSearch" placeholder="🔍 Search by name, number, or type..."
                    style="width: 100%; padding: 10px; background: #1A2332; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; color: #F8FAFC; font-size: 13px;"
                    onkeyup="filterCertificates()">
         </div>
@@ -198,39 +194,95 @@
 function filterCertificates() {
     var search = document.getElementById('certSearch').value.toLowerCase();
     var rows = document.querySelectorAll('.certificates-table tbody tr');
-    
     rows.forEach(function(row) {
         var text = row.textContent.toLowerCase();
         row.style.display = text.includes(search) ? '' : 'none';
     });
 }
 
-function previewCertificate() {
-    var studentId = document.querySelector('select[name="student_id"]').value;
-    var certType = document.querySelector('select[name="certificate_type"]').value;
-    var title = document.querySelector('input[name="title"]').value || 'Certificate';
-    
-    if (!studentId) {
-        showToast('Please select a student first', 'warning');
-        return;
+// ============================================
+// CERTIFICATE FORM LOGIC
+// ============================================
+
+function updateCertificateFields() {
+    var certType = document.getElementById('certificateType').value;
+    var customFields = document.getElementById('customFields');
+    var vipFields = document.getElementById('vipFields');
+    var titleInput = document.getElementById('certTitle');
+    var customTypeInput = document.getElementById('customType');
+    var reasonInput = document.getElementById('certReason');
+
+    customFields.style.display = 'none';
+    vipFields.style.display = 'none';
+
+    if (certType === 'vip_leaderboard') {
+        vipFields.style.display = 'block';
+        if (titleInput) titleInput.value = 'VIP Monthly Leadership Award';
+        if (customTypeInput) customTypeInput.value = 'vip_leaderboard';
+        if (reasonInput) reasonInput.value = 'For outstanding performance in the UNIYO VIP Monthly Competition.';
+    } else if (certType === 'completion') {
+        if (titleInput) titleInput.value = 'Course Completion Certificate';
+        if (customTypeInput) customTypeInput.value = 'completion';
+        if (reasonInput) reasonInput.value = 'For successfully completing all lessons and worksheets with dedication and academic excellence.';
+    } else if (certType === 'customized') {
+        customFields.style.display = 'block';
+        if (titleInput) titleInput.value = '';
+        if (customTypeInput) customTypeInput.value = '';
+        if (reasonInput) reasonInput.value = '';
     }
-    
-    showToast('Certificate will be issued to selected student', 'info');
 }
-</script>
 
-<script>
+function updateStudentName() {
+    var studentSelect = document.querySelector('select[name="student_id"]');
+    var certToWhom = document.getElementById('certToWhom');
+    if (studentSelect && certToWhom) {
+        var selectedOption = studentSelect.options[studentSelect.selectedIndex];
+        if (selectedOption && selectedOption.text && selectedOption.value) {
+            var name = selectedOption.text.split(' (')[0];
+            certToWhom.value = name;
+        } else {
+            certToWhom.value = '';
+        }
+    }
+}
 
+document.addEventListener('DOMContentLoaded', function() {
+    var certTypeSelect = document.getElementById('certificateType');
+    var studentSelect = document.querySelector('select[name="student_id"]');
+    if (certTypeSelect) certTypeSelect.addEventListener('change', updateCertificateFields);
+    if (studentSelect) studentSelect.addEventListener('change', updateStudentName);
+    updateCertificateFields();
+    updateStudentName();
+});
+
+// ============================================
+// CERTIFICATE POPUP
+// ============================================
 
 function viewCertificatePopup(certId) {
     var popup = document.getElementById('certPopup');
     var content = document.getElementById('certPopupContent');
     popup.style.display = 'flex';
-    
-    // Use iframe to embed PDF inside popup
-    content.innerHTML = '<iframe src="/admin/api/certificates/' + certId + '/image" ' +
+    content.innerHTML = '<p style="color: #94A3B8;">Loading certificate...</p>';
+    var iframeSrc = '/admin/api/certificates/' + certId + '/image';
+    content.innerHTML = '<iframe src="' + iframeSrc + '" ' +
                         'style="width: 100%; height: 70vh; border: none; border-radius: 8px;" ' +
                         'title="Certificate PDF"></iframe>';
 }
+
+function closeCertPopup() {
+    var popup = document.getElementById('certPopup');
+    popup.style.display = 'none';
+    document.getElementById('certPopupContent').innerHTML = '<p style="color: #94A3B8;">Loading...</p>';
+}
+
+document.addEventListener('click', function(e) {
+    var popup = document.getElementById('certPopup');
+    if (e.target === popup) closeCertPopup();
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeCertPopup();
+});
 </script>
 {% endblock %}
