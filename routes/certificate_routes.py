@@ -71,14 +71,16 @@ def view_certificate_image(certificate_id):
     
     # Get student details
     student = db.query_one(
-        "SELECT full_name, university, stream, sex FROM students WHERE id = ?",
+        "SELECT full_name, university, stream, sex, phone FROM students WHERE id = ?",
         (certificate['student_id'],)
     )
     if student:
         student = dict(student)
-        certificate['full_name'] = student.get('full_name', '')
-        certificate['university'] = student.get('university', '')
-        certificate['stream'] = student.get('stream', '')
+        certificate['full_name'] = student.get('full_name', certificate.get('full_name', ''))
+        certificate['university'] = student.get('university', certificate.get('university', ''))
+        certificate['stream'] = student.get('stream', certificate.get('stream', ''))
+        certificate['sex'] = student.get('sex', certificate.get('sex', ''))
+        certificate['phone'] = student.get('phone', certificate.get('phone', ''))
     
     # Generate QR code
     from flask import request
