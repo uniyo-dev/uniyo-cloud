@@ -657,12 +657,14 @@ def api_certificate_image(certificate_id):
         return send_file(str(pdf_path), mimetype='application/pdf')
 
     # Generate if not exists
-    student = db.query_one("SELECT full_name, university, stream, sex FROM students WHERE id = ?", (certificate.get('student_id'),))
+    student = db.query_one("SELECT full_name, university, stream, sex, phone FROM students WHERE id = ?", (certificate.get('student_id'),))
     if student:
         student = dict(student)
-        certificate['full_name'] = student.get('full_name', '')
-        certificate['university'] = student.get('university', '')
-        certificate['stream'] = student.get('stream', '')
+        certificate['full_name'] = student.get('full_name', certificate.get('full_name', ''))
+        certificate['university'] = student.get('university', certificate.get('university', ''))
+        certificate['stream'] = student.get('stream', certificate.get('stream', ''))
+        certificate['sex'] = student.get('sex', certificate.get('sex', ''))
+        certificate['phone'] = student.get('phone', certificate.get('phone', ''))
 
     verify_url = f"{request.host_url}verify/{certificate.get('verification_token', '')}"
     qr_data_uri = generate_qr_data_uri(verify_url)
