@@ -547,10 +547,7 @@ def scan_content_folder(db):
                     ws_added += 1
                     logger.info(f"  Found worksheet: {file_path}")
 
-    if nested_added > 0 or ws_added > 0:
-        logger.info(f"  Added {nested_added} lessons, {ws_added} worksheets from new structure")
-        # Continue scanning past exams even if nested structure found
-        pass
+    # Always continue scanning past exams (don't stop early)
 
     # SCAN PAST EXAMS FOLDER
     PAST_EXAMS_DIR = BASE_DIR / "content" / "past_exams"
@@ -643,9 +640,20 @@ def scan_content_folder(db):
             removed += 1
             logger.info("  Removed (file deleted): " + db_ws["question_file"])
 
+    # Remove deleted VIP questions
+    all_db_vips = db.query("SELECT id, question_file FROM vip_questions")
+    for db_vip in all_db_vips:
+        if db_vip["question_file"] not in current_files:
+            db.execute("DELETE FROM vip_attempts WHERE vip_question_id = ?", (db_vip["id"],))
+            db.execute("DELETE FROM vip_questions WHERE id = ?", (db_vip["id"],))
+            removed += 1
+            logger.info("  Removed VIP (file deleted): " + db_vip["question_file"])
+
     all_db_exams = db.query("SELECT id, file_path FROM past_exams")
     for db_exam in all_db_exams:
         if db_exam["file_path"] not in current_files:
+            db.execute("DELETE FROM past_exam_attempts WHERE past_exam_id = ?", (db_exam["id"],))
+            db.execute("DELETE FROM past_exam_ratings WHERE past_exam_id = ?", (db_exam["id"],))
             db.execute("DELETE FROM past_exams WHERE id = ?", (db_exam["id"],))
             removed += 1
             logger.info("  Removed (file deleted): " + db_exam["file_path"])

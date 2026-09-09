@@ -127,9 +127,9 @@ def scan_content():
     db.connect()
 
     try:
-        added = scan_content_folder(db)
+        result = scan_content_folder(db)
         db.checkpoint()
-        flash(f"Scan complete! Added {added} new files.", "success")
+        flash(f"Scan complete! Added {result} new files.", "success")
     except Exception as e:
         flash(f"Scan error: {e}", "danger")
     finally:

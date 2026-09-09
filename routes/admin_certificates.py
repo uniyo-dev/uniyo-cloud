@@ -34,7 +34,7 @@ def index():
         ORDER BY c.issue_date DESC
     ''')
 
-    return render_template('admin/certificates.html', certificates=certificates)
+    return render_template('admin_certificates.html', certificates=certificates)
 
 # ============================================
 # ISSUE CERTIFICATE FORM
@@ -70,7 +70,7 @@ def issue():
     # GET: Show form
     students = db.query("SELECT id, full_name, phone FROM students ORDER BY full_name")
 
-    return render_template('admin/issue_certificate.html', students=students)
+    return render_template('admin_certificates.html', students=students)
 
 # ============================================
 # BULK ISSUE CERTIFICATES
