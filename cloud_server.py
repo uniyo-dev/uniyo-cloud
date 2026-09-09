@@ -32,6 +32,28 @@ except Exception as e:
 
 from server import app
 
+# ============================================
+# START TELEGRAM BOT IN BACKGROUND
+# ============================================
+import threading
+
+def start_telegram_bot():
+    """Start Telegram bot in background thread"""
+    try:
+        from core.telegram_bot import bot
+        if bot:
+            print("🤖 Telegram bot starting...")
+            bot.polling(none_stop=True, timeout=60, long_polling_timeout=60)
+        else:
+            print("⚠ Telegram bot NOT started - invalid or missing TELEGRAM_BOT_TOKEN")
+    except Exception as e:
+        print(f"⚠ Telegram bot error: {e}")
+
+# Start bot thread (daemon so it stops when app stops)
+bot_thread = threading.Thread(target=start_telegram_bot, daemon=True, name="TelegramBot")
+bot_thread.start()
+print("🤖 Telegram bot thread started")
+
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=False)
