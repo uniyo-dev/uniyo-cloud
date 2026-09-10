@@ -22,6 +22,7 @@ from .question_types import (
     BlankQuestion, ShortAnswerQuestion, EssayQuestion,
     Section, ExamData
 )
+from .matching_parser import parse_matching_question
 
 
 class ExamHTMLParser:
@@ -223,27 +224,9 @@ class ExamHTMLParser:
             )
     
     def _parse_matching_columns(self, elem) -> tuple:
-        """Parse matching question columns"""
-        column_a = []
-        column_b = []
-        
-        # Look for structured matching
-        col_a_elem = elem.find(class_=re.compile('column-a|col-a|left-col', re.I))
-        col_b_elem = elem.find(class_=re.compile('column-b|col-b|right-col', re.I))
-        
-        if col_a_elem:
-            for item in col_a_elem.find_all(['li', 'div', 'p']):
-                text = item.get_text(strip=True)
-                if text:
-                    column_a.append(text)
-        
-        if col_b_elem:
-            for item in col_b_elem.find_all(['li', 'div', 'p']):
-                text = item.get_text(strip=True)
-                if text:
-                    column_b.append(text)
-        
-        return column_a, column_b
+        """Parse matching question columns using dedicated parser"""
+        from .matching_parser import parse_matching_question
+        return parse_matching_question(elem)
     
     def _parse_blanks(self, elem) -> List[str]:
         """Parse fill-in-the-blank sub-questions"""

@@ -51,15 +51,34 @@ class TrueFalseQuestion(Question):
 
 @dataclass(kw_only=True)
 class MatchingQuestion(Question):
-    """Matching Question"""
+    """Matching Question - Two-column layout"""
     column_a: List[str] = field(default_factory=list)
     column_b: List[str] = field(default_factory=list)
     question_type: str = "matching"
 
     def get_height_mm(self) -> float:
+        """
+        Calculate height accounting for text wrapping.
+        Base: 30mm (question + header)
+        Each pair: 10mm base + extra for long text
+        Padding: 15mm
+        """
         base = 30
         rows = max(len(self.column_a), len(self.column_b))
-        return base + (rows * 10) + 15
+        
+        # Estimate row heights based on text length
+        total_rows_height = 0
+        for i in range(rows):
+            text_a = self.column_a[i] if i < len(self.column_a) else ""
+            text_b = self.column_b[i] if i < len(self.column_b) else ""
+            # Longest text determines row height
+            max_len = max(len(text_a), len(text_b))
+            # 40 chars per line in each column
+            lines = max(1, (max_len // 35) + 1)
+            total_rows_height += lines * 5  # 5mm per line
+            total_rows_height += 3  # spacing between rows
+        
+        return base + total_rows_height + 15
 
 
 @dataclass(kw_only=True)

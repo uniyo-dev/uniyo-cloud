@@ -658,19 +658,22 @@ class ExamPDFGenerator:
     
     def _draw_matching(self, question: MatchingQuestion):
         """
-        Draw Matching Question.
-        Structure:
-            Q31. Match Column A with Column B.        [5 marks]
-                
-                  COLUMN A              COLUMN B
-                  ─────────             ─────────
-                  1. Item ____          A. Item
-                  2. Item ____          B. Item
+        Draw Matching Question with professional two-column table.
+        
+        Layout:
+            Q31. Match Column A with Column B.       [5 marks]
+            
+            ┌──────────────────┬──────────────────┐
+            │ COLUMN A         │ COLUMN B         │
+            │ ─────────        │ ─────────        │
+            │ 1. Item     ___  │ A. Item          │
+            │ 2. Item     ___  │ B. Item          │
+            └──────────────────┴──────────────────┘
         """
         c = self.c
         y = self.current_y
         
-        # Question text
+        # ===== Question text (bold, wrapped) =====
         c.setFillColor(COLOR_TEXT)
         c.setFont('Helvetica-Bold', 10)
         text = f"Q{question.number}. {question.text}"
@@ -685,59 +688,107 @@ class ExamPDFGenerator:
         c.setFillColor(COLOR_GOLD)
         c.drawRightString(CONTENT_RIGHT, self.current_y, marks_text)
         
-        # Column headers
+        # ===== Table container =====
         y -= 3 * mm
-        col_a_x = CONTENT_LEFT + 6 * mm
-        col_b_x = CONTENT_LEFT + CONTENT_WIDTH / 2 + 5 * mm
-        col_width = CONTENT_WIDTH / 2 - 8 * mm
         
-        c.setFillColor(COLOR_PRIMARY)
+        # Table setup
+        table_left = CONTENT_LEFT + 5 * mm
+        table_width = CONTENT_WIDTH - 10 * mm
+        col_a_width = table_width * 0.48
+        col_b_width = table_width * 0.48
+        divider_width = table_width - col_a_width - col_b_width
+        
+        col_a_x = table_left
+        col_b_x = table_left + col_a_width + divider_width
+        
+        # Column headers
+        header_y = y
+        c.setFillColor(COLOR_SECONDARY)
         c.setFont('Helvetica-Bold', 9)
-        c.drawString(col_a_x, y, "COLUMN A")
-        c.drawString(col_b_x, y, "COLUMN B")
+        c.drawString(col_a_x + 2 * mm, header_y, "COLUMN A")
+        c.drawString(col_b_x + 2 * mm, header_y, "COLUMN B")
         
         y -= 2 * mm
-        c.setStrokeColor(COLOR_PRIMARY)
-        c.setLineWidth(0.5)
-        c.line(col_a_x, y, col_a_x + col_width, y)
-        c.line(col_b_x, y, col_b_x + col_width, y)
         
-        # Rows
-        y -= 5 * mm
+        # Header underline
+        c.setStrokeColor(COLOR_PRIMARY)
+        c.setLineWidth(0.8)
+        c.line(col_a_x, y, col_a_x + col_a_width, y)
+        c.line(col_b_x, y, col_b_x + col_b_width, y)
+        
+        # ===== Rows =====
+        y -= 4 * mm
         rows = max(len(question.column_a), len(question.column_b))
         
+        # Track the actual bottom of the table for border box
+        table_content_start_y = header_y + 3 * mm
+        
         for i in range(rows):
-            c.setFillColor(COLOR_TEXT)
-            c.setFont('Helvetica', 9)
+            # Track start of this row
+            row_start_y = y
             
-            # Column A
+            # ---- Column A ----
             if i < len(question.column_a):
-                text_a = f"{i+1}. {question.column_a[i]}"
-                wrapped_a = self._wrap_text(text_a, 'Helvetica', 9, col_width - 15 * mm)
-                if wrapped_a:
-                    c.drawString(col_a_x, y, wrapped_a[0])
-                    for line in wrapped_a[1:]:
+                text_a = question.column_a[i]
+                # Number prefix
+                c.setFillColor(COLOR_TEXT)
+                c.setFont('Helvetica-Bold', 9)
+                c.drawString(col_a_x + 2 * mm, y, f"{i+1}.")
+                
+                # Text
+                c.setFont('Helvetica', 9)
+                wrapped_a = self._wrap_text(text_a, 'Helvetica', 9, col_a_width - 20 * mm)
+                for j, line in enumerate(wrapped_a):
+                    if j == 0:
+                        c.drawString(col_a_x + 8 * mm, y, line)
+                    else:
                         y -= 4 * mm
-                        c.drawString(col_a_x, y, line)
+                        c.drawString(col_a_x + 8 * mm, y, line)
+                
+                # Blank underscore for answer
+                c.setFillColor(COLOR_TEXT_MUTED)
+                c.setFont('Helvetica', 10)
+                c.drawString(col_a_x + col_a_width - 12 * mm, row_start_y, "____")
             
-            # Blank for answer
-            c.setFillColor(COLOR_TEXT_MUTED)
-            c.drawString(col_a_x + col_width - 12 * mm, y, "____")
-            
-            # Column B
-            c.setFillColor(COLOR_TEXT)
+            # ---- Column B ----
             if i < len(question.column_b):
+                text_b = question.column_b[i]
+                # Letter prefix
                 letter = chr(ord('A') + i)
-                text_b = f"{letter}. {question.column_b[i]}"
-                wrapped_b = self._wrap_text(text_b, 'Helvetica', 9, col_width - 5 * mm)
-                if wrapped_b:
-                    c.drawString(col_b_x, y, wrapped_b[0])
-                    for line in wrapped_b[1:]:
-                        y -= 4 * mm
-                        c.drawString(col_b_x, y, line)
+                c.setFillColor(COLOR_TEXT)
+                c.setFont('Helvetica-Bold', 9)
+                c.drawString(col_b_x + 2 * mm, row_start_y, f"{letter}.")
+                
+                # Text
+                c.setFont('Helvetica', 9)
+                wrapped_b = self._wrap_text(text_b, 'Helvetica', 9, col_b_width - 10 * mm)
+                for j, line in enumerate(wrapped_b):
+                    if j == 0:
+                        c.drawString(col_b_x + 8 * mm, row_start_y, line)
+                    else:
+                        y_b = row_start_y - (j * 4 * mm)
+                        c.drawString(col_b_x + 8 * mm, y_b, line)
+                        if y_b < y:
+                            y = y_b
             
+            # Move to next row
             y -= 8 * mm
-    
+        
+        # ===== Border box around the table =====
+        table_bottom = y + 4 * mm
+        table_height = table_content_start_y - table_bottom
+        
+        c.setStrokeColor(COLOR_BORDER)
+        c.setLineWidth(0.4)
+        c.rect(table_left, table_bottom, table_width, table_height, fill=False, stroke=True)
+        
+        # Vertical divider line
+        c.line(table_left + col_a_width, table_bottom, 
+               table_left + col_a_width, table_content_start_y)
+        
+        # Restore current_y
+        self.current_y = y
+
     def _draw_blank(self, question: BlankQuestion):
         """
         Draw Fill in the Blank Question.
