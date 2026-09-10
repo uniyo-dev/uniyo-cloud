@@ -33,7 +33,7 @@
                 ✅ Already Attempted
             </div>
             {% else %}
-            <a href="{{ url_for('vip.take_vip', vip_id=vip.id) }}" class="btn btn-gold btn-block">Take Now</a>
+            <a href="{{ url_for('vip.take_vip', vip_id=vip.id) }}" class="btn btn-gold btn-block" onclick="if(typeof UNIYO_LOADER !== 'undefined') UNIYO_LOADER.vip.show();">Take Now</a>
             {% endif %}
         </div>
         {% endfor %}

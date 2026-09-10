@@ -29,7 +29,7 @@
                 <p>Certificate #: <code>{{ cert.certificate_number }}</code></p>
                 <p>Issued: {{ cert.issue_date|format_date }}</p>
             </div>
-            <button onclick="viewStudentCertImage({{ cert.id }})" class="btn btn-primary" style="cursor: pointer; border: none;">👁️ View</button>
+            <button onclick="if(typeof UNIYO_LOADER !== 'undefined') UNIYO_LOADER.certificate.show(); viewStudentCertImage({{ cert.id }});" class="btn btn-primary" style="cursor: pointer; border: none;">👁️ View</button>
         </div>
         {% endfor %}
     </div>
