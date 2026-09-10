@@ -15,13 +15,15 @@ except ImportError:
     print("⚠ cairosvg not available - SVG rendering disabled")
 
 
-def svg_to_png_bytes(svg_content: str, output_width: int = 800) -> Optional[BytesIO]:
+def svg_to_png_bytes(svg_content: str, output_width: int = 800, 
+                     background_color: str = "white") -> Optional[BytesIO]:
     """
     Convert SVG string to PNG bytes for embedding in ReportLab.
     
     Args:
         svg_content: SVG markup as string (must be complete <svg>...</svg>)
         output_width: Output width in pixels (height auto-calculated)
+        background_color: Background color ("white", "transparent", or hex like "#FFFFFF")
     
     Returns:
         BytesIO with PNG data, or None if conversion fails
@@ -30,10 +32,18 @@ def svg_to_png_bytes(svg_content: str, output_width: int = 800) -> Optional[Byte
         return None
     
     try:
-        png_data = cairosvg.svg2png(
-            bytestring=svg_content.encode('utf-8'),
-            output_width=output_width
-        )
+        # Use background_color to prevent black background in ReportLab
+        # ReportLab doesn't handle PNG transparency well, so we need a solid background
+        kwargs = {
+            'bytestring': svg_content.encode('utf-8'),
+            'output_width': output_width,
+        }
+        
+        # cairosvg uses 'background_color' parameter
+        if background_color:
+            kwargs['background_color'] = background_color
+        
+        png_data = cairosvg.svg2png(**kwargs)
         return BytesIO(png_data)
     except Exception as e:
         print(f"SVG conversion error: {e}")

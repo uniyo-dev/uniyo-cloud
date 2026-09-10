@@ -192,9 +192,9 @@ class ExamPDFGenerator:
         
         # Priority list of logos to try
         logo_candidates = [
-            BASE_DIR / 'static' / 'images' / 'uniyo_branding_logo.svg',  # Primary (from images folder)
+            BASE_DIR / 'static' / 'icons' / 'uniyo_favicon_32.svg',  # Primary
+            BASE_DIR / 'static' / 'icons' / 'uniyo_favicon_16.svg',  # Fallback
             BASE_DIR / 'static' / 'icons' / 'uniyo_branding_logo.svg',  # Fallback
-            BASE_DIR / 'static' / 'icons' / 'uniyo_branding_logo.png',  # Fallback
         ]
         
         for logo_path in logo_candidates:
@@ -202,11 +202,15 @@ class ExamPDFGenerator:
                 continue
             
             try:
-                # If SVG, convert to PNG
+                # If SVG, convert to PNG with WHITE background
                 if logo_path.suffix.lower() == '.svg':
                     from core.exam_parsers.svg_utils import svg_to_png_bytes
                     svg_content = logo_path.read_text(encoding='utf-8')
-                    png_buffer = svg_to_png_bytes(svg_content, output_width=400)
+                    png_buffer = svg_to_png_bytes(
+                        svg_content, 
+                        output_width=400,
+                        background_color="white"  # ← Fixes black background
+                    )
                     if png_buffer:
                         return ImageReader(png_buffer)
                 else:
@@ -319,22 +323,31 @@ class ExamPDFGenerator:
     def _draw_diagrams(self, diagrams: list, y: float) -> float:
         """
         Draw SVG diagrams as images in the PDF.
+        Converts dark backgrounds to light for print.
         """
         from core.exam_parsers.svg_utils import svg_to_png_bytes, get_svg_dimensions
+        from core.exam_parsers.svg_color_mapper import convert_svg_to_light
         
-        c = self.c  # ← CRITICAL FIX
+        c = self.c
         
         for diagram_svg in diagrams:
+            # Convert dark SVG to light version for print
+            light_svg = convert_svg_to_light(diagram_svg)
+            
             # Get original dimensions
-            orig_w, orig_h = get_svg_dimensions(diagram_svg)
+            orig_w, orig_h = get_svg_dimensions(light_svg)
             
             # Scale to fit within content width (max 130mm)
             max_width_mm = 130
             draw_width = min(orig_w * 0.35, max_width_mm) * mm
             draw_height = draw_width * (orig_h / orig_w) if orig_w > 0 else 50 * mm
             
-            # Convert SVG to PNG
-            png_buffer = svg_to_png_bytes(diagram_svg, output_width=int(orig_w * 3))
+            # Convert SVG to PNG with WHITE background
+            png_buffer = svg_to_png_bytes(
+                light_svg, 
+                output_width=int(orig_w * 3),
+                background_color="white"
+            )
             
             if png_buffer:
                 try:
@@ -372,7 +385,7 @@ class ExamPDFGenerator:
                     print(f"Diagram draw error: {e}")
                     c.setFillColor(COLOR_TEXT_MUTED)
                     c.setFont('Helvetica-Oblique', 9)
-                    c.drawString(CONTENT_LEFT + 5 * mm, y - 10 * mm, "[Diagram not available]")
+                    c.drawString(CONTENT_LEFT + 5 * mm, y - 10 * mm, "[ Diagram not available ]")
                     y -= 15 * mm
             else:
                 # Conversion failed - show placeholder
@@ -382,7 +395,7 @@ class ExamPDFGenerator:
                 y -= 15 * mm
         
         return y
-    
+
     # ============================================
     # COVER PAGE
     # ============================================
@@ -671,9 +684,9 @@ class ExamPDFGenerator:
         y -= 1 * mm
         options_start_y = y
         
-        letters = ['Ⓐ', 'Ⓑ', 'Ⓒ', 'Ⓓ']
-        for i, (letter, opt_text) in enumerate(question.options[:4]):
-            symbol = letters[i] if i < len(letters) else f"({letter})"
+        letters = ['A', 'B', 'C', 'D', 'E', 'F']
+        for i, (letter, opt_text) in enumerate(question.options[:6]):
+            symbol = f"({letters[i]})"
             
             c.setFillColor(COLOR_TEXT)
             c.setFont('Helvetica-Bold', 9)
@@ -700,9 +713,10 @@ class ExamPDFGenerator:
         c.setFont('Helvetica-Bold', 9)
         c.drawString(CONTENT_LEFT + 6 * mm, y, "Answer:")
         
-        c.setFont('Helvetica', 10)
+        c.setFont('Helvetica-Bold', 11)
         c.setFillColor(COLOR_TEXT)
-        answer_symbols = '    ⓐ    ⓑ    ⓒ    ⓓ'
+        # Letters inside parentheses - students circle the letter
+        answer_symbols = '     (A)          (B)          (C)          (D)'
         c.drawString(CONTENT_LEFT + 22 * mm, y, answer_symbols)
         
         # If answer key mode, draw the correct answer in green
@@ -743,9 +757,10 @@ class ExamPDFGenerator:
         c.setFont('Helvetica-Bold', 9)
         c.drawString(CONTENT_LEFT + 6 * mm, y, "Answer:")
         
-        c.setFont('Helvetica', 10)
+        c.setFont('Helvetica-Bold', 11)
         c.setFillColor(COLOR_TEXT)
-        c.drawString(CONTENT_LEFT + 22 * mm, y, "Ⓣ TRUE        Ⓕ FALSE")
+        # TRUE/FALSE - students circle T or F
+        c.drawString(CONTENT_LEFT + 22 * mm, y, "(T) TRUE             (F) FALSE")
         
         # Answer key mode
         if self.include_answers and hasattr(question, 'correct_answer'):

@@ -226,7 +226,7 @@ def download_exam_pdf(exam_id):
     
     Query params:
         version=blank  (default) - Exam without answers
-        version=key    - Answer key with correct answers
+        version=key    - Dedicated answer key with explanations
     """
     from flask import send_file, request
     from pathlib import Path
@@ -243,7 +243,7 @@ def download_exam_pdf(exam_id):
     
     # Check version
     version = request.args.get('version', 'blank').lower()
-    include_answers = (version == 'key')
+    is_answer_key = (version == 'key')
     
     # Load exam HTML file
     exam_file = BASE_DIR / "content" / "past_exams" / exam['file_path']
@@ -269,15 +269,21 @@ def download_exam_pdf(exam_id):
         # Parse HTML → ExamData
         exam_data = parse_exam_html(html_content, exam_meta)
         
-        # Generate PDF
-        pdf_path = generate_exam_pdf(exam_data, include_answers=include_answers)
+        if is_answer_key:
+            # Generate dedicated ANSWER KEY PDF
+            from core.exam_answer_key_generator import generate_answer_key
+            pdf_path = generate_answer_key(exam_data)
+            suffix = '_ANSWER_KEY'
+        else:
+            # Generate BLANK EXAM PDF
+            pdf_path = generate_exam_pdf(exam_data, include_answers=False)
+            suffix = ''
         
         if not pdf_path or not pdf_path.exists():
             flash("PDF generation failed", "danger")
             return redirect(url_for('past_exam.library'))
         
         # Build download filename
-        suffix = '_KEY' if include_answers else ''
         filename = f"UNIYO_{exam['course_code']}_{exam['year']}_{exam['exam_type']}{suffix}.pdf"
         filename = filename.replace(' ', '_')
         
