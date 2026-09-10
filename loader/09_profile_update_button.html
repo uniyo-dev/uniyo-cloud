@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>UNIYO — Profile Update Button</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-violet: #6D28D9;
+      --brand-violet-deep: #4C1D95;
+      --brand-gold: #F59E0B;
+      --bg-primary: #0B0F19;
+      --bg-surface: #111827;
+      --bg-elevated: #1A2332;
+      --text-primary: #F8FAFC;
+      --text-muted: #94A3B8;
+      --success-green: #22C55E;
+      --danger-pink: #EC4899;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      background: var(--bg-primary);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-primary);
+      padding: 20px;
+    }
+
+    .profile-form {
+      background: var(--bg-surface);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 28px 24px;
+      max-width: 380px;
+      width: 100%;
+    }
+    .form-title {
+      font-size: 18px; font-weight: 800;
+      margin-bottom: 18px;
+      color: var(--text-primary);
+      text-align: center;
+    }
+    .form-group { margin-bottom: 14px; }
+    .form-label {
+      display: block;
+      font-size: 11px; font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .form-input {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: var(--bg-elevated);
+      color: var(--text-primary);
+      font-size: 13px;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    .form-input:focus { border-color: var(--brand-violet); }
+
+    .btn-save {
+      width: 100%;
+      padding: 13px;
+      border-radius: 12px;
+      border: none;
+      font-size: 14px; font-weight: 700;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      transition: all 0.3s ease;
+      background: var(--brand-violet);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(109, 40, 217, 0.4);
+    }
+    .btn-save:hover { background: var(--brand-violet-deep); }
+    .btn-save:disabled { opacity: 0.75; cursor: not-allowed; }
+
+    .btn-spinner {
+      width: 16px; height: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-top-color: #FFFFFF;
+      border-radius: 50%;
+      animation: btnSpin 0.7s linear infinite;
+    }
+    @keyframes btnSpin { to { transform: rotate(360deg); } }
+
+    .btn-save.success {
+      background: var(--success-green);
+      box-shadow: 0 4px 14px rgba(34, 197, 94, 0.4);
+    }
+    .msg {
+      text-align: center;
+      font-size: 11px;
+      margin-top: 10px;
+      min-height: 16px;
+      transition: opacity 0.3s ease;
+    }
+    .msg.success { color: var(--success-green); }
+  </style>
+</head>
+<body>
+
+  <div class="profile-form">
+    <div class="form-title">Edit Profile</div>
+
+    <div class="form-group">
+      <label class="form-label">Full Name</label>
+      <input class="form-input" type="text" value="Abebe Kebede" />
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Phone Number</label>
+      <input class="form-input" type="text" value="+251 9XX XXX XXX" />
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">University</label>
+      <input class="form-input" type="text" value="Bahir Dar University" />
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Academic Stream</label>
+      <input class="form-input" type="text" value="Natural Science" />
+    </div>
+
+    <button class="btn-save" id="saveBtn" onclick="saveProfile()">
+      <span id="btnIcon">💾</span>
+      <span id="btnText">Save Changes</span>
+    </button>
+
+    <div class="msg" id="msg"></div>
+  </div>
+
+  <script>
+    function saveProfile() {
+      const btn = document.getElementById('saveBtn');
+      const btnIcon = document.getElementById('btnIcon');
+      const btnText = document.getElementById('btnText');
+      const msg = document.getElementById('msg');
+
+      btn.disabled = true;
+      btnIcon.innerHTML = '<div class="btn-spinner"></div>';
+      btnText.textContent = 'Saving...';
+      msg.textContent = '';
+      msg.className = 'msg';
+
+      setTimeout(() => {
+        btnText.textContent = 'Updating database...';
+      }, 800);
+
+      setTimeout(() => {
+        btnIcon.innerHTML = '✅';
+        btnText.textContent = 'Saved!';
+        btn.classList.add('success');
+        msg.textContent = 'Profile updated successfully!';
+        msg.className = 'msg success';
+
+        setTimeout(() => {
+          btn.disabled = false;
+          btnIcon.innerHTML = '💾';
+          btnText.textContent = 'Save Changes';
+          btn.classList.remove('success');
+          msg.textContent = '';
+          msg.className = 'msg';
+        }, 2000);
+      }, 1800);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>UNIYO — Payment Verification Modal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-violet: #6D28D9;
+      --brand-violet-deep: #4C1D95;
+      --brand-gold: #F59E0B;
+      --bg-primary: #0B0F19;
+      --bg-surface: #111827;
+      --bg-elevated: #1A2332;
+      --text-primary: #F8FAFC;
+      --text-muted: #94A3B8;
+      --warning: #F59E0B;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      background: var(--bg-primary);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-primary); padding: 20px;
+    }
+    .demo-btn {
+      padding: 16px 28px; border-radius: 14px; border: none;
+      background: var(--brand-violet); color: #FFFFFF;
+      font-size: 15px; font-weight: 700; cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 8px 24px rgba(109, 40, 217, 0.5);
+    }
+    .demo-btn:hover { background: var(--brand-violet-deep); }
+
+    .modal-overlay {
+      position: fixed; top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(6px);
+      z-index: 999999;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 1; visibility: visible;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      padding: 20px;
+    }
+    .modal-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+    .modal-card {
+      background: var(--bg-surface);
+      border: 1px solid rgba(109, 40, 217, 0.3);
+      border-radius: 20px;
+      padding: 28px 24px;
+      max-width: 380px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(109, 40, 217, 0.2);
+      animation: modalIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes modalIn {
+      0% { transform: scale(0.9) translateY(20px); opacity: 0; }
+      100% { transform: scale(1) translateY(0); opacity: 1; }
+    }
+
+    .lock-icon {
+      width: 60px; height: 60px; border-radius: 50%;
+      background: rgba(109, 40, 217, 0.2);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 14px; font-size: 28px;
+      animation: lockPulse 2s ease-in-out infinite;
+    }
+    @keyframes lockPulse {
+      0%, 100% { box-shadow: 0 0 15px rgba(109, 40, 217, 0.3); }
+      50% { box-shadow: 0 0 30px rgba(109, 40, 217, 0.6); }
+    }
+
+    .modal-title { font-size: 17px; font-weight: 800; color: var(--text-primary); margin-bottom: 4px; }
+    .modal-sub { font-size: 12px; color: var(--text-muted); margin-bottom: 16px; }
+
+    /* Transaction INPUT */
+    .txn-input-wrap { margin-bottom: 10px; }
+    .txn-label {
+      font-size: 10px; font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 1px;
+      margin-bottom: 4px;
+      text-align: left;
+    }
+    .txn-input {
+      width: 100%;
+      padding: 14px;
+      background: var(--bg-elevated);
+      border: 2px solid rgba(245, 158, 11, 0.4);
+      border-radius: 12px;
+      color: var(--brand-gold);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 20px; font-weight: 700;
+      letter-spacing: 2px;
+      text-align: center;
+      outline: none;
+      transition: border-color 0.3s ease;
+      text-transform: uppercase;
+    }
+    .txn-input:focus { border-color: var(--brand-violet); }
+    .txn-input.error { border-color: #EC4899; }
+    .txn-input.success { border-color: #22C55E; }
+
+    .warning-box {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+    .warning-box p { font-size: 10px; color: var(--warning); line-height: 1.5; }
+    .warning-box strong { font-weight: 800; }
+
+    .status-main {
+      font-size: 13px; font-weight: 700;
+      color: var(--text-primary); margin-bottom: 3px;
+      min-height: 18px; transition: opacity 0.2s ease;
+    }
+    .status-sub {
+      font-size: 10px; color: var(--text-muted);
+      margin-bottom: 14px; min-height: 14px;
+    }
+
+    .progress-track {
+      width: 100%; height: 4px;
+      background: rgba(109, 40, 217, 0.2);
+      border-radius: 20px; overflow: hidden;
+      margin-bottom: 14px;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--brand-violet), var(--brand-gold));
+      border-radius: 20px;
+      width: 0%; transition: width 0.4s ease;
+      box-shadow: 0 0 8px var(--brand-violet);
+    }
+
+    .btn-row { display: flex; gap: 10px; }
+    .btn {
+      flex: 1; padding: 12px;
+      border-radius: 10px; border: none;
+      font-size: 12px; font-weight: 700;
+      cursor: pointer; font-family: 'Inter', sans-serif;
+      transition: all 0.2s ease;
+    }
+    .btn-confirm { background: var(--brand-violet); color: #FFFFFF; }
+    .btn-confirm:hover { background: var(--brand-violet-deep); }
+    .btn-edit {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--text-muted);
+    }
+    .btn-edit:hover { color: var(--text-primary); border-color: rgba(255, 255, 255, 0.4); }
+    .btn-confirm:disabled { opacity: 0.5; cursor: not-allowed; }
+  </style>
+</head>
+<body>
+
+  <button class="demo-btn" onclick="showPaymentModal()">💳 Submit Payment (Demo)</button>
+
+  <div class="modal-overlay hidden" id="paymentModal">
+    <div class="modal-card">
+      <div class="lock-icon">🔒</div>
+      <div class="modal-title">Enter Transaction Number</div>
+      <div class="modal-sub">Type exactly as shown in your payment receipt</div>
+
+      <!-- INPUT FIELD -->
+      <div class="txn-input-wrap">
+        <div class="txn-label">Your Transaction Number</div>
+        <input class="txn-input" id="txnInput" type="text" placeholder="e.g. TB123456789" maxlength="20" autocomplete="off" />
+      </div>
+
+      <div class="warning-box">
+        <p>⚠️ <strong>One error = Rejection.</strong> No refunds. You must pay again. Please verify every digit carefully.</p>
+      </div>
+
+      <div class="status-main" id="payMain">Type your transaction number above</div>
+      <div class="status-sub" id="paySub">300 ETB • Telebirr</div>
+
+      <div class="progress-track">
+        <div class="progress-fill" id="payProgress"></div>
+      </div>
+
+      <div class="btn-row" id="btnRow">
+        <button class="btn btn-edit" onclick="hidePaymentModal()">✏️ Cancel</button>
+        <button class="btn btn-confirm" id="confirmBtn" onclick="confirmPayment()" disabled>✓ Verify & Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const txnInput = document.getElementById('txnInput');
+    const confirmBtn = document.getElementById('confirmBtn');
+
+    // Enable confirm button only when input has content
+    txnInput.addEventListener('input', function() {
+      this.value = this.value.toUpperCase();
+      if (this.value.length >= 5) {
+        confirmBtn.disabled = false;
+        document.getElementById('payMain').textContent = 'Is this transaction number correct?';
+        document.getElementById('paySub').textContent = '300 ETB • Telebirr';
+      } else {
+        confirmBtn.disabled = true;
+        document.getElementById('payMain').textContent = 'Type your transaction number above';
+      }
+      // Reset border
+      this.classList.remove('error', 'success');
+    });
+
+    function showPaymentModal() {
+      document.getElementById('paymentModal').classList.remove('hidden');
+      resetModal();
+    }
+
+    function resetModal() {
+      document.getElementById('txnInput').value = '';
+      document.getElementById('payMain').textContent = 'Type your transaction number above';
+      document.getElementById('paySub').textContent = '300 ETB • Telebirr';
+      document.getElementById('payProgress').style.width = '0%';
+      document.getElementById('btnRow').style.display = 'flex';
+      confirmBtn.disabled = true;
+      txnInput.classList.remove('error', 'success');
+    }
+
+    function hidePaymentModal() {
+      document.getElementById('paymentModal').classList.add('hidden');
+    }
+
+    function confirmPayment() {
+      const txnValue = txnInput.value.trim();
+      const main = document.getElementById('payMain');
+      const sub = document.getElementById('paySub');
+      const progress = document.getElementById('payProgress');
+      const btnRow = document.getElementById('btnRow');
+
+      // Validate
+      if (txnValue.length < 5) {
+        txnInput.classList.add('error');
+        main.textContent = '❌ Transaction number too short';
+        return;
+      }
+
+      // Success - show verification
+      txnInput.classList.add('success');
+      btnRow.style.display = 'none';
+      main.textContent = 'Verifying with Telebirr...';
+      sub.textContent = 'Matching: ' + txnValue;
+      progress.style.width = '30%';
+
+      setTimeout(() => {
+        main.textContent = 'Transaction found!';
+        sub.textContent = txnValue + ' • 300 ETB • Confirmed';
+        progress.style.width = '70%';
+      }, 1500);
+
+      setTimeout(() => {
+        main.textContent = 'Submitting for admin approval...';
+        sub.textContent = 'Sending notification to @UNIYO_Support';
+        progress.style.width = '90%';
+      }, 3000);
+
+      setTimeout(() => {
+        main.textContent = '✅ Submitted successfully!';
+        sub.textContent = "You'll get access once approved";
+        progress.style.width = '100%';
+      }, 4500);
+
+      setTimeout(() => { hidePaymentModal(); }, 6000);
+    }
+  </script>
+</body>
+</html>

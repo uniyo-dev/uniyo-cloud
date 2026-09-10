@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=720, initial-scale=1.0">
+  <title>UNIYO Worksheet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0B0F19;
+      font-family: 'Inter', sans-serif;
+      width: 720px;
+      min-height: 1600px;
+      color: #F8FAFC;
+      overflow-x: hidden;
+    }
+    .status-bar {
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+      color: #94A3B8;
+    }
+    .worksheet-header { padding: 20px 24px; }
+    .back-btn { font-size: 14px; color: #94A3B8; margin-bottom: 12px; display: block; }
+    .worksheet-title { font-size: 22px; font-weight: 800; color: #F8FAFC; }
+    .worksheet-meta { display: flex; gap: 16px; margin-top: 8px; font-size: 12px; color: #94A3B8; }
+    .practice-badge {
+      margin-top: 12px; padding: 10px 16px;
+      background: rgba(20, 184, 166, 0.15);
+      color: #14B8A6; border: 1px solid #14B8A6;
+      border-radius: 10px; font-size: 12px; font-weight: 700;
+      display: inline-block;
+    }
+    .best-score {
+      margin-top: 12px; padding: 10px 16px;
+      background: rgba(20, 184, 166, 0.1);
+      border-radius: 10px; color: #14B8A6;
+      font-size: 12px; font-weight: 600;
+      display: inline-block;
+    }
+    .questions-container { padding: 0 24px; }
+    .question-card {
+      background: #111827; border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px; padding: 24px; margin-bottom: 16px;
+    }
+    .question-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 12px;
+    }
+    .question-number { font-size: 13px; font-weight: 700; color: #6D28D9; }
+    .difficulty-badge { padding: 5px 12px; border-radius: 12px; font-size: 10px; font-weight: 700; }
+    .difficulty-easy { background: rgba(34, 197, 94, 0.2); color: #22C55E; }
+    .difficulty-medium { background: rgba(245, 158, 11, 0.2); color: #F59E0B; }
+    .difficulty-hard { background: rgba(236, 72, 153, 0.2); color: #EC4899; }
+    .question-text { font-size: 15px; color: #F8FAFC; line-height: 1.6; margin-bottom: 14px; }
+    .question-text strong { color: #F59E0B; }
+    .options { display: flex; flex-direction: column; gap: 10px; }
+    .option-btn {
+      padding: 14px 16px; background: #1A2332;
+      border: 2px solid rgba(255,255,255,0.08);
+      border-radius: 10px; font-size: 12px;
+      color: #E2E8F0; text-align: left;
+    }
+    .option-btn.correct {
+      border-color: #14B8A6; background: rgba(20, 184, 166, 0.2);
+      color: #14B8A6; font-weight: 700;
+    }
+    .option-btn.wrong {
+      border-color: #EC4899; background: rgba(236, 72, 153, 0.2);
+      color: #EC4899;
+    }
+    .explanation-box {
+      margin-top: 14px; padding: 16px;
+      background: #1A2332; border-radius: 10px;
+      border-left: 5px solid #38BDF8;
+    }
+    .explanation-result { font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+    .explanation-result.correct { color: #14B8A6; }
+    .explanation-result.wrong { color: #EC4899; }
+    .explanation-content { font-size: 11px; color: #E2E8F0; line-height: 1.7; }
+    .explanation-content strong { color: #38BDF8; }
+    .practice-summary {
+      margin: 0 24px 40px; padding: 20px;
+      background: #111827; border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .progress-info {
+      display: flex; justify-content: space-between;
+      font-size: 13px; color: #94A3B8; margin-bottom: 10px;
+    }
+    .progress-bar { height: 10px; background: #1A2332; border-radius: 5px; overflow: hidden; margin-bottom: 10px; }
+    .progress-fill { height: 100%; background: #14B8A6; width: 40%; border-radius: 5px; }
+    .summary-note { font-size: 10px; color: #64748B; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="status-bar"><span>10:32</span><span>📶 🔋 80%</span></div>
+  <div class="worksheet-header">
+    <a class="back-btn">← Back to Dashboard</a>
+    <div class="worksheet-title">Logic & Critical Thinking - Chapter 1</div>
+    <div class="worksheet-meta">
+      <span>📚 LoCT1011</span>
+      <span>📖 Chapter 1</span>
+      <span>❓ 10 Questions</span>
+    </div>
+    <div class="practice-badge">📝 PRACTICE MODE - Self-Test with Explanations</div>
+    <div class="best-score">🏆 Best Score: 80%</div>
+  </div>
+  <div class="questions-container">
+    <div class="question-card">
+      <div class="question-header">
+        <span class="question-number">Question 1 / 10</span>
+        <span class="difficulty-badge difficulty-easy">EASY</span>
+      </div>
+      <div class="question-text">What is <strong>Logic</strong>?</div>
+      <div class="options">
+        <div class="option-btn correct">✅ A. Study of reasoning and argumentation</div>
+        <div class="option-btn">◻ B. Study of nature and environment</div>
+        <div class="option-btn">◻ C. Study of numbers and equations</div>
+        <div class="option-btn">◻ D. Study of society and culture</div>
+      </div>
+      <div class="explanation-box">
+        <div class="explanation-result correct">✅ Correct!</div>
+        <div class="explanation-content"><strong>💡 Explanation:</strong> Logic is the study of reasoning and argumentation. It helps us distinguish valid arguments from invalid ones.</div>
+      </div>
+    </div>
+    <div class="question-card">
+      <div class="question-header">
+        <span class="question-number">Question 2 / 10</span>
+        <span class="difficulty-badge difficulty-medium">MEDIUM</span>
+      </div>
+      <div class="question-text">An <strong>argument</strong> in logic consists of:</div>
+      <div class="options">
+        <div class="option-btn">◻ A. Only a conclusion</div>
+        <div class="option-btn correct">✅ B. Premises and a conclusion</div>
+        <div class="option-btn">◻ C. Only premises</div>
+        <div class="option-btn">◻ D. Questions and answers</div>
+      </div>
+      <div class="explanation-box">
+        <div class="explanation-result correct">✅ Correct!</div>
+        <div class="explanation-content"><strong>💡 Explanation:</strong> An argument consists of premises (reasons) that support a conclusion.</div>
+      </div>
+    </div>
+    <div class="question-card">
+      <div class="question-header">
+        <span class="question-number">Question 3 / 10</span>
+        <span class="difficulty-badge difficulty-hard">HARD</span>
+      </div>
+      <div class="question-text">A <strong>valid argument</strong> is one where:</div>
+      <div class="options">
+        <div class="option-btn">◻ A. All premises are true</div>
+        <div class="option-btn">◻ B. The conclusion is true</div>
+        <div class="option-btn correct">✅ C. The conclusion follows from premises</div>
+        <div class="option-btn">◻ D. Both premises and conclusion are false</div>
+      </div>
+      <div class="explanation-box">
+        <div class="explanation-result correct">✅ Correct!</div>
+        <div class="explanation-content"><strong>💡 Explanation:</strong> Validity is about the logical structure — if premises are true, the conclusion MUST be true.</div>
+      </div>
+    </div>
+    <div class="question-card">
+      <div class="question-header">
+        <span class="question-number">Question 4 / 10</span>
+        <span class="difficulty-badge difficulty-easy">EASY</span>
+      </div>
+      <div class="question-text"><strong>Critical thinking</strong> is:</div>
+      <div class="options">
+        <div class="option-btn">◻ A. Accepting everything you hear</div>
+        <div class="option-btn correct">✅ B. Evaluating arguments and evidence</div>
+        <div class="option-btn">◻ C. Memorizing facts</div>
+        <div class="option-btn">◻ D. Following instructions</div>
+      </div>
+      <div class="explanation-box">
+        <div class="explanation-result correct">✅ Correct!</div>
+        <div class="explanation-content"><strong>💡 Explanation:</strong> Critical thinking involves analyzing, evaluating, and constructing arguments.</div>
+      </div>
+    </div>
+  </div>
+  <div class="practice-summary">
+    <div class="progress-info">
+      <span>Answered: 4/10</span>
+      <span>Correct: 4</span>
+      <span>Score: 100%</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+    <div class="summary-note">This is practice mode. Answers are NOT submitted. Learn at your own pace!</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>UNIYO — Session Expiry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-violet: #6D28D9;
+      --brand-violet-deep: #4C1D95;
+      --bg-primary: #0B0F19;
+      --bg-surface: #111827;
+      --text-primary: #F8FAFC;
+      --text-muted: #94A3B8;
+      --danger-pink: #EC4899;
+      --warning: #F59E0B;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      background: var(--bg-primary);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-primary);
+      padding: 20px;
+    }
+    .demo-btn {
+      padding: 16px 28px;
+      border-radius: 14px;
+      border: none;
+      background: var(--brand-violet);
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 8px 24px rgba(109, 40, 217, 0.5);
+    }
+    .demo-btn:hover { background: var(--brand-violet-deep); }
+
+    .session-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(11, 15, 25, 0.97);
+      backdrop-filter: blur(16px);
+      z-index: 999999;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      opacity: 1; visibility: visible;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+    .session-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+    .session-overlay::before {
+      content: '';
+      position: absolute;
+      width: 350px; height: 350px;
+      background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, rgba(236, 72, 153, 0.05) 40%, transparent 70%);
+      filter: blur(50px);
+      animation: warningPulse 3s ease-in-out infinite alternate;
+    }
+    @keyframes warningPulse { 0% { transform: scale(0.9); opacity: 0.6; } 100% { transform: scale(1.1); opacity: 1; } }
+
+    .clock-icon {
+      width: 90px; height: 90px; border-radius: 50%;
+      border: 3px solid var(--danger-pink);
+      background: rgba(236, 72, 153, 0.1);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+      position: relative; z-index: 10;
+      animation: clockPulse 1.5s ease-in-out infinite;
+    }
+    @keyframes clockPulse {
+      0%, 100% { box-shadow: 0 0 20px rgba(236, 72, 153, 0.3); }
+      50% { box-shadow: 0 0 40px rgba(236, 72, 153, 0.6); }
+    }
+
+    .clock-face {
+      position: relative;
+      width: 50px; height: 50px; border-radius: 50%;
+      background: var(--bg-surface);
+      border: 2px solid var(--text-muted);
+    }
+    .clock-hand {
+      position: absolute; bottom: 50%; left: 50%;
+      transform-origin: bottom center;
+      border-radius: 2px;
+    }
+    .hour-hand {
+      width: 3px; height: 12px;
+      background: var(--text-primary);
+      transform: translateX(-50%) rotate(0deg);
+      animation: hourSpin 5s linear infinite;
+    }
+    .minute-hand {
+      width: 2px; height: 18px;
+      background: var(--danger-pink);
+      transform: translateX(-50%) rotate(0deg);
+      animation: minuteSpin 1s linear infinite;
+    }
+    @keyframes hourSpin { to { transform: translateX(-50%) rotate(360deg); } }
+    @keyframes minuteSpin { to { transform: translateX(-50%) rotate(360deg); } }
+
+    .session-title {
+      font-size: 22px; font-weight: 800;
+      color: var(--text-primary); margin-bottom: 4px;
+      position: relative; z-index: 10;
+    }
+    .session-sub {
+      font-size: 13px; color: var(--text-muted);
+      margin-bottom: 20px;
+      position: relative; z-index: 10;
+    }
+
+    .countdown {
+      font-size: 48px; font-weight: 800;
+      color: var(--danger-pink);
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 16px;
+      position: relative; z-index: 10;
+      text-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
+      animation: countPulse 1s ease-in-out infinite;
+    }
+    @keyframes countPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+    .ring-container {
+      position: relative;
+      width: 80px; height: 80px;
+      margin-bottom: 16px; z-index: 10;
+    }
+    .ring-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+    .ring-bg { fill: none; stroke: rgba(236, 72, 153, 0.15); stroke-width: 6; }
+    .ring-progress {
+      fill: none; stroke: var(--danger-pink);
+      stroke-width: 6; stroke-linecap: round;
+      stroke-dasharray: 226;
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 1s linear;
+    }
+
+    .session-msg {
+      font-size: 12px; font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      position: relative; z-index: 10;
+    }
+
+    .btn-login {
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: none;
+      background: var(--brand-violet);
+      color: #FFFFFF;
+      font-size: 12px; font-weight: 700;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      position: relative; z-index: 10;
+    }
+    .btn-login:hover { background: var(--brand-violet-deep); }
+  </style>
+</head>
+<body>
+
+  <button class="demo-btn" onclick="startSessionExpiry()">⏰ Simulate Session Expiry (Demo)</button>
+
+  <div class="session-overlay hidden" id="sessionOverlay">
+    <div class="clock-icon">
+      <div class="clock-face">
+        <div class="clock-hand hour-hand"></div>
+        <div class="clock-hand minute-hand"></div>
+      </div>
+    </div>
+
+    <div class="session-title">Session Expired</div>
+    <div class="session-sub">Your 12-hour session has ended</div>
+
+    <div class="ring-container">
+      <svg class="ring-svg" viewBox="0 0 80 80">
+        <circle class="ring-bg" cx="40" cy="40" r="36"/>
+        <circle class="ring-progress" id="ringProgress" cx="40" cy="40" r="36"/>
+      </svg>
+    </div>
+
+    <div class="countdown" id="countdown">5</div>
+    <div class="session-msg" id="sessionMsg">Redirecting to login...</div>
+
+    <button class="btn-login" onclick="hideSession()">🔐 Login Again</button>
+  </div>
+
+  <script>
+    let countdownValue = 5;
+    let countdownInterval;
+    const ringCircumference = 2 * Math.PI * 36;
+
+    function startSessionExpiry() {
+      document.getElementById('sessionOverlay').classList.remove('hidden');
+      countdownValue = 5;
+      updateCountdown();
+      startCountdown();
+    }
+
+    function updateCountdown() {
+      document.getElementById('countdown').textContent = countdownValue;
+      const progress = (countdownValue / 5) * ringCircumference;
+      document.getElementById('ringProgress').style.strokeDashoffset = ringCircumference - progress;
+    }
+
+    function startCountdown() {
+      clearInterval(countdownInterval);
+      countdownInterval = setInterval(() => {
+        countdownValue--;
+        if (countdownValue > 0) {
+          updateCountdown();
+          document.getElementById('sessionMsg').textContent = 'Redirecting to login in ' + countdownValue + ' seconds...';
+        } else if (countdownValue === 0) {
+          updateCountdown();
+          document.getElementById('countdown').textContent = '0';
+          document.getElementById('sessionMsg').textContent = 'Redirecting now...';
+          clearInterval(countdownInterval);
+          setTimeout(() => { hideSession(); }, 800);
+        }
+      }, 1000);
+    }
+
+    function hideSession() {
+      document.getElementById('sessionOverlay').classList.add('hidden');
+      clearInterval(countdownInterval);
+    }
+  </script>
+</body>
+</html>

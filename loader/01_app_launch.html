@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>UNIYO — App Launch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-violet: #6D28D9;
+      --brand-violet-deep: #4C1D95;
+      --brand-violet-light: #8B5CF6;
+      --brand-gold: #FCD34D;
+      --bg-primary: #0B0F19;
+      --text-primary: #F8FAFC;
+      --text-muted: #94A3B8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      background: var(--bg-primary);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-primary); padding: 20px;
+      overflow: hidden;
+    }
+    .demo-btn {
+      padding: 16px 28px; border-radius: 14px; border: none;
+      background: var(--brand-violet); color: #FFFFFF;
+      font-size: 15px; font-weight: 700; cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 8px 24px rgba(109, 40, 217, 0.5);
+    }
+    .demo-btn:hover { background: var(--brand-violet-deep); }
+
+    .launch-overlay {
+      position: fixed; top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: var(--bg-primary);
+      z-index: 999999;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    .launch-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+    .intro-screen {
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      z-index: 20;
+      transition: opacity 0.5s ease;
+    }
+    .intro-screen.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .intro-logo {
+      width: 240px;
+      filter: drop-shadow(0 20px 40px rgba(109, 40, 217, 0.7));
+      animation: introFloat 2s ease-in-out infinite;
+    }
+    @keyframes introFloat {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-10px) scale(1.05); }
+    }
+
+    .story-container {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      z-index: 10;
+    }
+    .story-frame {
+      position: absolute;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      opacity: 0; transform: translateY(20px);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+    .story-frame.active { opacity: 1; transform: translateY(0); }
+
+    /* ==========================================
+       PHONE FRAME
+       Outer: 512×1123px
+       Inner screen: 476×1087px (after border+padding)
+       Iframe: 720×1600 scaled by 0.661
+       ========================================== */
+    .phone {
+      width: 512px;
+      height: 1123px;
+      background: #1A1A2E;
+      border: 6px solid #2D2D3D;
+      border-radius: 42px;
+      padding: 12px;
+      box-shadow: 
+        0 30px 70px rgba(0, 0, 0, 0.8),
+        0 0 0 3px rgba(109, 40, 217, 0.4),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+      position: relative;
+      transform: scale(0.62);
+      transform-origin: center center;
+    }
+    .phone-notch {
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 110px;
+      height: 22px;
+      background: #2D2D3D;
+      border-radius: 12px;
+      z-index: 10;
+    }
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      border-radius: 30px;
+      overflow: hidden;
+      background: #111827;
+      position: relative;
+    }
+    /* iframe fills the phone screen exactly (476×1087 inside padding) */
+    .phone-screen iframe {
+      width: 720px;
+      height: 1600px;
+      border: none;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: scale(0.661);
+      transform-origin: top left;
+    }
+
+    @media (max-height: 900px) {
+      .phone { transform: scale(0.55); }
+    }
+    @media (max-height: 750px) {
+      .phone { transform: scale(0.48); }
+    }
+    @media (max-height: 650px) {
+      .phone { transform: scale(0.4); }
+    }
+
+    .story-caption {
+      margin-top: 8px;
+      text-align: center;
+      position: absolute;
+      bottom: 80px;
+      left: 0; right: 0;
+    }
+    .story-title { font-size: 18px; font-weight: 800; color: #F8FAFC; margin-bottom: 4px; }
+    .story-sub { font-size: 12px; color: var(--text-muted); }
+
+    .progress-dots {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex; gap: 12px;
+      z-index: 15;
+    }
+    .dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: rgba(109, 40, 217, 0.3);
+      transition: all 0.3s ease;
+    }
+    .dot.active {
+      background: var(--brand-gold);
+      box-shadow: 0 0 12px var(--brand-gold);
+      transform: scale(1.5);
+    }
+
+    .skip-btn {
+      position: fixed;
+      bottom: 20px; right: 20px;
+      padding: 12px 24px;
+      border-radius: 25px;
+      border: 2px solid var(--brand-gold);
+      background: var(--brand-violet);
+      color: #FFFFFF;
+      font-size: 14px; font-weight: 700;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      z-index: 100;
+      box-shadow: 0 4px 15px rgba(109, 40, 217, 0.6);
+    }
+    .skip-btn:hover {
+      background: var(--brand-gold);
+      color: var(--bg-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <button class="demo-btn" onclick="showLaunch()">▶ Launch UNIYO App</button>
+
+  <div class="launch-overlay hidden" id="launchOverlay">
+    
+    <div class="intro-screen" id="introScreen">
+      <div class="intro-logo">
+        <svg viewBox="0 0 400 140" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="ipF" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#8B5CF6"/>
+              <stop offset="100%" style="stop-color:#4C1D95"/>
+            </linearGradient>
+            <linearGradient id="igF" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#FCD34D"/>
+              <stop offset="100%" style="stop-color:#D97706"/>
+            </linearGradient>
+          </defs>
+          <rect x="25" y="20" width="100" height="100" rx="22" fill="url(#ipF)"/>
+          <g transform="translate(75, 70) scale(3.5) translate(-12, -12)">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <circle cx="75" cy="33" r="4" fill="#FCD34D"/>
+          <text x="262" y="72" font-family="Arial Black, sans-serif" font-size="42" font-weight="900" fill="#F8FAFC" text-anchor="middle" letter-spacing="6">UNIYO</text>
+          <rect x="192" y="86" width="140" height="4" rx="2" fill="url(#igF)"/>
+          <text x="262" y="110" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#A78BFA" text-anchor="middle" letter-spacing="3.5">LEARN • GROW • SUCCEED</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="story-container" id="storyContainer" style="opacity: 0; pointer-events: none;">
+
+      <div class="story-frame active" id="frame1">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <iframe src="screenshots_hd/01_dashboard.html" scrolling="no"></iframe>
+          </div>
+        </div>
+        <div class="story-caption">
+          <div class="story-title">🎓 Your Dashboard</div>
+          <div class="story-sub">16 courses ready to learn</div>
+        </div>
+      </div>
+
+      <div class="story-frame" id="frame2">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <iframe src="screenshots_hd/02_lesson.html" scrolling="no"></iframe>
+          </div>
+        </div>
+        <div class="story-caption">
+          <div class="story-title">📚 Lesson Reader</div>
+          <div class="story-sub">Diagrams + highlights + practice</div>
+        </div>
+      </div>
+
+      <div class="story-frame" id="frame3">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <iframe src="screenshots_hd/03_worksheet.html" scrolling="no"></iframe>
+          </div>
+        </div>
+        <div class="story-caption">
+          <div class="story-title">📝 Instant Feedback</div>
+          <div class="story-sub">Practice with explanations</div>
+        </div>
+      </div>
+
+      <div class="story-frame" id="frame4">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <iframe src="screenshots_hd/04_vip_leaderboard.html" scrolling="no"></iframe>
+          </div>
+        </div>
+        <div class="story-caption">
+          <div class="story-title">🏆 Compete Weekly</div>
+          <div class="story-sub">Top 5 win exclusive certificates</div>
+        </div>
+      </div>
+
+      <div class="story-frame" id="frame5">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <iframe src="screenshots_hd/05_certificate.html" scrolling="no"></iframe>
+          </div>
+        </div>
+        <div class="story-caption">
+          <div class="story-title">📜 Certificates</div>
+          <div class="story-sub">Your achievement, unlocked</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="progress-dots" id="progressDots" style="opacity: 0;">
+      <div class="dot active" id="dot1"></div>
+      <div class="dot" id="dot2"></div>
+      <div class="dot" id="dot3"></div>
+      <div class="dot" id="dot4"></div>
+      <div class="dot" id="dot5"></div>
+    </div>
+
+    <button class="skip-btn" onclick="skipLaunch()">Skip →</button>
+  </div>
+
+  <script>
+    const frames = ['frame1', 'frame2', 'frame3', 'frame4', 'frame5'];
+    const dots = ['dot1', 'dot2', 'dot3', 'dot4', 'dot5'];
+    let currentFrame = 0;
+    let frameInterval;
+
+    function showLaunch() {
+      const overlay = document.getElementById('launchOverlay');
+      overlay.classList.remove('hidden');
+      currentFrame = 0;
+      showFrame(0);
+
+      const introScreen = document.getElementById('introScreen');
+      const storyContainer = document.getElementById('storyContainer');
+      const progressDots = document.getElementById('progressDots');
+
+      introScreen.classList.remove('hidden');
+      storyContainer.style.opacity = '0';
+      storyContainer.style.pointerEvents = 'none';
+      progressDots.style.opacity = '0';
+
+      setTimeout(() => {
+        introScreen.classList.add('hidden');
+        storyContainer.style.opacity = '1';
+        storyContainer.style.pointerEvents = 'auto';
+        progressDots.style.opacity = '1';
+        startAutoPlay();
+      }, 2000);
+    }
+
+    function showFrame(index) {
+      frames.forEach(f => document.getElementById(f).classList.remove('active'));
+      document.getElementById(frames[index]).classList.add('active');
+      dots.forEach((d, i) => document.getElementById(d).classList.toggle('active', i === index));
+      currentFrame = index;
+    }
+
+    function startAutoPlay() {
+      clearInterval(frameInterval);
+      frameInterval = setInterval(() => {
+        if (currentFrame < frames.length - 1) {
+          showFrame(currentFrame + 1);
+        } else {
+          clearInterval(frameInterval);
+          setTimeout(() => hideLaunch(), 1000);
+        }
+      }, 2500);
+    }
+
+    function skipLaunch() {
+      clearInterval(frameInterval);
+      hideLaunch();
+    }
+
+    function hideLaunch() {
+      document.getElementById('launchOverlay').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

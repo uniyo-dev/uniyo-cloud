@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>UNIYO — Login Loader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-violet: #6D28D9;
+      --brand-violet-deep: #4C1D95;
+      --brand-violet-light: #8B5CF6;
+      --brand-gold: #FCD34D;
+      --bg-primary: #0B0F19;
+      --bg-surface: #111827;
+      --text-primary: #F8FAFC;
+      --text-muted: #94A3B8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      background: var(--bg-primary);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-primary);
+      padding: 20px;
+    }
+    .demo-btn {
+      padding: 16px 28px;
+      border-radius: 14px;
+      border: none;
+      background: var(--brand-violet);
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 8px 24px rgba(109, 40, 217, 0.5);
+    }
+    .demo-btn:hover { background: var(--brand-violet-deep); }
+
+    .login-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(11, 15, 25, 0.97);
+      backdrop-filter: blur(16px);
+      z-index: 999999;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      opacity: 1; visibility: visible;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+    .login-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .login-overlay::before {
+      content: '';
+      position: absolute;
+      width: 350px; height: 350px;
+      background: radial-gradient(circle, rgba(109, 40, 217, 0.25) 0%, rgba(109, 40, 217, 0.08) 40%, transparent 70%);
+      filter: blur(50px);
+      animation: haloPulse 4s ease-in-out infinite alternate;
+    }
+    @keyframes haloPulse { 0% { transform: scale(0.9); opacity: 0.7; } 100% { transform: scale(1.1); opacity: 1; } }
+
+    .logo-wrap {
+      width: 110px; height: 110px; margin-bottom: 18px;
+      position: relative; z-index: 10;
+      animation: logoPulse 2s ease-in-out infinite;
+    }
+    .logo-wrap svg { width: 100%; height: 100%; overflow: visible; }
+    @keyframes logoPulse {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 12px 24px rgba(109, 40, 217, 0.5)); }
+      50% { transform: scale(1.05); filter: drop-shadow(0 16px 32px rgba(109, 40, 217, 0.7)); }
+    }
+
+    .ring {
+      position: absolute;
+      top: -10px; left: -10px;
+      width: 130px; height: 130px;
+      border: 2px solid transparent;
+      border-top-color: var(--brand-gold);
+      border-right-color: var(--brand-violet-light);
+      border-radius: 50%;
+      animation: ringSpin 1.2s linear infinite;
+    }
+    @keyframes ringSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+    .brand-title { font-size: 22px; font-weight: 800; letter-spacing: 6px; color: var(--text-primary); margin-bottom: 3px; position: relative; z-index: 10; }
+    .brand-tagline { font-size: 9px; font-weight: 700; letter-spacing: 2.5px; color: var(--brand-violet-light); margin-bottom: 24px; text-transform: uppercase; position: relative; z-index: 10; }
+
+    .status-main {
+      font-size: 15px; font-weight: 700;
+      color: var(--text-primary); margin-bottom: 4px;
+      position: relative; z-index: 10;
+      transition: opacity 0.3s ease;
+    }
+    .status-sub {
+      font-size: 11px; color: var(--text-muted);
+      position: relative; z-index: 10;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .loading-dots {
+      display: flex; gap: 5px; margin-top: 14px;
+      position: relative; z-index: 10;
+    }
+    .ld {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--brand-gold);
+      animation: dotBounce 1s ease-in-out infinite;
+    }
+    .ld:nth-child(2) { animation-delay: 0.15s; }
+    .ld:nth-child(3) { animation-delay: 0.3s; }
+    @keyframes dotBounce {
+      0%, 100% { transform: translateY(0); opacity: 0.5; }
+      50% { transform: translateY(-6px); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="demo-btn" onclick="startLogin()">🔐 Sign In (Demo)</button>
+
+  <div class="login-overlay hidden" id="loginOverlay">
+    <div class="logo-wrap">
+      <div class="ring"></div>
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="loginPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6D28D9"/>
+            <stop offset="100%" style="stop-color:#4C1D95"/>
+          </linearGradient>
+        </defs>
+        <rect x="10" y="10" width="180" height="180" rx="45" fill="url(#loginPurple)"/>
+        <rect x="18" y="18" width="164" height="164" rx="36" fill="none" stroke="#FCD34D" stroke-width="1.5" opacity="0.4"/>
+        <g transform="translate(100, 100) scale(6.25) translate(-12, -12)">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z" fill="none" stroke="#F8FAFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6 12v5c3 3 9 3 12 0v-5" fill="none" stroke="#F8FAFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <circle cx="100" cy="40" r="5" fill="#FCD34D"/>
+      </svg>
+    </div>
+
+    <div class="brand-title">UNIYO</div>
+    <div class="brand-tagline">Signing you in</div>
+
+    <div class="status-main" id="loginMain">Verifying credentials...</div>
+    <div class="status-sub" id="loginSub">+251 9XX XXX XXX</div>
+
+    <div class="loading-dots">
+      <div class="ld"></div>
+      <div class="ld"></div>
+      <div class="ld"></div>
+    </div>
+  </div>
+
+  <script>
+    const statusSteps = [
+      { main: 'Verifying credentials...', sub: '+251 9XX XXX XXX' },
+      { main: 'Checking subscription...', sub: 'Premium access confirmed' },
+      { main: 'Loading 16 courses...', sub: 'Fetching worksheets & past exams' },
+      { main: 'Welcome back!', sub: 'Opening dashboard...' }
+    ];
+    let statusIndex = 0;
+    let statusInterval;
+
+    function startLogin() {
+      document.getElementById('loginOverlay').classList.remove('hidden');
+      statusIndex = 0;
+      updateStatus(0);
+      startAutoAdvance();
+    }
+
+    function updateStatus(index) {
+      const main = document.getElementById('loginMain');
+      const sub = document.getElementById('loginSub');
+      main.style.opacity = '0';
+      setTimeout(() => {
+        main.textContent = statusSteps[index].main;
+        sub.textContent = statusSteps[index].sub;
+        main.style.opacity = '1';
+      }, 200);
+      statusIndex = index;
+    }
+
+    function startAutoAdvance() {
+      clearInterval(statusInterval);
+      statusInterval = setInterval(() => {
+        if (statusIndex < statusSteps.length - 1) {
+          updateStatus(statusIndex + 1);
+        } else {
+          clearInterval(statusInterval);
+          setTimeout(() => { document.getElementById('loginOverlay').classList.add('hidden'); }, 1000);
+        }
+      }, 1500);
+    }
+  </script>
+</body>
+</html>

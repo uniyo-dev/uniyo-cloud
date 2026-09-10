@@ -1,0 +1,327 @@
+<!-- ============================================
+     UNIYO LMS - Loader Templates
+     Include this file in base.html: {% include '_loaders.html' %}
+     ============================================ -->
+
+<!-- ============ 1. APP LAUNCH ============ -->
+<div class="ld-launch hidden" id="ldLaunch">
+    <div class="ld-launch-intro" id="ldLaunchIntro">
+        <svg viewBox="0 0 400 140" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="ldIp" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#8B5CF6"/>
+                    <stop offset="100%" style="stop-color:#4C1D95"/>
+                </linearGradient>
+                <linearGradient id="ldIg" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#FCD34D"/>
+                    <stop offset="100%" style="stop-color:#D97706"/>
+                </linearGradient>
+            </defs>
+            <rect x="25" y="20" width="100" height="100" rx="22" fill="url(#ldIp)"/>
+            <g transform="translate(75, 70) scale(3.5) translate(-12, -12)">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <circle cx="75" cy="33" r="4" fill="#FCD34D"/>
+            <text x="262" y="72" font-family="Arial Black, sans-serif" font-size="42" font-weight="900" fill="#F8FAFC" text-anchor="middle" letter-spacing="6">UNIYO</text>
+            <rect x="192" y="86" width="140" height="4" rx="2" fill="url(#ldIg)"/>
+            <text x="262" y="110" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#A78BFA" text-anchor="middle" letter-spacing="3.5">LEARN • GROW • SUCCEED</text>
+        </svg>
+    </div>
+
+    <div class="ld-launch-story" id="ldLaunchStory" style="opacity: 0; pointer-events: none;">
+        <div class="ld-frame active" id="ldFrame1">
+            <div class="ld-phone">
+                <div class="ld-phone-notch"></div>
+                <div class="ld-phone-screen">
+                    <iframe src="{{ url_for('static', filename='screenshots/01_dashboard.html') }}" scrolling="no"></iframe>
+                </div>
+            </div>
+            <div class="ld-caption">
+                <div class="ld-title">🎓 Your Dashboard</div>
+                <div class="ld-sub">16 courses ready to learn</div>
+            </div>
+        </div>
+
+        <div class="ld-frame" id="ldFrame2">
+            <div class="ld-phone">
+                <div class="ld-phone-notch"></div>
+                <div class="ld-phone-screen">
+                    <iframe src="{{ url_for('static', filename='screenshots/02_lesson.html') }}" scrolling="no"></iframe>
+                </div>
+            </div>
+            <div class="ld-caption">
+                <div class="ld-title">📚 Lesson Reader</div>
+                <div class="ld-sub">Diagrams + highlights + practice</div>
+            </div>
+        </div>
+
+        <div class="ld-frame" id="ldFrame3">
+            <div class="ld-phone">
+                <div class="ld-phone-notch"></div>
+                <div class="ld-phone-screen">
+                    <iframe src="{{ url_for('static', filename='screenshots/03_worksheet.html') }}" scrolling="no"></iframe>
+                </div>
+            </div>
+            <div class="ld-caption">
+                <div class="ld-title">📝 Instant Feedback</div>
+                <div class="ld-sub">Practice with explanations</div>
+            </div>
+        </div>
+
+        <div class="ld-frame" id="ldFrame4">
+            <div class="ld-phone">
+                <div class="ld-phone-notch"></div>
+                <div class="ld-phone-screen">
+                    <iframe src="{{ url_for('static', filename='screenshots/04_vip_leaderboard.html') }}" scrolling="no"></iframe>
+                </div>
+            </div>
+            <div class="ld-caption">
+                <div class="ld-title">🏆 Compete Weekly</div>
+                <div class="ld-sub">Top 5 win exclusive certificates</div>
+            </div>
+        </div>
+
+        <div class="ld-frame" id="ldFrame5">
+            <div class="ld-phone">
+                <div class="ld-phone-notch"></div>
+                <div class="ld-phone-screen">
+                    <iframe src="{{ url_for('static', filename='screenshots/05_certificate.html') }}" scrolling="no"></iframe>
+                </div>
+            </div>
+            <div class="ld-caption">
+                <div class="ld-title">📜 Certificates</div>
+                <div class="ld-sub">Your achievement, unlocked</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ld-dots" id="ldLaunchDots" style="opacity: 0;">
+        <div class="ld-dot active" id="ldDot1"></div>
+        <div class="ld-dot" id="ldDot2"></div>
+        <div class="ld-dot" id="ldDot3"></div>
+        <div class="ld-dot" id="ldDot4"></div>
+        <div class="ld-dot" id="ldDot5"></div>
+    </div>
+
+    <button class="ld-skip" onclick="UNIYO_LOADER.appLaunch.skip()">Skip →</button>
+</div>
+
+<!-- ============ 2. REGISTRATION ============ -->
+<div class="ld-full hidden" id="ldRegistration">
+    <div class="ld-logo">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="ldRegP" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#6D28D9"/>
+                    <stop offset="100%" style="stop-color:#4C1D95"/>
+                </linearGradient>
+            </defs>
+            <rect x="10" y="10" width="180" height="180" rx="45" fill="url(#ldRegP)"/>
+            <rect x="18" y="18" width="164" height="164" rx="36" fill="none" stroke="#FCD34D" stroke-width="1.5" opacity="0.4"/>
+            <g transform="translate(100, 100) scale(6.25) translate(-12, -12)">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" fill="none" stroke="#F8FAFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5" fill="none" stroke="#F8FAFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <circle cx="100" cy="40" r="5" fill="#FCD34D"/>
+        </svg>
+    </div>
+    <div class="ld-brand">UNIYO</div>
+    <div class="ld-tagline">Creating your account</div>
+
+    <div class="ld-step active" id="ldRegStep1">
+        <div class="ld-step-icon">📱</div>
+        <div class="ld-step-title">Verify Your Phone Number</div>
+        <div class="ld-step-sub">Type: 0912345678</div>
+        <input class="ld-input" id="ldRegPhone" type="text" placeholder="09XXXXXXXX" maxlength="10" oninput="UNIYO_LOADER.registration.phoneInput()" />
+        <button class="ld-btn-verify" id="ldRegPhoneBtn" onclick="UNIYO_LOADER.registration.verifyPhone()" disabled>✓ Verify Phone</button>
+    </div>
+
+    <div class="ld-step" id="ldRegStep2">
+        <div class="ld-step-icon">🔐</div>
+        <div class="ld-step-title">Verify Your Password</div>
+        <div class="ld-step-sub">Type: Abebe@2024</div>
+        <input class="ld-input" id="ldRegPassword" type="text" placeholder="Your password" maxlength="20" oninput="UNIYO_LOADER.registration.passwordInput()" />
+        <button class="ld-btn-verify" id="ldRegPasswordBtn" onclick="UNIYO_LOADER.registration.verifyPassword()" disabled>✓ Verify Password</button>
+    </div>
+
+    <div class="ld-step" id="ldRegStep3">
+        <div class="ld-step-icon">📚</div>
+        <div class="ld-step-title">Selecting Academic Stream</div>
+        <div class="ld-step-sub">This affects your Math course</div>
+        <div style="margin-top: 8px; padding: 6px 14px; background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.4); border-radius: 8px; color: #FCD34D; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;">🔬 Natural Science → Math1012</div>
+    </div>
+
+    <div class="ld-step" id="ldRegStep4">
+        <div class="ld-step-icon">📖</div>
+        <div class="ld-step-title">Enrolling in 16 courses...</div>
+        <div class="ld-step-sub">Econ1011 • LoCT1011 • Math1012 • FLEn1011</div>
+    </div>
+
+    <div class="ld-step" id="ldRegStep5">
+        <div class="ld-step-icon">✅</div>
+        <div class="ld-step-title">Account Created!</div>
+        <div class="ld-step-sub">Login with your phone + password</div>
+        <div style="margin-top: 8px; padding: 6px 14px; background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.4); border-radius: 8px; color: #22C55E; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;">🎉 Welcome to UNIYO!</div>
+    </div>
+
+    <div class="ld-progress"><div class="ld-progress-fill" id="ldRegProgress"></div></div>
+    <div class="ld-counter" id="ldRegCounter">STEP 1 OF 5</div>
+</div>
+
+<!-- ============ 3. LOGIN ============ -->
+<div class="ld-full hidden" id="ldLogin">
+    <div class="ld-logo" style="width: 110px; height: 110px;">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="ldLogP" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#6D28D9"/>
+                    <stop offset="100%" style="stop-color:#4C1D95"/>
+                </linearGradient>
+            </defs>
+            <rect x="10" y="10" width="180" height="180" rx="45" fill="url(#ldLogP)"/>
+            <rect x="18" y="18" width="164" height="164" rx="36" fill="none" stroke="#FCD34D" stroke-width="1.5" opacity="0.4"/>
+            <g transform="translate(100, 100) scale(6.25) translate(-12, -12)">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" fill="none" stroke="#F8FAFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5" fill="none" stroke="#F8FAFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <circle cx="100" cy="40" r="5" fill="#FCD34D"/>
+        </svg>
+    </div>
+    <div class="ld-brand">UNIYO</div>
+    <div class="ld-tagline">Signing you in</div>
+    <div class="ld-step active" style="position: relative;">
+        <div class="ld-step-title" id="ldLoginMain" style="font-size: 15px; margin-bottom: 4px;">Verifying credentials...</div>
+        <div class="ld-step-sub" id="ldLoginSub" style="font-family: 'JetBrains Mono', monospace;">+251 9XX XXX XXX</div>
+    </div>
+</div>
+
+<!-- ============ 4. VIP CELEBRATION ============ -->
+<div class="ld-full hidden" id="ldVip" style="background: rgba(11,15,25,0.97); overflow: hidden;">
+    <!-- Confetti -->
+    <div style="position: absolute; width: 10px; height: 10px; border-radius: 2px; left: 10%; background: #F59E0B; animation: ldConfetti 3s ease-in-out infinite;"></div>
+    <div style="position: absolute; width: 10px; height: 10px; border-radius: 2px; left: 25%; background: #8B5CF6; animation: ldConfetti 3s ease-in-out infinite 0.3s;"></div>
+    <div style="position: absolute; width: 10px; height: 10px; border-radius: 2px; left: 45%; background: #22C55E; animation: ldConfetti 3s ease-in-out infinite 0.6s;"></div>
+    <div style="position: absolute; width: 10px; height: 10px; border-radius: 2px; left: 65%; background: #EC4899; animation: ldConfetti 3s ease-in-out infinite 0.9s;"></div>
+    <div style="position: absolute; width: 10px; height: 10px; border-radius: 2px; left: 85%; background: #FCD34D; animation: ldConfetti 3s ease-in-out infinite 1.2s;"></div>
+
+    <div style="position: relative; z-index: 10; font-size: 80px; margin-bottom: 16px; animation: ldBounce 1.5s ease-in-out infinite;">🏆</div>
+    <div class="ld-brand">UNIYO</div>
+    <div class="ld-tagline">VIP Competition</div>
+    <div class="ld-step active" style="position: relative;">
+        <div class="ld-step-title" id="ldVipMain" style="font-size: 18px; color: #FCD34D;">Checking eligibility...</div>
+        <div class="ld-step-sub" id="ldVipSub">Minimum score: 70%</div>
+        <div id="ldVipTicket" style="display: inline-block; margin-top: 12px; padding: 8px 20px; background: rgba(245,158,11,0.15); border: 2px dashed #FCD34D; border-radius: 10px; font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700; color: #FCD34D; letter-spacing: 2px; opacity: 0; transition: opacity 0.3s ease;">#UNIYO-8842</div>
+    </div>
+</div>
+
+<!-- ============ 5. PAYMENT MODAL ============ -->
+<div class="ld-modal hidden" id="ldPayment">
+    <div class="ld-modal-card">
+        <div class="ld-modal-icon">🔒</div>
+        <div class="ld-modal-title">Enter Transaction Number</div>
+        <div class="ld-modal-sub">Type exactly as shown in your payment receipt</div>
+        <input class="ld-input" id="ldPaymentInput" type="text" placeholder="e.g. TB123456789" maxlength="20" oninput="UNIYO_LOADER.payment.onInput()" />
+        <div style="margin-top: 10px; padding: 10px 14px; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.35); border-radius: 10px; text-align: left;">
+            <p style="font-size: 10px; color: #F59E0B; line-height: 1.5;">⚠️ <strong>One error = Rejection.</strong> No refunds. You must pay again. Please verify every digit carefully.</p>
+        </div>
+        <div class="ld-step-title" id="ldPaymentMain" style="font-size: 13px; margin-top: 12px; min-height: 18px;">Type your transaction number above</div>
+        <div class="ld-step-sub" id="ldPaymentSub" style="margin-bottom: 12px;">300 ETB • Telebirr</div>
+        <div class="ld-progress" style="width: 100%;"><div class="ld-progress-fill" id="ldPaymentProgress"></div></div>
+        <div style="display: flex; gap: 10px; margin-top: 12px;" id="ldPaymentBtnRow">
+            <button onclick="UNIYO_LOADER.payment.hide()" style="flex: 1; padding: 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: #94A3B8; font-size: 12px; font-weight: 700; cursor: pointer;">✏️ Cancel</button>
+            <button id="ldPaymentConfirmBtn" onclick="UNIYO_LOADER.payment.confirm()" disabled style="flex: 1; padding: 12px; border-radius: 10px; border: none; background: #6D28D9; color: #FFFFFF; font-size: 12px; font-weight: 700; cursor: pointer;">✓ Verify & Submit</button>
+        </div>
+    </div>
+</div>
+
+<!-- ============ 6. CERTIFICATE MODAL ============ -->
+<div class="ld-modal hidden" id="ldCertificate">
+    <div class="ld-modal-card">
+        <div class="ld-modal-icon" style="background: rgba(245,158,11,0.15); border: 2px solid rgba(245,158,11,0.4);">📜</div>
+        <div class="ld-modal-title">Generating Certificate</div>
+        <div class="ld-modal-sub">A4 Landscape • VIP Template</div>
+        <div class="ld-checklist">
+            <div class="ld-check" id="ldCertItem1"><span class="ld-check-icon">⟳</span><span>Rendering gold badge...</span></div>
+            <div class="ld-check" id="ldCertItem2"><span class="ld-check-icon">•</span><span>Applying anti-tamper watermark...</span></div>
+            <div class="ld-check" id="ldCertItem3"><span class="ld-check-icon">•</span><span>Embedding student name...</span></div>
+            <div class="ld-check" id="ldCertItem4"><span class="ld-check-icon">•</span><span>Generating QR code...</span></div>
+            <div class="ld-check" id="ldCertItem5"><span class="ld-check-icon">•</span><span>Finalizing PDF...</span></div>
+        </div>
+        <div class="ld-progress" style="width: 100%;"><div class="ld-progress-fill" id="ldCertProgress"></div></div>
+        <div class="ld-step-title" id="ldCertMain" style="margin-top: 12px; font-size: 13px;">Starting...</div>
+        <div class="ld-step-sub" id="ldCertSub">staff.py generator</div>
+    </div>
+</div>
+
+<!-- ============ 7. EXAM DOWNLOAD ============ -->
+<div class="ld-full hidden" id="ldDownload">
+    <div style="width: 80px; height: 90px; margin-bottom: 16px; z-index: 10; animation: ldFloat 3s ease-in-out infinite;">
+        <svg viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 5H20a5 5 0 0 0-5 5v70a5 5 0 0 0 5 5h40a5 5 0 0 0 5-5V20z" fill="#6D28D9" stroke="#4C1D95" stroke-width="2"/>
+            <path d="M50 5v20h20" fill="none" stroke="#4C1D95" stroke-width="2"/>
+            <text x="40" y="58" font-family="Arial Black" font-size="14" font-weight="900" fill="#FCD34D" text-anchor="middle">PDF</text>
+            <text x="40" y="72" font-family="Arial" font-size="8" fill="#F8FAFC" text-anchor="middle">EXAM</text>
+        </svg>
+    </div>
+    <div class="ld-brand">UNIYO</div>
+    <div class="ld-tagline">Exam Library</div>
+    <div style="z-index: 10; font-size: 14px; font-weight: 700; color: #F8FAFC; margin-bottom: 2px;">Econ1011_Final_2024.pdf</div>
+    <div style="z-index: 10; font-size: 10px; color: #94A3B8; font-family: 'JetBrains Mono', monospace; margin-bottom: 16px;">Economics • Final Exam • 2024</div>
+    <div style="z-index: 10; font-size: 28px; font-weight: 800; color: #F8FAFC; font-family: 'JetBrains Mono', monospace; margin-bottom: 4px;" id="ldDownloadPercentage">0%</div>
+    <div style="width: 260px; height: 8px; background: rgba(109,40,217,0.2); border-radius: 20px; overflow: hidden; margin-bottom: 10px; z-index: 10; position: relative;">
+        <div style="height: 100%; background: linear-gradient(90deg, #6D28D9, #38BDF8); border-radius: 20px; width: 0%; transition: width 0.3s ease; box-shadow: 0 0 10px #6D28D9;" id="ldDownloadProgress"></div>
+    </div>
+    <div style="z-index: 10; font-size: 10px; color: #94A3B8; font-family: 'JetBrains Mono', monospace; margin-bottom: 14px;" id="ldDownloadBytes">0 MB / 12.4 MB</div>
+    <div class="ld-step-title" style="z-index: 10; font-size: 13px;" id="ldDownloadStatus">Starting download...</div>
+</div>
+
+<!-- ============ 8. OFFLINE SYNC TOAST ============ -->
+<div class="ld-toast" id="ldSyncToast">
+    <div class="ld-toast-icon">⟳</div>
+    <div class="ld-toast-content">
+        <div class="ld-toast-title" id="ldSyncTitle">Syncing 1 of 3...</div>
+        <div class="ld-toast-sub" id="ldSyncSub">Psych1011 • Score: 75%</div>
+    </div>
+    <div class="ld-toast-badge" id="ldSyncQueue">3 LEFT</div>
+</div>
+
+<!-- ============ 9. PROFILE UPDATE BUTTON ============ -->
+<button class="ld-save-btn" id="ldSaveBtn" onclick="UNIYO_LOADER.profileUpdate.start('ldSaveBtn')" style="display: none; padding: 13px; border-radius: 12px; border: none; font-size: 14px; font-weight: 700; cursor: pointer; background: #6D28D9; color: #FFFFFF; box-shadow: 0 4px 14px rgba(109,40,217,0.4); display: flex; align-items: center; justify-content: center; gap: 8px;">
+    <span class="ld-btn-icon" id="ldBtnIcon">💾</span>
+    <span class="ld-btn-text" id="ldBtnText">Save Changes</span>
+</button>
+
+<!-- ============ 10. SESSION EXPIRY ============ -->
+<div class="ld-full hidden" id="ldSession">
+    <div style="width: 90px; height: 90px; border-radius: 50%; border: 3px solid #EC4899; background: rgba(236,72,153,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; z-index: 10; animation: ldPulse 1.5s ease-in-out infinite;">
+        <div style="position: relative; width: 50px; height: 50px; border-radius: 50%; background: #111827; border: 2px solid #94A3B8;">
+            <div style="position: absolute; bottom: 50%; left: 50%; width: 3px; height: 12px; background: #F8FAFC; transform: translateX(-50%); transform-origin: bottom center; animation: ldSpin 5s linear infinite;"></div>
+            <div style="position: absolute; bottom: 50%; left: 50%; width: 2px; height: 18px; background: #EC4899; transform: translateX(-50%); transform-origin: bottom center; animation: ldSpin 1s linear infinite;"></div>
+        </div>
+    </div>
+    <div style="z-index: 10; font-size: 22px; font-weight: 800; color: #F8FAFC; margin-bottom: 4px;">Session Expired</div>
+    <div style="z-index: 10; font-size: 13px; color: #94A3B8; margin-bottom: 20px;">Your 12-hour session has ended</div>
+    <div style="position: relative; width: 80px; height: 80px; margin-bottom: 16px; z-index: 10;">
+        <svg style="width: 100%; height: 100%; transform: rotate(-90deg);" viewBox="0 0 80 80">
+            <circle style="fill: none; stroke: rgba(236,72,153,0.15); stroke-width: 6;" cx="40" cy="40" r="36"/>
+            <circle style="fill: none; stroke: #EC4899; stroke-width: 6; stroke-linecap: round; stroke-dasharray: 226; stroke-dashoffset: 0; transition: stroke-dashoffset 1s linear;" id="ldSessionRing" cx="40" cy="40" r="36"/>
+        </svg>
+    </div>
+    <div style="z-index: 10; font-size: 48px; font-weight: 800; color: #EC4899; font-family: 'JetBrains Mono', monospace; margin-bottom: 16px;" id="ldSessionCountdown">5</div>
+    <div style="z-index: 10; font-size: 12px; font-weight: 600; color: #94A3B8; margin-bottom: 20px;" id="ldSessionMsg">Redirecting to login...</div>
+    <button onclick="UNIYO_LOADER.sessionExpiry.hide()" style="z-index: 10; padding: 12px 20px; border-radius: 10px; border: none; background: #6D28D9; color: #FFFFFF; font-size: 12px; font-weight: 700; cursor: pointer;">🔐 Login Again</button>
+</div>
+
+<!-- ============ ANIMATIONS ============ -->
+<style>
+@keyframes ldConfetti {
+    0% { top: -10px; transform: rotate(0deg); opacity: 1; }
+    100% { top: 100vh; transform: rotate(720deg); opacity: 0; }
+}
+@keyframes ldBounce {
+    0%, 100% { transform: translateY(0) scale(1); }
+    30% { transform: translateY(-15px) scale(1.1); }
+    60% { transform: translateY(0) scale(0.95); }
+}
+</style>

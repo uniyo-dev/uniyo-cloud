@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>UNIYO — Offline Sync Toast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-violet: #6D28D9;
+      --brand-violet-deep: #4C1D95;
+      --brand-gold: #F59E0B;
+      --bg-primary: #0B0F19;
+      --bg-surface: #111827;
+      --text-primary: #F8FAFC;
+      --text-muted: #94A3B8;
+      --success-green: #22C55E;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      background: var(--bg-primary);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-primary);
+      padding: 20px;
+      position: relative;
+    }
+    .demo-btn {
+      padding: 16px 28px;
+      border-radius: 14px;
+      border: none;
+      background: var(--brand-violet);
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 8px 24px rgba(109, 40, 217, 0.5);
+    }
+    .demo-btn:hover { background: var(--brand-violet-deep); }
+
+    .mock-content {
+      position: absolute;
+      top: 20%; left: 10%; right: 10%;
+      display: flex; flex-direction: column; gap: 10px;
+      opacity: 0.3;
+    }
+    .mock-card {
+      background: var(--bg-surface);
+      border-radius: 12px;
+      padding: 16px;
+      height: 60px;
+    }
+
+    .sync-toast {
+      position: fixed;
+      bottom: 24px; left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--bg-surface);
+      border: 1px solid rgba(109, 40, 217, 0.4);
+      border-radius: 14px;
+      padding: 12px 18px;
+      max-width: 340px; width: 90%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(109, 40, 217, 0.3);
+      z-index: 999999;
+      display: flex; align-items: center; gap: 12px;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .sync-toast.visible { transform: translateX(-50%) translateY(0); }
+
+    .sync-icon {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(109, 40, 217, 0.2);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      animation: syncSpin 1.5s linear infinite;
+    }
+    @keyframes syncSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+    .toast-content { flex: 1; min-width: 0; }
+    .toast-title { font-size: 12px; font-weight: 700; color: var(--text-primary); margin-bottom: 2px; }
+    .toast-sub { font-size: 10px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    .queue-badge {
+      background: rgba(245, 158, 11, 0.2);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: var(--brand-gold);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; font-weight: 700;
+      padding: 4px 8px; border-radius: 6px;
+      flex-shrink: 0;
+    }
+    .sync-toast.success {
+      border-color: rgba(34, 197, 94, 0.5);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(34, 197, 94, 0.3);
+    }
+    .sync-toast.success .sync-icon { background: rgba(34, 197, 94, 0.2); animation: none; }
+    .sync-toast.success .queue-badge {
+      background: rgba(34, 197, 94, 0.2);
+      border-color: rgba(34, 197, 94, 0.4);
+      color: var(--success-green);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="mock-content">
+    <div class="mock-card"></div>
+    <div class="mock-card"></div>
+    <div class="mock-card"></div>
+  </div>
+
+  <button class="demo-btn" onclick="startSync()">🔄 Start Offline Sync (Demo)</button>
+
+  <div class="sync-toast" id="syncToast">
+    <div class="sync-icon">⟳</div>
+    <div class="toast-content">
+      <div class="toast-title" id="syncTitle">Syncing 1 of 3...</div>
+      <div class="toast-sub" id="syncSub">Psych1011 • Score: 75%</div>
+    </div>
+    <div class="queue-badge" id="syncQueue">3 LEFT</div>
+  </div>
+
+  <script>
+    const syncSteps = [
+      { title: 'Syncing 1 of 3...', sub: 'Psych1011 • Score: 75%', queue: '3 LEFT' },
+      { title: 'Syncing 2 of 3...', sub: 'Hist1012 • Score: 85%', queue: '2 LEFT' },
+      { title: 'Syncing 3 of 3...', sub: 'GeES1011 • Score: 90%', queue: '1 LEFT' },
+      { title: 'All synced! ✅', sub: 'Back online', queue: 'DONE' }
+    ];
+    let syncIndex = 0;
+
+    function startSync() {
+      const toast = document.getElementById('syncToast');
+      toast.classList.add('visible');
+      toast.classList.remove('success');
+      syncIndex = 0;
+      updateSync(0);
+      startAutoSync();
+    }
+
+    function updateSync(index) {
+      document.getElementById('syncTitle').textContent = syncSteps[index].title;
+      document.getElementById('syncSub').textContent = syncSteps[index].sub;
+      document.getElementById('syncQueue').textContent = syncSteps[index].queue;
+      if (index === syncSteps.length - 1) {
+        document.getElementById('syncToast').classList.add('success');
+      }
+    }
+
+    function startAutoSync() {
+      const interval = setInterval(() => {
+        syncIndex++;
+        if (syncIndex < syncSteps.length) {
+          updateSync(syncIndex);
+        } else {
+          clearInterval(interval);
+          setTimeout(() => {
+            document.getElementById('syncToast').classList.remove('visible');
+          }, 2000);
+        }
+      }, 1500);
+    }
+  </script>
+</body>
+</html>

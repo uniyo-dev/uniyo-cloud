@@ -1,0 +1,356 @@
+/* ============================================
+   UNIYO LMS - Complete Loader System
+   Brand Violet: #6D28D9
+   ============================================ */
+
+:root {
+    --ld-violet: #6D28D9;
+    --ld-violet-deep: #4C1D95;
+    --ld-violet-light: #8B5CF6;
+    --ld-gold: #FCD34D;
+    --ld-gold-dark: #F59E0B;
+    --ld-bg: #0B0F19;
+    --ld-surface: #111827;
+    --ld-elevated: #1A2332;
+    --ld-text: #F8FAFC;
+    --ld-text-muted: #94A3B8;
+    --ld-success: #22C55E;
+    --ld-danger: #EC4899;
+}
+
+/* ============ 1. APP LAUNCH (Full Screen) ============ */
+.ld-launch {
+    position: fixed; top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: var(--ld-bg);
+    z-index: 999999;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    overflow: hidden;
+}
+.ld-launch.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+.ld-launch-intro {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 20;
+    transition: opacity 0.5s ease;
+}
+.ld-launch-intro.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.ld-launch-intro svg {
+    width: 240px;
+    filter: drop-shadow(0 20px 40px rgba(109, 40, 217, 0.7));
+    animation: ldFloat 2s ease-in-out infinite;
+}
+@keyframes ldFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-10px) scale(1.05); }
+}
+
+.ld-launch-story {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 10;
+}
+.ld-frame {
+    position: absolute;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    opacity: 0; transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+}
+.ld-frame.active { opacity: 1; transform: translateY(0); }
+
+.ld-phone {
+    width: 512px; height: 1123px;
+    background: #1A1A2E;
+    border: 6px solid #2D2D3D;
+    border-radius: 42px;
+    padding: 12px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.8), 0 0 0 3px rgba(109,40,217,0.4), inset 0 0 0 1px rgba(255,255,255,0.1);
+    position: relative;
+    transform: scale(0.62);
+    transform-origin: center center;
+}
+.ld-phone-notch {
+    position: absolute; top: 12px; left: 50%;
+    transform: translateX(-50%);
+    width: 110px; height: 22px;
+    background: #2D2D3D; border-radius: 12px; z-index: 10;
+}
+.ld-phone-screen {
+    width: 100%; height: 100%;
+    border-radius: 30px; overflow: hidden;
+    background: var(--ld-surface); position: relative;
+}
+.ld-phone-screen iframe {
+    width: 720px; height: 1600px;
+    border: none; display: block; position: absolute;
+    top: 0; left: 0;
+    transform: scale(0.661);
+    transform-origin: top left;
+}
+@media (max-height: 900px) { .ld-phone { transform: scale(0.55); } }
+@media (max-height: 750px) { .ld-phone { transform: scale(0.48); } }
+@media (max-height: 650px) { .ld-phone { transform: scale(0.4); } }
+
+.ld-caption {
+    position: absolute; bottom: 80px; left: 0; right: 0;
+    text-align: center;
+}
+.ld-title { font-size: 18px; font-weight: 800; color: var(--ld-text); margin-bottom: 4px; }
+.ld-sub { font-size: 12px; color: var(--ld-text-muted); }
+
+.ld-dots {
+    position: absolute; bottom: 40px; left: 50%;
+    transform: translateX(-50%);
+    display: flex; gap: 12px; z-index: 15;
+}
+.ld-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: rgba(109, 40, 217, 0.3);
+    transition: all 0.3s ease;
+}
+.ld-dot.active {
+    background: var(--ld-gold);
+    box-shadow: 0 0 12px var(--ld-gold);
+    transform: scale(1.5);
+}
+
+.ld-skip {
+    position: fixed; bottom: 20px; right: 20px;
+    padding: 12px 24px;
+    border-radius: 25px;
+    border: 2px solid var(--ld-gold);
+    background: var(--ld-violet);
+    color: #FFFFFF;
+    font-size: 14px; font-weight: 700;
+    cursor: pointer; font-family: 'Inter', sans-serif;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(109, 40, 217, 0.6);
+}
+.ld-skip:hover { background: var(--ld-gold); color: var(--ld-bg); }
+
+/* ============ 2. FULLSCREEN OVERLAY (Registration/Login/VIP/Download/Session) ============ */
+.ld-full {
+    position: fixed; top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(11, 15, 25, 0.97);
+    backdrop-filter: blur(16px);
+    z-index: 999999;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.ld-full.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+.ld-logo {
+    width: 90px; height: 90px; margin-bottom: 12px;
+    position: relative; z-index: 10;
+    filter: drop-shadow(0 12px 24px rgba(109, 40, 217, 0.5));
+    animation: ldFloat 3s ease-in-out infinite;
+}
+.ld-logo svg { width: 100%; height: 100%; }
+.ld-brand {
+    font-size: 18px; font-weight: 800; letter-spacing: 4px;
+    color: var(--ld-text); margin-bottom: 2px; z-index: 10;
+}
+.ld-tagline {
+    font-size: 7px; font-weight: 700; letter-spacing: 2px;
+    color: var(--ld-violet-light); margin-bottom: 20px;
+    text-transform: uppercase; z-index: 10;
+}
+.ld-step {
+    position: absolute; text-align: center;
+    opacity: 0; transform: translateY(20px);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none; width: 90%; max-width: 340px; z-index: 10;
+}
+.ld-step.active { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.ld-step-icon { font-size: 30px; margin-bottom: 6px; }
+.ld-step-title { font-size: 14px; font-weight: 700; color: var(--ld-text); margin-bottom: 4px; }
+.ld-step-sub { font-size: 10px; color: var(--ld-text-muted); line-height: 1.5; }
+
+.ld-progress {
+    width: 220px; height: 5px;
+    background: rgba(109, 40, 217, 0.2);
+    border-radius: 20px; overflow: hidden;
+    margin-top: 16px; z-index: 10;
+}
+.ld-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--ld-violet), var(--ld-gold));
+    border-radius: 20px;
+    transition: width 0.5s ease;
+    width: 0%;
+    box-shadow: 0 0 10px var(--ld-violet);
+}
+.ld-counter {
+    font-size: 9px; font-weight: 700; color: var(--ld-text-muted);
+    margin-top: 6px; z-index: 10;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Verify inputs (Registration/Payment) */
+.ld-input {
+    width: 100%; padding: 12px 14px;
+    background: var(--ld-elevated);
+    border: 2px solid rgba(245, 158, 11, 0.4);
+    border-radius: 10px;
+    color: var(--ld-gold);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px; font-weight: 700;
+    letter-spacing: 2px; text-align: center;
+    outline: none; margin-top: 8px;
+    text-transform: uppercase;
+}
+.ld-input:focus { border-color: var(--ld-violet); }
+.ld-input.error { border-color: var(--ld-danger); }
+.ld-input.success { border-color: var(--ld-success); }
+.ld-btn-verify {
+    margin-top: 10px; padding: 12px 22px;
+    border-radius: 10px; border: none;
+    background: var(--ld-violet); color: #FFFFFF;
+    font-size: 12px; font-weight: 700; cursor: pointer;
+}
+.ld-btn-verify:hover { background: var(--ld-violet-deep); }
+.ld-btn-verify:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ============ 3. MODAL (Payment/Certificate) ============ */
+.ld-modal {
+    position: fixed; top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(11, 15, 25, 0.85);
+    backdrop-filter: blur(6px);
+    z-index: 999999;
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 20px;
+}
+.ld-modal.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.ld-modal-card {
+    background: var(--ld-surface);
+    border: 1px solid rgba(109, 40, 217, 0.3);
+    border-radius: 20px;
+    padding: 28px 24px;
+    max-width: 380px; width: 100%;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.5), 0 0 30px rgba(109,40,217,0.2);
+    animation: ldModalIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes ldModalIn {
+    0% { transform: scale(0.9) translateY(20px); opacity: 0; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+.ld-modal-icon {
+    width: 60px; height: 60px; border-radius: 50%;
+    background: rgba(109, 40, 217, 0.2);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 14px; font-size: 28px;
+    animation: ldPulse 2s ease-in-out infinite;
+}
+@keyframes ldPulse {
+    0%, 100% { box-shadow: 0 0 15px rgba(109, 40, 217, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(109, 40, 217, 0.6); }
+}
+.ld-modal-title { font-size: 17px; font-weight: 800; color: var(--ld-text); margin-bottom: 4px; }
+.ld-modal-sub { font-size: 12px; color: var(--ld-text-muted); margin-bottom: 16px; }
+
+/* Checklist (Certificate) */
+.ld-checklist { text-align: left; margin-bottom: 16px; }
+.ld-check {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 12px; border-radius: 10px;
+    margin-bottom: 6px;
+    background: var(--ld-elevated);
+    font-size: 12px; font-weight: 600;
+    color: var(--ld-text-muted);
+    transition: all 0.3s ease;
+}
+.ld-check.active {
+    background: rgba(20, 184, 166, 0.1);
+    color: #14B8A6;
+    border: 1px solid rgba(20, 184, 166, 0.3);
+}
+.ld-check.done {
+    background: rgba(34, 197, 94, 0.1);
+    color: var(--ld-success);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+.ld-check-icon {
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid currentColor;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; flex-shrink: 0;
+}
+.ld-check.active .ld-check-icon { animation: ldSpin 1s linear infinite; }
+.ld-check.done .ld-check-icon { background: var(--ld-success); color: #FFFFFF; border-color: var(--ld-success); }
+@keyframes ldSpin { to { transform: rotate(360deg); } }
+
+/* ============ 4. TOAST (Offline Sync) ============ */
+.ld-toast {
+    position: fixed; bottom: 24px; left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--ld-surface);
+    border: 1px solid rgba(109, 40, 217, 0.4);
+    border-radius: 14px;
+    padding: 12px 18px;
+    max-width: 340px; width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    z-index: 999999;
+    display: flex; align-items: center; gap: 12px;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ld-toast.visible { transform: translateX(-50%) translateY(0); }
+.ld-toast-icon {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(109, 40, 217, 0.2);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    animation: ldSpin 1.5s linear infinite;
+}
+.ld-toast.success .ld-toast-icon { background: rgba(34, 197, 94, 0.2); animation: none; }
+.ld-toast-content { flex: 1; min-width: 0; }
+.ld-toast-title { font-size: 12px; font-weight: 700; color: var(--ld-text); margin-bottom: 2px; }
+.ld-toast-sub { font-size: 10px; color: var(--ld-text-muted); }
+.ld-toast-badge {
+    background: rgba(245, 158, 11, 0.2);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    color: var(--ld-gold);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; font-weight: 700;
+    padding: 4px 8px; border-radius: 6px; flex-shrink: 0;
+}
+.ld-toast.success .ld-toast-badge {
+    background: rgba(34, 197, 94, 0.2);
+    border-color: rgba(34, 197, 94, 0.4);
+    color: var(--ld-success);
+}
+
+/* ============ 5. BUTTON SPINNER ============ */
+.ld-btn-spinner {
+    display: inline-block;
+    width: 16px; height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #FFFFFF;
+    border-radius: 50%;
+    animation: ldSpin 0.7s linear infinite;
+}
+
+/* ============ LIGHT MODE ============ */
+body.light-mode .ld-launch,
+body.light-mode .ld-full { background: rgba(248, 250, 252, 0.97); }
+body.light-mode .ld-brand,
+body.light-mode .ld-step-title,
+body.light-mode .ld-title,
+body.light-mode .ld-modal-title,
+body.light-mode .ld-toast-title { color: #0B0F19; }
+body.light-mode .ld-step-sub,
+body.light-mode .ld-sub,
+body.light-mode .ld-counter,
+body.light-mode .ld-modal-sub,
+body.light-mode .ld-toast-sub { color: #475569; }
+body.light-mode .ld-modal-card { background: #FFFFFF; }
+body.light-mode .ld-toast { background: #FFFFFF; }
+body.light-mode .ld-input { background: #F1F5F9; color: #0B0F19; }

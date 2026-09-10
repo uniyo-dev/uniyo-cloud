@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>UNIYO — Exam Download</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-violet: #6D28D9;
+      --brand-violet-deep: #4C1D95;
+      --brand-violet-light: #8B5CF6;
+      --brand-gold: #FCD34D;
+      --bg-primary: #0B0F19;
+      --bg-surface: #111827;
+      --text-primary: #F8FAFC;
+      --text-muted: #94A3B8;
+      --info-blue: #38BDF8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      background: var(--bg-primary);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-primary);
+      padding: 20px;
+    }
+    .demo-btn {
+      padding: 16px 28px;
+      border-radius: 14px;
+      border: none;
+      background: var(--brand-violet);
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 8px 24px rgba(109, 40, 217, 0.5);
+    }
+    .demo-btn:hover { background: var(--brand-violet-deep); }
+
+    .download-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(11, 15, 25, 0.97);
+      backdrop-filter: blur(16px);
+      z-index: 999999;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      opacity: 1; visibility: visible;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+    .download-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .download-overlay::before {
+      content: '';
+      position: absolute;
+      width: 350px; height: 350px;
+      background: radial-gradient(circle, rgba(109, 40, 217, 0.25) 0%, rgba(109, 40, 217, 0.08) 40%, transparent 70%);
+      filter: blur(50px);
+      animation: haloPulse 4s ease-in-out infinite alternate;
+    }
+    @keyframes haloPulse { 0% { transform: scale(0.9); opacity: 0.7; } 100% { transform: scale(1.1); opacity: 1; } }
+
+    .pdf-icon {
+      width: 80px; height: 90px;
+      position: relative; z-index: 10;
+      margin-bottom: 16px;
+      animation: pdfFloat 3s ease-in-out infinite;
+    }
+    .pdf-icon svg { width: 100%; height: 100%; }
+    @keyframes pdfFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+    .brand-title { font-size: 20px; font-weight: 800; letter-spacing: 5px; color: var(--text-primary); margin-bottom: 3px; position: relative; z-index: 10; }
+    .brand-tagline { font-size: 8px; font-weight: 700; letter-spacing: 2px; color: var(--brand-violet-light); margin-bottom: 20px; text-transform: uppercase; position: relative; z-index: 10; }
+
+    .file-name { font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 2px; position: relative; z-index: 10; }
+    .file-meta { font-size: 10px; color: var(--text-muted); position: relative; z-index: 10; font-family: 'JetBrains Mono', monospace; margin-bottom: 16px; }
+
+    .progress-container { width: 260px; position: relative; z-index: 10; margin-bottom: 10px; }
+    .progress-track {
+      width: 100%; height: 8px;
+      background: rgba(109, 40, 217, 0.2);
+      border-radius: 20px; overflow: hidden;
+      position: relative;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--brand-violet), var(--info-blue));
+      border-radius: 20px;
+      width: 0%; transition: width 0.3s ease;
+      box-shadow: 0 0 10px var(--brand-violet);
+    }
+    .progress-fill::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+      animation: shimmer 1.2s infinite;
+    }
+    @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+
+    .percentage {
+      font-size: 28px; font-weight: 800;
+      color: var(--text-primary);
+      position: relative; z-index: 10;
+      margin-bottom: 4px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .bytes-info {
+      font-size: 10px; color: var(--text-muted);
+      position: relative; z-index: 10;
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 14px;
+    }
+    .status-main {
+      font-size: 13px; font-weight: 700;
+      color: var(--text-primary);
+      position: relative; z-index: 10;
+      min-height: 18px; transition: opacity 0.2s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="demo-btn" onclick="startDownload()">📥 Download Exam (Demo)</button>
+
+  <div class="download-overlay hidden" id="downloadOverlay">
+    <div class="pdf-icon">
+      <svg viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 5H20a5 5 0 0 0-5 5v70a5 5 0 0 0 5 5h40a5 5 0 0 0 5-5V20z" fill="#6D28D9" stroke="#4C1D95" stroke-width="2"/>
+        <path d="M50 5v20h20" fill="none" stroke="#4C1D95" stroke-width="2"/>
+        <text x="40" y="58" font-family="Arial Black" font-size="14" font-weight="900" fill="#FCD34D" text-anchor="middle">PDF</text>
+        <text x="40" y="72" font-family="Arial" font-size="8" fill="#F8FAFC" text-anchor="middle">EXAM</text>
+      </svg>
+    </div>
+
+    <div class="brand-title">UNIYO</div>
+    <div class="brand-tagline">Exam Library</div>
+
+    <div class="file-name">Econ1011_Final_2024.pdf</div>
+    <div class="file-meta">Economics • Final Exam • 2024</div>
+
+    <div class="percentage" id="dlPercentage">0%</div>
+
+    <div class="progress-container">
+      <div class="progress-track">
+        <div class="progress-fill" id="dlProgress"></div>
+      </div>
+    </div>
+
+    <div class="bytes-info" id="dlBytes">0 MB / 12.4 MB</div>
+    <div class="status-main" id="dlStatus">Starting download...</div>
+  </div>
+
+  <script>
+    function startDownload() {
+      document.getElementById('downloadOverlay').classList.remove('hidden');
+      document.getElementById('dlPercentage').textContent = '0%';
+      document.getElementById('dlProgress').style.width = '0%';
+      document.getElementById('dlBytes').textContent = '0 MB / 12.4 MB';
+      document.getElementById('dlStatus').textContent = 'Starting download...';
+
+      let progress = 0;
+      const totalSize = 12.4;
+      const interval = setInterval(() => {
+        progress += Math.floor(Math.random() * 15) + 5;
+        if (progress >= 100) {
+          progress = 100;
+          clearInterval(interval);
+          document.getElementById('dlStatus').textContent = 'Download complete! Opening viewer...';
+          setTimeout(() => { document.getElementById('downloadOverlay').classList.add('hidden'); }, 1500);
+        } else if (progress > 60) {
+          document.getElementById('dlStatus').textContent = 'Optimizing for mobile...';
+        } else if (progress > 30) {
+          document.getElementById('dlStatus').textContent = 'Downloading PDF...';
+        }
+        const downloadedMB = ((progress / 100) * totalSize).toFixed(1);
+        document.getElementById('dlPercentage').textContent = progress + '%';
+        document.getElementById('dlProgress').style.width = progress + '%';
+        document.getElementById('dlBytes').textContent = downloadedMB + ' MB / ' + totalSize + ' MB';
+      }, 400);
+    }
+  </script>
+</body>
+</html>

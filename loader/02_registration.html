@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>UNIYO — Registration Loader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-violet: #6D28D9;
+      --brand-violet-deep: #4C1D95;
+      --brand-violet-light: #8B5CF6;
+      --brand-gold: #FCD34D;
+      --bg-primary: #0B0F19;
+      --bg-surface: #111827;
+      --bg-elevated: #1A2332;
+      --text-primary: #F8FAFC;
+      --text-muted: #94A3B8;
+      --success-green: #22C55E;
+      --danger-pink: #EC4899;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      background: var(--bg-primary);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-primary); padding: 20px;
+    }
+    .demo-btn {
+      padding: 16px 28px; border-radius: 14px; border: none;
+      background: var(--brand-violet); color: #FFFFFF;
+      font-size: 15px; font-weight: 700; cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 8px 24px rgba(109, 40, 217, 0.5);
+    }
+    .demo-btn:hover { background: var(--brand-violet-deep); }
+
+    .reg-overlay {
+      position: fixed; top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(11, 15, 25, 0.97);
+      backdrop-filter: blur(16px);
+      z-index: 999999;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      opacity: 1; visibility: visible;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+    .reg-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .reg-overlay::before {
+      content: '';
+      position: absolute;
+      width: 380px; height: 380px;
+      background: radial-gradient(circle, rgba(109, 40, 217, 0.3) 0%, rgba(109, 40, 217, 0.1) 40%, transparent 70%);
+      filter: blur(50px);
+      animation: haloPulse 5s ease-in-out infinite alternate;
+    }
+    @keyframes haloPulse { 0% { transform: scale(0.9); opacity: 0.7; } 100% { transform: scale(1.15); opacity: 1; } }
+
+    .logo-wrap {
+      width: 70px; height: 70px; margin-bottom: 8px;
+      position: relative; z-index: 10;
+      filter: drop-shadow(0 12px 24px rgba(109, 40, 217, 0.5));
+      animation: logoFloat 3s ease-in-out infinite;
+    }
+    .logo-wrap svg { width: 100%; height: 100%; overflow: visible; }
+    @keyframes logoFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+
+    .brand-title { font-size: 16px; font-weight: 800; letter-spacing: 4px; color: var(--text-primary); margin-bottom: 2px; position: relative; z-index: 10; }
+    .brand-tagline { font-size: 7px; font-weight: 700; letter-spacing: 2px; color: var(--brand-violet-light); margin-bottom: 12px; text-transform: uppercase; position: relative; z-index: 10; }
+
+    .step-container {
+      position: relative; z-index: 10;
+      width: 90%; max-width: 340px; min-height: 140px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .step {
+      position: absolute; text-align: center;
+      opacity: 0; transform: translateY(20px);
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none; width: 100%;
+    }
+    .step.active { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .step-icon { font-size: 26px; margin-bottom: 4px; }
+    .step-title { font-size: 13px; font-weight: 700; color: var(--text-primary); margin-bottom: 3px; }
+    .step-sub { font-size: 9px; color: var(--text-muted); line-height: 1.4; }
+
+    .verify-input-wrap { margin-top: 8px; }
+    .verify-input {
+      width: 100%;
+      padding: 10px 14px;
+      background: var(--bg-elevated);
+      border: 2px solid rgba(245, 158, 11, 0.4);
+      border-radius: 10px;
+      color: var(--brand-gold);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px; font-weight: 700;
+      letter-spacing: 2px;
+      text-align: center;
+      outline: none;
+      transition: border-color 0.3s ease;
+      text-transform: uppercase;
+    }
+    .verify-input:focus { border-color: var(--brand-violet); }
+    .verify-input.error { border-color: #EC4899; }
+    .verify-input.success { border-color: #22C55E; }
+
+    .verify-btn {
+      margin-top: 8px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      background: var(--brand-violet);
+      color: #FFFFFF;
+      font-size: 11px; font-weight: 700;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.2s ease;
+    }
+    .verify-btn:hover { background: var(--brand-violet-deep); }
+    .verify-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .step-highlight {
+      display: inline-block;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: var(--brand-gold);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; font-weight: 700;
+      padding: 4px 12px; border-radius: 8px; margin-top: 6px;
+    }
+    .step-warning {
+      display: inline-block;
+      background: rgba(236, 72, 153, 0.15);
+      border: 1px solid rgba(236, 72, 153, 0.4);
+      color: var(--danger-pink);
+      font-size: 8px; font-weight: 700;
+      padding: 3px 10px; border-radius: 6px; margin-top: 6px;
+    }
+
+    .progress-track {
+      width: 220px; height: 5px;
+      background: rgba(109, 40, 217, 0.2);
+      border-radius: 20px; overflow: hidden;
+      margin-top: 12px; position: relative; z-index: 10;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--brand-violet), var(--brand-gold));
+      border-radius: 20px;
+      transition: width 0.5s ease;
+      width: 0%;
+      box-shadow: 0 0 10px var(--brand-violet);
+    }
+    .step-counter {
+      font-size: 8px; font-weight: 700;
+      color: var(--text-muted); margin-top: 5px;
+      position: relative; z-index: 10;
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="demo-btn" onclick="startRegistration()">📝 Create Account (Demo)</button>
+
+  <div class="reg-overlay hidden" id="regOverlay">
+    <div class="logo-wrap">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="regPurple4" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6D28D9"/>
+            <stop offset="100%" style="stop-color:#4C1D95"/>
+          </linearGradient>
+        </defs>
+        <rect x="10" y="10" width="180" height="180" rx="45" fill="url(#regPurple4)"/>
+        <rect x="18" y="18" width="164" height="164" rx="36" fill="none" stroke="#FCD34D" stroke-width="1.5" opacity="0.4"/>
+        <g transform="translate(100, 100) scale(6.25) translate(-12, -12)">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z" fill="none" stroke="#F8FAFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6 12v5c3 3 9 3 12 0v-5" fill="none" stroke="#F8FAFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <circle cx="100" cy="40" r="5" fill="#FCD34D"/>
+      </svg>
+    </div>
+
+    <div class="brand-title">UNIYO</div>
+    <div class="brand-tagline">Creating your account</div>
+
+    <div class="step-container">
+      <!-- STEP 1: Verify Phone -->
+      <div class="step active" id="step1">
+        <div class="step-icon">📱</div>
+        <div class="step-title">Verify Your Phone Number</div>
+        <div class="step-sub">Type: 0912345678</div>
+        <div class="verify-input-wrap">
+          <input class="verify-input" id="phoneInput" type="text" placeholder="09XXXXXXXX" maxlength="10" />
+        </div>
+        <button class="verify-btn" id="phoneBtn" onclick="verifyPhone()" disabled>✓ Verify Phone</button>
+      </div>
+
+      <!-- STEP 2: Verify Password -->
+      <div class="step" id="step2">
+        <div class="step-icon">🔐</div>
+        <div class="step-title">Verify Your Password</div>
+        <div class="step-sub">Type: Abebe@2024</div>
+        <div class="verify-input-wrap">
+          <input class="verify-input" id="passwordInput" type="text" placeholder="Your password" maxlength="20" />
+        </div>
+        <button class="verify-btn" id="passwordBtn" onclick="verifyPassword()" disabled>✓ Verify Password</button>
+        <div class="step-warning">⚠️ Memorize this! No reset will be sent.</div>
+      </div>
+
+      <!-- STEP 3: Stream -->
+      <div class="step" id="step3">
+        <div class="step-icon">📚</div>
+        <div class="step-title">Selecting Academic Stream</div>
+        <div class="step-sub">This affects your Math course</div>
+        <div class="step-highlight">🔬 Natural Science → Math1012</div>
+      </div>
+
+      <!-- STEP 4: Enrolling -->
+      <div class="step" id="step4">
+        <div class="step-icon">📖</div>
+        <div class="step-title">Enrolling in 16 courses...</div>
+        <div class="step-sub">Econ1011 • LoCT1011 • Math1012 • FLEn1011</div>
+      </div>
+
+      <!-- STEP 5: Done -->
+      <div class="step" id="step5">
+        <div class="step-icon">✅</div>
+        <div class="step-title">Account Created!</div>
+        <div class="step-sub">Login with your phone + password</div>
+        <div class="step-highlight" style="color: var(--success-green); border-color: rgba(34, 197, 94, 0.4); background: rgba(34, 197, 94, 0.15);">🎉 Welcome to UNIYO!</div>
+      </div>
+    </div>
+
+    <div class="progress-track">
+      <div class="progress-fill" id="regProgress"></div>
+    </div>
+    <div class="step-counter" id="stepCounter">STEP 1 OF 5</div>
+  </div>
+
+  <script>
+    const steps = ['step1', 'step2', 'step3', 'step4', 'step5'];
+    let currentStep = 0;
+    let autoInterval;
+
+    function startRegistration() {
+      const overlay = document.getElementById('regOverlay');
+      overlay.classList.remove('hidden');
+      currentStep = 0;
+      showStep(0);
+      updateProgress(0);
+      clearInterval(autoInterval);
+      document.getElementById('phoneInput').value = '';
+      document.getElementById('passwordInput').value = '';
+      document.getElementById('phoneBtn').disabled = true;
+      document.getElementById('passwordBtn').disabled = true;
+      document.getElementById('phoneInput').classList.remove('error', 'success');
+      document.getElementById('passwordInput').classList.remove('error', 'success');
+    }
+
+    // Phone input listener
+    document.getElementById('phoneInput').addEventListener('input', function() {
+      this.value = this.value.replace(/[^0-9]/g, '');
+      document.getElementById('phoneBtn').disabled = this.value.length !== 10;
+      this.classList.remove('error', 'success');
+    });
+
+    function verifyPhone() {
+      const input = document.getElementById('phoneInput');
+      if (input.value === '0912345678') {
+        input.classList.add('success');
+        document.getElementById('phoneBtn').disabled = true;
+        setTimeout(() => {
+          showStep(1);
+          updateProgress(1);
+        }, 400);
+      } else {
+        input.classList.add('error');
+        setTimeout(() => input.classList.remove('error'), 1200);
+      }
+    }
+
+    // Password input listener
+    document.getElementById('passwordInput').addEventListener('input', function() {
+      document.getElementById('passwordBtn').disabled = this.value.length < 6;
+      this.classList.remove('error', 'success');
+    });
+
+    function verifyPassword() {
+      const input = document.getElementById('passwordInput');
+      if (input.value === 'Abebe@2024') {
+        input.classList.add('success');
+        document.getElementById('passwordBtn').disabled = true;
+        setTimeout(() => {
+          showStep(2);
+          updateProgress(2);
+          startAutoAdvance();
+        }, 400);
+      } else {
+        input.classList.add('error');
+        setTimeout(() => input.classList.remove('error'), 1200);
+      }
+    }
+
+    function showStep(index) {
+      steps.forEach(s => document.getElementById(s).classList.remove('active'));
+      document.getElementById(steps[index]).classList.add('active');
+      currentStep = index;
+      document.getElementById('stepCounter').textContent = 'STEP ' + (index + 1) + ' OF 5';
+    }
+
+    function updateProgress(index) {
+      const progress = ((index + 1) / steps.length) * 100;
+      document.getElementById('regProgress').style.width = progress + '%';
+    }
+
+    function startAutoAdvance() {
+      clearInterval(autoInterval);
+      autoInterval = setInterval(() => {
+        if (currentStep < steps.length - 1) {
+          showStep(currentStep + 1);
+          updateProgress(currentStep);
+        } else {
+          clearInterval(autoInterval);
+          setTimeout(() => {
+            document.getElementById('regOverlay').classList.add('hidden');
+          }, 2000);
+        }
+      }, 1500);
+    }
+  </script>
+</body>
+</html>

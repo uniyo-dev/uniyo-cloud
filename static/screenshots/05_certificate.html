@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=720, initial-scale=1.0">
+  <title>UNIYO Certificate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0B0F19;
+      font-family: 'Inter', sans-serif;
+      width: 720px;
+      min-height: 1600px;
+      color: #F8FAFC;
+      overflow-x: hidden;
+    }
+    .status-bar {
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+      color: #94A3B8;
+    }
+    .cert-header { padding: 20px 24px; }
+    .back-btn { font-size: 14px; color: #94A3B8; margin-bottom: 12px; display: block; }
+    .cert-page-title { font-size: 24px; font-weight: 800; color: #F8FAFC; }
+    .cert-page-sub { font-size: 12px; color: #94A3B8; margin-top: 5px; }
+    .cert-list { padding: 0 24px; }
+    .cert-card {
+      display: flex; align-items: center; gap: 16px;
+      padding: 20px; background: #111827;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px; margin-bottom: 12px;
+    }
+    .cert-icon { font-size: 44px; }
+    .cert-info { flex: 1; }
+    .cert-info h3 { font-size: 15px; font-weight: 700; color: #F8FAFC; }
+    .cert-info p { font-size: 11px; color: #94A3B8; margin-top: 4px; }
+    .cert-info code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; color: #8B5CF6;
+    }
+    .view-btn {
+      padding: 12px 16px; background: #6D28D9;
+      color: #FFFFFF; border-radius: 10px;
+      font-size: 12px; font-weight: 700;
+      border: none; cursor: pointer;
+    }
+    .certificate-preview {
+      margin: 24px; background: #FFFDF9;
+      border-radius: 18px; padding: 36px;
+      border: 8px solid #D4AF37;
+      box-shadow: 0 0 0 4px #B45309, 0 24px 60px rgba(0,0,0,0.5);
+    }
+    .cert-logo {
+      font-size: 28px; font-weight: 800; color: #6D28D9;
+      letter-spacing: 4px; margin-bottom: 5px; text-align: center;
+    }
+    .cert-subtitle {
+      font-size: 11px; color: #64748B;
+      text-transform: uppercase; letter-spacing: 2px;
+      text-align: center;
+    }
+    .cert-medal { font-size: 56px; margin: 20px 0; text-align: center; }
+    .cert-title {
+      font-size: 20px; font-weight: 800; color: #1E1B4B;
+      text-transform: uppercase; text-align: center;
+    }
+    .cert-month {
+      font-size: 12px; color: #64748B;
+      margin-top: 5px; text-align: center;
+    }
+    .cert-presented {
+      font-size: 12px; color: #475569;
+      margin-top: 24px; text-align: center;
+    }
+    .cert-name {
+      font-size: 26px; font-weight: 700; color: #1E1B4B;
+      font-family: Georgia, serif;
+      border-bottom: 2px solid #CBD5E1;
+      display: inline-block; padding: 0 24px 8px;
+      margin-top: 10px;
+    }
+    .cert-name-wrap { text-align: center; }
+    .cert-details {
+      font-size: 11px; color: #64748B;
+      margin-top: 10px; text-align: center;
+    }
+    .cert-achievement {
+      font-size: 12px; color: #334155;
+      max-width: 500px; margin: 18px auto;
+      line-height: 1.7; text-align: center;
+    }
+    .cert-credentials {
+      background: rgba(241, 245, 249, 0.8);
+      border: 1px solid #CBD5E1;
+      border-radius: 10px; padding: 16px;
+      margin-top: 18px; font-size: 10px; color: #334155;
+    }
+    .cred-row {
+      display: flex; justify-content: space-between;
+      margin-bottom: 6px;
+    }
+    .cred-row code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+    }
+    .cert-footer {
+      display: flex; justify-content: space-between;
+      align-items: flex-end; margin-top: 30px;
+      padding-top: 20px; border-top: 1px solid #E2E8F0;
+    }
+    .qr-block { text-align: center; }
+    .qr-placeholder {
+      width: 72px; height: 72px;
+      border: 1px solid #CBD5E1;
+      margin: 0 auto; display: flex;
+      align-items: center; justify-content: center;
+      font-size: 28px;
+    }
+    .qr-label { font-size: 7px; color: #94A3B8; margin-top: 4px; }
+    .stamp-block { text-align: center; width: 100px; }
+    .stamp-circle {
+      width: 84px; height: 84px;
+      border: 2px dashed #6D28D9;
+      border-radius: 50%; margin: 0 auto;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 8px; color: #6D28D9;
+      font-weight: 700; text-align: center; line-height: 1.3;
+    }
+    .signature-block { text-align: center; width: 140px; }
+    .signature-line {
+      border-bottom: 1.5px solid #0B0F19;
+      padding-bottom: 5px;
+      font-family: Georgia, serif;
+      font-style: italic; font-size: 14px;
+      color: #1E1B4B;
+    }
+    .signature-title {
+      font-size: 8px; color: #64748B;
+      display: block; margin-top: 4px;
+    }
+    .download-actions {
+      margin: 0 24px 60px; display: flex; gap: 12px;
+    }
+    .dl-btn {
+      flex: 1; padding: 14px;
+      border-radius: 10px; font-size: 12px;
+      font-weight: 700; text-align: center;
+    }
+    .dl-pdf { background: #6D28D9; color: #FFFFFF; }
+    .dl-jpg { background: #F59E0B; color: #0B0F19; }
+  </style>
+</head>
+<body>
+  <div class="status-bar"><span>10:34</span><span>📶 🔋 80%</span></div>
+  <div class="cert-header">
+    <a class="back-btn">← Back to Dashboard</a>
+    <div class="cert-page-title">🏆 My Certificates</div>
+    <div class="cert-page-sub">Your achievements and awards</div>
+  </div>
+  <div class="cert-list">
+    <div class="cert-card">
+      <div class="cert-icon">🥇</div>
+      <div class="cert-info">
+        <h3>VIP Monthly Leadership Award - Gold</h3>
+        <p>Certificate #: <code>UNIYO-VIP-2025-01-GOLD</code></p>
+        <p>Issued: Jan 15, 2025</p>
+      </div>
+      <button class="view-btn">👁️ View</button>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">📜</div>
+      <div class="cert-info">
+        <h3>Certificate of Completion</h3>
+        <p>Certificate #: <code>UNIYO-COMP-2024-001</code></p>
+        <p>Issued: Dec 20, 2024</p>
+      </div>
+      <button class="view-btn">👁️ View</button>
+    </div>
+  </div>
+  <div class="certificate-preview">
+    <div class="cert-logo">UNIYO</div>
+    <div class="cert-subtitle">University Made for YOU</div>
+    <div class="cert-medal">🥇</div>
+    <div class="cert-title">VIP Monthly Leadership Award</div>
+    <div class="cert-month">January 2025 • Rank #1</div>
+    <div class="cert-presented">This certificate is proudly presented to</div>
+    <div class="cert-name-wrap"><div class="cert-name">Abebe Kebede</div></div>
+    <div class="cert-details">Bahir Dar University • Natural Science • Male</div>
+    <div class="cert-achievement">
+      For outstanding performance in the VIP Monthly Competition,
+      demonstrating academic distinction across the Ethiopian Higher Education System.
+    </div>
+    <div class="cert-credentials">
+      <div class="cred-row"><span>CERTIFICATE NO:</span> <code>UNIYO-VIP-2025-01-GOLD</code></div>
+      <div class="cred-row"><span>ISSUE DATE:</span> <code>Jan 15, 2025</code></div>
+      <div class="cred-row"><span>TYPE:</span> <code>VIP LEADERBOARD</code></div>
+      <div class="cred-row"><span>VERIFY:</span> <code>uniyo-cloud.onrender.com/verify</code></div>
+    </div>
+    <div class="cert-footer">
+      <div class="qr-block">
+        <div class="qr-placeholder">QR</div>
+        <div class="qr-label">Scan to Verify</div>
+      </div>
+      <div class="stamp-block">
+        <div class="stamp-circle">UNIYO AUTHENTIC</div>
+      </div>
+      <div class="signature-block">
+        <div class="signature-line">Chalachew Agegn</div>
+        <span class="signature-title">SUPER ADMIN</span>
+      </div>
+    </div>
+  </div>
+  <div class="download-actions">
+    <div class="dl-btn dl-pdf">📥 Download PDF</div>
+    <div class="dl-btn dl-jpg">📥 Download JPG</div>
+  </div>
+</body>
+</html>

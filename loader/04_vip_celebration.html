@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>UNIYO — VIP Celebration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-violet: #6D28D9;
+      --brand-violet-deep: #4C1D95;
+      --brand-violet-light: #8B5CF6;
+      --brand-gold: #FCD34D;
+      --brand-gold-light: #FDE68A;
+      --bg-primary: #0B0F19;
+      --bg-surface: #111827;
+      --text-primary: #F8FAFC;
+      --text-muted: #94A3B8;
+      --success-green: #22C55E;
+      --danger-pink: #EC4899;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      background: var(--bg-primary);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-primary);
+      padding: 20px;
+    }
+    .demo-btn {
+      padding: 16px 28px;
+      border-radius: 14px;
+      border: none;
+      background: var(--brand-violet);
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 8px 24px rgba(109, 40, 217, 0.5);
+    }
+    .demo-btn:hover { background: var(--brand-violet-deep); }
+
+    .vip-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(11, 15, 25, 0.97);
+      backdrop-filter: blur(16px);
+      z-index: 999999;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      opacity: 1; visibility: visible;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+      overflow: hidden;
+    }
+    .vip-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+    /* Confetti */
+    .confetti {
+      position: absolute;
+      width: 10px; height: 10px;
+      border-radius: 2px;
+      animation: confettiFall 3s ease-in-out infinite;
+      pointer-events: none;
+    }
+    .confetti:nth-child(1) { left: 10%; background: #F59E0B; animation-delay: 0s; }
+    .confetti:nth-child(2) { left: 20%; background: #8B5CF6; animation-delay: 0.3s; }
+    .confetti:nth-child(3) { left: 30%; background: #22C55E; animation-delay: 0.6s; }
+    .confetti:nth-child(4) { left: 40%; background: #EC4899; animation-delay: 0.9s; }
+    .confetti:nth-child(5) { left: 50%; background: #FCD34D; animation-delay: 1.2s; }
+    .confetti:nth-child(6) { left: 60%; background: #6D28D9; animation-delay: 1.5s; }
+    .confetti:nth-child(7) { left: 70%; background: #F59E0B; animation-delay: 1.8s; }
+    .confetti:nth-child(8) { left: 80%; background: #22C55E; animation-delay: 2.1s; }
+    .confetti:nth-child(9) { left: 90%; background: #EC4899; animation-delay: 2.4s; }
+    .confetti:nth-child(10) { left: 15%; background: #8B5CF6; animation-delay: 0.5s; }
+    .confetti:nth-child(11) { left: 55%; background: #FCD34D; animation-delay: 1s; }
+    .confetti:nth-child(12) { left: 75%; background: #6D28D9; animation-delay: 1.7s; }
+    @keyframes confettiFall {
+      0% { top: -10px; transform: rotate(0deg); opacity: 1; }
+      100% { top: 100vh; transform: rotate(720deg); opacity: 0; }
+    }
+
+    .trophy-wrap {
+      position: relative; z-index: 10;
+      font-size: 80px; margin-bottom: 16px;
+      animation: trophyBounce 1.5s ease-in-out infinite;
+    }
+    @keyframes trophyBounce {
+      0%, 100% { transform: translateY(0) scale(1); }
+      30% { transform: translateY(-15px) scale(1.1); }
+      60% { transform: translateY(0) scale(0.95); }
+    }
+
+    .brand-title { font-size: 24px; font-weight: 800; letter-spacing: 5px; color: var(--text-primary); margin-bottom: 3px; position: relative; z-index: 10; }
+    .brand-tagline { font-size: 9px; font-weight: 700; letter-spacing: 2.5px; color: var(--brand-violet-light); margin-bottom: 20px; text-transform: uppercase; position: relative; z-index: 10; }
+
+    .status-main {
+      font-size: 18px; font-weight: 800;
+      color: var(--brand-gold-light); margin-bottom: 4px;
+      position: relative; z-index: 10;
+      transition: opacity 0.3s ease;
+    }
+    .status-sub { font-size: 12px; color: var(--text-muted); position: relative; z-index: 10; }
+
+    .ticket-box {
+      display: inline-block;
+      background: rgba(245, 158, 11, 0.15);
+      border: 2px dashed var(--brand-gold);
+      border-radius: 10px;
+      padding: 8px 20px;
+      margin-top: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px; font-weight: 700;
+      color: var(--brand-gold-light);
+      position: relative; z-index: 10;
+      letter-spacing: 2px;
+      animation: ticketGlow 1.5s ease-in-out infinite alternate;
+    }
+    @keyframes ticketGlow {
+      0% { box-shadow: 0 0 10px rgba(245, 158, 11, 0.3); }
+      100% { box-shadow: 0 0 25px rgba(245, 158, 11, 0.7); }
+    }
+
+    .sparkle {
+      position: absolute;
+      font-size: 20px;
+      animation: sparkleTwinkle 1.2s ease-in-out infinite;
+      pointer-events: none;
+    }
+    .sparkle:nth-child(13) { top: 15%; left: 20%; animation-delay: 0s; }
+    .sparkle:nth-child(14) { top: 25%; right: 15%; animation-delay: 0.3s; }
+    .sparkle:nth-child(15) { top: 10%; right: 35%; animation-delay: 0.6s; }
+    .sparkle:nth-child(16) { bottom: 30%; left: 10%; animation-delay: 0.9s; }
+    .sparkle:nth-child(17) { bottom: 20%; right: 25%; animation-delay: 1.2s; }
+    @keyframes sparkleTwinkle {
+      0%, 100% { opacity: 0.3; transform: scale(0.7); }
+      50% { opacity: 1; transform: scale(1.3); }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="demo-btn" onclick="startVIP()">🏆 Join VIP Competition (Demo)</button>
+
+  <div class="vip-overlay hidden" id="vipOverlay">
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="sparkle">✨</div>
+    <div class="sparkle">⭐</div>
+    <div class="sparkle">✨</div>
+    <div class="sparkle">⭐</div>
+    <div class="sparkle">✨</div>
+
+    <div class="trophy-wrap">🏆</div>
+    <div class="brand-title">UNIYO</div>
+    <div class="brand-tagline">VIP Competition</div>
+
+    <div class="status-main" id="vipMain">Checking eligibility...</div>
+    <div class="status-sub" id="vipSub">Minimum score: 70%</div>
+
+    <div class="ticket-box" id="vipTicket" style="opacity: 0;">#UNIYO-8842</div>
+  </div>
+
+  <script>
+    const vipSteps = [
+      { main: 'Checking eligibility...', sub: 'Minimum score: 70%', showTicket: false },
+      { main: 'Verifying premium access...', sub: 'Subscription active', showTicket: false },
+      { main: 'Generating entry ticket...', sub: 'Week 12 Competition', showTicket: false },
+      { main: "You're in! 🎉", sub: 'Competition starts Monday', showTicket: true }
+    ];
+    let vipIndex = 0;
+    let vipInterval;
+
+    function startVIP() {
+      document.getElementById('vipOverlay').classList.remove('hidden');
+      vipIndex = 0;
+      document.getElementById('vipTicket').style.opacity = '0';
+      updateVIP(0);
+      startAutoAdvance();
+    }
+
+    function updateVIP(index) {
+      const main = document.getElementById('vipMain');
+      const sub = document.getElementById('vipSub');
+      const ticket = document.getElementById('vipTicket');
+      main.style.opacity = '0';
+      setTimeout(() => {
+        main.textContent = vipSteps[index].main;
+        sub.textContent = vipSteps[index].sub;
+        main.style.opacity = '1';
+        if (vipSteps[index].showTicket) {
+          ticket.style.opacity = '1';
+        } else {
+          ticket.style.opacity = '0';
+        }
+      }, 200);
+      vipIndex = index;
+    }
+
+    function startAutoAdvance() {
+      clearInterval(vipInterval);
+      vipInterval = setInterval(() => {
+        if (vipIndex < vipSteps.length - 1) {
+          updateVIP(vipIndex + 1);
+        } else {
+          clearInterval(vipInterval);
+          setTimeout(() => { document.getElementById('vipOverlay').classList.add('hidden'); }, 2000);
+        }
+      }, 1400);
+    }
+  </script>
+</body>
+</html>

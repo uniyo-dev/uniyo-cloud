@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=720, initial-scale=1.0">
+  <title>UNIYO VIP Leaderboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0B0F19;
+      font-family: 'Inter', sans-serif;
+      width: 720px;
+      min-height: 1600px;
+      color: #F8FAFC;
+      overflow-x: hidden;
+    }
+    .status-bar {
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+      color: #94A3B8;
+    }
+    .vip-header {
+      text-align: center;
+      padding: 28px 24px;
+      background: linear-gradient(135deg, #6D28D9 0%, #EC4899 100%);
+    }
+    .back-btn {
+      font-size: 14px; color: #FFFFFF;
+      margin-bottom: 12px; display: block; text-align: left;
+    }
+    .vip-icon { font-size: 56px; }
+    .vip-title {
+      font-size: 26px; font-weight: 900; color: #FCD34D;
+      letter-spacing: 2px; margin-top: 8px;
+    }
+    .vip-sub { font-size: 12px; color: rgba(255,255,255,0.85); margin-top: 5px; }
+    .timer-box {
+      margin: 18px 24px; padding: 18px;
+      background: #111827; border: 3px solid #EC4899;
+      border-radius: 14px; text-align: center;
+    }
+    .timer-label {
+      font-size: 11px; color: #94A3B8;
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;
+    }
+    .timer-display {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 36px; font-weight: 700; color: #F59E0B;
+    }
+    .take-btn {
+      margin: 12px 24px 20px; padding: 18px;
+      background: #F59E0B; color: #0B0F19;
+      border-radius: 12px; font-size: 15px;
+      font-weight: 800; text-align: center;
+    }
+    .leaderboard-section { margin: 20px 24px; }
+    .section-title { font-size: 18px; font-weight: 700; margin-bottom: 14px; }
+    .leaderboard-list { display: flex; flex-direction: column; gap: 10px; }
+    .entry {
+      display: flex; align-items: center; gap: 14px;
+      padding: 16px; background: #111827; border-radius: 14px;
+    }
+    .entry.rank-1 { border: 3px solid #F59E0B; background: rgba(245, 158, 11, 0.05); }
+    .entry.rank-2 { border: 3px solid #94A3B8; }
+    .entry.rank-3 { border: 3px solid #D97706; }
+    .rank-badge { font-size: 34px; width: 48px; text-align: center; }
+    .entry-info { flex: 1; }
+    .entry-name { font-size: 15px; font-weight: 700; color: #F8FAFC; }
+    .entry-univ { font-size: 11px; color: #94A3B8; margin-top: 3px; }
+    .entry-score { text-align: right; }
+    .entry-score strong { font-size: 18px; font-weight: 800; display: block; }
+    .entry-score small { font-size: 10px; color: #64748B; }
+    .upcoming-section { margin: 20px 24px; }
+    .upcoming-card {
+      padding: 16px; background: #111827;
+      border-radius: 14px; margin-bottom: 10px;
+    }
+    .upcoming-title { font-size: 14px; font-weight: 700; color: #F8FAFC; }
+    .upcoming-meta { font-size: 11px; color: #94A3B8; margin-top: 5px; }
+    .past-section { margin: 20px 24px 60px; }
+    .past-card {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px; background: #111827;
+      border-radius: 12px; margin-bottom: 8px;
+    }
+    .past-icon { font-size: 26px; }
+    .past-info { flex: 1; }
+    .past-name { font-size: 13px; font-weight: 700; color: #F8FAFC; }
+    .past-month { font-size: 10px; color: #94A3B8; }
+    .past-rank { font-size: 11px; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="status-bar"><span>10:33</span><span>📶 🔋 80%</span></div>
+  <div class="vip-header">
+    <a class="back-btn">← Back to Dashboard</a>
+    <div class="vip-icon">🏆</div>
+    <div class="vip-title">VIP COMPETITION</div>
+    <div class="vip-sub">Weekly competitive questions • Top 5 monthly winners</div>
+  </div>
+  <div class="timer-box">
+    <div class="timer-label">Time Remaining</div>
+    <div class="timer-display">23:45:12</div>
+  </div>
+  <div class="take-btn">🔴 TAKE NOW</div>
+  <div class="leaderboard-section">
+    <div class="section-title">📊 January 2025 Leaderboard</div>
+    <div class="leaderboard-list">
+      <div class="entry rank-1">
+        <span class="rank-badge">🥇</span>
+        <div class="entry-info">
+          <div class="entry-name">Abebe Kebede</div>
+          <div class="entry-univ">Bahir Dar University</div>
+        </div>
+        <div class="entry-score">
+          <strong style="color:#F59E0B;">95</strong>
+          <small>points</small>
+        </div>
+      </div>
+      <div class="entry rank-2">
+        <span class="rank-badge">🥈</span>
+        <div class="entry-info">
+          <div class="entry-name">Sara Tesfaye</div>
+          <div class="entry-univ">Addis Ababa University</div>
+        </div>
+        <div class="entry-score">
+          <strong style="color:#94A3B8;">88</strong>
+          <small>points</small>
+        </div>
+      </div>
+      <div class="entry rank-3">
+        <span class="rank-badge">🥉</span>
+        <div class="entry-info">
+          <div class="entry-name">Dawit Mengistu</div>
+          <div class="entry-univ">Jimma University</div>
+        </div>
+        <div class="entry-score">
+          <strong style="color:#D97706;">82</strong>
+          <small>points</small>
+        </div>
+      </div>
+      <div class="entry">
+        <span class="rank-badge" style="font-size:16px;color:#64748B;">#4</span>
+        <div class="entry-info">
+          <div class="entry-name">Meron Alemu</div>
+          <div class="entry-univ">Adama Science and Technology University</div>
+        </div>
+        <div class="entry-score">
+          <strong style="color:#94A3B8;">75</strong>
+          <small>points</small>
+        </div>
+      </div>
+      <div class="entry">
+        <span class="rank-badge" style="font-size:16px;color:#64748B;">#5</span>
+        <div class="entry-info">
+          <div class="entry-name">Yonas Haile</div>
+          <div class="entry-univ">Hawassa University</div>
+        </div>
+        <div class="entry-score">
+          <strong style="color:#94A3B8;">70</strong>
+          <small>points</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="upcoming-section">
+    <div class="section-title">📅 Upcoming</div>
+    <div class="upcoming-card">
+      <div class="upcoming-title">Week 13 Competition</div>
+      <div class="upcoming-meta">Starts: Monday, Jan 27 • Duration: 24 hours</div>
+    </div>
+  </div>
+  <div class="past-section">
+    <div class="section-title">🏆 Past Winners</div>
+    <div class="past-card">
+      <span class="past-icon">🥇</span>
+      <div class="past-info">
+        <div class="past-name">Abebe Kebede</div>
+        <div class="past-month">December 2024</div>
+      </div>
+      <span class="past-rank" style="color:#F59E0B;">1st Place</span>
+    </div>
+    <div class="past-card">
+      <span class="past-icon">🥈</span>
+      <div class="past-info">
+        <div class="past-name">Sara Tesfaye</div>
+        <div class="past-month">December 2024</div>
+      </div>
+      <span class="past-rank" style="color:#94A3B8;">2nd Place</span>
+    </div>
+  </div>
+</body>
+</html>
