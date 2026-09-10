@@ -9,7 +9,9 @@ import json
 from core.db import get_db
 from core.auth import login_required, premium_required
 from core.helpers import logger
-from core.paths import BASE_DIR
+from core.paths import BASE_DIR, CERTIFICATES_DIR
+from core.exam_parsers.html_parser import parse_exam_html
+from core.exam_pdf_generator import generate_exam_pdf
 
 past_exam_bp = Blueprint('past_exam', __name__)
 
@@ -208,3 +210,87 @@ def rate_exam(exam_id):
         "likes": exam['likes'],
         "dislikes": exam['dislikes']
     })
+
+
+# ============================================
+# DOWNLOAD EXAM AS PDF
+# ============================================
+
+@past_exam_bp.route('/student/past-exam/<int:exam_id>/download', methods=['GET'])
+@login_required
+@premium_required
+def download_exam_pdf(exam_id):
+    """
+    Download past exam as PDF.
+    
+    Query params:
+        version=blank  (default) - Exam without answers
+        version=key    - Answer key with correct answers
+    """
+    from flask import send_file, request
+    from pathlib import Path
+
+    db = get_db()
+    
+    # Get exam
+    exam = db.query_one("SELECT * FROM past_exams WHERE id = ? AND is_active = 1", (exam_id,))
+    if not exam:
+        flash("Exam not found", "danger")
+        return redirect(url_for('past_exam.library'))
+    
+    exam = dict(exam)
+    
+    # Check version
+    version = request.args.get('version', 'blank').lower()
+    include_answers = (version == 'key')
+    
+    # Load exam HTML file
+    exam_file = BASE_DIR / "content" / "past_exams" / exam['file_path']
+    if not exam_file.exists():
+        flash("Exam file not found", "danger")
+        return redirect(url_for('past_exam.library'))
+    
+    html_content = exam_file.read_text(encoding='utf-8')
+    
+    # Build exam metadata
+    exam_meta = {
+        'university': exam.get('university', 'University'),
+        'course_code': exam.get('course_code', 'CODE'),
+        'course_title': exam.get('course_title', 'Course'),
+        'year': exam.get('year', 2024),
+        'exam_type': exam.get('exam_type', 'Final'),
+        'duration_minutes': exam.get('time_limit_minutes', 120),
+        'total_marks': exam.get('total_marks', 100) or exam.get('total_questions', 0),
+        'total_questions': exam.get('total_questions', 0),
+    }
+    
+    try:
+        # Parse HTML → ExamData
+        exam_data = parse_exam_html(html_content, exam_meta)
+        
+        # Generate PDF
+        pdf_path = generate_exam_pdf(exam_data, include_answers=include_answers)
+        
+        if not pdf_path or not pdf_path.exists():
+            flash("PDF generation failed", "danger")
+            return redirect(url_for('past_exam.library'))
+        
+        # Build download filename
+        suffix = '_KEY' if include_answers else ''
+        filename = f"UNIYO_{exam['course_code']}_{exam['year']}_{exam['exam_type']}{suffix}.pdf"
+        filename = filename.replace(' ', '_')
+        
+        # Send file to browser
+        return send_file(
+            str(pdf_path),
+            as_attachment=True,
+            download_name=filename,
+            mimetype='application/pdf'
+        )
+    
+    except Exception as e:
+        logger.error(f"PDF download error: {e}")
+        import traceback
+        traceback.print_exc()
+        flash(f"Download failed: {str(e)}", "danger")
+        return redirect(url_for('past_exam.library'))
