@@ -37,7 +37,7 @@ from core.exam_parsers.question_types import (
 PAGE_WIDTH, PAGE_HEIGHT = A4  # 595.27 × 841.89 points
 
 # Margins
-MARGIN_TOP = 25 * mm
+MARGIN_TOP = 32 * mm  # Space for header (logo, barcode, course info)
 MARGIN_BOTTOM = 15 * mm
 MARGIN_LEFT = 18 * mm
 MARGIN_RIGHT = 18 * mm
@@ -138,6 +138,13 @@ class ExamPDFGenerator:
         # Draw cover page
         self._draw_cover_page()
         
+        # ===== PAGE BREAK after cover page =====
+        self.c.showPage()
+        self.page_number += 1
+        self._draw_header()
+        self._draw_footer()
+        self.current_y = CONTENT_TOP
+        
         # Draw all sections
         for section in self.exam.sections:
             self._draw_section(section)
@@ -176,16 +183,50 @@ class ExamPDFGenerator:
     # HEADER / FOOTER
     # ============================================
     
+    def _load_logo(self):
+        """
+        Load UNIYO logo (supports SVG and PNG).
+        Returns ImageReader or None.
+        """
+        from io import BytesIO
+        
+        # Priority list of logos to try
+        logo_candidates = [
+            BASE_DIR / 'static' / 'images' / 'uniyo_branding_logo.svg',  # Primary (from images folder)
+            BASE_DIR / 'static' / 'icons' / 'uniyo_branding_logo.svg',  # Fallback
+            BASE_DIR / 'static' / 'icons' / 'uniyo_branding_logo.png',  # Fallback
+        ]
+        
+        for logo_path in logo_candidates:
+            if not logo_path.exists():
+                continue
+            
+            try:
+                # If SVG, convert to PNG
+                if logo_path.suffix.lower() == '.svg':
+                    from core.exam_parsers.svg_utils import svg_to_png_bytes
+                    svg_content = logo_path.read_text(encoding='utf-8')
+                    png_buffer = svg_to_png_bytes(svg_content, output_width=400)
+                    if png_buffer:
+                        return ImageReader(png_buffer)
+                else:
+                    # PNG/JPG - use directly
+                    return ImageReader(str(logo_path))
+            except Exception as e:
+                print(f"Logo load error for {logo_path.name}: {e}")
+                continue
+        
+        return None
+
     def _draw_header(self):
         """Draw page header (logo, barcode, date)"""
         c = self.c
         c.saveState()
         
-        # UNIYO Logo (top left)
-        logo_path = BASE_DIR / 'assets' / 'certificates' / 'logos' / 'app_icon-192.png'
-        if logo_path.exists():
+        # UNIYO Logo (top left) - supports SVG and PNG
+        logo = self._load_logo()
+        if logo:
             try:
-                logo = ImageReader(str(logo_path))
                 c.drawImage(logo, CONTENT_LEFT, PAGE_HEIGHT - 22 * mm, 14 * mm, 14 * mm, 
                            preserveAspectRatio=True, mask='auto')
             except:
@@ -349,22 +390,18 @@ class ExamPDFGenerator:
     def _draw_cover_page(self):
         """Draw the cover page (page 1)"""
         self.page_number = 1
-        self.current_y = CONTENT_TOP
-        
         c = self.c
         
         # ============ TOP SECTION: Logo + Barcode + Date ============
-        # UNIYO Logo (large, top-left area)
-        logo_path = BASE_DIR / 'assets' / 'certificates' / 'logos' / 'app_icon-192.png'
-        if logo_path.exists():
+        logo = self._load_logo()
+        if logo:
             try:
-                logo = ImageReader(str(logo_path))
                 c.drawImage(logo, CONTENT_LEFT, PAGE_HEIGHT - 50 * mm, 25 * mm, 25 * mm,
                            preserveAspectRatio=True, mask='auto')
             except:
                 pass
         
-        # UNIYO branding
+        # UNIYO branding (next to logo)
         c.setFillColor(COLOR_PRIMARY)
         c.setFont('Helvetica-Bold', 20)
         c.drawString(CONTENT_LEFT + 30 * mm, PAGE_HEIGHT - 38 * mm, "UNIYO")
@@ -425,7 +462,6 @@ class ExamPDFGenerator:
             ("Questions:", str(self.exam.total_questions)),
         ]
         
-        c.setFont('Helvetica', 10)
         for label, value in details:
             c.setFillColor(COLOR_TEXT_MUTED)
             c.setFont('Helvetica-Bold', 10)
@@ -449,12 +485,10 @@ class ExamPDFGenerator:
         c.roundRect(CONTENT_LEFT + 10 * mm, box_y, CONTENT_WIDTH - 20 * mm, box_height, 3 * mm,
                    fill=True, stroke=True)
         
-        # Instructions header
         c.setFillColor(COLOR_PRIMARY)
         c.setFont('Helvetica-Bold', 11)
         c.drawString(CONTENT_LEFT + 15 * mm, y - 8 * mm, "INSTRUCTIONS TO CANDIDATES")
         
-        # Instructions list
         c.setFillColor(COLOR_TEXT)
         c.setFont('Helvetica', 9)
         instructions = [
@@ -488,14 +522,8 @@ class ExamPDFGenerator:
         c.setFillColor(COLOR_TEXT)
         c.setFont('Helvetica', 10)
         
-        fields = [
-            ("Full Name:", 15),
-            ("Student ID:", 24),
-            ("Phone:", 33),
-        ]
-        
         field_y = y - 15 * mm
-        for label, offset in fields:
+        for label in ["Full Name:", "Student ID:", "Phone:"]:
             c.drawString(CONTENT_LEFT + 15 * mm, field_y, label)
             c.setStrokeColor(COLOR_LINE)
             c.setLineWidth(0.5)
@@ -505,7 +533,7 @@ class ExamPDFGenerator:
         # ============ GOOD LUCK ============
         c.setFillColor(COLOR_GOLD)
         c.setFont('Helvetica-Bold', 12)
-        c.drawCentredString(PAGE_WIDTH / 2, student_box_y - 8 * mm, "Good Luck! 🎓")
+        c.drawCentredString(PAGE_WIDTH / 2, student_box_y - 8 * mm, "Good Luck!")
         
         # Footer for cover page
         self._draw_footer()
