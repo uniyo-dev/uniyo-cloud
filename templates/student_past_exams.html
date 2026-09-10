@@ -110,10 +110,10 @@
                 </button>
             </div>
 
-            <!-- Download & Start Buttons -->
-            {% if student and student.subscription_status == 'premium' %}
-                <!-- Download buttons (Premium only) -->
-                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+            <!-- Download & Start Buttons (visible to everyone) -->
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+                {% if student and student.subscription_status == 'premium' %}
+                    <!-- Premium student: direct download -->
                     <a href="{{ url_for('past_exam.download_exam_pdf', exam_id=exam.id, version='blank') }}"
                        class="btn btn-outline"
                        style="flex: 1; min-width: 120px;"
@@ -126,14 +126,37 @@
                        onclick="if(typeof UNIYO_LOADER !== 'undefined') UNIYO_LOADER.examDownload.show();">
                         🔑 Answer Key
                     </a>
-                </div>
-                <!-- Start Exam -->
-                <a href="{{ url_for('past_exam.take_exam', exam_id=exam.id) }}" class="btn btn-primary btn-block" onclick="if(typeof UNIYO_LOADER !== 'undefined') UNIYO_LOADER.examDownload.show();">▶️ Start Exam</a>
-            {% else %}
-                <!-- Not premium -->
-                <a href="{{ url_for('student.home') }}#paymentSection" class="btn btn-gold btn-block">
-                    🔒 Premium Required — Upgrade Now
+                {% else %}
+                    <!-- Free student: show buttons but prompt to upgrade -->
+                    <button type="button"
+                       class="btn btn-outline"
+                       style="flex: 1; min-width: 120px; opacity: 0.7; cursor: pointer;"
+                       onclick="showPremiumPrompt('📥 Exam PDF')">
+                        🔒 Exam PDF
+                    </button>
+                    <button type="button"
+                       class="btn btn-gold"
+                       style="flex: 1; min-width: 120px; opacity: 0.7; cursor: pointer;"
+                       onclick="showPremiumPrompt('🔑 Answer Key')">
+                        🔒 Answer Key
+                    </button>
+                {% endif %}
+            </div>
+            
+            <!-- Start Exam (visible to everyone) -->
+            {% if student and student.subscription_status == 'premium' %}
+                <a href="{{ url_for('past_exam.take_exam', exam_id=exam.id) }}" 
+                   class="btn btn-primary btn-block" 
+                   onclick="if(typeof UNIYO_LOADER !== 'undefined') UNIYO_LOADER.examDownload.show();">
+                    ▶️ Start Exam
                 </a>
+            {% else %}
+                <button type="button" 
+                        class="btn btn-primary btn-block"
+                        style="opacity: 0.7; cursor: pointer;"
+                        onclick="showPremiumPrompt('▶️ Start Exam')">
+                    🔒 Start Exam
+                </button>
             {% endif %}
         </div>
         {% else %}
@@ -146,6 +169,26 @@
 
 {% block extra_js %}
 <script>
+// ============================================
+// PREMIUM PROMPT
+// ============================================
+function showPremiumPrompt(actionName) {
+    // Show a modal or confirm dialog to prompt upgrade
+    var message = '🔒 ' + actionName + ' requires UNIYO Premium.\n\n' +
+                  'Get access to:\n' +
+                  '📥 Download all exam PDFs\n' +
+                  '🔑 Full answer keys with explanations\n' +
+                  '🎯 Take unlimited past exams\n' +
+                  '📚 All 16 courses\n\n' +
+                  'Only 200 ETB — one-time payment for lifetime access!\n\n' +
+                  'Upgrade now?';
+    
+    if (confirm(message)) {
+        // Redirect to payment section
+        window.location.href = '/student/home#paymentSection';
+    }
+}
+
 function rateExam(examId, rating, buttonElement) {
     // Add click burst effect
     if (buttonElement) {
