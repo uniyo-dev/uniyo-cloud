@@ -35,6 +35,39 @@ def library():
         ORDER BY pe.views DESC
     ''')
 
+    # Auto-count questions for each exam and enrich data
+    from core.exam_parsers.html_parser import parse_exam_html
+    enriched_exams = []
+    for exam in exams:
+        exam = dict(exam)
+        
+        # Auto-detect question count from HTML file
+        if exam.get('file_path'):
+            try:
+                exam_file = BASE_DIR / "content" / "past_exams" / exam['file_path']
+                if exam_file.exists():
+                    html_content = exam_file.read_text(encoding='utf-8')
+                    exam_meta = {
+                        'university': exam.get('university', 'University'),
+                        'course_code': exam.get('course_code', 'CODE'),
+                        'course_title': exam.get('course_title', 'Course'),
+                        'year': exam.get('year', 2024),
+                        'exam_type': exam.get('exam_type', 'Final'),
+                        'duration_minutes': exam.get('time_limit_minutes', 120),
+                        'total_marks': exam.get('total_questions', 0),
+                        'total_questions': 0,
+                    }
+                    exam_data = parse_exam_html(html_content, exam_meta)
+                    # Override with actual counted values
+                    exam['total_questions'] = exam_data.total_questions
+                    exam['total_marks'] = sum(q.marks for section in exam_data.sections for q in section.questions)
+            except Exception as e:
+                logger.warning(f"Could not parse exam {exam.get('id')}: {e}")
+        
+        enriched_exams.append(exam)
+    
+    exams = enriched_exams
+    
     # Determine TOP 3 by views
     top_3_ids = [exam['id'] for exam in exams[:3]] if exams else []
 
