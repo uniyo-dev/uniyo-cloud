@@ -94,18 +94,9 @@
         document.body.classList.add('loaded');
     });
 
-    // Trigger App Launch loader on first visit (per session)
-    window.addEventListener('load', function() {
-        // Only show once per session
-        if (!sessionStorage.getItem('uniyo_launch_shown')) {
-            sessionStorage.setItem('uniyo_launch_shown', '1');
-            setTimeout(function() {
-                if (typeof UNIYO_LOADER !== 'undefined' && UNIYO_LOADER.appLaunch) {
-                    UNIYO_LOADER.appLaunch.show();
-                }
-            }, 300);
-        }
-    });
+    // App Launch loader disabled (can be re-enabled by adding the trigger back)
+    // The HTML (_loaders.html) and JS (loader.js) still exist — call
+    // UNIYO_LOADER.appLaunch.show() manually to display it.
     
     // Prefetch on page visibility
     document.addEventListener('visibilitychange', function() {
