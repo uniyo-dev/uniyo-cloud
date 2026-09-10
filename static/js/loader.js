@@ -472,6 +472,8 @@ const UNIYO_LOADER = {
     examDownload: {
         progress: 0,
         interval: null,
+        fileSizeKB: 100,  // Default 100 KB, updated by setFileInfo
+        fileName: 'Exam PDF',
 
         show() {
             const overlay = document.getElementById('ldDownload');
@@ -479,48 +481,118 @@ const UNIYO_LOADER = {
             overlay.classList.remove('hidden');
             this.progress = 0;
             this.updateProgress(0);
+            
             const status = document.getElementById('ldDownloadStatus');
             if (status) status.textContent = 'Starting download...';
+            
+            // Update file info display
+            this.updateFileDisplay();
+            
             this.start();
+        },
+
+        setFileInfo(fileName, fileSizeKB) {
+            this.fileName = fileName || 'Exam PDF';
+            this.fileSizeKB = fileSizeKB || 100;
+            this.updateFileDisplay();
+        },
+
+        updateFileDisplay() {
+            const fileElem = document.getElementById('ldDownloadFile');
+            const metaElem = document.getElementById('ldDownloadMeta');
+            
+            if (fileElem) fileElem.textContent = this.fileName;
+            
+            if (metaElem) {
+                const sizeText = this.formatSize(this.fileSizeKB);
+                metaElem.textContent = sizeText + ' • PDF Document';
+            }
+        },
+
+        formatSize(kb) {
+            if (kb < 1024) {
+                return Math.round(kb) + ' KB';
+            } else {
+                return (kb / 1024).toFixed(2) + ' MB';
+            }
         },
 
         updateProgress(progress) {
             const pct = document.getElementById('ldDownloadPercentage');
             const fill = document.getElementById('ldDownloadProgress');
             const bytes = document.getElementById('ldDownloadBytes');
-            const totalSize = 12.4;
-            const downloaded = ((progress / 100) * totalSize).toFixed(1);
+            
+            const totalKB = this.fileSizeKB;
+            
+            // Download progress
+            const downloadedKB = (progress / 100) * totalKB;
+            
+            // Format both downloaded and total
+            let sizeText;
+            if (totalKB < 1024) {
+                // KB range
+                sizeText = Math.round(downloadedKB) + ' KB / ' + Math.round(totalKB) + ' KB';
+            } else {
+                // MB range (file > 1 MB)
+                const totalMB = (totalKB / 1024).toFixed(2);
+                const downloadedMB = (downloadedKB / 1024).toFixed(2);
+                sizeText = downloadedMB + ' MB / ' + totalMB + ' MB';
+            }
+            
             if (pct) pct.textContent = progress + '%';
             if (fill) fill.style.width = progress + '%';
-            if (bytes) bytes.textContent = downloaded + ' MB / ' + totalSize + ' MB';
+            if (bytes) bytes.textContent = sizeText;
         },
 
         start() {
             const self = this;
             clearInterval(this.interval);
+            
+            // Slower animation for larger files
+            const stepSize = Math.max(3, Math.floor(15 - (this.fileSizeKB / 200)));
+            
             this.interval = setInterval(function() {
-                self.progress += Math.floor(Math.random() * 15) + 5;
+                self.progress += Math.floor(Math.random() * stepSize) + 2;
+                
+                // Update status messages based on progress
+                const status = document.getElementById('ldDownloadStatus');
+                if (status) {
+                    if (self.progress < 20) {
+                        status.textContent = 'Connecting...';
+                    } else if (self.progress < 50) {
+                        status.textContent = 'Generating PDF...';
+                    } else if (self.progress < 80) {
+                        status.textContent = 'Rendering pages...';
+                    } else if (self.progress < 95) {
+                        status.textContent = 'Finalizing...';
+                    } else {
+                        status.textContent = 'Almost done...';
+                    }
+                }
+                
                 if (self.progress >= 100) {
                     self.progress = 100;
+                    self.updateProgress(100);
+                    
+                    if (status) status.textContent = '✓ Downloaded!';
+                    
                     clearInterval(self.interval);
-                    const status = document.getElementById('ldDownloadStatus');
-                    if (status) status.textContent = 'Download complete! Opening viewer...';
-                    setTimeout(function() { self.hide(); }, 1500);
-                } else if (self.progress > 60) {
-                    const status = document.getElementById('ldDownloadStatus');
-                    if (status) status.textContent = 'Optimizing for mobile...';
-                } else if (self.progress > 30) {
-                    const status = document.getElementById('ldDownloadStatus');
-                    if (status) status.textContent = 'Downloading PDF...';
+                    
+                    // Auto-hide after download completes
+                    setTimeout(function() {
+                        self.hide();
+                    }, 1200);
+                } else {
+                    self.updateProgress(self.progress);
                 }
-                self.updateProgress(self.progress);
-            }, 400);
+            }, 150);  // Update every 150ms
         },
 
         hide() {
             const overlay = document.getElementById('ldDownload');
             if (overlay) overlay.classList.add('hidden');
             clearInterval(this.interval);
+            this.progress = 0;
         }
     },
 
