@@ -53,7 +53,8 @@ def library():
     return render_template('student_past_exams.html',
                           exams=exams,
                           top_3_ids=top_3_ids,
-                          student_ratings=student_ratings)
+                          student_ratings=student_ratings,
+                          student=student)
 
 # ============================================
 # TAKE PAST EXAM (Premium Only)

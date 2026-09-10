@@ -110,11 +110,30 @@
                 </button>
             </div>
 
-            <!-- Start Exam Button -->
-            {% if session.get('student_id') %}
-            <a href="{{ url_for('past_exam.take_exam', exam_id=exam.id) }}" class="btn btn-primary btn-block">Start Exam</a>
+            <!-- Download & Start Buttons -->
+            {% if student and student.subscription_status == 'premium' %}
+                <!-- Download buttons (Premium only) -->
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+                    <a href="{{ url_for('past_exam.download_exam_pdf', exam_id=exam.id, version='blank') }}"
+                       class="btn btn-outline"
+                       style="flex: 1; min-width: 120px;"
+                       onclick="if(typeof UNIYO_LOADER !== 'undefined') UNIYO_LOADER.examDownload.show();">
+                        📥 Exam PDF
+                    </a>
+                    <a href="{{ url_for('past_exam.download_exam_pdf', exam_id=exam.id, version='key') }}"
+                       class="btn btn-gold"
+                       style="flex: 1; min-width: 120px;"
+                       onclick="if(typeof UNIYO_LOADER !== 'undefined') UNIYO_LOADER.examDownload.show();">
+                        🔑 Answer Key
+                    </a>
+                </div>
+                <!-- Start Exam -->
+                <a href="{{ url_for('past_exam.take_exam', exam_id=exam.id) }}" class="btn btn-primary btn-block" onclick="if(typeof UNIYO_LOADER !== 'undefined') UNIYO_LOADER.examDownload.show();">▶️ Start Exam</a>
             {% else %}
-            <button class="btn btn-gold btn-block" onclick="showToast('Premium required to take exams. Upgrade now!', 'warning')">🔒 Premium Required to Take Exam</button>
+                <!-- Not premium -->
+                <a href="{{ url_for('student.home') }}#paymentSection" class="btn btn-gold btn-block">
+                    🔒 Premium Required — Upgrade Now
+                </a>
             {% endif %}
         </div>
         {% else %}
