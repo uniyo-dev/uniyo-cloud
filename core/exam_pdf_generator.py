@@ -91,7 +91,8 @@ class ExamPDFGenerator:
     
     def __init__(self, exam: ExamData, output_path: Optional[Path] = None):
         self.exam = exam
-        self.include_answers = False  # Must be set BEFORE _default_output_path()
+        self.include_answers = False
+        self._custom_output_path = output_path
         self.output_path = output_path or self._default_output_path()
         self.c = None
         self.current_y = CONTENT_TOP
@@ -115,6 +116,11 @@ class ExamPDFGenerator:
             Path to generated PDF
         """
         self.include_answers = include_answers
+        
+        # Recalculate output path with the new include_answers flag
+        if self._custom_output_path is None:
+            self.output_path = self._default_output_path()
+        
         self._ensure_output_dir()
         
         # Create canvas

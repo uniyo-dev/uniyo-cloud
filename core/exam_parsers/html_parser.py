@@ -146,6 +146,8 @@ class ExamHTMLParser:
                 number=qid,
                 text=question_text,
                 marks=points,
+                correct_answer=correct,
+                explanation=explanation,
                 raw_html=str(elem)
             )
         
@@ -155,6 +157,8 @@ class ExamHTMLParser:
                 text=question_text,
                 marks=points,
                 options=options,
+                correct_answer=correct,
+                explanation=explanation,
                 raw_html=str(elem)
             )
         
@@ -167,6 +171,8 @@ class ExamHTMLParser:
                 marks=points,
                 column_a=column_a,
                 column_b=column_b,
+                correct_answer=correct,
+                explanation=explanation,
                 raw_html=str(elem)
             )
         
@@ -178,6 +184,8 @@ class ExamHTMLParser:
                 text=question_text,
                 marks=points,
                 blanks=blanks,
+                correct_answer=correct,
+                explanation=explanation,
                 raw_html=str(elem)
             )
         
@@ -188,6 +196,8 @@ class ExamHTMLParser:
                 text=question_text,
                 marks=points,
                 answer_lines=lines,
+                correct_answer=correct,
+                explanation=explanation,
                 raw_html=str(elem)
             )
         
@@ -198,6 +208,8 @@ class ExamHTMLParser:
                 text=question_text,
                 marks=points,
                 answer_lines=lines,
+                correct_answer=correct,
+                explanation=explanation,
                 raw_html=str(elem)
             )
         
