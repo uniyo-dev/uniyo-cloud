@@ -141,6 +141,12 @@ class ExamHTMLParser:
                 opt_text = re.sub(r'^[A-Z]\)\s*', '', label)
                 options.append((letter, opt_text))
         
+        # Extract SVG diagrams
+        diagrams = []
+        for svg in elem.find_all('svg'):
+            svg_str = str(svg)
+            diagrams.append(svg_str)
+        
         # Create question based on type
         if qtype == 'true_false':
             return TrueFalseQuestion(
@@ -149,6 +155,7 @@ class ExamHTMLParser:
                 marks=points,
                 correct_answer=correct,
                 explanation=explanation,
+                diagrams=diagrams,
                 raw_html=str(elem)
             )
         
@@ -160,6 +167,7 @@ class ExamHTMLParser:
                 options=options,
                 correct_answer=correct,
                 explanation=explanation,
+                diagrams=diagrams,
                 raw_html=str(elem)
             )
         
@@ -174,6 +182,7 @@ class ExamHTMLParser:
                 column_b=column_b,
                 correct_answer=correct,
                 explanation=explanation,
+                diagrams=diagrams,
                 raw_html=str(elem)
             )
         
@@ -187,6 +196,7 @@ class ExamHTMLParser:
                 blanks=blanks,
                 correct_answer=correct,
                 explanation=explanation,
+                diagrams=diagrams,
                 raw_html=str(elem)
             )
         
@@ -199,6 +209,7 @@ class ExamHTMLParser:
                 answer_lines=lines,
                 correct_answer=correct,
                 explanation=explanation,
+                diagrams=diagrams,
                 raw_html=str(elem)
             )
         
@@ -211,6 +222,7 @@ class ExamHTMLParser:
                 answer_lines=lines,
                 correct_answer=correct,
                 explanation=explanation,
+                diagrams=diagrams,
                 raw_html=str(elem)
             )
         

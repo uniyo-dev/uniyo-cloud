@@ -272,6 +272,77 @@ class ExamPDFGenerator:
         c.restoreState()
     
     # ============================================
+    # DIAGRAM RENDERING
+    # ============================================
+    
+    def _draw_diagrams(self, diagrams: list, y: float) -> float:
+        """
+        Draw SVG diagrams as images in the PDF.
+        """
+        from core.exam_parsers.svg_utils import svg_to_png_bytes, get_svg_dimensions
+        
+        c = self.c  # ← CRITICAL FIX
+        
+        for diagram_svg in diagrams:
+            # Get original dimensions
+            orig_w, orig_h = get_svg_dimensions(diagram_svg)
+            
+            # Scale to fit within content width (max 130mm)
+            max_width_mm = 130
+            draw_width = min(orig_w * 0.35, max_width_mm) * mm
+            draw_height = draw_width * (orig_h / orig_w) if orig_w > 0 else 50 * mm
+            
+            # Convert SVG to PNG
+            png_buffer = svg_to_png_bytes(diagram_svg, output_width=int(orig_w * 3))
+            
+            if png_buffer:
+                try:
+                    # Center the diagram
+                    x = (PAGE_WIDTH - draw_width) / 2
+                    
+                    # Draw a light frame around the diagram
+                    c.setFillColor(COLOR_BG_LIGHT)
+                    c.setStrokeColor(COLOR_BORDER)
+                    c.setLineWidth(0.3)
+                    
+                    c.roundRect(
+                        x - 3 * mm,
+                        y - draw_height - 3 * mm,
+                        draw_width + 6 * mm,
+                        draw_height + 6 * mm,
+                        2 * mm,
+                        fill=True,
+                        stroke=True
+                    )
+                    
+                    # Draw the image
+                    c.drawImage(
+                        ImageReader(png_buffer),
+                        x,
+                        y - draw_height,
+                        width=draw_width,
+                        height=draw_height,
+                        preserveAspectRatio=True,
+                        mask='auto'
+                    )
+                    
+                    y -= draw_height + 6 * mm
+                except Exception as e:
+                    print(f"Diagram draw error: {e}")
+                    c.setFillColor(COLOR_TEXT_MUTED)
+                    c.setFont('Helvetica-Oblique', 9)
+                    c.drawString(CONTENT_LEFT + 5 * mm, y - 10 * mm, "[Diagram not available]")
+                    y -= 15 * mm
+            else:
+                # Conversion failed - show placeholder
+                c.setFillColor(COLOR_TEXT_MUTED)
+                c.setFont('Helvetica-Oblique', 9)
+                c.drawString(CONTENT_LEFT + 5 * mm, y - 10 * mm, "[Diagram - see online version]")
+                y -= 15 * mm
+        
+        return y
+    
+    # ============================================
     # COVER PAGE
     # ============================================
     
@@ -542,14 +613,7 @@ class ExamPDFGenerator:
     
     def _draw_mcq(self, question: MCQQuestion):
         """
-        Draw Multiple Choice Question.
-        Structure:
-            Q1. Question text...                     [2 marks]
-                Ⓐ Option 1
-                Ⓑ Option 2
-                Ⓒ Option 3
-                Ⓓ Option 4
-                Answer:  ⓐ  ⓑ  ⓒ  ⓓ
+        Draw Multiple Choice Question with optional diagrams.
         """
         c = self.c
         y = self.current_y
@@ -569,6 +633,11 @@ class ExamPDFGenerator:
         c.setFont('Helvetica-Bold', 8)
         c.setFillColor(COLOR_GOLD)
         c.drawRightString(CONTENT_RIGHT, self.current_y, marks_text)
+        
+        # ===== DIAGRAMS =====
+        if question.diagrams:
+            y = self._draw_diagrams(question.diagrams, y)
+            y -= 2 * mm
         
         # Options
         y -= 1 * mm

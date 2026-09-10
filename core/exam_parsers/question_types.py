@@ -16,6 +16,7 @@ class Question:
     question_type: str = "unknown"
     correct_answer: str = ""
     explanation: str = ""
+    diagrams: List[str] = field(default_factory=list)  # List of SVG strings
     sub_questions: List['Question'] = field(default_factory=list)
     raw_html: str = ""
 
@@ -23,6 +24,8 @@ class Question:
         """Calculate approximate height in mm for this question"""
         base_height = 15
         base_height += min(len(self.text) / 80, 4) * 5
+        # Add height for diagrams (each diagram ~60mm)
+        base_height += len(self.diagrams) * 60
         return base_height
 
 
@@ -37,7 +40,9 @@ class MCQQuestion(Question):
         options_height = len(self.options) * 6
         answer_row = 8
         padding = 6
-        return base + options_height + answer_row + padding
+        # Add height for diagrams (each diagram ~60mm)
+        diagrams_height = len(self.diagrams) * 60
+        return base + options_height + answer_row + padding + diagrams_height
 
 
 @dataclass(kw_only=True)
@@ -46,7 +51,8 @@ class TrueFalseQuestion(Question):
     question_type: str = "true_false"
 
     def get_height_mm(self) -> float:
-        return 20
+        diagrams_height = len(self.diagrams) * 60
+        return 20 + diagrams_height
 
 
 @dataclass(kw_only=True)
@@ -57,28 +63,21 @@ class MatchingQuestion(Question):
     question_type: str = "matching"
 
     def get_height_mm(self) -> float:
-        """
-        Calculate height accounting for text wrapping.
-        Base: 30mm (question + header)
-        Each pair: 10mm base + extra for long text
-        Padding: 15mm
-        """
+        """Calculate height with diagrams + text wrapping"""
         base = 30
         rows = max(len(self.column_a), len(self.column_b))
         
-        # Estimate row heights based on text length
         total_rows_height = 0
         for i in range(rows):
             text_a = self.column_a[i] if i < len(self.column_a) else ""
             text_b = self.column_b[i] if i < len(self.column_b) else ""
-            # Longest text determines row height
             max_len = max(len(text_a), len(text_b))
-            # 40 chars per line in each column
             lines = max(1, (max_len // 35) + 1)
-            total_rows_height += lines * 5  # 5mm per line
-            total_rows_height += 3  # spacing between rows
+            total_rows_height += lines * 5
+            total_rows_height += 3
         
-        return base + total_rows_height + 15
+        diagrams_height = len(self.diagrams) * 60
+        return base + total_rows_height + 15 + diagrams_height
 
 
 @dataclass(kw_only=True)
