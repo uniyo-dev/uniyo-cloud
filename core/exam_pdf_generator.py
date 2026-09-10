@@ -531,69 +531,389 @@ class ExamPDFGenerator:
             self._draw_generic_question(question)
     
     # ============================================
-    # PLACEHOLDER RENDERERS (to be filled in 3B)
+    # QUESTION RENDERERS (Real implementations)
     # ============================================
     
     def _draw_mcq(self, question: MCQQuestion):
-        """Draw Multiple Choice Question (placeholder)"""
+        """
+        Draw Multiple Choice Question.
+        Structure:
+            Q1. Question text...                     [2 marks]
+                Ⓐ Option 1
+                Ⓑ Option 2
+                Ⓒ Option 3
+                Ⓓ Option 4
+                Answer:  ⓐ  ⓑ  ⓒ  ⓓ
+        """
         c = self.c
         y = self.current_y
         
+        # Question text (bold, wrapped)
         c.setFillColor(COLOR_TEXT)
         c.setFont('Helvetica-Bold', 10)
-        c.drawString(CONTENT_LEFT, y - 5 * mm, f"Q{question.number}. {question.text}")
+        text = f"Q{question.number}. {question.text}"
+        wrapped_lines = self._wrap_text(text, 'Helvetica-Bold', 10, CONTENT_WIDTH - 25 * mm)
         
-        c.setFont('Helvetica', 8)
+        for line in wrapped_lines:
+            c.drawString(CONTENT_LEFT, y, line)
+            y -= 5 * mm
+        
+        # Marks (gold, top-right)
+        marks_text = f"[{self._format_marks(question.marks)}]"
+        c.setFont('Helvetica-Bold', 8)
         c.setFillColor(COLOR_GOLD)
-        c.drawRightString(CONTENT_RIGHT, y - 5 * mm, f"[{question.marks} marks]")
+        c.drawRightString(CONTENT_RIGHT, self.current_y, marks_text)
+        
+        # Options
+        y -= 1 * mm
+        options_start_y = y
+        
+        letters = ['Ⓐ', 'Ⓑ', 'Ⓒ', 'Ⓓ']
+        for i, (letter, opt_text) in enumerate(question.options[:4]):
+            symbol = letters[i] if i < len(letters) else f"({letter})"
+            
+            c.setFillColor(COLOR_TEXT)
+            c.setFont('Helvetica-Bold', 9)
+            c.drawString(CONTENT_LEFT + 6 * mm, y, symbol)
+            
+            c.setFont('Helvetica', 9)
+            opt_wrapped = self._wrap_text(opt_text, 'Helvetica', 9, CONTENT_WIDTH - 20 * mm)
+            
+            # First line with symbol
+            if opt_wrapped:
+                c.drawString(CONTENT_LEFT + 12 * mm, y, opt_wrapped[0])
+                y -= 4.5 * mm
+                
+                # Continuation lines
+                for line in opt_wrapped[1:]:
+                    c.drawString(CONTENT_LEFT + 12 * mm, y, line)
+                    y -= 4.5 * mm
+            
+            y -= 1 * mm  # Gap between options
+        
+        # Answer row
+        y -= 2 * mm
+        c.setFillColor(COLOR_TEXT_MUTED)
+        c.setFont('Helvetica-Bold', 9)
+        c.drawString(CONTENT_LEFT + 6 * mm, y, "Answer:")
+        
+        c.setFont('Helvetica', 10)
+        c.setFillColor(COLOR_TEXT)
+        answer_symbols = '    ⓐ    ⓑ    ⓒ    ⓓ'
+        c.drawString(CONTENT_LEFT + 22 * mm, y, answer_symbols)
+        
+        # If answer key mode, draw the correct answer in green
+        if self.include_answers and hasattr(question, 'correct_answer'):
+            c.setFillColor(COLOR_GREEN)
+            c.setFont('Helvetica-Bold', 9)
+            c.drawString(CONTENT_LEFT + 70 * mm, y, f"✓ {question.correct_answer}")
     
     def _draw_true_false(self, question: TrueFalseQuestion):
-        """Draw True/False Question (placeholder)"""
+        """
+        Draw True/False Question.
+        Structure:
+            Q21. Statement text...                    [1 mark]
+                 Answer:    Ⓣ TRUE      Ⓕ FALSE
+        """
         c = self.c
         y = self.current_y
+        
+        # Question text (bold, wrapped)
         c.setFillColor(COLOR_TEXT)
         c.setFont('Helvetica-Bold', 10)
-        c.drawString(CONTENT_LEFT, y - 5 * mm, f"Q{question.number}. {question.text}")
+        text = f"Q{question.number}. {question.text}"
+        wrapped = self._wrap_text(text, 'Helvetica-Bold', 10, CONTENT_WIDTH - 25 * mm)
+        
+        for line in wrapped:
+            c.drawString(CONTENT_LEFT, y, line)
+            y -= 5 * mm
+        
+        # Marks (top-right)
+        marks_text = f"[{self._format_marks(question.marks)}]"
+        c.setFont('Helvetica-Bold', 8)
+        c.setFillColor(COLOR_GOLD)
+        c.drawRightString(CONTENT_RIGHT, self.current_y, marks_text)
+        
+        # Answer row
+        y -= 2 * mm
+        c.setFillColor(COLOR_TEXT_MUTED)
+        c.setFont('Helvetica-Bold', 9)
+        c.drawString(CONTENT_LEFT + 6 * mm, y, "Answer:")
+        
+        c.setFont('Helvetica', 10)
+        c.setFillColor(COLOR_TEXT)
+        c.drawString(CONTENT_LEFT + 22 * mm, y, "Ⓣ TRUE        Ⓕ FALSE")
+        
+        # Answer key mode
+        if self.include_answers and hasattr(question, 'correct_answer'):
+            c.setFillColor(COLOR_GREEN)
+            c.setFont('Helvetica-Bold', 9)
+            c.drawString(CONTENT_LEFT + 70 * mm, y, f"✓ {question.correct_answer}")
     
     def _draw_matching(self, question: MatchingQuestion):
-        """Draw Matching Question (placeholder)"""
+        """
+        Draw Matching Question.
+        Structure:
+            Q31. Match Column A with Column B.        [5 marks]
+                
+                  COLUMN A              COLUMN B
+                  ─────────             ─────────
+                  1. Item ____          A. Item
+                  2. Item ____          B. Item
+        """
         c = self.c
         y = self.current_y
+        
+        # Question text
         c.setFillColor(COLOR_TEXT)
         c.setFont('Helvetica-Bold', 10)
-        c.drawString(CONTENT_LEFT, y - 5 * mm, f"Q{question.number}. {question.text}")
+        text = f"Q{question.number}. {question.text}"
+        wrapped = self._wrap_text(text, 'Helvetica-Bold', 10, CONTENT_WIDTH - 25 * mm)
+        for line in wrapped:
+            c.drawString(CONTENT_LEFT, y, line)
+            y -= 5 * mm
+        
+        # Marks
+        marks_text = f"[{self._format_marks(question.marks)}]"
+        c.setFont('Helvetica-Bold', 8)
+        c.setFillColor(COLOR_GOLD)
+        c.drawRightString(CONTENT_RIGHT, self.current_y, marks_text)
+        
+        # Column headers
+        y -= 3 * mm
+        col_a_x = CONTENT_LEFT + 6 * mm
+        col_b_x = CONTENT_LEFT + CONTENT_WIDTH / 2 + 5 * mm
+        col_width = CONTENT_WIDTH / 2 - 8 * mm
+        
+        c.setFillColor(COLOR_PRIMARY)
+        c.setFont('Helvetica-Bold', 9)
+        c.drawString(col_a_x, y, "COLUMN A")
+        c.drawString(col_b_x, y, "COLUMN B")
+        
+        y -= 2 * mm
+        c.setStrokeColor(COLOR_PRIMARY)
+        c.setLineWidth(0.5)
+        c.line(col_a_x, y, col_a_x + col_width, y)
+        c.line(col_b_x, y, col_b_x + col_width, y)
+        
+        # Rows
+        y -= 5 * mm
+        rows = max(len(question.column_a), len(question.column_b))
+        
+        for i in range(rows):
+            c.setFillColor(COLOR_TEXT)
+            c.setFont('Helvetica', 9)
+            
+            # Column A
+            if i < len(question.column_a):
+                text_a = f"{i+1}. {question.column_a[i]}"
+                wrapped_a = self._wrap_text(text_a, 'Helvetica', 9, col_width - 15 * mm)
+                if wrapped_a:
+                    c.drawString(col_a_x, y, wrapped_a[0])
+                    for line in wrapped_a[1:]:
+                        y -= 4 * mm
+                        c.drawString(col_a_x, y, line)
+            
+            # Blank for answer
+            c.setFillColor(COLOR_TEXT_MUTED)
+            c.drawString(col_a_x + col_width - 12 * mm, y, "____")
+            
+            # Column B
+            c.setFillColor(COLOR_TEXT)
+            if i < len(question.column_b):
+                letter = chr(ord('A') + i)
+                text_b = f"{letter}. {question.column_b[i]}"
+                wrapped_b = self._wrap_text(text_b, 'Helvetica', 9, col_width - 5 * mm)
+                if wrapped_b:
+                    c.drawString(col_b_x, y, wrapped_b[0])
+                    for line in wrapped_b[1:]:
+                        y -= 4 * mm
+                        c.drawString(col_b_x, y, line)
+            
+            y -= 8 * mm
     
     def _draw_blank(self, question: BlankQuestion):
-        """Draw Fill in Blank Question (placeholder)"""
+        """
+        Draw Fill in the Blank Question.
+        Structure:
+            Q41. Complete the following:              [5 marks]
+                 a) Text with _______________ to fill
+                 b) Text with _______________ to fill
+        """
         c = self.c
         y = self.current_y
+        
+        # Question text
         c.setFillColor(COLOR_TEXT)
         c.setFont('Helvetica-Bold', 10)
-        c.drawString(CONTENT_LEFT, y - 5 * mm, f"Q{question.number}. {question.text}")
+        text = f"Q{question.number}. {question.text}"
+        wrapped = self._wrap_text(text, 'Helvetica-Bold', 10, CONTENT_WIDTH - 25 * mm)
+        for line in wrapped:
+            c.drawString(CONTENT_LEFT, y, line)
+            y -= 5 * mm
+        
+        # Marks
+        marks_text = f"[{self._format_marks(question.marks)}]"
+        c.setFont('Helvetica-Bold', 8)
+        c.setFillColor(COLOR_GOLD)
+        c.drawRightString(CONTENT_RIGHT, self.current_y, marks_text)
+        
+        # Sub-items
+        y -= 2 * mm
+        if question.blanks:
+            for i, item in enumerate(question.blanks):
+                c.setFillColor(COLOR_TEXT)
+                c.setFont('Helvetica', 9)
+                
+                # Letter
+                letter = f"{chr(ord('a') + i)})"
+                c.setFont('Helvetica-Bold', 9)
+                c.drawString(CONTENT_LEFT + 6 * mm, y, letter)
+                
+                c.setFont('Helvetica', 9)
+                wrapped = self._wrap_text(item, 'Helvetica', 9, CONTENT_WIDTH - 20 * mm)
+                for line in wrapped:
+                    c.drawString(CONTENT_LEFT + 14 * mm, y, line)
+                    y -= 4.5 * mm
+                
+                # Blank line
+                c.setStrokeColor(COLOR_TEXT_MUTED)
+                c.setLineWidth(0.4)
+                c.line(CONTENT_LEFT + 14 * mm, y + 1 * mm, CONTENT_LEFT + 80 * mm, y + 1 * mm)
+                
+                y -= 5 * mm
+        else:
+            # No sub-items, use main text with blank
+            c.setFont('Helvetica', 9)
+            c.setFillColor(COLOR_TEXT)
+            c.drawString(CONTENT_LEFT + 6 * mm, y, question.text + " _______________________")
+            y -= 8 * mm
     
     def _draw_short_answer(self, question: ShortAnswerQuestion):
-        """Draw Short Answer Question (placeholder)"""
+        """
+        Draw Short Answer Question.
+        Structure:
+            Q46. Question text...                     [5 marks]
+                 ┌─────────────────────────────────┐
+                 │ ________________________________│
+                 │ ________________________________│
+                 │ ________________________________│
+                 └─────────────────────────────────┘
+        """
         c = self.c
         y = self.current_y
+        
+        # Question text
         c.setFillColor(COLOR_TEXT)
         c.setFont('Helvetica-Bold', 10)
-        c.drawString(CONTENT_LEFT, y - 5 * mm, f"Q{question.number}. {question.text}")
+        text = f"Q{question.number}. {question.text}"
+        wrapped = self._wrap_text(text, 'Helvetica-Bold', 10, CONTENT_WIDTH - 25 * mm)
+        for line in wrapped:
+            c.drawString(CONTENT_LEFT, y, line)
+            y -= 5 * mm
+        
+        # Marks
+        marks_text = f"[{self._format_marks(question.marks)}]"
+        c.setFont('Helvetica-Bold', 8)
+        c.setFillColor(COLOR_GOLD)
+        c.drawRightString(CONTENT_RIGHT, self.current_y, marks_text)
+        
+        # Answer lines
+        y -= 5 * mm
+        lines = question.answer_lines if hasattr(question, 'answer_lines') else 5
+        
+        for i in range(lines):
+            c.setStrokeColor(COLOR_LINE)
+            c.setLineWidth(0.4)
+            c.line(CONTENT_LEFT + 6 * mm, y, CONTENT_RIGHT - 6 * mm, y)
+            y -= 7 * mm
     
     def _draw_essay(self, question: EssayQuestion):
-        """Draw Essay Question (placeholder)"""
+        """
+        Draw Essay Question.
+        Same as short answer but more lines.
+        """
         c = self.c
         y = self.current_y
+        
+        # Question text
         c.setFillColor(COLOR_TEXT)
         c.setFont('Helvetica-Bold', 10)
-        c.drawString(CONTENT_LEFT, y - 5 * mm, f"Q{question.number}. {question.text}")
+        text = f"Q{question.number}. {question.text}"
+        wrapped = self._wrap_text(text, 'Helvetica-Bold', 10, CONTENT_WIDTH - 25 * mm)
+        for line in wrapped:
+            c.drawString(CONTENT_LEFT, y, line)
+            y -= 5 * mm
+        
+        # Marks
+        marks_text = f"[{self._format_marks(question.marks)}]"
+        c.setFont('Helvetica-Bold', 8)
+        c.setFillColor(COLOR_GOLD)
+        c.drawRightString(CONTENT_RIGHT, self.current_y, marks_text)
+        
+        # Answer lines
+        y -= 5 * mm
+        lines = question.answer_lines if hasattr(question, 'answer_lines') else 15
+        
+        for i in range(lines):
+            c.setStrokeColor(COLOR_LINE)
+            c.setLineWidth(0.4)
+            c.line(CONTENT_LEFT + 6 * mm, y, CONTENT_RIGHT - 6 * mm, y)
+            y -= 7 * mm
     
     def _draw_generic_question(self, question: Question):
         """Draw generic question (fallback)"""
         c = self.c
         y = self.current_y
+        
         c.setFillColor(COLOR_TEXT)
         c.setFont('Helvetica-Bold', 10)
-        c.drawString(CONTENT_LEFT, y - 5 * mm, f"Q{question.number}. {question.text}")
+        text = f"Q{question.number}. {question.text}"
+        wrapped = self._wrap_text(text, 'Helvetica-Bold', 10, CONTENT_WIDTH - 25 * mm)
+        for line in wrapped:
+            c.drawString(CONTENT_LEFT, y, line)
+            y -= 5 * mm
+        
+        # Marks
+        marks_text = f"[{self._format_marks(question.marks)}]"
+        c.setFont('Helvetica-Bold', 8)
+        c.setFillColor(COLOR_GOLD)
+        c.drawRightString(CONTENT_RIGHT, self.current_y, marks_text)
+    
+    # ============================================
+    # UTILITY HELPERS
+    # ============================================
+    
+    def _wrap_text(self, text: str, font: str, size: int, max_width: float) -> list:
+        """Wrap text into lines that fit within max_width"""
+        from reportlab.pdfbase.pdfmetrics import stringWidth
+        
+        words = text.split()
+        lines = []
+        current_line = []
+        
+        for word in words:
+            test_line = ' '.join(current_line + [word])
+            width = stringWidth(test_line, font, size)
+            
+            if width <= max_width:
+                current_line.append(word)
+            else:
+                if current_line:
+                    lines.append(' '.join(current_line))
+                current_line = [word]
+        
+        if current_line:
+            lines.append(' '.join(current_line))
+        
+        return lines if lines else [text]
+    
+    def _format_marks(self, marks) -> str:
+        """Format marks: 1.5 → '1.5 marks', 1 → '1 mark'"""
+        if marks == int(marks):
+            marks = int(marks)
+            return f"{marks} mark{'s' if marks != 1 else ''}"
+        return f"{marks} marks"
     
     # ============================================
     # END PAGE
