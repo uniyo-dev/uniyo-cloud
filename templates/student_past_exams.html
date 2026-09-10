@@ -37,7 +37,24 @@
             <span class="hot-badge">🔥 HOT</span>
             {% endif %}
             
-            <h3 class="exam-title">{{ exam.course_title }} - {{ exam.exam_type }} {{ exam.year }}</h3>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
+                <h3 class="exam-title" style="margin: 0; flex: 1;">{{ exam.course_title }} - {{ exam.exam_type }} {{ exam.year }}</h3>
+                <div style="display: flex; gap: 4px; flex-shrink: 0;">
+                    {% if student and student.subscription_status == 'premium' %}
+                        <a href="{{ url_for('past_exam.download_exam_pdf', exam_id=exam.id, version='blank') }}" title="Download Exam PDF"
+                           style="width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; background: rgba(109,40,217,0.15); border: 1px solid rgba(109,40,217,0.4); border-radius: 8px; color: #A78BFA; font-size: 15px; text-decoration: none;"
+                           onclick="if(typeof UNIYO_LOADER !== 'undefined') UNIYO_LOADER.examDownload.show();">📥</a>
+                        <a href="{{ url_for('past_exam.download_exam_pdf', exam_id=exam.id, version='key') }}" title="Download Answer Key"
+                           style="width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.4); border-radius: 8px; color: #FCD34D; font-size: 15px; text-decoration: none;"
+                           onclick="if(typeof UNIYO_LOADER !== 'undefined') UNIYO_LOADER.examDownload.show();">🔑</a>
+                    {% else %}
+                        <button type="button" title="Premium required" onclick="showPremiumPrompt('📥 Exam PDF')"
+                           style="width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; background: rgba(148,163,184,0.1); border: 1px solid rgba(148,163,184,0.3); border-radius: 8px; color: #94A3B8; font-size: 13px; cursor: pointer; opacity: 0.7;">🔒</button>
+                        <button type="button" title="Premium required" onclick="showPremiumPrompt('🔑 Answer Key')"
+                           style="width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; background: rgba(148,163,184,0.1); border: 1px solid rgba(148,163,184,0.3); border-radius: 8px; color: #94A3B8; font-size: 13px; cursor: pointer; opacity: 0.7;">🔒</button>
+                    {% endif %}
+                </div>
+            </div>
 
             
             {% if exam.description %}
@@ -110,50 +127,18 @@
                 </button>
             </div>
 
-            <!-- Download & Start Buttons (visible to everyone) -->
-            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
-                {% if student and student.subscription_status == 'premium' %}
-                    <!-- Premium student: direct download -->
-                    <a href="{{ url_for('past_exam.download_exam_pdf', exam_id=exam.id, version='blank') }}"
-                       class="btn btn-outline"
-                       style="flex: 1; min-width: 120px;"
-                       onclick="if(typeof UNIYO_LOADER !== 'undefined') UNIYO_LOADER.examDownload.show();">
-                        📥 Exam PDF
-                    </a>
-                    <a href="{{ url_for('past_exam.download_exam_pdf', exam_id=exam.id, version='key') }}"
-                       class="btn btn-gold"
-                       style="flex: 1; min-width: 120px;"
-                       onclick="if(typeof UNIYO_LOADER !== 'undefined') UNIYO_LOADER.examDownload.show();">
-                        🔑 Answer Key
-                    </a>
-                {% else %}
-                    <!-- Free student: show buttons but prompt to upgrade -->
-                    <button type="button"
-                       class="btn btn-outline"
-                       style="flex: 1; min-width: 120px; opacity: 0.7; cursor: pointer;"
-                       onclick="showPremiumPrompt('📥 Exam PDF')">
-                        🔒 Exam PDF
-                    </button>
-                    <button type="button"
-                       class="btn btn-gold"
-                       style="flex: 1; min-width: 120px; opacity: 0.7; cursor: pointer;"
-                       onclick="showPremiumPrompt('🔑 Answer Key')">
-                        🔒 Answer Key
-                    </button>
-                {% endif %}
-            </div>
-            
-            <!-- Start Exam (visible to everyone) -->
+            <!-- Start Exam (bottom, full-width) -->
             {% if student and student.subscription_status == 'premium' %}
                 <a href="{{ url_for('past_exam.take_exam', exam_id=exam.id) }}" 
-                   class="btn btn-primary btn-block" 
+                   class="btn btn-primary btn-block"
+                   style="margin-top: 10px;"
                    onclick="if(typeof UNIYO_LOADER !== 'undefined') UNIYO_LOADER.examDownload.show();">
                     ▶️ Start Exam
                 </a>
             {% else %}
                 <button type="button" 
                         class="btn btn-primary btn-block"
-                        style="opacity: 0.7; cursor: pointer;"
+                        style="margin-top: 10px; opacity: 0.7; cursor: pointer;"
                         onclick="showPremiumPrompt('▶️ Start Exam')">
                     🔒 Start Exam
                 </button>
