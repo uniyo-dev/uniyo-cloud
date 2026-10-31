@@ -3,7 +3,22 @@ Auto-sync content from files to Turso on every server start
 """
 
 import os
-import requests
+import requests as _requests_mod
+import time as _time_mod
+
+def _requests_post_with_retry(*args, **kwargs):
+    last = None
+    for _i in range(15):
+        try:
+            return _requests_mod.post(*args, **kwargs)
+        except _requests_mod.exceptions.ConnectionError as _e:
+            last = _e
+            _time_mod.sleep(min(3 * (_i + 1), 30))
+    raise last
+requests = type("_R", (), {"post": staticmethod(_requests_post_with_retry),
+                            "exceptions": _requests_mod.exceptions,
+                            "get": staticmethod(_requests_mod.get)})()
+
 import json
 from pathlib import Path
 
