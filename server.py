@@ -34,7 +34,9 @@ app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
 app.config['DATABASE'] = str(DB_PATH)
 
-FlaskSession(app)
+import os as _os
+if _os.environ.get("SESSION_BACKEND", "filesystem") == "filesystem":
+    FlaskSession(app)
 db = init_db(app)
 
 # Import blueprints
