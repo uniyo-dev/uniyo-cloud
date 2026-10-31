@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 297 210" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="bkwm" x="0" y="0" width="180" height="120" patternUnits="userSpaceOnUse">
+      <g transform="translate(45, 40) scale(2) translate(-12, -12)">
+        <path d="M22 10v6M2 10l10-5 10 5-10 5z" fill="none" stroke="#6D28D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.05"/>
+        <path d="M6 12v5c3 3 9 3 12 0v-5" fill="none" stroke="#6D28D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.05"/>
+      </g>
+      <text x="90" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6D28D9" opacity="0.03" text-anchor="middle" transform="rotate(-25 90 60)">UNIYO</text>
+    </pattern>
+  </defs>
+  <rect width="297" height="210" fill="#F8FAFC"/>
+  <rect width="297" height="210" fill="url(#bkwm)"/>
+</svg>
